@@ -1,0 +1,152 @@
+const configAbility = {
+  "fileName": "3003030_Monster_W3_Figure_02_Ability07_Part00_BattleEvent",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "UI Display Event"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Enemy ID",
+        "ID": 300401000,
+        "target": {
+          "name": "Add Target by Unique Identifier",
+          "identifier": "DollBoss"
+        },
+        "characterName": null
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1792421855\">Enemy_W3_Figure_02_Ability07_MainStory</a>"
+        }
+      ]
+    },
+    {
+      "name": "Remove Modifier Behavior Flag(s)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Modifier Holder}}"
+      },
+      "flagNames": []
+    },
+    {
+      "name": "Exit Broken-State",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      }
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+    },
+    {
+      "name": "Trigger Joint-Attack Ability",
+      "abilityList": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "ability": "Monster_W3_Figure_02_Ability07_Part02"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Add Target by Enemy ID",
+            "ID": 3003041,
+            "characterName": "\"Tomorrow in Harmonious Chords\""
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "ability": "Monster_W3_Figure_Ability07_Part02"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Add Target by Enemy ID",
+            "ID": 3003051,
+            "characterName": "\"Present Inebriated in Revelry\""
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "ability": "Monster_W3_Figure_01_Ability07_Part02"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1792421855\">Enemy_W3_Figure_02_Ability07_MainStory</a>",
+      "stackType": "Replace",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "MDF_FigureUltraCount",
+                "compareType": "=",
+                "value2": 0
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "MDF_FigureUltraCount",
+                "compareType": "=",
+                "value2": 1
+              }
+            },
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "MDF_FigureUltraCount",
+              "value": 1,
+              "max": 2
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ]
+}

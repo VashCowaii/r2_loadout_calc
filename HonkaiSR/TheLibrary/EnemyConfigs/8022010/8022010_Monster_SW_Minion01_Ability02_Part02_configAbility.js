@@ -23,11 +23,11 @@ const configAbility = {
         {
           "name": "Enemy Entry",
           "enemyID": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__95",
+            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+            "displayLines": "SummonList_ADF_1",
             "constants": [],
             "variables": [
-              "ENEMIES_OBJECT_UNUSED__95"
+              "SummonList_ADF_1"
             ]
           },
           "locationType": "BeforeCaster"

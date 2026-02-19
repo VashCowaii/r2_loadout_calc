@@ -144,6 +144,9 @@
     "NegativeHP": "HPNegative",
 
     "DirtyHPRatio": "HPBlock%",
+    "DirtyHPDelta": "HPBlockFlat",
+
+    "RallyHP": "HPDebt%",
 
     "Level": "CharacterLevel",
 

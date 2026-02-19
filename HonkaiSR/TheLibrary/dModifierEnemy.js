@@ -640,7 +640,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01",
+    "name": "<a class=\"gModGreen\" id=\"2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>",
     "realName": "Formation Core",
     "aim": "Other",
     "desc": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
@@ -648,7 +648,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02",
+    "name": "<a class=\"gModGreen\" id=\"2101445105\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02</a>",
     "realName": "Formation Core",
     "aim": "Other",
     "desc": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
@@ -656,7 +656,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03",
+    "name": "<a class=\"gModGreen\" id=\"2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>",
     "realName": "Formation Core",
     "aim": "Other",
     "desc": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
@@ -664,7 +664,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core",
+    "name": "<a class=\"gModGreen\" id=\"194045592\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core</a>",
     "realName": "Sword Formation",
     "aim": "Other",
     "desc": "Yanqing's Toughness cannot be reduced, and his SPD increases by #1[i]. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
@@ -675,7 +675,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_MainBattle",
+    "name": "<a class=\"gModGreen\" id=\"-242524526\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_MainBattle</a>",
     "realName": "Sword Formation",
     "aim": "Other",
     "desc": "Yanqing's Toughness cannot be reduced. Destroy all of Yanqing's Flying Swords to dispel that effect and cause DMG to Yanqing.",
@@ -683,7 +683,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1389810309\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_RL</a>",
     "realName": "Sword Formation",
     "aim": "Other",
     "desc": "Yanqing's Toughness cannot be reduced, and his SPD increases by #1[i]. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
@@ -694,7 +694,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Yanqing_SwordPowerUp",
+    "name": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>",
     "realName": "Ordeal",
     "aim": "Other",
     "desc": "This summon receives an enhancement and increases Max Toughness. After attacking, there is a high chance of Freezing the target.",
@@ -702,7 +702,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Standard_Overdrive",
+    "name": "<a class=\"gModGreen\" id=\"-1122230262\">Enemy_W2_Yanqing_Standard_Overdrive</a>",
     "realName": "Chilling Light",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%. This effect can stack.",
@@ -713,7 +713,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_MarkingCountDown_1",
+    "name": "<a class=\"gModGreen\" id=\"-1666789092\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_1</a>",
     "realName": "Ready for Battle",
     "aim": "Other",
     "desc": "Use Aethereal Dreamflux in the next turn.",
@@ -721,7 +721,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_MarkingCountDown_2",
+    "name": "<a class=\"gModGreen\" id=\"-1616456235\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_2</a>",
     "realName": "Ready for Battle",
     "aim": "Other",
     "desc": "Use Aethereal Dreamflux after 2 turns",
@@ -729,7 +729,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_Mark",
+    "name": "<a class=\"gModGreen\" id=\"-1560182165\">Enemy_W2_Yanqing_Ability02_Mark</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName and is the target of Aethereal Dreamflux.",
@@ -850,7 +850,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Xuanlu_02_Counter",
+    "name": "<a class=\"gModGreen\" id=\"-2090846144\">Enemy_W2_Xuanlu_02_Counter</a>",
     "realName": "Retaliation",
     "aim": "Buff",
     "desc": "When attacked by an enemy, deals DMG to that enemy.",
@@ -858,7 +858,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Xuanlu_02_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-924806619\">Enemy_W2_Xuanlu_02_Bonus</a>",
     "realName": "Engender",
     "aim": "Buff",
     "desc": "Increases ATK.",
@@ -869,7 +869,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_02_Counter_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1848268909\">Enemy_W2_Xuanlu_02_Counter_RL</a>",
     "realName": "Retaliation",
     "aim": "Buff",
     "desc": "When attacked by an enemy, deals DMG to that enemy.",
@@ -877,7 +877,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage",
+    "name": "<a class=\"gModGreen\" id=\"1933098157\">Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage</a>",
     "realName": "Cultivation",
     "aim": "Buff",
     "desc": "Retaliation deals #1[i]% more DMG.",
@@ -888,7 +888,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_04_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-1305390378\">Enemy_W2_Xuanlu_04_Charge</a>",
     "realName": "Lavish Fruit",
     "aim": "Other",
     "desc": "When there are 2 Lavish Fruits on the field, the Abundant Ebon Deer will immediately use Flamboyant Gore.",
@@ -1004,7 +1004,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_Ability07_NoWeakness",
+    "name": "<a class=\"gModGreen\" id=\"-2023283041\">Enemy_W2_Xuanlu_Ability07_NoWeakness</a>",
     "realName": "Hardy Leaf Sheath",
     "aim": "Buff",
     "desc": "DEF increases. Toughness cannot be reduced.",
@@ -1015,7 +1015,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_10_EnergyDrain",
+    "name": "<a class=\"gModGreen\" id=\"938780665\">Enemy_W2_Xuanlu_10_EnergyDrain</a>",
     "realName": "Synwood Renewal",
     "aim": "Buff",
     "desc": "In every turn, restores HP equal to #1[i]% of the unit's Max HP.",
@@ -1026,7 +1026,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_10_RL_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-536192328\">Enemy_W2_Xuanlu_10_RL_DamageUp</a>",
     "realName": "Vigor Overflow",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[f1]%. This effect is stackable.",
@@ -1198,7 +1198,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "M_Death_CTRL",
+    "name": "<a class=\"gModGreen\" id=\"387549983\">M_Death_CTRL</a>",
     "realName": "Morbid Dream",
     "aim": "Other",
     "desc": "Cannot be selected, cannot take action.",
@@ -1206,7 +1206,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_ChargeShoot",
+    "name": "<a class=\"gModGreen\" id=\"163694883\">Modifier_W3_Death_ChargeShoot</a>",
     "realName": "Nightfall",
     "aim": "Other",
     "desc": "Locks on to the next 2 characters who either use their Basic ATK, Skill, or Ultimate.",
@@ -1214,7 +1214,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_Attack_Sign",
+    "name": "<a class=\"gModGreen\" id=\"1275477744\">Modifier_W3_Death_Attack_Sign</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked On by \"Something Unto Death\" as an attack target.",
@@ -1222,7 +1222,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode1",
+    "name": "<a class=\"gModGreen\" id=\"656665951\">Modifier_W3_Death_HuntingMode1</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "Gained 1 stack of Sunset.",
@@ -1230,7 +1230,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode0",
+    "name": "<a class=\"gModGreen\" id=\"639888332\">Modifier_W3_Death_HuntingMode0</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "\"Death\" has gained 0 stacks of \"Sunset.\"",
@@ -1249,7 +1249,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Death_AllDamageUp",
+    "name": "<a class=\"gModGreen\" id=\"606573810\">Monster_W3_Death_AllDamageUp</a>",
     "realName": "Biting Obituary",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is removed when this unit becomes Weakness Broken.",
@@ -1260,7 +1260,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode2",
+    "name": "<a class=\"gModGreen\" id=\"673443570\">Modifier_W3_Death_HuntingMode2</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "Gained 2 stacks of Sunset.",
@@ -1268,7 +1268,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode3",
+    "name": "<a class=\"gModGreen\" id=\"690221189\">Modifier_W3_Death_HuntingMode3</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "Gained 3 stacks of Sunset. It is about to deal a killing blow.",
@@ -1316,7 +1316,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Sam_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-909732184\">Monster_W3_Sam_Enhance</a>",
     "realName": "Secondary Combustion",
     "aim": "Other",
     "desc": "All attacks consume HP. Increases SPD by #1[i]% and gains an additional action. #2[i] point(s) of Molten Energy remain before the Secondary Combustion state expires.",
@@ -1328,7 +1328,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Sam_WeakPointProtected",
+    "name": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "Sam's Toughness cannot be reduced before entering the Secondary Combustion state.",
@@ -1336,7 +1336,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Sam_BurningBP",
+    "name": "<a class=\"gModGreen\" id=\"1797892283\">Monster_W3_Sam_BurningBP</a>",
     "realName": "Molten Core",
     "aim": "Other",
     "desc": "When an ally consumes Combusted Skill Points, loses HP and additionally deals a set amount of Fire DMG equal to #1[i]% of the original DMG. When they receive healing from sources other than oneself, the amount of HP restored is massively reduced.",
@@ -1347,7 +1347,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Sam_TakenDamage",
+    "name": "<a class=\"gModGreen\" id=\"-1431346612\">Monster_W3_Sam_TakenDamage</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Takes #1[i]% more DMG. This effect expires when Sam recovers from Weakness Break state.",
@@ -1940,7 +1940,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_02_IsAiming",
+    "name": "<a class=\"gModGreen\" id=\"-596409662\">Monster_W3_Figure_02_IsAiming</a>",
     "realName": "Shackle-Bearing Messenger",
     "aim": "Other",
     "desc": "About to use Desmios Evangelion. The current DMG level is #1[i].",
@@ -1951,7 +1951,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_02_AimTarget",
+    "name": "<a class=\"gModGreen\" id=\"-413256865\">Monster_W3_Figure_02_AimTarget</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1959,7 +1959,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Figure_01_Poison",
+    "name": "<a class=\"gModGreen\" id=\"-578587123\">Enemy_W3_Figure_01_Poison</a>",
     "realName": "Carousal of Wantonness",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
@@ -1967,7 +1967,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W3_Figure_01_Electric",
+    "name": "<a class=\"gModGreen\" id=\"723419042\">Enemy_W3_Figure_01_Electric</a>",
     "realName": "Carousal of Revelry",
     "aim": "Debuff",
     "desc": "Takes Lightning DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
@@ -1975,7 +1975,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W3_Figure_01_DotMarkListener",
+    "name": "<a class=\"gModGreen\" id=\"1565080492\">Monster_W3_Figure_01_DotMarkListener</a>",
     "realName": "My Cup Runneth Over",
     "aim": "Other",
     "desc": "About to use \"Wash Away All Sins For You\"",
@@ -1983,7 +1983,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_01_DotMark",
+    "name": "<a class=\"gModGreen\" id=\"-1920724212\">Monster_W3_Figure_01_DotMark</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1991,7 +1991,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_DollElite_Commnon_Basic",
+    "name": "<a class=\"gModGreen\" id=\"-1336534629\">Enemy_W3_DollElite_Commnon_Basic</a>",
     "realName": "\"Puppets of the Order\"",
     "aim": "Other",
     "desc": "Puppets controlled by Order. Can become Impresario.",
@@ -1999,7 +1999,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_DollElite_Commnon_TheChosenOne",
+    "name": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>",
     "realName": "Impresario",
     "aim": "Buff",
     "desc": "An extra action can be taken every turn with a slight increase in SPD.",
@@ -2007,7 +2007,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_DollElite_Standard_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -2037,7 +2037,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Death_RLBoss_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"2051878613\">Monster_W3_Death_RLBoss_DamageUp</a>",
     "realName": "Elegy",
     "aim": "Buff",
     "desc": "Deals #1[i]% more DMG and increases Sombrous Sepulcher's HP by #2[i] bar(s). This effect is stackable. The initial HP for Sombrous Sepulcher is currently #3[i] bars.",
@@ -2050,7 +2050,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_DeathPart_RLBoss_WeakPointProtected",
+    "name": "<a class=\"gModGreen\" id=\"-1685076974\">Monster_W3_DeathPart_RLBoss_WeakPointProtected</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "Toughness cannot be reduced before the Nightfall state ends.",
@@ -2066,7 +2066,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W3_Figure_RLElite_AttackUP",
+    "name": "<a class=\"gModGreen\" id=\"1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "For every target with Alien Dream, increase this unit's ATK by #1[i]%.",
@@ -2077,7 +2077,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_02_RLElite_IsAiming",
+    "name": "<a class=\"gModGreen\" id=\"-2034637668\">Monster_W3_Figure_02_RLElite_IsAiming</a>",
     "realName": "Shackle-Bearing Messenger",
     "aim": "Other",
     "desc": "About to use Desmios Evangelion. The current DMG level is #1[i].",
@@ -2088,7 +2088,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_02_RLElite_AimTarget",
+    "name": "<a class=\"gModGreen\" id=\"1529042769\">Monster_W3_Figure_02_RLElite_AimTarget</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -2148,7 +2148,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_01_RLElite_DotMarkListener",
+    "name": "<a class=\"gModGreen\" id=\"1916393494\">Monster_W3_Figure_01_RLElite_DotMarkListener</a>",
     "realName": "My Cup Runneth Over",
     "aim": "Other",
     "desc": "About to use \"Wash Away All Sins For You.\"",
@@ -2156,7 +2156,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_01_RLElite_DotMark",
+    "name": "<a class=\"gModGreen\" id=\"635359514\">Monster_W3_Figure_01_RLElite_DotMark</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -2164,7 +2164,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_02_RLElite_ChargeLayer_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"787345585\">Monster_W3_Figure_02_RLElite_ChargeLayer_DamageUP</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%.",
@@ -2206,7 +2206,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_FigureBoss_Standard_Basic",
+    "name": "<a class=\"gModGreen\" id=\"-900182182\">Monster_W3_FigureBoss_Standard_Basic</a>",
     "realName": "\"Puppets of the Order\"",
     "aim": "Other",
     "desc": "Puppets controlled by Order. Can become Impresario.",
@@ -2214,7 +2214,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_FigureBoss_Standard_TheChosenOne",
+    "name": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>",
     "realName": "Impresario",
     "aim": "Buff",
     "desc": "An extra action can be taken every turn and SPD increases slightly.",
@@ -2222,7 +2222,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_FigureBoss_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -2233,7 +2233,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_FigureBoss_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"919092314\">Monster_W3_FigureBoss_DamageUP</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -2255,7 +2255,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_Ability08_TheWorld_V4",
+    "name": "<a class=\"gModGreen\" id=\"1481304918\">Enemy_W3_Sunday_Ability08_TheWorld_V4</a>",
     "realName": "Im Anfang war die Kraft",
     "aim": "Other",
     "desc": "After #1[i] turn(s), unleashes \"Im Anfang war die Tat.\"",
@@ -2266,7 +2266,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_Ability07_Shield_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-2045350392\">Enemy_W3_Sunday_Ability07_Shield_Modifier</a>",
     "realName": "If We Live In the Light",
     "aim": "Buff",
     "desc": "Increases the DMG dealt by #1[i]%, and decreases the DMG taken. Toughness cannot be reduced. This lasts until the Shield is depleted.",
@@ -2277,7 +2277,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_LightTeam_Shield_Display",
+    "name": "<a class=\"gModGreen\" id=\"-552386510\">Enemy_W3_Sunday_LightTeam_Shield_Display</a>",
     "realName": "Walk in the Light",
     "aim": "Buff",
     "desc": "A Shield that absorbs DMG taken by all allies. Before the Shield is depleted or its effect expires, enemy targets' attacks won't reduce the Shielded allies' HP. Currently, the Shield has #1[i] point(s) remaining.",
@@ -2288,7 +2288,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_CTRL_Sleep",
+    "name": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>",
     "realName": "Alien Dream",
     "aim": "Debuff",
     "desc": "Cannot take action within a certain number of turns and regenerates minor amounts of HP at the start of every turn. When this unit is attacked, greatly increase the DMG it takes. Getting attacked dispels the Alien Dream state.",
@@ -2338,7 +2338,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_P3Ability10Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-396148290\">Enemy_W3_Sunday_P3Ability10Bonus</a>",
     "realName": "Im Anfang war der Sinn",
     "aim": "Other",
     "desc": "Immune to all DMG.",
@@ -2346,7 +2346,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_ChargeEffect",
+    "name": "<a class=\"gModGreen\" id=\"-25601954\">Monster_W3_Figure_ChargeEffect</a>",
     "realName": "Holy Night",
     "aim": "Other",
     "desc": "About to use \"Sleep In Heavenly Peace\"",
@@ -2354,7 +2354,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sam_RLBoss_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-1053337379\">Enemy_W3_Sam_RLBoss_Enhance</a>",
     "realName": "Secondary Combustion",
     "aim": "Other",
     "desc": "All attacks consume HP. Gains 1 stack of Thermocumulative Upgrade and increases SPD by #1[i]% and gains an additional action. #2[i] point(s) of Molten Energy remain before the Secondary Combustion state expires.",
@@ -2366,7 +2366,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_RLBoss_AttackAddRatio",
+    "name": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>",
     "realName": "Thermocumulative Upgrade",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -2377,7 +2377,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_RLBoss_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"2015325888\">Enemy_W3_Sam_RLBoss_BlackBlood</a>",
     "realName": "Immolation",
     "aim": "Debuff",
     "desc": "Decreases the Maximum Restorable HP by #1[i]%.",
@@ -2388,7 +2388,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_RLElite_ChargeEffect",
+    "name": "<a class=\"gModGreen\" id=\"-316988116\">Monster_W3_Figure_RLElite_ChargeEffect</a>",
     "realName": "Holy Night",
     "aim": "Other",
     "desc": "About to use \"Sleep In Heavenly Peace.\"",
@@ -2649,7 +2649,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_Ability03_Aim",
+    "name": "<a class=\"gModGreen\" id=\"622644189\">MModifier_Monster_W4_Claymore_Ability03_Aim</a>",
     "realName": "Charging",
     "aim": "Other",
     "desc": "Charging. Dispelled upon Weakness Break.",
@@ -2657,7 +2657,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_Heaven_StoneShield",
+    "name": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>",
     "realName": "War Armor",
     "aim": "Other",
     "desc": "Decreases DMG taken by #1[i]%. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
@@ -2668,7 +2668,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_Ability04_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-351944820\">MModifier_Monster_W4_Claymore_Ability04_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -2679,7 +2679,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Lycan_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"-1495768773\">Enemy_W2_Lycan_RageStatus</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
@@ -2690,7 +2690,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Lycan_RageStatusEnhance",
+    "name": "<a class=\"gModGreen\" id=\"-1564570329\">Enemy_W2_Lycan_RageStatusEnhance</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and can take an extra action every turn. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
@@ -2698,7 +2698,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Lycan_01_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"-1326641454\">Enemy_W2_Lycan_01_RageStatus</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. After attacking an allied target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
@@ -2709,7 +2709,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Lycan_01_RageStatusEnhance",
+    "name": "<a class=\"gModGreen\" id=\"-1949316860\">Enemy_W2_Lycan_01_RageStatusEnhance</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and can take an extra action every turn. After attacking a target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
@@ -2787,7 +2787,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_Poison",
+    "name": "<a class=\"gModGreen\" id=\"-211625513\">Enemy_W2_LycanKing_Poison</a>",
     "realName": "\"Tumbledust\"",
     "aim": "Debuff",
     "desc": "At the start of each turn, consumes #1[i]% of this unit's HP.",
@@ -2840,7 +2840,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_Ability03_Target_UI",
+    "name": "<a class=\"gModGreen\" id=\"-1423108848\">MModifier_Monster_W4_Claymore_Ability03_Target_UI</a>",
     "realName": "Forthcoming Strife",
     "aim": "Other",
     "desc": "Furiae Praetor's \"Drowned in the Crimson Sea\" attack.",
@@ -2961,7 +2961,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"224849748\">Enemy_W2_LycanKing_RageStatus</a>",
     "realName": "Eclipse's Ire",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
@@ -2973,7 +2973,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatusPhase2",
+    "name": "<a class=\"gModGreen\" id=\"540941563\">Enemy_W2_LycanKing_RageStatusPhase2</a>",
     "realName": "Eclipse's Wrath",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
@@ -2985,7 +2985,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_BloodRageMark",
+    "name": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>",
     "realName": "Irate",
     "aim": "Other",
     "desc": "Hoolay currently possesses #1[i] stack(s) of Irate.",
@@ -2996,7 +2996,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatusEnhance",
+    "name": "<a class=\"gModGreen\" id=\"1729331430\">Enemy_W2_LycanKing_RageStatusEnhance</a>",
     "realName": "Lupine Lord's Majesty",
     "aim": "Buff",
     "desc": "When entering Moon Rage, the effect of Moon Rage will be Enhanced.",
@@ -3004,7 +3004,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatusEnhanceSelf",
+    "name": "<a class=\"gModGreen\" id=\"-717129648\">Enemy_W2_LycanKing_RageStatusEnhanceSelf</a>",
     "realName": "Lupine Lord's Majesty",
     "aim": "Buff",
     "desc": "Hoolay's SPD increases by #1[i]% due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
@@ -3200,7 +3200,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_SundayPart_IF_EX02_DamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"606317793\">Monster_W3_SundayPart_IF_EX02_DamageReduce</a>",
     "realName": "Rhythm Without End",
     "aim": "Other",
     "desc": "\"Echo of Faded Dreams\" takes #1[i]% less DMG. This effect is dispelled when Cacophonic Conductor becomes Weakness Broken.",
@@ -3211,7 +3211,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-661361560\">Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio</a>",
     "realName": "Thirst for War",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -3303,7 +3303,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sunday_IF_Ability07_Shield_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1243262352\">Enemy_W3_Sunday_IF_Ability07_Shield_Modifier</a>",
     "realName": "One With the Light",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is dispelled when the Shield is depleted.",
@@ -3393,7 +3393,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_SundayPart_IF_EX02_DamageTaken",
+    "name": "<a class=\"gModGreen\" id=\"901570774\">Monster_W3_SundayPart_IF_EX02_DamageTaken</a>",
     "realName": "Shattered Illusion",
     "aim": "Other",
     "desc": "\"Echo of Faded Dreams\" takes #1[i]% increased DMG. This effect is dispelled when Cacophonic Conductor recovers from a Weakness Break.",
@@ -3461,7 +3461,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Shield",
+    "name": "<a class=\"gModGreen\" id=\"318155284\">Monster_W4_Nikadory_Shield</a>",
     "realName": "War Armor",
     "aim": "Other",
     "desc": "Decreases DMG taken by #1[i]%. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
@@ -3472,7 +3472,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Brave",
+    "name": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>",
     "realName": "Glory",
     "aim": "Other",
     "desc": "Each stack of \"Glory\" increases DMG dealt by #1[i]% and Energy Regeneration Rate by #2[i]%. When launching Skill or Ultimate, adds 1 stack of \"Glory,\" up to #3[i] stack(s). Attacking can dispel a certain stack of \"Titanic Corpus\" corresponding to the number of \"Glory\" stacks.",
@@ -3485,7 +3485,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_EnhanceShield",
+    "name": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>",
     "realName": "Titanic Corpus",
     "aim": "Other",
     "desc": "DMG taken decreases by #1[i]%. When stacks reach 0, action is delayed and this unit immediately loses a certain amount of HP, regenerates Energy for all targets, and dispels \"Titanic Corpus.\" When attacked by targets with \"Glory,\" \"Titanic Corpus\" stacks corresponding to the target's \"Glory\" stacks will be reduced. While this unit has \"Titanic Corpus,\" increases the DMG dealt by the next attack by #2[i]% and causes the attacked target to become Imprisoned.",
@@ -3497,7 +3497,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_HearsePart_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"1382334396\">Monster_W4_HearsePart_BlackBlood</a>",
     "realName": "Conquered",
     "aim": "Other",
     "desc": "Decreases Maximum Restorable HP by #1[i]%. You can reclaim a Tested Spirit by attacking the \"Conquer or Be Conquered\" corresponding to this unit.",
@@ -3508,7 +3508,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_HearsePart_Soul",
+    "name": "<a class=\"gModGreen\" id=\"-1774231954\">Monster_W4_HearsePart_Soul</a>",
     "realName": "Conquer",
     "aim": "Other",
     "desc": "\"The Giver, Master of Legions, Lance of Fury\" conquered %CasterName's soul and will take #1[i]% more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
@@ -3519,7 +3519,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Hearse_Sign",
+    "name": "<a class=\"gModGreen\" id=\"770051597\">Monster_W4_Hearse_Sign</a>",
     "realName": "Strife-Granted Fear",
     "aim": "Other",
     "desc": "DMG taken increases by #1[i]%. This effect can be dispelled by defeating the \"Conquer or Be Conquered\" corresponding to this unit.",
@@ -3530,7 +3530,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Hearse_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"985676222\">Monster_W4_Hearse_Enhance</a>",
     "realName": "Strife-Granted Valiance",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt for the next attack.",
@@ -3572,7 +3572,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_PartHP",
+    "name": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>",
     "realName": "All As One",
     "aim": "Other",
     "desc": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
@@ -3580,7 +3580,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn",
+    "name": "<a class=\"gModGreen\" id=\"1383289356\">Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn</a>",
     "realName": "Solar Storm",
     "aim": "Other",
     "desc": "Takes Fire DMG based on the current Temperature at the start of each turn.",
@@ -3591,7 +3591,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_Ability04_SunnyChargeHeat",
+    "name": "<a class=\"gModGreen\" id=\"-1737251406\">Enemy_W4_DawnsEye_Ability04_SunnyChargeHeat</a>",
     "realName": "Helium Flash",
     "aim": "Buff",
     "desc": "Uses \"Fury, Incineration of Dawn and Dusk\" on all targets in the next action and increases the Temperature by #1[i].",
@@ -3602,7 +3602,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_WeatherEnhanced",
+    "name": "<a class=\"gModGreen\" id=\"-1785279589\">Enemy_W4_DawnsEye_WeatherEnhanced</a>",
     "realName": "Wingbeats",
     "aim": "Other",
     "desc": "\"Daythunder Raven\" enters Enhanced state. Dispelled upon being Weakness Broken.",
@@ -3714,7 +3714,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_AML_Minion03_01_StoneShieldEnhance_Nikadory",
+    "name": "<a class=\"gModGreen\" id=\"1631457444\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance_Nikadory</a>",
     "realName": "Indomitable",
     "aim": "Buff",
     "desc": "Increases max \"War Armor\" and \"Titanic Corpus\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
@@ -3787,7 +3787,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_HearsePart_BlackBlood_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>",
     "realName": "Conquered Eon",
     "aim": "Other",
     "desc": "Permanently reduces Max HP that can be restored by #1[i]%.",
@@ -3798,7 +3798,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Hearse_Sign_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"1871536192\">Monster_W4_Hearse_Sign_Enhance</a>",
     "realName": "Drowning in Terror",
     "aim": "Other",
     "desc": "Increases received damage by #1[i]%. When receiving attacks, there is a chance to be inflicted with Imprisonment. Defeat the corresponding \"Conquer or Be Conquered\" to dispel this effect.",
@@ -3809,7 +3809,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_RLBoss_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%. This effect can stack.",
@@ -3820,7 +3820,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Brave_Immune",
+    "name": "<a class=\"gModGreen\" id=\"729203631\">Monster_W4_Nikadory_Brave_Immune</a>",
     "realName": "Immune to Crowd Control",
     "aim": "Buff",
     "desc": "Immune to Crowd Control debuffs.",
@@ -3828,7 +3828,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"609854366\">Enemy_W2_LycanKing_IF_RageStatus</a>",
     "realName": "Full Moon's Furor",
     "aim": "Buff",
     "desc": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
@@ -3840,7 +3840,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_RageStatusPhase2",
+    "name": "<a class=\"gModGreen\" id=\"327803157\">Enemy_W2_LycanKing_IF_RageStatusPhase2</a>",
     "realName": "Full Moon's Furor",
     "aim": "Buff",
     "desc": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
@@ -3852,7 +3852,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_PickUpMarkLycanKing",
+    "name": "<a class=\"gModGreen\" id=\"1565088528\">Enemy_W2_LycanKing_IF_PickUpMarkLycanKing</a>",
     "realName": "Going Solo",
     "aim": "Other",
     "desc": "Currently in the \"Going Solo\" state. Increases DMG dealt by #1[i]% and decreases DMG taken by #2[i]%.",
@@ -3864,7 +3864,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_DisableAction",
+    "name": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>",
     "realName": "Departed",
     "aim": "Other",
     "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
@@ -3872,7 +3872,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_ChampionMark",
+    "name": "<a class=\"gModGreen\" id=\"848754639\">Enemy_W2_LycanKing_IF_ChampionMark</a>",
     "realName": "Blood Surge",
     "aim": "Buff",
     "desc": "When a target character with \"Blood Surge\" and their summon enters \"Going Solo,\" they will additionally reduce enemy Toughness and restore HP after attacking. This effect is stackable and is removed when \"Going Solo\" ends.",
@@ -3884,7 +3884,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_ChampionEnhanceForeverStatus",
+    "name": "<a class=\"gModGreen\" id=\"-160773215\">Enemy_W2_LycanKing_IF_ChampionEnhanceForeverStatus</a>",
     "realName": "Rising War Spirits",
     "aim": "Buff",
     "desc": "DMG dealt by this unit and their summoned targets increases by #1[i]% and Break Effect increases by #2[i]%. This effect is stackable.",
@@ -4054,7 +4054,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_ChampionHPEnhance",
+    "name": "<a class=\"gModGreen\" id=\"84881984\">Enemy_W2_LycanKing_IF_ChampionHPEnhance</a>",
     "realName": "Last Stand",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i] and ATK increases by #2[i]. This effect will be removed when the \"Going Solo\" state ends.",
@@ -4104,7 +4104,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Lycan_RagePhase1Mark",
+    "name": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>",
     "realName": "Bloodlust",
     "aim": "Other",
     "desc": "Apply #1[i] stack(s) of Bloodlust. The Bloodlust stacks and stack limits for enemy units that can enter Moon Rage will be kept consistent.",
@@ -4166,7 +4166,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04",
+    "name": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>",
     "realName": "Ionization",
     "aim": "Buff",
     "desc": "Uses \"Wrath, Rend of Eternal Sky\" in the next action and additionally deals DMG based on the number of Thunderclouds possessed. Current Thundercloud(s): #1[i].",
@@ -4177,7 +4177,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub",
+    "name": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>",
     "realName": "Rot",
     "aim": "Debuff",
     "desc": "Maximum Restorable HP decreases by #1[i].",
@@ -4188,7 +4188,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_MaxHPAdd",
+    "name": "<a class=\"gModGreen\" id=\"-815851324\">Modifier_Monster_W4_DawnsEye_01_MaxHPAdd</a>",
     "realName": "Flame-Chase",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i].",
@@ -4200,7 +4200,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_HOT",
+    "name": "<a class=\"gModGreen\" id=\"27951832\">Modifier_Monster_W4_DawnsEye_01_HOT</a>",
     "realName": "Eagerness",
     "aim": "Buff",
     "desc": "Restores this unit's HP by #1[i] at the start of every turn, and increases DMG dealt by #2[i]%.",
@@ -4212,7 +4212,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_MuteSpeed",
+    "name": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>",
     "realName": "Tide-Corrosion",
     "aim": "Debuff",
     "desc": "Cannot be selected, cannot take action.",
@@ -4220,7 +4220,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_DawnsEye_01_Ability03_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-439718905\">Enemy_W4_DawnsEye_01_Ability03_Charge</a>",
     "realName": "The Dark Tides Cometh",
     "aim": "Other",
     "desc": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
@@ -4228,7 +4228,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage",
+    "name": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>",
     "realName": "Black Tide Sync Rate",
     "aim": "Other",
     "desc": "The current Charge ratio of \"Eye of Twilight\" is #1[i]%.",
@@ -4285,7 +4285,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1769039176\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -4343,7 +4343,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_DawnsEye_PartBlock",
+    "name": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>",
     "realName": "Marine Layer",
     "aim": "Other",
     "desc": "Currently unselectable.",
@@ -4351,7 +4351,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage",
+    "name": "<a class=\"gModGreen\" id=\"74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>",
     "realName": "Skygash",
     "aim": "Buff",
     "desc": "After targets attack, deals True DMG based on \"Black Tide Sync Rate.\" This DMG is \"Non-fatal.\"",
@@ -4466,7 +4466,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_HearsePart_Soul_B",
+    "name": "<a class=\"gModGreen\" id=\"323182003\">Monster_W4_HearsePart_Soul_B</a>",
     "realName": "Conquer",
     "aim": "Other",
     "desc": "\"Mydeimos, Lance of Fury\" conquered %CasterName's soul and will take #1[i]% more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
@@ -4477,7 +4477,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Ability05Split",
+    "name": "<a class=\"gModGreen\" id=\"1011587031\">Monster_W4_Nikadory_Ability05Split</a>",
     "realName": "Forthcoming Strife",
     "aim": "Other",
     "desc": "Distribute the \"All Realms Leveled, All Legions to Dust\" attack unleashed by \"Savage God, Mad King, Incarnation of Strife.\"",
@@ -4496,7 +4496,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_B_PartHP",
+    "name": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>",
     "realName": "All As One",
     "aim": "Other",
     "desc": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
@@ -4825,7 +4825,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sam_01_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>",
     "realName": "Gene Duplication",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -4836,7 +4836,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_TakenDamage",
+    "name": "<a class=\"gModGreen\" id=\"1121915816\">Enemy_W3_Sam_01_TakenDamage</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%. This effect is dispelled when this unit recovers from Weakness Break state.",
@@ -4847,7 +4847,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_Shield",
+    "name": "<a class=\"gModGreen\" id=\"-16655209\">Enemy_W3_Sam_01_Shield</a>",
     "realName": "Whirling Carapace",
     "aim": "Buff",
     "desc": "After \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of the reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" this unit will restore HP equal to the amount of Corrosion.",
@@ -4855,7 +4855,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sam_01_Ability04Target",
+    "name": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>",
     "realName": "Nemesis",
     "aim": "Other",
     "desc": "Increases Break Effect by #1[i]%. When attacking an enemy target in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
@@ -4866,7 +4866,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_Ability04TargetServant",
+    "name": "<a class=\"gModGreen\" id=\"2095098739\">Enemy_W3_Sam_01_Ability04TargetServant</a>",
     "realName": "Nemesis",
     "aim": "Other",
     "desc": "Increases Break Effect by #1[i]%. When attacking enemy targets in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits.",
@@ -4877,7 +4877,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_Ability04UnselectableMark",
+    "name": "<a class=\"gModGreen\" id=\"-2138788815\">Enemy_W3_Sam_01_Ability04UnselectableMark</a>",
     "realName": "Rapid Evolution",
     "aim": "Other",
     "desc": "When attacked by ally targets not in the \"Nemesis\" state, cannot receive CRIT Hits.",
@@ -5365,7 +5365,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_EnhanceChargeCount",
+    "name": "<a class=\"gModGreen\" id=\"792733911\">Enemy_W3_Sam_01_EnhanceChargeCount</a>",
     "realName": "Mortal Instinct",
     "aim": "Other",
     "desc": "\"Mortal Instinct\" stacked #1[i] time(s)",

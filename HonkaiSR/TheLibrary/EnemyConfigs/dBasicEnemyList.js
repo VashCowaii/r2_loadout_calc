@@ -4336,7 +4336,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2004021": {
       "2004021": {
@@ -4364,7 +4364,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Complete)"
     },
     "2004022": {
@@ -4391,7 +4391,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Complete)"
     },
     "2004023": {
@@ -4404,7 +4404,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Illusion)"
     },
     "2004024": {
@@ -4438,7 +4438,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing"
     },
     "2004025": {
@@ -4451,7 +4451,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing"
     },
     "2004026": {
@@ -4463,7 +4463,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Corrupted)"
     },
     "groupName": "Cloud Knight Lieutenant: Yanqing"
@@ -6040,7 +6040,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "2024011": {
       "2024011": {
@@ -6051,7 +6051,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Complete)"
     },
     "2024012": {
@@ -6085,7 +6085,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Complete)"
     },
     "2024013": {
@@ -6097,7 +6097,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Illusion)"
     },
     "2024014": {
@@ -6143,7 +6143,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer"
     },
     "2024015": {
@@ -6155,7 +6155,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Complete)"
     },
     "groupName": "Abundant Ebon Deer"
@@ -6208,7 +6208,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2032011": {
       "2032011": {
@@ -6219,7 +6219,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sableclaw Wolftrooper"
     },
     "groupName": "Sableclaw Wolftrooper"
@@ -6257,7 +6257,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2032021": {
       "2032021": {
@@ -6266,7 +6266,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Mok Tok"
     },
     "2032022": {
@@ -6278,7 +6278,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Eclipse Wolftrooper"
     },
     "groupName": "Eclipse Wolftrooper"
@@ -6419,7 +6419,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "2034011": {
       "2034011": {
@@ -6436,7 +6436,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay"
     },
     "2034012": {
@@ -6455,7 +6455,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay (Complete)"
     },
     "2034013": {
@@ -6466,7 +6466,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay"
     },
     "2034014": {
@@ -6511,7 +6511,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Fulminating Wolflord"
     },
     "2034015": {
@@ -6523,7 +6523,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay (Corrupted)"
     },
     "2034016": {
@@ -6534,7 +6534,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay"
     },
     "groupName": "Borisin Warhead: Hoolay"
@@ -7993,7 +7993,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003031": {
       "3003031": {
@@ -8025,7 +8025,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Past Confined and Caged\""
     },
     "3003032": {
@@ -8036,7 +8036,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Past Confined and Caged\" (Bug)"
     },
     "3003033": {
@@ -8055,7 +8055,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Past Confined and Caged\" (Complete)"
     },
     "groupName": "\"Past Confined and Caged\""
@@ -8090,7 +8090,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003041": {
       "3003041": {
@@ -8129,7 +8129,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Tomorrow in Harmonious Chords\""
     },
     "3003042": {
@@ -8140,7 +8140,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Tomorrow in Harmonious Chords\" (Bug)"
     },
     "3003043": {
@@ -8159,7 +8159,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Tomorrow in Harmonious Chords\" (Complete)"
     },
     "groupName": "\"Tomorrow in Harmonious Chords\""
@@ -8243,7 +8243,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003051": {
       "3003051": {
@@ -8275,7 +8275,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Present Inebriated in Revelry\""
     },
     "3003052": {
@@ -8301,7 +8301,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Present Inebriated in Revelry\" (Bug)"
     },
     "3003053": {
@@ -8320,7 +8320,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Present Inebriated in Revelry\" (Complete)"
     },
     "groupName": "\"Present Inebriated in Revelry\""
@@ -8334,7 +8334,7 @@ let basicEnemyList = {
       },
       "300401003": {},
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "3004011": {
       "3004011": {},
@@ -8342,19 +8342,19 @@ let basicEnemyList = {
         "name": "The Past, Present, and Eternal Show"
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Past, Present, and Eternal Show (Complete)"
     },
     "3004012": {
       "3004012": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Past, Present, and Eternal Show"
     },
     "3004013": {
       "3004013": {},
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Past, Present, and Eternal Show (Complete)"
     },
     "groupName": "The Past, Present, and Eternal Show"
@@ -8733,7 +8733,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "3014021": {
       "3014021": {
@@ -8744,7 +8744,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\" (Projection)"
     },
     "3014022": {
@@ -8770,7 +8770,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\" (Complete)"
     },
     "3014023": {
@@ -8783,7 +8783,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\""
     },
     "3014024": {
@@ -8794,7 +8794,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\""
     },
     "3014025": {
@@ -8807,7 +8807,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\""
     },
     "groupName": "Memory Zone Meme \"Something Unto Death\""
@@ -9128,7 +9128,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3024021": {
       "3024021": {
@@ -9138,7 +9138,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stellaron Hunter: Sam"
     },
     "3024022": {
@@ -9179,7 +9179,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stellaron Hunter: Sam"
     },
     "3024023": {
@@ -9199,7 +9199,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stellaron Hunter: Sam (Complete)"
     },
     "groupName": "Stellaron Hunter: Sam"
@@ -9220,7 +9220,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3024031": {
       "3024031": {
@@ -9264,7 +9264,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "3025011": {
       "3025011": {
@@ -9274,7 +9274,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025012": {
@@ -9293,7 +9293,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025013": {
@@ -9338,7 +9338,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cacophonic Conductor"
     },
     "3025014": {
@@ -9350,7 +9350,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025015": {
@@ -9361,7 +9361,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025016": {
@@ -9373,7 +9373,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "groupName": "\"Harmonious Choir\" The Great Septimus"
@@ -9737,7 +9737,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4012061": {
       "4012061": {
@@ -9798,7 +9798,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Conquer or Be Conquered"
     },
     "4012063": {
@@ -9809,7 +9809,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Conquer or Be Conquered"
     },
     "groupName": "Conquer or Be Conquered"
@@ -10007,7 +10007,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4013011": {
       "4013011": {
@@ -10024,7 +10024,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Praetor"
     },
     "4013012": {
@@ -10042,7 +10042,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Praetor"
     },
     "4013013": {
@@ -10060,7 +10060,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Praetor (Bug)"
     },
     "groupName": "Furiae Praetor"
@@ -10111,7 +10111,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4014011": {
       "4014011": {
@@ -10129,7 +10129,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife"
     },
     "4014012": {
@@ -10155,7 +10155,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife"
     },
     "4014013": {
@@ -10224,7 +10224,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife"
     },
     "4014015": {
@@ -10244,7 +10244,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife (Complete)"
     },
     "4014016": {
@@ -10255,7 +10255,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Victor, Acropolis, and Lord of Strife"
     },
     "4014018": {
@@ -10267,7 +10267,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife (Corrupted)"
     },
     "groupName": "Savage God, Mad King, Incarnation of Strife"
@@ -10279,7 +10279,7 @@ let basicEnemyList = {
       "401402002": {},
       "401402003": {},
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4014021": {
       "4014021": {},
@@ -10296,12 +10296,12 @@ let basicEnemyList = {
         "name": "The Giver, Master of Legions, Lance of Fury"
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Giver, Master of Legions, Lance of Fury (Complete)"
     },
     "4014023": {
       "4014023": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Mydeimos, Lance of Fury"
     },
     "groupName": "The Giver, Master of Legions, Lance of Fury"
@@ -10444,7 +10444,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "4015020": {
       "4015020": {
@@ -10461,7 +10461,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Decimator, Karma of Daythunder, Eye of Twilight"
     },
     "4015021": {
@@ -10472,7 +10472,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Hyacinthia, Eye of Twilight"
     },
     "groupName": "Sublime, Radiant, Avatar of the Sky"
@@ -16360,7 +16360,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flying Sword"
     },
     "2002021": {
@@ -16414,7 +16414,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flying Sword"
     },
     "2005010": {
@@ -16504,7 +16504,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Wintry Wind"
     },
     "2022071": {
@@ -16530,7 +16530,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Wintry Wind"
     },
     "2022080": {
@@ -16571,7 +16571,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Marple Leaf"
     },
     "2022081": {
@@ -16594,7 +16594,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Marple Leaf"
     },
     "2022090": {
@@ -16623,7 +16623,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Glorious Blooms"
     },
     "2022091": {
@@ -16647,7 +16647,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Glorious Blooms"
     },
     "2022100": {
@@ -16672,7 +16672,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Lavish Fruits"
     },
     "2022101": {
@@ -16698,7 +16698,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Lavish Fruits"
     },
     "2032040": {
@@ -16807,7 +16807,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sombrous Sepulcher"
     },
     "3012031": {
@@ -16818,7 +16818,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sombrous Sepulcher"
     },
     "3012032": {
@@ -16829,7 +16829,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sombrous Sepulcher"
     },
     "3021020": {
@@ -17055,7 +17055,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Echo of Faded Dreams"
     },
     "3022011": {
@@ -17067,7 +17067,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Echo of Faded Dreams"
     },
     "4012011": {
@@ -17182,7 +17182,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daythunder Raven"
     },
     "4012090": {
@@ -17193,7 +17193,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Hundred Eyes"
     },
     "4012091": {
@@ -17204,7 +17204,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Shoot of Hundred Eyes"
     },
     "4012092": {
@@ -17215,7 +17215,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Languid Ethmoid Bone"
     },
     "4012093": {
@@ -17226,7 +17226,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dried Lacrimal Bone"
     },
     "4013014": {
@@ -17305,7 +17305,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sublime, Radiant, Avatar of the Sky"
     },
     "4022011": {

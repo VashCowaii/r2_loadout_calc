@@ -1,0 +1,114 @@
+const configAbility = {
+  "fileName": "2004026_Monster_W2_Yanqing_Ability02_Insert_Over_RL",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1389810309\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_RL</a>[<span class=\"descriptionNumberColor\">Sword Formation</span>]"
+    },
+    {
+      "name": "Consume",
+      "consumeFrom": "MaxHP",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "consumePercent": {
+        "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+        "displayLines": "{[Skill02[1]]}",
+        "constants": [],
+        "variables": [
+          "{[Skill02[1]]}"
+        ]
+      },
+      "consumeFloor": 1
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-204617197\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Toast_Controller</a>"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster's Minions}}"
+        },
+        "value1": "TeamCharacterCount",
+        "compareType": ">=",
+        "value2": 1
+      }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster's Minions}}"
+        },
+        "value1": "TeamCharacterCount",
+        "compareType": ">=",
+        "value2": 1
+      }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster's Minions}}"
+        },
+        "value1": "TeamCharacterCount",
+        "compareType": ">=",
+        "value2": 1
+      },
+      "passed": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          }
+        },
+        {
+          "name": "Remove from Team Target Grouping",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "stayInTeam": false
+        }
+      ]
+    },
+    {
+      "name": "Declare Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "scope": "TargetEntity",
+      "variableName": "W2_Yanqing_00_Skill02_InsertFlag"
+    }
+  ],
+  "references": []
+}

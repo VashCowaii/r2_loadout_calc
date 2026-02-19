@@ -1,0 +1,29 @@
+const configAbility = {
+  "fileName": "3025012_Monster_W3_Sunday_Ability07_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    "Ability Start",
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-2045350392\">Enemy_W3_Sunday_Ability07_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">If We Live In the Light</span>]",
+      "valuePerStack": {
+        "MDF_Ability07_P2_DamageRatio": {
+          "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
+          "displayLines": "{[Skill07[1]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill07[1]]}"
+          ]
+        }
+      }
+    },
+    "Trigger: Ability End"
+  ],
+  "references": []
+}
