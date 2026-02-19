@@ -9737,7 +9737,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4012061": {
       "4012061": {
@@ -9798,7 +9798,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Conquer or Be Conquered"
     },
     "4012063": {
@@ -9809,7 +9809,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Conquer or Be Conquered"
     },
     "groupName": "Conquer or Be Conquered"
@@ -10007,7 +10007,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4013011": {
       "4013011": {
@@ -10024,7 +10024,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Praetor"
     },
     "4013012": {
@@ -10042,7 +10042,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Praetor"
     },
     "4013013": {
@@ -10060,7 +10060,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Praetor (Bug)"
     },
     "groupName": "Furiae Praetor"
@@ -10111,7 +10111,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4014011": {
       "4014011": {
@@ -10129,7 +10129,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife"
     },
     "4014012": {
@@ -10155,7 +10155,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife"
     },
     "4014013": {
@@ -10224,7 +10224,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife"
     },
     "4014015": {
@@ -10244,7 +10244,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife (Complete)"
     },
     "4014016": {
@@ -10255,7 +10255,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Victor, Acropolis, and Lord of Strife"
     },
     "4014018": {
@@ -10267,7 +10267,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Savage God, Mad King, Incarnation of Strife (Corrupted)"
     },
     "groupName": "Savage God, Mad King, Incarnation of Strife"
@@ -10279,7 +10279,7 @@ let basicEnemyList = {
       "401402002": {},
       "401402003": {},
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4014021": {
       "4014021": {},
@@ -10296,12 +10296,12 @@ let basicEnemyList = {
         "name": "The Giver, Master of Legions, Lance of Fury"
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Giver, Master of Legions, Lance of Fury (Complete)"
     },
     "4014023": {
       "4014023": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Mydeimos, Lance of Fury"
     },
     "groupName": "The Giver, Master of Legions, Lance of Fury"

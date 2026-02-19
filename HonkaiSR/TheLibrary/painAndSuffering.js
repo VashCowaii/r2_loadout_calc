@@ -5205,13 +5205,14 @@ const megaParsingFuckeryPain = {
             "name",
             "skillName",
             "useActive",
+            "invertCondition"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Skill Name");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">Has Skill Name:</div>&nbsp;
-            ${parseRef.skillName}
+            ${parseRef.invertCondition ? "[NOT] " : ""}${parseRef.skillName}
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.useActive,"Use Active Skill")}
@@ -6070,6 +6071,7 @@ const megaParsingFuckeryPain = {
             "entityName",
             "errorIfFailed",
             "countSetting",
+            "livingType",
             // "healPercent",
             // "formula",
             // "value1",
@@ -6102,6 +6104,8 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.reason,"Reason")}
             ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
             ${getStandardNameDisplay(initialCounter,parseRef.includeSelf,"Include Self")}
+            ${getStandardNameDisplay(initialCounter,parseRef.livingType,"Life Type")}
+            
             
         </div>
         `;

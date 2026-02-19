@@ -2649,7 +2649,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_Ability03_Aim",
+    "name": "<a class=\"gModGreen\" id=\"622644189\">MModifier_Monster_W4_Claymore_Ability03_Aim</a>",
     "realName": "Charging",
     "aim": "Other",
     "desc": "Charging. Dispelled upon Weakness Break.",
@@ -2657,7 +2657,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_Heaven_StoneShield",
+    "name": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>",
     "realName": "War Armor",
     "aim": "Other",
     "desc": "Decreases DMG taken by #1[i]%. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
@@ -2668,7 +2668,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_Ability04_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-351944820\">MModifier_Monster_W4_Claymore_Ability04_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -2840,7 +2840,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_Ability03_Target_UI",
+    "name": "<a class=\"gModGreen\" id=\"-1423108848\">MModifier_Monster_W4_Claymore_Ability03_Target_UI</a>",
     "realName": "Forthcoming Strife",
     "aim": "Other",
     "desc": "Furiae Praetor's \"Drowned in the Crimson Sea\" attack.",
@@ -3461,7 +3461,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Shield",
+    "name": "<a class=\"gModGreen\" id=\"318155284\">Monster_W4_Nikadory_Shield</a>",
     "realName": "War Armor",
     "aim": "Other",
     "desc": "Decreases DMG taken by #1[i]%. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
@@ -3472,7 +3472,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Brave",
+    "name": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>",
     "realName": "Glory",
     "aim": "Other",
     "desc": "Each stack of \"Glory\" increases DMG dealt by #1[i]% and Energy Regeneration Rate by #2[i]%. When launching Skill or Ultimate, adds 1 stack of \"Glory,\" up to #3[i] stack(s). Attacking can dispel a certain stack of \"Titanic Corpus\" corresponding to the number of \"Glory\" stacks.",
@@ -3485,7 +3485,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_EnhanceShield",
+    "name": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>",
     "realName": "Titanic Corpus",
     "aim": "Other",
     "desc": "DMG taken decreases by #1[i]%. When stacks reach 0, action is delayed and this unit immediately loses a certain amount of HP, regenerates Energy for all targets, and dispels \"Titanic Corpus.\" When attacked by targets with \"Glory,\" \"Titanic Corpus\" stacks corresponding to the target's \"Glory\" stacks will be reduced. While this unit has \"Titanic Corpus,\" increases the DMG dealt by the next attack by #2[i]% and causes the attacked target to become Imprisoned.",
@@ -3497,7 +3497,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_HearsePart_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"1382334396\">Monster_W4_HearsePart_BlackBlood</a>",
     "realName": "Conquered",
     "aim": "Other",
     "desc": "Decreases Maximum Restorable HP by #1[i]%. You can reclaim a Tested Spirit by attacking the \"Conquer or Be Conquered\" corresponding to this unit.",
@@ -3508,7 +3508,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_HearsePart_Soul",
+    "name": "<a class=\"gModGreen\" id=\"-1774231954\">Monster_W4_HearsePart_Soul</a>",
     "realName": "Conquer",
     "aim": "Other",
     "desc": "\"The Giver, Master of Legions, Lance of Fury\" conquered %CasterName's soul and will take #1[i]% more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
@@ -3519,7 +3519,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Hearse_Sign",
+    "name": "<a class=\"gModGreen\" id=\"770051597\">Monster_W4_Hearse_Sign</a>",
     "realName": "Strife-Granted Fear",
     "aim": "Other",
     "desc": "DMG taken increases by #1[i]%. This effect can be dispelled by defeating the \"Conquer or Be Conquered\" corresponding to this unit.",
@@ -3530,7 +3530,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Hearse_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"985676222\">Monster_W4_Hearse_Enhance</a>",
     "realName": "Strife-Granted Valiance",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt for the next attack.",
@@ -3714,7 +3714,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_AML_Minion03_01_StoneShieldEnhance_Nikadory",
+    "name": "<a class=\"gModGreen\" id=\"1631457444\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance_Nikadory</a>",
     "realName": "Indomitable",
     "aim": "Buff",
     "desc": "Increases max \"War Armor\" and \"Titanic Corpus\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
@@ -3787,7 +3787,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_HearsePart_BlackBlood_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>",
     "realName": "Conquered Eon",
     "aim": "Other",
     "desc": "Permanently reduces Max HP that can be restored by #1[i]%.",
@@ -3798,7 +3798,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Hearse_Sign_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"1871536192\">Monster_W4_Hearse_Sign_Enhance</a>",
     "realName": "Drowning in Terror",
     "aim": "Other",
     "desc": "Increases received damage by #1[i]%. When receiving attacks, there is a chance to be inflicted with Imprisonment. Defeat the corresponding \"Conquer or Be Conquered\" to dispel this effect.",
@@ -3809,7 +3809,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_RLBoss_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%. This effect can stack.",
@@ -3820,7 +3820,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Brave_Immune",
+    "name": "<a class=\"gModGreen\" id=\"729203631\">Monster_W4_Nikadory_Brave_Immune</a>",
     "realName": "Immune to Crowd Control",
     "aim": "Buff",
     "desc": "Immune to Crowd Control debuffs.",
@@ -4466,7 +4466,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_HearsePart_Soul_B",
+    "name": "<a class=\"gModGreen\" id=\"323182003\">Monster_W4_HearsePart_Soul_B</a>",
     "realName": "Conquer",
     "aim": "Other",
     "desc": "\"Mydeimos, Lance of Fury\" conquered %CasterName's soul and will take #1[i]% more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
@@ -4477,7 +4477,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Nikadory_Ability05Split",
+    "name": "<a class=\"gModGreen\" id=\"1011587031\">Monster_W4_Nikadory_Ability05Split</a>",
     "realName": "Forthcoming Strife",
     "aim": "Other",
     "desc": "Distribute the \"All Realms Leveled, All Legions to Dust\" attack unleashed by \"Savage God, Mad King, Incarnation of Strife.\"",
