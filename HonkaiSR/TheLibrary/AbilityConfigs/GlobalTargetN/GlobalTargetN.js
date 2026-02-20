@@ -2330,6 +2330,443 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Moonlit Pegasus: Skill04 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-820453556\">Enemy_W4_Unicorn_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-2111319206\">Enemy_W4_Unicorn_SignOnAvatar2</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1429596060\">Enemy_W4_Unicorn_OtherSignOnAvatar</a>",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Moonlit Pegasus: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-777597987\">Enemy_W4_Unicorn_Ability03_Mark</a>",
+                "casterFilter": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Moonlit Pegasus: Skill02 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All(Right to Left)}}.[[removeUnselectable]].[[living]]"
+            },
+            {
+              "name": "Return Target",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Moonlit Pegasus: Skill02 Target 3",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
+            },
+            {
+              "name": "Target Index",
+              "indexValue": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Moonlit Pegasus: Skill02 Target 2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
+            },
+            {
+              "name": "Target Index",
+              "indexValue": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Moonlit Pegasus: Skill02 Target 1",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
+            },
+            {
+              "name": "Target Index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Noontide Gryphon: Skill02 Target 3",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            },
+            {
+              "name": "Target Index",
+              "indexValue": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Noontide Gryphon: Skill02 Target 2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            },
+            {
+              "name": "Target Index",
+              "indexValue": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Noontide Gryphon: Skill02 Target 1",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            },
+            {
+              "name": "Target Index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Noontide Gryphon: Partner",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-766200550\">Monster_W4_Griffin_LocalLegend_Partner</a>"
+              }
+            },
+            {
+              "name": "Return Target",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Mascot",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 401205,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Harpy",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 402201,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Noontide Gryphon",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 402301,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Noontide Gryphon: Skill04 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Target Left of Ability Target(ST)}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Target Right of Ability Target(ST)}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Noontide Gryphon: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1926757602\">Enemy_W4_Griffin_Ability03_Mark</a>",
+                "casterFilter": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Noontide Gryphon: Skill02 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All(Left to Right)}}.[[removeUnselectable]].[[living]]"
+            },
+            {
+              "name": "Return Target",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Aquila: Self",
       "isTargetOperator": false,
       "execute": [

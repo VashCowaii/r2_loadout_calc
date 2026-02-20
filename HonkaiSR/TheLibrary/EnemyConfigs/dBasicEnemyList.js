@@ -10500,7 +10500,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Meteoric Eagle"
   },
@@ -10541,7 +10541,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4023013": {
       "4023013": {
@@ -10551,7 +10551,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Noontide Gryphon (Bug)"
     },
     "groupName": "Noontide Gryphon"
@@ -10601,7 +10601,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Moonlit Pegasus"
   },
@@ -10628,7 +10628,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Tide-Eroded Blade"
   },
@@ -10655,7 +10655,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Black Tide's Corroded Axe"
   },
@@ -10675,7 +10675,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Black Tide Council"
   },
@@ -10703,7 +10703,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Black Tide's Decrepit Bow"
   },
@@ -17321,7 +17321,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Meteoric Eagle"
     },
     "4023011": {
@@ -17340,7 +17340,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Earthshaker Leo: Solblaze Winged Beast"
     },
     "4023012": {
@@ -17351,7 +17351,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Earthshaker Leo: Solblaze Winged Beast"
     },
     "4023021": {
@@ -17362,7 +17362,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Moonlit Pegasus"
     },
     "4032011": {
@@ -17380,7 +17380,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Tide-Eroded Blade"
     },
     "4032020": {
@@ -17862,7 +17862,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Corroded Axe"
     },
     "4032041": {
@@ -17873,7 +17873,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide Council"
     },
     "4032042": {
@@ -17884,7 +17884,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide Council"
     },
     "4032051": {
@@ -17895,7 +17895,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Decrepit Bow"
     },
     "4032052": {
@@ -17906,7 +17906,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Decrepit Bow"
     },
     "4033011": {

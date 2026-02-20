@@ -188,7 +188,7 @@ const configAbility = {
       "name": "Define Custom Variable with Added Value",
       "target": {
         "name": "Target Name",
-        "target": "Monster_W4_Griffin_00_LocalLegend"
+        "target": "{{EVENT[RoT] Noontide Gryphon}}"
       },
       "variableName": "_BonusCheck02",
       "value": 1

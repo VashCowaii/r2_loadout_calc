@@ -5595,6 +5595,7 @@ const megaParsingFuckeryPain = {
             "formula",
             "healer",
             "livingOnly",
+            "debtHeal",
             // "value1",
             // "compareType",
             // "value2"
@@ -5613,6 +5614,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.EnergyGainPercent,"Energy Split")}
             ${getStandardNameDisplay(initialCounter,parseRef.formula,"Heal Formula")}
             ${getStandardNameDisplay(initialCounter,parseRef.livingOnly,"Living Only")}
+            ${getStandardNameDisplay(initialCounter,parseRef.debtHeal,"Debt/Rally Heal")}
         </div>
         `;
     },

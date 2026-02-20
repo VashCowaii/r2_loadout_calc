@@ -3325,7 +3325,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Scholar_01_Stealth",
+    "name": "<a class=\"gModGreen\" id=\"-19048827\">Enemy_W4_Scholar_01_Stealth</a>",
     "realName": "Lurking",
     "aim": "Buff",
     "desc": "Cannot become the primary target for abilities that require active selection. DMG received increases by #1[i]%. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
@@ -3336,7 +3336,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Scholar_01_StealthBreak",
+    "name": "<a class=\"gModGreen\" id=\"264567512\">Enemy_W4_Scholar_01_StealthBreak</a>",
     "realName": "Flawed",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%.",
@@ -3610,7 +3610,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Griffin_Debuff_Mark",
+    "name": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>",
     "realName": "Aquila's Mark",
     "aim": "Other",
     "desc": "When a target gains \"Aquila's Mark\" again, dispel all marks, and they take Fire DMG and lose Energy. When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take True DMG based on #1[i]% of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. After any ally target defeats an enemy target, this mark can be dispelled, prioritizing dispelling the mark from the target that dealt the fatal damage.",
@@ -3621,7 +3621,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Griffin_SignOnAvatar",
+    "name": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3629,7 +3629,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_Debuff_Mark",
+    "name": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>",
     "realName": "Oronyx's Mark",
     "aim": "Other",
     "desc": "When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take Quantum DMG with a high chance to be afflicted with Entanglement. When a target gains \"Aquila's Mark\" again, dispel all marks, and they receive True DMG based on #1[i]% of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. Using Ultimate can dispel this mark.",
@@ -3640,7 +3640,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Unicorn_SignOnAvatar",
+    "name": "<a class=\"gModGreen\" id=\"-820453556\">Enemy_W4_Unicorn_SignOnAvatar</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3648,7 +3648,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_SignOnAvatar2",
+    "name": "<a class=\"gModGreen\" id=\"-2111319206\">Enemy_W4_Unicorn_SignOnAvatar2</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3722,7 +3722,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Minion02_01_RallyHP_V2",
+    "name": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>",
     "realName": "Corrosion",
     "aim": "Other",
     "desc": "After attacking, restore a portion of Corroded HP. The more targets are attacked, the more HP is restored. When Corrosion is dispelled via restorative means, obtain \"Renewal.\"",
@@ -3730,7 +3730,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Minion02_01_RallyHP_V2_Strongth",
+    "name": "<a class=\"gModGreen\" id=\"-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>",
     "realName": "Renewal",
     "aim": "Buff",
     "desc": "The next attack's DMG dealt increases by #1[i]%.",
@@ -4134,7 +4134,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Valkyrie01_02_AbilityP01",
+    "name": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>",
     "realName": "Bitter Fracture",
     "aim": "Other",
     "desc": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
@@ -4694,7 +4694,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_W4_Griffin_LocalLegend_Revenge",
+    "name": "<a class=\"gModGreen\" id=\"-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>",
     "realName": "DMG Boost",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -4724,7 +4724,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_AML_Minion02_01_LocalLegend_NegativeBlood",
+    "name": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>",
     "realName": "HP Overload",
     "aim": "Other",
     "desc": "Target has accumulated \"HP Overload,\" healing #1[i] HP will remove this state. When the \"Overload Settlement\" turn begins, the target will receive fatal damage.",
@@ -5234,7 +5234,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_W4_Griffin_LocalLegend_AllDamageTaken",
+    "name": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -5585,7 +5585,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Scholar_01_LocalLegend_Stealth",
+    "name": "<a class=\"gModGreen\" id=\"-1507903432\">Enemy_W4_Scholar_01_LocalLegend_Stealth</a>",
     "realName": "Lurking",
     "aim": "Buff",
     "desc": "Cannot become the primary target for abilities that require active selection. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
