@@ -3896,7 +3896,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_01_Repeat",
+    "name": "<a class=\"gModGreen\" id=\"-104101548\">Enemy_W4_FireProwler_01_Repeat</a>",
     "realName": "Futility",
     "aim": "Other",
     "desc": "Resists Crowd Control debuffs. When \"%DynamicTargetName\" uses \"Demise's Storm\" or \"Fading Fate\" again, if this unit was summoned by this attack and is in the \"Mutual Sacrifice\" state, then this unit will attack together with \"%DynamicTargetName\".",
@@ -3904,7 +3904,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_TimePower",
+    "name": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>",
     "realName": "Calamity Power",
     "aim": "Other",
     "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
@@ -3912,7 +3912,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_HPBack",
+    "name": "<a class=\"gModGreen\" id=\"-834356036\">Enemy_W4_FireProwler_01_HPBack</a>",
     "realName": "Enfettered",
     "aim": "Other",
     "desc": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
@@ -3920,7 +3920,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1169574682\">Enemy_W4_FireProwler_Charge</a>",
     "realName": "Silent Sorrow",
     "aim": "Other",
     "desc": "Use \"Cry Not For The Discarded\" during the next action.",
@@ -3955,7 +3955,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_RallyHP",
+    "name": "<a class=\"gModGreen\" id=\"-1070811154\">Enemy_W4_FireProwler_RallyHP</a>",
     "realName": "Entangled By Agony",
     "aim": "Other",
     "desc": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
@@ -4066,7 +4066,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_AllDamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>",
     "realName": "DMG Reduction",
     "aim": "Buff",
     "desc": "Each stack reduces DMG received by #1[i]%. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
@@ -4359,7 +4359,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_HPBack",
+    "name": "<a class=\"gModGreen\" id=\"-1742476718\">Enemy_W4_FireProwler_01_IF_HPBack</a>",
     "realName": "Shackled",
     "aim": "Other",
     "desc": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
@@ -4367,7 +4367,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_IF_Charge_Ability031",
+    "name": "<a class=\"gModGreen\" id=\"1617419184\">Enemy_W4_FireProwler_IF_Charge_Ability031</a>",
     "realName": "Dying Sobs",
     "aim": "Other",
     "desc": "Uses \"But Suffering is Essential\" in the next action.",
@@ -4375,7 +4375,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_IF_Limit",
+    "name": "<a class=\"gModGreen\" id=\"-557758203\">Enemy_W4_FireProwler_IF_Limit</a>",
     "realName": "Shackle Shatter",
     "aim": "Other",
     "desc": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
@@ -4383,7 +4383,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"1578257108\">Enemy_W4_FireProwler_01_IF_Bonus</a>",
     "realName": "Complete Vessel",
     "aim": "Other",
     "desc": "After launching an attack, it is absorbed by \"%CasterName\" to grant 1 stack of \"Calamity Power.\" When an ally target defeats a target, immediately grants 1 extra turn and increases DMG dealt.",
@@ -4391,7 +4391,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1209794480\">Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -4402,7 +4402,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Activated01",
+    "name": "<a class=\"gModGreen\" id=\"2095261503\">Enemy_W4_FireProwler_01_IF_Activated01</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
@@ -4410,7 +4410,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Activated02",
+    "name": "<a class=\"gModGreen\" id=\"2112039122\">Enemy_W4_FireProwler_01_IF_Activated02</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
@@ -4552,7 +4552,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_HPBack",
+    "name": "<a class=\"gModGreen\" id=\"-1299205182\">Enemy_W4_FireProwler_11_Main03_HPBack</a>",
     "realName": "Shackled",
     "aim": "Other",
     "desc": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
@@ -4560,7 +4560,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_10_Main03_Limit",
+    "name": "<a class=\"gModGreen\" id=\"670740905\">Enemy_W4_FireProwler_10_Main03_Limit</a>",
     "realName": "Shackle Shatter",
     "aim": "Other",
     "desc": "Alternates between using \"Silent Sorrow\" and \"Cry Not for the Discarded.\" Defeat \"Long-Shattered Vessel\" to reduce Toughness and \"Calamity Power\" stacks.",
@@ -4568,7 +4568,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-986774268\">Enemy_W4_FireProwler_11_Main03_Bonus</a>",
     "realName": "Complete Vessel",
     "aim": "Other",
     "desc": "After launching an attack, it is absorbed by \"%CasterName\" to grant 1 stack of \"Calamity Power.\" When an ally character defeats a target, immediately grants 1 extra turn.",
@@ -4576,7 +4576,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Bonus_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1744861792\">Enemy_W4_FireProwler_11_Main03_Bonus_AllDamageTypeAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -4587,7 +4587,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Activated01",
+    "name": "<a class=\"gModGreen\" id=\"1810803535\">Enemy_W4_FireProwler_11_Main03_Activated01</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
@@ -4595,7 +4595,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Activated02",
+    "name": "<a class=\"gModGreen\" id=\"1827581154\">Enemy_W4_FireProwler_11_Main03_Activated02</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
@@ -5486,7 +5486,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Phainon_Part1",
+    "name": "<a class=\"gModGreen\" id=\"561115494\">Enemy_W4_Phainon_Part1</a>",
     "realName": "May You End the Evernight",
     "aim": "Other",
     "desc": "Khaslana awaits your return.",
@@ -5494,7 +5494,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_Phainon_Part2",
+    "name": "<a class=\"gModGreen\" id=\"544337875\">Enemy_W4_Phainon_Part2</a>",
     "realName": "May You Dispel the Sky's Gloom",
     "aim": "Other",
     "desc": "Khaslana looks forward to saving the world with you.",
@@ -5502,7 +5502,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_Phainon_Part3",
+    "name": "<a class=\"gModGreen\" id=\"527560256\">Enemy_W4_Phainon_Part3</a>",
     "realName": "May You Become The First Blazing Sun",
     "aim": "Other",
     "desc": "Khaslana awaits the break of dawn.",

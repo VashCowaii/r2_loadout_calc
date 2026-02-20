@@ -1916,6 +1916,26 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
         </div>`;
     },
+    "Define Custom Variable with Toughness Count"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "target",
+            // "value",
+            // "flagName",
+            "context",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Toughness Count");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Toughness Count:</div>&nbsp;
+            ${parseRef.variableName} = Toughness Count 
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
+        </div>`;
+    },
     "Define Custom Variable with Flag Resistance"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -1928,7 +1948,7 @@ const megaParsingFuckeryPain = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Flag Resistance");
         // initialCounter++;
         return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">Define with Base Break DMG:</div>&nbsp;
+            <div class="rotationConditionOperatorHeaderInline">Define with Status Resistance:</div>&nbsp;
             ${parseRef.variableName} = RESISTANCE ${parseRef.flagName} 
         </div>
         <div class="modifierDetailsBox">

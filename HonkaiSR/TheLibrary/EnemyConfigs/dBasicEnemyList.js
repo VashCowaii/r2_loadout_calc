@@ -10916,7 +10916,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4034013": {
       "4034013": {
@@ -10960,7 +10960,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of Doomsday Led Astray"
     },
     "4034014": {
@@ -10971,7 +10971,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark"
     },
     "4034015": {
@@ -10983,7 +10983,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dawn-Denied Khaslana"
     },
     "4034016": {
@@ -10995,7 +10995,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark"
     },
     "4034017": {
@@ -11006,7 +11006,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark"
     },
     "4034018": {
@@ -11018,7 +11018,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "???"
     },
     "4034019": {
@@ -11030,7 +11030,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark (Corrupted)"
     },
     "groupName": "Flame Reaver of the Deepest Dark"
@@ -17461,7 +17461,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032021": {
@@ -17601,7 +17601,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032022": {
@@ -17661,7 +17661,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032023": {
@@ -17735,7 +17735,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Demon King's Minions"
     },
     "4032024": {
@@ -17753,7 +17753,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032025": {
@@ -17789,7 +17789,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032026": {
@@ -17821,7 +17821,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032027": {
@@ -17833,7 +17833,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Shadow of \"Hatred\""
     },
     "4032028": {
@@ -17844,7 +17844,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Time Assassin"
     },
     "4032031": {
@@ -18027,7 +18027,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "???"
     },
     "4034012": {
@@ -18039,7 +18039,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Black Cloak Demon King\""
     },
     "4052011": {
