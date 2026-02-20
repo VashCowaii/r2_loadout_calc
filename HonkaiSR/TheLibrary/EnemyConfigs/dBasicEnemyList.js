@@ -6349,7 +6349,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2033011": {
       "2033011": {
@@ -6366,7 +6366,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Howling Casket (Bug)"
     },
     "groupName": "Howling Casket"
@@ -6375,12 +6375,12 @@ let basicEnemyList = {
     "2033020": {
       "2033020": {},
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "2033021": {
       "2033021": {},
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
     },
     "2033022": {
@@ -6390,7 +6390,7 @@ let basicEnemyList = {
       "203302203": {},
       "203302204": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sanerot Hearteater"
     },
     "groupName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
@@ -6549,7 +6549,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "2035011": {
       "2035011": {
@@ -6560,7 +6560,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Shadow of \"Feixiao\""
     },
     "2035012": {
@@ -6605,7 +6605,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Hellcharred Shadow General"
     },
     "groupName": "Shadow of \"Feixiao\""
@@ -16709,7 +16709,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Nebula Devourer"
     },
     "2032041": {
@@ -16720,7 +16720,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Nebula Devourer"
     },
     "2032042": {
@@ -16732,7 +16732,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Nebula Devourer"
     },
     "2032050": {
@@ -16742,7 +16742,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Planeshred Claws"
     },
     "2032051": {
@@ -16752,7 +16752,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Planeshred Claws"
     },
     "2032052": {
@@ -16764,7 +16764,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Planeshred Claws"
     },
     "2032060": {
@@ -16774,7 +16774,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Worldpurge Tail"
     },
     "2032061": {
@@ -16784,7 +16784,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Worldpurge Tail"
     },
     "2032062": {
@@ -16796,7 +16796,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Worldpurge Tail"
     },
     "3012030": {

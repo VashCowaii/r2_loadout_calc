@@ -1,0 +1,53 @@
+const configAbility = {
+  "fileName": "2032042_Monster_W2_FeixiaoPart_01_IF_PassiveAbilityInitiate",
+  "skillTrigger": "Passive01",
+  "abilityType": "Talent",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [],
+  "whenAdded": [
+    {
+      "name": "Define Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Enemy Feixiao: Self}}"
+      },
+      "scope": "TargetEntity",
+      "variableName": "Skill04DamagePercentage",
+      "value": {
+        "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+        "displayLines": "{[Skill02[0]]}",
+        "constants": [],
+        "variables": [
+          "{[Skill02[0]]}"
+        ]
+      }
+    },
+    {
+      "name": "Define Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Nebula Devourer: Self Initial}}"
+      },
+      "scope": "TargetEntity",
+      "variableName": "Skill04DamagePercentage",
+      "value": {
+        "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+        "displayLines": "{[Skill01[0]]}",
+        "constants": [],
+        "variables": [
+          "{[Skill01[0]]}"
+        ]
+      }
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
+    }
+  ],
+  "references": []
+}

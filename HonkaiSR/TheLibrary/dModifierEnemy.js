@@ -2175,7 +2175,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_FearPre",
+    "name": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>",
     "realName": "Terror Grip",
     "aim": "Debuff",
     "desc": "Enters the \"Terrified\" state at the start of the second turn. Attacking the %CasterName 1 time before then can dispel \"Terror Grip.\"",
@@ -2186,7 +2186,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_Fear",
+    "name": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>",
     "realName": "Terrified",
     "aim": "Debuff",
     "desc": "Unable to move until the start of this unit's next turn.",
@@ -2420,7 +2420,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_LycanMecha_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"443800495\">Enemy_W2_LycanMecha_RageStatus</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%. Can use Lupitoxin Synthesis and Slaughter Algorithm. This is dispelled when Weakness is broken.",
@@ -3080,7 +3080,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanMecha_Ability06_Impact",
+    "name": "<a class=\"gModGreen\" id=\"74215986\">Enemy_W2_LycanMecha_Ability06_Impact</a>",
     "realName": "Blood Fervor",
     "aim": "Buff",
     "desc": "The Bloodlust stacks needed to enter the Moon Rage status are reduced.",
@@ -3122,7 +3122,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Feixiao_AlreadyConnect",
+    "name": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by #1[i]%. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
@@ -3133,7 +3133,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Feixiao_UltraConnect",
+    "name": "<a class=\"gModGreen\" id=\"881636857\">Monster_W2_Feixiao_UltraConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by #1[i]%. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
@@ -4269,7 +4269,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Feixiao_IF_AlreadyConnect",
+    "name": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
@@ -4277,7 +4277,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Feixiao_IF_UltraConnect",
+    "name": "<a class=\"gModGreen\" id=\"1186924823\">Monster_W2_Feixiao_IF_UltraConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
