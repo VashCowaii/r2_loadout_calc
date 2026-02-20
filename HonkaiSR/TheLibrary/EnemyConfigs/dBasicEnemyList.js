@@ -6349,7 +6349,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2033011": {
       "2033011": {
@@ -6366,7 +6366,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Howling Casket (Bug)"
     },
     "groupName": "Howling Casket"
@@ -6375,12 +6375,12 @@ let basicEnemyList = {
     "2033020": {
       "2033020": {},
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "2033021": {
       "2033021": {},
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
     },
     "2033022": {
@@ -6390,7 +6390,7 @@ let basicEnemyList = {
       "203302203": {},
       "203302204": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sanerot Hearteater"
     },
     "groupName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
@@ -6549,7 +6549,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "2035011": {
       "2035011": {
@@ -6560,7 +6560,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Shadow of \"Feixiao\""
     },
     "2035012": {
@@ -6605,7 +6605,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Hellcharred Shadow General"
     },
     "groupName": "Shadow of \"Feixiao\""
@@ -10500,7 +10500,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Meteoric Eagle"
   },
@@ -10541,7 +10541,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4023013": {
       "4023013": {
@@ -10551,7 +10551,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Noontide Gryphon (Bug)"
     },
     "groupName": "Noontide Gryphon"
@@ -10601,7 +10601,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Moonlit Pegasus"
   },
@@ -10628,7 +10628,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Tide-Eroded Blade"
   },
@@ -10655,7 +10655,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Black Tide's Corroded Axe"
   },
@@ -10675,7 +10675,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Black Tide Council"
   },
@@ -10703,7 +10703,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Black Tide's Decrepit Bow"
   },
@@ -10916,7 +10916,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4034013": {
       "4034013": {
@@ -10960,7 +10960,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of Doomsday Led Astray"
     },
     "4034014": {
@@ -10971,7 +10971,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark"
     },
     "4034015": {
@@ -10983,7 +10983,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dawn-Denied Khaslana"
     },
     "4034016": {
@@ -10995,7 +10995,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark"
     },
     "4034017": {
@@ -11006,7 +11006,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark"
     },
     "4034018": {
@@ -11018,7 +11018,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "???"
     },
     "4034019": {
@@ -11030,7 +11030,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flame Reaver of the Deepest Dark (Corrupted)"
     },
     "groupName": "Flame Reaver of the Deepest Dark"
@@ -16709,7 +16709,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Nebula Devourer"
     },
     "2032041": {
@@ -16720,7 +16720,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Nebula Devourer"
     },
     "2032042": {
@@ -16732,7 +16732,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Nebula Devourer"
     },
     "2032050": {
@@ -16742,7 +16742,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Planeshred Claws"
     },
     "2032051": {
@@ -16752,7 +16752,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Planeshred Claws"
     },
     "2032052": {
@@ -16764,7 +16764,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Planeshred Claws"
     },
     "2032060": {
@@ -16774,7 +16774,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Worldpurge Tail"
     },
     "2032061": {
@@ -16784,7 +16784,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Worldpurge Tail"
     },
     "2032062": {
@@ -16796,7 +16796,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Worldpurge Tail"
     },
     "3012030": {
@@ -17321,7 +17321,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Meteoric Eagle"
     },
     "4023011": {
@@ -17340,7 +17340,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Earthshaker Leo: Solblaze Winged Beast"
     },
     "4023012": {
@@ -17351,7 +17351,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Earthshaker Leo: Solblaze Winged Beast"
     },
     "4023021": {
@@ -17362,7 +17362,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Moonlit Pegasus"
     },
     "4032011": {
@@ -17380,7 +17380,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Tide-Eroded Blade"
     },
     "4032020": {
@@ -17461,7 +17461,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032021": {
@@ -17601,7 +17601,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032022": {
@@ -17661,7 +17661,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032023": {
@@ -17735,7 +17735,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Demon King's Minions"
     },
     "4032024": {
@@ -17753,7 +17753,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032025": {
@@ -17789,7 +17789,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032026": {
@@ -17821,7 +17821,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Long-Shattered Vessel"
     },
     "4032027": {
@@ -17833,7 +17833,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Shadow of \"Hatred\""
     },
     "4032028": {
@@ -17844,7 +17844,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Time Assassin"
     },
     "4032031": {
@@ -17862,7 +17862,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Corroded Axe"
     },
     "4032041": {
@@ -17873,7 +17873,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide Council"
     },
     "4032042": {
@@ -17884,7 +17884,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide Council"
     },
     "4032051": {
@@ -17895,7 +17895,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Decrepit Bow"
     },
     "4032052": {
@@ -17906,7 +17906,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Decrepit Bow"
     },
     "4033011": {
@@ -18027,7 +18027,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "???"
     },
     "4034012": {
@@ -18039,7 +18039,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Black Cloak Demon King\""
     },
     "4052011": {

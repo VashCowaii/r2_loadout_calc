@@ -1916,6 +1916,26 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
         </div>`;
     },
+    "Define Custom Variable with Toughness Count"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "target",
+            // "value",
+            // "flagName",
+            "context",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Toughness Count");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Toughness Count:</div>&nbsp;
+            ${parseRef.variableName} = Toughness Count 
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
+        </div>`;
+    },
     "Define Custom Variable with Flag Resistance"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -1928,7 +1948,7 @@ const megaParsingFuckeryPain = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Flag Resistance");
         // initialCounter++;
         return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">Define with Base Break DMG:</div>&nbsp;
+            <div class="rotationConditionOperatorHeaderInline">Define with Status Resistance:</div>&nbsp;
             ${parseRef.variableName} = RESISTANCE ${parseRef.flagName} 
         </div>
         <div class="modifierDetailsBox">
@@ -5575,6 +5595,7 @@ const megaParsingFuckeryPain = {
             "formula",
             "healer",
             "livingOnly",
+            "debtHeal",
             // "value1",
             // "compareType",
             // "value2"
@@ -5593,6 +5614,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.EnergyGainPercent,"Energy Split")}
             ${getStandardNameDisplay(initialCounter,parseRef.formula,"Heal Formula")}
             ${getStandardNameDisplay(initialCounter,parseRef.livingOnly,"Living Only")}
+            ${getStandardNameDisplay(initialCounter,parseRef.debtHeal,"Debt/Rally Heal")}
         </div>
         `;
     },
@@ -6079,6 +6101,7 @@ const megaParsingFuckeryPain = {
     "Adjust Target by Character Change Target"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
     "Adjust Target by Dummy Entity"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
     "Adjust Target by Ability Target"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
+    "Adjust Relative to Action Bar, Adjacent Targets"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
 
     
 
@@ -6104,13 +6127,24 @@ const megaParsingFuckeryPain = {
             "errorIfFailed",
             "countSetting",
             "livingType",
-            // "healPercent",
-            // "formula",
-            // "value1",
-            // "compareType",
+            "conditions",
+            "includeSource",
+            "lessThanMax",
+            "greaterThanMax",
             // "value2"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,parseRef.name + "[[Add Target by Obscure Bullshit]]");
+
+
+
+        const conditionObject = parseRef.conditions;
+        const conditionName = conditionObject?.name;
+
+        let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        const functionExists = megaParsingFuckery[conditionName];
+        if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
 
 
         
@@ -6118,6 +6152,7 @@ const megaParsingFuckeryPain = {
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.target ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : ""}
         </div>
+        ${returnString}
         <div class="modifierDetailsBox">
 
             ${getStandardNameDisplay(initialCounter,parseRef.useRandomWhenFailed,"Random when Failed")}
@@ -6137,6 +6172,9 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
             ${getStandardNameDisplay(initialCounter,parseRef.includeSelf,"Include Self")}
             ${getStandardNameDisplay(initialCounter,parseRef.livingType,"Life Type")}
+            ${getStandardNameDisplay(initialCounter,parseRef.includeSource,"Include Source")}
+            ${getStandardNameDisplay(initialCounter,parseRef.lessThanMax,"Max: Less Than")}
+            ${getStandardNameDisplay(initialCounter,parseRef.greaterThanMax,"Max: Greater Than")}
             
             
         </div>
@@ -6266,6 +6304,29 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.uniqueName,"Unique Identifier")}
             ${getStandardNameDisplay(initialCounter,parseRef.unknownBoolean,"Unknown Boolean")}
+
+        </div>
+        `;
+    },
+    "Set Enemy Toughness to Vulnerable"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            
+            "isVuln",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Enemy Toughness to Vulnerable");
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Set Enemy Toughness to Vulnerable:</div>&nbsp;
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.isVuln,"Is Vulnerable")}
 
         </div>
         `;

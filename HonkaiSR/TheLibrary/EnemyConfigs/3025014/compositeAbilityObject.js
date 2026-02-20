@@ -12823,11 +12823,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (W3_Sunday_00_PassiveSkillInitiate_InsertFlag) || RETURN",
-                    "displayLines": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+                    "operator": "Variables[0] (UnusedUnderThisBase_351) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_351",
                     "constants": [],
                     "variables": [
-                      "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
+                      "UnusedUnderThisBase_351"
                     ]
                   }
                 },

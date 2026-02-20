@@ -30,7 +30,7 @@ const configAbility = {
         "ID": 402301100,
         "target": {
           "name": "Target Name",
-          "target": "Monster_W4_Griffin_00_LocalLegend"
+          "target": "{{EVENT[RoT] Noontide Gryphon}}"
         },
         "characterName": null
       },

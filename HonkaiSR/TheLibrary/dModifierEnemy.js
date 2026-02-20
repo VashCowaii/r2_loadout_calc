@@ -2175,7 +2175,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_FearPre",
+    "name": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>",
     "realName": "Terror Grip",
     "aim": "Debuff",
     "desc": "Enters the \"Terrified\" state at the start of the second turn. Attacking the %CasterName 1 time before then can dispel \"Terror Grip.\"",
@@ -2186,7 +2186,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_Fear",
+    "name": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>",
     "realName": "Terrified",
     "aim": "Debuff",
     "desc": "Unable to move until the start of this unit's next turn.",
@@ -2420,7 +2420,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_LycanMecha_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"443800495\">Enemy_W2_LycanMecha_RageStatus</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%. Can use Lupitoxin Synthesis and Slaughter Algorithm. This is dispelled when Weakness is broken.",
@@ -3080,7 +3080,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanMecha_Ability06_Impact",
+    "name": "<a class=\"gModGreen\" id=\"74215986\">Enemy_W2_LycanMecha_Ability06_Impact</a>",
     "realName": "Blood Fervor",
     "aim": "Buff",
     "desc": "The Bloodlust stacks needed to enter the Moon Rage status are reduced.",
@@ -3122,7 +3122,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Feixiao_AlreadyConnect",
+    "name": "<a class=\"gModGreen\" id=\"-1482768789\">Monster_W2_Feixiao_AlreadyConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by #1[i]%. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
@@ -3133,7 +3133,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Feixiao_UltraConnect",
+    "name": "<a class=\"gModGreen\" id=\"881636857\">Monster_W2_Feixiao_UltraConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by #1[i]%. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
@@ -3325,7 +3325,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Scholar_01_Stealth",
+    "name": "<a class=\"gModGreen\" id=\"-19048827\">Enemy_W4_Scholar_01_Stealth</a>",
     "realName": "Lurking",
     "aim": "Buff",
     "desc": "Cannot become the primary target for abilities that require active selection. DMG received increases by #1[i]%. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
@@ -3336,7 +3336,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Scholar_01_StealthBreak",
+    "name": "<a class=\"gModGreen\" id=\"264567512\">Enemy_W4_Scholar_01_StealthBreak</a>",
     "realName": "Flawed",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%.",
@@ -3610,7 +3610,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Griffin_Debuff_Mark",
+    "name": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>",
     "realName": "Aquila's Mark",
     "aim": "Other",
     "desc": "When a target gains \"Aquila's Mark\" again, dispel all marks, and they take Fire DMG and lose Energy. When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take True DMG based on #1[i]% of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. After any ally target defeats an enemy target, this mark can be dispelled, prioritizing dispelling the mark from the target that dealt the fatal damage.",
@@ -3621,7 +3621,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Griffin_SignOnAvatar",
+    "name": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3629,7 +3629,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_Debuff_Mark",
+    "name": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>",
     "realName": "Oronyx's Mark",
     "aim": "Other",
     "desc": "When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take Quantum DMG with a high chance to be afflicted with Entanglement. When a target gains \"Aquila's Mark\" again, dispel all marks, and they receive True DMG based on #1[i]% of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. Using Ultimate can dispel this mark.",
@@ -3640,7 +3640,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Unicorn_SignOnAvatar",
+    "name": "<a class=\"gModGreen\" id=\"-820453556\">Enemy_W4_Unicorn_SignOnAvatar</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3648,7 +3648,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_SignOnAvatar2",
+    "name": "<a class=\"gModGreen\" id=\"-2111319206\">Enemy_W4_Unicorn_SignOnAvatar2</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3722,7 +3722,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Minion02_01_RallyHP_V2",
+    "name": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>",
     "realName": "Corrosion",
     "aim": "Other",
     "desc": "After attacking, restore a portion of Corroded HP. The more targets are attacked, the more HP is restored. When Corrosion is dispelled via restorative means, obtain \"Renewal.\"",
@@ -3730,7 +3730,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Minion02_01_RallyHP_V2_Strongth",
+    "name": "<a class=\"gModGreen\" id=\"-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>",
     "realName": "Renewal",
     "aim": "Buff",
     "desc": "The next attack's DMG dealt increases by #1[i]%.",
@@ -3896,7 +3896,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_01_Repeat",
+    "name": "<a class=\"gModGreen\" id=\"-104101548\">Enemy_W4_FireProwler_01_Repeat</a>",
     "realName": "Futility",
     "aim": "Other",
     "desc": "Resists Crowd Control debuffs. When \"%DynamicTargetName\" uses \"Demise's Storm\" or \"Fading Fate\" again, if this unit was summoned by this attack and is in the \"Mutual Sacrifice\" state, then this unit will attack together with \"%DynamicTargetName\".",
@@ -3904,7 +3904,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_TimePower",
+    "name": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>",
     "realName": "Calamity Power",
     "aim": "Other",
     "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
@@ -3912,7 +3912,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_HPBack",
+    "name": "<a class=\"gModGreen\" id=\"-834356036\">Enemy_W4_FireProwler_01_HPBack</a>",
     "realName": "Enfettered",
     "aim": "Other",
     "desc": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
@@ -3920,7 +3920,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1169574682\">Enemy_W4_FireProwler_Charge</a>",
     "realName": "Silent Sorrow",
     "aim": "Other",
     "desc": "Use \"Cry Not For The Discarded\" during the next action.",
@@ -3955,7 +3955,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_RallyHP",
+    "name": "<a class=\"gModGreen\" id=\"-1070811154\">Enemy_W4_FireProwler_RallyHP</a>",
     "realName": "Entangled By Agony",
     "aim": "Other",
     "desc": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
@@ -4066,7 +4066,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_AllDamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>",
     "realName": "DMG Reduction",
     "aim": "Buff",
     "desc": "Each stack reduces DMG received by #1[i]%. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
@@ -4134,7 +4134,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Valkyrie01_02_AbilityP01",
+    "name": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>",
     "realName": "Bitter Fracture",
     "aim": "Other",
     "desc": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
@@ -4269,7 +4269,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Feixiao_IF_AlreadyConnect",
+    "name": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
@@ -4277,7 +4277,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Feixiao_IF_UltraConnect",
+    "name": "<a class=\"gModGreen\" id=\"1186924823\">Monster_W2_Feixiao_IF_UltraConnect</a>",
     "realName": "Resonate",
     "aim": "Other",
     "desc": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
@@ -4359,7 +4359,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_HPBack",
+    "name": "<a class=\"gModGreen\" id=\"-1742476718\">Enemy_W4_FireProwler_01_IF_HPBack</a>",
     "realName": "Shackled",
     "aim": "Other",
     "desc": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
@@ -4367,7 +4367,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_IF_Charge_Ability031",
+    "name": "<a class=\"gModGreen\" id=\"1617419184\">Enemy_W4_FireProwler_IF_Charge_Ability031</a>",
     "realName": "Dying Sobs",
     "aim": "Other",
     "desc": "Uses \"But Suffering is Essential\" in the next action.",
@@ -4375,7 +4375,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_IF_Limit",
+    "name": "<a class=\"gModGreen\" id=\"-557758203\">Enemy_W4_FireProwler_IF_Limit</a>",
     "realName": "Shackle Shatter",
     "aim": "Other",
     "desc": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
@@ -4383,7 +4383,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"1578257108\">Enemy_W4_FireProwler_01_IF_Bonus</a>",
     "realName": "Complete Vessel",
     "aim": "Other",
     "desc": "After launching an attack, it is absorbed by \"%CasterName\" to grant 1 stack of \"Calamity Power.\" When an ally target defeats a target, immediately grants 1 extra turn and increases DMG dealt.",
@@ -4391,7 +4391,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1209794480\">Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -4402,7 +4402,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Activated01",
+    "name": "<a class=\"gModGreen\" id=\"2095261503\">Enemy_W4_FireProwler_01_IF_Activated01</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
@@ -4410,7 +4410,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_IF_Activated02",
+    "name": "<a class=\"gModGreen\" id=\"2112039122\">Enemy_W4_FireProwler_01_IF_Activated02</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
@@ -4552,7 +4552,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_HPBack",
+    "name": "<a class=\"gModGreen\" id=\"-1299205182\">Enemy_W4_FireProwler_11_Main03_HPBack</a>",
     "realName": "Shackled",
     "aim": "Other",
     "desc": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
@@ -4560,7 +4560,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_10_Main03_Limit",
+    "name": "<a class=\"gModGreen\" id=\"670740905\">Enemy_W4_FireProwler_10_Main03_Limit</a>",
     "realName": "Shackle Shatter",
     "aim": "Other",
     "desc": "Alternates between using \"Silent Sorrow\" and \"Cry Not for the Discarded.\" Defeat \"Long-Shattered Vessel\" to reduce Toughness and \"Calamity Power\" stacks.",
@@ -4568,7 +4568,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-986774268\">Enemy_W4_FireProwler_11_Main03_Bonus</a>",
     "realName": "Complete Vessel",
     "aim": "Other",
     "desc": "After launching an attack, it is absorbed by \"%CasterName\" to grant 1 stack of \"Calamity Power.\" When an ally character defeats a target, immediately grants 1 extra turn.",
@@ -4576,7 +4576,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Bonus_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1744861792\">Enemy_W4_FireProwler_11_Main03_Bonus_AllDamageTypeAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -4587,7 +4587,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Activated01",
+    "name": "<a class=\"gModGreen\" id=\"1810803535\">Enemy_W4_FireProwler_11_Main03_Activated01</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
@@ -4595,7 +4595,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_11_Main03_Activated02",
+    "name": "<a class=\"gModGreen\" id=\"1827581154\">Enemy_W4_FireProwler_11_Main03_Activated02</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
@@ -4694,7 +4694,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_W4_Griffin_LocalLegend_Revenge",
+    "name": "<a class=\"gModGreen\" id=\"-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>",
     "realName": "DMG Boost",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -4724,7 +4724,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_AML_Minion02_01_LocalLegend_NegativeBlood",
+    "name": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>",
     "realName": "HP Overload",
     "aim": "Other",
     "desc": "Target has accumulated \"HP Overload,\" healing #1[i] HP will remove this state. When the \"Overload Settlement\" turn begins, the target will receive fatal damage.",
@@ -5234,7 +5234,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_W4_Griffin_LocalLegend_AllDamageTaken",
+    "name": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -5486,7 +5486,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Phainon_Part1",
+    "name": "<a class=\"gModGreen\" id=\"561115494\">Enemy_W4_Phainon_Part1</a>",
     "realName": "May You End the Evernight",
     "aim": "Other",
     "desc": "Khaslana awaits your return.",
@@ -5494,7 +5494,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_Phainon_Part2",
+    "name": "<a class=\"gModGreen\" id=\"544337875\">Enemy_W4_Phainon_Part2</a>",
     "realName": "May You Dispel the Sky's Gloom",
     "aim": "Other",
     "desc": "Khaslana looks forward to saving the world with you.",
@@ -5502,7 +5502,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_Phainon_Part3",
+    "name": "<a class=\"gModGreen\" id=\"527560256\">Enemy_W4_Phainon_Part3</a>",
     "realName": "May You Become The First Blazing Sun",
     "aim": "Other",
     "desc": "Khaslana awaits the break of dawn.",
@@ -5585,7 +5585,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Scholar_01_LocalLegend_Stealth",
+    "name": "<a class=\"gModGreen\" id=\"-1507903432\">Enemy_W4_Scholar_01_LocalLegend_Stealth</a>",
     "realName": "Lurking",
     "aim": "Buff",
     "desc": "Cannot become the primary target for abilities that require active selection. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",

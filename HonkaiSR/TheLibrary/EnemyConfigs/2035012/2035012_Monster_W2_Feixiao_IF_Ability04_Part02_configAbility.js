@@ -1,0 +1,371 @@
+const configAbility = {
+  "fileName": "2035012_Monster_W2_Feixiao_IF_Ability04_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "UI Display Event",
+      "popUpText": "Breathing Ether"
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"1540195907\">Monster_W2_Feixiao_Part2Effect</a>"
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1070872392\">Monster_W2_Feixiao_Part3Effect</a>"
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Nebula Devourer: Self}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Nebula Devourer: Self}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Nebula Devourer: Self}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"835596889\">Monster_W2_Feixiao_IF_AlreadyConnectRemove</a>"
+        }
+      ]
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-39431749\">Monster_W2_Feixiao_EnhanceAbilityMark</a>"
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Wind",
+        "Damage": {
+          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
+          "displayLines": "Skill04DamagePercentage",
+          "constants": [],
+          "variables": [
+            "Skill04DamagePercentage"
+          ]
+        },
+        "HitSplit": 0.15,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Wind",
+        "Damage": {
+          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
+          "displayLines": "Skill04DamagePercentage",
+          "constants": [],
+          "variables": [
+            "Skill04DamagePercentage"
+          ]
+        },
+        "HitSplit": 0.15,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Wind",
+        "Damage": {
+          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
+          "displayLines": "Skill04DamagePercentage",
+          "constants": [],
+          "variables": [
+            "Skill04DamagePercentage"
+          ]
+        },
+        "HitSplit": 0.15,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Wind",
+        "Damage": {
+          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
+          "displayLines": "Skill04DamagePercentage",
+          "constants": [],
+          "variables": [
+            "Skill04DamagePercentage"
+          ]
+        },
+        "HitSplit": 0.15,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Wind",
+        "Damage": {
+          "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
+          "displayLines": "Skill04DamagePercentage",
+          "constants": [],
+          "variables": [
+            "Skill04DamagePercentage"
+          ]
+        },
+        "HitSplit": 0.4,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    "Trigger: Attack End",
+    {
+      "name": "Update Energy",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "value": 10,
+      "isFixed": "* ERR"
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "searchRandom": true,
+      "maxTargets": {
+        "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
+        "displayLines": "{[PassiveSkill03[4]]}",
+        "constants": [],
+        "variables": [
+          "{[PassiveSkill03[4]]}"
+        ]
+      },
+      "ifTargetFound": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
+            "displayLines": "{[PassiveSkill03[3]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill03[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill03[5]]}) || RETURN",
+            "displayLines": "{[Skill03[5]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[5]]}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"835596889\">Monster_W2_Feixiao_IF_AlreadyConnectRemove</a>"
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
+      "maxTargets": 1,
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "modifier": "<a class=\"gModGreen\" id=\"734224904\">Monster_W2_Feixiao_CurrentConnect</a>"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"734224904\">Monster_W2_Feixiao_CurrentConnect</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "multiBase": 1
+        }
+      ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "HP_Bars_Remaining",
+        "compareType": "=",
+        "value2": 1
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nebula Devourer: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1540195907\">Monster_W2_Feixiao_Part2Effect</a>"
+        }
+      ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "HP_Bars_Remaining",
+        "compareType": "=",
+        "value2": 2
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nebula Devourer: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nebula Devourer: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1070872392\">Monster_W2_Feixiao_Part3Effect</a>"
+        }
+      ]
+    }
+  ],
+  "references": []
+}

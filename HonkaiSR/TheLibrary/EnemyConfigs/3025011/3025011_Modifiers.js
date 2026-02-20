@@ -4036,11 +4036,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (AIFlag) || RETURN",
-                "displayLines": "AIFlag",
+                "operator": "Variables[0] (UnusedUnderThisBase_351) || RETURN",
+                "displayLines": "UnusedUnderThisBase_351",
                 "constants": [],
                 "variables": [
-                  "AIFlag"
+                  "UnusedUnderThisBase_351"
                 ]
               }
             },

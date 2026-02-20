@@ -40,7 +40,6 @@ const configAbility = {
       ],
       "stackData": [],
       "latentQueue": [
-        "AttackCount",
         "IsInDeathRattle"
       ]
     },
@@ -275,9 +274,7 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "AttackCount"
-      ],
+      "latentQueue": [],
       "description": "Upon receiving a killing blow, the unit deals DMG 1 time to targets that are afflicted with Spur of Thunderwoe by them.<br>The current targets who have Spur of Thunderwoe on them are: %DynamicTargetName.",
       "type": "Buff",
       "effectName": "Core Formation",
