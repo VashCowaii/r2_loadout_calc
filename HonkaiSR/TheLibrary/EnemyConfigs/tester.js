@@ -3235,7 +3235,7 @@ const userTriggers = {
     updateMainMenuDisplayed(elementID) {
 
         if (elementID === 1 && Array.isArray(compositeAbilityObject)) {
-            alert(`This enemy doesn't have a reader entry set up yet. YET.\n\nThat you're seeing this message means I've already started on enemy readers though, I just can't do all of them at once.\n\nSee the library homepage for progress% or the changelog for who has been added recently.`)
+            alert(`Either this enemy is a 4.0 enemy in which case I can't do its eventreader yet (it's complicated)\nOR I simply forgot to do it.\n\nThere are around ${readyEnemyCounts.totalEnemyCount} enemies that can utilize eventreaders, of which ~${readyEnemyCounts.readyEnemyCount} of them are completed. If you believe this enemy SHOULD have an eventreader completed, let me know in the discord.`)
             return;
         }
 
