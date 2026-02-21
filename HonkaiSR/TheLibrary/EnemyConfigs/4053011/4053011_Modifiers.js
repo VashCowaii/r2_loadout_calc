@@ -157,12 +157,12 @@ const configAbility = {
                       ]
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_MaxHp) || Variables[1] (MDF_DotHPRatio) || MUL || RETURN",
-                      "displayLines": "(MDF_MaxHp * MDF_DotHPRatio)",
+                      "operator": "Variables[0] (MDF_DotHPRatio) || Variables[1] (MDF_MaxHp) || MUL || RETURN",
+                      "displayLines": "(MDF_DotHPRatio * MDF_MaxHp)",
                       "constants": [],
                       "variables": [
-                        "MDF_MaxHp",
-                        "MDF_DotHPRatio"
+                        "MDF_DotHPRatio",
+                        "MDF_MaxHp"
                       ]
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -233,13 +233,13 @@ const configAbility = {
                       ]
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_MaxHp) || MUL || Variables[2] (MDF_DotHPRatio) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_MaxHp) * MDF_DotHPRatio)",
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DotHPRatio) || MUL || Variables[2] (MDF_MaxHp) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp)",
                       "constants": [],
                       "variables": [
                         "DOT_TriggerRatio",
-                        "MDF_MaxHp",
-                        "MDF_DotHPRatio"
+                        "MDF_DotHPRatio",
+                        "MDF_MaxHp"
                       ]
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -317,12 +317,12 @@ const configAbility = {
                       ]
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_MaxHp) || Variables[1] (MDF_DotHPRatio) || MUL || RETURN",
-                      "displayLines": "(MDF_MaxHp * MDF_DotHPRatio)",
+                      "operator": "Variables[0] (MDF_DotHPRatio) || Variables[1] (MDF_MaxHp) || MUL || RETURN",
+                      "displayLines": "(MDF_DotHPRatio * MDF_MaxHp)",
                       "constants": [],
                       "variables": [
-                        "MDF_MaxHp",
-                        "MDF_DotHPRatio"
+                        "MDF_DotHPRatio",
+                        "MDF_MaxHp"
                       ]
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -393,13 +393,13 @@ const configAbility = {
                       ]
                     },
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_MaxHp) || MUL || Variables[2] (MDF_DotHPRatio) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * MDF_MaxHp) * MDF_DotHPRatio)",
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DotHPRatio) || MUL || Variables[2] (MDF_MaxHp) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp)",
                       "constants": [],
                       "variables": [
                         "DOT_TriggerRatio",
-                        "MDF_MaxHp",
-                        "MDF_DotHPRatio"
+                        "MDF_DotHPRatio",
+                        "MDF_MaxHp"
                       ]
                     },
                     "dmgFormulaFinal": "Converted DMG Base",
@@ -469,14 +469,14 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageFlat": {
-                      "operator": "Variables[0] (MDF_MaxHp) || Variables[1] (MDF_DotHPRatio) || MUL || Constants[0] (1) || Variables[2] (MDF_DotDamageRatio) || ADD || MUL || RETURN",
-                      "displayLines": "((MDF_MaxHp * MDF_DotHPRatio) * (1 + MDF_DotDamageRatio))",
+                      "operator": "Variables[0] (MDF_DotHPRatio) || Variables[1] (MDF_MaxHp) || MUL || Constants[0] (1) || Variables[2] (MDF_DotDamageRatio) || ADD || MUL || RETURN",
+                      "displayLines": "((MDF_DotHPRatio * MDF_MaxHp) * (1 + MDF_DotDamageRatio))",
                       "constants": [
                         1
                       ],
                       "variables": [
-                        "MDF_MaxHp",
                         "MDF_DotHPRatio",
+                        "MDF_MaxHp",
                         "MDF_DotDamageRatio"
                       ]
                     },
@@ -540,15 +540,15 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_MaxHp) || MUL || Variables[2] (MDF_DotHPRatio) || MUL || Constants[0] (1) || Variables[3] (MDF_DotDamageRatio) || ADD || MUL || RETURN",
-                      "displayLines": "(((DOT_TriggerRatio * MDF_MaxHp) * MDF_DotHPRatio) * (1 + MDF_DotDamageRatio))",
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DotHPRatio) || MUL || Variables[2] (MDF_MaxHp) || MUL || Constants[0] (1) || Variables[3] (MDF_DotDamageRatio) || ADD || MUL || RETURN",
+                      "displayLines": "(((DOT_TriggerRatio * MDF_DotHPRatio) * MDF_MaxHp) * (1 + MDF_DotDamageRatio))",
                       "constants": [
                         1
                       ],
                       "variables": [
                         "DOT_TriggerRatio",
-                        "MDF_MaxHp",
                         "MDF_DotHPRatio",
+                        "MDF_MaxHp",
                         "MDF_DotDamageRatio"
                       ]
                     },

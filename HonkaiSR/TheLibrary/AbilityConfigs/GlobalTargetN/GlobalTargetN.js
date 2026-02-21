@@ -2276,6 +2276,567 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Dark Sun Gryphon: Skill01 Target 4",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Living State",
+                "state": "Mask_AliveOnly",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            },
+            {
+              "name": "Target Index",
+              "indexValue": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Dark Sun Gryphon: Skill01 Target 3",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Living State",
+                "state": "Mask_AliveOnly",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            },
+            {
+              "name": "Target Index",
+              "indexValue": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Dark Sun Gryphon: Skill01 Target 2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Living State",
+                "state": "Mask_AliveOnly",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            },
+            {
+              "name": "Target Index",
+              "indexValue": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Dark Sun Gryphon: Skill01 Target 1",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Living State",
+                "state": "Mask_AliveOnly",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning"
+            },
+            {
+              "name": "Target Index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "BattleEvent20034",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 20034,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Light Praetor: Light Characters",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Dark Praetor: Dark Characters",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Light Praetor: Light Summons",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1733208615\">Enemy_W4_Claymore_01_LocalLegend_WhiteSummon</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Light Praetor: Light Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Dark Praetor: Dark Summons",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Dark Praetor: Dark Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Light Praetor: 3",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"2062098307\">Enemy_Heaven_ModelController_Claymore</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Dark Praetor: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-23920605\">Enemy_W4_Claymore_01_LocalLegend_Status</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Dark Praetor: Selected Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Praetor: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team(Exclude Memosprites)}}"
+                },
+                {
+                  "name": "Filter by Life-State",
+                  "state": "Mask_AliveOnly"
+                }
+              ]
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]"
+              }
+            },
+            {
+              "name": "Return Target",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Praetor: Skill02 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team(Exclude Memosprites)}}"
+                },
+                {
+                  "name": "Filter by Life-State",
+                  "state": "Mask_AliveOrLimbo"
+                },
+                "Shuffle Targets"
+              ]
+            },
+            {
+              "name": "Sort by Modifier Types",
+              "buffType": "Buff",
+              "sortByHighest": true
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Target is Unselectable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Living State",
+                    "state": "Bit_OnStage",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Return Target",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Irontomb Part 1: Skill02 Target",
       "isTargetOperator": false,
       "execute": [
@@ -3319,6 +3880,57 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "EVENT[RoT] Light Praetor: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4034014,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Flame Reaver of the Deepest Dark"
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4034015,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Dawn-Denied Khaslana"
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 403401400,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Praetor: Ability Target Right",
       "isTargetOperator": false,
       "execute": [
@@ -3712,128 +4324,6 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
-      "nameTarget": "Enemy Feixiao: Self",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Target Sequence",
-          "Sequence": [
-            {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Enemy ID",
-                    "ID": 203501,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null,
-                    "isCompareUniqueID": true
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 200501,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null,
-                    "isCompareUniqueID": true
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Enemy Feixiao: Main",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Target Sequence",
-          "Sequence": [
-            {
-              "name": "Target Name",
-              "target": "{{Enemy Team All}}"
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"2043551800\">Monster_W2_Feixiao_Main</a>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Enemy Feixiao: Skill05 Camera Target",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Join Targets",
-          "TargetList": [
-            {
-              "name": "Target Name",
-              "target": "{{Enemy Team All}}"
-            },
-            {
-              "name": "Target Name",
-              "target": "{{Enemy Feixiao: Skill05 Target}}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Enemy Feixiao: Skill05 Target",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Target Sequence",
-          "Sequence": [
-            {
-              "name": "Target Name",
-              "target": "{{Player Team All}}"
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
-              }
-            },
-            {
-              "name": "Sort by Physical Positioning",
-              "byHighest": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
       "nameTarget": "Feixiao Parts: Tail",
       "isTargetOperator": false,
       "execute": [
@@ -4020,6 +4510,128 @@ const configAbility = {
                   "target": "{{Caster}}"
                 }
               }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Enemy Feixiao: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 203501,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null,
+                    "isCompareUniqueID": true
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 200501,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null,
+                    "isCompareUniqueID": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Enemy Feixiao: Main",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"2043551800\">Monster_W2_Feixiao_Main</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Enemy Feixiao: Skill05 Camera Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Feixiao: Skill05 Target}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Enemy Feixiao: Skill05 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning",
+              "byHighest": true
             }
           ]
         }

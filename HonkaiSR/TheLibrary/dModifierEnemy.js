@@ -3404,7 +3404,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_XP_Elite01_02_DefenceDown",
+    "name": "<a class=\"gModGreen\" id=\"550129180\">Enemy_XP_Elite01_02_DefenceDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "DEF decreases by #1[i]%.",
@@ -3538,7 +3538,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_Target",
+    "name": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>",
     "realName": "Duel",
     "aim": "Other",
     "desc": "SPD increases by #1[i]%. When receiving DMG from targets outside the Duel state, reduces DMG by #2[i]%. Obtains 1 stack of \"Morale\" after each attack.",
@@ -3550,7 +3550,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_Win",
+    "name": "<a class=\"gModGreen\" id=\"2009401658\">Enemy_W4_Claymore_01_Ability02_DeadLock_Win</a>",
     "realName": "Honor",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -3561,7 +3561,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp",
+    "name": "<a class=\"gModGreen\" id=\"-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>",
     "realName": "Morale",
     "aim": "Buff",
     "desc": "Each stack increases the DMG dealt by #1[i]%.",
@@ -4096,7 +4096,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_XP_Elite01_02_Charge_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-2071311511\">Enemy_XP_Elite01_02_Charge_Enhance</a>",
     "realName": "Ominous Degeneration",
     "aim": "Other",
     "desc": "Uses \"Torrential Surge\" in the next action.",
@@ -4150,7 +4150,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Griffin_01_Ability02_ShadowControl",
+    "name": "<a class=\"gModGreen\" id=\"-1018682036\">Enemy_W4_Griffin_01_Ability02_ShadowControl</a>",
     "realName": "Chaotic Order",
     "aim": "Other",
     "desc": "\"Archer of the Dark Sun\" does not actively take action, and will only attack after the \"Dark Sun Gryphon\" that summoned this unit attacks. If this unit is under Crowd Control debuffs or Weakness Broken state at this point, this changes to dispelling the Crowd Control debuffs or Weakness Broken state on this unit.",
@@ -4158,7 +4158,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Griffin_01_Ability03_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"170082228\">Enemy_W4_Griffin_01_Ability03_Enhance</a>",
     "realName": "The Dead Winds Cometh",
     "aim": "Other",
     "desc": "Uses \"Carol of Heat Death\" in the next action.",
@@ -4296,7 +4296,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant",
+    "name": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>",
     "realName": "Duel",
     "aim": "Other",
     "desc": "SPD increases by #1[i]%. When receiving DMG from targets outside the Duel state, reduces DMG by #2[i]%. Obtains 1 stack of \"Morale\" after each attack.",
@@ -4672,7 +4672,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display",
+    "name": "<a class=\"gModGreen\" id=\"-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>",
     "realName": "HP Count",
     "aim": "Other",
     "desc": "Target is immediately knocked down after receiving #1[i] attack(s).",
@@ -4683,7 +4683,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Display",
+    "name": "<a class=\"gModGreen\" id=\"-1311672660\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Display</a>",
     "realName": "HP Count",
     "aim": "Other",
     "desc": "Target is immediately knocked down after receiving #1[i] attack(s).",
@@ -4705,7 +4705,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark",
+    "name": "<a class=\"gModGreen\" id=\"1972420771\">Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark</a>",
     "realName": "Overloadable",
     "aim": "Other",
     "desc": "Target's HP cannot be reduced below 1, and any excess damage beyond an amount of their current HP will be converted to \"HP Overload.\" When receiving healing, prioritizes restoring their \"HP Overload.\"",
@@ -4713,7 +4713,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_XP_Elite01_02_LocalLegend_DamageAdded",
+    "name": "<a class=\"gModGreen\" id=\"354987416\">Enemy_XP_Elite01_02_LocalLegend_DamageAdded</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -4735,7 +4735,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"1177581439\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_Avatar</a>",
     "realName": "HP Overload",
     "aim": "Other",
     "desc": "Target has accumulated \"HP Overload,\" healing #1[i] HP will remove this state. When the \"Overload Settlement\" turn begins, the target will receive fatal damage.",
@@ -4885,7 +4885,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_BlackCurse_Active",
+    "name": "<a class=\"gModGreen\" id=\"1370763817\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse_Active</a>",
     "realName": "Black Tide Duel",
     "aim": "Other",
     "desc": "This target can only attack \"Black Tide Creature\" and can only be attacked by \"Black Tide Creature.\"",
@@ -4893,7 +4893,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_BlackCurse_InActive",
+    "name": "<a class=\"gModGreen\" id=\"1541340590\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse_InActive</a>",
     "realName": "Black Tide Duel",
     "aim": "Other",
     "desc": "This target can only attack \"Black Tide Creature\" and can only be attacked by \"Black Tide Creature.\"",
@@ -4901,7 +4901,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_Fatigue",
+    "name": "<a class=\"gModGreen\" id=\"-1806977974\">Enemy_W4_Claymore_01_LocalLegend_Fatigue</a>",
     "realName": "DMG Reduction",
     "aim": "Other",
     "desc": "When this target deals DMG to enemy targets, the DMG received by enemy targets is reduced by #1[i]%. This state is removed when the \"Corrosion\" state is removed.",
@@ -5202,7 +5202,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_AllMonst",
+    "name": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>",
     "realName": "Fight in Unity",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]% and DMG received reduces by #2[i]%.",
@@ -5245,7 +5245,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Claymore_01_LocalLegend_LockHP_Revive",
+    "name": "<a class=\"gModGreen\" id=\"-1616431833\">Monster_W4_Claymore_01_LocalLegend_LockHP_Revive</a>",
     "realName": "Indomitable Battle",
     "aim": "Other",
     "desc": "Restores a certain amount of HP and returns to battle during the next action.",
@@ -5376,7 +5376,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_Active",
+    "name": "<a class=\"gModGreen\" id=\"553563923\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_Active</a>",
     "realName": "Fury Duel",
     "aim": "Other",
     "desc": "This target can only attack the \"Titankin\" and can only be attacked by the \"Titankin.\"",
@@ -5384,7 +5384,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_InActive",
+    "name": "<a class=\"gModGreen\" id=\"2121379300\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_InActive</a>",
     "realName": "Fury Duel",
     "aim": "Other",
     "desc": "This target can only attack the \"Titankin\" and can only be attacked by the \"Titankin.\"",
@@ -5422,7 +5422,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim",
+    "name": "<a class=\"gModGreen\" id=\"-55819136\">MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim</a>",
     "realName": "Charging",
     "aim": "Other",
     "desc": "Charging. Dispelled upon Weakness Break.",
@@ -5430,7 +5430,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_LocalLegend03_Ability03_Aim",
+    "name": "<a class=\"gModGreen\" id=\"-1956673523\">MModifier_Monster_W4_Claymore_LocalLegend03_Ability03_Aim</a>",
     "realName": "Charging",
     "aim": "Other",
     "desc": "Charging. Dispelled upon Weakness Break.",
@@ -5761,7 +5761,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_Self",
+    "name": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>",
     "realName": "Duel",
     "aim": "Other",
     "desc": "Increases SPD by #1[i]% and when receiving DMG from targets outside the Showdown state, reduces DMG by #2[i]%. Obtains 1 stack of \"Morale\" after each attack. DMG taken from Duel target will reduce the Duel's progress bar based on the DMG. When the Duel's progress bar is at 0, the Duel is lost and the Duel state is dispelled. Still requires #3[i] DMG to dispel Duel state.",

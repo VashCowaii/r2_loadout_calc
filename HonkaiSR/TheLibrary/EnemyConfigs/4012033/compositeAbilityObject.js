@@ -1684,7 +1684,7 @@ const compositeAbilityObject = {
               },
               "paramTarget": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target.[[index0]]"
+                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}.[[index0]]"
               },
               "variableName": "RandomTarget"
             },
@@ -1730,7 +1730,7 @@ const compositeAbilityObject = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
               },
               "searchRandom": true,
               "maxTargets": 1,
@@ -1767,7 +1767,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                    "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
                   },
                   "searchRandom": true,
                   "maxTargets": 1,
@@ -1864,7 +1864,7 @@ const compositeAbilityObject = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
               },
               "searchRandom": true,
               "maxTargets": 1,
@@ -1928,7 +1928,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                    "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
                   },
                   "searchRandom": true,
                   "maxTargets": 1,
@@ -1987,7 +1987,7 @@ const compositeAbilityObject = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
               },
               "searchRandom": true,
               "maxTargets": 1,
@@ -2051,7 +2051,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                    "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
                   },
                   "searchRandom": true,
                   "maxTargets": 1,
@@ -2110,7 +2110,7 @@ const compositeAbilityObject = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
               },
               "searchRandom": true,
               "maxTargets": 1,
@@ -2174,7 +2174,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                    "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
                   },
                   "searchRandom": true,
                   "maxTargets": 1,
@@ -2233,7 +2233,7 @@ const compositeAbilityObject = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
               },
               "searchRandom": true,
               "maxTargets": 1,
@@ -2297,7 +2297,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "MMonster_W4_Claymore_01_LocalLegend_WhiteCurse_Target"
+                    "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
                   },
                   "searchRandom": true,
                   "maxTargets": 1,
