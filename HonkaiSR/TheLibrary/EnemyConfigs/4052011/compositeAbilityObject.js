@@ -78,7 +78,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_01.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 1}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_02.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 2}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_03.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 3}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -144,7 +144,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_04.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 4}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -177,7 +177,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_01.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 1}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -199,7 +199,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_02.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 2}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -221,7 +221,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_03.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 3}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -254,7 +254,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_01.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 1}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -276,7 +276,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_02.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 2}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -309,7 +309,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",
-                "target": "Monster_W4_Griffin_01_Skill01_GriffinTarget_01.[[addMemosprite]].[[removeUnselectable]]"
+                "target": "{{Dark Sun Gryphon: Skill01 Target 1}}.[[addMemosprite]].[[removeUnselectable]]"
               },
               "AttackScaling": {
                 "DamageType": "Wind",

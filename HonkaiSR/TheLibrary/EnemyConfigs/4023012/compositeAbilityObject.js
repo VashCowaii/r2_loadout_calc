@@ -1708,11 +1708,11 @@ const compositeAbilityObject = {
             "value1": "_DieSumsCheck",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (FREEVAR) || RETURN",
-              "displayLines": "FREEVAR",
+              "operator": "Variables[0] (_DieSums) || RETURN",
+              "displayLines": "_DieSums",
               "constants": [],
               "variables": [
-                "FREEVAR"
+                "_DieSums"
               ]
             }
           }
@@ -1721,11 +1721,11 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "variableName": "_DieSumsCheck",
           "value": {
-            "operator": "Variables[0] (_DieSumsCheck) || RETURN",
-            "displayLines": "_DieSumsCheck",
+            "operator": "Variables[0] (_DieSums) || RETURN",
+            "displayLines": "_DieSums",
             "constants": [],
             "variables": [
-              "_DieSumsCheck"
+              "_DieSums"
             ]
           }
         },
@@ -5610,11 +5610,11 @@ const compositeAbilityObject = {
                           "variableName": "_DieSums",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (InsertCheck02) || RETURN",
-                            "displayLines": "InsertCheck02",
+                            "operator": "Variables[0] (_Phase1Sums) || RETURN",
+                            "displayLines": "_Phase1Sums",
                             "constants": [],
                             "variables": [
-                              "InsertCheck02"
+                              "_Phase1Sums"
                             ]
                           }
                         },
@@ -5625,11 +5625,11 @@ const compositeAbilityObject = {
                             "value1": "_Phase1Sums",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (_DieSumsCheck) || RETURN",
-                              "displayLines": "_DieSumsCheck",
+                              "operator": "Variables[0] (_DieSums) || RETURN",
+                              "displayLines": "_DieSums",
                               "constants": [],
                               "variables": [
-                                "_DieSumsCheck"
+                                "_DieSums"
                               ]
                             }
                           },
@@ -5643,15 +5643,15 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                               "valuePerStack": {
                                 "MDF_Value": {
-                                  "operator": "Variables[0] (_MonsterChangeCnt02) || Variables[1] (EXP^) || Variables[2] (_DieSumsCheck) || Variables[3] (InsertCheck02) || DIV || Variables[4] (DieWithBonus) || PARAM_2 || FUNCTION || MUL || RETURN",
-                                  "displayLines": "(_MonsterChangeCnt02 * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSumsCheck / InsertCheck02), DieWithBonus))",
+                                  "operator": "Variables[0] (_SummonCounts) || Variables[1] (EXP^) || Variables[2] (_DieSums) || Variables[3] (_Phase1Sums) || DIV || Variables[4] (_FactorK) || PARAM_2 || FUNCTION || MUL || RETURN",
+                                  "displayLines": "(_SummonCounts * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSums / _Phase1Sums), _FactorK))",
                                   "constants": [],
                                   "variables": [
-                                    "_MonsterChangeCnt02",
+                                    "_SummonCounts",
                                     "EXP^",
-                                    "_DieSumsCheck",
-                                    "InsertCheck02",
-                                    "DieWithBonus"
+                                    "_DieSums",
+                                    "_Phase1Sums",
+                                    "_FactorK"
                                   ]
                                 }
                               }
@@ -5669,11 +5669,11 @@ const compositeAbilityObject = {
                           "variableName": "_DieSums",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (_DieSums) || RETURN",
-                            "displayLines": "_DieSums",
+                            "operator": "Variables[0] (_Phase2Sums) || RETURN",
+                            "displayLines": "_Phase2Sums",
                             "constants": [],
                             "variables": [
-                              "_DieSums"
+                              "_Phase2Sums"
                             ]
                           }
                         },
@@ -5684,11 +5684,11 @@ const compositeAbilityObject = {
                             "value1": "_Phase2Sums",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (_DieSumsCheck) || RETURN",
-                              "displayLines": "_DieSumsCheck",
+                              "operator": "Variables[0] (_DieSums) || RETURN",
+                              "displayLines": "_DieSums",
                               "constants": [],
                               "variables": [
-                                "_DieSumsCheck"
+                                "_DieSums"
                               ]
                             }
                           },
@@ -5702,15 +5702,15 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                               "valuePerStack": {
                                 "MDF_Value": {
-                                  "operator": "Variables[0] (_MonsterChangeCnt02) || Variables[1] (EXP^) || Variables[2] (_DieSumsCheck) || Variables[3] (_DieSums) || DIV || Variables[4] (DieWithBonus) || PARAM_2 || FUNCTION || MUL || RETURN",
-                                  "displayLines": "(_MonsterChangeCnt02 * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSumsCheck / _DieSums), DieWithBonus))",
+                                  "operator": "Variables[0] (_SummonCounts) || Variables[1] (EXP^) || Variables[2] (_DieSums) || Variables[3] (_Phase2Sums) || DIV || Variables[4] (_FactorK) || PARAM_2 || FUNCTION || MUL || RETURN",
+                                  "displayLines": "(_SummonCounts * &nbsp;<span class=\"descriptionFunctionColor\">EXP^</span>((_DieSums / _Phase2Sums), _FactorK))",
                                   "constants": [],
                                   "variables": [
-                                    "_MonsterChangeCnt02",
+                                    "_SummonCounts",
                                     "EXP^",
-                                    "_DieSumsCheck",
                                     "_DieSums",
-                                    "DieWithBonus"
+                                    "_Phase2Sums",
+                                    "_FactorK"
                                   ]
                                 }
                               }
@@ -5726,10 +5726,7 @@ const compositeAbilityObject = {
           ],
           "stackData": [],
           "latentQueue": [
-            "_MaxDamageReduce",
-            "_FactorK",
-            "_Phase1Sums",
-            "_Phase2Sums"
+            "_MaxDamageReduce"
           ]
         },
         {

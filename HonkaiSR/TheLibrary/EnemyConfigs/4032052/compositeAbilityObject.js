@@ -20,7 +20,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "MMonster_W4_Claymore_01_LocalLegend_BlackCurse_Target"
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
@@ -63,7 +63,7 @@ const compositeAbilityObject = {
           "name": "ATK Scaling DMG",
           "target": {
             "name": "Target Name",
-            "target": "MMonster_W4_Claymore_01_LocalLegend_BlackCurse_Target"
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
           },
           "AttackScaling": {
             "DamageType": "Physical",

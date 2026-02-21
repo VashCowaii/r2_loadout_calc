@@ -146,6 +146,8 @@
     "DirtyHPRatio": "HPBlock%",
     "DirtyHPDelta": "HPBlockFlat",
 
+    "MaxHPMulRatio": "HPMaxMultiplier",
+
     "RallyHP": "HPDebt%",
 
     "Level": "CharacterLevel",

@@ -36,11 +36,11 @@ const configAbility = {
         "value1": "_DieSumsCheck",
         "compareType": "<",
         "value2": {
-          "operator": "Variables[0] (FREEVAR) || RETURN",
-          "displayLines": "FREEVAR",
+          "operator": "Variables[0] (_DieSums) || RETURN",
+          "displayLines": "_DieSums",
           "constants": [],
           "variables": [
-            "FREEVAR"
+            "_DieSums"
           ]
         }
       }
@@ -49,11 +49,11 @@ const configAbility = {
       "name": "Define Custom Variable",
       "variableName": "_DieSumsCheck",
       "value": {
-        "operator": "Variables[0] (_DieSumsCheck) || RETURN",
-        "displayLines": "_DieSumsCheck",
+        "operator": "Variables[0] (_DieSums) || RETURN",
+        "displayLines": "_DieSums",
         "constants": [],
         "variables": [
-          "_DieSumsCheck"
+          "_DieSums"
         ]
       }
     },

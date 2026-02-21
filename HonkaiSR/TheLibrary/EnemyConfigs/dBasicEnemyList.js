@@ -10777,7 +10777,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Black Tide's Corroded Daemon"
   },
@@ -10828,7 +10828,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4033024": {
       "4033024": {
@@ -10838,7 +10838,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Champion (Bug)"
     },
     "groupName": "Black Tide's Champion"
@@ -10881,7 +10881,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Dark Sun Gryphon"
   },
@@ -16425,7 +16425,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Maddened Feixiao"
     },
     "2022051": {
@@ -17245,7 +17245,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Greatsword Guardian: Vanguard Wallbreaker"
     },
     "4013015": {
@@ -17256,7 +17256,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Greatsword Guardian: Vanguard Wallbreaker"
     },
     "4013016": {
@@ -17275,7 +17275,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Synergy Duo: Ironclad White Guard"
     },
     "4013017": {
@@ -17286,7 +17286,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Synergy Duo: Ironclad White Guard"
     },
     "4015010": {
@@ -17925,7 +17925,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Corrupting Shadowfiend: Torrential Rotbringer"
     },
     "4033012": {
@@ -17936,7 +17936,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Corrupting Shadowfiend: Torrential Rotbringer"
     },
     "4033021": {
@@ -17955,7 +17955,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Synergy Duo: Bloodbound Dark Duelist"
     },
     "4033022": {
@@ -17966,7 +17966,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Synergy Duo: Bloodbound Dark Duelist"
     },
     "4033023": {
@@ -17984,7 +17984,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Black Tide's Champion"
     },
     "4033031": {
@@ -18002,7 +18002,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dark Sun Gryphon"
     },
     "4034011": {

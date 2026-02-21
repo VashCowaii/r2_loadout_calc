@@ -805,7 +805,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__112"
+                    "value": "MonsterType_AML_Minion03_01"
                   },
                   "ifTargetFound": [
                     {
@@ -830,7 +830,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__111"
+                        "value": "MonsterType_W4_Strongman_00"
                       },
                       "ifTargetFound": [
                         {
@@ -855,7 +855,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__110"
+                            "value": "MonsterType_W4_Shooter_00"
                           },
                           "ifTargetFound": [
                             {
