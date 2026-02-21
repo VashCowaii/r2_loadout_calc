@@ -37,6 +37,8 @@ const scriptsToLoad = [
     "/HonkaiSR/TheLibrary/EnemyConfigs/dMegaMappingPathing.js",
 
     "/HonkaiSR/TheLibrary/EnemyConfigs/newTester.js",
+
+    "/HonkaiSR/TheLibrary/EnemyConfigs/readyEnemyCounts.js",
     
 
     "/MainJS/buildTime.js",
