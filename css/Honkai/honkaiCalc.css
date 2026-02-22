@@ -2037,12 +2037,31 @@ div {
     transform: translate(-20%,-21%) scale(1.4);
     overflow: visible;
 }
-.hoveredTraceIcon:hover {
+
+.hoveredTraceIconElation {
+    /* filter: brightness(5);
+    outline: 5px solid #1b86ff;
+    outline-offset: 5px;
+    border-radius: 50%; */
+    /* filter: sepia(0.3) saturate(1.2) hue-rotate(-10deg); */
+    /* filter:
+    sepia(0.6)
+    saturate(1.6)
+    hue-rotate(-12deg)
+    brightness(1.08); */
+    /* filter: sepia(0.5); */
+}
+.hoveredTraceIcon:hover, .hoveredTraceIconElation:hover {
     filter: brightness(5);
     outline: 5px solid #1b86ff;
     outline-offset: 5px;
     border-radius: 50%;
 }
+
+
+
+
+
 .characterMinorTraceCircle {
     width: 35px;
     height: 35px;

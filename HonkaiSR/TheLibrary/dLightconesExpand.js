@@ -9658,19 +9658,19 @@ let lightcones = {
     },
     "fixedStats": {
       "1": {
-        "undefined": 0.12
+        "ElationDMG": 0.12
       },
       "2": {
-        "undefined": 0.14
+        "ElationDMG": 0.14
       },
       "3": {
-        "undefined": 0.16
+        "ElationDMG": 0.16
       },
       "4": {
-        "undefined": 0.18
+        "ElationDMG": 0.18
       },
       "5": {
-        "undefined": 0.2
+        "ElationDMG": 0.2
       }
     },
     "skillName": "Rumble",
