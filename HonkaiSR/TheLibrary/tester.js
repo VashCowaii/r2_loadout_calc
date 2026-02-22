@@ -3835,6 +3835,7 @@ const userTriggers = {
         "Memosprite Talent": 6,
         "Memosprite Skill": 6,
         "Technique": 1,
+        "Elation Skill": 10,
     },
     updateSelectedTraceDisplay(traceID) {
         let currentSlot = globalUI.currentCharacterDisplayed;
