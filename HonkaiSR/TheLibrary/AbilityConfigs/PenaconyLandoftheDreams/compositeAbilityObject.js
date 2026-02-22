@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Penacony, Land of the Dreams",
   "trimCharacterName": "PenaconyLandoftheDreams",
@@ -712,5 +713,6 @@ const compositeAbilityObject = {
     "4": {}
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

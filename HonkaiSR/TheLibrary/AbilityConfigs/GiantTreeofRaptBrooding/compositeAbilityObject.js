@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Giant Tree of Rapt Brooding",
   "trimCharacterName": "GiantTreeofRaptBrooding",
@@ -454,5 +455,6 @@ const compositeAbilityObject = {
     "4": {}
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Resolution Shines As Pearls of Sweat",
   "trimCharacterName": "ResolutionShinesAsPearlsofSweat",

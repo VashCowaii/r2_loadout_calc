@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Poised to Bloom",
   "trimCharacterName": "PoisedtoBloom",

@@ -1,3 +1,4 @@
+const entityPageType = "misc"
 const compositeAbilityObject = {
   "fullCharacterName": "Global Abilities: Enemies",
   "trimCharacterName": "GlobalAbilitiesE",

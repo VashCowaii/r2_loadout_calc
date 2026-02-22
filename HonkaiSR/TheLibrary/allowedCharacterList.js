@@ -196,12 +196,12 @@ let allowedCharacterList = [
     "trimName": "DrRatio"
   },
   {
-    "fullName": "Sparkle_v0",
-    "trimName": "Sparklev0"
+    "fullName": "Sparkle",
+    "trimName": "Sparkle"
   },
   {
-    "fullName": "Black Swan_v0",
-    "trimName": "BlackSwanv0"
+    "fullName": "Black Swan",
+    "trimName": "BlackSwan"
   },
   {
     "fullName": "Acheron",
@@ -316,6 +316,14 @@ let allowedCharacterList = [
     "trimName": "Demiurge"
   },
   {
+    "fullName": "Sparxie",
+    "trimName": "Sparxie"
+  },
+  {
+    "fullName": "Yao Guang",
+    "trimName": "YaoGuang"
+  },
+  {
     "fullName": "Trailblazer - Destruction",
     "trimName": "TrailblazerDestruction"
   },
@@ -358,6 +366,14 @@ let allowedCharacterList = [
   {
     "fullName": "Jingliu_v0",
     "trimName": "Jingliuv0"
+  },
+  {
+    "fullName": "Sparkle_v0",
+    "trimName": "Sparklev0"
+  },
+  {
+    "fullName": "Black Swan_v0",
+    "trimName": "BlackSwanv0"
   },
   {
     "fullName": "GlobalAbilities",

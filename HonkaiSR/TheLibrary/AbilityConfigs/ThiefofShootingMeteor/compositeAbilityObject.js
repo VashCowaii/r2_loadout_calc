@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Thief of Shooting Meteor",
   "trimCharacterName": "ThiefofShootingMeteor",
@@ -77,5 +78,6 @@ const compositeAbilityObject = {
     }
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

@@ -316,6 +316,111 @@ const customHTML = {
             </svg>
             `
         },
+        "Elation"(charRef) {
+            let MajorRadius = 60;
+            let Major1and2Height = 270;
+            let Major1and2Offset = 28;
+
+            let SkillRadius = 55;
+            let Skill1and2Height = 120;
+            let Skill1and2Offset = 260;
+
+            let skillCenterHeight = 560;
+            let skillUpperHeight = 310;
+            let lowerSkillHeight = 800;
+
+            let lowerTraceHight = 1080;
+            let lowerTraceRowHeight = 1080;
+            let lowerTraceRowOffset = 300;
+
+
+            let middleRowHeight = 751;
+            let middleRowOffset = 268;
+
+            let lowestInnerHeight = 590;
+            let lowestInnerOffset = 130;
+
+            let lowestMiddleHeight = 500;
+            let lowestMiddleOffset = -71;
+
+
+            let lowestSideTraceHeight = 721;
+            let lowestSideTraceOffset = -31;
+            
+            let traceRadius = 40;
+            let bottomTraceHeight = 1040
+            // let middleTraceHeight = 240;
+            // let middleTraceOffset = 65;
+
+            // let lowerTraceLowerHeight = 630;
+            // let lowerTraceLowerOffset = 60;
+
+            // let lowerTraceUpperHeight = 460;
+            // let lowerTraceUpperOffset = -120;
+
+            // let upperMajorHeight = 130;
+
+            let finalTraceHeight = 20;
+            // let topTraceHeight = 5;
+            // let topTraceOffset = 215;
+
+            let makeSkillCircle = customHTML.makeSkillCircle;
+            let src = pathImagePaths["Elation"].big
+            // <image href="/HonkaiSR/Elation.png" width="512" height="1000" id="" class="characterMainCenterImageTraceReferenceHunt"/> //purely for overlaying an image
+            return `
+            <svg viewBox="0 0 1000 1100" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="overflow:visible">
+                <image href="${src}" width="512" height="1000" id="characterMainCenterImageTraces" class="characterMainCenterImageTrace"/>
+
+                <line x1="${500}" y1="${skillUpperHeight}" x2="${500}" y2="${bottomTraceHeight}" stroke="#ffffff" stroke-width="2"/>
+
+
+
+                <path d="M${Skill1and2Offset} ${Skill1and2Height-20} Q 480 270, ${450} ${skillUpperHeight+10}" stroke="#ffffff" fill="transparent" stroke-width="2"/>
+                <path d="M${1000-Skill1and2Offset} ${Skill1and2Height-20} Q 520 270, ${550} ${skillUpperHeight+10}" stroke="#ffffff" fill="transparent" stroke-width="2"/>
+
+                <path d="M${Skill1and2Offset} ${Skill1and2Height-30} Q -200 300, ${lowestSideTraceOffset} ${lowestSideTraceHeight}" stroke="#ffffff" fill="transparent" stroke-width="2"/>
+                <path d="M${1000-Skill1and2Offset} ${Skill1and2Height-30} Q 1200 300, ${1000-lowestSideTraceOffset} ${lowestSideTraceHeight}" stroke="#ffffff" fill="transparent" stroke-width="2"/>
+
+                <path d="M${lowestSideTraceOffset} ${lowestSideTraceHeight+20} Q 40 650, ${lowestInnerOffset} ${lowestInnerHeight+10}" stroke="#ffffff" fill="transparent" stroke-width="2"/>
+                <path d="M${1000-lowestSideTraceOffset} ${lowestSideTraceHeight+20} Q 960 650, ${1000-lowestInnerOffset} ${lowestInnerHeight+10}" stroke="#ffffff" fill="transparent" stroke-width="2"/>
+
+                ${makeSkillCircle(lowestSideTraceOffset,lowestSideTraceHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point14.icon}`,14,"trace")}
+                ${makeSkillCircle(1000-lowestSideTraceOffset,lowestSideTraceHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point17.icon}`,17,"trace")}
+
+                ${makeSkillCircle(lowestInnerOffset,lowestInnerHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point15.icon}`,15,"trace")}
+                ${makeSkillCircle(1000-lowestInnerOffset,lowestInnerHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point18.icon}`,18,"trace")}
+
+                ${makeSkillCircle(lowestMiddleOffset,lowestMiddleHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point13.icon}`,13,"trace")}
+                ${makeSkillCircle(1000-lowestMiddleOffset,lowestMiddleHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point16.icon}`,16,"trace")}
+
+                <path d="M${middleRowOffset} ${middleRowHeight-10} Q 500 860, ${1000-middleRowOffset} ${middleRowHeight-10}" stroke="#ffffff" fill="transparent" stroke-width="2"/>
+                ${makeSkillCircle(middleRowOffset,middleRowHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point11.icon}`,11,"trace")}
+                ${makeSkillCircle(1000-middleRowOffset,middleRowHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point10.icon}`,10,"trace")}
+
+
+                ${makeSkillCircle(Skill1and2Offset,Skill1and2Height,SkillRadius,`/HonkaiSR/${charRef.traces.Point01.icon}`,1,"skill")}
+                ${makeSkillCircle(1000-Skill1and2Offset,Skill1and2Height,SkillRadius,`/HonkaiSR/${charRef.traces.Point02.icon}`,2,"skill")}
+
+                ${makeSkillCircle(500,skillCenterHeight,SkillRadius,`/HonkaiSR/${charRef.traces.Point04.icon}`,4,"skill")}
+                ${makeSkillCircle(500,skillUpperHeight,SkillRadius,`/HonkaiSR/${charRef.traces.Point03.icon}`,3,"skill")}
+                ${makeSkillCircle(500,lowerSkillHeight,SkillRadius,`/HonkaiSR/${charRef.traces.Point05.icon}`,5,"skill")}
+
+                
+                <line x1="${1000-lowerTraceRowOffset}" y1="${lowerTraceRowHeight}" x2="${lowerTraceRowOffset}" y2="${lowerTraceRowHeight}" stroke="#ffffff" stroke-width="2"/>
+                ${makeSkillCircle(500,lowerTraceHight,MajorRadius,`/HonkaiSR/${charRef.traces.Point06.icon}`,6,"major")}
+
+                ${makeSkillCircle(lowerTraceRowOffset,lowerTraceRowHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point09.icon}`,9,"trace")}
+                ${makeSkillCircle(1000-lowerTraceRowOffset,lowerTraceRowHeight,traceRadius,`/HonkaiSR/${charRef.traces.Point12.icon}`,12,"trace")}
+
+
+                ${makeSkillCircle(Major1and2Offset,Major1and2Height,MajorRadius,`/HonkaiSR/${charRef.traces.Point07.icon}`,7,"major")}
+
+                ${makeSkillCircle(1000-Major1and2Offset,Major1and2Height,MajorRadius,`/HonkaiSR/${charRef.traces.Point08.icon}`,8,"major")}
+
+                ${charRef.traces.Point22 ? makeSkillCircle(500,finalTraceHeight,MajorRadius,`/HonkaiSR/${charRef.traces.Point22.icon}`,22,"skill",true) : ""}
+            </svg>
+            `
+        },
         "Remembrance"(charRef) {
             let makeSkillCircle = customHTML.makeSkillCircle;
             let SkillRadius = 55;
@@ -914,24 +1019,36 @@ const customHTML = {
             `
         },
     },
-    makeSkillCircle(x,y,r,imgHref,id,type) {
+    makeSkillCircle(x,y,r,imgHref,id,type,isElation) {
         let fillValue = type === "skill" ? "#1e2137" : "#ffffff";
-        let borderColor = type === "skill" ? "#928d85" : "#b2c8ff"
+        let borderColor = type === "skill" ? "#928d85" : "#b2c8ff";
+
+        if (isElation) {
+            fillValue = "#121212";
+            borderColor = "#8A615A";
+        }
+
         if (type === "memoSkill") {
             fillValue = "#241b5a";
-            borderColor = "#646390"
+            borderColor = "#646390";
         }
         let borderWidth = type === "trace" ? 0 : 3;
+
+        const notASkill = type != "skill" && type != "memoSkill";
+        const elationIconAdjustment = imgHref.toLowerCase().includes("joy") ? 0.7 : 1;
+
+        const size = r * 2 * elationIconAdjustment;
+        const offset = size / 2;
 
         return `<g>
             <circle cx="${x}" cy="${y}" r="${r}" fill="${fillValue}" stroke="${borderColor}" stroke-width="${borderWidth}" class=""/>
     
-            <clipPath id="circleClip${id}">
+            <clipPath id="circleClip-${id}">
                 <circle cx="${x}" cy="${y}" r="${r}"/>
             </clipPath>
     
-            <image href="${imgHref}" x="${x - r}" y="${y - r}" width="${r * 2}" height="${r * 2}" clip-path="url(#circleClip-${id})" class="clickable hoveredTraceIcon" 
-            style="${type != "skill" && type != "memoSkill" ? "filter: brightness(0)" : ""}" onclick="userTriggers.updateSelectedTraceDisplay(${id})"/>
+            <image href="${imgHref}" x="${x - offset}" y="${y - offset}" width="${size}" height="${size}" clip-path="url(#circleClip-${id})" class="clickable hoveredTraceIcon${isElation ? " hoveredTraceIconElation" : ""}" 
+            style="${notASkill ? ("filter: brightness(0)") : (isElation ? "filter:sepia(0.55)saturate(1.1)hue-rotate(-12deg)contrast(1.05);" : "filter:sepia(0.25)saturate(0.8)hue-rotate(-5deg)contrast(0.95);")}" onclick="userTriggers.updateSelectedTraceDisplay(${id})"/>
         </g>`;
     },
     rowUniqueStatExceptions: {
@@ -1051,12 +1168,14 @@ let globalIsRelic = false;
 let globalIsNoImage = false;
 let isVaryingAbilityPage = false;
 let firstPageLoad = false;
+const hasNoReader = compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true;
 
 const megaParsingFuckery = {
     pageLoad(loadFile) {
         const bodyBox = readSelection("eventBodyMainBox");
         const isLightcone = compositeAbilityObject.isLightcone;
         const isRelic = compositeAbilityObject.isRelic;
+
 
         globalIsLightcone = isLightcone;
         globalIsRelic = isRelic;
@@ -1066,7 +1185,7 @@ const megaParsingFuckery = {
 
         // console.log(loadFile)
         
-        if (!configAbility || location.hash) {
+        if ((!configAbility || location.hash) && !hasNoReader) {
             let foundValidFile = false;
             
             if (location.hash) {
@@ -1127,20 +1246,20 @@ const megaParsingFuckery = {
 
         let initialCounter = 1;
         console.log(loadFile)
-        let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
-        let eventBodyStringOnAdd = megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
-        let eventBodyStringOnRemove = megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter);
-        let eventBodyStringOnAbort = megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
-        let eventBodyStringFunctions = megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter);
+        let eventBodyString = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
+        let eventBodyStringOnAdd = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
+        let eventBodyStringOnRemove = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter);
+        let eventBodyStringOnAbort = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
+        let eventBodyStringFunctions = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter);
         
 
-        let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
+        let referenceBodyString = configAbility?.references?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
         currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
 
         
 
-        let referenceGlobalString = configAbility.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
-        let referenceGlobalFunctionString = configAbility.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
+        let referenceGlobalString = configAbility?.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
+        let referenceGlobalFunctionString = configAbility?.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
         
         
 
@@ -1212,7 +1331,7 @@ const megaParsingFuckery = {
 
         let rowAlternating = 1;
         startingString += `<div class="${globalIsLightcone || globalIsRelic ? "energyAndToughnessRowHolderItems" : "energyAndToughnessRowHolder"}">`;
-        if (!isLightcone) {
+        if (!isLightcone && !hasNoReader) {
 
 
             const propertyDisplayTemplates = {
@@ -1280,7 +1399,7 @@ const megaParsingFuckery = {
 
 
         let toughnessRowString = "";
-        if (configAbility.toughnessList) {
+        if (configAbility?.toughnessList && !hasNoReader) {
             const toughnessIndexConversion = {
                 0: "ST",
                 1: "AOE",
@@ -1409,6 +1528,7 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>
                 </summary>
                 ${eventBodyString}
+                ${hasNoReader ? `<div class="customMenuSearchNote">No events to read. Either this is a 4.0 entity and I can't get their eventreader data yet, or it's an error.<br><br>If you believe this to be an error, let me know in the discord.</div>` : ""}
             </details>
             ${eventBodyStringOnAdd ? `<details class="rotationsPermaConditionsExpand" open="">
                 <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
@@ -1482,6 +1602,10 @@ userTriggers.updateCharacterUI();
 customHTML.establishZoomableTraces();
 customHTML.establishMobileSideScrollerMenu();
 userTriggers.updateMainMenuDisplayed(1);
+
+if (hasNoReader && entityPageType === "char") {
+    userTriggers.updateMainMenuDisplayed(2);
+}
 
 // const value = decodeURIComponent(window.location.hash.slice(1));
 

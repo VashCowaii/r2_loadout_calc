@@ -363,9 +363,9 @@ const pathImagePaths = {
         "small": initialPathPath + "HarmonySmall.png",
     },
     "Elation": {
-        "big": initialPathPath + "Elation.png",
-        "medium": initialPathPath + "ElationMiddle.png",
-        "small": initialPathPath + "ElationSmall.png",
+        "big": initialPathPath + "Joy.png",
+        "medium": initialPathPath + "JoyMiddle.png",
+        "small": initialPathPath + "JoySmall.png",
     },
 }
 

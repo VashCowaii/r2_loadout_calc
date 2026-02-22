@@ -1,3 +1,4 @@
+const entityPageType = "misc"
 const compositeAbilityObject = {
   "fullCharacterName": "Global Target Operators",
   "trimCharacterName": "GlobalTargetO",
@@ -842,14 +843,14 @@ const compositeAbilityObject = {
                 "name": "AND",
                 "conditionList": [
                   {
-                    "$type": "RPG.GameCore.ByIsTargetCustomUnselectable",
-                    "TargetType": {
-                      "$type": "RPG.GameCore.TargetAlias",
-                      "Alias": "ParamEntity"
+                    "name": "Target is Unselectable Custom",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
                     },
-                    "SourceEntity": {
-                      "$type": "RPG.GameCore.TargetAlias",
-                      "Alias": "Caster"
+                    "source": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     }
                   },
                   {

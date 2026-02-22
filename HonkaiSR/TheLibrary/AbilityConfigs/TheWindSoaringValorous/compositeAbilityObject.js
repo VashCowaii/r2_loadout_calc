@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "The Wind-Soaring Valorous",
   "trimCharacterName": "TheWindSoaringValorous",
@@ -126,5 +127,6 @@ const compositeAbilityObject = {
     }
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

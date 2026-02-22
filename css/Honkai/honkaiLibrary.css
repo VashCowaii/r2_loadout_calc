@@ -12,6 +12,14 @@
     font-family: "Montserrat-Light";
 }
 
+.characterMainCenterImageTraceReferenceHunt {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-20%) scale(1.4);
+    overflow: visible;
+}
+
 
 div {
     color: white;

@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Sigonia, the Unclaimed Desolation",
   "trimCharacterName": "SigoniatheUnclaimedDesolation",
@@ -221,5 +222,6 @@ const compositeAbilityObject = {
     "4": {}
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

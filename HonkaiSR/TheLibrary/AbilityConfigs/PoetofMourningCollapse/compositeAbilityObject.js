@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Poet of Mourning Collapse",
   "trimCharacterName": "PoetofMourningCollapse",
@@ -267,5 +268,6 @@ const compositeAbilityObject = {
     }
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

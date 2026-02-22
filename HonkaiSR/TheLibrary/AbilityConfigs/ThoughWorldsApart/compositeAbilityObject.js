@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Though Worlds Apart",
   "trimCharacterName": "ThoughWorldsApart",

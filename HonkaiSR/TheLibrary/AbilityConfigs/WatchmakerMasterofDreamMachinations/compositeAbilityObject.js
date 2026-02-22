@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Watchmaker, Master of Dream Machinations",
   "trimCharacterName": "WatchmakerMasterofDreamMachinations",
@@ -133,5 +134,6 @@ const compositeAbilityObject = {
     "4": {}
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

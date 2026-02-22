@@ -3835,6 +3835,7 @@ const userTriggers = {
         "Memosprite Talent": 6,
         "Memosprite Skill": 6,
         "Technique": 1,
+        "Elation Skill": 10,
     },
     updateSelectedTraceDisplay(traceID) {
         let currentSlot = globalUI.currentCharacterDisplayed;
@@ -4110,7 +4111,7 @@ const userTriggers = {
                 let charRef = lightcones[characterName];
                 readSelection("characterName").innerHTML = characterName;
 
-
+                // console.log(pathImagePaths[charRef.path],charRef.path,pathImagePaths)
                 readSelection("characterDisplayPathName").innerHTML = charRef.path;
                 readSelection("characterDisplayPathImage").src = pathImagePaths[charRef.path].small;
                 readSelection("characterStarRatingImage").src = `/HonkaiSR/icon/deco/Star${charRef.rarity}.png`;

@@ -2968,8 +2968,8 @@ let sizeLeaderboardArray = [
     "entryName": "Penacony, Land of the Dreams",
     "trimCharacterName": "PenaconyLandoftheDreams",
     "entryIcon": "icon/relic/312.png",
-    "lineCount": 716,
-    "sizeCount": 28346
+    "lineCount": 717,
+    "sizeCount": 28367
   },
   {
     "entryType": "enemy",
@@ -3198,8 +3198,8 @@ let sizeLeaderboardArray = [
     "entryName": "Giant Tree of Rapt Brooding",
     "trimCharacterName": "GiantTreeofRaptBrooding",
     "entryIcon": "icon/relic/320.png",
-    "lineCount": 458,
-    "sizeCount": 17568
+    "lineCount": 459,
+    "sizeCount": 17589
   },
   {
     "entryType": "enemy",
@@ -3208,20 +3208,20 @@ let sizeLeaderboardArray = [
     "sizeCount": 17383
   },
   {
+    "entryType": "relic",
+    "entryName": "Warrior Goddess of Sun and Thunder",
+    "trimCharacterName": "WarriorGoddessofSunandThunder",
+    "entryIcon": "icon/relic/125.png",
+    "lineCount": 425,
+    "sizeCount": 16160
+  },
+  {
     "entryType": "lc",
     "entryName": "A Grounded Ascent",
     "trimCharacterName": "AGroundedAscent",
     "entryIcon": "icon/light_cone/23034.png",
     "lineCount": 411,
     "sizeCount": 16155
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Warrior Goddess of Sun and Thunder",
-    "trimCharacterName": "WarriorGoddessofSunandThunder",
-    "entryIcon": "icon/relic/125.png",
-    "lineCount": 424,
-    "sizeCount": 16139
   },
   {
     "entryType": "lc",
@@ -3274,6 +3274,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 14975
   },
   {
+    "entryType": "relic",
+    "entryName": "Pan-Cosmic Commercial Enterprise",
+    "trimCharacterName": "PanCosmicCommercialEnterprise",
+    "entryIcon": "icon/relic/303.png",
+    "lineCount": 382,
+    "sizeCount": 14806
+  },
+  {
     "entryType": "enemy",
     "enemyID": 8012200,
     "lineCount": 437,
@@ -3296,14 +3304,6 @@ let sizeLeaderboardArray = [
     "enemyID": 8012203,
     "lineCount": 437,
     "sizeCount": 14787
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Pan-Cosmic Commercial Enterprise",
-    "trimCharacterName": "PanCosmicCommercialEnterprise",
-    "entryIcon": "icon/relic/303.png",
-    "lineCount": 381,
-    "sizeCount": 14785
   },
   {
     "entryType": "lc",
@@ -3336,8 +3336,8 @@ let sizeLeaderboardArray = [
     "entryName": "Arcadia of Woven Dreams",
     "trimCharacterName": "ArcadiaofWovenDreams",
     "entryIcon": "icon/relic/321.png",
-    "lineCount": 390,
-    "sizeCount": 14392
+    "lineCount": 391,
+    "sizeCount": 14413
   },
   {
     "entryType": "enemy",
@@ -3384,8 +3384,8 @@ let sizeLeaderboardArray = [
     "entryName": "The Ashblazing Grand Duke",
     "trimCharacterName": "TheAshblazingGrandDuke",
     "entryIcon": "icon/relic/115.png",
-    "lineCount": 356,
-    "sizeCount": 13796
+    "lineCount": 357,
+    "sizeCount": 13817
   },
   {
     "entryType": "enemy",
@@ -3452,8 +3452,8 @@ let sizeLeaderboardArray = [
     "entryName": "Pioneer Diver of Dead Waters",
     "trimCharacterName": "PioneerDiverofDeadWaters",
     "entryIcon": "icon/relic/117.png",
-    "lineCount": 362,
-    "sizeCount": 12938
+    "lineCount": 363,
+    "sizeCount": 12959
   },
   {
     "entryType": "lc",
@@ -3496,22 +3496,22 @@ let sizeLeaderboardArray = [
     "entryName": "Self-Enshrouded Recluse",
     "trimCharacterName": "SelfEnshroudedRecluse",
     "entryIcon": "icon/relic/128.png",
-    "lineCount": 333,
-    "sizeCount": 11876
-  },
-  {
-    "entryType": "enemy",
-    "enemyID": 2022040,
-    "lineCount": 378,
-    "sizeCount": 11853
+    "lineCount": 334,
+    "sizeCount": 11897
   },
   {
     "entryType": "relic",
     "entryName": "Hero of Triumphant Song",
     "trimCharacterName": "HeroofTriumphantSong",
     "entryIcon": "icon/relic/123.png",
-    "lineCount": 335,
-    "sizeCount": 11851
+    "lineCount": 336,
+    "sizeCount": 11872
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022040,
+    "lineCount": 378,
+    "sizeCount": 11853
   },
   {
     "entryType": "enemy",
@@ -3524,8 +3524,8 @@ let sizeLeaderboardArray = [
     "entryName": "Iron Cavalry Against the Scourge",
     "trimCharacterName": "IronCavalryAgainsttheScourge",
     "entryIcon": "icon/relic/119.png",
-    "lineCount": 322,
-    "sizeCount": 11720
+    "lineCount": 323,
+    "sizeCount": 11741
   },
   {
     "entryType": "enemy",
@@ -3538,8 +3538,8 @@ let sizeLeaderboardArray = [
     "entryName": "Duran, Dynasty of Running Wolves",
     "trimCharacterName": "DuranDynastyofRunningWolves",
     "entryIcon": "icon/relic/315.png",
-    "lineCount": 313,
-    "sizeCount": 11632
+    "lineCount": 314,
+    "sizeCount": 11653
   },
   {
     "entryType": "enemy",
@@ -3680,22 +3680,22 @@ let sizeLeaderboardArray = [
     "entryName": "Revelry by the Sea",
     "trimCharacterName": "RevelrybytheSea",
     "entryIcon": "icon/relic/322.png",
-    "lineCount": 282,
-    "sizeCount": 10361
-  },
-  {
-    "entryType": "enemy",
-    "enemyID": 2002010,
-    "lineCount": 337,
-    "sizeCount": 10279
+    "lineCount": 283,
+    "sizeCount": 10382
   },
   {
     "entryType": "relic",
     "entryName": "Poet of Mourning Collapse",
     "trimCharacterName": "PoetofMourningCollapse",
     "entryIcon": "icon/relic/124.png",
-    "lineCount": 271,
-    "sizeCount": 10269
+    "lineCount": 272,
+    "sizeCount": 10290
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2002010,
+    "lineCount": 337,
+    "sizeCount": 10279
   },
   {
     "entryType": "enemy",
@@ -3708,8 +3708,8 @@ let sizeLeaderboardArray = [
     "entryName": "Wavestrider Captain",
     "trimCharacterName": "WavestriderCaptain",
     "entryIcon": "icon/relic/126.png",
-    "lineCount": 271,
-    "sizeCount": 10139
+    "lineCount": 272,
+    "sizeCount": 10160
   },
   {
     "entryType": "lc",
@@ -3778,8 +3778,8 @@ let sizeLeaderboardArray = [
     "entryName": "Firmament Frontline: Glamoth",
     "trimCharacterName": "FirmamentFrontlineGlamoth",
     "entryIcon": "icon/relic/311.png",
-    "lineCount": 274,
-    "sizeCount": 9700
+    "lineCount": 275,
+    "sizeCount": 9721
   },
   {
     "entryType": "lc",
@@ -3794,8 +3794,8 @@ let sizeLeaderboardArray = [
     "entryName": "Sacerdos' Relived Ordeal",
     "trimCharacterName": "SacerdosRelivedOrdeal",
     "entryIcon": "icon/relic/121.png",
-    "lineCount": 247,
-    "sizeCount": 9558
+    "lineCount": 248,
+    "sizeCount": 9579
   },
   {
     "entryType": "lc",
@@ -4014,6 +4014,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 8485
   },
   {
+    "entryType": "relic",
+    "entryName": "Bone Collection's Serene Demesne",
+    "trimCharacterName": "BoneCollectionsSereneDemesne",
+    "entryIcon": "icon/relic/319.png",
+    "lineCount": 237,
+    "sizeCount": 8338
+  },
+  {
     "entryType": "lc",
     "entryName": "Sweat Now, Cry Less",
     "trimCharacterName": "SweatNowCryLess",
@@ -4031,19 +4039,11 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "relic",
-    "entryName": "Bone Collection's Serene Demesne",
-    "trimCharacterName": "BoneCollectionsSereneDemesne",
-    "entryIcon": "icon/relic/319.png",
-    "lineCount": 236,
-    "sizeCount": 8317
-  },
-  {
-    "entryType": "relic",
     "entryName": "Sigonia, the Unclaimed Desolation",
     "trimCharacterName": "SigoniatheUnclaimedDesolation",
     "entryIcon": "icon/relic/313.png",
-    "lineCount": 225,
-    "sizeCount": 8256
+    "lineCount": 226,
+    "sizeCount": 8277
   },
   {
     "entryType": "lc",
@@ -4060,6 +4060,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23013.png",
     "lineCount": 248,
     "sizeCount": 8125
+  },
+  {
+    "entryType": "relic",
+    "entryName": "World-Remaking Deliverer",
+    "trimCharacterName": "WorldRemakingDeliverer",
+    "entryIcon": "icon/relic/127.png",
+    "lineCount": 223,
+    "sizeCount": 8106
   },
   {
     "entryType": "lc",
@@ -4082,14 +4090,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/24004.png",
     "lineCount": 248,
     "sizeCount": 8090
-  },
-  {
-    "entryType": "relic",
-    "entryName": "World-Remaking Deliverer",
-    "trimCharacterName": "WorldRemakingDeliverer",
-    "entryIcon": "icon/relic/127.png",
-    "lineCount": 222,
-    "sizeCount": 8085
   },
   {
     "entryType": "enemy",
@@ -4126,8 +4126,8 @@ let sizeLeaderboardArray = [
     "entryName": "Fleet of the Ageless",
     "trimCharacterName": "FleetoftheAgeless",
     "entryIcon": "icon/relic/302.png",
-    "lineCount": 232,
-    "sizeCount": 7869
+    "lineCount": 233,
+    "sizeCount": 7890
   },
   {
     "entryType": "lc",
@@ -4142,8 +4142,8 @@ let sizeLeaderboardArray = [
     "entryName": "Broken Keel",
     "trimCharacterName": "BrokenKeel",
     "entryIcon": "icon/relic/310.png",
-    "lineCount": 223,
-    "sizeCount": 7510
+    "lineCount": 224,
+    "sizeCount": 7531
   },
   {
     "entryType": "lc",
@@ -4166,8 +4166,8 @@ let sizeLeaderboardArray = [
     "entryName": "Tengoku@Livestream",
     "trimCharacterName": "TengokuLivestream",
     "entryIcon": "icon/relic/324.png",
-    "lineCount": 210,
-    "sizeCount": 7324
+    "lineCount": 211,
+    "sizeCount": 7345
   },
   {
     "entryType": "lc",
@@ -4264,8 +4264,8 @@ let sizeLeaderboardArray = [
     "entryName": "Longevous Disciple",
     "trimCharacterName": "LongevousDisciple",
     "entryIcon": "icon/relic/113.png",
-    "lineCount": 193,
-    "sizeCount": 6611
+    "lineCount": 194,
+    "sizeCount": 6632
   },
   {
     "entryType": "lc",
@@ -4290,18 +4290,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 6460
   },
   {
-    "entryType": "enemy",
-    "enemyID": 1022020,
-    "lineCount": 195,
-    "sizeCount": 6432
-  },
-  {
     "entryType": "relic",
     "entryName": "Messenger Traversing Hackerspace",
     "trimCharacterName": "MessengerTraversingHackerspace",
     "entryIcon": "icon/relic/114.png",
-    "lineCount": 192,
-    "sizeCount": 6421
+    "lineCount": 193,
+    "sizeCount": 6442
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1022020,
+    "lineCount": 195,
+    "sizeCount": 6432
   },
   {
     "entryType": "lc",
@@ -4332,8 +4332,8 @@ let sizeLeaderboardArray = [
     "entryName": "The Wondrous BananAmusement Park",
     "trimCharacterName": "TheWondrousBananAmusementPark",
     "entryIcon": "icon/relic/318.png",
-    "lineCount": 180,
-    "sizeCount": 6278
+    "lineCount": 181,
+    "sizeCount": 6299
   },
   {
     "entryType": "lc",
@@ -4492,20 +4492,20 @@ let sizeLeaderboardArray = [
     "sizeCount": 5600
   },
   {
+    "entryType": "relic",
+    "entryName": "Scholar Lost in Erudition",
+    "trimCharacterName": "ScholarLostinErudition",
+    "entryIcon": "icon/relic/122.png",
+    "lineCount": 178,
+    "sizeCount": 5553
+  },
+  {
     "entryType": "lc",
     "entryName": "We Are Wildfire",
     "trimCharacterName": "WeAreWildfire",
     "entryIcon": "icon/light_cone/21023.png",
     "lineCount": 168,
     "sizeCount": 5552
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Scholar Lost in Erudition",
-    "trimCharacterName": "ScholarLostinErudition",
-    "entryIcon": "icon/relic/122.png",
-    "lineCount": 177,
-    "sizeCount": 5532
   },
   {
     "entryType": "lc",
@@ -4520,8 +4520,8 @@ let sizeLeaderboardArray = [
     "entryName": "Guard of Wuthering Snow",
     "trimCharacterName": "GuardofWutheringSnow",
     "entryIcon": "icon/relic/106.png",
-    "lineCount": 180,
-    "sizeCount": 5427
+    "lineCount": 181,
+    "sizeCount": 5448
   },
   {
     "entryType": "enemy",
@@ -4550,8 +4550,16 @@ let sizeLeaderboardArray = [
     "entryName": "Amphoreus, The Eternal Land",
     "trimCharacterName": "AmphoreusTheEternalLand",
     "entryIcon": "icon/relic/323.png",
-    "lineCount": 157,
-    "sizeCount": 5326
+    "lineCount": 158,
+    "sizeCount": 5347
+  },
+  {
+    "entryType": "relic",
+    "entryName": "Inert Salsotto",
+    "trimCharacterName": "InertSalsotto",
+    "entryIcon": "icon/relic/306.png",
+    "lineCount": 166,
+    "sizeCount": 5325
   },
   {
     "entryType": "lc",
@@ -4563,27 +4571,27 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "relic",
-    "entryName": "Inert Salsotto",
-    "trimCharacterName": "InertSalsotto",
-    "entryIcon": "icon/relic/306.png",
-    "lineCount": 165,
-    "sizeCount": 5304
-  },
-  {
-    "entryType": "relic",
     "entryName": "Rutilant Arena",
     "trimCharacterName": "RutilantArena",
     "entryIcon": "icon/relic/309.png",
-    "lineCount": 165,
-    "sizeCount": 5279
+    "lineCount": 166,
+    "sizeCount": 5300
   },
   {
     "entryType": "relic",
     "entryName": "Talia: Kingdom of Banditry",
     "trimCharacterName": "TaliaKingdomofBanditry",
     "entryIcon": "icon/relic/307.png",
-    "lineCount": 159,
-    "sizeCount": 5162
+    "lineCount": 160,
+    "sizeCount": 5183
+  },
+  {
+    "entryType": "relic",
+    "entryName": "Belobog of the Architects",
+    "trimCharacterName": "BelobogoftheArchitects",
+    "entryIcon": "icon/relic/304.png",
+    "lineCount": 160,
+    "sizeCount": 5170
   },
   {
     "entryType": "lc",
@@ -4595,19 +4603,11 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "relic",
-    "entryName": "Belobog of the Architects",
-    "trimCharacterName": "BelobogoftheArchitects",
-    "entryIcon": "icon/relic/304.png",
-    "lineCount": 159,
-    "sizeCount": 5149
-  },
-  {
-    "entryType": "relic",
     "entryName": "Space Sealing Station",
     "trimCharacterName": "SpaceSealingStation",
     "entryIcon": "icon/relic/301.png",
-    "lineCount": 159,
-    "sizeCount": 5120
+    "lineCount": 160,
+    "sizeCount": 5141
   },
   {
     "entryType": "lc",
@@ -4646,16 +4646,16 @@ let sizeLeaderboardArray = [
     "entryName": "Forge of the Kalpagni Lantern",
     "trimCharacterName": "ForgeoftheKalpagniLantern",
     "entryIcon": "icon/relic/316.png",
-    "lineCount": 148,
-    "sizeCount": 4943
+    "lineCount": 149,
+    "sizeCount": 4964
   },
   {
     "entryType": "relic",
     "entryName": "Champion of Streetwise Boxing",
     "trimCharacterName": "ChampionofStreetwiseBoxing",
     "entryIcon": "icon/relic/105.png",
-    "lineCount": 145,
-    "sizeCount": 4925
+    "lineCount": 146,
+    "sizeCount": 4946
   },
   {
     "entryType": "lc",
@@ -4696,6 +4696,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 4767
   },
   {
+    "entryType": "relic",
+    "entryName": "Prisoner in Deep Confinement",
+    "trimCharacterName": "PrisonerinDeepConfinement",
+    "entryIcon": "icon/relic/116.png",
+    "lineCount": 150,
+    "sizeCount": 4758
+  },
+  {
     "entryType": "lc",
     "entryName": "Resolution Shines As Pearls of Sweat",
     "trimCharacterName": "ResolutionShinesAsPearlsofSweat",
@@ -4705,27 +4713,19 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "relic",
-    "entryName": "Prisoner in Deep Confinement",
-    "trimCharacterName": "PrisonerinDeepConfinement",
-    "entryIcon": "icon/relic/116.png",
-    "lineCount": 149,
-    "sizeCount": 4737
-  },
-  {
-    "entryType": "relic",
     "entryName": "Watchmaker, Master of Dream Machinations",
     "trimCharacterName": "WatchmakerMasterofDreamMachinations",
     "entryIcon": "icon/relic/118.png",
-    "lineCount": 137,
-    "sizeCount": 4653
+    "lineCount": 138,
+    "sizeCount": 4674
   },
   {
     "entryType": "relic",
     "entryName": "Celestial Differentiator",
     "trimCharacterName": "CelestialDifferentiator",
     "entryIcon": "icon/relic/305.png",
-    "lineCount": 144,
-    "sizeCount": 4651
+    "lineCount": 145,
+    "sizeCount": 4672
   },
   {
     "entryType": "lc",
@@ -4740,16 +4740,16 @@ let sizeLeaderboardArray = [
     "entryName": "Firesmith of Lava-Forging",
     "trimCharacterName": "FiresmithofLavaForging",
     "entryIcon": "icon/relic/107.png",
-    "lineCount": 143,
-    "sizeCount": 4545
+    "lineCount": 144,
+    "sizeCount": 4566
   },
   {
     "entryType": "relic",
     "entryName": "Lushaka, the Sunken Seas",
     "trimCharacterName": "LushakatheSunkenSeas",
     "entryIcon": "icon/relic/317.png",
-    "lineCount": 132,
-    "sizeCount": 4372
+    "lineCount": 133,
+    "sizeCount": 4393
   },
   {
     "entryType": "lc",
@@ -4820,19 +4820,27 @@ let sizeLeaderboardArray = [
     "sizeCount": 4056
   },
   {
+    "entryType": "relic",
+    "entryName": "Wastelander of Banditry Desert",
+    "trimCharacterName": "WastelanderofBanditryDesert",
+    "entryIcon": "icon/relic/112.png",
+    "lineCount": 124,
+    "sizeCount": 4053
+  },
+  {
+    "entryType": "relic",
+    "entryName": "The Wind-Soaring Valorous",
+    "trimCharacterName": "TheWindSoaringValorous",
+    "entryIcon": "icon/relic/120.png",
+    "lineCount": 131,
+    "sizeCount": 4046
+  },
+  {
     "entryType": "lc",
     "entryName": "For Tomorrow's Journey",
     "trimCharacterName": "ForTomorrowsJourney",
     "entryIcon": "icon/light_cone/22002.png",
     "lineCount": 144,
-    "sizeCount": 4032
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Wastelander of Banditry Desert",
-    "trimCharacterName": "WastelanderofBanditryDesert",
-    "entryIcon": "icon/relic/112.png",
-    "lineCount": 123,
     "sizeCount": 4032
   },
   {
@@ -4842,14 +4850,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/22001.png",
     "lineCount": 144,
     "sizeCount": 4030
-  },
-  {
-    "entryType": "relic",
-    "entryName": "The Wind-Soaring Valorous",
-    "trimCharacterName": "TheWindSoaringValorous",
-    "entryIcon": "icon/relic/120.png",
-    "lineCount": 130,
-    "sizeCount": 4025
   },
   {
     "entryType": "enemy",
@@ -4890,20 +4890,20 @@ let sizeLeaderboardArray = [
     "sizeCount": 3815
   },
   {
+    "entryType": "relic",
+    "entryName": "Hunter of Glacial Forest",
+    "trimCharacterName": "HunterofGlacialForest",
+    "entryIcon": "icon/relic/104.png",
+    "lineCount": 121,
+    "sizeCount": 3810
+  },
+  {
     "entryType": "lc",
     "entryName": "Mediation",
     "trimCharacterName": "Mediation",
     "entryIcon": "icon/light_cone/20019.png",
     "lineCount": 129,
     "sizeCount": 3790
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Hunter of Glacial Forest",
-    "trimCharacterName": "HunterofGlacialForest",
-    "entryIcon": "icon/relic/104.png",
-    "lineCount": 120,
-    "sizeCount": 3789
   },
   {
     "entryType": "lc",
@@ -4918,8 +4918,8 @@ let sizeLeaderboardArray = [
     "entryName": "Band of Sizzling Thunder",
     "trimCharacterName": "BandofSizzlingThunder",
     "entryIcon": "icon/relic/109.png",
-    "lineCount": 120,
-    "sizeCount": 3750
+    "lineCount": 121,
+    "sizeCount": 3771
   },
   {
     "entryType": "enemy",
@@ -4936,20 +4936,20 @@ let sizeLeaderboardArray = [
     "sizeCount": 3718
   },
   {
+    "entryType": "relic",
+    "entryName": "Izumo Gensei and Takama Divine Realm",
+    "trimCharacterName": "IzumoGenseiandTakamaDivineRealm",
+    "entryIcon": "icon/relic/314.png",
+    "lineCount": 120,
+    "sizeCount": 3714
+  },
+  {
     "entryType": "lc",
     "entryName": "Cornucopia",
     "trimCharacterName": "Cornucopia",
     "entryIcon": "icon/light_cone/20001.png",
     "lineCount": 128,
     "sizeCount": 3709
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Izumo Gensei and Takama Divine Realm",
-    "trimCharacterName": "IzumoGenseiandTakamaDivineRealm",
-    "entryIcon": "icon/relic/314.png",
-    "lineCount": 119,
-    "sizeCount": 3693
   },
   {
     "entryType": "lc",
@@ -5048,20 +5048,20 @@ let sizeLeaderboardArray = [
     "sizeCount": 3337
   },
   {
+    "entryType": "relic",
+    "entryName": "Sprightly Vonwacq",
+    "trimCharacterName": "SprightlyVonwacq",
+    "entryIcon": "icon/relic/308.png",
+    "lineCount": 105,
+    "sizeCount": 3181
+  },
+  {
     "entryType": "lc",
     "entryName": "Memories of the Past",
     "trimCharacterName": "MemoriesofthePast",
     "entryIcon": "icon/light_cone/21004.png",
     "lineCount": 124,
     "sizeCount": 3172
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Sprightly Vonwacq",
-    "trimCharacterName": "SprightlyVonwacq",
-    "entryIcon": "icon/relic/308.png",
-    "lineCount": 104,
-    "sizeCount": 3160
   },
   {
     "entryType": "lc",
@@ -5128,16 +5128,16 @@ let sizeLeaderboardArray = [
     "entryName": "Genius of Brilliant Stars",
     "trimCharacterName": "GeniusofBrilliantStars",
     "entryIcon": "icon/relic/108.png",
-    "lineCount": 96,
-    "sizeCount": 2768
+    "lineCount": 97,
+    "sizeCount": 2789
   },
   {
     "entryType": "relic",
     "entryName": "Eagle of Twilight Line",
     "trimCharacterName": "EagleofTwilightLine",
     "entryIcon": "icon/relic/110.png",
-    "lineCount": 102,
-    "sizeCount": 2729
+    "lineCount": 103,
+    "sizeCount": 2750
   },
   {
     "entryType": "lc",
@@ -5242,6 +5242,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 2304
   },
   {
+    "entryType": "relic",
+    "entryName": "Musketeer of Wild Wheat",
+    "trimCharacterName": "MusketeerofWildWheat",
+    "entryIcon": "icon/relic/102.png",
+    "lineCount": 87,
+    "sizeCount": 2237
+  },
+  {
     "entryType": "enemy",
     "enemyID": 3011010,
     "lineCount": 77,
@@ -5254,14 +5262,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20010.png",
     "lineCount": 86,
     "sizeCount": 2228
-  },
-  {
-    "entryType": "relic",
-    "entryName": "Musketeer of Wild Wheat",
-    "trimCharacterName": "MusketeerofWildWheat",
-    "entryIcon": "icon/relic/102.png",
-    "lineCount": 86,
-    "sizeCount": 2216
   },
   {
     "entryType": "lc",
@@ -5288,6 +5288,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 2154
   },
   {
+    "entryType": "relic",
+    "entryName": "Thief of Shooting Meteor",
+    "trimCharacterName": "ThiefofShootingMeteor",
+    "entryIcon": "icon/relic/111.png",
+    "lineCount": 82,
+    "sizeCount": 2110
+  },
+  {
     "entryType": "lc",
     "entryName": "Collapsing Sky",
     "trimCharacterName": "CollapsingSky",
@@ -5297,19 +5305,11 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "relic",
-    "entryName": "Thief of Shooting Meteor",
-    "trimCharacterName": "ThiefofShootingMeteor",
-    "entryIcon": "icon/relic/111.png",
-    "lineCount": 81,
-    "sizeCount": 2089
-  },
-  {
-    "entryType": "relic",
     "entryName": "Knight of Purity Palace",
     "trimCharacterName": "KnightofPurityPalace",
     "entryIcon": "icon/relic/103.png",
-    "lineCount": 78,
-    "sizeCount": 2074
+    "lineCount": 79,
+    "sizeCount": 2095
   },
   {
     "entryType": "enemy",
@@ -5330,8 +5330,8 @@ let sizeLeaderboardArray = [
     "entryName": "Passerby of Wandering Cloud",
     "trimCharacterName": "PasserbyofWanderingCloud",
     "entryIcon": "icon/relic/101.png",
-    "lineCount": 77,
-    "sizeCount": 2008
+    "lineCount": 78,
+    "sizeCount": 2029
   },
   {
     "entryType": "lc",
@@ -5340,6 +5340,38 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1930
+  },
+  {
+    "entryType": "char",
+    "entryName": "Black Swan",
+    "trimCharacterName": "BlackSwan",
+    "entryIcon": "icon/character/1307.png",
+    "lineCount": 7,
+    "sizeCount": 139
+  },
+  {
+    "entryType": "char",
+    "entryName": "Yao Guang",
+    "trimCharacterName": "YaoGuang",
+    "entryIcon": "icon/character/1502.png",
+    "lineCount": 7,
+    "sizeCount": 137
+  },
+  {
+    "entryType": "char",
+    "entryName": "Sparkle",
+    "trimCharacterName": "Sparkle",
+    "entryIcon": "icon/character/1306.png",
+    "lineCount": 7,
+    "sizeCount": 134
+  },
+  {
+    "entryType": "char",
+    "entryName": "Sparxie",
+    "trimCharacterName": "Sparxie",
+    "entryIcon": "icon/character/1501.png",
+    "lineCount": 7,
+    "sizeCount": 134
   },
   {
     "entryType": "enemy",

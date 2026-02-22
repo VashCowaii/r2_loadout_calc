@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Past Self in Mirror",
   "trimCharacterName": "PastSelfinMirror",

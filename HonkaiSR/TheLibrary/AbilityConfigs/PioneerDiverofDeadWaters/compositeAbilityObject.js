@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Pioneer Diver of Dead Waters",
   "trimCharacterName": "PioneerDiverofDeadWaters",
@@ -358,5 +359,6 @@ const compositeAbilityObject = {
     }
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

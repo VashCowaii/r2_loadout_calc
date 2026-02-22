@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Pan-Cosmic Commercial Enterprise",
   "trimCharacterName": "PanCosmicCommercialEnterprise",
@@ -377,5 +378,6 @@ const compositeAbilityObject = {
     "4": {}
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Warrior Goddess of Sun and Thunder",
   "trimCharacterName": "WarriorGoddessofSunandThunder",
@@ -420,5 +421,6 @@ const compositeAbilityObject = {
     "4": {}
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }

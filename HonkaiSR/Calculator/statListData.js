@@ -86,6 +86,8 @@ const greatTableKnowerOfAll = {
     "WeaknessAll": 0,"WeaknessIce": 0,"WeaknessLightning": 0,"WeaknessFire": 0,"WeaknessQuantum": 0,"WeaknessImaginary": 0,"WeaknessWind": 0,"WeaknessPhysical": 0,
     
     "DEFFlatNULL": 0,
+
+    "ElationDMG": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
@@ -284,6 +286,7 @@ const WeaknessImaginary = greatTableIndex.WeaknessImaginary;
 const WeaknessWind = greatTableIndex.WeaknessWind;
 const WeaknessPhysical = greatTableIndex.WeaknessPhysical;
 
+const ElationDMG = greatTableIndex.ElationDMG;
 
 
 
@@ -362,6 +365,11 @@ const pathImagePaths = {
         "medium": initialPathPath + "HarmonyMiddle.png",
         "small": initialPathPath + "HarmonySmall.png",
     },
+    "Elation": {
+        "big": initialPathPath + "Joy.png",
+        "medium": initialPathPath + "JoyMiddle.png",
+        "small": initialPathPath + "JoySmall.png",
+    },
 }
 
 const initialPropertyPath = "/HonkaiSR/icon/property/";
@@ -374,6 +382,16 @@ const propertyImagePaths = {
                 "display": "Empty",
                 "specific": "Empty",
                 "unit": ""
+            },
+        }
+    },
+    "Elation": {
+        "icon": initialPropertyPath + "IconJoy.png",
+        "sets": {
+            [greatTableIndex["ElationDMG"]]: {
+                "display": "Elation DMG",
+                "specific": "Elation DMG",
+                "unit": "%"
             },
         }
     },
