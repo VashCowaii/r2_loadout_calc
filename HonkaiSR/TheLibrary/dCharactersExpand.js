@@ -37318,9 +37318,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Sparkle_v0": {
+  "Sparkle": {
     "internalID": 1306,
-    "name": "Sparkle_v0",
+    "name": "Sparkle",
     "path": "Harmony",
     "element": "Quantum",
     "rarity": 5,
@@ -37336,52 +37336,54 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "130601",
+        "id": "1130601",
         "name": "Suspension of Disbelief",
         "rank": 1,
-        "desc": "The Cipher effect granted by the Ultimate lasts for 1 extra turn. All allies with Cipher have their ATK increased by 40%.",
-        "icon": "icon/skill/1306_rank1.png",
+        "desc": "Increases the ATK of ally targets with \"Cipher\" by 40%. When the battle starts or when using Skill, increases Sparkle's SPD by 15%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1130_rank1.png",
         "paramsEido": [
-          0.4
+          0.4,
+          0.15,
+          2
         ]
       },
       {
-        "id": "130602",
+        "id": "1130602",
         "name": "Purely Fictitious",
         "rank": 2,
-        "desc": "Every stack of the Talent's effect allows allies to additionally ignore 8% of the target's DEF when dealing DMG.",
-        "icon": "icon/skill/1306_rank2.png",
+        "desc": "Each stack of the Talent's effect additionally reduces the enemy target's DEF by 10%.",
+        "icon": "icon/skill/1130_rank2.png",
         "paramsEido": [
-          0.08
+          0.1
         ]
       },
       {
-        "id": "130603",
+        "id": "1130603",
         "name": "Pipedream",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1306_skill.png"
+        "icon": "icon/skill/1130_skill.png"
       },
       {
-        "id": "130604",
+        "id": "1130604",
         "name": "Life Is a Gamble",
         "rank": 4,
         "desc": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1.",
-        "icon": "icon/skill/1306_rank4.png"
+        "icon": "icon/skill/1130_rank4.png"
       },
       {
-        "id": "130605",
+        "id": "1130605",
         "name": "Parallax Truth",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1306_ultimate.png"
+        "icon": "icon/skill/1130_ultimate.png"
       },
       {
-        "id": "130606",
+        "id": "1130606",
         "name": "Narrative Polysemy",
         "rank": 6,
-        "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to 30% of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with Cipher. When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with Cipher.",
-        "icon": "icon/skill/1306_rank6.png",
+        "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to 30% of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with \"Cipher.\" When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with \"Cipher.\"",
+        "icon": "icon/skill/1130_rank6.png",
         "paramsEido": [
           0.3
         ]
@@ -37401,12 +37403,12 @@ let characters = {
       "Basic ATK": {
         "Monodrama": {
           "variant1": {
-            "skillID": 130601,
+            "skillID": 1130601,
             "trigger": "Skill01",
             "name": "Monodrama",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Deals Quantum DMG equal to #1[i]% of Sparkle's ATK to one designated enemy target.",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Sparkle's ATK to one designated enemy.",
             "energyCost": null,
             "energyRegen": 20,
             "energyRate": 0.5,
@@ -37449,11 +37451,7 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": [
-              "Avatar_Sparkle_00_Skill01_Camera",
-              "Avatar_Sparkle_00_Skill01_Phase01",
-              "Avatar_Sparkle_00_Skill01_Phase02"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 30
@@ -37472,12 +37470,12 @@ let characters = {
       "Skill": {
         "Dreamdiver": {
           "variant1": {
-            "skillID": 130602,
+            "skillID": 1130602,
             "trigger": "Skill02",
             "name": "Dreamdiver",
             "type": "Support",
             "slot": "Skill",
-            "desc": "Increases the CRIT DMG of a single target ally by #1[f1]% of Sparkle's CRIT DMG plus #2[f1]%, lasting for #3[i] turn(s). And at the same time, Advances Forward this ally's action by #4[i]%.\\nWhen Sparkle uses this ability on herself, the Action Advance effect will not trigger.",
+            "desc": "Increases the CRIT DMG of a designated ally by #1[f1]% of Sparkle's CRIT DMG plus #2[f1]%, lasting for #3[i] turn(s). And at the same time, advances this ally's action by #4[i]%.\\nWhen Sparkle uses this ability on herself, the Action Advance effect will not trigger.",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -37488,104 +37486,98 @@ let characters = {
               "1": [
                 0.12,
                 0.27,
-                1,
+                2,
                 0.5
               ],
               "2": [
                 0.132,
                 0.288,
-                1,
+                2,
                 0.5
               ],
               "3": [
                 0.144,
                 0.306,
-                1,
+                2,
                 0.5
               ],
               "4": [
                 0.156,
                 0.324,
-                1,
+                2,
                 0.5
               ],
               "5": [
                 0.168,
                 0.342,
-                1,
+                2,
                 0.5
               ],
               "6": [
                 0.18,
                 0.36,
-                1,
+                2,
                 0.5
               ],
               "7": [
                 0.195,
                 0.3825,
-                1,
+                2,
                 0.5
               ],
               "8": [
                 0.21,
                 0.405,
-                1,
+                2,
                 0.5
               ],
               "9": [
                 0.225,
                 0.4275,
-                1,
+                2,
                 0.5
               ],
               "10": [
                 0.24,
                 0.45,
-                1,
+                2,
                 0.5
               ],
               "11": [
                 0.252,
                 0.468,
-                1,
+                2,
                 0.5
               ],
               "12": [
                 0.264,
                 0.486,
-                1,
+                2,
                 0.5
               ],
               "13": [
                 0.276,
                 0.504,
-                1,
+                2,
                 0.5
               ],
               "14": [
                 0.288,
                 0.522,
-                1,
+                2,
                 0.5
               ],
               "15": [
                 0.3,
                 0.54,
-                1,
+                2,
                 0.5
               ]
             },
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Sparkle_00_Skill02_Phase01",
-              "Avatar_Sparkle_00_Skill02_Self_Camera",
-              "Avatar_Sparkle_00_Skill02_Self_Phase02",
-              "Avatar_Sparkle_00_Skill02_Others_Camera",
-              "Avatar_Sparkle_00_Skill02_Others_Phase02"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 0
@@ -37604,12 +37596,12 @@ let characters = {
       "Ultimate": {
         "The Hero with a Thousand Faces": {
           "variant1": {
-            "skillID": 130603,
+            "skillID": 1130603,
             "trigger": "Skill03",
             "name": "The Hero with a Thousand Faces",
             "type": "Support",
             "slot": "Ultimate",
-            "desc": "Recovers #2[i] Skill Points for the team and grants all allies Cipher. For allies with Cipher, each stack of the DMG Boost effect provided by Sparkle's Talent additionally increases by #3[f1]%, lasting for #4[i] turns.",
+            "desc": "Recovers #2[i] Skill Point(s) for allies. If Skill Points overflow during recovery, the excess points will be recorded, up to a max of #5[i] points. When an ally character's turn ends, if Skill Points are below the maximum, Sparkle consumes the recorded value to recover Skill Points until the upper limit is reached. Then, grants all allies \"Cipher.\" For ally targets with \"Cipher,\" each stack of Boost of DMG taken by enemies provided by Sparkle's Talent additionally increases by #3[f2]%, lasting for #4[i] turn(s).",
             "energyCost": 110,
             "energyRegen": 5,
             "energyRate": 0.5,
@@ -37619,104 +37611,114 @@ let characters = {
             "params": {
               "1": [
                 2,
-                4,
-                0.06,
-                2
+                6,
+                0.036,
+                3,
+                10
               ],
               "2": [
                 2,
-                4,
-                0.064,
-                2
+                6,
+                0.038399998,
+                3,
+                10
               ],
               "3": [
                 2,
-                4,
-                0.067999996,
-                2
+                6,
+                0.0408,
+                3,
+                10
               ],
               "4": [
                 2,
-                4,
-                0.072,
-                2
+                6,
+                0.0432,
+                3,
+                10
               ],
               "5": [
                 2,
-                4,
-                0.076,
-                2
+                6,
+                0.0456,
+                3,
+                10
               ],
               "6": [
                 2,
-                4,
-                0.08,
-                2
+                6,
+                0.048,
+                3,
+                10
               ],
               "7": [
                 2,
-                4,
-                0.085,
-                2
+                6,
+                0.051,
+                3,
+                10
               ],
               "8": [
                 2,
-                4,
-                0.09,
-                2
+                6,
+                0.054,
+                3,
+                10
               ],
               "9": [
                 2,
-                4,
-                0.095,
-                2
+                6,
+                0.057,
+                3,
+                10
               ],
               "10": [
                 2,
-                4,
-                0.1,
-                2
+                6,
+                0.06,
+                3,
+                10
               ],
               "11": [
                 2,
-                4,
-                0.104,
-                2
+                6,
+                0.0624,
+                3,
+                10
               ],
               "12": [
                 2,
-                4,
-                0.108,
-                2
+                6,
+                0.0648,
+                3,
+                10
               ],
               "13": [
                 2,
-                4,
-                0.112,
-                2
+                6,
+                0.0672,
+                3,
+                10
               ],
               "14": [
                 2,
-                4,
-                0.116,
-                2
+                6,
+                0.0696,
+                3,
+                10
               ],
               "15": [
                 2,
-                4,
-                0.12,
-                2
+                6,
+                0.072,
+                3,
+                10
               ]
             },
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Sparkle_00_Skill03_Camera",
-              "Avatar_Sparkle_00_Skill03_EnterReady",
-              "Avatar_Sparkle_00_Skill03_Phase01",
-              "Avatar_Sparkle_00_Skill03_Phase02"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 0
@@ -37735,12 +37737,12 @@ let characters = {
       "Talent": {
         "Red Herring": {
           "variant1": {
-            "skillID": 130604,
+            "skillID": 1130604,
             "trigger": "SkillP01",
             "name": "Red Herring",
             "type": "Support",
             "slot": "Talent",
-            "desc": "While Sparkle is on the battlefield, additionally increases the max number of Skill Points by #3[i]. Whenever an ally consumes 1 Skill Point, all allies' DMG dealt increases by #2[f1]%. This effect lasts for #1[i] turn(s) and can stack up to #4[i] time(s).",
+            "desc": "While Sparkle is on the battlefield, additionally increases the max number of Skill Points by #3[i]. Whenever an ally target consumes 1 Skill Point, Sparkle gains 1 stack of \"Figment,\" with each stack increasing the DMG taken by all enemies by #2[f1]%. This effect lasts for #1[i] turn(s) and can stack up to #4[i] time(s).",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -37750,101 +37752,98 @@ let characters = {
             "params": {
               "1": [
                 2,
-                0.03,
+                0.02,
                 2,
                 3
               ],
               "2": [
                 2,
-                0.033,
+                0.022,
                 2,
                 3
               ],
               "3": [
                 2,
-                0.036,
+                0.024,
                 2,
                 3
               ],
               "4": [
                 2,
-                0.039,
+                0.026,
                 2,
                 3
               ],
               "5": [
                 2,
-                0.042,
+                0.027999999,
                 2,
                 3
               ],
               "6": [
                 2,
-                0.044999998,
+                0.03,
                 2,
                 3
               ],
               "7": [
                 2,
-                0.048750002,
+                0.0325,
                 2,
                 3
               ],
               "8": [
                 2,
-                0.052500002,
+                0.035,
                 2,
                 3
               ],
               "9": [
                 2,
-                0.05625,
+                0.0375,
                 2,
                 3
               ],
               "10": [
                 2,
-                0.06,
+                0.04,
                 2,
                 3
               ],
               "11": [
                 2,
-                0.063,
+                0.042,
                 2,
                 3
               ],
               "12": [
                 2,
-                0.066,
+                0.044,
                 2,
                 3
               ],
               "13": [
                 2,
-                0.069,
+                0.046,
                 2,
                 3
               ],
               "14": [
                 2,
-                0.072,
+                0.048,
                 2,
                 3
               ],
               "15": [
                 2,
-                0.075,
+                0.05,
                 2,
                 3
               ]
             },
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Sparkle_00_PassiveSkill_1",
-              "Avatar_Sparkle_00_Rank06_BP"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 0
@@ -37863,12 +37862,12 @@ let characters = {
       "Technique": {
         "Unreliable Narrator": {
           "variant1": {
-            "skillID": 130607,
+            "skillID": 1130607,
             "trigger": "SkillMaze",
             "name": "Unreliable Narrator",
             "type": "Support",
             "slot": "Technique",
-            "desc": "After using Technique, grants all allies Misdirect for #2[i] seconds. Characters with Misdirect will not be detected by enemies, and entering combat in the Misdirect state recovers #1[i] Skill Point(s) for the team.",
+            "desc": "After using Technique, grants all allies Misdirect for #2[i] seconds. Characters with Misdirect will not be detected by enemies, and entering combat in the Misdirect state recovers #1[i] Skill Point(s) for the team and regenerates #2[i] Energy for Sparkle.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -37884,9 +37883,7 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": [
-              "Avatar_Sparkle_00_SkillMazeInLevel"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 0
@@ -38051,9 +38048,9 @@ let characters = {
     ],
     "isBuffed": true
   },
-  "Black Swan_v0": {
+  "Black Swan": {
     "internalID": 1307,
-    "name": "Black Swan_v0",
+    "name": "Black Swan",
     "path": "Nihility",
     "element": "Wind",
     "rarity": 5,
@@ -38069,25 +38066,25 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "130701",
+        "id": "1130701",
         "name": "Seven Pillars of Wisdom",
         "rank": 1,
         "desc": "While Black Swan is active in combat, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by 25%.",
-        "icon": "icon/skill/1307_rank1.png",
+        "icon": "icon/skill/1130_rank1.png",
         "paramsEido": [
           0.25
         ],
-        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon1"
+        "eidoAbility": "BlackSwan_Advanced_BlackSwan_Eidolon1"
       },
       {
-        "id": "130702",
+        "id": "1130702",
         "name": "Weep Not For Me, My Lamb",
         "rank": 2,
-        "desc": "When an enemy target afflicted with \"Arcana\" is defeated, there is a 100% base chance of inflicting 6 stack(s) of \"Arcana\" on adjacent targets.",
-        "icon": "icon/skill/1307_rank2.png",
+        "desc": "When enemy targets enter combat, there is a 100% base chance to inflict 30 stack(s) of \"Arcana\" on them.",
+        "icon": "icon/skill/1130_rank2.png",
         "paramsEido": [
           1,
-          6
+          30
         ],
         "extraEffects": {
           "Base Chance": {
@@ -38097,43 +38094,44 @@ let characters = {
             "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
         },
-        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon2"
+        "eidoAbility": "BlackSwan_Advanced_BlackSwan_Eidolon2"
       },
       {
-        "id": "130703",
+        "id": "1130703",
         "name": "As Above, So Below",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1307_skill.png"
+        "icon": "icon/skill/1130_skill.png"
       },
       {
-        "id": "130704",
+        "id": "1130704",
         "name": "In Tears We Gift",
         "rank": 4,
-        "desc": "While in the Epiphany state, enemy targets have their Effect RES reduced by 10% and Black Swan regenerates 8 Energy at the start of these targets' turns or when they are defeated. This Energy Regeneration effect can only trigger up to 1 time while Epiphany lasts. The trigger count is reset when Epiphany is applied again.",
-        "icon": "icon/skill/1307_rank4.png",
+        "desc": "While in the \"Epiphany\" state, enemy targets take 20% increased DMG. And at the start of every turn or when they get defeated, regenerates 8 Energy for Black Swan.",
+        "icon": "icon/skill/1130_rank4.png",
         "paramsEido": [
-          0.1,
+          0.2,
           8
         ]
       },
       {
-        "id": "130705",
+        "id": "1130705",
         "name": "Linnutee Flyway",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1307_ultimate.png"
+        "icon": "icon/skill/1130_ultimate.png"
       },
       {
-        "id": "130706",
+        "id": "1130706",
         "name": "Pantheon Merciful, Masses Pitiful",
         "rank": 6,
-        "desc": "When an enemy target is attacked by Black Swan's teammates, Black Swan has a 65% base chance of inflicting 1 stack of \"Arcana\" on the target.\nEvery time Black Swan inflicts \"Arcana\" on an enemy target, there is a 50% fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1.",
-        "icon": "icon/skill/1307_rank6.png",
+        "desc": "The upper limit of stackable \"Arcana\" increases by 30.\nWhen an enemy target gets attacked by Black Swan's teammates, Black Swan has a 65% base chance of inflicting 1 stack of \"Arcana\" on the target.\nFor every 1 stack of \"Arcana\" Black Swan inflicts on an enemy target, additionally increases the number of \"Arcana\" stacked this time by 1.",
+        "icon": "icon/skill/1130_rank6.png",
         "paramsEido": [
-          0.5,
+          1,
           0.65,
-          1
+          1,
+          30
         ],
         "extraEffects": {
           "Base Chance": {
@@ -38146,7 +38144,7 @@ let characters = {
             "desc": "Fixed chance will not be affected by any factor."
           }
         },
-        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon6"
+        "eidoAbility": "BlackSwan_Advanced_BlackSwan_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -38163,12 +38161,12 @@ let characters = {
       "Basic ATK": {
         "Percipience, Silent Dawn": {
           "variant1": {
-            "skillID": 130701,
+            "skillID": 1130701,
             "trigger": "Skill01",
             "name": "Percipience, Silent Dawn",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target, with a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target. Additionally, when attacking a target that suffers Wind Shear, Bleed, Burn, or Shock, there is respectively a #3[i]% base chance of inflicting 1 extra stack of \"Arcana\" on the target.",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy.",
             "energyCost": null,
             "energyRegen": 20,
             "energyRate": 0.5,
@@ -38177,65 +38175,41 @@ let characters = {
             "skillPointGain": 1,
             "params": {
               "1": [
-                0.3,
-                0.5,
                 0.5
               ],
               "2": [
-                0.36,
-                0.53,
-                0.53
+                0.6
               ],
               "3": [
-                0.42,
-                0.56,
-                0.56
+                0.7
               ],
               "4": [
-                0.48,
-                0.59,
-                0.59
+                0.8
               ],
               "5": [
-                0.54,
-                0.62,
-                0.62
+                0.9
               ],
               "6": [
-                0.6,
-                0.65,
-                0.65
+                1
               ],
               "7": [
-                0.66,
-                0.68,
-                0.68
+                1.1
               ],
               "8": [
-                0.72,
-                0.71,
-                0.71
+                1.2
               ],
               "9": [
-                0.78,
-                0.74,
-                0.74
+                1.3
               ],
               "10": [
-                0.84,
-                0.77,
-                0.77
+                1.4
               ]
             },
             "element": "Wind",
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": [
-              "Avatar_BlackSwan_00_Skill01_Camera",
-              "Avatar_BlackSwan_00_Skill01_Phase01",
-              "Avatar_BlackSwan_00_Skill01_Phase02"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 30
@@ -38247,27 +38221,19 @@ let characters = {
                 "Value": 0
               }
             ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Base Chance": {
-                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-              },
-              "Arcana": {
-                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
-              }
-            }
+            "hitSplits": []
           }
         }
       },
       "Skill": {
         "Decadence, False Twilight": {
           "variant1": {
-            "skillID": 130702,
+            "skillID": 1130702,
             "trigger": "Skill02",
             "name": "Decadence, False Twilight",
             "type": "Blast",
             "slot": "Skill",
-            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target and any adjacent targets. At the same time, there is a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target enemy and the adjacent targets. Additionally, there is a #3[i]% base chance of reducing the DEF of the target enemy and the adjacent targets by #4[f1]%, lasting for #5[i] turn(s).",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy and adjacent targets. At the same time, there is a #3[i]% base chance of reducing the DEF of the enemy target and the adjacent targets by #4[f1]%, lasting for #2[i] turn(s).",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -38277,119 +38243,100 @@ let characters = {
             "params": {
               "1": [
                 0.45,
+                3,
                 1,
-                1,
-                0.148,
-                3
+                0.148
               ],
               "2": [
                 0.495,
+                3,
                 1,
-                1,
-                0.154,
-                3
+                0.154
               ],
               "3": [
                 0.54,
+                3,
                 1,
-                1,
-                0.16,
-                3
+                0.16
               ],
               "4": [
                 0.585,
+                3,
                 1,
-                1,
-                0.166,
-                3
+                0.166
               ],
               "5": [
                 0.63,
+                3,
                 1,
-                1,
-                0.172,
-                3
+                0.172
               ],
               "6": [
                 0.675,
+                3,
                 1,
-                1,
-                0.178,
-                3
+                0.178
               ],
               "7": [
                 0.73125,
+                3,
                 1,
-                1,
-                0.1855,
-                3
+                0.1855
               ],
               "8": [
                 0.7875,
+                3,
                 1,
-                1,
-                0.193,
-                3
+                0.193
               ],
               "9": [
                 0.84375,
+                3,
                 1,
-                1,
-                0.2005,
-                3
+                0.2005
               ],
               "10": [
                 0.9,
+                3,
                 1,
-                1,
-                0.208,
-                3
+                0.208
               ],
               "11": [
                 0.945,
+                3,
                 1,
-                1,
-                0.214,
-                3
+                0.214
               ],
               "12": [
                 0.99,
+                3,
                 1,
-                1,
-                0.22,
-                3
+                0.22
               ],
               "13": [
                 1.035,
+                3,
                 1,
-                1,
-                0.226,
-                3
+                0.226
               ],
               "14": [
                 1.08,
+                3,
                 1,
-                1,
-                0.232,
-                3
+                0.232
               ],
               "15": [
                 1.125,
+                3,
                 1,
-                1,
-                0.238,
-                3
+                0.238
               ]
             },
             "element": "Wind",
             "attackType": "BPSkill",
             "skillEffect": "Blast",
             "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_BlackSwan_00_Skill02_Camera",
-              "Avatar_BlackSwan_00_Skill02_Phase01",
-              "Avatar_BlackSwan_00_Skill02_Phase02"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 60
@@ -38405,9 +38352,6 @@ let characters = {
             "extraEffects": {
               "Base Chance": {
                 "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-              },
-              "Arcana": {
-                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
               }
             }
           }
@@ -38416,12 +38360,12 @@ let characters = {
       "Ultimate": {
         "Bliss of Otherworld's Embrace": {
           "variant1": {
-            "skillID": 130703,
+            "skillID": 1130703,
             "trigger": "Skill03",
             "name": "Bliss of Otherworld's Embrace",
             "type": "AoE",
             "slot": "Ultimate",
-            "desc": "Inflicts Epiphany on all enemies for #2[i] turn(s).\\nWhile afflicted with Epiphany, enemies take #3[i]% increased DMG in their turn. Additionally, if enemies are also inflicted with Arcana, they are also considered to be simultaneously afflicted with Wind Shear, Bleed, Burn, and Shock. After Arcana causes DMG at the start of each turn, its stacks are not reset. This non-reset effect of Arcana stacks can be triggered up to #4[i] time(s) for the duration of Epiphany. And the trigger count resets when Epiphany is applied again.\\nDeals Wind DMG equal to #1[i]% of Black Swan's ATK to all enemies.",
+            "desc": "Inflicts \"Epiphany\" state on all enemies for #2[i] turn(s). Then deals Wind DMG to all enemies equal to #1[i]% of Black Swan's ATK.\\nWhile in the \"Epiphany\" state, enemy targets take #3[i]% increased DMG. For every 1 stack of \"Arcana inflicted,\" there is a #4[i]% fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1. And \"Arcana\" stacks won't be halved after dealing DMG at the start of the turn.",
             "energyCost": 120,
             "energyRegen": 5,
             "energyRate": 0.5,
@@ -38433,103 +38377,98 @@ let characters = {
                 0.72,
                 2,
                 0.15,
-                1
+                0.5
               ],
               "2": [
                 0.768,
                 2,
                 0.16,
-                1
+                0.5
               ],
               "3": [
                 0.816,
                 2,
                 0.17,
-                1
+                0.5
               ],
               "4": [
                 0.864,
                 2,
                 0.18,
-                1
+                0.5
               ],
               "5": [
                 0.912,
                 2,
                 0.19,
-                1
+                0.5
               ],
               "6": [
                 0.96,
                 2,
                 0.2,
-                1
+                0.5
               ],
               "7": [
                 1.02,
                 2,
                 0.2125,
-                1
+                0.5
               ],
               "8": [
                 1.08,
                 2,
                 0.225,
-                1
+                0.5
               ],
               "9": [
                 1.14,
                 2,
                 0.2375,
-                1
+                0.5
               ],
               "10": [
                 1.2,
                 2,
                 0.25,
-                1
+                0.5
               ],
               "11": [
                 1.248,
                 2,
                 0.26,
-                1
+                0.5
               ],
               "12": [
                 1.296,
                 2,
                 0.27,
-                1
+                0.5
               ],
               "13": [
                 1.344,
                 2,
                 0.28,
-                1
+                0.5
               ],
               "14": [
                 1.392,
                 2,
                 0.29,
-                1
+                0.5
               ],
               "15": [
                 1.44,
                 2,
                 0.3,
-                1
+                0.5
               ]
             },
             "element": "Wind",
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_BlackSwan_00_Skill03_Camera",
-              "Avatar_BlackSwan_00_Skill03_Phase01",
-              "Avatar_BlackSwan_00_Skill03_Phase02",
-              "Avatar_BlackSwan_00_Skill03_Cutin"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 0
@@ -38545,6 +38484,9 @@ let characters = {
             "extraEffects": {
               "Arcana": {
                 "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              },
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
               }
             }
           }
@@ -38553,12 +38495,12 @@ let characters = {
       "Talent": {
         "Loom of Fate's Caprice": {
           "variant1": {
-            "skillID": 130704,
+            "skillID": 1130704,
             "trigger": "SkillP01",
             "name": "Loom of Fate's Caprice",
             "type": "Impair",
             "slot": "Talent",
-            "desc": "Every time an enemy target receives DoT at the start of each turn, there is a #2[i]% base chance for it to be inflicted with 1 stack of Arcana.\\nWhile afflicted with Arcana, enemy targets receive Wind DoT equal to #1[i]% of Black Swan's ATK at the start of each turn. Each stack of Arcana increases this DMG multiplier by #3[f1]%. Then Arcana resets to 1 stack. Arcana can stack up to #8[i] times.\\nOnly when Arcana causes DMG at the start of an enemy target's turn, Black Swan triggers additional effects based on the number of Arcana stacks inflicted on the target:\\nWhen there are #4[i] or more Arcana stacks, deals Wind DoT equal to #5[i]% of Black Swan's ATK to adjacent targets, with a #2[i]% base chance of inflicting 1 stack of Arcana on adjacent targets.\\nWhen there are #6[i] or more Arcana stacks, enables the current DoT dealt this time to ignore #7[i]% of the target's and adjacent targets' DEF.",
+            "desc": "Every time an enemy target receives 1 instance of DoT, there is a #2[i]% base chance for it to be inflicted with 1 stack of \"Arcana\".\\nWhile an enemy target is in the \"Arcana\" state, they are also considered to be simultaneously afflicted with Wind Shear, Bleed, Burn, and Shock. The target receives Wind DoT equal to #1[i]% of Black Swan's ATK at the start of each turn, after which the number of stacks is halved. Each stack of \"Arcana\" increases this DMG multiplier by #3[f1]%. \"Arcana\" can stack #8[i] times, and can continue to stack beyond this limit, with the excess stacks removed after dealing DMG.\\nDMG from \"Arcana\" ignores #7[i]% of the target's DEF. Only when \"Arcana\" deals DMG at the start of the enemy target's turn, adjacent targets take 1 additional instance of Wind DoT equal to #5[i]% of Black Swan's ATK.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -38570,9 +38512,9 @@ let characters = {
                 0.96,
                 0.5,
                 0.048,
-                3,
+                0.048,
                 0.72,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38580,9 +38522,9 @@ let characters = {
                 1.1184,
                 0.515,
                 0.05592,
-                3,
+                0.05592,
                 0.8388,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38590,9 +38532,9 @@ let characters = {
                 1.2768,
                 0.53,
                 0.06384,
-                3,
+                0.06384,
                 0.9576,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38600,9 +38542,9 @@ let characters = {
                 1.4352,
                 0.545,
                 0.07176,
-                3,
+                0.07176,
                 1.0764,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38610,9 +38552,9 @@ let characters = {
                 1.5936,
                 0.56,
                 0.07968,
-                3,
+                0.07968,
                 1.1952,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38620,9 +38562,9 @@ let characters = {
                 1.752,
                 0.575,
                 0.0876,
-                3,
+                0.0876,
                 1.314,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38630,9 +38572,9 @@ let characters = {
                 1.896,
                 0.59375,
                 0.0948,
-                3,
+                0.0948,
                 1.422,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38640,9 +38582,9 @@ let characters = {
                 2.04,
                 0.6125,
                 0.102,
-                3,
+                0.102,
                 1.53,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38650,9 +38592,9 @@ let characters = {
                 2.22,
                 0.63125,
                 0.111,
-                3,
+                0.111,
                 1.665,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38660,9 +38602,9 @@ let characters = {
                 2.4,
                 0.65,
                 0.12,
-                3,
+                0.12,
                 1.8,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38670,9 +38612,9 @@ let characters = {
                 2.52,
                 0.665,
                 0.126,
-                3,
+                0.126,
                 1.89,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38680,9 +38622,9 @@ let characters = {
                 2.64,
                 0.68,
                 0.132,
-                3,
+                0.132,
                 1.98,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38690,9 +38632,9 @@ let characters = {
                 2.76,
                 0.695,
                 0.138,
-                3,
+                0.138,
                 2.07,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38700,9 +38642,9 @@ let characters = {
                 2.88,
                 0.71,
                 0.144,
-                3,
+                0.144,
                 2.16,
-                7,
+                0,
                 0.2,
                 50
               ],
@@ -38710,18 +38652,16 @@ let characters = {
                 3,
                 0.725,
                 0.15,
-                3,
+                0.15,
                 2.25,
-                7,
+                0,
                 0.2,
                 50
               ]
             },
             "skillEffect": "Impair",
             "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_BlackSwan_00_PassiveSkill01"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 0
@@ -38748,12 +38688,12 @@ let characters = {
       "Technique": {
         "From Façade to Vérité": {
           "variant1": {
-            "skillID": 130707,
+            "skillID": 1130707,
             "trigger": "SkillMaze",
             "name": "From Façade to Vérité",
             "type": "Enhance",
             "slot": "Technique",
-            "desc": "After this Technique is used, there is a #1[i]% base chance for each enemy to be inflicted with 1 stack of Arcana at the start of the next battle. For each successful application of Arcana on a target, inflicts another stack of Arcana on the same target. This process repeats until Arcana fails to be inflicted on this target. For each successive application of Arcana on a target, its base chance of success is equal to #2[i]% of the base chance of the previous successful infliction of Arcana on that target.",
+            "desc": "After Technique is used, there is a #1[i]% base chance for each enemy to be inflicted with 1 stack of \"Arcana\" at the start of the next battle. For each successful application of \"Arcana\" on a target, inflicts another stack of \"Arcana\" on the same target. This process repeats until \"Arcana\" fails to be inflicted on this target. For each successive application of \"Arcana\" on a target, its base chance of success is equal to #2[i]% of the base chance of the previous successful infliction of \"Arcana\" on that target.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -38769,10 +38709,7 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
-            "configAbilityList": [
-              "Avatar_BlackSwan_00_SkillMazeInLevel",
-              "Avatar_BlackSwan_00_SkillMazeInLevel_Insert"
-            ],
+            "configAbilityList": null,
             "toughnessList": [
               {
                 "Value": 0
@@ -38857,7 +38794,7 @@ let characters = {
           0.65,
           3
         ],
-        "traceAbility": "BlackSwanv0_BlackSwan_Trace02",
+        "traceAbility": "BlackSwan_BlackSwan_Trace02",
         "extraEffects": {
           "Base Chance": {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
@@ -38875,7 +38812,7 @@ let characters = {
           0.6,
           0.72
         ],
-        "traceAbility": "BlackSwanv0_BlackSwan_Trace03"
+        "traceAbility": "BlackSwan_BlackSwan_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -63084,6 +63021,2157 @@ let characters = {
     "remembranceSummonID": 11415,
     "summonName": "Demiurge"
   },
+  "Sparxie": {
+    "internalID": 1501,
+    "name": "Sparxie",
+    "path": "Elation",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 460.845,
+      "HPBase": 1047.816,
+      "SPDBase": 107,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150101",
+        "name": "#GoingViral #WhoIsShe",
+        "rank": 1,
+        "desc": "When Aha Instant ends, gains 5 Punchline. For every 1 Punchline owned, increases All-Type RES PEN for all allies by 1.5%, up to a max increase of 15%.",
+        "icon": "icon/skill/1501_rank1.png",
+        "paramsEido": [
+          5,
+          0.015,
+          0.15
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          },
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "150102",
+        "name": "#AudienceKnows",
+        "rank": 2,
+        "desc": "When Aha Instant ends, Sparxie gains 1 extra turn and 2 \"Thrill.\" For every 1 \"Thrill\" consumed, increases this unit's CRIT DMG by 10%, lasting for 2 turn(s) and stacking up to 4 time(s).",
+        "icon": "icon/skill/1501_rank2.png",
+        "paramsEido": [
+          2,
+          0.1,
+          2,
+          4
+        ],
+        "extraEffects": {
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        }
+      },
+      {
+        "id": "150103",
+        "name": "#LinkUp #HeartSkip",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1501_skill.png"
+      },
+      {
+        "id": "150104",
+        "name": "#LockedIn #FaceCard",
+        "rank": 4,
+        "desc": "When using Ultimate, additionally gains 5 Punchline and increases this unit's Elation by 36% for 3 turn(s).",
+        "icon": "icon/skill/1501_rank4.png",
+        "paramsEido": [
+          5,
+          0.36,
+          3
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      },
+      {
+        "id": "150105",
+        "name": "#HealingTheWorld #GoodVibesOnly",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1501_ultimate.png"
+      },
+      {
+        "id": "150106",
+        "name": "#BuiltDifferent #GoingExtinct",
+        "rank": 6,
+        "desc": "Increases All-Type RES PEN by 20%. For every 1 Punchline taken into account, the number of additional DMG instances dealt by the Elation Skill increases by 1, up to a max of 40.",
+        "icon": "icon/skill/1501_rank6.png",
+        "paramsEido": [
+          1,
+          40,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Cat Got Your Flametongue?": {
+          "variant1": {
+            "skillID": 150101,
+            "trigger": "Skill01",
+            "name": "Cat Got Your Flametongue?",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Sparxie's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Bloom! Winner Takes All": {
+          "variant1": {
+            "skillID": 150108,
+            "trigger": "Skill11",
+            "name": "Bloom! Winner Takes All",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Finalizes the livestream. Deals Fire DMG equal to #1[i]% of Sparxie's ATK to one designated enemy, and Fire DMG equal to #2[f1]% of Sparxie's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 40,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                0.25
+              ],
+              "2": [
+                0.6,
+                0.3
+              ],
+              "3": [
+                0.7,
+                0.35
+              ],
+              "4": [
+                0.8,
+                0.4
+              ],
+              "5": [
+                0.9,
+                0.45
+              ],
+              "6": [
+                1,
+                0.5
+              ],
+              "7": [
+                1.1,
+                0.55
+              ],
+              "8": [
+                1.2,
+                0.6
+              ],
+              "9": [
+                1.3,
+                0.65
+              ],
+              "10": [
+                1.4,
+                0.7
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 150110,
+            "trigger": "Skill12",
+            "name": "Bloom! Winner Takes All",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": 40,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                0.25
+              ],
+              "2": [
+                0.6,
+                0.3
+              ],
+              "3": [
+                0.7,
+                0.35
+              ],
+              "4": [
+                0.8,
+                0.4
+              ],
+              "5": [
+                0.9,
+                0.45
+              ],
+              "6": [
+                1,
+                0.5
+              ],
+              "7": [
+                1.1,
+                0.55
+              ],
+              "8": [
+                1.2,
+                0.6
+              ],
+              "9": [
+                1.3,
+                0.65
+              ],
+              "10": [
+                1.4,
+                0.7
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Boom! Sparxicle's Poppin'": {
+          "variant1": {
+            "skillID": 150102,
+            "trigger": "Skill02",
+            "name": "Boom! Sparxicle's Poppin'",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Start a livestream to turn Basic ATK into \"Bloom! Winner Takes All\" and trigger \"Engagement Farming\" 1 time. During this ability, \"Engagement Farming\" can be triggered repeatedly, up to #1[i] time(s). Using this ability is not considered as using a Skill.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "2": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "3": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "4": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "5": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "6": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "7": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "8": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "9": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "10": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "11": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "12": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "13": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "14": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "15": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Engagement Farming": {
+          "variant1": {
+            "skillID": 150109,
+            "trigger": "Skill21",
+            "name": "Engagement Farming",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Causes \"Bloom! Winner Takes All\" to increase the DMG multiplier against one designated enemy by #4[f1]% and the DMG multiplier against adjacent targets by #5[f1]%. Randomly gains one of the following gifts:\\n\"Straight Fire\": #3[i] Punchline point(s) and #1[i] Skill point(s).\\n\"Unreal Banger\": #2[i] Punchline point(s).\\nUsing this ability is not considered as using a Skill.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                1,
+                2,
+                0.1,
+                0.05
+              ],
+              "2": [
+                2,
+                1,
+                2,
+                0.11,
+                0.055
+              ],
+              "3": [
+                2,
+                1,
+                2,
+                0.12,
+                0.06
+              ],
+              "4": [
+                2,
+                1,
+                2,
+                0.13,
+                0.065
+              ],
+              "5": [
+                2,
+                1,
+                2,
+                0.14,
+                0.07
+              ],
+              "6": [
+                2,
+                1,
+                2,
+                0.15,
+                0.075
+              ],
+              "7": [
+                2,
+                1,
+                2,
+                0.1625,
+                0.08125
+              ],
+              "8": [
+                2,
+                1,
+                2,
+                0.175,
+                0.0875
+              ],
+              "9": [
+                2,
+                1,
+                2,
+                0.1875,
+                0.09375
+              ],
+              "10": [
+                2,
+                1,
+                2,
+                0.2,
+                0.1
+              ],
+              "11": [
+                2,
+                1,
+                2,
+                0.21,
+                0.105
+              ],
+              "12": [
+                2,
+                1,
+                2,
+                0.22,
+                0.11
+              ],
+              "13": [
+                2,
+                1,
+                2,
+                0.23,
+                0.115
+              ],
+              "14": [
+                2,
+                1,
+                2,
+                0.24,
+                0.12
+              ],
+              "15": [
+                2,
+                1,
+                2,
+                0.25,
+                0.125
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Party's Wildin' and Camera's Rollin'": {
+          "variant1": {
+            "skillID": 150103,
+            "trigger": "Skill03",
+            "name": "Party's Wildin' and Camera's Rollin'",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Gains #1[i] Punchline point(s). Deals Fire DMG equal to (#3[f1] × Elation + #2[f1]%) of Sparxie's ATK to all enemies.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.3,
+                0.6
+              ],
+              "2": [
+                2,
+                0.32,
+                0.6
+              ],
+              "3": [
+                2,
+                0.34,
+                0.6
+              ],
+              "4": [
+                2,
+                0.36,
+                0.6
+              ],
+              "5": [
+                2,
+                0.38,
+                0.6
+              ],
+              "6": [
+                2,
+                0.4,
+                0.6
+              ],
+              "7": [
+                2,
+                0.425,
+                0.6
+              ],
+              "8": [
+                2,
+                0.45,
+                0.6
+              ],
+              "9": [
+                2,
+                0.475,
+                0.6
+              ],
+              "10": [
+                2,
+                0.5,
+                0.6
+              ],
+              "11": [
+                2,
+                0.52,
+                0.6
+              ],
+              "12": [
+                2,
+                0.54,
+                0.6
+              ],
+              "13": [
+                2,
+                0.56,
+                0.6
+              ],
+              "14": [
+                2,
+                0.58,
+                0.6
+              ],
+              "15": [
+                2,
+                0.6,
+                0.6
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Sleight of Sparx Hand": {
+          "variant1": {
+            "skillID": 150104,
+            "trigger": "SkillP01",
+            "name": "Sleight of Sparx Hand",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "While Sparxie holds \"Certified Banger\":\\nUsing Enhanced Basic ATK deals #3[i]% Fire Elation DMG to one designated enemy, and #4[f1]% Fire Elation DMG to their adjacent targets. Additionally, for every 1 instance of \"Engagement Farming\" triggered, the Enhanced Basic ATK deals 1 extra instance of #1[f1]% Fire Elation DMG to 1 random attacked enemy target.\\nUsing Ultimate deals #2[i]% Fire Elation DMG to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.24,
+                0.2,
+                0.1
+              ],
+              "2": [
+                0.11,
+                0.264,
+                0.22,
+                0.11
+              ],
+              "3": [
+                0.12,
+                0.288,
+                0.24,
+                0.12
+              ],
+              "4": [
+                0.13,
+                0.312,
+                0.26,
+                0.13
+              ],
+              "5": [
+                0.14,
+                0.336,
+                0.28,
+                0.14
+              ],
+              "6": [
+                0.15,
+                0.36,
+                0.3,
+                0.15
+              ],
+              "7": [
+                0.1625,
+                0.39,
+                0.325,
+                0.1625
+              ],
+              "8": [
+                0.175,
+                0.42,
+                0.35,
+                0.175
+              ],
+              "9": [
+                0.1875,
+                0.45,
+                0.375,
+                0.1875
+              ],
+              "10": [
+                0.2,
+                0.48,
+                0.4,
+                0.2
+              ],
+              "11": [
+                0.21,
+                0.504,
+                0.42,
+                0.21
+              ],
+              "12": [
+                0.22,
+                0.528,
+                0.44,
+                0.22
+              ],
+              "13": [
+                0.23,
+                0.552,
+                0.46,
+                0.23
+              ],
+              "14": [
+                0.24,
+                0.576,
+                0.48,
+                0.24
+              ],
+              "15": [
+                0.25,
+                0.6,
+                0.5,
+                0.25
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Content Monetization": {
+          "variant1": {
+            "skillID": 150107,
+            "trigger": "SkillMaze",
+            "name": "Content Monetization",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using the Technique, inflicts enemies within a set area with \"Block\" for #3[i] second(s). \"Blocked\" enemies cannot detect ally targets.\\nAfter entering combat via actively attacking a \"Blocked\" enemy, deals Fire DMG to all enemies equal to #2[i]% of Sparxie's ATK and recovers #1[i] Skill Point(s) for allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.5,
+                10
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Elation Skill": {
+        "Signal Overflow: The Great Encore!": {
+          "variant1": {
+            "skillID": 150120,
+            "trigger": "Skill04",
+            "name": "Signal Overflow: The Great Encore!",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Deals #2[f1]% Fire Elation DMG to all enemies and deals #3[i] additional instance(s) of DMG. Each instance deals #1[f1]% Fire Elation DMG to one random enemy. Grants #4[i] \"Thrill\" point(s) to Sparxie, which can be used to offset Sparxie's Skill Point consumption. Consuming \"Thrill\" is considered as consuming Skill Points.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 6,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.125,
+                0.25,
+                20,
+                2
+              ],
+              "2": [
+                0.1375,
+                0.275,
+                20,
+                2
+              ],
+              "3": [
+                0.15,
+                0.3,
+                20,
+                2
+              ],
+              "4": [
+                0.1625,
+                0.325,
+                20,
+                2
+              ],
+              "5": [
+                0.175,
+                0.35,
+                20,
+                2
+              ],
+              "6": [
+                0.1875,
+                0.375,
+                20,
+                2
+              ],
+              "7": [
+                0.203125,
+                0.40625,
+                20,
+                2
+              ],
+              "8": [
+                0.21875,
+                0.4375,
+                20,
+                2
+              ],
+              "9": [
+                0.234375,
+                0.46875,
+                20,
+                2
+              ],
+              "10": [
+                0.25,
+                0.5,
+                20,
+                2
+              ],
+              "11": [
+                0.2625,
+                0.525,
+                20,
+                2
+              ],
+              "12": [
+                0.275,
+                0.55,
+                20,
+                2
+              ],
+              "13": [
+                0.2875,
+                0.575,
+                20,
+                2
+              ],
+              "14": [
+                0.3,
+                0.6,
+                20,
+                2
+              ],
+              "15": [
+                0.3125,
+                0.625,
+                20,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 5
+              },
+              {
+                "Value": 20
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1501_basic_atk.png",
+        "skillRef": {
+          "skillName": "Cat Got Your Flametongue?",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1501_skill.png",
+        "skillRef": {
+          "skillName": "Boom! Sparxicle's Poppin'",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1501_ultimate.png",
+        "skillRef": {
+          "skillName": "Party's Wildin' and Camera's Rollin'",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1501_talent.png",
+        "skillRef": {
+          "skillName": "Sleight of Sparx Hand",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1501_technique.png",
+        "skillRef": {
+          "skillName": "Content Monetization",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Sweet! Punchline Signing",
+        "icon": "icon/skill/1501_skilltree1.png",
+        "desc": "For every #2[i] of Sparxie's ATK that exceeds #1[i], increases this unit's Elation by #3[f1]%, up to a maximum increase of #4[f1]%.",
+        "params": [
+          2000,
+          100,
+          0.05,
+          0.8
+        ]
+      },
+      "Point07": {
+        "name": "Dazzling! Persona Kaleidoscope",
+        "icon": "icon/skill/1501_skilltree2.png",
+        "desc": "When there are 1/2/(3 or more) Elation characters in the team, using Sparxie's Ultimate will additionally gain #1[i]/#2[i]/#3[i] Punchline and #4[i]/#5[i]/#6[i] \"Thrill\".",
+        "params": [
+          2,
+          4,
+          8,
+          1,
+          1,
+          4
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Frenzy! Palette of Truth and Lies",
+        "icon": "icon/skill/1501_skilltree3.png",
+        "desc": "For every 1 Punchline currently owned, increases all allies' CRIT DMG by #1[i]%, up to a max increase of #2[i]%.",
+        "params": [
+          0.08,
+          0.8
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      },
+      "Point09": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "undefined": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "undefined": 0.04
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "undefined": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "undefined": 0.06
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "undefined": 0.08
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/1501_elation.png",
+        "skillRef": {
+          "skillName": "Signal Overflow: The Great Encore!",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1501.png",
+    "preview": "image/character_preview/1501.png",
+    "portrait": "image/character_portrait/1501.png",
+    "bannerOffsets": [
+      51.6,
+      60.6,
+      0.58,
+      51.6,
+      60.6,
+      0.58,
+      51.6,
+      60.6,
+      0.58
+    ],
+    "isBuffed": false
+  },
+  "Yao Guang": {
+    "internalID": 1502,
+    "name": "Yao Guang",
+    "path": "Elation",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 180,
+    "baseStats": {
+      "ATKBase": 465.696,
+      "DEFBase": 654.885,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150201",
+        "name": "Chuckle Chimes Where Jade Falls",
+        "rank": 1,
+        "desc": "In Aha's extra turn triggered by Ultimate, the fixed amount of Punchline taken into account increases to 40. When dealing Elation DMG, all ally targets ignore 20% of the target's DEF.",
+        "icon": "icon/skill/1502_rank1.png",
+        "paramsEido": [
+          0.2,
+          40
+        ],
+        "extraEffects": {
+          "Aha": {
+            "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          },
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          },
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          }
+        },
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon1"
+      },
+      {
+        "id": "150202",
+        "name": "Blind Arrows Guided by Feathers",
+        "rank": 2,
+        "desc": "While the Zone is active, increases all ally targets' SPD by 12%, and additionally increases Elation by 16%.",
+        "icon": "icon/skill/1502_rank2.png",
+        "paramsEido": [
+          0.16,
+          0.12
+        ],
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon2"
+      },
+      {
+        "id": "150203",
+        "name": "Auspices Mirrored In Decalight",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1502_skill.png"
+      },
+      {
+        "id": "150204",
+        "name": "Threads of Fate Colored by Plumes",
+        "rank": 4,
+        "desc": "In Aha's extra turn triggered by Yao Guang's Ultimate, the DMG dealt by all ally characters' Elation Skill becomes 150% of the original DMG.",
+        "icon": "icon/skill/1502_rank4.png",
+        "paramsEido": [
+          1.5
+        ],
+        "extraEffects": {
+          "Aha": {
+            "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        },
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon4"
+      },
+      {
+        "id": "150205",
+        "name": "Bejeweled in Radiant Grace",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1502_ultimate.png"
+      },
+      {
+        "id": "150206",
+        "name": "Ferried Along the Astral Arc",
+        "rank": 6,
+        "desc": "All ally targets' Elation DMG merrymakes by 25%. Increases the DMG multiplier of Yao Guang's Elation Skill by 100% of its original multiplier.",
+        "icon": "icon/skill/1502_rank6.png",
+        "paramsEido": [
+          0.25,
+          1
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "Merrymake": {
+            "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
+          }
+        },
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Whistlebolt Sings Joy": {
+          "variant1": {
+            "skillID": 150201,
+            "trigger": "Skill01",
+            "name": "Whistlebolt Sings Joy",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Yao Guang's ATK to one designated enemy and Physical DMG equal to #2[i]% of Yao Guang's ATK to targets adjacent to it. The Energy regenerated from Basic ATK increases to 30.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.45,
+                0.15
+              ],
+              "2": [
+                0.54,
+                0.18
+              ],
+              "3": [
+                0.63,
+                0.21
+              ],
+              "4": [
+                0.72,
+                0.24
+              ],
+              "5": [
+                0.81,
+                0.27
+              ],
+              "6": [
+                0.9,
+                0.3
+              ],
+              "7": [
+                0.99,
+                0.33
+              ],
+              "8": [
+                1.08,
+                0.36
+              ],
+              "9": [
+                1.17,
+                0.39
+              ],
+              "10": [
+                1.26,
+                0.42
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Decalight Unveils All": {
+          "variant1": {
+            "skillID": 150202,
+            "trigger": "Skill02",
+            "name": "Decalight Unveils All",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Deploys a Zone for #1[i] turn(s). This duration decreases by 1 at the start of this unit's every turn. While the Zone is active, increases all allies' Elation by an amount equal to #2[f1]% of Yao Guang's Elation. After Yao Guang uses Basic ATK or Skill, gains #3[i] Punchline.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.1,
+                3
+              ],
+              "2": [
+                3,
+                0.11,
+                3
+              ],
+              "3": [
+                3,
+                0.12,
+                3
+              ],
+              "4": [
+                3,
+                0.13,
+                3
+              ],
+              "5": [
+                3,
+                0.14,
+                3
+              ],
+              "6": [
+                3,
+                0.15,
+                3
+              ],
+              "7": [
+                3,
+                0.1625,
+                3
+              ],
+              "8": [
+                3,
+                0.175,
+                3
+              ],
+              "9": [
+                3,
+                0.1875,
+                3
+              ],
+              "10": [
+                3,
+                0.2,
+                3
+              ],
+              "11": [
+                3,
+                0.21,
+                3
+              ],
+              "12": [
+                3,
+                0.22,
+                3
+              ],
+              "13": [
+                3,
+                0.23,
+                3
+              ],
+              "14": [
+                3,
+                0.24,
+                3
+              ],
+              "15": [
+                3,
+                0.25,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Hexagram of Feathered Fortune": {
+          "variant1": {
+            "skillID": 150203,
+            "trigger": "Skill03",
+            "name": "Hexagram of Feathered Fortune",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Gains #1[i] Punchline. Aha immediately gains 1 extra turn where a fixed amount of #4[i] Punchline is taken into account. This turn, does not consume Punchline, and increases all allies' All-Type RES PEN by #2[f1]% for #3[i] turn(s).",
+            "energyCost": 180,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5,
+                0.1,
+                3,
+                20,
+                1
+              ],
+              "2": [
+                5,
+                0.11,
+                3,
+                20,
+                1
+              ],
+              "3": [
+                5,
+                0.12,
+                3,
+                20,
+                1
+              ],
+              "4": [
+                5,
+                0.13,
+                3,
+                20,
+                1
+              ],
+              "5": [
+                5,
+                0.14,
+                3,
+                20,
+                1
+              ],
+              "6": [
+                5,
+                0.15,
+                3,
+                20,
+                1
+              ],
+              "7": [
+                5,
+                0.1625,
+                3,
+                20,
+                1
+              ],
+              "8": [
+                5,
+                0.175,
+                3,
+                20,
+                1
+              ],
+              "9": [
+                5,
+                0.1875,
+                3,
+                20,
+                1
+              ],
+              "10": [
+                5,
+                0.2,
+                3,
+                20,
+                1
+              ],
+              "11": [
+                5,
+                0.21,
+                3,
+                20,
+                1
+              ],
+              "12": [
+                5,
+                0.22,
+                3,
+                20,
+                1
+              ],
+              "13": [
+                5,
+                0.23,
+                3,
+                20,
+                1
+              ],
+              "14": [
+                5,
+                0.24,
+                3,
+                20,
+                1
+              ],
+              "15": [
+                5,
+                0.25,
+                3,
+                20,
+                1
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              },
+              "Aha": {
+                "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              },
+              "RES PEN": {
+                "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Behold Wherever Light Unfolds": {
+          "variant1": {
+            "skillID": 150204,
+            "trigger": "SkillP01",
+            "name": "Behold Wherever Light Unfolds",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "While Yao Guang holds \"Certified Banger\":\\nAfter an ally target uses an attack, triggers the \"Great Boon\" effect, dealing 1 additional instance of #1[f1]% Elation DMG of the corresponding Type to 1 random hit target. If this attack consumes Skill Points, then additionally triggers \"Great Boon\" 1 time.\\nWhen triggering the \"Great Boon\" effect, if the attacker's Elation is lower than that of Yao Guang, then this instance of Elation DMG will take Yao Guang's Elation into calculation.\\nTriggering the \"Great Boon\" effect is not considered as using 1 instance of attack.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1
+              ],
+              "2": [
+                0.11
+              ],
+              "3": [
+                0.12
+              ],
+              "4": [
+                0.13
+              ],
+              "5": [
+                0.14
+              ],
+              "6": [
+                0.15
+              ],
+              "7": [
+                0.1625
+              ],
+              "8": [
+                0.175
+              ],
+              "9": [
+                0.1875
+              ],
+              "10": [
+                0.2
+              ],
+              "11": [
+                0.21
+              ],
+              "12": [
+                0.22
+              ],
+              "13": [
+                0.23
+              ],
+              "14": [
+                0.24
+              ],
+              "15": [
+                0.25
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Untethered Glimmer Sails Far": {
+          "variant1": {
+            "skillID": 150207,
+            "trigger": "SkillMaze",
+            "name": "Untethered Glimmer Sails Far",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, automatically triggers Skill 1 time at the start of the next battle without consuming any Skill Points. When Yao Guang is in the team, breaking destructible objects immediately grants Fortune Pouch, up to #1[i] within every Earth Week.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                8
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Elation Skill": {
+        "Let Thy Fortune Burst in Flames": {
+          "variant1": {
+            "skillID": 150220,
+            "trigger": "Skill04",
+            "name": "Let Thy Fortune Burst in Flames",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Inflicts \"Woe's Whisper\" on all enemies, lasting for #4[i] turn(s). Enemy targets under the \"Woe's Whisper\" state take #3[f1]% increased DMG. Deals #2[i]% Physical Elation DMG to all enemies. Then, deals #5[i] instance(s) of #6[i]% Physical Elation DMG to one random enemy.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                0.16,
+                3,
+                5,
+                0.1
+              ],
+              "2": [
+                1,
+                0.55,
+                0.16,
+                3,
+                5,
+                0.11
+              ],
+              "3": [
+                1,
+                0.6,
+                0.16,
+                3,
+                5,
+                0.12
+              ],
+              "4": [
+                1,
+                0.65,
+                0.16,
+                3,
+                5,
+                0.13
+              ],
+              "5": [
+                1,
+                0.7,
+                0.16,
+                3,
+                5,
+                0.14
+              ],
+              "6": [
+                1,
+                0.75,
+                0.16,
+                3,
+                5,
+                0.15
+              ],
+              "7": [
+                1,
+                0.8125,
+                0.16,
+                3,
+                5,
+                0.1625
+              ],
+              "8": [
+                1,
+                0.875,
+                0.16,
+                3,
+                5,
+                0.175
+              ],
+              "9": [
+                1,
+                0.9375,
+                0.16,
+                3,
+                5,
+                0.1875
+              ],
+              "10": [
+                1,
+                1,
+                0.16,
+                3,
+                5,
+                0.2
+              ],
+              "11": [
+                1,
+                1.05,
+                0.16,
+                3,
+                5,
+                0.21
+              ],
+              "12": [
+                1,
+                1.1,
+                0.16,
+                3,
+                5,
+                0.22
+              ],
+              "13": [
+                1,
+                1.15,
+                0.16,
+                3,
+                5,
+                0.23
+              ],
+              "14": [
+                1,
+                1.2,
+                0.16,
+                3,
+                5,
+                0.24
+              ],
+              "15": [
+                1,
+                1.25,
+                0.16,
+                3,
+                5,
+                0.25
+              ]
+            },
+            "element": "Physical",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1502_basic_atk.png",
+        "skillRef": {
+          "skillName": "Whistlebolt Sings Joy",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1502_skill.png",
+        "skillRef": {
+          "skillName": "Decalight Unveils All",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1502_ultimate.png",
+        "skillRef": {
+          "skillName": "Hexagram of Feathered Fortune",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1502_talent.png",
+        "skillRef": {
+          "skillName": "Behold Wherever Light Unfolds",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1502_technique.png",
+        "skillRef": {
+          "skillName": "Untethered Glimmer Sails Far",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Amaze-In Grace",
+        "icon": "icon/skill/1502_skilltree1.png",
+        "desc": "When Yao Guang's SPD is #1[i] or higher, increases this unit's Elation by #2[i]%. For every #3[i] SPD exceeded, increases this unit's Elation by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          120,
+          0.3,
+          1,
+          0.01,
+          200
+        ],
+        "traceAbility": "YaoGuang_YaoGuang_Trace01"
+      },
+      "Point07": {
+        "name": "Poised and Sated",
+        "icon": "icon/skill/1502_skilltree2.png",
+        "desc": "Increases this unit's CRIT DMG by #4[i]%. After using Elation Skill, recovers #1[i] Skill Point(s) for the team.",
+        "params": [
+          1,
+          0.25,
+          0.4,
+          0.6
+        ],
+        "traceAbility": "YaoGuang_YaoGuang_Trace02"
+      },
+      "Point08": {
+        "name": "Felicity Ensemble",
+        "icon": "icon/skill/1502_skilltree3.png",
+        "desc": "When Yao Guang gains \"Certified Banger,\" its duration increases by #2[i] turn(s).",
+        "params": [
+          20,
+          1
+        ],
+        "traceAbility": "YaoGuang_YaoGuang_Trace03",
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "undefined": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "undefined": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/1502_elation.png",
+        "skillRef": {
+          "skillName": "Let Thy Fortune Burst in Flames",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1502.png",
+    "preview": "image/character_preview/1502.png",
+    "portrait": "image/character_portrait/1502.png",
+    "bannerOffsets": [
+      43,
+      28,
+      0.66,
+      43,
+      28,
+      0.66,
+      43,
+      28,
+      0.66
+    ],
+    "isBuffed": false
+  },
   "Trailblazer - Destruction": {
     "internalID": 8001,
     "name": "Trailblazer - Destruction",
@@ -71696,6 +73784,1653 @@ let characters = {
       13,
       -50,
       0.57
+    ],
+    "isBuffed": true
+  },
+  "Sparkle_v0": {
+    "internalID": 1306,
+    "name": "Sparkle_v0",
+    "path": "Harmony",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 485.1,
+      "HPBase": 1397.088,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130601",
+        "name": "Suspension of Disbelief",
+        "rank": 1,
+        "desc": "The Cipher effect granted by the Ultimate lasts for 1 extra turn. All allies with Cipher have their ATK increased by 40%.",
+        "icon": "icon/skill/1306_rank1.png",
+        "paramsEido": [
+          0.4
+        ]
+      },
+      {
+        "id": "130602",
+        "name": "Purely Fictitious",
+        "rank": 2,
+        "desc": "Every stack of the Talent's effect allows allies to additionally ignore 8% of the target's DEF when dealing DMG.",
+        "icon": "icon/skill/1306_rank2.png",
+        "paramsEido": [
+          0.08
+        ]
+      },
+      {
+        "id": "130603",
+        "name": "Pipedream",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1306_skill.png"
+      },
+      {
+        "id": "130604",
+        "name": "Life Is a Gamble",
+        "rank": 4,
+        "desc": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1.",
+        "icon": "icon/skill/1306_rank4.png"
+      },
+      {
+        "id": "130605",
+        "name": "Parallax Truth",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1306_ultimate.png"
+      },
+      {
+        "id": "130606",
+        "name": "Narrative Polysemy",
+        "rank": 6,
+        "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to 30% of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with Cipher. When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with Cipher.",
+        "icon": "icon/skill/1306_rank6.png",
+        "paramsEido": [
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Monodrama": {
+          "variant1": {
+            "skillID": 130601,
+            "trigger": "Skill01",
+            "name": "Monodrama",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Sparkle's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill01_Camera",
+              "Avatar_Sparkle_00_Skill01_Phase01",
+              "Avatar_Sparkle_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Dreamdiver": {
+          "variant1": {
+            "skillID": 130602,
+            "trigger": "Skill02",
+            "name": "Dreamdiver",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Increases the CRIT DMG of a single target ally by #1[f1]% of Sparkle's CRIT DMG plus #2[f1]%, lasting for #3[i] turn(s). And at the same time, Advances Forward this ally's action by #4[i]%.\\nWhen Sparkle uses this ability on herself, the Action Advance effect will not trigger.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                0.27,
+                1,
+                0.5
+              ],
+              "2": [
+                0.132,
+                0.288,
+                1,
+                0.5
+              ],
+              "3": [
+                0.144,
+                0.306,
+                1,
+                0.5
+              ],
+              "4": [
+                0.156,
+                0.324,
+                1,
+                0.5
+              ],
+              "5": [
+                0.168,
+                0.342,
+                1,
+                0.5
+              ],
+              "6": [
+                0.18,
+                0.36,
+                1,
+                0.5
+              ],
+              "7": [
+                0.195,
+                0.3825,
+                1,
+                0.5
+              ],
+              "8": [
+                0.21,
+                0.405,
+                1,
+                0.5
+              ],
+              "9": [
+                0.225,
+                0.4275,
+                1,
+                0.5
+              ],
+              "10": [
+                0.24,
+                0.45,
+                1,
+                0.5
+              ],
+              "11": [
+                0.252,
+                0.468,
+                1,
+                0.5
+              ],
+              "12": [
+                0.264,
+                0.486,
+                1,
+                0.5
+              ],
+              "13": [
+                0.276,
+                0.504,
+                1,
+                0.5
+              ],
+              "14": [
+                0.288,
+                0.522,
+                1,
+                0.5
+              ],
+              "15": [
+                0.3,
+                0.54,
+                1,
+                0.5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill02_Phase01",
+              "Avatar_Sparkle_00_Skill02_Self_Camera",
+              "Avatar_Sparkle_00_Skill02_Self_Phase02",
+              "Avatar_Sparkle_00_Skill02_Others_Camera",
+              "Avatar_Sparkle_00_Skill02_Others_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "The Hero with a Thousand Faces": {
+          "variant1": {
+            "skillID": 130603,
+            "trigger": "Skill03",
+            "name": "The Hero with a Thousand Faces",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Recovers #2[i] Skill Points for the team and grants all allies Cipher. For allies with Cipher, each stack of the DMG Boost effect provided by Sparkle's Talent additionally increases by #3[f1]%, lasting for #4[i] turns.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                4,
+                0.06,
+                2
+              ],
+              "2": [
+                2,
+                4,
+                0.064,
+                2
+              ],
+              "3": [
+                2,
+                4,
+                0.067999996,
+                2
+              ],
+              "4": [
+                2,
+                4,
+                0.072,
+                2
+              ],
+              "5": [
+                2,
+                4,
+                0.076,
+                2
+              ],
+              "6": [
+                2,
+                4,
+                0.08,
+                2
+              ],
+              "7": [
+                2,
+                4,
+                0.085,
+                2
+              ],
+              "8": [
+                2,
+                4,
+                0.09,
+                2
+              ],
+              "9": [
+                2,
+                4,
+                0.095,
+                2
+              ],
+              "10": [
+                2,
+                4,
+                0.1,
+                2
+              ],
+              "11": [
+                2,
+                4,
+                0.104,
+                2
+              ],
+              "12": [
+                2,
+                4,
+                0.108,
+                2
+              ],
+              "13": [
+                2,
+                4,
+                0.112,
+                2
+              ],
+              "14": [
+                2,
+                4,
+                0.116,
+                2
+              ],
+              "15": [
+                2,
+                4,
+                0.12,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill03_Camera",
+              "Avatar_Sparkle_00_Skill03_EnterReady",
+              "Avatar_Sparkle_00_Skill03_Phase01",
+              "Avatar_Sparkle_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Red Herring": {
+          "variant1": {
+            "skillID": 130604,
+            "trigger": "SkillP01",
+            "name": "Red Herring",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "While Sparkle is on the battlefield, additionally increases the max number of Skill Points by #3[i]. Whenever an ally consumes 1 Skill Point, all allies' DMG dealt increases by #2[f1]%. This effect lasts for #1[i] turn(s) and can stack up to #4[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.03,
+                2,
+                3
+              ],
+              "2": [
+                2,
+                0.033,
+                2,
+                3
+              ],
+              "3": [
+                2,
+                0.036,
+                2,
+                3
+              ],
+              "4": [
+                2,
+                0.039,
+                2,
+                3
+              ],
+              "5": [
+                2,
+                0.042,
+                2,
+                3
+              ],
+              "6": [
+                2,
+                0.044999998,
+                2,
+                3
+              ],
+              "7": [
+                2,
+                0.048750002,
+                2,
+                3
+              ],
+              "8": [
+                2,
+                0.052500002,
+                2,
+                3
+              ],
+              "9": [
+                2,
+                0.05625,
+                2,
+                3
+              ],
+              "10": [
+                2,
+                0.06,
+                2,
+                3
+              ],
+              "11": [
+                2,
+                0.063,
+                2,
+                3
+              ],
+              "12": [
+                2,
+                0.066,
+                2,
+                3
+              ],
+              "13": [
+                2,
+                0.069,
+                2,
+                3
+              ],
+              "14": [
+                2,
+                0.072,
+                2,
+                3
+              ],
+              "15": [
+                2,
+                0.075,
+                2,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_PassiveSkill_1",
+              "Avatar_Sparkle_00_Rank06_BP"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Unreliable Narrator": {
+          "variant1": {
+            "skillID": 130607,
+            "trigger": "SkillMaze",
+            "name": "Unreliable Narrator",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, grants all allies Misdirect for #2[i] seconds. Characters with Misdirect will not be detected by enemies, and entering combat in the Misdirect state recovers #1[i] Skill Point(s) for the team.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1306_basic_atk.png",
+        "skillRef": {
+          "skillName": "Monodrama",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1306_skill.png",
+        "skillRef": {
+          "skillName": "Dreamdiver",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1306_ultimate.png",
+        "skillRef": {
+          "skillName": "The Hero with a Thousand Faces",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1306_talent.png",
+        "skillRef": {
+          "skillName": "Red Herring",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1306_technique.png",
+        "skillRef": {
+          "skillName": "Unreliable Narrator",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Almanac",
+        "icon": "icon/skill/1306_skilltree1.png",
+        "desc": "When using Basic ATK, additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ]
+      },
+      "Point07": {
+        "name": "Artificial Flower",
+        "icon": "icon/skill/1306_skilltree2.png",
+        "desc": "The CRIT DMG Boost effect provided by the Skill will be extended until the start of the target's next turn."
+      },
+      "Point08": {
+        "name": "Nocturne",
+        "icon": "icon/skill/1306_skilltree3.png",
+        "desc": "Increases all allies' ATK by #4[i]%. When there are 1/2/3 Quantum-Type allies in the team, additionally increases Quantum-Type allies' ATK by #1[i]%/#2[i]%/#3[i]%.",
+        "params": [
+          0.05,
+          0.15,
+          0.3,
+          0.15
+        ]
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1306.png",
+    "preview": "image/character_preview/1306.png",
+    "portrait": "image/character_portrait/1306.png",
+    "bannerOffsets": [
+      12,
+      51,
+      0.54,
+      12,
+      51,
+      0.54,
+      12,
+      51,
+      0.54
+    ],
+    "isBuffed": true
+  },
+  "Black Swan_v0": {
+    "internalID": 1307,
+    "name": "Black Swan_v0",
+    "path": "Nihility",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 659.7360000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1086.624,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130701",
+        "name": "Seven Pillars of Wisdom",
+        "rank": 1,
+        "desc": "While Black Swan is active in combat, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by 25%.",
+        "icon": "icon/skill/1307_rank1.png",
+        "paramsEido": [
+          0.25
+        ],
+        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon1"
+      },
+      {
+        "id": "130702",
+        "name": "Weep Not For Me, My Lamb",
+        "rank": 2,
+        "desc": "When an enemy target afflicted with \"Arcana\" is defeated, there is a 100% base chance of inflicting 6 stack(s) of \"Arcana\" on adjacent targets.",
+        "icon": "icon/skill/1307_rank2.png",
+        "paramsEido": [
+          1,
+          6
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        },
+        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon2"
+      },
+      {
+        "id": "130703",
+        "name": "As Above, So Below",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1307_skill.png"
+      },
+      {
+        "id": "130704",
+        "name": "In Tears We Gift",
+        "rank": 4,
+        "desc": "While in the Epiphany state, enemy targets have their Effect RES reduced by 10% and Black Swan regenerates 8 Energy at the start of these targets' turns or when they are defeated. This Energy Regeneration effect can only trigger up to 1 time while Epiphany lasts. The trigger count is reset when Epiphany is applied again.",
+        "icon": "icon/skill/1307_rank4.png",
+        "paramsEido": [
+          0.1,
+          8
+        ]
+      },
+      {
+        "id": "130705",
+        "name": "Linnutee Flyway",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1307_ultimate.png"
+      },
+      {
+        "id": "130706",
+        "name": "Pantheon Merciful, Masses Pitiful",
+        "rank": 6,
+        "desc": "When an enemy target is attacked by Black Swan's teammates, Black Swan has a 65% base chance of inflicting 1 stack of \"Arcana\" on the target.\nEvery time Black Swan inflicts \"Arcana\" on an enemy target, there is a 50% fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1.",
+        "icon": "icon/skill/1307_rank6.png",
+        "paramsEido": [
+          0.5,
+          0.65,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          },
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          }
+        },
+        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Percipience, Silent Dawn": {
+          "variant1": {
+            "skillID": 130701,
+            "trigger": "Skill01",
+            "name": "Percipience, Silent Dawn",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target, with a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target. Additionally, when attacking a target that suffers Wind Shear, Bleed, Burn, or Shock, there is respectively a #3[i]% base chance of inflicting 1 extra stack of \"Arcana\" on the target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.3,
+                0.5,
+                0.5
+              ],
+              "2": [
+                0.36,
+                0.53,
+                0.53
+              ],
+              "3": [
+                0.42,
+                0.56,
+                0.56
+              ],
+              "4": [
+                0.48,
+                0.59,
+                0.59
+              ],
+              "5": [
+                0.54,
+                0.62,
+                0.62
+              ],
+              "6": [
+                0.6,
+                0.65,
+                0.65
+              ],
+              "7": [
+                0.66,
+                0.68,
+                0.68
+              ],
+              "8": [
+                0.72,
+                0.71,
+                0.71
+              ],
+              "9": [
+                0.78,
+                0.74,
+                0.74
+              ],
+              "10": [
+                0.84,
+                0.77,
+                0.77
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill01_Camera",
+              "Avatar_BlackSwan_00_Skill01_Phase01",
+              "Avatar_BlackSwan_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Skill": {
+        "Decadence, False Twilight": {
+          "variant1": {
+            "skillID": 130702,
+            "trigger": "Skill02",
+            "name": "Decadence, False Twilight",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target and any adjacent targets. At the same time, there is a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target enemy and the adjacent targets. Additionally, there is a #3[i]% base chance of reducing the DEF of the target enemy and the adjacent targets by #4[f1]%, lasting for #5[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.45,
+                1,
+                1,
+                0.148,
+                3
+              ],
+              "2": [
+                0.495,
+                1,
+                1,
+                0.154,
+                3
+              ],
+              "3": [
+                0.54,
+                1,
+                1,
+                0.16,
+                3
+              ],
+              "4": [
+                0.585,
+                1,
+                1,
+                0.166,
+                3
+              ],
+              "5": [
+                0.63,
+                1,
+                1,
+                0.172,
+                3
+              ],
+              "6": [
+                0.675,
+                1,
+                1,
+                0.178,
+                3
+              ],
+              "7": [
+                0.73125,
+                1,
+                1,
+                0.1855,
+                3
+              ],
+              "8": [
+                0.7875,
+                1,
+                1,
+                0.193,
+                3
+              ],
+              "9": [
+                0.84375,
+                1,
+                1,
+                0.2005,
+                3
+              ],
+              "10": [
+                0.9,
+                1,
+                1,
+                0.208,
+                3
+              ],
+              "11": [
+                0.945,
+                1,
+                1,
+                0.214,
+                3
+              ],
+              "12": [
+                0.99,
+                1,
+                1,
+                0.22,
+                3
+              ],
+              "13": [
+                1.035,
+                1,
+                1,
+                0.226,
+                3
+              ],
+              "14": [
+                1.08,
+                1,
+                1,
+                0.232,
+                3
+              ],
+              "15": [
+                1.125,
+                1,
+                1,
+                0.238,
+                3
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill02_Camera",
+              "Avatar_BlackSwan_00_Skill02_Phase01",
+              "Avatar_BlackSwan_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Bliss of Otherworld's Embrace": {
+          "variant1": {
+            "skillID": 130703,
+            "trigger": "Skill03",
+            "name": "Bliss of Otherworld's Embrace",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts Epiphany on all enemies for #2[i] turn(s).\\nWhile afflicted with Epiphany, enemies take #3[i]% increased DMG in their turn. Additionally, if enemies are also inflicted with Arcana, they are also considered to be simultaneously afflicted with Wind Shear, Bleed, Burn, and Shock. After Arcana causes DMG at the start of each turn, its stacks are not reset. This non-reset effect of Arcana stacks can be triggered up to #4[i] time(s) for the duration of Epiphany. And the trigger count resets when Epiphany is applied again.\\nDeals Wind DMG equal to #1[i]% of Black Swan's ATK to all enemies.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.72,
+                2,
+                0.15,
+                1
+              ],
+              "2": [
+                0.768,
+                2,
+                0.16,
+                1
+              ],
+              "3": [
+                0.816,
+                2,
+                0.17,
+                1
+              ],
+              "4": [
+                0.864,
+                2,
+                0.18,
+                1
+              ],
+              "5": [
+                0.912,
+                2,
+                0.19,
+                1
+              ],
+              "6": [
+                0.96,
+                2,
+                0.2,
+                1
+              ],
+              "7": [
+                1.02,
+                2,
+                0.2125,
+                1
+              ],
+              "8": [
+                1.08,
+                2,
+                0.225,
+                1
+              ],
+              "9": [
+                1.14,
+                2,
+                0.2375,
+                1
+              ],
+              "10": [
+                1.2,
+                2,
+                0.25,
+                1
+              ],
+              "11": [
+                1.248,
+                2,
+                0.26,
+                1
+              ],
+              "12": [
+                1.296,
+                2,
+                0.27,
+                1
+              ],
+              "13": [
+                1.344,
+                2,
+                0.28,
+                1
+              ],
+              "14": [
+                1.392,
+                2,
+                0.29,
+                1
+              ],
+              "15": [
+                1.44,
+                2,
+                0.3,
+                1
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill03_Camera",
+              "Avatar_BlackSwan_00_Skill03_Phase01",
+              "Avatar_BlackSwan_00_Skill03_Phase02",
+              "Avatar_BlackSwan_00_Skill03_Cutin"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Loom of Fate's Caprice": {
+          "variant1": {
+            "skillID": 130704,
+            "trigger": "SkillP01",
+            "name": "Loom of Fate's Caprice",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "Every time an enemy target receives DoT at the start of each turn, there is a #2[i]% base chance for it to be inflicted with 1 stack of Arcana.\\nWhile afflicted with Arcana, enemy targets receive Wind DoT equal to #1[i]% of Black Swan's ATK at the start of each turn. Each stack of Arcana increases this DMG multiplier by #3[f1]%. Then Arcana resets to 1 stack. Arcana can stack up to #8[i] times.\\nOnly when Arcana causes DMG at the start of an enemy target's turn, Black Swan triggers additional effects based on the number of Arcana stacks inflicted on the target:\\nWhen there are #4[i] or more Arcana stacks, deals Wind DoT equal to #5[i]% of Black Swan's ATK to adjacent targets, with a #2[i]% base chance of inflicting 1 stack of Arcana on adjacent targets.\\nWhen there are #6[i] or more Arcana stacks, enables the current DoT dealt this time to ignore #7[i]% of the target's and adjacent targets' DEF.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                0.5,
+                0.048,
+                3,
+                0.72,
+                7,
+                0.2,
+                50
+              ],
+              "2": [
+                1.1184,
+                0.515,
+                0.05592,
+                3,
+                0.8388,
+                7,
+                0.2,
+                50
+              ],
+              "3": [
+                1.2768,
+                0.53,
+                0.06384,
+                3,
+                0.9576,
+                7,
+                0.2,
+                50
+              ],
+              "4": [
+                1.4352,
+                0.545,
+                0.07176,
+                3,
+                1.0764,
+                7,
+                0.2,
+                50
+              ],
+              "5": [
+                1.5936,
+                0.56,
+                0.07968,
+                3,
+                1.1952,
+                7,
+                0.2,
+                50
+              ],
+              "6": [
+                1.752,
+                0.575,
+                0.0876,
+                3,
+                1.314,
+                7,
+                0.2,
+                50
+              ],
+              "7": [
+                1.896,
+                0.59375,
+                0.0948,
+                3,
+                1.422,
+                7,
+                0.2,
+                50
+              ],
+              "8": [
+                2.04,
+                0.6125,
+                0.102,
+                3,
+                1.53,
+                7,
+                0.2,
+                50
+              ],
+              "9": [
+                2.22,
+                0.63125,
+                0.111,
+                3,
+                1.665,
+                7,
+                0.2,
+                50
+              ],
+              "10": [
+                2.4,
+                0.65,
+                0.12,
+                3,
+                1.8,
+                7,
+                0.2,
+                50
+              ],
+              "11": [
+                2.52,
+                0.665,
+                0.126,
+                3,
+                1.89,
+                7,
+                0.2,
+                50
+              ],
+              "12": [
+                2.64,
+                0.68,
+                0.132,
+                3,
+                1.98,
+                7,
+                0.2,
+                50
+              ],
+              "13": [
+                2.76,
+                0.695,
+                0.138,
+                3,
+                2.07,
+                7,
+                0.2,
+                50
+              ],
+              "14": [
+                2.88,
+                0.71,
+                0.144,
+                3,
+                2.16,
+                7,
+                0.2,
+                50
+              ],
+              "15": [
+                3,
+                0.725,
+                0.15,
+                3,
+                2.25,
+                7,
+                0.2,
+                50
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "From Façade to Vérité": {
+          "variant1": {
+            "skillID": 130707,
+            "trigger": "SkillMaze",
+            "name": "From Façade to Vérité",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After this Technique is used, there is a #1[i]% base chance for each enemy to be inflicted with 1 stack of Arcana at the start of the next battle. For each successful application of Arcana on a target, inflicts another stack of Arcana on the same target. This process repeats until Arcana fails to be inflicted on this target. For each successive application of Arcana on a target, its base chance of success is equal to #2[i]% of the base chance of the previous successful infliction of Arcana on that target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_SkillMazeInLevel",
+              "Avatar_BlackSwan_00_SkillMazeInLevel_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1307_basic_atk.png",
+        "skillRef": {
+          "skillName": "Percipience, Silent Dawn",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1307_skill.png",
+        "skillRef": {
+          "skillName": "Decadence, False Twilight",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1307_ultimate.png",
+        "skillRef": {
+          "skillName": "Bliss of Otherworld's Embrace",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1307_talent.png",
+        "skillRef": {
+          "skillName": "Loom of Fate's Caprice",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1307_technique.png",
+        "skillRef": {
+          "skillName": "From Façade to Vérité",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Viscera's Disquiet",
+        "icon": "icon/skill/1307_skilltree1.png",
+        "desc": "After using Skill to attack one designated enemy that has Wind Shear, Bleed, Burn, or Shock, each of these debuffs respectively has a #1[i]% base chance of inflicting 1 extra stack of Arcana.",
+        "params": [
+          0.65
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Goblet's Dredges",
+        "icon": "icon/skill/1307_skilltree2.png",
+        "desc": "When an enemy target enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of Arcana.\nEvery time an enemy target receives 1 instance of DoT during a single attack by an ally, there is a #1[i]% base chance for the target to be inflicted with 1 stack of Arcana. The maximum number of stacks that can be inflicted during 1 single attack is #2[i].",
+        "params": [
+          0.65,
+          3
+        ],
+        "traceAbility": "BlackSwanv0_BlackSwan_Trace02",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Candleflame's Portent",
+        "icon": "icon/skill/1307_skilltree3.png",
+        "desc": "Increases this unit's DMG by an amount equal to #1[i]% of Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
+        "params": [
+          0.6,
+          0.72
+        ],
+        "traceAbility": "BlackSwanv0_BlackSwan_Trace03"
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1307.png",
+    "preview": "image/character_preview/1307.png",
+    "portrait": "image/character_portrait/1307.png",
+    "bannerOffsets": [
+      -4,
+      -55,
+      0.69,
+      -4,
+      -55,
+      0.69,
+      -4,
+      -55,
+      0.69
     ],
     "isBuffed": true
   }

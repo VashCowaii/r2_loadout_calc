@@ -9558,5 +9558,403 @@ let lightcones = {
       -78,
       1.02
     ]
+  },
+  "Sneering": {
+    "lightconeID": 20023,
+    "name": "Sneering",
+    "path": "Elation",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Indulgence",
+    "desc": "When Aha Instant is activated, the wearer's Elation increases by #1[i]%, lasting until Aha Instant ends.",
+    "params": [
+      [
+        0.16
+      ],
+      [
+        0.2
+      ],
+      [
+        0.24
+      ],
+      [
+        0.28
+      ],
+      [
+        0.32
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20023.png",
+    "preview": "image/light_cone_preview/20023.png",
+    "portrait": "image/light_cone_portrait/20023.png",
+    "imageOffset": [
+      2,
+      36,
+      1.05
+    ]
+  },
+  "Lingering Tear": {
+    "lightconeID": 20024,
+    "name": "Lingering Tear",
+    "path": "Elation",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Mourning",
+    "desc": "When the Punchline held is #1[i] or more, the wearer's CRIT DMG increases by #2[i]%.",
+    "params": [
+      [
+        10,
+        0.2
+      ],
+      [
+        10,
+        0.25
+      ],
+      [
+        10,
+        0.3
+      ],
+      [
+        10,
+        0.35
+      ],
+      [
+        10,
+        0.4
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20024.png",
+    "preview": "image/light_cone_preview/20024.png",
+    "portrait": "image/light_cone_portrait/20024.png",
+    "imageOffset": [
+      5,
+      -146,
+      1.1
+    ]
+  },
+  "Mushy Shroomy's Adventures": {
+    "lightconeID": 21064,
+    "name": "Mushy Shroomy's Adventures",
+    "path": "Elation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "undefined": 0.12
+      },
+      "2": {
+        "undefined": 0.14
+      },
+      "3": {
+        "undefined": 0.16
+      },
+      "4": {
+        "undefined": 0.18
+      },
+      "5": {
+        "undefined": 0.2
+      }
+    },
+    "skillName": "Rumble",
+    "desc": "Increases the wearer's Elation by #1[i]%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by #2[i]% for #3[i] turn(s).",
+    "params": [
+      [
+        0.12,
+        0.06,
+        2
+      ],
+      [
+        0.14,
+        0.07,
+        2
+      ],
+      [
+        0.16,
+        0.08,
+        2
+      ],
+      [
+        0.18,
+        0.09,
+        2
+      ],
+      [
+        0.2,
+        0.1,
+        2
+      ]
+    ],
+    "statRef": [
+      "ElationDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21064.png",
+    "preview": "image/light_cone_preview/21064.png",
+    "portrait": "image/light_cone_portrait/21064.png",
+    "imageOffset": [
+      -6,
+      -28,
+      1.1
+    ]
+  },
+  "Today's Good Luck": {
+    "lightconeID": 21065,
+    "name": "Today's Good Luck",
+    "path": "Elation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.14
+      },
+      "3": {
+        "CritRateBase": 0.16
+      },
+      "4": {
+        "CritRateBase": 0.18
+      },
+      "5": {
+        "CritRateBase": 0.2
+      }
+    },
+    "skillName": "Decision",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When the wearer uses an Elation Skill, increases Elation by #2[i]%, stacking up to #3[i] times.",
+    "params": [
+      [
+        0.12,
+        0.12,
+        2
+      ],
+      [
+        0.14,
+        0.14,
+        2
+      ],
+      [
+        0.16,
+        0.16,
+        2
+      ],
+      [
+        0.18,
+        0.18,
+        2
+      ],
+      [
+        0.2,
+        0.2,
+        2
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21065.png",
+    "preview": "image/light_cone_preview/21065.png",
+    "portrait": "image/light_cone_portrait/21065.png",
+    "imageOffset": [
+      22,
+      -6,
+      1.3
+    ]
+  },
+  "Dazzled by a Flowery World": {
+    "lightconeID": 23053,
+    "name": "Dazzled by a Flowery World",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.48
+      },
+      "2": {
+        "CritDamageBase": 0.56
+      },
+      "3": {
+        "CritDamageBase": 0.64
+      },
+      "4": {
+        "CritDamageBase": 0.72
+      },
+      "5": {
+        "CritDamageBase": 0.8
+      }
+    },
+    "skillName": "Center of Attention",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. While the wearer is on the field, for every 1 Elation character in the team, increases the Skill Point upper limit by #2[i], up to a max increase of #3[i]. For every 1 Skill Point the wearer consumes, enables the Elation DMG dealt by this unit to ignore #6[f1]% of enemy targets' DEF, stacking up to #5[i] times. If #7[i] or more Skill Points are consumed in the same turn, the wearer gains \"Stream Promo,\" which increases all allies' Elation by #4[i]%. Light Cone effects of the same type cannot stack.",
+    "params": [
+      [
+        0.48,
+        1,
+        3,
+        0.2,
+        4,
+        0.05,
+        4
+      ],
+      [
+        0.56,
+        1,
+        3,
+        0.24,
+        4,
+        0.06,
+        4
+      ],
+      [
+        0.64,
+        1,
+        3,
+        0.28,
+        4,
+        0.07,
+        4
+      ],
+      [
+        0.72,
+        1,
+        3,
+        0.32,
+        4,
+        0.08,
+        4
+      ],
+      [
+        0.8,
+        1,
+        3,
+        0.36,
+        4,
+        0.09,
+        4
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23053.png",
+    "preview": "image/light_cone_preview/23053.png",
+    "portrait": "image/light_cone_portrait/23053.png",
+    "imageOffset": [
+      0,
+      -53,
+      1.1
+    ]
+  },
+  "When She Decided to See": {
+    "lightconeID": 23054,
+    "name": "When She Decided to See",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 529.2,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "SPD%": 0.18
+      },
+      "2": {
+        "SPD%": 0.21
+      },
+      "3": {
+        "SPD%": 0.24
+      },
+      "4": {
+        "SPD%": 0.27
+      },
+      "5": {
+        "SPD%": 0.3
+      }
+    },
+    "skillName": "Game Changer",
+    "desc": "Increases the wearer's SPD by #1[i]%. When the wearer enters combat or uses Ultimate on an ally target, the wearer gains \"Great Fortune\" for #4[i] turn(s). While the wearer holds \"Great Fortune,\" all allies' CRIT Rate increases by #2[i]%, CRIT DMG increases by #3[i]%, and the wearer's Energy Regeneration Rate increases by #5[i]%.\\nAt the start of each wave, the wearer regenerates a fixed amount of #6[i] Energy.",
+    "params": [
+      [
+        0.18,
+        0.1,
+        0.3,
+        3,
+        0.12,
+        15
+      ],
+      [
+        0.21,
+        0.11,
+        0.375,
+        3,
+        0.14,
+        15
+      ],
+      [
+        0.24,
+        0.12,
+        0.45,
+        3,
+        0.16,
+        15
+      ],
+      [
+        0.27,
+        0.13,
+        0.525,
+        3,
+        0.18,
+        15
+      ],
+      [
+        0.3,
+        0.14,
+        0.6,
+        3,
+        0.2,
+        15
+      ]
+    ],
+    "statRef": [
+      "SpeedAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23054.png",
+    "preview": "image/light_cone_preview/23054.png",
+    "portrait": "image/light_cone_portrait/23054.png",
+    "imageOffset": [
+      0,
+      -30,
+      1
+    ]
   }
 }

@@ -233,5 +233,6 @@ const compositeAbilityObject = {
     "4": {}
   },
   "isLightcone": true,
-  "isRelic": true
+  "isRelic": true,
+  "noReader": false
 }
