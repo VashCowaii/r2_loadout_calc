@@ -6,6 +6,18 @@ function injectHTMLTemplateLoad(filePath,placeholderElemID) {
 injectHTMLTemplateLoad('/htmlTemplates/hsrDefaultEntityTemplate.html','enemyTemplateInjectable')
 
 
+{/*
+
+<script src="compositeAbilityObject.js"></script>
+
+<script src="/HonkaiSR/TheLibrary/EnemyConfigs/dMegaGlobalFunctionMap.js"></script>
+<script src="/HonkaiSR/TheLibrary/EnemyConfigs/dMegaGlobalModifierMap.js"></script>
+<script src="/HonkaiSR/TheLibrary/EnemyConfigs/dMegaMappingPathing.js"></script>
+<script src="/HonkaiSR/TheLibrary/painAndSuffering.js"></script>
+<script src="/HonkaiSR/TheLibrary/newTester.js"></script>
+
+<script src="/MainJS/buildTime.js"></script> */}
+
 const scriptsToLoad = [
     "/htmlTemplates/injectMainHTML.js",//<!-- sidenav and footer -->
     "/htmlTemplates/injectHSRHTML.js",//<!-- TFD Header -->
@@ -30,7 +42,7 @@ const scriptsToLoad = [
     "/HonkaiSR/TheLibrary/EnemyConfigs/dMegaMappingPathing.js",
 
     "/HonkaiSR/TheLibrary/painAndSuffering.js",
-    "/HonkaiSR/TheLibrary/EnemyConfigs/newTester.js",
+    "/HonkaiSR/TheLibrary/newTester.js",
 
     "/MainJS/buildTime.js",
     // "/HonkaiSR/TheLibrary/vashWarning.js",
