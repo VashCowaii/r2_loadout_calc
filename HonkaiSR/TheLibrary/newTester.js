@@ -1058,6 +1058,8 @@ const megaParsingFuckery = {
         const isLightcone = compositeAbilityObject.isLightcone;
         const isRelic = compositeAbilityObject.isRelic;
 
+        const hasNoReader = compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true;
+
         globalIsLightcone = isLightcone;
         globalIsRelic = isRelic;
 
@@ -1066,7 +1068,7 @@ const megaParsingFuckery = {
 
         // console.log(loadFile)
         
-        if (!configAbility || location.hash) {
+        if ((!configAbility || location.hash) && !hasNoReader) {
             let foundValidFile = false;
             
             if (location.hash) {
@@ -1127,20 +1129,20 @@ const megaParsingFuckery = {
 
         let initialCounter = 1;
         console.log(loadFile)
-        let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
-        let eventBodyStringOnAdd = megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
-        let eventBodyStringOnRemove = megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter);
-        let eventBodyStringOnAbort = megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
-        let eventBodyStringFunctions = megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter);
+        let eventBodyString = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
+        let eventBodyStringOnAdd = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
+        let eventBodyStringOnRemove = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter);
+        let eventBodyStringOnAbort = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
+        let eventBodyStringFunctions = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter);
         
 
-        let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
+        let referenceBodyString = configAbility?.references?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
         currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
 
         
 
-        let referenceGlobalString = configAbility.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
-        let referenceGlobalFunctionString = configAbility.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
+        let referenceGlobalString = configAbility?.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
+        let referenceGlobalFunctionString = configAbility?.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
         
         
 
@@ -1280,7 +1282,7 @@ const megaParsingFuckery = {
 
 
         let toughnessRowString = "";
-        if (configAbility.toughnessList) {
+        if (configAbility?.toughnessList && !hasNoReader) {
             const toughnessIndexConversion = {
                 0: "ST",
                 1: "AOE",
@@ -1409,6 +1411,7 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>
                 </summary>
                 ${eventBodyString}
+                ${hasNoReader ? `<div class="customMenuSearchNote">No events to read. Either this is a 4.0 entity and I can't get their eventreader data yet, or it's an error.<br><br>If you believe this to be an error, let me know in the discord.</div>` : ""}
             </details>
             ${eventBodyStringOnAdd ? `<details class="rotationsPermaConditionsExpand" open="">
                 <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">

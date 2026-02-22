@@ -4110,7 +4110,7 @@ const userTriggers = {
                 let charRef = lightcones[characterName];
                 readSelection("characterName").innerHTML = characterName;
 
-
+                // console.log(pathImagePaths[charRef.path],charRef.path,pathImagePaths)
                 readSelection("characterDisplayPathName").innerHTML = charRef.path;
                 readSelection("characterDisplayPathImage").src = pathImagePaths[charRef.path].small;
                 readSelection("characterStarRatingImage").src = `/HonkaiSR/icon/deco/Star${charRef.rarity}.png`;
