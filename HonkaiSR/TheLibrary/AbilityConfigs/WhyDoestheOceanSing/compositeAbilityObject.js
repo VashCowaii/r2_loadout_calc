@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Why Does the Ocean Sing",
   "trimCharacterName": "WhyDoestheOceanSing",

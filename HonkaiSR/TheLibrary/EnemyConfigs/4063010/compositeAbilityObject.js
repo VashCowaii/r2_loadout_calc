@@ -1,3 +1,4 @@
+const entityPageType = "enemy"
 const compositeAbilityObject = {
   "fullCharacterName": 4063010,
   "trimCharacterName": 4063010,

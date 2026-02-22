@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Ninja Record: Sound Hunt",
   "trimCharacterName": "NinjaRecordSoundHunt",

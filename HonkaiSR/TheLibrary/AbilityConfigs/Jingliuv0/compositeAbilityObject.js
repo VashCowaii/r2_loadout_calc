@@ -1,3 +1,4 @@
+const entityPageType = "char"
 const compositeAbilityObject = {
   "fullCharacterName": "Jingliu_v0",
   "trimCharacterName": "Jingliuv0",

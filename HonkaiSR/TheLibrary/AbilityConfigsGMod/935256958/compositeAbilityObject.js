@@ -1,3 +1,4 @@
+const entityPageType = "misc"
 const compositeAbilityObject = {
   "fullCharacterName": 935256958,
   "trimCharacterName": 935256958,

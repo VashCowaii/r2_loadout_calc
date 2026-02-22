@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Tengoku@Livestream",
   "trimCharacterName": "TengokuLivestream",

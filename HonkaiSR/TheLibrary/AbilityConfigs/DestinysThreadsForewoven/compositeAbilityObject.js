@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Destiny's Threads Forewoven",
   "trimCharacterName": "DestinysThreadsForewoven",

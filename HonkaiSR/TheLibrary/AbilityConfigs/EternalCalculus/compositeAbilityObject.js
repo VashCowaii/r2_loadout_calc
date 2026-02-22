@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Eternal Calculus",
   "trimCharacterName": "EternalCalculus",

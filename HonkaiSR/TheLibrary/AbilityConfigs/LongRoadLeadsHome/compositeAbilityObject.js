@@ -1,3 +1,4 @@
+const entityPageType = "lc"
 const compositeAbilityObject = {
   "fullCharacterName": "Long Road Leads Home",
   "trimCharacterName": "LongRoadLeadsHome",

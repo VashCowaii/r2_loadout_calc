@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Izumo Gensei and Takama Divine Realm",
   "trimCharacterName": "IzumoGenseiandTakamaDivineRealm",

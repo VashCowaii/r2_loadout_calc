@@ -6006,6 +6006,33 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Target is Unselectable Custom"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "living",
+            "source",
+            "invertCondition",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Target is Unselectable Custom");
+
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Target is Unselectable Custom:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""}${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}${parseRef.living ? "(Living)" : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.source,"Source",true)}
+        </div>
+        `;
+    },
     "Target is Unselectable"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",

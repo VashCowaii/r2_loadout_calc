@@ -1,3 +1,4 @@
+const entityPageType = "relic"
 const compositeAbilityObject = {
   "fullCharacterName": "Lushaka, the Sunken Seas",
   "trimCharacterName": "LushakatheSunkenSeas",
