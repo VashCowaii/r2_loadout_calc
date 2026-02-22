@@ -26,6 +26,7 @@ const scriptsToLoad = [
     "/HonkaiSR/TheLibrary/dCharacters.js",
     "/HonkaiSR/TheLibrary/dLightcones.js",
     "/HonkaiSR/TheLibrary/dRelicSets.js",
+    "/HonkaiSR/TheLibrary/dBattleEvents.js",
     "/HonkaiSR/TheLibrary/tester.js",
 
     "/HonkaiSR/Calculator/statListData.js",

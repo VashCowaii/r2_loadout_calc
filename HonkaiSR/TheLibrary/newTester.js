@@ -1168,7 +1168,10 @@ let globalIsRelic = false;
 let globalIsNoImage = false;
 let isVaryingAbilityPage = false;
 let firstPageLoad = false;
-const hasNoReader = compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true;
+
+const isBattleEvent = compositeAbilityObject.isBattleEvent;
+const hasNoReader = isBattleEvent || (compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true);
+const BEREF = battleEvents[compositeAbilityObject.fullCharacterName];
 
 const megaParsingFuckery = {
     pageLoad(loadFile) {
@@ -1182,10 +1185,11 @@ const megaParsingFuckery = {
 
         loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
         let configAbility = compositeAbilityObject.abilityObject[loadFile];
+        
 
         // console.log(loadFile)
         
-        if ((!configAbility || location.hash) && !hasNoReader) {
+        if ((!configAbility || location.hash) && !hasNoReader && !isBattleEvent) {
             let foundValidFile = false;
             
             if (location.hash) {
@@ -1276,9 +1280,9 @@ const megaParsingFuckery = {
         // desc: currentLCEntry.desc,
         // params: currentLCEntry.params,
         if (typeof compositeAbilityObject.fullCharacterName === "number") {isVaryingAbilityPage = true;}
-        const isGlobalNoImage = typeof compositeAbilityObject.fullCharacterName === "number"
+        const isGlobalNoImage = !isBattleEvent && (typeof compositeAbilityObject.fullCharacterName === "number"
         || compositeAbilityObject.fullCharacterName.toLowerCase().includes("global")
-        || compositeAbilityObject.fullCharacterName.toLowerCase().includes("enemyabilities");
+        || compositeAbilityObject.fullCharacterName.toLowerCase().includes("enemyabilities"));
 
         globalIsNoImage = isGlobalNoImage;
 
@@ -1286,6 +1290,8 @@ const megaParsingFuckery = {
         const characterRef = characters[compositeAbilityObject.fullCharacterName];
         const lightconeRef = lightcones[compositeAbilityObject.fullCharacterName];
         const relicSetRef = relicSets[compositeAbilityObject.fullCharacterName];
+        const battleEventRef = battleEvents[compositeAbilityObject.fullCharacterName];
+
         // console.log(compositeAbilityObject.fullCharacterName,characterRef,characters)
 
         const startingKeys = [
@@ -1300,7 +1306,7 @@ const megaParsingFuckery = {
 
         if (!isGlobalNoImage) {
             // console.log(readSelection("libraryCharacterHeaderPreview"))
-            readSelection("libraryCharacterHeaderPreview").src = `/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : characterRef.preview)}`;
+            readSelection("libraryCharacterHeaderPreview").src = `/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : (isBattleEvent ? `BEicons/${battleEventRef.icon}` : characterRef.preview))}`;
         }
 
 
@@ -1599,11 +1605,15 @@ megaParsingFuckery.pageLoad();
 
 
 userTriggers.updateCharacterUI();
-customHTML.establishZoomableTraces();
+
+if (!isBattleEvent) {
+    customHTML.establishZoomableTraces();
+}
+
 customHTML.establishMobileSideScrollerMenu();
 userTriggers.updateMainMenuDisplayed(1);
 
-if (hasNoReader && entityPageType === "char") {
+if ((hasNoReader && entityPageType === "char") || isBattleEvent) {
     userTriggers.updateMainMenuDisplayed(2);
 }
 
