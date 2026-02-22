@@ -4085,7 +4085,7 @@ const userTriggers = {
     },
     updateCharacterUI(statTableRef,currentSlot,silent) {
 
-        if (globalIsLightcone || globalIsRelic || globalIsNoImage) {
+        if (globalIsLightcone || globalIsRelic || globalIsNoImage || isBattleEvent) {
 
             // readSelection("mainBodyRowOrColumn").style.flexDirection = "row";
 
@@ -4139,12 +4139,31 @@ const userTriggers = {
                 readSelection("characterStarRatingImage").style.display = "none";
                 readSelection("libraryCharacterHeaderPreview").style.display = "none";
             }
+            else if (isBattleEvent) {
+                readSelection(`menuSwitcherBarTopBox`).style.display = "flex";
+
+                readSelection("mainBodyRowOrColumn").setAttribute("class", "mainBodyRowOrColumn");
+                const characterName = compositeAbilityObject.fullCharacterName;
+                readSelection("characterName").innerHTML = characterName;
+
+                readSelection("characterDisplayPathAndNameBoxRowHolder").innerHTML = `
+                    <div class="characterDisplayPathNameBoxExtra" id="characterDisplayPathName">${`${BEREF.team}` + " // " + `<span class="crossThroughTextFaded">${BEREF.type}</span>`}</div>
+                </div>`;
+
+                
+                readSelection("characterStarRatingImage").style.display = "none";
+
+                readSelection("mainMenuTypeButton3").style.display = "none";
+                readSelection("mainMenuTypeButton4").style.display = "none";
+
+                // readSelection("libraryCharacterHeaderPreview").style.width = "200px";
+                readSelection("libraryCharacterHeaderPreview").style.height = "100%";
+            }
 
 
 
             
-            
-            return;
+            if (!isBattleEvent) {return;}
         }
         else {
             readSelection("eventReaderControlsBox").style.width = "100%";
@@ -4241,331 +4260,411 @@ const userTriggers = {
 
 
 
-
-        readSelection("characterName").innerHTML = charRef.name;
-        readSelection("characterDisplayElement").src = elementImagePaths[charRef.element];
-        readSelection("characterDisplayPathName").innerHTML = charRef.path;
-        readSelection("characterDisplayPathImage").src = pathImagePaths[charRef.path].small;
-        readSelection("characterStarRatingImage").src = `/HonkaiSR/icon/deco/Star${charRef.rarity}.png`;
-
-
-
-        
-        readSelection("traceMainBoxHolder").innerHTML = customHTML.trees[charRef.path](charRef);
-        //trace tree construction handled in custom html, way too much to throw in here
-        //and YES I made these manually, it sucked
-        userTriggers.updateSelectedTraceDisplay(3);//default to ulty info selected when people open the trace menu or update anything related to the character
-        
-
-
-        const traceRef = charRef.traces;
-        const skillRef = charRef.skills;
+        // BEREF
+        // isBattleEvent
         let overviewString = ``;
-        // let rankCounter = 0;
-        for (let traceEntry in traceRef) {
-            const currentTraceRef = traceRef[traceEntry];
-            if (!currentTraceRef.desc && !currentTraceRef.skillRef) {continue}
-
-            const traceIcon = currentTraceRef.icon;
-            const currentTraceRefSkill = currentTraceRef.skillRef;
-            const skillSlot = currentTraceRefSkill?.skillSlot;
-
-
-            const skillLevel = userTriggers.levelFloors[skillSlot];
-
-            let entryString = "";
-
-
-
-            entryString += `
-            <div class="rotationsSectionRowHolder2Overview">
-            <div class="eidolonRowBoxHolder">
-                <div class="eidolonRowIconHolder">
-                    <img src="/HonkaiSR/${traceIcon}" class="eidolonRowIcon clickable"/>
-                </div>
-                
-                <div class="rightDescriptionBoxEidolons smallFont">
-                    <div class="eidolonRowName">
-                        ${skillSlot ? `<div class="eidolonRowNameSkillLevelSelection">
-                                            <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',-1)">◀</div>
-                                            <div class="traitLevelDisplay" id="skillSlotValue${skillSlot}">
-                                                ${skillLevelStore[skillSlot] ??= userTriggers.levelFloors[skillSlot]}
-                                            </div> 
-                                            <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',1)">▶</div>
-                                        </div>` : ""}
-                        ${skillSlot ?? currentTraceRef.name}
-                    </div>
-                    
-            `;
-            // ${entry.desc}
+        if (!isBattleEvent) {
+            readSelection("characterName").innerHTML = charRef.name;
+            readSelection("characterDisplayElement").src = elementImagePaths[charRef.element];
+            readSelection("characterDisplayPathName").innerHTML = charRef.path;
+            readSelection("characterDisplayPathImage").src = pathImagePaths[charRef.path].small;
+            readSelection("characterStarRatingImage").src = `/HonkaiSR/icon/deco/Star${charRef.rarity}.png`;
 
 
 
             
-
-
-            // "skillRef": {
-            //     "skillName": "I Choose You!",
-            //     "skillSlot": "Skill"
-            // }
-            if (currentTraceRefSkill) {
-                // const skillName = currentTraceRefSkill.skillName;
-                const skillSlot = currentTraceRefSkill.skillSlot;
-
-                const skillEntry = skillRef[skillSlot];
-
-                for (let innerSkill in skillEntry) {
-                    const currentInnerSkill = skillEntry[innerSkill];
-
-
-
-
-                    entryString += `
-                        <div class="rotationsSectionRowHolder1Overview">
-                            <div class="eidolonRowBoxHolder">
-                                
-                                    <div class="eidolonRowNameSkill">${innerSkill}</div>
-
-                            </div>
-
-                                
-
-                            `;
-
-
-
-                    for (let innerSkillVariant in currentInnerSkill) {
-                        const currentInnerSkillVariant = currentInnerSkill[innerSkillVariant];
-
-                        const paramsCheck = currentInnerSkillVariant?.params[skillLevelStore[skillSlot]];
-                        let paramsStringer = "";
-                        if (paramsCheck?.length) {
-
-                            let paramString = "";
-                            let paramCounter = 0;
-                            for (let paramEntry of paramsCheck) {
-                                // console.log(paramEntry)
-                                paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
-                                paramCounter++;
-                            }
-        
-                            paramsStringer += `
-                                <div class="actionDetailBody">
-                                    <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
-                                </div>
-                            `
-                        }
-
-                        let paramString2 = "";
-                        if (currentInnerSkillVariant.extraEffects && Object.keys(currentInnerSkillVariant.extraEffects).length) {
-
-                            // let paramString = "";
-                            let paramCounter = 0;
-                            for (let paramEntry in currentInnerSkillVariant.extraEffects) {
-                                const currentEffect = currentInnerSkillVariant.extraEffects[paramEntry];
+            readSelection("traceMainBoxHolder").innerHTML = customHTML.trees[charRef.path](charRef);
+            //trace tree construction handled in custom html, way too much to throw in here
+            //and YES I made these manually, it sucked
+            userTriggers.updateSelectedTraceDisplay(3);//default to ulty info selected when people open the trace menu or update anything related to the character
         
         
-                                paramString2 += `<div class="rotationsSectionRowHolder3Overview">
-                                    <div class="actionDetailBody">
-                                        <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
-                                    </div>
-                                    <div class="actionDetailBody">
-                                        <div class="actionDetailBody3Description">
-                                            ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
-                                        </div>
-                                    </div>
-                                </div>`;
-        
-                                // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
-                                // paramCounter++;
-                            }
-        
-                            // entryString += `
-                            //     <div class="actionDetailBody">
-                            //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
-                            //     </div>
-                            // `
-                            // entryString += paramString;
-                        } 
 
 
-                        let entryFileName = null;
-                        if (compositeAbilityObject?.abilityObject) {
-                            for (let abilityNameKey in compositeAbilityObject.abilityObject) {
-                                const currentAbilityTriggerCheck = compositeAbilityObject.abilityObject[abilityNameKey];
+            const traceRef = charRef.traces;
+            const skillRef = charRef.skills;
+            
+            // let rankCounter = 0;
+            for (let traceEntry in traceRef) {
+                const currentTraceRef = traceRef[traceEntry];
+                if (!currentTraceRef.desc && !currentTraceRef.skillRef) {continue}
 
-                                if (currentAbilityTriggerCheck.skillTrigger === currentInnerSkillVariant.trigger && currentAbilityTriggerCheck.childAbilityList?.length) {
-                                    entryFileName = currentAbilityTriggerCheck.fileName;
-                                    break;
-                                }
-                            }
-                        }
+                const traceIcon = currentTraceRef.icon;
+                const currentTraceRefSkill = currentTraceRef.skillRef;
+                const skillSlot = currentTraceRefSkill?.skillSlot;
+
+
+                const skillLevel = userTriggers.levelFloors[skillSlot];
+
+                let entryString = "";
+
+
+
+                entryString += `
+                <div class="rotationsSectionRowHolder2Overview">
+                <div class="eidolonRowBoxHolder">
+                    <div class="eidolonRowIconHolder">
+                        <img src="/HonkaiSR/${traceIcon}" class="eidolonRowIcon clickable"/>
+                    </div>
+                    
+                    <div class="rightDescriptionBoxEidolons smallFont">
+                        <div class="eidolonRowName">
+                            ${skillSlot ? `<div class="eidolonRowNameSkillLevelSelection">
+                                                <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',-1)">◀</div>
+                                                <div class="traitLevelDisplay" id="skillSlotValue${skillSlot}">
+                                                    ${skillLevelStore[skillSlot] ??= userTriggers.levelFloors[skillSlot]}
+                                                </div> 
+                                                <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',1)">▶</div>
+                                            </div>` : ""}
+                            ${skillSlot ?? currentTraceRef.name}
+                        </div>
                         
+                `;
+                // ${entry.desc}
+
+
+
+                
+
+
+                // "skillRef": {
+                //     "skillName": "I Choose You!",
+                //     "skillSlot": "Skill"
+                // }
+                if (currentTraceRefSkill) {
+                    // const skillName = currentTraceRefSkill.skillName;
+                    const skillSlot = currentTraceRefSkill.skillSlot;
+
+                    const skillEntry = skillRef[skillSlot];
+
+                    for (let innerSkill in skillEntry) {
+                        const currentInnerSkill = skillEntry[innerSkill];
+
+
+
+
                         entryString += `
-                            <div class="rotationsSectionRowHolder3Overview">
+                            <div class="rotationsSectionRowHolder1Overview">
                                 <div class="eidolonRowBoxHolder">
                                     
-                                    <div class="rightDescriptionBoxEidolons smallFont">
-                                        <div class="eidolonRowNameTrigger">${currentInnerSkillVariant.trigger}${currentInnerSkillVariant.type ? ` <span class="traceAttackTargetType">[${currentInnerSkillVariant.type}]</span>` : ""}</div>
-
-                                    </div>
-
-                                    
+                                        <div class="eidolonRowNameSkill">${innerSkill}</div>
 
                                 </div>
 
-                                <div class="overviewSkillDataBox">
                                     
-                                
-                                    ${(currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain) ? `<div class="traceToughnessBoxOverviewSkill">
-                                        <div class="traceToughnessTitleBox">Skill Points</div>
-                                        <div class="traceToughnessValueBox">${currentInnerSkillVariant.skillPointGain ? "+" : "-"}${currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain}</div>
-                                    </div>` : ""}
-                                    ${currentInnerSkillVariant.energyCost ? `<div class="traceToughnessBoxOverviewSkill">
-                                        <div class="traceToughnessTitleBox">Energy Cost</div>
-                                        <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyCost}</div>
-                                    </div>` : ""}
-                                    ${currentInnerSkillVariant.energyRegen ? `<div class="traceToughnessBoxOverviewSkill">
-                                        <div class="traceToughnessTitleBox">Energy</div>
-                                        <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyRegen}</div>
-                                    </div>` : ""}
 
-                                    ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
-                                        <div class="traceToughnessTitleBoxToughnessRow">
-                                            ${currentInnerSkillVariant.toughnessList[0].Value ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0].Value/3}</span>] ` : ""}
-                                            ${currentInnerSkillVariant.toughnessList[1].Value ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1].Value/3}</span>] ` : ""}
-                                            ${currentInnerSkillVariant.toughnessList[2].Value ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2].Value/3}</span>] ` : ""}
+                                `;
+
+
+
+                        for (let innerSkillVariant in currentInnerSkill) {
+                            const currentInnerSkillVariant = currentInnerSkill[innerSkillVariant];
+
+                            const paramsCheck = currentInnerSkillVariant?.params[skillLevelStore[skillSlot]];
+                            let paramsStringer = "";
+                            if (paramsCheck?.length) {
+
+                                let paramString = "";
+                                let paramCounter = 0;
+                                for (let paramEntry of paramsCheck) {
+                                    // console.log(paramEntry)
+                                    paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                                    paramCounter++;
+                                }
+            
+                                paramsStringer += `
+                                    <div class="actionDetailBody">
+                                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                                    </div>
+                                `
+                            }
+
+                            let paramString2 = "";
+                            if (currentInnerSkillVariant.extraEffects && Object.keys(currentInnerSkillVariant.extraEffects).length) {
+
+                                // let paramString = "";
+                                let paramCounter = 0;
+                                for (let paramEntry in currentInnerSkillVariant.extraEffects) {
+                                    const currentEffect = currentInnerSkillVariant.extraEffects[paramEntry];
+            
+            
+                                    paramString2 += `<div class="rotationsSectionRowHolder3Overview">
+                                        <div class="actionDetailBody">
+                                            <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
                                         </div>
-                                    </div>` : ""}
-                                    
-                                </div>
-                                
-                                ${entryFileName ? `<div class="actionDetailBody">
-                                    <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entryFileName}')">
-                                        Go to Entry Start&nbsp;
-                                        <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
-                                    </a>
-                                </div>` : ""}
-                                <div class="actionDetailBody">
-                                    <div class="actionDetailBody2Description">
-                                        ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkillVariant.desc)}
+                                        <div class="actionDetailBody">
+                                            <div class="actionDetailBody3Description">
+                                                ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                                            </div>
+                                        </div>
+                                    </div>`;
+            
+                                    // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                                    // paramCounter++;
+                                }
+            
+                                // entryString += `
+                                //     <div class="actionDetailBody">
+                                //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                                //     </div>
+                                // `
+                                // entryString += paramString;
+                            } 
+
+
+                            let entryFileName = null;
+                            if (compositeAbilityObject?.abilityObject) {
+                                for (let abilityNameKey in compositeAbilityObject.abilityObject) {
+                                    const currentAbilityTriggerCheck = compositeAbilityObject.abilityObject[abilityNameKey];
+
+                                    if (currentAbilityTriggerCheck.skillTrigger === currentInnerSkillVariant.trigger && currentAbilityTriggerCheck.childAbilityList?.length) {
+                                        entryFileName = currentAbilityTriggerCheck.fileName;
+                                        break;
+                                    }
+                                }
+                            }
+                            
+                            entryString += `
+                                <div class="rotationsSectionRowHolder3Overview">
+                                    <div class="eidolonRowBoxHolder">
+                                        
+                                        <div class="rightDescriptionBoxEidolons smallFont">
+                                            <div class="eidolonRowNameTrigger">${currentInnerSkillVariant.trigger}${currentInnerSkillVariant.type ? ` <span class="traceAttackTargetType">[${currentInnerSkillVariant.type}]</span>` : ""}</div>
+
+                                        </div>
+
+                                        
+
                                     </div>
-                                </div>
 
-                                
+                                    <div class="overviewSkillDataBox">
+                                        
+                                    
+                                        ${(currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain) ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Skill Points</div>
+                                            <div class="traceToughnessValueBox">${currentInnerSkillVariant.skillPointGain ? "+" : "-"}${currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain}</div>
+                                        </div>` : ""}
+                                        ${currentInnerSkillVariant.energyCost ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Energy Cost</div>
+                                            <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyCost}</div>
+                                        </div>` : ""}
+                                        ${currentInnerSkillVariant.energyRegen ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Energy</div>
+                                            <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyRegen}</div>
+                                        </div>` : ""}
+
+                                        ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
+                                            <div class="traceToughnessTitleBoxToughnessRow">
+                                                ${currentInnerSkillVariant.toughnessList[0].Value ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0].Value/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[1].Value ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1].Value/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[2].Value ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2].Value/3}</span>] ` : ""}
+                                            </div>
+                                        </div>` : ""}
+                                        
+                                    </div>
+                                    
+                                    ${entryFileName ? `<div class="actionDetailBody">
+                                        <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entryFileName}')">
+                                            Go to Entry Start&nbsp;
+                                            <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                                        </a>
+                                    </div>` : ""}
+                                    <div class="actionDetailBody">
+                                        <div class="actionDetailBody2Description">
+                                            ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkillVariant.desc)}
+                                        </div>
+                                    </div>
+
+                                    
 
 
 
-                                ${paramsStringer}
-                                ${paramString2}
-                                
-                            </div>`;
+                                    ${paramsStringer}
+                                    ${paramString2}
+                                    
+                                </div>`;
+                        }
+
+                        entryString += `
+
+                            </div>`
+
+                        // trigger
+
+
+                        // const paramsCheck = currentInnerSkill.variant1?.params[skillLevel];
+                        // let paramsStringer = "";
+                        // if (paramsCheck?.length) {
+
+                        //     let paramString = "";
+                        //     let paramCounter = 0;
+                        //     for (let paramEntry of paramsCheck) {
+                        //         // console.log(paramEntry)
+                        //         paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                        //         paramCounter++;
+                        //     }
+        
+                        //     paramsStringer += `<div class="rotationsSectionRowHolder2Overview">
+                        //         <div class="actionDetailBody">
+                        //             <div class="rotationConditionOperatorHeaderInline">Parameters: [${paramString}]</div>
+                        //         </div>
+                        //     </div>`
+                        // }
+
+
+                        // entryString += `
+                        //     <div class="rotationsSectionRowHolder1Overview">
+                        //         <div class="eidolonRowBoxHolder">
+                                    
+                        //             <div class="rightDescriptionBoxEidolons smallFont">
+                        //                 <div class="eidolonRowName">${innerSkill}</div>
+
+                        //             </div>
+
+                                    
+
+                        //         </div>
+
+                        //         <div class="actionDetailBody">
+                        //             <div class="actionDetailBody2Description">
+                        //                 ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkill.variant1.desc)}
+                        //             </div>
+                        //         </div>
+                        //         ${paramsStringer}
+                        //     </div>`;
                     }
 
-                    entryString += `
 
-                        </div>`
-
-                    // trigger
-
-
-                    // const paramsCheck = currentInnerSkill.variant1?.params[skillLevel];
-                    // let paramsStringer = "";
-                    // if (paramsCheck?.length) {
-
-                    //     let paramString = "";
-                    //     let paramCounter = 0;
-                    //     for (let paramEntry of paramsCheck) {
-                    //         // console.log(paramEntry)
-                    //         paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
-                    //         paramCounter++;
-                    //     }
-    
-                    //     paramsStringer += `<div class="rotationsSectionRowHolder2Overview">
-                    //         <div class="actionDetailBody">
-                    //             <div class="rotationConditionOperatorHeaderInline">Parameters: [${paramString}]</div>
+                    // entryString += `<div class="rotationsSectionRowHolder1Overview">
+                    //     <div class="actionDetailBody">
+                    //         <div class="rotationConditionOperatorHeaderInline">Description:</div>&nbsp;
+                    //         <div class="actionDetailBody2Description">
+                    //         ${pagePopulation.cleanDescription(currentTraceRef.params,currentTraceRef.desc)}
                     //         </div>
-                    //     </div>`
-                    // }
+                    //     </div>
+                    // </div>`
 
 
-                    // entryString += `
-                    //     <div class="rotationsSectionRowHolder1Overview">
-                    //         <div class="eidolonRowBoxHolder">
-                                
-                    //             <div class="rightDescriptionBoxEidolons smallFont">
-                    //                 <div class="eidolonRowName">${innerSkill}</div>
+                }
+                else {
 
-                    //             </div>
+                    // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
+                    entryString += `<div class="rotationsSectionRowHolder1Overview">
+                        <div class="actionDetailBody">
+                            <div class="actionDetailBody2Description">
+                                ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc)}
+                            </div>
+                        </div>
 
-                                
+                        ${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility ? `<div class="actionDetailBody">
+                            <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility}')">
+                                Go to Entry Start&nbsp;
+                                <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                            </a>
+                        </div>` : ""}
+                    `
 
-                    //         </div>
+                    if (currentTraceRef.params?.length) {
 
-                    //         <div class="actionDetailBody">
-                    //             <div class="actionDetailBody2Description">
-                    //                 ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkill.variant1.desc)}
-                    //             </div>
-                    //         </div>
-                    //         ${paramsStringer}
-                    //     </div>`;
+                        let paramString = "";
+                        let paramCounter = 0;
+                        for (let paramEntry of currentTraceRef.params) {
+                            paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                            paramCounter++;
+                        }
+
+                        entryString += `
+                            <div class="actionDetailBody">
+                                <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                            </div>
+                        `
+                    }
+
+                    if (currentTraceRef.extraEffects && Object.keys(currentTraceRef.extraEffects).length) {
+
+                        let paramString = "";
+                        let paramCounter = 0;
+                        for (let paramEntry in currentTraceRef.extraEffects) {
+                            const currentEffect = currentTraceRef.extraEffects[paramEntry];
+
+
+                            paramString += `<div class="rotationsSectionRowHolder3Overview">
+                                <div class="actionDetailBody">
+                                    <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
+                                </div>
+                                <div class="actionDetailBody">
+                                    <div class="actionDetailBody3Description">
+                                        ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                                    </div>
+                                </div>
+                            </div>`;
+
+                            // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                            // paramCounter++;
+                        }
+
+                        // entryString += `
+                        //     <div class="actionDetailBody">
+                        //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                        //     </div>
+                        // `
+                        entryString += paramString;
+                    } 
+
+                    entryString += `</div>`
                 }
 
 
-                // entryString += `<div class="rotationsSectionRowHolder1Overview">
-                //     <div class="actionDetailBody">
-                //         <div class="rotationConditionOperatorHeaderInline">Description:</div>&nbsp;
-                //         <div class="actionDetailBody2Description">
-                //         ${pagePopulation.cleanDescription(currentTraceRef.params,currentTraceRef.desc)}
-                //         </div>
-                //     </div>
-                // </div>`
 
+                entryString += `</div>
+                </div>
+                </div>`;
 
+                overviewString += entryString;
+                
             }
-            else {
 
-                // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
-                entryString += `<div class="rotationsSectionRowHolder1Overview">
-                    <div class="actionDetailBody">
-                        <div class="actionDetailBody2Description">
-                            ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc)}
-                        </div>
-                    </div>
 
-                    ${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility ? `<div class="actionDetailBody">
-                        <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility}')">
-                            Go to Entry Start&nbsp;
-                            <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
-                        </a>
-                    </div>` : ""}
-                `
 
-                if (currentTraceRef.params?.length) {
+
+
+            let eidoRef = charRef.eidolons;
+            let eidoString = ``;
+            let rankCounter = 0;
+            for (let entry of eidoRef) {
+                rankCounter++;
+
+                let paramsStringer = "";
+                const paramsCheck = entry.paramsEido
+                if (paramsCheck?.length) {
 
                     let paramString = "";
                     let paramCounter = 0;
-                    for (let paramEntry of currentTraceRef.params) {
-                        paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                    for (let paramEntry of paramsCheck) {
+                        // console.log(paramEntry)
+                        paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
                         paramCounter++;
                     }
 
-                    entryString += `
+                    paramsStringer += `
                         <div class="actionDetailBody">
                             <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
                         </div>
                     `
                 }
 
-                if (currentTraceRef.extraEffects && Object.keys(currentTraceRef.extraEffects).length) {
 
-                    let paramString = "";
+
+                let paramString2 = "";
+                if (entry.extraEffects && Object.keys(entry.extraEffects).length) {
+
+                    // let paramString = "";
                     let paramCounter = 0;
-                    for (let paramEntry in currentTraceRef.extraEffects) {
-                        const currentEffect = currentTraceRef.extraEffects[paramEntry];
+                    for (let paramEntry in entry.extraEffects) {
+                        const currentEffect = entry.extraEffects[paramEntry];
 
 
-                        paramString += `<div class="rotationsSectionRowHolder3Overview">
+                        paramString2 += `<div class="rotationsSectionRowHolder3Overview">
                             <div class="actionDetailBody">
                                 <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
                             </div>
@@ -4585,162 +4684,475 @@ const userTriggers = {
                     //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
                     //     </div>
                     // `
-                    entryString += paramString;
+                    // entryString += paramString;
                 } 
 
-                entryString += `</div>`
+
+                // // onclick="userTriggers.updateEidolonRank(${rankCounter})"
+                // eidoString += `
+                // <div class="eidolonRowBoxHolder" style="opacity: .9">
+                //     <div class="eidolonRowIconHolder">
+                //         <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
+                //     </div>
+                    
+                //     <div class="rightDescriptionBoxEidolons smallFont">
+                //         <div class="eidolonRowName">${entry.name}</div>
+                //         ${entry.desc}
+                //         ${paramsStringer}
+                //     </div>
+                    
+                // </div>
+                // `;
+
+
+                eidoString += `
+                <div class="rotationsSectionRowHolder2Overview">
+                <div class="eidolonRowBoxHolder">
+                    <div class="eidolonRowIconHolder">
+                        <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
+                    </div>
+                    
+                    <div class="rightDescriptionBoxEidolons smallFont">
+                        <div class="eidolonRowName">
+                            E${rankCounter}: ${entry.name}
+                        </div>
+                        
+                `;
+                // ${entry.desc}
+
+
+
+
+                // "skillRef": {
+                //     "skillName": "I Choose You!",
+                //     "skillSlot": "Skill"
+                // }
+
+                // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
+                eidoString += `<div class="rotationsSectionRowHolder1Overview">
+                    
+                    <div class="actionDetailBody">
+                        <div class="actionDetailBody2Description">
+                            ${pagePopulation.cleanDescription(entry.params ?? [],entry.desc)}
+                        </div>
+                    </div>
+                    ${entry.eidoAbility ?? entry.traceAbility ? `<div class="actionDetailBody">
+                        <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entry.eidoAbility ?? entry.traceAbility}')">
+                            Go to Entry Start&nbsp;
+                            <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                        </a>
+                    </div>` : ""}
+                `
+
+
+                eidoString += paramsStringer + paramString2 + `</div>`
+
+
+
+                eidoString += `</div>
+                </div>
+                </div>`;
+                
             }
-
-
-
-            entryString += `</div>
-            </div>
-            </div>`;
-
-            overviewString += entryString;
-            
+            overviewString += eidoString; 
         }
+        else {
+            const skillList = BEREF.skills;
+
+            let initialString = "";
 
 
-
-
-
-        let eidoRef = charRef.eidolons;
-        let eidoString = ``;
-        let rankCounter = 0;
-        for (let entry of eidoRef) {
-            rankCounter++;
-
-            let paramsStringer = "";
-            const paramsCheck = entry.paramsEido
-            if (paramsCheck?.length) {
+            const paramsCheck2 = BEREF.params;
+            let paramsStringer2 = "";
+            if (paramsCheck2?.length) {
 
                 let paramString = "";
                 let paramCounter = 0;
-                for (let paramEntry of paramsCheck) {
+                for (let paramEntry of paramsCheck2) {
                     // console.log(paramEntry)
-                    paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                    paramString += `${paramEntry}${paramCounter != paramsCheck2.length-1 ? ", " : ""}`;
                     paramCounter++;
                 }
 
-                paramsStringer += `
+                paramsStringer2 += `
                     <div class="actionDetailBody">
                         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
                     </div>
                 `
             }
 
+            initialString += `
+                            <div class="rotationsSectionRowHolder1Overview">
+                                <div class="eidolonRowBoxHolder">
+                                    
+                                        <div class="eidolonRowNameSkill">Action Bar Data</div>
+
+                                </div>
+
+                                <div class="actionDetailBody">
+                                    <div class="actionDetailBody2Description">
+                                        ${pagePopulation.cleanDescription(paramsCheck2 ?? [],BEREF.actionBarDesc ?? "") || "No action bar description"}
+                                    </div>
+                                </div>
+                                ${paramsStringer2}
+
+                            </div>`;
+
+            overviewString += initialString;
+
+                    // actionBarDesc,params
+
+            // skills
+            for (let traceEntry in skillList) {
+                console.log(traceEntry)
+                const currentTraceRef = skillList[traceEntry];
+                // if (!currentTraceRef.desc && !currentTraceRef.skillRef) {continue}
+
+                const traceIcon = null;
+                const currentTraceRefSkill = currentTraceRef.skillRef;
+                const skillSlot = traceEntry;
 
 
-            let paramString2 = "";
-            if (entry.extraEffects && Object.keys(entry.extraEffects).length) {
+                const skillLevel = 1;
 
-                // let paramString = "";
-                let paramCounter = 0;
-                for (let paramEntry in entry.extraEffects) {
-                    const currentEffect = entry.extraEffects[paramEntry];
+                let entryString = "";
 
 
-                    paramString2 += `<div class="rotationsSectionRowHolder3Overview">
-                        <div class="actionDetailBody">
-                            <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
-                        </div>
-                        <div class="actionDetailBody">
-                            <div class="actionDetailBody3Description">
-                                ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
-                            </div>
-                        </div>
-                    </div>`;
+                // <img src="/HonkaiSR/${traceIcon}" class="eidolonRowIcon clickable"/>
 
-                    // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
-                    // paramCounter++;
-                }
-
-                // entryString += `
-                //     <div class="actionDetailBody">
-                //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
-                //     </div>
-                // `
-                // entryString += paramString;
-            } 
-
-
-            // // onclick="userTriggers.updateEidolonRank(${rankCounter})"
-            // eidoString += `
-            // <div class="eidolonRowBoxHolder" style="opacity: .9">
-            //     <div class="eidolonRowIconHolder">
-            //         <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
-            //     </div>
-                
-            //     <div class="rightDescriptionBoxEidolons smallFont">
-            //         <div class="eidolonRowName">${entry.name}</div>
-            //         ${entry.desc}
-            //         ${paramsStringer}
-            //     </div>
-                
-            // </div>
-            // `;
-
-
-            eidoString += `
-            <div class="rotationsSectionRowHolder2Overview">
-            <div class="eidolonRowBoxHolder">
-                <div class="eidolonRowIconHolder">
-                    <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
-                </div>
-                
-                <div class="rightDescriptionBoxEidolons smallFont">
-                    <div class="eidolonRowName">
-                        E${rankCounter}: ${entry.name}
+                // ${skillSlot ? `<div class="eidolonRowNameSkillLevelSelection">
+                //     <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',-1)">◀</div>
+                //     <div class="traitLevelDisplay" id="skillSlotValue${skillSlot}">
+                //         ${skillLevelStore[skillSlot] ??= userTriggers.levelFloors[skillSlot]}
+                //     </div> 
+                //     <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',1)">▶</div>
+                // </div>` : ""}
+                entryString += `
+                <div class="rotationsSectionRowHolder2Overview">
+                <div class="eidolonRowBoxHolder">
+                    <div class="eidolonRowIconHolder">
+                        
                     </div>
                     
-            `;
-            // ${entry.desc}
+                    <div class="rightDescriptionBoxEidolons smallFont">
+                        <div class="eidolonRowName">
+                            
+                            ${skillSlot ?? currentTraceRef.name}
+                        </div>
+                        
+                `;
+                // ${entry.desc}
 
 
 
-
-            // "skillRef": {
-            //     "skillName": "I Choose You!",
-            //     "skillSlot": "Skill"
-            // }
-
-            // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
-            eidoString += `<div class="rotationsSectionRowHolder1Overview">
                 
-                <div class="actionDetailBody">
-                    <div class="actionDetailBody2Description">
-                        ${pagePopulation.cleanDescription(entry.params ?? [],entry.desc)}
-                    </div>
-                </div>
-                ${entry.eidoAbility ?? entry.traceAbility ? `<div class="actionDetailBody">
-                    <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entry.eidoAbility ?? entry.traceAbility}')">
-                        Go to Entry Start&nbsp;
-                        <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
-                    </a>
-                </div>` : ""}
-            `
 
 
-            eidoString += paramsStringer + paramString2 + `</div>`
+                // "skillRef": {
+                //     "skillName": "I Choose You!",
+                //     "skillSlot": "Skill"
+                // }
+                if (true) {
+                    // const skillName = currentTraceRefSkill.skillName;
+                    const skillSlot = traceEntry;
+
+                    const skillEntry = currentTraceRef;
+
+                    for (let innerSkill in skillEntry) {
+                        const currentInnerSkill = skillEntry[innerSkill];
 
 
 
-            eidoString += `</div>
-            </div>
-            </div>`;
+
+                        entryString += `
+                            <div class="rotationsSectionRowHolder1Overview">
+                                <div class="eidolonRowBoxHolder">
+                                    
+                                        <div class="eidolonRowNameSkill">${innerSkill}</div>
+
+                                </div>
+
+                                    
+
+                                `;
+
+
+
+                        for (let innerSkillVariant in currentInnerSkill) {
+                            const currentInnerSkillVariant = currentInnerSkill[innerSkillVariant];
+
+                            const paramsCheck = currentInnerSkillVariant?.params[1];
+                            let paramsStringer = "";
+                            if (paramsCheck?.length) {
+
+                                let paramString = "";
+                                let paramCounter = 0;
+                                for (let paramEntry of paramsCheck) {
+                                    // console.log(paramEntry)
+                                    paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                                    paramCounter++;
+                                }
             
-        }
-        overviewString += eidoString; 
+                                paramsStringer += `
+                                    <div class="actionDetailBody">
+                                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                                    </div>
+                                `
+                            }
+
+                            let paramString2 = "";
+                            if (currentInnerSkillVariant.extraEffects && Object.keys(currentInnerSkillVariant.extraEffects).length) {
+
+                                // let paramString = "";
+                                let paramCounter = 0;
+                                for (let paramEntry in currentInnerSkillVariant.extraEffects) {
+                                    const currentEffect = currentInnerSkillVariant.extraEffects[paramEntry];
+            
+            
+                                    paramString2 += `<div class="rotationsSectionRowHolder3Overview">
+                                        <div class="actionDetailBody">
+                                            <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
+                                        </div>
+                                        <div class="actionDetailBody">
+                                            <div class="actionDetailBody3Description">
+                                                ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                                            </div>
+                                        </div>
+                                    </div>`;
+            
+                                    // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                                    // paramCounter++;
+                                }
+            
+                                // entryString += `
+                                //     <div class="actionDetailBody">
+                                //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                                //     </div>
+                                // `
+                                // entryString += paramString;
+                            } 
+
+
+                            let entryFileName = null;
+                            if (compositeAbilityObject?.abilityObject) {
+                                for (let abilityNameKey in compositeAbilityObject.abilityObject) {
+                                    const currentAbilityTriggerCheck = compositeAbilityObject.abilityObject[abilityNameKey];
+
+                                    if (currentAbilityTriggerCheck.skillTrigger === currentInnerSkillVariant.trigger && currentAbilityTriggerCheck.childAbilityList?.length) {
+                                        entryFileName = currentAbilityTriggerCheck.fileName;
+                                        break;
+                                    }
+                                }
+                            }
+                            
+                            entryString += `
+                                <div class="rotationsSectionRowHolder3Overview">
+                                    <div class="eidolonRowBoxHolder">
+                                        
+                                        <div class="rightDescriptionBoxEidolons smallFont">
+                                            <div class="eidolonRowNameTrigger">${currentInnerSkillVariant.trigger}${currentInnerSkillVariant.type ? ` <span class="traceAttackTargetType">[${currentInnerSkillVariant.type}]</span>` : ""}</div>
+
+                                        </div>
+
+                                        
+
+                                    </div>
+
+                                    <div class="overviewSkillDataBox">
+                                        
+                                    
+                                        ${(currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain) ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Skill Points</div>
+                                            <div class="traceToughnessValueBox">${currentInnerSkillVariant.skillPointGain ? "+" : "-"}${currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain}</div>
+                                        </div>` : ""}
+                                        ${currentInnerSkillVariant.energyCost ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Energy Cost</div>
+                                            <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyCost}</div>
+                                        </div>` : ""}
+                                        ${currentInnerSkillVariant.energyRegen ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Energy</div>
+                                            <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyRegen}</div>
+                                        </div>` : ""}
+
+                                        ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
+                                            <div class="traceToughnessTitleBoxToughnessRow">
+                                                ${currentInnerSkillVariant.toughnessList[0].Value ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0].Value/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[1].Value ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1].Value/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[2].Value ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2].Value/3}</span>] ` : ""}
+                                            </div>
+                                        </div>` : ""}
+                                        
+                                    </div>
+                                    
+                                    ${entryFileName ? `<div class="actionDetailBody">
+                                        <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entryFileName}')">
+                                            Go to Entry Start&nbsp;
+                                            <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                                        </a>
+                                    </div>` : ""}
+                                    <div class="actionDetailBody">
+                                        <div class="actionDetailBody2Description">
+                                            ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkillVariant.desc)}
+                                        </div>
+                                    </div>
+
+                                    
 
 
 
+                                    ${paramsStringer}
+                                    ${paramString2}
+                                    
+                                </div>`;
+                        }
+
+                        entryString += `
+
+                            </div>`
+
+                        // trigger
 
 
+                        // const paramsCheck = currentInnerSkill.variant1?.params[skillLevel];
+                        // let paramsStringer = "";
+                        // if (paramsCheck?.length) {
 
-
-
+                        //     let paramString = "";
+                        //     let paramCounter = 0;
+                        //     for (let paramEntry of paramsCheck) {
+                        //         // console.log(paramEntry)
+                        //         paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                        //         paramCounter++;
+                        //     }
         
+                        //     paramsStringer += `<div class="rotationsSectionRowHolder2Overview">
+                        //         <div class="actionDetailBody">
+                        //             <div class="rotationConditionOperatorHeaderInline">Parameters: [${paramString}]</div>
+                        //         </div>
+                        //     </div>`
+                        // }
+
+
+                        // entryString += `
+                        //     <div class="rotationsSectionRowHolder1Overview">
+                        //         <div class="eidolonRowBoxHolder">
+                                    
+                        //             <div class="rightDescriptionBoxEidolons smallFont">
+                        //                 <div class="eidolonRowName">${innerSkill}</div>
+
+                        //             </div>
+
+                                    
+
+                        //         </div>
+
+                        //         <div class="actionDetailBody">
+                        //             <div class="actionDetailBody2Description">
+                        //                 ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkill.variant1.desc)}
+                        //             </div>
+                        //         </div>
+                        //         ${paramsStringer}
+                        //     </div>`;
+                    }
+
+
+                    // entryString += `<div class="rotationsSectionRowHolder1Overview">
+                    //     <div class="actionDetailBody">
+                    //         <div class="rotationConditionOperatorHeaderInline">Description:</div>&nbsp;
+                    //         <div class="actionDetailBody2Description">
+                    //         ${pagePopulation.cleanDescription(currentTraceRef.params,currentTraceRef.desc)}
+                    //         </div>
+                    //     </div>
+                    // </div>`
+
+
+                }
+                else {
+
+                    // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
+                    entryString += `<div class="rotationsSectionRowHolder1Overview">
+                        <div class="actionDetailBody">
+                            <div class="actionDetailBody2Description">
+                                ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc ?? "")}
+                            </div>
+                        </div>
+
+                        ${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility ? `<div class="actionDetailBody">
+                            <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility}')">
+                                Go to Entry Start&nbsp;
+                                <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                            </a>
+                        </div>` : ""}
+                    `
+
+                    if (currentTraceRef.params?.length) {
+
+                        let paramString = "";
+                        let paramCounter = 0;
+                        for (let paramEntry of currentTraceRef.params) {
+                            paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                            paramCounter++;
+                        }
+
+                        entryString += `
+                            <div class="actionDetailBody">
+                                <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                            </div>
+                        `
+                    }
+
+                    if (currentTraceRef.extraEffects && Object.keys(currentTraceRef.extraEffects).length) {
+
+                        let paramString = "";
+                        let paramCounter = 0;
+                        for (let paramEntry in currentTraceRef.extraEffects) {
+                            const currentEffect = currentTraceRef.extraEffects[paramEntry];
+
+
+                            paramString += `<div class="rotationsSectionRowHolder3Overview">
+                                <div class="actionDetailBody">
+                                    <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
+                                </div>
+                                <div class="actionDetailBody">
+                                    <div class="actionDetailBody3Description">
+                                        ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                                    </div>
+                                </div>
+                            </div>`;
+
+                            // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                            // paramCounter++;
+                        }
+
+                        // entryString += `
+                        //     <div class="actionDetailBody">
+                        //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                        //     </div>
+                        // `
+                        entryString += paramString;
+                    } 
+
+                    entryString += `</div>`
+                }
+
+
+
+                entryString += `</div>
+                </div>
+                </div>`;
+
+                overviewString += entryString;
+                
+            }
+        }
+
+
+
+
+
+
+
+        // console.log(overviewString)
         readSelection("overviewMainBoxHolder").innerHTML = overviewString;
 
         // readSelection("eidolonsMainBoxHolder").innerHTML
@@ -4748,25 +5160,28 @@ const userTriggers = {
         statBox.innerHTML = "";
         // const menuBoxDisplayOrder = Object.keys(charRef.baseStats);
 
+        if (!isBattleEvent) {
+            charRef.baseStats.EnergyMax = charRef.energyMax;
 
-        charRef.baseStats.EnergyMax = charRef.energyMax;
+            const menuBoxDisplayOrder = [];
+            let destinationArray = [];
+            const convertedDisplayObject = {};
 
-        const menuBoxDisplayOrder = [];
-        let destinationArray = [];
-        const convertedDisplayObject = {};
+            // console.log(menuBoxDisplayOrder)
+        
+            for (let statNameEntry in charRef.baseStats) {
+                menuBoxDisplayOrder.push(greatTableIndex[statNameEntry]);
+                // destinationArray.push(charRef.baseStats[statNameEntry]);
+                convertedDisplayObject[greatTableIndex[statNameEntry]] = charRef.baseStats[statNameEntry]
 
-        // console.log(menuBoxDisplayOrder)
-        for (let statNameEntry in charRef.baseStats) {
-            menuBoxDisplayOrder.push(greatTableIndex[statNameEntry]);
-            // destinationArray.push(charRef.baseStats[statNameEntry]);
-            convertedDisplayObject[greatTableIndex[statNameEntry]] = charRef.baseStats[statNameEntry]
+            }
+            
+            // console.log(menuBoxDisplayOrder)
 
+
+            // ["HPFinal","ATKFinal","DEFFinal","SPDFinal","CritRateFinal","CritDamageFinal"];
+            statBox.innerHTML = customHTML.createAlternatingStatRowsFullNames(menuBoxDisplayOrder,convertedDisplayObject);
         }
-        // console.log(menuBoxDisplayOrder)
-
-
-        // ["HPFinal","ATKFinal","DEFFinal","SPDFinal","CritRateFinal","CritDamageFinal"];
-        statBox.innerHTML = customHTML.createAlternatingStatRowsFullNames(menuBoxDisplayOrder,convertedDisplayObject);
 
 
     },

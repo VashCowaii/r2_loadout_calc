@@ -3677,10 +3677,14 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Battle Event ID");
 
+        let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
+            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.eventID}</a>
+        </div>`;
+
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)} ${parseRef.invertCondition ? "NOT" : ""}= ${parseRef.ID}
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)} ${parseRef.invertCondition ? "NOT" : ""}= ${battleEventLinker}
         </div>`;
     },
     "Trace Activated"(parseRef,initialCounter) {
@@ -5357,13 +5361,14 @@ const megaParsingFuckeryPain = {
             "variables",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Change Battle Event Owner");
+        
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.eventName}
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.eventName,"Battle Event",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.assignOwner,"Owner Assign",true)}
 
             ${parseRef.variables != undefined ? `<div class="actionDetailBody2">
@@ -6666,11 +6671,16 @@ const megaParsingFuckeryPain = {
 
         // if (!hasParse && !hasRef) {return "";}
 
+
+        let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
+            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
+        </div>`;
+
         return `
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                 <div class="rotationConditionOperatorHeaderCondition">Add Battle Event:</div>
-                ${parseRef.eventID} to ${parseRef.teamName}
+                ${battleEventLinker} to ${parseRef.teamName}
             </summary>
 
             <div class="modifierDetailsBox">
@@ -6981,10 +6991,14 @@ const megaParsingFuckeryPain = {
         //         </div>`
         //     }
         // }
+
+        let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
+            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
+        </div>`;
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Preload Battle Event(s):</div>&nbsp;
-            ${parseRef.eventID}
+            ${battleEventLinker}
         </div>
         `;
     },
@@ -12136,9 +12150,13 @@ const megaParsingFuckeryPain = {
             }
         }
 
+        let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
+            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.ID}</a>
+        </div>`;
+
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
-            ${parseRef.ID} ${parseRef.eventType ? `(${parseRef.eventType})` : ""}
+            ${battleEventLinker} ${parseRef.eventType ? `(${parseRef.eventType})` : ""}
         </div>
 
             ${parseRef.actionDescription ? `<div class="actionDetailBody2">
