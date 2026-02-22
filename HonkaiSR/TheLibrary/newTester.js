@@ -1051,6 +1051,7 @@ let globalIsRelic = false;
 let globalIsNoImage = false;
 let isVaryingAbilityPage = false;
 let firstPageLoad = false;
+const hasNoReader = compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true;
 
 const megaParsingFuckery = {
     pageLoad(loadFile) {
@@ -1058,7 +1059,6 @@ const megaParsingFuckery = {
         const isLightcone = compositeAbilityObject.isLightcone;
         const isRelic = compositeAbilityObject.isRelic;
 
-        const hasNoReader = compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true;
 
         globalIsLightcone = isLightcone;
         globalIsRelic = isRelic;
@@ -1214,7 +1214,7 @@ const megaParsingFuckery = {
 
         let rowAlternating = 1;
         startingString += `<div class="${globalIsLightcone || globalIsRelic ? "energyAndToughnessRowHolderItems" : "energyAndToughnessRowHolder"}">`;
-        if (!isLightcone) {
+        if (!isLightcone && !hasNoReader) {
 
 
             const propertyDisplayTemplates = {
@@ -1485,6 +1485,10 @@ userTriggers.updateCharacterUI();
 customHTML.establishZoomableTraces();
 customHTML.establishMobileSideScrollerMenu();
 userTriggers.updateMainMenuDisplayed(1);
+
+if (hasNoReader && entityPageType === "char") {
+    userTriggers.updateMainMenuDisplayed(2);
+}
 
 // const value = decodeURIComponent(window.location.hash.slice(1));
 

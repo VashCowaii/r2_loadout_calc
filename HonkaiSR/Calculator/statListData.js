@@ -362,6 +362,11 @@ const pathImagePaths = {
         "medium": initialPathPath + "HarmonyMiddle.png",
         "small": initialPathPath + "HarmonySmall.png",
     },
+    "Elation": {
+        "big": initialPathPath + "Joy.png",
+        "medium": initialPathPath + "JoyMiddle.png",
+        "small": initialPathPath + "JoySmall.png",
+    },
 }
 
 const initialPropertyPath = "/HonkaiSR/icon/property/";

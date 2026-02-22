@@ -28,7 +28,7 @@ const scriptsToLoad = [
     "/HonkaiSR/TheLibrary/dRelicSets.js",
     "/HonkaiSR/TheLibrary/tester.js",
 
-    "/HonkaiSR/TheLibrary/statList.js",
+    "/HonkaiSR/Calculator/statListData.js",
 
     "/HonkaiSR/Calculator/tooltipStorage.js",
     "/HonkaiSR/Calculator/tooltipMath.js",
