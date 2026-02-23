@@ -24,6 +24,47 @@
                         <li>Fixed the basic attack having a hardcoded scalar override from when I was testing him, I just forgot to remove it that's my bad</li>
                     </ul>
                 </li>
+                <li>Trailblazer - Remembrance:
+                    <ul>
+                        <li>Fixed the ultimate having a hardcoded scalar override from when I was testing him.</li>
+                    </ul>
+                </li>
+                <li>Huohuo:
+                    <ul>
+                        <li>Fixed the skill heal not properly counting as targeting allies if the allies were blast heal targets(for the sake of Wavestrider and things like it)</li>
+                    </ul>
+                </li>
+                <li>Bronya:
+                    <ul>
+                        <li>Fixed E1 technically popping the skill point regen every other turn instead of every 2. In theory, a best case scenario would allow every other turn but since it's a 50% chance we will avg it by forcing it to be 2.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+
+        <li>Reviewed code on the following relics and made the following changes and/or fixes:
+            <ul>
+                <li>Wavestrider Captain:
+                    <ul>
+                        <li>In the same vein as Huohuo's blast fix, fixed the set not properly factoring blast ally targeting for the sake of gaining Help stacks.</li>
+                    </ul>
+                </li>
+                <li>The Wind-Soaring Valorous:
+                    <ul>
+                        <li>Fixed an error where it was only stacking post-dmg, instead of at the start of dmg being dealt.</li>
+                    </ul>
+                </li>
+                <li>Hunter of Glacial Forest:
+                    <ul>
+                        <li>Fixed an error where it was only stacking post-ulty, instead of at the start.</li>
+                    </ul>
+                </li>
+                <li>Champion of Streetwise Boxing:
+                    <ul>
+                        <li>Fixed an error where when gaining stacks from an attack caused by the user, it would trigger stack gain at the start of an attack instead of at the end.</li>
+                    </ul>
+                </li>
             </ul>
         </li>
 

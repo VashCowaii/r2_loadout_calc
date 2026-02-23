@@ -6242,7 +6242,7 @@ const turnLogic = {
                     }
                 }
                 let buffSheet = ATKObjects.enemyBesottedSHEET;
-                buffSheet.duration = (e4 ? 3 : 2) + (targetTurn.turnState ? 1 : 0),//TODO: see if debuffs applied to the enemy on their turn, also gain 1 extra turn from the perspective of EndTurn expirations
+                buffSheet.duration = (e4 ? 3 : 2) + (targetTurn.turnState ? 1 : 0),
                 battleActions.updateBuff(battleData,targetTurn,buffSheet);
             },
             statCheck(battleData,currentTurn) {
@@ -6608,7 +6608,8 @@ const turnLogic = {
                 targetTurn = targetTurn ?? sourceTurn;
                 //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
                 
-                //TODO: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider
+                //Q: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider?
+                //YES on wavestrider, even subtargets count, NO on sacerdos, only single targets count unless sunday bc reasons
                 if (!ATKObjects.huohuoSkillHealHealHEALOBJECT) {
                     let values = ATKObjects.huohuoSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     ATKObjects.huohuoSkillHealHealHEALOBJECT = {
@@ -6634,7 +6635,8 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                poke("TargetAlly",battleData,{targetType:"Blast", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
 
                 // let targetTurn = battleData.nameBasedTurns[target];
                 let healObject = ATKObjects.huohuoSkillHealHealHEALOBJECT;
@@ -7046,7 +7048,6 @@ const turnLogic = {
     "Silver Wolf": {
         logic(thisTurn,battleData) {
             // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
             // let characterName = "Silver Wolf";
             // let logicShort = turnLogic[characterName]
             // let statCalls = shortRef.characterValuesBattle;
@@ -7231,7 +7232,10 @@ const turnLogic = {
 
                 //NOTE: normally I'd bother with the whole, "if it is the enemy's turn right now, add one more duration to the timer"
                 //but this will only ever be applied on SW's turn, so it's never gonna happen
-                //TODO: this may not actually be true when implant shifts from enemy to enemy via death swapping, check later if the duration renews and also if it does does it also modify the duration based on turnstate
+
+
+                //Q: this may not actually be true when implant shifts from enemy to enemy via death swapping, check later if the duration renews and also if it does does it also modify the duration based on turnstate
+                //YES, it does refresh, it also maintains the res reduction, and it will modify duration based on turnstate.
                 let buffSheet2 = ATKObjects.silverwolfSkillALLRESSHEET;
                 updateBuff(battleData,targetEnemy,buffSheet2);
 
@@ -8596,10 +8600,10 @@ const turnLogic = {
                         quickRef.e1SPRegenReady = false;
                         battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Bronya E1 SP Regen"});
                     }
-                    else {quickRef.e1SPRegenReady = true;}
+                    else if (!quickRef.e1SPRegenReady) {quickRef.e1SPRegenReady = 2;}
+                    else if (Ref.e1SPRegenReady === 2) {quickRef.e1SPRegenReady = true;}
                     //just a basic on/off switch. If the sp regen is ready, then we regen and turn it off
                     //if the next turn comes up and it's off, then we turn it on so we can regen on the next turn
-                    //TODO: need to look and see later if the 1turn cooldown means it'd technically be after every 2 turns though
                 }
 
                 if (targetTurn.properName != characterName) {battleActions.actionAdvance(1,targetTurn,battleData,"Bronya Skill");}//prevent self advancement
@@ -9554,7 +9558,6 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
-                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:sourceTurn, targetTurn, targetSkill:skillRef.slot});
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
                     // const dmgSlot = generalInfo.dmgSlot;
                     // if (dmgSlot != "Skill" && dmgSlot != "Talent") {return;}
@@ -12052,7 +12055,6 @@ const turnLogic = {
                     let healObject = ATKObjects.rmcSkillMemHEALOBJECT;
                     const memTurn = sourceTurn.rmcMemTURNEVENT;
                     battleActions.healAlly(battleData,healObject,memTurn,sourceTurn,skillRef.slot,1);
-                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:healTarget, targetSkill:skillRef.slot});
 
                     poke("rmcMemGainedCharge",battleData,{pointsGained: values[1],sourceString:"RMC Skill"});
                 }
@@ -12436,7 +12438,7 @@ const turnLogic = {
                         multipliers: {
                             primary: null,
                             blast: null,
-                            all: 2.25,//values[0],  //TODO: remove later, was just lining up trace values
+                            all: values[0],
                         },
                         scalar,
                         DMGTags: tags,
@@ -12744,7 +12746,6 @@ const turnLogic = {
                     if (energyAmount <= 0) {return;}//we only care about positive energy gains
                     //this does count energy gained from ANY source including enemy attacks
                     //however it does NOT ever factor overflow energy.
-                    //TODO: make sure that saber overflow energy regen post ult can factor for this, bc it should.
 
                     const conversion = energyAmount/1000;
                     poke("rmcMemGainedCharge",battleData,{pointsGained: conversion,sourceString:"Ally Gained Energy"});
@@ -12985,7 +12986,6 @@ const turnLogic = {
     "Dan Heng • Permansor Terrae": {
         logic(thisTurn,battleData) {
             // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
             // const shortRef = this;
             // const battleValues = shortRef.characterValuesBattle;
             // let actionUsed = false;

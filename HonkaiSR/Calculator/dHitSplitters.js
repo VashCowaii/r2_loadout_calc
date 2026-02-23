@@ -275,45 +275,45 @@ const hitSplitters = {
     "Tribbie": {//done
         "basic": [
             {
-              "primary": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "blast": {
-                "hitRatio": 1,
-                "toughness": 5
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "blast": {
+                    "hitRatio": 1,
+                    "toughness": 5
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
             }
         ],
         "ult": [
             {
-              "all": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 20
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
             }
         ],
         "passive": [
             {
-              "all": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 5
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 5
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
             }
         ],
     },

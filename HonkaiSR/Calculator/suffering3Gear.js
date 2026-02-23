@@ -720,7 +720,8 @@ const turnLogicLightcones = {
 
                         if (DEFCheck) {targetsFound += 1;}
                     }
-                    //TODO: check if this is per target reduced or is it an attack-wide "if any one had reduced def, regen once" kinda bullshit
+
+                    
                     if (targetsFound) {
                         if (!sourceTurn.tutorialMissionLCEnergyValues) {
                             let lcNameRef = "Before the Tutorial Mission Starts";
@@ -728,7 +729,7 @@ const turnLogicLightcones = {
                             sourceTurn.tutorialMissionLCEnergyValues = lcPathing[ownerRank-1];
                         }
 
-                        // const energyToRegen = sourceTurn.tutorialMissionLCEnergyValues[1] * targetsFound;
+                        //only ONE regen happens, no matter how many def reduced targets there were
                         const energyToRegen = sourceTurn.tutorialMissionLCEnergyValues[1];
                         battleActions.updateEnergy(battleData,energyToRegen,sourceTurn,false,"Before the Tutorial Mission Starts");
                     }
@@ -861,7 +862,6 @@ const turnLogicLightcones = {
                             realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                         }
                     }
-                    // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                     const dotSheet = sourceTurn.patienceIsAllErodeDOTSHEET;
                     const buffName = dotSheet.buffName;
                     dotSheet.AVApplied = battleData.sumAV;
@@ -1897,7 +1897,6 @@ const turnLogicLightcones = {
                     buffSheet.duration = targetTurn.turnState ? 4 : 3;
 
                     battleActions.updateEnergy(battleData,values[0],sourceTurn,false,"A Grounded Ascent - Ally targeted");
-                    //TODO: check that this is actually modified by energy regen
 
 
                     sourceTurn.groundedAscentTargetStacks ??= 0;
@@ -1906,7 +1905,7 @@ const turnLogicLightcones = {
                         sourceTurn.groundedAscentTargetStacks = 0;
                         battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"A Grounded Ascent - Departing Anew"});
                         //for now assume that either or on skill/ulty will stack this
-                        //TODO: verify it actually works that way
+                        //it DOES actually work that way, thankfully
                     }
 
 
@@ -1920,7 +1919,6 @@ const turnLogicLightcones = {
                     const updateBuff = battleActions.updateBuff;
                     // if (!memoTurn && ownerFinished) {return;}
 
-                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildren: true});
                     const targetChildEntities = generalInfo.targetChildEntities;
                     if (targetChildEntities && !memoTurn) {
                         if (ownerFinished) {return;}
@@ -3600,13 +3598,28 @@ const turnLogicRelics = {
                         let targetTurn = generalInfo.targetTurn;
                         //TODO: probably a better way to handle this, later
 
-                        if (targetTurn) {
+                        // targetTurn
+
+                        if (targetTurn && generalInfo.targetType === "Single") {
                             let ownerRank = ownersSlots[targetTurn.name];//setAmount
                             if (!ownerRank) {return;}//if we are targeting one ally, and the ally doesn't own the 4pc set, then abort
                             let relicNameRef = "Wavestrider Captain";
                             let pcRef = "4pc";
                             let giveHelp = this.giveHelp ??= turnLogicRelics[relicNameRef][pcRef].skillFunctions.giveHelp;
                             giveHelp(battleData,targetTurn);
+                        }
+                        else if (generalInfo.targetType === "Blast") {
+                            const positionArray = battleData.allyPositions;
+                            const indexer = positionArray.indexOf(targetTurn);
+
+                            let fullBlastArray = [targetTurn];
+
+                            if (positionArray[indexer-1]) {fullBlastArray.push(positionArray[indexer-1])}
+                            if (positionArray[indexer+1]) {fullBlastArray.push(positionArray[indexer+1])}
+
+                            for (let ownerSlot of fullBlastArray) {
+                                giveHelp(battleData,ownerSlot);
+                            }
                         }
                         else {
                             let relicNameRef = "Wavestrider Captain";
@@ -3811,7 +3824,7 @@ const turnLogicRelics = {
                         if (!ownerRank) {return;}
 
                         //poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:currentTurn, targetTurn:targetTurn, targetSkill:skillRef.slot});
-                        let wasTeamTarget = generalInfo.targetType === "Single" || generalInfo.targetType === "Team";
+                        let wasTeamTarget = generalInfo.targetType === "Single" || generalInfo.targetType === "Team" || generalInfo.targetType === "Blast";
                         let isNotEligibleSkill = generalInfo.targetSkill != "Ultimate";
                         if (!wasTeamTarget || isNotEligibleSkill) {return;}
                         //skip non ultimate, non ally targeting skills
@@ -3905,7 +3918,7 @@ const turnLogicRelics = {
             },
             "listeners": [
                 {
-                    "trigger": "AttackStart",
+                    "trigger": "AttackEnd",
                     condition(battleData,generalInfo) {
                         // let ownerRef = this.owners;
                         let ownersSlots = this.ownersSlots;
@@ -3916,7 +3929,6 @@ const turnLogicRelics = {
 
                         const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
                         streetwise(battleData,sourceTurn);
-                        //TODO: need to see where it applies, before or after the attack
                     },
                     "target": "self",
                     "listenerName": "Streetwise attack launched check",
@@ -3973,7 +3985,6 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: check later if it applies on skill use or after it's done, rn I'm assuming it's as it starts
 
                         if (!sourceTurn.sizzlingThunderATKSHEET) {
                             let relicNameRef = "Band of Sizzling Thunder";
@@ -4125,8 +4136,9 @@ const turnLogicRelics = {
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownerRank = ownersSlots[sourceTurn.name]
                         if (!ownerRank || !sourceTurn.firesmithNextAttackBuffed) {return;}//abort non-owners, or owners that aren't set up for the buff yet
-                        //TODO: really need to confirm if this can count the ulty itself as an attack to consume the buff or not, or whether it applies to the ulty AND an attack after idk
-                        //rn the assumption is the ult does NOT count, and the next attack consumes the buff
+
+                        //does NOT apply to the ulty that triggers the buff, and the next attack would consume the bonus
+                        //how we have it is correct
                         if (!sourceTurn.firesmithNextAttackFIRESHEET) {
                             let relicNameRef = "Firesmith of Lava-Forging";
                             let pcRef = "4pc";
@@ -4187,13 +4199,12 @@ const turnLogicRelics = {
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "UltimateEnd",
+                    "trigger": "UltimateStart",
                     condition(battleData,generalInfo) {
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: check later if this applies to the ultimate that casts it, or if it just applies afterwards
 
                         if (!sourceTurn.glacialForestCRITDMGSHEET) {
                             let relicNameRef = "Hunter of Glacial Forest";
@@ -4325,7 +4336,6 @@ const turnLogicRelics = {
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
 
-                        //poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:currentTurn, targetTurn:targetTurn, targetSkill:skillRef.slot});
                         const skillType = generalInfo.targetSkill;
                         if (skillType != "Ultimate") {return;}//needs to be from an ulty, who it targets is irrelevant bc if TargetAlly event is called it did target at least one
 
@@ -4435,11 +4445,6 @@ const turnLogicRelics = {
                                 if (memoRef) {updateBuff(battleData,currentTurn[memoRef],buffSheet2);}
                             }
                         }
-                        //TODO: NEED TO WORK OUT MEMOSPRITE BUFF HANDLING LATER, GOD THAT IS GONNA SUCK I ALREADY KNOW
-                        //on this one might be able to get away with cloning the buff from the memo's summoner
-                        //but that's probably a shit idea processing-wise, would be better to create the memo
-                        //regardless of their uptime and apply it there
-                        //then work out something to manage memo uptime for buffs that care about it(should not be hard to do)
                     },
                     "target": "self",
                     "listenerName": "Poet of Mourning Collapse SPDCheck",
@@ -4667,13 +4672,12 @@ const turnLogicRelics = {
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "FUAEnd",
+                    "trigger": "FUAStart",
                     condition(battleData,generalInfo) {
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: random but might need to look into if it applies on FUA start instead of end, maybe some FUA's get tagged as ultimate dmg is why I say that
 
                         if (!sourceTurn.windSoaringValorousULTDMGSHEET) {
                             let relicNameRef = "The Wind-Soaring Valorous";
@@ -4786,8 +4790,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        //p sure there are a few places I could and probably should do that with
+
                         const statCheck = this.statCheck ??= turnLogicRelics["Iron Cavalry Against the Scourge"]["4pc"].skillFunctions.statCheck;
                         statCheck(battleData,sourceTurn);
                     },
@@ -5967,8 +5970,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        //p sure there are a few places I could and probably should do that with
+
                         const statCheck = this.statCheck ??= turnLogicRelics["Belobog of the Architects"]["2pc"].skillFunctions.statCheck;
                         statCheck(battleData,sourceTurn);
                     },
@@ -6047,8 +6049,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        //p sure there are a few places I could and probably should do that with
+
                         const statCheck = this.statCheck ??= turnLogicRelics["Talia: Kingdom of Banditry"]["2pc"].skillFunctions.statCheck;
                         statCheck(battleData,sourceTurn);
                     },
@@ -6127,8 +6128,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        //p sure there are a few places I could and probably should do that with
+
                         const statCheck = this.statCheck ??= turnLogicRelics["Space Sealing Station"]["2pc"].skillFunctions.statCheck;
                         statCheck(battleData,sourceTurn);
                     },
@@ -6357,7 +6357,7 @@ const turnLogicRelics = {
                     const memoRef = currentTurn.memospriteEventRef;
 
                     const HP = calcs.getHPFinal(currentTurn.statTable).HPFinal;
-                    //TODO: need to get memohandling later
+
                     const updateBuff = battleActions.updateBuff;
                     if (HP >= 5000) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
@@ -6379,8 +6379,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        //p sure there are a few places I could and probably should do that with
+
                         const statCheck = this.statCheck ??= turnLogicRelics["Bone Collection's Serene Demesne"]["2pc"].skillFunctions.statCheck;
                         statCheck(battleData,sourceTurn);
                     },
@@ -6446,7 +6445,7 @@ const turnLogicRelics = {
                     let currentEHR = currentTurn.statTable[EffectHitRate];
                     let conversion = Math.min(0.25,currentEHR * 0.25);//atk converted by 25% of EHR, up to a max of 25%
                     //also if this is anything like tingyun's benediction(and it is like that), then this amount is not null ATK, can be used in conversions
-                    //TODO: confirm that later, cause rn I'm assuming
+                    //confirmed this is not converted attack
 
 
                     if (buffCheck) {
@@ -6472,8 +6471,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        //p sure there are a few places I could and probably should do that with
+
                         const statCheck = this.statCheck ??= turnLogicRelics["Pan-Cosmic Commercial Enterprise"]["2pc"].skillFunctions.statCheck;
                         statCheck(battleData,sourceTurn);
                     },
@@ -6537,7 +6535,6 @@ const turnLogicRelics = {
                         const namedTurns = battleData.nameBasedTurns;
                         const updateBuff = battleActions.updateBuff;
                         const menuStats = battleData.menuStats;
-                        //TODO: make sure this actually operates on menu stats, cause right now that is the assumption that it works like poet
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             let menuStat = menuStats[ally];
@@ -6586,8 +6583,6 @@ const turnLogicRelics = {
                             //we don't want to evaluate every single attack end in the battle cause that'd be shit, so we kill the listener once all owners are marked completed
                             battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
                         }
-                        // //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        // //p sure there are a few places I could and probably should do that with
                         // turnLogicRelics["Celestial Differentiator"]["2pc"].skillFunctions.statCheck(battleData,sourceTurn);
                     },
                     "target": "self",
@@ -6629,7 +6624,6 @@ const turnLogicRelics = {
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank || sourceTurn.duranDynastyStacksFinished) {return;}//if we've already finished an owner's stacking, skip
 
-                        //TODO: right now I'm assuming FUA start for stack gains, but need to check if it's on end instead
                         if (!sourceTurn.duranDynastyMERITSHEET) {
                             let relicNameRef = "Duran, Dynasty of Running Wolves";
                             let pcRef = "2pc";
@@ -6853,8 +6847,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
-                        //TODO: maybe move the entire function call into a this.shit if it gets too costly later
-                        //p sure there are a few places I could and probably should do that with
+
                         const statCheck = this.statCheck ??= turnLogicRelics["Firmament Frontline: Glamoth"]["2pc"].skillFunctions.statCheck;
                         statCheck(battleData,sourceTurn);
                     },
@@ -6938,7 +6931,7 @@ const turnLogicRelics = {
                     const memoRef = currentTurn.memospriteEventRef;
                     const SPDFinal = calcs.getSPDFinal(currentTurn.statTable).SPDFinal;
                     const updateBuff = battleActions.updateBuff;
-                    //TODO: need memo handling later
+
                     if (SPDFinal >= 180) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
                             updateBuff(battleData,currentTurn,buffSheet2);
