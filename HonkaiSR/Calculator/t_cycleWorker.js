@@ -4,6 +4,7 @@ importScripts(
     '/HonkaiSR/Calculator/dRelics.js',
     '/HonkaiSR/Calculator/dRelicSets.js',
     '/HonkaiSR/Calculator/statList.js',
+    '/HonkaiSR/Calculator/statListData.js',
     "/HonkaiSR/Calculator/formulas.js",
     "/HonkaiSR/Calculator/suffering4Analytics.js",
     "/HonkaiSR/Calculator/suffering3Gear.js",
