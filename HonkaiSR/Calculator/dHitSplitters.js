@@ -485,6 +485,62 @@ const hitSplitters = {
                 "isAttackLastHit": true
             }
         ],
+        "eba2": [
+            {
+                "all": {
+                    "hitRatio": 0.5,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
+            },
+            {
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 0,
+                    "toughness": 0
+                },
+            },
+            {
+                "all": {
+                    "hitRatio": 0.5,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
+            }
+        ],
+        "eba3": [
+            {
+                "all": {
+                    "hitRatio": 0.5,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
+            },
+            {
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 0,
+                    "toughness": 0
+                },
+                "scalarOverride": null
+            },
+            {
+                "all": {
+                    "hitRatio": 0.5,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
+            }
+        ],
+        
         "skill": [
             {
                 "primary": {

@@ -1994,7 +1994,14 @@ const battleActions = {
         let atkEntryRef = atkEntry[hitType];
         let currentSplit = atkEntryRef.hitRatio;//the hit split of the current attack
         let currentMulti = (customMulti ? customMulti(statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
+        
+
+        let scalarOverride = atkEntry.scalarOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
+        if (scalarOverride) {currentMulti = scalarOverride;}
+
         let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar);//the stat that this attacks scales off of, so ATK or HP etc
+
+        
         // console.log(multiOf)
         // bonusScalar: {
         //     primary: values[4],
@@ -2230,7 +2237,8 @@ const battleActions = {
             };
             
             const hitData = {
-                scalar,bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
+                scalar,
+                bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
                 currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
 
@@ -11222,13 +11230,16 @@ const turnLogic = {
                 sourceTurn.ultyQueued = false;
             },
             saberBasicEnhanced(battleData,target,sourceTurn) {
-                const logicRef = turnLogic[sourceTurn.properName];
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
                 let skillRef = ATKObjects.saberBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Release, the Golden Scepter"].variant1;
                 let values = ATKObjects.saberBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.saberBasicEnhancedATKOBJECT) {
-                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    skillRef.hitSplits = hitSplitters[characterName].eba;
+                    hitSplitters[characterName].eba3[1].scalarOverride = values[3];//this assigns the multi to the enemies===1 extra dmg, that takes place between hit1 and hit2
+
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -11259,27 +11270,36 @@ const turnLogic = {
 
                 const enemyPositions = battleData.enemyPositions;
                 if (enemyPositions.length <= 2) {
-                    let insert = 0;
-                    if (enemyPositions.length === 1) {insert = values[3];}
-                    else {insert = values[2];}
-
-                    ATKObject.bounceData = {
-                        multi: insert,
-                        bounceCount: 1,
-                        hitSplit: {
-                            "primary": null,
-                            "blast": null,
-                            "all": {
-                                "hitRatio": 1,
-                                "energyRatio": 1,
-                                "toughness": 20
-                            },
-                            "allEnemiesHit": null,
-                            "unknownTypers": false
-                        },
+                    // let insert = 0;
+                    if (enemyPositions.length === 1) {
+                        // insert = values[3];
+                        skillRef.hitSplits = hitSplitters[characterName].eba3;
                     }
+                    else {
+                        // insert = values[2];
+                        skillRef.hitSplits = hitSplitters[characterName].eba2;
+                    }
+
+                    // ATKObject.bounceData = {
+                    //     multi: insert,
+                    //     bounceCount: 1,
+                    //     hitSplit: {
+                    //         "primary": null,
+                    //         "blast": null,
+                    //         "all": {
+                    //             "hitRatio": 1,
+                    //             "energyRatio": 0,
+                    //             "toughness": 0
+                    //         },
+                    //         "allEnemiesHit": null,
+                    //         "unknownTypers": false
+                    //     },
+                    // }
                 }
-                else {ATKObject.bounceData = null;}
+                else {
+                    // ATKObject.bounceData = null;
+                    skillRef.hitSplits = hitSplitters[characterName].eba;
+                }
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
                 poke("BasicATKStart",battleData,{sourceTurn});
