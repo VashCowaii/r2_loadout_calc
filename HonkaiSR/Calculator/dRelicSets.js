@@ -749,7 +749,7 @@ let relicSets = {
     "setID": 127,
     "desc": [
       "Increases CRIT Rate by 8%.",
-      "After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' dealt DMG by 15%, lasting until after the wearer's next use of Basic ATK or Skill."
+      "After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' DMG dealt by 15%, lasting until after the wearer's next use of Basic ATK or Skill."
     ],
     "icon": "icon/relic/127.png",
     "fixedStats": {
@@ -791,6 +791,67 @@ let relicSets = {
       [
         0.12,
         0.15
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Ever-Glorious Magical Girl": {
+    "name": "Ever-Glorious Magical Girl",
+    "setID": 129,
+    "desc": [
+      "Increases CRIT DMG by 16%.",
+      "The Elation DMG dealt by the wearer and their memosprites ignores 10% of targets' DEF. For every 5 accumulated Punchline allies gain, the Elation DMG dealt additionally ignores 1% of targets' DEF, stacking up to 10 time(s)."
+    ],
+    "icon": "icon/relic/129.png",
+    "fixedStats": {
+      "2": {
+        "CritDamageBase": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16
+      ],
+      [
+        0.1,
+        5,
+        0.01,
+        10
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Diviner of Distant Reach": {
+    "name": "Diviner of Distant Reach",
+    "setID": 130,
+    "desc": [
+      "Increases SPD by 6%.",
+      "Before entering combat, if the wearer's SPD is greater than or equal to 120/160, increases the wearer's CRIT Rate by 10%/18%. When the wearer uses Elation Skill for the first time in each battle, increases all allies' Elation by 10%. This effect cannot stack."
+    ],
+    "icon": "icon/relic/130.png",
+    "fixedStats": {
+      "2": {
+        "SPD%": 0.06
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.06
+      ],
+      [
+        120,
+        160,
+        0.1,
+        0.18,
+        0.1
       ]
     ],
     "extraProperties": {
