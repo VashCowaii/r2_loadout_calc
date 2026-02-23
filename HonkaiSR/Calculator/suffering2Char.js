@@ -13025,7 +13025,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.dhptBasicATKOBJECT = {
                         multipliers: {
-                            primary: values[0] * 0.6,//TODO: remove trace level adjustment later
+                            primary: values[0],
                             blast: null,
                             all: null,
                         },

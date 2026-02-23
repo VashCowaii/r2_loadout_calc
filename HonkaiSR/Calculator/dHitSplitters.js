@@ -260,15 +260,15 @@ const hitSplitters = {
     "Sunday": {//done
         "basic": [
             {
-              "primary": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
             }
         ],
     },
@@ -320,60 +320,60 @@ const hitSplitters = {
     "Dan Heng • Permansor Terrae": {//done
         "basic": [
             {
-              "primary": {
-                "hitRatio": 0.3,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true
+                "primary": {
+                    "hitRatio": 0.3,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
             },
             {
-              "primary": {
-                "hitRatio": 0.7,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
+                "primary": {
+                    "hitRatio": 0.7,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
             }
         ],
         "ult": [
             {
-              "all": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 20
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
             },
         ],
         "passive": [
             {
                 "all": {
-                "hitRatio": 0.25,
-                "toughness": 20
+                    "hitRatio": 0.25,
+                    "toughness": 20
                 },
                 "isSourceFirstHit": true,
                 "isAttackFirstHit": true
             },
             {
                 "all": {
-                "hitRatio": 0.25,
-                "toughness": 20
+                    "hitRatio": 0.25,
+                    "toughness": 20
                 }
             },
             {
                 "all": {
-                "hitRatio": 0.25,
-                "toughness": 20
+                    "hitRatio": 0.25,
+                    "toughness": 20
                 }
             },
             {
                 "all": {
-                "hitRatio": 0.25,
-                "toughness": 20
+                    "hitRatio": 0.25,
+                    "toughness": 20
                 }
             },
         ],
@@ -465,7 +465,7 @@ const hitSplitters = {
                 "isAttackLastHit": true
             }
         ],
-        "eba": [
+        "eba": [//>2 enemies
             {
                 "all": {
                     "hitRatio": 0.5,
@@ -485,7 +485,7 @@ const hitSplitters = {
                 "isAttackLastHit": true
             }
         ],
-        "eba2": [
+        "eba2": [//===2 enemies
             {
                 "all": {
                     "hitRatio": 0.5,
@@ -512,7 +512,7 @@ const hitSplitters = {
                 "isAttackLastHit": true
             }
         ],
-        "eba3": [
+        "eba3": [//===1 enemy
             {
                 "all": {
                     "hitRatio": 0.5,
@@ -540,7 +540,6 @@ const hitSplitters = {
                 "isAttackLastHit": true
             }
         ],
-        
         "skill": [
             {
                 "primary": {
