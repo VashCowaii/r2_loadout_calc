@@ -12551,7 +12551,7 @@ const turnLogic = {
                         "HP%": rmcMenuStats["HP%"],
                         "LVL": 80,
 
-                        "AggroBase": characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+                        "CharacterAggroBase": characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
                     });
 
 
