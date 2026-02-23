@@ -1,10 +1,13 @@
 importScripts(
     '/HonkaiSR/Calculator/dCharacters.js',
+    '/HonkaiSR/Calculator/dHitSplitters.js',
     '/HonkaiSR/Calculator/dLightcones.js',
     '/HonkaiSR/Calculator/dRelics.js',
     '/HonkaiSR/Calculator/dRelicSets.js',
     '/HonkaiSR/Calculator/statList.js',
+    '/HonkaiSR/Calculator/statListData.js',
     "/HonkaiSR/Calculator/formulas.js",
+    "/HonkaiSR/Calculator/dDataList.js",
     "/HonkaiSR/Calculator/suffering4Analytics.js",
     "/HonkaiSR/Calculator/suffering3Gear.js",
     "/HonkaiSR/Calculator/suffering2Char.js",

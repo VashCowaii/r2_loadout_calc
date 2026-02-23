@@ -1994,7 +1994,14 @@ const battleActions = {
         let atkEntryRef = atkEntry[hitType];
         let currentSplit = atkEntryRef.hitRatio;//the hit split of the current attack
         let currentMulti = (customMulti ? customMulti(statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
+        
+
+        let scalarOverride = atkEntry.scalarOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
+        if (scalarOverride) {currentMulti = scalarOverride;}
+
         let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar);//the stat that this attacks scales off of, so ATK or HP etc
+
+        
         // console.log(multiOf)
         // bonusScalar: {
         //     primary: values[4],
@@ -2230,7 +2237,8 @@ const battleActions = {
             };
             
             const hitData = {
-                scalar,bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
+                scalar,
+                bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
                 currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
 
@@ -5945,6 +5953,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.gallagherBasicREF ??= ATKObjects["Basic ATK"]["Corkage Fee"].variant1;
                 if (!ATKObjects.gallagherBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
@@ -6090,6 +6099,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.gallagherBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Nectar Blitz"].variant1;
 
                 if (!ATKObjects.gallagherBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
                     let values = ATKObjects.gallagherBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
@@ -6156,6 +6166,7 @@ const turnLogic = {
                 let rank = sourceTurn.rank;
 
                 if (!ATKObjects.gallagherUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Fire"];
@@ -6231,7 +6242,7 @@ const turnLogic = {
                     }
                 }
                 let buffSheet = ATKObjects.enemyBesottedSHEET;
-                buffSheet.duration = (e4 ? 3 : 2) + (targetTurn.turnState ? 1 : 0),//TODO: see if debuffs applied to the enemy on their turn, also gain 1 extra turn from the perspective of EndTurn expirations
+                buffSheet.duration = (e4 ? 3 : 2) + (targetTurn.turnState ? 1 : 0),
                 battleActions.updateBuff(battleData,targetTurn,buffSheet);
             },
             statCheck(battleData,currentTurn) {
@@ -6288,6 +6299,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.gallagherTechREF ??= ATKObjects.Technique["Artisan Elixir"].variant1;
 
                 if (!ATKObjects.gallagherTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.gallagherTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
@@ -6551,6 +6563,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.huohuoBasicREF ??= ATKObjects["Basic ATK"]["Banner: Stormcaller"].variant1;
                 if (!ATKObjects.huohuoBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
@@ -6595,7 +6608,8 @@ const turnLogic = {
                 targetTurn = targetTurn ?? sourceTurn;
                 //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
                 
-                //TODO: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider
+                //Q: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider?
+                //YES on wavestrider, even subtargets count, NO on sacerdos, only single targets count unless sunday bc reasons
                 if (!ATKObjects.huohuoSkillHealHealHEALOBJECT) {
                     let values = ATKObjects.huohuoSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     ATKObjects.huohuoSkillHealHealHEALOBJECT = {
@@ -6621,7 +6635,8 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                poke("TargetAlly",battleData,{targetType:"Blast", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
 
                 // let targetTurn = battleData.nameBasedTurns[target];
                 let healObject = ATKObjects.huohuoSkillHealHealHEALOBJECT;
@@ -7033,7 +7048,6 @@ const turnLogic = {
     "Silver Wolf": {
         logic(thisTurn,battleData) {
             // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
             // let characterName = "Silver Wolf";
             // let logicShort = turnLogic[characterName]
             // let statCalls = shortRef.characterValuesBattle;
@@ -7079,6 +7093,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.swBasicREF ??= ATKObjects["Basic ATK"]["System Warning"].variant1;
 
                 if (!ATKObjects.swBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.swBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
@@ -7124,6 +7139,7 @@ const turnLogic = {
                 let values = ATKObjects.silverwolfSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.silverwolfSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     const scalar = "ATK";
                     const tags = ["All","Skill","Quantum"];
                     const actionTags = ["Skill","Attack"];
@@ -7216,7 +7232,10 @@ const turnLogic = {
 
                 //NOTE: normally I'd bother with the whole, "if it is the enemy's turn right now, add one more duration to the timer"
                 //but this will only ever be applied on SW's turn, so it's never gonna happen
-                //TODO: this may not actually be true when implant shifts from enemy to enemy via death swapping, check later if the duration renews and also if it does does it also modify the duration based on turnstate
+
+
+                //Q: this may not actually be true when implant shifts from enemy to enemy via death swapping, check later if the duration renews and also if it does does it also modify the duration based on turnstate
+                //YES, it does refresh, it also maintains the res reduction, and it will modify duration based on turnstate.
                 let buffSheet2 = ATKObjects.silverwolfSkillALLRESSHEET;
                 updateBuff(battleData,targetEnemy,buffSheet2);
 
@@ -7232,6 +7251,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.silverwolfUltimateREF ??= ATKObjects.Ultimate["User Banned"].variant1;
 
                 if (!ATKObjects.silverwolfUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.silverwolfUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Quantum"];
@@ -7418,6 +7438,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.swTechREF ??= ATKObjects.Technique["Force Quit Program"].variant1;
 
                 if (!ATKObjects.swTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.swTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Quantum"];
@@ -7844,6 +7865,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.tingyunBasicREF ??= ATKObjects["Basic ATK"]["Dislodged"].variant1;
 
                 if (!ATKObjects.tingyunBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     // let characterName = sourceTurn.properName;
                     let values = ATKObjects.tingyunBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
@@ -8427,6 +8449,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.bronyaBasicREF ??= ATKObjects["Basic ATK"]["Windrider Bullet"].variant1;
 
                 if (!ATKObjects.bronyaBasic) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.bronyaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
@@ -8476,6 +8499,7 @@ const turnLogic = {
                 //it JUST deals 80% of whatever multiplier your currently leveled basic attack does
                 //which is why we need the current level on the basic attack, then multi by .8
                 if (!ATKObjects.bronyaFUABasic) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
                     let skillRef2 = ATKObjects["Basic ATK"]["Windrider Bullet"].variant1;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
                     const scalar = "ATK";
@@ -8576,10 +8600,10 @@ const turnLogic = {
                         quickRef.e1SPRegenReady = false;
                         battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Bronya E1 SP Regen"});
                     }
-                    else {quickRef.e1SPRegenReady = true;}
+                    else if (!quickRef.e1SPRegenReady) {quickRef.e1SPRegenReady = 2;}
+                    else if (Ref.e1SPRegenReady === 2) {quickRef.e1SPRegenReady = true;}
                     //just a basic on/off switch. If the sp regen is ready, then we regen and turn it off
                     //if the next turn comes up and it's off, then we turn it on so we can regen on the next turn
-                    //TODO: need to look and see later if the 1turn cooldown means it'd technically be after every 2 turns though
                 }
 
                 if (targetTurn.properName != characterName) {battleActions.actionAdvance(1,targetTurn,battleData,"Bronya Skill");}//prevent self advancement
@@ -8958,6 +8982,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.sundayBasicREF ??= ATKObjects["Basic ATK"]["Gleaming Admonition"].variant1;
                 
                 if (!ATKObjects.sundayBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
@@ -9533,7 +9558,6 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
-                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:sourceTurn, targetTurn, targetSkill:skillRef.slot});
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
                     // const dmgSlot = generalInfo.dmgSlot;
                     // if (dmgSlot != "Skill" && dmgSlot != "Talent") {return;}
@@ -9621,6 +9645,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.tribbieBasicREF ??= ATKObjects["Basic ATK"]["Hundred Rockets"].variant1;
 
                 if (!ATKObjects.tribbieBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Quantum"];
@@ -9780,6 +9805,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.tribbieFUAREF ??= ATKObjects.Talent["Busy as Tribbie"].variant1;
 
                 if (!ATKObjects.tribbieFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
                     let values = ATKObjects.tribbieFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","FUA","Quantum"];
@@ -9824,6 +9850,7 @@ const turnLogic = {
                 getEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 if (!ATKObjects.tribbieUltimateZoneCountdownSHEET) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     const buffNames = logicRef.buffNames;
                     const characterName = sourceTurn.properName;
                     let values = ATKObjects.tribbieUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -10399,6 +10426,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.robinBasicREF ??= ATKObjects["Basic ATK"]["Wingflip White Noise"].variant1;
 
                 if (!ATKObjects.robinBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
@@ -11006,6 +11034,7 @@ const turnLogic = {
 
                 
                 if (!ATKObjects.saberBasicRegATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
@@ -11050,6 +11079,7 @@ const turnLogic = {
 
                 
                 if (!ATKObjects.saberSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Skill","Wind"];
@@ -11132,6 +11162,7 @@ const turnLogic = {
                 // const ATKObjects = logicRef.ATKObjects;
 
                 if (!ATKObjects.saberUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Wind"];
@@ -11202,12 +11233,16 @@ const turnLogic = {
                 sourceTurn.ultyQueued = false;
             },
             saberBasicEnhanced(battleData,target,sourceTurn) {
-                const logicRef = turnLogic[sourceTurn.properName];
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
                 let skillRef = ATKObjects.saberBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Release, the Golden Scepter"].variant1;
                 let values = ATKObjects.saberBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.saberBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[characterName].eba;
+                    hitSplitters[characterName].eba3[1].scalarOverride = values[3];//this assigns the multi to the enemies===1 extra dmg, that takes place between hit1 and hit2
+
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -11238,27 +11273,36 @@ const turnLogic = {
 
                 const enemyPositions = battleData.enemyPositions;
                 if (enemyPositions.length <= 2) {
-                    let insert = 0;
-                    if (enemyPositions.length === 1) {insert = values[3];}
-                    else {insert = values[2];}
-
-                    ATKObject.bounceData = {
-                        multi: insert,
-                        bounceCount: 1,
-                        hitSplit: {
-                            "primary": null,
-                            "blast": null,
-                            "all": {
-                                "hitRatio": 1,
-                                "energyRatio": 1,
-                                "toughness": 20
-                            },
-                            "allEnemiesHit": null,
-                            "unknownTypers": false
-                        },
+                    // let insert = 0;
+                    if (enemyPositions.length === 1) {
+                        // insert = values[3];
+                        skillRef.hitSplits = hitSplitters[characterName].eba3;
                     }
+                    else {
+                        // insert = values[2];
+                        skillRef.hitSplits = hitSplitters[characterName].eba2;
+                    }
+
+                    // ATKObject.bounceData = {
+                    //     multi: insert,
+                    //     bounceCount: 1,
+                    //     hitSplit: {
+                    //         "primary": null,
+                    //         "blast": null,
+                    //         "all": {
+                    //             "hitRatio": 1,
+                    //             "energyRatio": 0,
+                    //             "toughness": 0
+                    //         },
+                    //         "allEnemiesHit": null,
+                    //         "unknownTypers": false
+                    //     },
+                    // }
                 }
-                else {ATKObject.bounceData = null;}
+                else {
+                    // ATKObject.bounceData = null;
+                    skillRef.hitSplits = hitSplitters[characterName].eba;
+                }
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
                 poke("BasicATKStart",battleData,{sourceTurn});
@@ -11555,21 +11599,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Knight of the Dragon battlestart Crit Rate/Mana Burst",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    
-                    const skillRef = this.skillRef ??= turnLogic[ownerTurn.properName].ATKObjects.Ultimate["Excalibur"].variant1;
-                    if (skillRef.hitSplits.length > 1) {
-                        skillRef.hitSplits.length = 1;
-                    }
-                    //parsing picks up a little more than I can use right now, on this one, is why I do this
-                },
-                "target": "self",
-                "listenerName": "Saber ultimate hitsplit trim",
                 "ownerTurn": {},
             },
             {
@@ -11872,6 +11901,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.rmcBasicREF ??= ATKObjects["Basic ATK"]["Leave It to Me!"].variant1;
 
                 if (!ATKObjects.rmcBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.rmcBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Ice"];
@@ -11917,6 +11947,7 @@ const turnLogic = {
                 let values = ATKObjects.rmcBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.rmcBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
                     const scalar = "ATK";
                     const tags = ["All","Basic","Ice"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -12024,7 +12055,6 @@ const turnLogic = {
                     let healObject = ATKObjects.rmcSkillMemHEALOBJECT;
                     const memTurn = sourceTurn.rmcMemTURNEVENT;
                     battleActions.healAlly(battleData,healObject,memTurn,sourceTurn,skillRef.slot,1);
-                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:healTarget, targetSkill:skillRef.slot});
 
                     poke("rmcMemGainedCharge",battleData,{pointsGained: values[1],sourceString:"RMC Skill"});
                 }
@@ -12164,6 +12194,7 @@ const turnLogic = {
 
                 const rank = sourceTurn.rank;
                 if (!ATKObjects.memBasicAttackATKOBJECT1) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill;
                     const scalar = "ATK";
                     const tags = ["All","MemoSkill","Ice"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -12174,7 +12205,7 @@ const turnLogic = {
                     const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags;
 
-                    if (skillRef.hitSplits.length > 1) {skillRef.hitSplits = skillRef.hitSplits.splice(4,1);}
+                    // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits = skillRef.hitSplits.splice(4,1);}
                     ATKObjects.memBasicAttackATKOBJECT1 = {
                         multipliers: {
                             primary: null,
@@ -12387,6 +12418,7 @@ const turnLogic = {
 
 
                 if (!ATKObjects.rmcUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.rmcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     const scalar = "ATK";
@@ -12406,7 +12438,7 @@ const turnLogic = {
                         multipliers: {
                             primary: null,
                             blast: null,
-                            all: 2.25,//values[0],  //TODO: remove later, was just lining up trace values
+                            all: values[0],
                         },
                         scalar,
                         DMGTags: tags,
@@ -12453,6 +12485,7 @@ const turnLogic = {
 
                 let values = ATKObjects.rmcTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 if (!ATKObjects.rmcTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "ATK";
                     const tags = ["All","Technique","Ice"];
                     const actionTags = ["Technique","Attack"];
@@ -12525,7 +12558,7 @@ const turnLogic = {
                         "HP%": rmcMenuStats["HP%"],
                         "LVL": 80,
 
-                        "AggroBase": characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+                        "CharacterAggroBase": characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
                     });
 
 
@@ -12713,7 +12746,6 @@ const turnLogic = {
                     if (energyAmount <= 0) {return;}//we only care about positive energy gains
                     //this does count energy gained from ANY source including enemy attacks
                     //however it does NOT ever factor overflow energy.
-                    //TODO: make sure that saber overflow energy regen post ult can factor for this, bc it should.
 
                     const conversion = energyAmount/1000;
                     poke("rmcMemGainedCharge",battleData,{pointsGained: conversion,sourceString:"Ally Gained Energy"});
@@ -12954,7 +12986,6 @@ const turnLogic = {
     "Dan Heng • Permansor Terrae": {
         logic(thisTurn,battleData) {
             // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
             // const shortRef = this;
             // const battleValues = shortRef.characterValuesBattle;
             // let actionUsed = false;
@@ -12979,6 +13010,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.dhptBasicREF ??= ATKObjects["Basic ATK"]["Aegis Vitae"].variant1;
                 if (!ATKObjects.dhptBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
@@ -12993,7 +13025,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.dhptBasicATKOBJECT = {
                         multipliers: {
-                            primary: values[0] * 0.6,//TODO: remove trace level adjustment later
+                            primary: values[0],
                             blast: null,
                             all: null,
                         },
@@ -13365,9 +13397,10 @@ const turnLogic = {
                     valuesRef.souldragonEnhancedTurns -= 1;
 
                     if (!ATKObjects.dhptSouldragonAutoATKOBJECT) {
+                        skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
                         let valuesUlt = ATKObjects.dhptUltimateREFVALUES;
     
-                        if (skillRef.hitSplits.length > 4) {skillRef.hitSplits.length = 4;}
+                        // if (skillRef.hitSplits.length > 4) {skillRef.hitSplits.length = 4;}
                         const scalar = "ATK";
                         const tags = ["All","FUA","Physical"];
                         const keyShortcut = basicShorthand.makeKeysArray;
@@ -13420,8 +13453,9 @@ const turnLogic = {
                 const rank = sourceTurn.rank;
 
                 if (!ATKObjects.dhptUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.dhptUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                    if (skillRef.hitSplits.length > 1) {skillRef.hitSplits.length = 1;}
+                    // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits.length = 1;}
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Physical"];
                     const actionTags = ["Ultimate","Attack"];

@@ -104,10 +104,7 @@ const customDisplayValuesLog = {
     "Bronya": [
         {valueName: "E1 Skillpoint Ready", refName: "e1SPRegenReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 1},
         {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
-    ],
-
-
-    
+    ],  
 }
 
 const permaConditionsTextLibrary = {
@@ -677,6 +674,16 @@ const defaultConditions = {
             ]
         }
     },
+
+    //HUNT
+    // "Archer": {
+    //     hasEnhancedState: false,
+    //     "Skill": null,
+    //     "Ultimate": {
+    //         type: "AND",
+    //         array: []
+    //     }
+    // },
 
 
 

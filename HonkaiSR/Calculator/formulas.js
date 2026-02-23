@@ -36,7 +36,7 @@ const calcs = {
         }
     },
     getAggroFinal(index) {
-        const AggroBaseFinal = index[AggroBase] * (1 + index[AggroBaseP]);
+        const AggroBaseFinal = index[CharacterAggroBase] * (1 + index[AggroBaseP]);
 
         const AggroBonusPercent = index[AggroP];
         const AggroBonusFlat = index[AggroFlat];
