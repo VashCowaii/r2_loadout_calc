@@ -1317,11 +1317,12 @@ const megaParsingFuckery = {
             
             
             <div class="eventCharacterFileInfoBox">
-
+            
             <div class="abilitySelectorFloaterBox">
                 <div class="abilitySelectorFloaterBoxName">Ability Selection</div>
                 <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">
             </div>
+            
             `;
             
 
@@ -1447,6 +1448,8 @@ const megaParsingFuckery = {
 
         let lightconeStatRow = "";
 
+        let paramsStringer = "";
+
         console.log(compositeAbilityObject.fixedStats)
         if (isRelic) {
             if (compositeAbilityObject.fixedStats[2]) {
@@ -1461,7 +1464,31 @@ const megaParsingFuckery = {
         if (isLightcone && !isRelic && compositeAbilityObject.fixedStats && compositeAbilityObject.fixedStats[currentLCSuperimposition]) {
             const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[currentLCSuperimposition]);
             lightconeStatRow = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[currentLCSuperimposition]);
+
+
+            const paramsCheck = lightconeRef?.params[currentLCSuperimposition-1];
+            if (paramsCheck?.length) {
+
+                let paramString = "";
+                let paramCounter = 0;
+                for (let paramEntry of paramsCheck) {
+                    // console.log(paramEntry)
+                    paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                    paramCounter++;
+                }
+
+                paramsStringer += `
+                    <div class="actionDetailBody">
+                        <div class="rotationConditionOperatorHeaderInlineParams">Params: [${paramString}]</div>
+                    </div>
+                `
+            }
         }
+
+
+
+
+        
 
         
 
@@ -1475,27 +1502,57 @@ const megaParsingFuckery = {
                 <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="megaParsingFuckery.updateSuperimposition(4)" style="${currentLCSuperimposition === 4 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">4</div>
                 <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="megaParsingFuckery.updateSuperimposition(5)" style="${currentLCSuperimposition === 5 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">5</div>
             </div>` : ""}
+
             
             
+            ${isLightcone && !isRelic ? `
+            <div class="characterDisplayPathAndNameBox" style="margin-top: 10px;">
+                <div class="characterDisplayPathNameBox" id="lightconeDisplaySkillName">Base Stats</div>
+            </div>
+            <div class="characterDisplayStatsBasic" id="lightconeDisplayStatsBasic">
+                <div class="imageRowStatisticBox1">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconMaxHP.png" class="imageRowStatisticImage"></div>
+                    <div class="imageRowStatisticNameBox">HP</div>
+                    <div class="imageRowStatisticStatBox">${lightconeRef.baseStats.HPBase.toLocaleString()}</div>
+                    
+                </div>
+                
+                <div class="imageRowStatisticBox2">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"></div>
+                    <div class="imageRowStatisticNameBox">ATK</div>
+                    <div class="imageRowStatisticStatBox">${lightconeRef.baseStats.ATKBase.toLocaleString()}</div>
+                    
+                </div>
+                
+                <div class="imageRowStatisticBox1">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconDefence.png" class="imageRowStatisticImage"></div>
+                    <div class="imageRowStatisticNameBox">DEF</div>
+                    <div class="imageRowStatisticStatBox">${lightconeRef.baseStats.DEFBase.toLocaleString()}</div>
+                    
+                </div>
+            </div>` : ""}
             
-            ${lightconeStatRow ? `<div class="characterDisplayPathAndNameBox">
-                <div class="characterDisplayPathNameBox">Lightcone Menu Bonuses:</div>
+            ${lightconeStatRow ? `<div class="characterDisplayPathAndNameBox" style="margin-top: 10px;">
+                <div class="characterDisplayPathNameBox">Menu Stats:</div>
             </div>` + lightconeStatRow : ""}
             ${isRelic ? `
-                ${statRowString1 ? `<div class="characterDisplayPathAndNameBox">
-                    <div class="characterDisplayPathNameBox">2-Piece Menu Bonuses:</div>
+                ${statRowString1 ? `<div class="characterDisplayPathAndNameBox" style="margin-top: 10px;">
+                    <div class="characterDisplayPathNameBox">2-Piece Stats:</div>
                 </div>` + statRowString1 : ""}
                 
 
-                ${statRowString2 ? `<div class="characterDisplayPathAndNameBox">
-                    <div class="characterDisplayPathNameBox">4-Piece Menu Bonuses:</div>
+                ${statRowString2 ? `<div class="characterDisplayPathAndNameBox" style="margin-top: 10px;">
+                    <div class="characterDisplayPathNameBox">4-Piece Stats:</div>
                 </div>` + statRowString2 : ""}
 
-                
+                <div class="statFiltersRowHeader"></div>
                 <div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">2pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[0],relicSetRef.desc[0])}</div>
-                ${relicSetRef.params[1] != undefined && relicSetRef.desc[1] != undefined ? `<div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">4pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[1],relicSetRef.desc[1])}</div>` : ""}
+                ${relicSetRef.params[1] != undefined && relicSetRef.desc[1] != undefined ? `
+                <div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">4pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[1],relicSetRef.desc[1])}</div>` : ""}
                 ` 
-                : `<div class="rightDescriptionBox" id="lightconeSkillDescription">${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}</div>`}
+                : `<div class="statFiltersRowHeader">${lightconeRef.skillName}</div>
+                <div class="rightDescriptionBox" id="lightconeSkillDescription">${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}</div>
+                ${paramsStringer}`}
             `
         }
         startingString += toughnessString + ``;

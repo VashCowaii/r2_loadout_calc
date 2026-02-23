@@ -437,7 +437,7 @@ div {
 }
 
 .imageRowStatisticStatBox {
-    /* width: 30%; */
+    width: 30%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -460,6 +460,23 @@ div {
     /* padding-right: 2px; */
     margin: 3px;
     font-size: 25px;
+}
+
+.statFiltersRowHeader {
+    /* height: 20px; */
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+    margin-top: 10px;
+    border-top: 2px solid rgba(128, 128, 128, 0.5);
 }
 
 
