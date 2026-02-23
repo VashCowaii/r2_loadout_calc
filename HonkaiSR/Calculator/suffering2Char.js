@@ -5945,6 +5945,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.gallagherBasicREF ??= ATKObjects["Basic ATK"]["Corkage Fee"].variant1;
                 if (!ATKObjects.gallagherBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
@@ -6090,6 +6091,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.gallagherBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Nectar Blitz"].variant1;
 
                 if (!ATKObjects.gallagherBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
                     let values = ATKObjects.gallagherBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
@@ -6156,6 +6158,7 @@ const turnLogic = {
                 let rank = sourceTurn.rank;
 
                 if (!ATKObjects.gallagherUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Fire"];
@@ -6288,6 +6291,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.gallagherTechREF ??= ATKObjects.Technique["Artisan Elixir"].variant1;
 
                 if (!ATKObjects.gallagherTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.gallagherTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
@@ -6551,6 +6555,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.huohuoBasicREF ??= ATKObjects["Basic ATK"]["Banner: Stormcaller"].variant1;
                 if (!ATKObjects.huohuoBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
@@ -7079,6 +7084,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.swBasicREF ??= ATKObjects["Basic ATK"]["System Warning"].variant1;
 
                 if (!ATKObjects.swBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.swBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
@@ -7124,6 +7130,7 @@ const turnLogic = {
                 let values = ATKObjects.silverwolfSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.silverwolfSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     const scalar = "ATK";
                     const tags = ["All","Skill","Quantum"];
                     const actionTags = ["Skill","Attack"];
@@ -7232,6 +7239,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.silverwolfUltimateREF ??= ATKObjects.Ultimate["User Banned"].variant1;
 
                 if (!ATKObjects.silverwolfUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.silverwolfUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Quantum"];
@@ -7418,6 +7426,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.swTechREF ??= ATKObjects.Technique["Force Quit Program"].variant1;
 
                 if (!ATKObjects.swTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.swTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Quantum"];
@@ -7844,6 +7853,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.tingyunBasicREF ??= ATKObjects["Basic ATK"]["Dislodged"].variant1;
 
                 if (!ATKObjects.tingyunBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     // let characterName = sourceTurn.properName;
                     let values = ATKObjects.tingyunBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
@@ -8427,6 +8437,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.bronyaBasicREF ??= ATKObjects["Basic ATK"]["Windrider Bullet"].variant1;
 
                 if (!ATKObjects.bronyaBasic) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.bronyaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
@@ -8476,6 +8487,7 @@ const turnLogic = {
                 //it JUST deals 80% of whatever multiplier your currently leveled basic attack does
                 //which is why we need the current level on the basic attack, then multi by .8
                 if (!ATKObjects.bronyaFUABasic) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
                     let skillRef2 = ATKObjects["Basic ATK"]["Windrider Bullet"].variant1;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
                     const scalar = "ATK";
@@ -8958,6 +8970,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.sundayBasicREF ??= ATKObjects["Basic ATK"]["Gleaming Admonition"].variant1;
                 
                 if (!ATKObjects.sundayBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
@@ -9621,6 +9634,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.tribbieBasicREF ??= ATKObjects["Basic ATK"]["Hundred Rockets"].variant1;
 
                 if (!ATKObjects.tribbieBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Quantum"];
@@ -9780,6 +9794,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.tribbieFUAREF ??= ATKObjects.Talent["Busy as Tribbie"].variant1;
 
                 if (!ATKObjects.tribbieFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
                     let values = ATKObjects.tribbieFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","FUA","Quantum"];
@@ -9824,6 +9839,7 @@ const turnLogic = {
                 getEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 if (!ATKObjects.tribbieUltimateZoneCountdownSHEET) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     const buffNames = logicRef.buffNames;
                     const characterName = sourceTurn.properName;
                     let values = ATKObjects.tribbieUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -10399,6 +10415,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.robinBasicREF ??= ATKObjects["Basic ATK"]["Wingflip White Noise"].variant1;
 
                 if (!ATKObjects.robinBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
@@ -11006,6 +11023,7 @@ const turnLogic = {
 
                 
                 if (!ATKObjects.saberBasicRegATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
@@ -11050,6 +11068,7 @@ const turnLogic = {
 
                 
                 if (!ATKObjects.saberSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Skill","Wind"];
@@ -11132,6 +11151,7 @@ const turnLogic = {
                 // const ATKObjects = logicRef.ATKObjects;
 
                 if (!ATKObjects.saberUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Wind"];
@@ -11208,6 +11228,7 @@ const turnLogic = {
                 let values = ATKObjects.saberBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.saberBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -11872,6 +11893,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.rmcBasicREF ??= ATKObjects["Basic ATK"]["Leave It to Me!"].variant1;
 
                 if (!ATKObjects.rmcBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = ATKObjects.rmcBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Ice"];
@@ -11917,6 +11939,7 @@ const turnLogic = {
                 let values = ATKObjects.rmcBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.rmcBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
                     const scalar = "ATK";
                     const tags = ["All","Basic","Ice"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -12164,6 +12187,7 @@ const turnLogic = {
 
                 const rank = sourceTurn.rank;
                 if (!ATKObjects.memBasicAttackATKOBJECT1) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill;
                     const scalar = "ATK";
                     const tags = ["All","MemoSkill","Ice"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -12387,6 +12411,7 @@ const turnLogic = {
 
 
                 if (!ATKObjects.rmcUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.rmcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     const scalar = "ATK";
@@ -12453,6 +12478,7 @@ const turnLogic = {
 
                 let values = ATKObjects.rmcTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 if (!ATKObjects.rmcTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "ATK";
                     const tags = ["All","Technique","Ice"];
                     const actionTags = ["Technique","Attack"];
@@ -12979,6 +13005,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.dhptBasicREF ??= ATKObjects["Basic ATK"]["Aegis Vitae"].variant1;
                 if (!ATKObjects.dhptBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
@@ -13365,6 +13392,7 @@ const turnLogic = {
                     valuesRef.souldragonEnhancedTurns -= 1;
 
                     if (!ATKObjects.dhptSouldragonAutoATKOBJECT) {
+                        skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
                         let valuesUlt = ATKObjects.dhptUltimateREFVALUES;
     
                         if (skillRef.hitSplits.length > 4) {skillRef.hitSplits.length = 4;}
@@ -13420,6 +13448,7 @@ const turnLogic = {
                 const rank = sourceTurn.rank;
 
                 if (!ATKObjects.dhptUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.dhptUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     if (skillRef.hitSplits.length > 1) {skillRef.hitSplits.length = 1;}
                     const scalar = "ATK";
