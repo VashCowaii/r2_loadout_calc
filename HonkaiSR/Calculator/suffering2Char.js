@@ -11581,21 +11581,6 @@ const turnLogic = {
             {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    
-                    const skillRef = this.skillRef ??= turnLogic[ownerTurn.properName].ATKObjects.Ultimate["Excalibur"].variant1;
-                    if (skillRef.hitSplits.length > 1) {
-                        skillRef.hitSplits.length = 1;
-                    }
-                    //parsing picks up a little more than I can use right now, on this one, is why I do this
-                },
-                "target": "self",
-                "listenerName": "Saber ultimate hitsplit trim",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
                     // let ownerTurn = this.ownerTurn;
                     //kinda pepega to have a listener that exists to poke another listener, but it be like that
                     poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"Dragon Reactor Core: Battlestart"});
@@ -12198,7 +12183,7 @@ const turnLogic = {
                     const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags;
 
-                    if (skillRef.hitSplits.length > 1) {skillRef.hitSplits = skillRef.hitSplits.splice(4,1);}
+                    // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits = skillRef.hitSplits.splice(4,1);}
                     ATKObjects.memBasicAttackATKOBJECT1 = {
                         multipliers: {
                             primary: null,
@@ -13395,7 +13380,7 @@ const turnLogic = {
                         skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
                         let valuesUlt = ATKObjects.dhptUltimateREFVALUES;
     
-                        if (skillRef.hitSplits.length > 4) {skillRef.hitSplits.length = 4;}
+                        // if (skillRef.hitSplits.length > 4) {skillRef.hitSplits.length = 4;}
                         const scalar = "ATK";
                         const tags = ["All","FUA","Physical"];
                         const keyShortcut = basicShorthand.makeKeysArray;
@@ -13450,7 +13435,7 @@ const turnLogic = {
                 if (!ATKObjects.dhptUltimateATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.dhptUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                    if (skillRef.hitSplits.length > 1) {skillRef.hitSplits.length = 1;}
+                    // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits.length = 1;}
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Physical"];
                     const actionTags = ["Ultimate","Attack"];
