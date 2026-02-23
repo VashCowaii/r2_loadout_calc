@@ -148,15 +148,9 @@ let characters = {
               "Avatar_Mar_7th_00_Skill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -294,15 +288,9 @@ let characters = {
               "Avatar_Mar_7th_00_Skill02_Camera_Other"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -426,15 +414,9 @@ let characters = {
               "Avatar_Mar_7th_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -534,15 +516,9 @@ let characters = {
               "Avatar_Mar_7th_00_PassiveSkill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -582,15 +558,9 @@ let characters = {
               "Avatar_Mar_7th_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -896,15 +866,9 @@ let characters = {
               "Avatar_DanHeng_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1027,15 +991,9 @@ let characters = {
               "Avatar_DanHeng_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -1134,15 +1092,9 @@ let characters = {
               "Avatar_DanHeng_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1234,15 +1186,9 @@ let characters = {
               "Avatar_DanHeng_00_PassiveSkill01_Enhance_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -1281,15 +1227,9 @@ let characters = {
               "Avatar_DanHeng_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1597,15 +1537,9 @@ let characters = {
               "Avatar_Himeko_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1698,15 +1632,9 @@ let characters = {
               "Avatar_Himeko_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -1800,15 +1728,9 @@ let characters = {
               "Avatar_Himeko_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -1901,15 +1823,9 @@ let characters = {
               "Avatar_Himeko_Passive1Atk02_Ability"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -1950,15 +1866,9 @@ let characters = {
               "Avatar_Himeko_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -2277,15 +2187,9 @@ let characters = {
               "Avatar_Welt_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -2408,15 +2312,9 @@ let characters = {
               "Avatar_Welt_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -2545,15 +2443,9 @@ let characters = {
               "Avatar_Welt_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -2635,15 +2527,9 @@ let characters = {
               "Avatar_Welt_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -2685,15 +2571,9 @@ let characters = {
               "Avatar_Welt_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -3019,15 +2899,9 @@ let characters = {
               "Avatar_Advanced_Kafka_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3150,15 +3024,9 @@ let characters = {
               "Avatar_Advanced_Kafka_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -3297,15 +3165,9 @@ let characters = {
               "Avatar_Advanced_Kafka_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -3447,15 +3309,9 @@ let characters = {
               "Avatar_Kafka_Passive1Atk_Ability_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -3498,15 +3354,9 @@ let characters = {
               "Avatar_Advanced_Kafka_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -3844,15 +3694,9 @@ let characters = {
               "Avatar_Advanced_Silwolf_00_PassiveSkill_RandomBug"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4022,15 +3866,9 @@ let characters = {
               "Avatar_Advanced_Silwolf_00_Skill02_Failed_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -4159,15 +3997,9 @@ let characters = {
               "Avatar_Advanced_Silwolf_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -4306,15 +4138,9 @@ let characters = {
               "Avatar_Advanced_Silwolf_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -4352,15 +4178,9 @@ let characters = {
               "Avatar_Advanced_Silwolf_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4673,15 +4493,9 @@ let characters = {
               "Avatar_Arlan_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4774,15 +4588,9 @@ let characters = {
               "Avatar_Arlan_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4876,15 +4684,9 @@ let characters = {
               "Avatar_Arlan_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -4959,15 +4761,9 @@ let characters = {
               "Avatar_Arlan_00_PassiveSkill03_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5000,15 +4796,9 @@ let characters = {
               "Avatar_Arlan_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5305,15 +5095,9 @@ let characters = {
               "Avatar_Asta_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5391,15 +5175,9 @@ let characters = {
               "Avatar_Asta_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5492,15 +5270,9 @@ let characters = {
               "Avatar_Asta_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5604,15 +5376,9 @@ let characters = {
               "Avatar_Asta_00_PassiveSkill_1"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5645,15 +5411,9 @@ let characters = {
               "Avatar_Asta_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5964,15 +5724,9 @@ let characters = {
               "Avatar_Herta_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6080,15 +5834,9 @@ let characters = {
               "Avatar_Herta_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -6167,15 +5915,9 @@ let characters = {
               "Avatar_Herta_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -6267,15 +6009,9 @@ let characters = {
               "Avatar_Herta_00_PassiveAtkReady_Ability"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              0,
+              15,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -6314,15 +6050,9 @@ let characters = {
               "Avatar_Herta_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6635,15 +6365,9 @@ let characters = {
               "Bronya_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6767,15 +6491,9 @@ let characters = {
               "Bronya_00_Skill02_Self_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -6903,15 +6621,9 @@ let characters = {
               "Bronya_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6988,15 +6700,9 @@ let characters = {
               "Avatar_Bronya_00_Rank04_ATK_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -7035,15 +6741,9 @@ let characters = {
               "Avatar_Bronya_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7351,15 +7051,9 @@ let characters = {
               "Avatar_Seele_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7467,15 +7161,9 @@ let characters = {
               "Avatar_Seele_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7554,15 +7242,9 @@ let characters = {
               "Avatar_Seele_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7653,15 +7335,9 @@ let characters = {
               "Avatar_Seele_00_Bonus"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -7699,15 +7375,9 @@ let characters = {
               "Avatar_Seele_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8025,15 +7695,9 @@ let characters = {
               "Avatar_Serval_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8171,15 +7835,9 @@ let characters = {
               "Avatar_Serval_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -8278,15 +7936,9 @@ let characters = {
               "Avatar_Serval_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -8361,15 +8013,9 @@ let characters = {
               "Avatar_Serval_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -8410,15 +8056,9 @@ let characters = {
               "Avatar_Serval_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -8732,15 +8372,9 @@ let characters = {
               "Avatar_Gepard_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8863,15 +8497,9 @@ let characters = {
               "Avatar_Gepard_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -8987,15 +8615,9 @@ let characters = {
               "Avatar_Gepard_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9070,15 +8692,9 @@ let characters = {
               "Gepard_00_PassiveSkill_1_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -9118,15 +8734,9 @@ let characters = {
               "Avatar_Gepard_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9427,15 +9037,9 @@ let characters = {
               "Avatar_Natasha_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9573,15 +9177,9 @@ let characters = {
               "Avatar_Natasha_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9674,15 +9272,9 @@ let characters = {
               "Avatar_Natasha_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9771,15 +9363,9 @@ let characters = {
               "Avatar_Natasha_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9815,15 +9401,9 @@ let characters = {
               "Avatar_Natasha_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -10151,15 +9731,9 @@ let characters = {
               "Avatar_Pela_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10252,15 +9826,9 @@ let characters = {
               "Avatar_Pela_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -10389,15 +9957,9 @@ let characters = {
               "Avatar_Pela_00_Skill03_Cutin"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -10476,15 +10038,9 @@ let characters = {
               "Avatar_Pela_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -10525,15 +10081,9 @@ let characters = {
               "Avatar_Pela_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -10854,15 +10404,9 @@ let characters = {
               "Avatar_Klara_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10955,15 +10499,9 @@ let characters = {
               "Avatar_Klara_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -11101,15 +10639,9 @@ let characters = {
               "Avatar_Klara_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -11221,15 +10753,9 @@ let characters = {
               "Avatar_Klara_00_PassiveSkill01_InsertAbility"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              30,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -11268,15 +10794,9 @@ let characters = {
               "Avatar_Klara_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11599,15 +11119,9 @@ let characters = {
               "Avatar_Sampo_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11702,15 +11216,9 @@ let characters = {
               "Avatar_Sampo_00_Skill02_End_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11834,15 +11342,9 @@ let characters = {
               "Avatar_Sampo_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -11966,15 +11468,9 @@ let characters = {
               "Avatar_Sampo_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -12014,15 +11510,9 @@ let characters = {
               "Avatar_Sampo_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -12333,15 +11823,9 @@ let characters = {
               "Avatar_Hook_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12464,15 +11948,9 @@ let characters = {
               "Avatar_Hook_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -12611,15 +12089,9 @@ let characters = {
               "Avatar_Hook_00_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -12703,15 +12175,9 @@ let characters = {
               "Avatar_Hook_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12802,15 +12268,9 @@ let characters = {
               "Avatar_Hook_00_PassiveSkill01_2"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -12851,15 +12311,9 @@ let characters = {
               "Avatar_Hook_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -13180,15 +12634,9 @@ let characters = {
               "Avatar_Lynx_00_Skill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13341,15 +12789,9 @@ let characters = {
               "Avatar_Lynx_00_Skill02_Camera_Other"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13457,15 +12899,9 @@ let characters = {
               "Avatar_Lynx_00_Skill03_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -13604,15 +13040,9 @@ let characters = {
               "Avatar_Lynx_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13645,15 +13075,9 @@ let characters = {
               "Avatar_Lynx_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13955,15 +13379,9 @@ let characters = {
               "Avatar_Luka_00_Skill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -14037,15 +13455,9 @@ let characters = {
               "Avatar_Luka_Skill11_Loop2_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -14183,15 +13595,9 @@ let characters = {
               "Avatar_Luka_Skill02_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -14335,15 +13741,9 @@ let characters = {
               "Avatar_Luka_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -14437,15 +13837,9 @@ let characters = {
               "Avatar_Luka_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -14479,15 +13873,9 @@ let characters = {
               "Avatar_Luka_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -14814,15 +14202,9 @@ let characters = {
               "Avatar_Topaz_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -14915,15 +14297,9 @@ let characters = {
               "Avatar_Topaz_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -15053,15 +14429,9 @@ let characters = {
               "Avatar_Klara_00_Skill03_Phase01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -15169,15 +14539,9 @@ let characters = {
               "Avatar_Topaz_00_BE_UltraAttackDamage"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -15219,15 +14583,9 @@ let characters = {
               "Avatar_Topaz_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -15530,15 +14888,9 @@ let characters = {
               "Avatar_Qingque_00_Rank04_ATK"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -15610,15 +14962,9 @@ let characters = {
               "Avatar_QingQue_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -15730,15 +15076,9 @@ let characters = {
               "Avatar_Qingque_00_BpInsertAction_Wan"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -15818,15 +15158,9 @@ let characters = {
               "Avatar_Qingque_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -15905,15 +15239,9 @@ let characters = {
               "Avatar_Qingque_00_UltraGangFix_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -15946,15 +15274,9 @@ let characters = {
               "Avatar_Qingque_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -16246,15 +15568,9 @@ let characters = {
               "Avatar_TingYun_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -16377,15 +15693,9 @@ let characters = {
               "Avatar_Tingyun_Skill02_Camera_Others"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -16498,15 +15808,9 @@ let characters = {
               "Avatar_TingYun_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -16580,15 +15884,9 @@ let characters = {
               "Avatar_TingYun_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -16624,15 +15922,9 @@ let characters = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -16938,15 +16230,9 @@ let characters = {
               "Avatar_Luocha_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -17068,15 +16354,9 @@ let characters = {
               "Avatar_Luocha_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -17170,15 +16450,9 @@ let characters = {
               "Avatar_Luocha_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -17305,15 +16579,9 @@ let characters = {
               "Avatar_Luocha_00_Skill02_InsertAbility"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -17349,15 +16617,9 @@ let characters = {
               "Avatar_Luocha_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -17666,15 +16928,9 @@ let characters = {
               "Avatar_JingYuan_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -17767,15 +17023,9 @@ let characters = {
               "Avatar_JingYuan_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -17869,15 +17119,9 @@ let characters = {
               "Avatar_JingYuan_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -18030,15 +17274,9 @@ let characters = {
               "Avatar_JingYuan_00_Passive_Insert_Ability"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -18082,15 +17320,9 @@ let characters = {
               "Avatar_JingYuan_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -18395,15 +17627,9 @@ let characters = {
               "Avatar_AdvancedRen_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -18504,15 +17730,9 @@ let characters = {
               "Avatar_Ren_00_Skill11_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -18652,15 +17872,9 @@ let characters = {
               "Avatar_Ren_00_Bonus_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -18829,15 +18043,9 @@ let characters = {
               "Avatar_AdvancedRen_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -18960,15 +18168,9 @@ let characters = {
               "Avatar_AdvancedRen_00_Passive1Atk02_Ability"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -19007,15 +18209,9 @@ let characters = {
               "Avatar_AdvancedRen_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -19316,15 +18512,9 @@ let characters = {
               "Avatar_Sushang_00_Skill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -19432,15 +18622,9 @@ let characters = {
               "Avatar_Sushang_00_Skill02_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -19572,15 +18756,9 @@ let characters = {
               "Avatar_Sushang_00_Skill03_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -19670,15 +18848,9 @@ let characters = {
               "Avatar_Sushang_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -19711,15 +18883,9 @@ let characters = {
               "Avatar_Sushang_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -20028,15 +19194,9 @@ let characters = {
               "Avatar_Yukong_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -20130,15 +19290,9 @@ let characters = {
               "Avatar_Yukong_00_Skill02_CountDown"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -20248,15 +19402,9 @@ let characters = {
               "Avatar_Yukong_00_Skill03_AddFlower"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -20361,15 +19509,9 @@ let characters = {
               "Avatar_Yukong_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -20404,15 +19546,9 @@ let characters = {
               "Avatar_Yukong_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -20720,15 +19856,9 @@ let characters = {
               "Avatar_FuXuan_00_Skill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -20865,15 +19995,9 @@ let characters = {
               "Avatar_FuXuan_00_Skill02_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -20960,15 +20084,9 @@ let characters = {
               "Avatar_FuXuan_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -21074,15 +20192,9 @@ let characters = {
               "Avatar_FuXuan_00_PassiveSkill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -21116,15 +20228,9 @@ let characters = {
               "Avatar_FuXuan_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -21437,15 +20543,9 @@ let characters = {
               "Avatar_Yanqing_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -21523,15 +20623,9 @@ let characters = {
               "Avatar_Yanqing_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -21640,15 +20734,9 @@ let characters = {
               "Avatar_Yanqing_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -21806,15 +20894,9 @@ let characters = {
               "Avatar_Yanqing_00_PassiveSkill01_InsertAbilityPhase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -21863,15 +20945,9 @@ let characters = {
               "Avatar_Yanqing_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -22181,15 +21257,9 @@ let characters = {
               "Avatar_Guinaifen_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -22327,15 +21397,9 @@ let characters = {
               "Avatar_Guinaifen_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -22434,15 +21498,9 @@ let characters = {
               "Avatar_Guinaifen_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -22592,15 +21650,9 @@ let characters = {
               "Avatar_Guinaifen_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -22640,15 +21692,9 @@ let characters = {
               "Avatar_Guinaifen_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -22963,15 +22009,9 @@ let characters = {
               "Avatar_Bailu_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -23094,15 +22134,9 @@ let characters = {
               "Avatar_Bailu_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -23210,15 +22244,9 @@ let characters = {
               "Avatar_Bailu_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -23353,15 +22381,9 @@ let characters = {
               "Avatar_Bailu_00_PassiveSkill_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -23399,15 +22421,9 @@ let characters = {
               "Avatar_Bailu_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -23713,15 +22729,9 @@ let characters = {
               "Avatar_Advanced_Jingliu_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -23814,15 +22824,9 @@ let characters = {
               "Avatar_Advanced_Jingliu_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -23927,15 +22931,9 @@ let characters = {
               "Avatar_Jingliu_PassiveAtk_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -24059,15 +23057,9 @@ let characters = {
               "Avatar_Advanced_Jingliu_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -24249,15 +23241,9 @@ let characters = {
               "Avatar_Advanced_Jingliu_00_PassiveAtkReady_Phase01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -24295,15 +23281,9 @@ let characters = {
               "Avatar_Advanced_Jingliu_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -24618,15 +23598,9 @@ let characters = {
               "Avatar_DanHengIL_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -24687,15 +23661,9 @@ let characters = {
               "Avatar_DanHengIL_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -24766,15 +23734,9 @@ let characters = {
               "Avatar_DanHengIL_00_Skill12_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              90,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -24845,15 +23807,9 @@ let characters = {
               "Avatar_DanHengIL_00_Skill13_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 120
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              120,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -24947,15 +23903,9 @@ let characters = {
               "Avatar_DanHengIL_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -24985,15 +23935,9 @@ let characters = {
               "Avatar_DanHengIL_00_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -25117,15 +24061,9 @@ let characters = {
               "Avatar_DanHengIL_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -25214,15 +24152,9 @@ let characters = {
               "Avatar_DanHengIL_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -25257,15 +24189,9 @@ let characters = {
               "Avatar_DanHengIL_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -25578,15 +24504,9 @@ let characters = {
               "Avatar_Xueyi_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -25679,15 +24599,9 @@ let characters = {
               "Avatar_Xueyi_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -25796,15 +24710,9 @@ let characters = {
               "Avatar_Xueyi_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 120
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              120,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -25913,15 +24821,9 @@ let characters = {
               "Avatar_Xueyi_Passive1Atk_Ability_Camera_01"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -25959,15 +24861,9 @@ let characters = {
               "Avatar_Xueyi_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -26271,15 +25167,9 @@ let characters = {
               "Avatar_Hanya_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -26372,15 +25262,9 @@ let characters = {
               "Avatar_Hanya_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -26488,15 +25372,9 @@ let characters = {
               "Avatar_Hanya_00_Skill03_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -26585,15 +25463,9 @@ let characters = {
               "Avatar_Hanya_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -26624,15 +25496,9 @@ let characters = {
               "Avatar_Hanya_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -26937,15 +25803,9 @@ let characters = {
               "Avatar_Huohuo_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -27082,15 +25942,9 @@ let characters = {
               "Avatar_Huohuo_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -27203,15 +26057,9 @@ let characters = {
               "Avatar_Huohuo_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -27376,15 +26224,9 @@ let characters = {
               "Avatar_Huohuo_00_Rank02_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -27425,15 +26267,9 @@ let characters = {
               "Avatar_Huohuo_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -27742,15 +26578,9 @@ let characters = {
               "Avatar_Jiaoqiu_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -27858,15 +26688,9 @@ let characters = {
               "Avatar_Jiaoqiu_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -28010,15 +26834,9 @@ let characters = {
               "Avatar_Jiaoqiu_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -28176,15 +26994,9 @@ let characters = {
               "Avatar_Jiaoqiu_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -28224,15 +27036,9 @@ let characters = {
               "Avatar_Jiaoqiu_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -28558,15 +27364,9 @@ let characters = {
               "Avatar_Feixiao_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -28644,15 +27444,9 @@ let characters = {
               "Avatar_Feixiao_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -28781,15 +27575,9 @@ let characters = {
               "Avatar_Feixiao_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -28914,15 +27702,9 @@ let characters = {
               "Avatar_Feixiao_00_Skill03_Finish_W2Main_Phase01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -29023,15 +27805,9 @@ let characters = {
               "Avatar_Feixiao_00_Skill03_ComboFinish1_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -29134,15 +27910,9 @@ let characters = {
               "Avatar_Feixiao_00_Skill03_ComboFinish2_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -29302,15 +28072,9 @@ let characters = {
               "Avatar_Feixiao_00_Insert_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -29353,15 +28117,9 @@ let characters = {
               "Avatar_Feixiao_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -29683,15 +28441,9 @@ let characters = {
               "Avatar_Yunli_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -29814,15 +28566,9 @@ let characters = {
               "Avatar_Yunli_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -30008,15 +28754,9 @@ let characters = {
               "Avatar_Yunli_00_Skill03_NormalCounter_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -30133,15 +28873,9 @@ let characters = {
               "Avatar_Yunli_00_Counter_Preshow"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              30,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -30182,15 +28916,9 @@ let characters = {
               "Avatar_Yunli_00_SkillMazeInLevel_Insert_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -30497,15 +29225,9 @@ let characters = {
               "Avatar_Lingsha_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -30628,15 +29350,9 @@ let characters = {
               "Avatar_Lingsha_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -30795,15 +29511,9 @@ let characters = {
               "Avatar_Lingsha_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -30992,15 +29702,9 @@ let characters = {
               "Avatar_Lingsha_00_BPSkill_BattleEvent_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -31044,15 +29748,9 @@ let characters = {
               "Avatar_Lingsha_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -31368,15 +30066,9 @@ let characters = {
               "Avatar_Moze_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -31469,15 +30161,9 @@ let characters = {
               "Avatar_Moze_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -31556,15 +30242,9 @@ let characters = {
               "Avatar_Moze_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -31678,15 +30358,9 @@ let characters = {
               "Avatar_Moze_00_Insert_End_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -31732,15 +30406,9 @@ let characters = {
               "Avatar_Moze_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -32078,15 +30746,9 @@ let characters = {
               "Avatar_Mar_7th_10_Rank02_Insert_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -32178,15 +30840,9 @@ let characters = {
               "Avatar_Mar_7th_10_Skill11_Camera_Alt"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -32300,15 +30956,9 @@ let characters = {
               "Avatar_Mar_7th_10_Bonus_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -32422,15 +31072,9 @@ let characters = {
               "Avatar_Mar_7th_10_Skill03_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -32542,15 +31186,9 @@ let characters = {
               "Avatar_Mar_7th_10_Ready_Special_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -32584,15 +31222,9 @@ let characters = {
               "Avatar_Mar_7th_10_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -32900,15 +31532,9 @@ let characters = {
               "Avatar_Fugue_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -32979,15 +31605,9 @@ let characters = {
               "Avatar_Fugue_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           }
@@ -33140,15 +31760,9 @@ let characters = {
               "Avatar_Fugue_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -33232,15 +31846,9 @@ let characters = {
               "Avatar_Fugue_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -33330,15 +31938,9 @@ let characters = {
               "Avatar_Fugue_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -33382,15 +31984,9 @@ let characters = {
               "Avatar_Fugue_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -33712,15 +32308,9 @@ let characters = {
               "Avatar_Gallagher_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -33801,15 +32391,9 @@ let characters = {
               "Avatar_Gallagher_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -33887,15 +32471,9 @@ let characters = {
               "Avatar_Gallagher_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -33989,15 +32567,9 @@ let characters = {
               "Avatar_Gallagher_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -34087,15 +32659,9 @@ let characters = {
               "Avatar_Gallagher_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -34134,15 +32700,9 @@ let characters = {
               "Avatar_Gallagher_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -34440,15 +33000,9 @@ let characters = {
               "Avatar_Argenti_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -34526,15 +33080,9 @@ let characters = {
               "Avatar_Argenti_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -34629,15 +33177,9 @@ let characters = {
               "Avatar_Argenti_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -34760,15 +33302,9 @@ let characters = {
               "Avatar_Argenti_00_Skill31_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              15,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -34873,15 +33409,9 @@ let characters = {
               "Avatar_Argenti_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -34916,15 +33446,9 @@ let characters = {
               "Avatar_Argenti_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -35232,15 +33756,9 @@ let characters = {
               "Avatar_RuanMei_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -35347,15 +33865,9 @@ let characters = {
               "Avatar_RuanMei_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -35494,15 +34006,9 @@ let characters = {
               "Avatar_RuanMei_TriggerImprintEffect"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -35602,15 +34108,9 @@ let characters = {
               "Avatar_RuanMei_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -35652,15 +34152,9 @@ let characters = {
               "Avatar_RuanMei_00_SkillMazeInLevel_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -35970,15 +34464,9 @@ let characters = {
               "Avatar_Aventurine_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -36100,15 +34588,9 @@ let characters = {
               "Avatar_Aventurine_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -36232,15 +34714,9 @@ let characters = {
               "Avatar_Aventurine_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -36378,15 +34854,9 @@ let characters = {
               "Avatar_Aventurine_00_PassiveSkill01_InsertAbility_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 10
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              10,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -36430,15 +34900,9 @@ let characters = {
               "Avatar_Aventurine_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -36765,15 +35229,9 @@ let characters = {
               "Avatar_Dr_Ratio_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -36851,15 +35309,9 @@ let characters = {
               "Avatar_Dr_Ratio_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -36955,15 +35407,9 @@ let characters = {
               "Avatar_Dr_Ratio_00_Bonus_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -37077,15 +35523,9 @@ let characters = {
               "Avatar_Dr_Ratio_00_PassiveSkill01_Insert_Camera01"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -37129,15 +35569,9 @@ let characters = {
               "Avatar_Dr_Ratio_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -37453,15 +35887,9 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -37579,15 +36007,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -37720,15 +36142,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -37845,15 +36261,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -37885,15 +36295,9 @@ let characters = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -38211,15 +36615,9 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -38338,15 +36736,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -38470,15 +36862,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -38663,15 +37049,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -38711,15 +37091,9 @@ let characters = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -39049,15 +37423,9 @@ let characters = {
               "Avatar_Acheron_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -39165,15 +37533,9 @@ let characters = {
               "Avatar_Acheron_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -39342,15 +37704,9 @@ let characters = {
               "Avatar_Acheron_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -39456,15 +37812,9 @@ let characters = {
               "Avatar_Acheron_00_Skill31_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              15,
+              15,
+              0
             ],
             "hitSplits": []
           },
@@ -39568,15 +37918,9 @@ let characters = {
               "Avatar_Acheron_00_Skill32_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              15,
+              15,
+              0
             ],
             "hitSplits": []
           },
@@ -39680,15 +38024,9 @@ let characters = {
               "Avatar_Acheron_00_Skill33_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              15,
+              15,
+              0
             ],
             "hitSplits": []
           }
@@ -39764,15 +38102,9 @@ let characters = {
               "Avatar_Acheron_00_Skill34_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              0,
+              15,
+              0
             ],
             "hitSplits": []
           }
@@ -39861,15 +38193,9 @@ let characters = {
               "Avatar_Acheron_00_PassiveSkill_1"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -39903,15 +38229,9 @@ let characters = {
               "Avatar_Acheron_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -40229,15 +38549,9 @@ let characters = {
               "Avatar_Robin_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -40330,15 +38644,9 @@ let characters = {
               "Avatar_Robin_00_Skill02_FriendAttack"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -40491,15 +38799,9 @@ let characters = {
               "Avatar_Robin_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -40596,15 +38898,9 @@ let characters = {
               "Avatar_Robin_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -40638,15 +38934,9 @@ let characters = {
               "Avatar_Robin_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -40970,15 +39260,9 @@ let characters = {
               "Avatar_Sam_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -41049,15 +39333,9 @@ let characters = {
               "Avatar_Sam_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 45
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              45,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -41180,15 +39458,9 @@ let characters = {
               "Avatar_Sam_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -41359,15 +39631,9 @@ let characters = {
               "Avatar_Sam_00_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 45
-              }
+              90,
+              0,
+              45
             ],
             "hitSplits": []
           }
@@ -41490,15 +39756,9 @@ let characters = {
               "Avatar_Sam_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -41620,15 +39880,9 @@ let characters = {
               "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -41668,15 +39922,9 @@ let characters = {
               "Avatar_Sam_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -41998,15 +40246,9 @@ let characters = {
               "Avatar_Misha_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -42114,15 +40356,9 @@ let characters = {
               "Avatar_Misha_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -42261,15 +40497,9 @@ let characters = {
               "Avatar_Misha_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -42366,15 +40596,9 @@ let characters = {
               "Avatar_Misha_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -42408,15 +40632,9 @@ let characters = {
               "Avatar_Misha_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -42722,15 +40940,9 @@ let characters = {
               "Avatar_Sunday_10_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -42852,15 +41064,9 @@ let characters = {
               "Avatar_Sunday_10_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -42983,15 +41189,9 @@ let characters = {
               "Avatar_Sunday_10_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -43080,15 +41280,9 @@ let characters = {
               "Avatar_Sunday_10_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -43122,15 +41316,9 @@ let characters = {
               "Avatar_Sunday_10_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -43454,15 +41642,9 @@ let characters = {
               "Avatar_Jade_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           }
@@ -43586,15 +41768,9 @@ let characters = {
               "Avatar_Jade_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -43708,15 +41884,9 @@ let characters = {
               "Avatar_Jade_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -43863,15 +42033,9 @@ let characters = {
               "Avatar_Jade_00_Passive_Phase02_02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -43911,15 +42075,9 @@ let characters = {
               "Avatar_Jade_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -44231,15 +42389,9 @@ let characters = {
               "Avatar_Boothill_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -44302,15 +42454,9 @@ let characters = {
               "Avatar_Boothill_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -44420,15 +42566,9 @@ let characters = {
               "Avatar_Boothill_00_Bonus_Camera_Cut"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -44537,15 +42677,9 @@ let characters = {
               "Avatar_Boothill_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -44699,15 +42833,9 @@ let characters = {
               "Avatar_Boothill_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -44748,15 +42876,9 @@ let characters = {
               "Avatar_Boothill_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -45058,15 +43180,9 @@ let characters = {
               "Avatar_Rappa_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -45157,15 +43273,9 @@ let characters = {
               "Avatar_Rappa_00_Skill03_FPS_Hit1_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           },
@@ -45234,15 +43344,9 @@ let characters = {
               "Avatar_Rappa_00_Skill03_FPS_Hit2_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           },
@@ -45301,15 +43405,9 @@ let characters = {
               "Avatar_Rappa_00_Skill03_FPS_Hit3_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              0,
+              15,
+              0
             ],
             "hitSplits": []
           },
@@ -45394,15 +43492,9 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 75
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 45
-              }
+              75,
+              0,
+              45
             ],
             "hitSplits": []
           }
@@ -45480,15 +43572,9 @@ let characters = {
               "Avatar_Rappa_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -45600,15 +43686,9 @@ let characters = {
               "Avatar_Rappa_00_Skill03_SP0_Phase01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -45763,15 +43843,9 @@ let characters = {
               "Avatar_Rappa_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 6
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              6,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -45809,15 +43883,9 @@ let characters = {
               "Avatar_Rappa_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -46157,15 +44225,9 @@ let characters = {
               "Avatar_Constance_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -46273,15 +44335,9 @@ let characters = {
               "Avatar_Constance_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              30,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -46398,15 +44454,9 @@ let characters = {
               "Avatar_Constance_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -46545,15 +44595,9 @@ let characters = {
               "Avatar_Constance_00_Insert_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 9
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              9,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -46598,15 +44642,9 @@ let characters = {
               "Avatar_Constance_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -46963,15 +45001,9 @@ let characters = {
               "Avatar_TheHerta_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -47064,15 +45096,9 @@ let characters = {
               "Avatar_TheHerta_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 45
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              45,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -47178,15 +45204,9 @@ let characters = {
               "Avatar_TheHerta_00_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -47340,15 +45360,9 @@ let characters = {
               "Avatar_TheHerta_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -47497,15 +45511,9 @@ let characters = {
               "Avatar_TheHerta_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -47543,15 +45551,9 @@ let characters = {
               "Avatar_TheHerta_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -47882,15 +45884,9 @@ let characters = {
               "Avatar_Aglaea_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -47981,15 +45977,9 @@ let characters = {
               "Avatar_Aglaea_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -48102,15 +46092,9 @@ let characters = {
               "Avatar_Aglaea_00_Skill02_Camera_Self"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -48188,15 +46172,9 @@ let characters = {
               "Avatar_Aglaea_00_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -48349,15 +46327,9 @@ let characters = {
               "Avatar_Aglaea_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -48517,15 +46489,9 @@ let characters = {
               "Avatar_Aglaea_00_Bonus_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -48564,15 +46530,9 @@ let characters = {
               "Avatar_Aglaea_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -48661,15 +46621,9 @@ let characters = {
               "Servant_AglaeaServant_00_Skill11_Camera_Charm"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           }
@@ -48751,15 +46705,9 @@ let characters = {
               "Servant_Aglaea_00_PassiveSkill01_ForceKill_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -48816,15 +46764,9 @@ let characters = {
               "Servant_AglaeaServant_00_BattleCry"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -48886,15 +46828,9 @@ let characters = {
               "Servant_AglaeaServant_00_DeathRattle"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -49242,15 +47178,9 @@ let characters = {
               "Avatar_Tribbie_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           }
@@ -49342,15 +47272,9 @@ let characters = {
               "Avatar_Tribbie_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -49479,15 +47403,9 @@ let characters = {
               "Avatar_Tribbie_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -49568,15 +47486,9 @@ let characters = {
               "Avatar_Tribbie_00_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              0,
+              15,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -49614,15 +47526,9 @@ let characters = {
               "Avatar_Tribbie_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -49928,15 +47834,9 @@ let characters = {
               "Avatar_Mydeimos_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -50044,15 +47944,9 @@ let characters = {
               "Avatar_Mydeimos_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -50157,15 +48051,9 @@ let characters = {
               "Avatar_Mydeimos_00_Skill21_Ability"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -50271,15 +48159,9 @@ let characters = {
               "Avatar_Mydeimos_00_Skill22_Camera02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              90,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -50418,15 +48300,9 @@ let characters = {
               "Avatar_Mydeimos_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -50563,15 +48439,9 @@ let characters = {
               "Avatar_Mydeimos_00_PassiveSkill01_InsertExit"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -50616,15 +48486,9 @@ let characters = {
               "Avatar_Mydeimos_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -50932,15 +48796,9 @@ let characters = {
               "Avatar_Anaxa_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -51048,15 +48906,9 @@ let characters = {
               "Avatar_Anaxa_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -51135,15 +48987,9 @@ let characters = {
               "Avatar_Anaxa_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -51247,15 +49093,9 @@ let characters = {
               "Avatar_Anaxa_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -51289,15 +49129,9 @@ let characters = {
               "Avatar_Anaxa_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -51622,15 +49456,9 @@ let characters = {
               "Avatar_Cipher_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -51783,15 +49611,9 @@ let characters = {
               "Avatar_Cipher_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -51920,15 +49742,9 @@ let characters = {
               "Avatar_Cipher_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              90,
+              0,
+              60
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -52057,15 +49873,9 @@ let characters = {
               "Avatar_Cipher_00_PassiveSkill01_Insert_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -52110,15 +49920,9 @@ let characters = {
               "Avatar_Cipher_00_SkillMazeInLevel_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -52446,15 +50250,9 @@ let characters = {
               "Avatar_Castorice_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -52562,15 +50360,9 @@ let characters = {
               "Avatar_Castorice_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -52677,15 +50469,9 @@ let characters = {
               "Avatar_Castorice_00_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -52829,15 +50615,9 @@ let characters = {
               "Avatar_Castorice_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -52967,15 +50747,9 @@ let characters = {
               "Avatar_Castorice_00_PassiveSkill_1"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -53011,15 +50785,9 @@ let characters = {
               "Avatar_Castorice_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -53094,15 +50862,9 @@ let characters = {
               "Servant_CastoriceServant_Skill01_Ready"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -53203,15 +50965,9 @@ let characters = {
               "Servant_CastoriceServant_Skill02_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           },
@@ -53271,15 +51027,9 @@ let characters = {
               "Servant_CastoriceServant_Skill21_Skill01toSkill21_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           },
@@ -53339,15 +51089,9 @@ let characters = {
               "Servant_CastoriceServant_Skill22_Skill01toSkill22_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -53442,15 +51186,9 @@ let characters = {
               "Servant_CastoriceServant_Skill23_ReadytoFly_Camera03"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -53510,15 +51248,9 @@ let characters = {
               "Servant_CastoriceServant_Together_Phase01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -53590,15 +51322,9 @@ let characters = {
               "Servant_CastoriceServant_00_BattleCry"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -53690,15 +51416,9 @@ let characters = {
               "Servant_CastoriceServant_PassiveInsertAbility_NoneCasterSummonerCamera"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -54049,15 +51769,9 @@ let characters = {
               "Avatar_Phainon_00_Skill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -54139,15 +51853,9 @@ let characters = {
               "Avatar_Phainon_00_Skill11_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              90,
+              0,
+              60
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -54260,15 +51968,9 @@ let characters = {
               "Avatar_Phainon_00_Skill02_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -54406,15 +52108,9 @@ let characters = {
               "Avatar_Phainon_00_Skill21_Insert_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              30,
+              15,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -54565,15 +52261,9 @@ let characters = {
               "Avatar_Phainon_00_Skill22_v2_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 10
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              10,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -54710,15 +52400,9 @@ let characters = {
               "Avatar_Phainon_00_Skill31_Phase2"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -54848,15 +52532,9 @@ let characters = {
               "Avatar_Phainon_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -55018,15 +52696,9 @@ let characters = {
               "Avatar_Phainon_00_PassiveSkill02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -55079,15 +52751,9 @@ let characters = {
               "Avatar_Phainon_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -55405,15 +53071,9 @@ let characters = {
               "Avatar_Hyacine_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -55535,15 +53195,9 @@ let characters = {
               "Avatar_Hyacine_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -55716,15 +53370,9 @@ let characters = {
               "Avatar_Hyacine_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -55863,15 +53511,9 @@ let characters = {
               "Avatar_Hyacine_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -55907,15 +53549,9 @@ let characters = {
               "Avatar_Hyacine_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -55989,15 +53625,9 @@ let characters = {
               "Servant_HyacineServant_00_Insert_Camera_Charm"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -56096,15 +53726,9 @@ let characters = {
               "Servant_HyacineServant_00_PassiveSkill"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -56182,15 +53806,9 @@ let characters = {
               "Servant_HyacineServant_00_BattleCry"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -56247,15 +53865,9 @@ let characters = {
               "Servant_HyacineServant_00_DeathRattle"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -56613,15 +54225,9 @@ let characters = {
               "Avatar_Harscyline_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -56744,15 +54350,9 @@ let characters = {
               "Avatar_Harscyline_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -56911,15 +54511,9 @@ let characters = {
               "Avatar_Harscyline_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -57058,15 +54652,9 @@ let characters = {
               "Avatar_Harscyline_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -57106,15 +54694,9 @@ let characters = {
               "Avatar_Harscyline_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -57431,15 +55013,9 @@ let characters = {
               "Avatar_Cerydra_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -57581,15 +55157,9 @@ let characters = {
               "Avatar_Cerydra_00_Skill02_3_Camera_TimeLine"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -57694,15 +55264,9 @@ let characters = {
               "Avatar_Cerydra_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -57821,15 +55385,9 @@ let characters = {
               "Avatar_Cerydra_00_PassiveSkill"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -57868,15 +55426,9 @@ let characters = {
               "Avatar_Cerydra_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -58192,15 +55744,9 @@ let characters = {
               "Avatar_Evernight_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -58353,15 +55899,9 @@ let characters = {
               "Avatar_Evernight_00_Skill02_2_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -58513,15 +56053,9 @@ let characters = {
               "Avatar_Evernight_00_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -58646,15 +56180,9 @@ let characters = {
               "Avatar_Evernight_00_Skill03_Phase02_Charge"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              }
+              0,
+              90,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -58826,15 +56354,9 @@ let characters = {
               "Avatar_Evernight_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -58876,15 +56398,9 @@ let characters = {
               "Avatar_Evernight_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -58977,15 +56493,9 @@ let characters = {
               "Servant_EvernightServant_00_Skill01_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -59069,15 +56579,9 @@ let characters = {
               "Servant_EvernightServant_00_Skill11_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              90,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -59147,15 +56651,9 @@ let characters = {
               "Servant_EvernightServant_00_PassiveSkill01_Resummon"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -59197,15 +56695,9 @@ let characters = {
               "Servant_EvernightServant_00_BattleCry"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -59282,15 +56774,9 @@ let characters = {
               "Servant_EvernightServant_00_DeathRattle"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -59640,15 +57126,9 @@ let characters = {
               "Avatar_DanHengPT_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -59772,15 +57252,9 @@ let characters = {
               "Avatar_DanHengPT_00_BE_AddShield"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -59964,15 +57438,9 @@ let characters = {
               "Avatar_DanHengPT_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -60131,15 +57599,9 @@ let characters = {
               "Avatar_DanHengPT_00_BE_InsertAttack_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -60180,15 +57642,9 @@ let characters = {
               "Avatar_DanHengPT_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -60530,15 +57986,9 @@ let characters = {
               "Avatar_Cyrene_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -60620,15 +58070,9 @@ let characters = {
               "Avatar_Cyrene_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              }
+              30,
+              15,
+              0
             ],
             "hitSplits": []
           }
@@ -60735,15 +58179,9 @@ let characters = {
               "Avatar_Cyrene_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -60878,15 +58316,9 @@ let characters = {
               "Avatar_Cyrene_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -60970,15 +58402,9 @@ let characters = {
               "Avatar_Cyrene_00_Skill31_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -61117,15 +58543,9 @@ let characters = {
               "Avatar_Cyrene_00_PassiveSkill_1"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -61164,15 +58584,9 @@ let characters = {
               "Avatar_Cyrene_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -61248,15 +58662,9 @@ let characters = {
               "Servant_CyreneServant_00_Skill01_VisualPrepare"
             ],
             "toughnessList": [
-              {
-                "Value": 5
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              5,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -61339,15 +58747,9 @@ let characters = {
               "Servant_CyreneServant_00_Skill02_VisualPrepare"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -61433,15 +58835,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -61524,15 +58920,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -61610,15 +59000,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY03"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -61691,15 +59075,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY04"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -61815,15 +59193,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY05"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -61911,15 +59283,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY06"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -61987,15 +59353,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY07"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -62073,15 +59433,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY08"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -62219,15 +59573,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY09"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -62329,15 +59677,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY10"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -62405,15 +59747,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY11"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -62496,15 +59832,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY12"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -62602,15 +59932,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY13"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -62683,15 +60007,9 @@ let characters = {
               "Servant_CyreneServant_00_SkillCY14"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -62766,15 +60084,9 @@ let characters = {
               "Servant_CyreneServant_00_EnterBattle"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -62819,15 +60131,9 @@ let characters = {
               "Servant_CyreneServant_00_BattleCry"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -63194,15 +60500,9 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -63269,15 +60569,9 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           },
@@ -63342,15 +60636,9 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           }
@@ -63483,15 +60771,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -63622,15 +60904,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -63739,15 +61015,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -63869,15 +61139,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              15,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -63918,15 +61182,9 @@ let characters = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -64045,15 +61303,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 5
-              },
-              {
-                "Value": 20
-              },
-              {
-                "Value": 0
-              }
+              5,
+              20,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -64425,15 +61677,9 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 15
-              }
+              30,
+              0,
+              15
             ],
             "hitSplits": []
           }
@@ -64536,15 +61782,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -64682,15 +61922,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -64776,15 +62010,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -64823,15 +62051,9 @@ let characters = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -64980,15 +62202,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              15,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -65318,15 +62534,9 @@ let characters = {
               "Avatar_PlayerBoy_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -65404,15 +62614,9 @@ let characters = {
               "Avatar_PlayerBoy_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -65519,15 +62723,9 @@ let characters = {
               "Avatar_PlayerBoy_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -65603,15 +62801,9 @@ let characters = {
               "Avatar_PlayerBoy_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -65702,15 +62894,9 @@ let characters = {
               "Avatar_PlayerBoy_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -65799,15 +62985,9 @@ let characters = {
               "Avatar_PlayerBoy_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -65838,15 +63018,9 @@ let characters = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -66146,15 +63320,9 @@ let characters = {
               "Avatar_PlayerBoy_10_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -66223,15 +63391,9 @@ let characters = {
               "Avatar_PlayerBoy_10_Skill11_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -66338,15 +63500,9 @@ let characters = {
               "Avatar_PlayerBoy_10_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -66445,15 +63601,9 @@ let characters = {
               "Avatar_PlayerBoy_10_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -66572,15 +63722,9 @@ let characters = {
               "Avatar_PlayerBoy_10_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -66615,15 +63759,9 @@ let characters = {
               "Avatar_PlayerBoy_10_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -66922,15 +64060,9 @@ let characters = {
               "Avatar_PlayerBoy_20_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -67023,15 +64155,9 @@ let characters = {
               "Avatar_PlayerBoy_20_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              30,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -67139,15 +64265,9 @@ let characters = {
               "Avatar_PlayerBoy_20_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -67229,15 +64349,9 @@ let characters = {
               "Avatar_PlayerBoy_20_PassiveSkill_01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -67271,15 +64385,9 @@ let characters = {
               "Avatar_PlayerBoy_20_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -67584,15 +64692,9 @@ let characters = {
               "Avatar_PlayerBoy_30_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -67673,15 +64775,9 @@ let characters = {
               "Avatar_PlayerBoy_30_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -67781,15 +64877,9 @@ let characters = {
               "Avatar_PlayerBoy_30_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -67836,15 +64926,9 @@ let characters = {
               "Avatar_PlayerBoy_30_Skill21_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -67939,15 +65023,9 @@ let characters = {
               "Avatar_PlayerBoy_30_Skill03_Phase02_Charge"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -68071,15 +65149,9 @@ let characters = {
               "Avatar_PlayerBoy_30_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -68114,15 +65186,9 @@ let characters = {
               "Avatar_PlayerBoy_30_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -68211,15 +65277,9 @@ let characters = {
               "Servant_PlayerBoyServant_30_Skill01_Camera_Charm"
             ],
             "toughnessList": [
-              {
-                "Value": 15
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              15,
+              30,
+              0
             ],
             "hitSplits": []
           }
@@ -68301,15 +65361,9 @@ let characters = {
               "Servant_PlayerBoyServant_30_Skill11_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -68388,15 +65442,9 @@ let characters = {
               "Servant_PlayerBoyServant_30_Skill11_Together"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -68453,15 +65501,9 @@ let characters = {
               "Servant_PlayerBoyServant_30_BattleCry"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -68518,15 +65560,9 @@ let characters = {
               "Servant_PlayerBoyServant_30_DeathRattle"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -68879,15 +65915,9 @@ let characters = {
               "Avatar_Saber_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -68978,15 +66008,9 @@ let characters = {
               "Avatar_Saber_00_Skill11_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -69109,15 +66133,9 @@ let characters = {
               "Avatar_Saber_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -69226,15 +66244,9 @@ let characters = {
               "Avatar_Saber_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 120
-              },
-              {
-                "Value": 0
-              }
+              60,
+              120,
+              0
             ],
             "hitSplits": []
           }
@@ -69416,15 +66428,9 @@ let characters = {
               "Avatar_Saber_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -69459,15 +66465,9 @@ let characters = {
               "Avatar_Saber_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -69769,15 +66769,9 @@ let characters = {
               "Avatar_Archer_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -69918,15 +66912,9 @@ let characters = {
               "Avatar_Archer_00_Skill02_C01andC02_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -69956,15 +66944,9 @@ let characters = {
               "Avatar_Archer_00_Skill02Cancel_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -70073,15 +67055,9 @@ let characters = {
               "Avatar_Archer_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -70161,15 +67137,9 @@ let characters = {
               "Avatar_Archer_00_Bonus_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -70208,15 +67178,9 @@ let characters = {
               "Avatar_Archer_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -70533,15 +67497,9 @@ let characters = {
               "Avatar_Kafka_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -70649,15 +67607,9 @@ let characters = {
               "Avatar_Kafka_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -70796,15 +67748,9 @@ let characters = {
               "Avatar_Kafka_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -70916,15 +67862,9 @@ let characters = {
               "Avatar_Kafka_Passive1Atk_Ability_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -70967,15 +67907,9 @@ let characters = {
               "Avatar_Kafka_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -71307,15 +68241,9 @@ let characters = {
               "Avatar_Silwolf_00_PassiveSkill_RandomBug"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -71485,15 +68413,9 @@ let characters = {
               "Avatar_Silwolf_00_Skill02_Failed_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -71622,15 +68544,9 @@ let characters = {
               "Avatar_Silwolf_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              90,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -71769,15 +68685,9 @@ let characters = {
               "Avatar_Silwolf_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -71815,15 +68725,9 @@ let characters = {
               "Avatar_Silwolf_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -72136,15 +69040,9 @@ let characters = {
               "Avatar_Ren_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -72245,15 +69143,9 @@ let characters = {
               "Avatar_Ren_00_Skill11_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -72378,15 +69270,9 @@ let characters = {
               "Avatar_Ren_00_Bonus_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -72555,15 +69441,9 @@ let characters = {
               "Avatar_Ren_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -72686,15 +69566,9 @@ let characters = {
               "Avatar_Ren_00_Passive1Atk02_Ability"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              }
+              0,
+              30,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -72733,15 +69607,9 @@ let characters = {
               "Avatar_Ren_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -73047,15 +69915,9 @@ let characters = {
               "Avatar_Jingliu_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -73148,15 +70010,9 @@ let characters = {
               "Avatar_Jingliu_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -73261,15 +70117,9 @@ let characters = {
               "Avatar_Jingliu_PassiveAtk_Camera"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": []
           }
@@ -73393,15 +70243,9 @@ let characters = {
               "Avatar_Jingliu_00_Skill03_EnterReady"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              }
+              60,
+              0,
+              60
             ],
             "hitSplits": []
           }
@@ -73568,15 +70412,9 @@ let characters = {
               "Avatar_Jingliu_00_PassiveAtkReady_Phase01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -73614,15 +70452,9 @@ let characters = {
               "Avatar_Jingliu_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -73924,15 +70756,9 @@ let characters = {
               "Avatar_Sparkle_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -74056,15 +70882,9 @@ let characters = {
               "Avatar_Sparkle_00_Skill02_Others_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -74187,15 +71007,9 @@ let characters = {
               "Avatar_Sparkle_00_Skill03_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -74315,15 +71129,9 @@ let characters = {
               "Avatar_Sparkle_00_Rank06_BP"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -74357,15 +71165,9 @@ let characters = {
               "Avatar_Sparkle_00_SkillMazeInLevel"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -74706,15 +71508,9 @@ let characters = {
               "Avatar_BlackSwan_00_Skill01_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -74860,15 +71656,9 @@ let characters = {
               "Avatar_BlackSwan_00_Skill02_Phase02"
             ],
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 30
-              }
+              60,
+              0,
+              30
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -75000,15 +71790,9 @@ let characters = {
               "Avatar_BlackSwan_00_Skill03_Cutin"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -75192,15 +71976,9 @@ let characters = {
               "Avatar_BlackSwan_00_PassiveSkill01"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {
@@ -75243,15 +72021,9 @@ let characters = {
               "Avatar_BlackSwan_00_SkillMazeInLevel_Insert"
             ],
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": [],
             "extraEffects": {

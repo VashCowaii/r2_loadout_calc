@@ -648,15 +648,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -698,15 +692,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -804,15 +792,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -843,15 +825,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1079,15 +1055,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1115,15 +1085,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1208,15 +1172,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1244,15 +1202,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1326,15 +1278,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1362,15 +1308,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1411,15 +1351,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1447,15 +1381,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1496,15 +1424,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1532,15 +1454,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1581,15 +1497,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1617,15 +1527,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1690,15 +1594,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1726,15 +1624,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1786,15 +1678,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -1822,15 +1708,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3009,15 +2889,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3180,15 +3054,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3214,15 +3082,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3262,15 +3124,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3296,15 +3152,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3344,15 +3194,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3378,15 +3222,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3426,15 +3264,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3460,15 +3292,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3508,15 +3334,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3542,15 +3362,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3590,15 +3404,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3624,15 +3432,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3672,15 +3474,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3706,15 +3502,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3754,15 +3544,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3788,15 +3572,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3836,15 +3614,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3870,15 +3642,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3918,15 +3684,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -3952,15 +3712,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4000,15 +3754,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4034,15 +3782,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4082,15 +3824,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4116,15 +3852,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4164,15 +3894,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4198,15 +3922,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4246,15 +3964,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4280,15 +3992,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4328,15 +4034,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4362,15 +4062,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4410,15 +4104,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4444,15 +4132,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4492,15 +4174,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4526,15 +4202,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4574,15 +4244,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4608,15 +4272,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4656,15 +4314,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4690,15 +4342,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4738,15 +4384,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4772,15 +4412,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4820,15 +4454,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4854,15 +4482,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4948,15 +4570,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -4996,15 +4612,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5044,15 +4654,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5092,15 +4696,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5305,15 +4903,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5355,15 +4947,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5405,15 +4991,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5455,15 +5035,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5505,15 +5079,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -5555,15 +5123,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6010,15 +5572,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 180
-              },
-              {
-                "Value": 0
-              }
+              0,
+              180,
+              0
             ],
             "hitSplits": []
           }
@@ -6050,15 +5606,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6100,15 +5650,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6136,15 +5680,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6186,15 +5724,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6222,15 +5754,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6274,15 +5800,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 180
-              },
-              {
-                "Value": 0
-              }
+              0,
+              180,
+              0
             ],
             "hitSplits": []
           }
@@ -6314,15 +5834,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6366,15 +5880,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6422,15 +5930,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -6459,15 +5961,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6525,15 +6021,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6591,15 +6081,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6627,15 +6111,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6682,15 +6160,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6734,15 +6206,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 180
-              },
-              {
-                "Value": 0
-              }
+              0,
+              180,
+              0
             ],
             "hitSplits": []
           }
@@ -6773,15 +6239,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6825,15 +6285,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 180
-              },
-              {
-                "Value": 0
-              }
+              0,
+              180,
+              0
             ],
             "hitSplits": []
           }
@@ -6864,15 +6318,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -6920,15 +6368,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              }
+              0,
+              90,
+              0
             ],
             "hitSplits": []
           }
@@ -7017,15 +6459,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 120
-              },
-              {
-                "Value": 0
-              }
+              0,
+              120,
+              0
             ],
             "hitSplits": []
           }
@@ -7055,15 +6491,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7110,15 +6540,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7146,15 +6570,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7195,15 +6613,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7237,15 +6649,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              }
+              0,
+              60,
+              0
             ],
             "hitSplits": []
           }
@@ -7291,15 +6697,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 90
-              },
-              {
-                "Value": 0
-              }
+              0,
+              90,
+              0
             ],
             "hitSplits": []
           }
@@ -7325,15 +6725,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7380,15 +6774,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7416,15 +6804,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7485,15 +6867,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7521,15 +6897,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7570,15 +6940,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7619,15 +6983,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7668,15 +7026,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7725,15 +7077,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7761,15 +7107,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7829,15 +7169,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7865,15 +7199,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -7917,15 +7245,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 120
-              },
-              {
-                "Value": 0
-              }
+              0,
+              120,
+              0
             ],
             "hitSplits": []
           }
@@ -7953,15 +7275,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8005,15 +7321,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 120
-              },
-              {
-                "Value": 0
-              }
+              0,
+              120,
+              0
             ],
             "hitSplits": []
           }
@@ -8041,15 +7351,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8089,15 +7393,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8166,15 +7464,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8202,15 +7494,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8269,15 +7555,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8305,15 +7585,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8357,15 +7631,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 180
-              },
-              {
-                "Value": 0
-              }
+              0,
+              180,
+              0
             ],
             "hitSplits": []
           }
@@ -8397,15 +7665,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8449,15 +7711,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 180
-              },
-              {
-                "Value": 0
-              }
+              0,
+              180,
+              0
             ],
             "hitSplits": []
           }
@@ -8488,15 +7744,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8540,15 +7790,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 180
-              },
-              {
-                "Value": 0
-              }
+              0,
+              180,
+              0
             ],
             "hitSplits": []
           }
@@ -8579,15 +7823,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8633,15 +7871,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8686,15 +7918,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8739,15 +7965,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8795,15 +8015,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8849,15 +8063,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8905,15 +8113,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -8959,15 +8161,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9014,15 +8210,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9064,15 +8254,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9114,15 +8298,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9164,15 +8342,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9214,15 +8386,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9264,15 +8430,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9314,15 +8474,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9364,15 +8518,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9414,15 +8562,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9464,15 +8606,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9931,15 +9067,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -9973,15 +9103,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10016,15 +9140,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10230,15 +9348,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -10266,15 +9378,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -10302,15 +9408,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -10339,15 +9439,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10378,15 +9472,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10428,15 +9516,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -10464,15 +9546,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -10500,15 +9576,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -10537,15 +9607,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10576,15 +9640,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10625,15 +9683,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10664,15 +9716,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10714,15 +9760,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10750,15 +9790,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10800,15 +9834,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10836,15 +9864,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10886,15 +9908,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10922,15 +9938,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -10972,15 +9982,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11006,15 +10010,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11040,15 +10038,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11076,15 +10068,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11126,15 +10112,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 30
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              30,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11162,15 +10142,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11212,15 +10186,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11246,15 +10214,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11280,15 +10242,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11316,15 +10272,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11366,15 +10316,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11402,15 +10346,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11496,15 +10434,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11530,15 +10462,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11564,15 +10490,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11600,15 +10520,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11650,15 +10564,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11684,15 +10592,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 60
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              60,
+              0,
+              0
             ],
             "hitSplits": []
           },
@@ -11718,15 +10620,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11754,15 +10650,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11804,15 +10694,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11840,15 +10724,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11900,15 +10778,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11936,15 +10808,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -11984,15 +10850,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12020,15 +10880,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12068,15 +10922,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12104,15 +10952,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12152,15 +10994,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12188,15 +11024,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12236,15 +11066,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12272,15 +11096,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12334,15 +11152,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12370,15 +11182,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12418,15 +11224,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12454,15 +11254,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12502,15 +11296,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12538,15 +11326,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12587,15 +11369,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12623,15 +11399,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12672,15 +11442,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12708,15 +11472,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12766,15 +11524,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12914,15 +11666,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -12948,15 +11694,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13007,15 +11747,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13041,15 +11775,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13133,15 +11861,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13167,15 +11889,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13215,15 +11931,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13249,15 +11959,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13398,15 +12102,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }
@@ -13434,15 +12132,9 @@ let battleEvents = {
             "maxLevel": 1,
             "configAbilityList": null,
             "toughnessList": [
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              },
-              {
-                "Value": 0
-              }
+              0,
+              0,
+              0
             ],
             "hitSplits": []
           }

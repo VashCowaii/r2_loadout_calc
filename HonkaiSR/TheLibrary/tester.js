@@ -4455,9 +4455,9 @@ const userTriggers = {
 
                                         ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
                                             <div class="traceToughnessTitleBoxToughnessRow">
-                                                ${currentInnerSkillVariant.toughnessList[0].Value ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0].Value/3}</span>] ` : ""}
-                                                ${currentInnerSkillVariant.toughnessList[1].Value ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1].Value/3}</span>] ` : ""}
-                                                ${currentInnerSkillVariant.toughnessList[2].Value ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2].Value/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[0] ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0]/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[1] ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1]/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[2] ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2]/3}</span>] ` : ""}
                                             </div>
                                         </div>` : ""}
                                         
@@ -4976,9 +4976,9 @@ const userTriggers = {
 
                                         ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
                                             <div class="traceToughnessTitleBoxToughnessRow">
-                                                ${currentInnerSkillVariant.toughnessList[0].Value ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0].Value/3}</span>] ` : ""}
-                                                ${currentInnerSkillVariant.toughnessList[1].Value ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1].Value/3}</span>] ` : ""}
-                                                ${currentInnerSkillVariant.toughnessList[2].Value ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2].Value/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[0] ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0]/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[1] ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1]/3}</span>] ` : ""}
+                                                ${currentInnerSkillVariant.toughnessList[2] ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2]/3}</span>] ` : ""}
                                             </div>
                                         </div>` : ""}
                                         
