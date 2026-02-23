@@ -1283,7 +1283,7 @@ let lightcones = {
     },
     "fixedStats": {},
     "skillName": "The Maiden in the Painting",
-    "desc": "Increases DMG dealt by the wearer's Follow-up ATKs by #1[i]%. If the current HP percentage of the target enemy is below or equal to #2[i]%, increases DMG dealt by Follow-up ATKs by an extra #3[i]%.",
+    "desc": "Increases DMG dealt by the wearer's Follow-Up ATKs by #1[i]%. If the current HP percentage of the enemy target is below or equal to #2[i]%, increases DMG dealt by Follow-Up ATKs by an extra #3[i]%.",
     "params": [
       [
         0.24,
@@ -3575,7 +3575,7 @@ let lightcones = {
       }
     },
     "skillName": "Long Night",
-    "desc": "Increases the wearer's CRIT DMG by #1[i]%. Increases DMG dealt by the wearer's Skill and Ultimate by #2[i]%. After the wearer uses Skill or Ultimate, gains Somnus Corpus. Upon triggering a Follow-up ATK, consumes Somnus Corpus, and increases DMG dealt by Follow-up ATK by #3[i]%.",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. Increases DMG dealt by the wearer's Skill and Ultimate by #2[i]%. After the wearer uses Skill or Ultimate, gains \"Somnus Corpus.\" Upon triggering a Follow-Up ATK, consumes \"Somnus Corpus,\" and increases DMG dealt by Follow-Up ATK by #3[i]%.",
     "params": [
       [
         0.36,
@@ -4031,7 +4031,7 @@ let lightcones = {
       }
     },
     "skillName": "One At A Time",
-    "desc": "Increase the wearer's CRIT Rate by #1[i]% and increases DMG dealt by Follow-up ATK by #2[i]%. After the wearer uses a Follow-up ATK, inflicts the target with the Tame state, stacking up to #4[i] time(s). When allies hit enemy targets under the Tame state, each Tame stack increases the CRIT DMG dealt by #3[i]%.",
+    "desc": "Increase the wearer's CRIT Rate by #1[i]% and increases DMG dealt by Follow-Up ATK by #2[i]%. After the wearer uses a Follow-Up ATK, inflicts the target with the \"Tame\" state, stacking up to #4[i] time(s). When allies hit enemy targets under the \"Tame\" state, each \"Tame\" stack increases the CRIT DMG dealt by #3[i]%.",
     "params": [
       [
         0.18,
@@ -4513,7 +4513,7 @@ let lightcones = {
       }
     },
     "skillName": "The Plum Fragrance In My Bones",
-    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer uses their Ultimate, increases all allies' DMG by #2[i]%, lasting for #3[i] turn(s). Should the wearer's Break Effect exceed or equal #4[i]%, 1 Skill Point will be recovered.\\nAt the start of each wave, all allies regenerate #5[f1] Energy immediately. Abilities of the same type cannot stack.",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer uses their Ultimate, increases all allies' DMG by #2[i]%, lasting for #3[i] turn(s). If the wearer's Break Effect exceeds or equals #4[i]%, 1 Skill Point will be recovered.\\nAt the start of each wave, all allies regenerate #5[f1] Energy immediately. Abilities of the same type cannot stack.",
     "params": [
       [
         0.6,
@@ -4676,7 +4676,7 @@ let lightcones = {
       }
     },
     "skillName": "All-In",
-    "desc": "Increases the wearer's DEF by #1[i]%. When the wearer provides a Shield to an ally, the wearer's CRIT DMG increases by #2[i]%, lasting for #3[i] turn(s). When the wearer's Follow-up ATK hits an enemy target, there is a #4[i]% base chance to increase the DMG taken by the attacked enemy target by #5[f1]%, lasting for #6[i] turn(s).",
+    "desc": "Increases the wearer's DEF by #1[i]%. When the wearer provides a Shield to an ally, the wearer's CRIT DMG increases by #2[i]%, lasting for #3[i] turn(s). When the wearer's Follow-Up ATK hits an enemy target, there is a #4[i]% base chance to increase the DMG taken by the attacked enemy target by #5[f1]%, lasting for #6[i] turn(s).",
     "params": [
       [
         0.4,
@@ -4760,7 +4760,7 @@ let lightcones = {
       }
     },
     "skillName": "Mental Training",
-    "desc": "Increases the wearer's CRIT DMG by #1[i]%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by #2[i]%, stacking up to #3[i] times. When using Ultimate to attack the enemy target, the wearer receives the Disputation effect, which increases DMG dealt by #4[i]% and enables their Follow-up ATKs to ignore #5[i]% of the target's DEF. This effect lasts for #6[i] turns.",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by #2[i]%, stacking up to #3[i] times. When using Ultimate to attack the enemy target, the wearer receives the \"Disputation\" effect, which increases DMG dealt by #4[i]% and enables their Follow-Up ATKs to ignore #5[i]% of the target's DEF. This effect lasts for #6[i] turns.",
     "params": [
       [
         0.2,
@@ -5998,7 +5998,7 @@ let lightcones = {
       }
     },
     "skillName": "Promise",
-    "desc": "Increases the wearer's CRIT Rate by #1[i]%. While the wearer is in battle, for every #3[i]% CRIT DMG that exceeds #2[i]%, the DMG dealt by Follow-up ATK increases by #4[i]%. This effect can stack up to #5[i] time(s). When the battle starts or after the wearer uses their Basic ATK, enables the DMG dealt by Ultimate or Follow-up ATK to ignore #6[i]% of the target's DEF, lasting for #7[i] turn(s).",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. While the wearer is in battle, for every #3[i]% CRIT DMG that exceeds #2[i]%, the DMG dealt by Follow-Up ATK increases by #4[i]%. This effect can stack up to #5[i] time(s). When the battle starts or after the wearer uses their Basic ATK, enables the DMG dealt by Ultimate or Follow-Up ATK to ignore #6[i]% of the target's DEF, lasting for #7[i] turn(s).",
     "params": [
       [
         0.16,
@@ -6552,7 +6552,7 @@ let lightcones = {
       }
     },
     "skillName": "Deeply Engrossed",
-    "desc": "Greatly increases the wearer's chance of getting attacked and increases CRIT DMG by #1[i]%. After the wearer uses Ultimate, receives 1 stack of Firedance, lasting for 2 turns and stacking up to #2[i] time(s). Each stack of Firedance increases the DMG dealt by the wearer's Follow-up ATK by #3[i]%.",
+    "desc": "Greatly increases the wearer's chance of getting attacked and increases CRIT DMG by #1[i]%. After the wearer uses Ultimate, receives 1 stack of \"Firedance,\" lasting for 2 turns and stacking up to #2[i] time(s). Each stack of \"Firedance\" increases the DMG dealt by the wearer's Follow-Up ATK by #3[i]%.",
     "params": [
       [
         0.36,
@@ -6710,7 +6710,7 @@ let lightcones = {
       }
     },
     "skillName": "Intimidation",
-    "desc": "Increases the wearer's CRIT Rate by #1[f1]%. When the wearer launches a Follow-up ATK, gains 1 stack of \"Luminflux,\" stacking up to #3[i] time(s). Each stack of \"Luminflux\" enables the Ultimate DMG dealt by the wearer to ignore #2[i]% of the target's DEF. When the wearer's turn ends, removes 1 stack of \"Luminflux.\"",
+    "desc": "Increases the wearer's CRIT Rate by #1[f1]%. When the wearer launches a Follow-Up ATK, gains 1 stack of \"Luminflux,\" stacking up to #3[i] time(s). Each stack of \"Luminflux\" enables the Ultimate DMG dealt by the wearer to ignore #2[i]% of the target's DEF. When the wearer's turn ends, removes 1 stack of \"Luminflux.\"",
     "params": [
       [
         0.15,
@@ -7583,7 +7583,7 @@ let lightcones = {
       }
     },
     "skillName": "Aspiration",
-    "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer launches Follow-up ATK, additionally regenerates #2[i] Energy and gains \"Presage,\" lasting for #3[i] turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by #4[i]%. When entering battle, the wearer regenerates #5[i] Energy and gains \"Presage,\" lasting for #6[i] turn(s).",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer launches Follow-Up ATK, additionally regenerates #2[i] Energy and gains \"Presage,\" lasting for #3[i] turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by #4[i]%. When entering battle, the wearer regenerates #5[i] Energy and gains \"Presage,\" lasting for #6[i] turn(s).",
     "params": [
       [
         0.36,
@@ -8093,7 +8093,7 @@ let lightcones = {
     },
     "fixedStats": {},
     "skillName": "Sweet Dream",
-    "desc": "Increases the wearer's provided Shield Effect by #1[i]%. When an ally target has a Shield, the DMG dealt increases by #2[i]%.",
+    "desc": "Increases the wearer's provided Shield Effect by #1[i]% and while any ally target has a Shield, the wearer's DMG dealt increases by #2[i]%.",
     "params": [
       [
         0.12,
@@ -8462,7 +8462,7 @@ let lightcones = {
       }
     },
     "skillName": "Longing",
-    "desc": "Increases the wearer's CRIT Rate by #1[i]%. The Ultimate DMG and Follow-up ATK DMG dealt by the wearer increase by #2[i]%.",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. The Ultimate DMG and Follow-Up ATK DMG dealt by the wearer increase by #2[i]%.",
     "params": [
       [
         0.12,
@@ -8921,7 +8921,7 @@ let lightcones = {
       }
     },
     "skillName": "Persistence",
-    "desc": "Increases the wearer's CRIT DMG by #1[i]%. The Skill DMG and Follow-up ATK DMG dealt by the wearer increase by #2[i]%.",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. The Skill DMG and Follow-Up ATK DMG dealt by the wearer increase by #2[i]%.",
     "params": [
       [
         0.24,
@@ -9335,6 +9335,70 @@ let lightcones = {
       34.5,
       27,
       1.3
+    ]
+  },
+  "Never Forget Her Flame": {
+    "lightconeID": 23050,
+    "name": "Never Forget Her Flame",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.75
+      },
+      "3": {
+        "DamageBreak": 0.9
+      },
+      "4": {
+        "DamageBreak": 1.05
+      },
+      "5": {
+        "DamageBreak": 1.2
+      }
+    },
+    "skillName": "Immolation",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When entering combat, increases Break DMG dealt by the wearer and another teammate who triggered combat by #2[i]%. If there is no teammate who triggered combat, applies this effect to the wearer and the teammate with the highest Break Effect. Effects of the same type cannot be stacked. When the wearer applies Weakness to an enemy target, recovers 1 Skill Point. This effect can only trigger once. And resets this trigger count when using Ultimate.",
+    "params": [
+      [
+        0.6,
+        0.32
+      ],
+      [
+        0.75,
+        0.42
+      ],
+      [
+        0.9,
+        0.52
+      ],
+      [
+        1.05,
+        0.62
+      ],
+      [
+        1.2,
+        0.72
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23050.png",
+    "preview": "image/light_cone_preview/23050.png",
+    "portrait": "image/light_cone_portrait/23050.png",
+    "imageOffset": [
+      -27,
+      -108,
+      1.18
     ]
   },
   "Though Worlds Apart": {
