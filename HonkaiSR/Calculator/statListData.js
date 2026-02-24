@@ -88,6 +88,7 @@ const greatTableKnowerOfAll = {
     "DEFFlatNULL": 0,
 
     "ElationDMG": 0,
+    "Weaken%": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
@@ -288,6 +289,8 @@ const WeaknessPhysical = greatTableIndex.WeaknessPhysical;
 
 const ElationDMG = greatTableIndex.ElationDMG;
 
+const WeakenPercent = greatTableIndex["Weaken%"];
+
 
 
 const battleTableKnowerOfAll = {
@@ -382,6 +385,16 @@ const propertyImagePaths = {
                 "display": "Empty",
                 "specific": "Empty",
                 "unit": ""
+            },
+        }
+    },
+    "Weaken": {
+        "icon": noIconPath,
+        "sets": {
+            [greatTableIndex["Weaken%"]]: {
+                "display": "Weaken %",
+                "specific": "Weaken %",
+                "unit": "%"
             },
         }
     },

@@ -10,4 +10,7 @@ global.calcAllowedSet = new Set([
     "Dan Heng • Permansor Terrae",
     "Trailblazer - Remembrance",
     "Saber",
+
+    "Natasha",
+    "Aglaea",
 ]);

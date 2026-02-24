@@ -153,6 +153,56 @@ const hitSplitters = {
             }
         ],
     },
+    "Natasha": {//done
+        "basic": [
+            {
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true,
+            },
+        ],
+        "basic2": [
+            {
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true,
+            },
+            {
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 0,
+                    "toughness": 0
+                },
+                "perHitMultiOverride": null,
+                "scalarOverride": "HP",
+            },
+        ],
+        "tech": [
+            {
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
+            }
+        ],
+    },
     "Gallagher": {//done
         "basic": [
             {
@@ -528,7 +578,7 @@ const hitSplitters = {
                     "energyRatio": 0,
                     "toughness": 0
                 },
-                "scalarOverride": null
+                "perHitMultiOverride": null
             },
             {
                 "all": {
@@ -601,5 +651,163 @@ const hitSplitters = {
                 "isAttackFirstHit": true
             },
         ]
+    },
+    "Aglaea": {
+        "basic": [
+            {
+              "primary": {
+                "hitRatio": 0.2,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.2,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.6,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "eba": [
+            {
+              "primary": {
+                "hitRatio": 0.25,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 0.25,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.25,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 0.25,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.25,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 0.25,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.25,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 0.25,
+                "toughness": 10
+              },
+              "isSourceLastHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 1,
+                "toughness": 10
+              },
+              "isMemo": true,
+              "blast": {
+                "hitRatio": 1,
+                "toughness": 5
+              },
+              "isSourceFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true,
+            }
+        ],
+        "tech": [
+            {
+              "all": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "memoSkill": [
+            {
+              "primary": {
+                "hitRatio": 0.3,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.3,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.1,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "blast": {
+                "hitRatio": 0.25,
+                "toughness": 5
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.1,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "blast": {
+                "hitRatio": 0.25,
+                "toughness": 5
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.2,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "blast": {
+                "hitRatio": 0.5,
+                "toughness": 5
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
     },
 }

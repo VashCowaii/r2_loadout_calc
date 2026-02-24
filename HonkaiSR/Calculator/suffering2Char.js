@@ -1996,10 +1996,11 @@ const battleActions = {
         let currentMulti = (customMulti ? customMulti(statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
         
 
-        let scalarOverride = atkEntry.scalarOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
-        if (scalarOverride) {currentMulti = scalarOverride;}
+        let perHitMultiOverride = atkEntry.perHitMultiOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
+        if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
+        let scalarToUse = atkEntry.scalarOverride ?? scalar;
 
-        let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar);//the stat that this attacks scales off of, so ATK or HP etc
+        let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalarToUse);//the stat that this attacks scales off of, so ATK or HP etc
 
         
         // console.log(multiOf)
@@ -2237,7 +2238,7 @@ const battleActions = {
             };
             
             const hitData = {
-                scalar,
+                scalar: scalarToUse,
                 bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
                 currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
@@ -7044,6 +7045,673 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Natasha": {//TODO: circle back and add weaken into the dmg calc functions  //TODO: skill cleanse later
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+            // let enhancedCheck = battleValues.nextBasicEnhanced;
+
+            // shouldHeal
+            // !enhancedCheck
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.natashaSkillHeal, target: null, endTurn: true};
+                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.natashaBasic, target: "enemy", endTurn: true}
+            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
+            return returnBasicCall;
+        },
+        "skillFunctions": {
+            natashaBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+
+                let skillRef = ATKObjects.natashaBasicREF ??= ATKObjects["Basic ATK"]["Behind the Kindness"].variant1;
+                if (!ATKObjects.natashaBasicATKOBJECT) {
+                    const rank = sourceTurn.rank;
+
+                    skillRef.hitSplits = rank >= 6 ? hitSplitters[sourceTurn.properName].basic2 : hitSplitters[sourceTurn.properName].basic;
+
+                    if (rank >= 6) {hitSplitters[sourceTurn.properName].basic2[1].perHitMultiOverride = 0.40;}
+
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Physical"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.natashaBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.natashaBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            natashaSkillHeal(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
+                let rank = sourceTurn.rank;
+                let e2 = rank >= 2;
+                
+                
+                if (!ATKObjects.natashaSkillHealHEALOBJECT) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    ATKObjects.natashaSkillHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[3],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+
+                    let buffName = turnLogic[characterName].buffNames.skillHOT;
+                    ATKObjects.natashaSkillHealHOTSHEET = {
+                        "stats": null,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 2 + 1,//the trace extends the duration by 1
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+    
+                }
+                const skillHOTSheet = ATKObjects.natashaSkillHealHOTSHEET;
+    
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+
+                battleActions.updateBuff(battleData,targetTurn,skillHOTSheet);
+
+                // let targetTurn = battleData.nameBasedTurns[target];
+                let healObject = ATKObjects.natashaSkillHealHEALOBJECT;
+                battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
+
+                // if (e2) {
+                //     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
+                //     buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                //     battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                //     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
+                // }
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            natashaUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.natashaUltimateREF ??= ATKObjects.Ultimate["Gift of Rebirth"].variant1;
+                let rank = sourceTurn.rank;
+
+                if (!ATKObjects.natashaUltimateHealHEALOBJECT) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.natashaUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.natashaUltimateHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+
+                    let buffName = turnLogic[characterName].buffNames.ultHOT;
+                    ATKObjects.natashaSUltHealHOTHEALSHEET = {
+                        "stats": null,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+    
+                }
+                // let ATKObject = ATKObjects.gallagherUltimateATKOBJECT;
+                let healObject = ATKObjects.natashaUltimateHealHEALOBJECT;
+                const allyPositions = battleData.allyPositions;
+                
+
+                if (rank >= 2) {
+                    const sub30Array = [];
+                    for (let ally of allyPositions) {
+                        const hpRatio = ally.currentHP / ally.maxHP;
+                        if (hpRatio <= 0.3) {
+                            sub30Array.push(ally);
+                        }
+                    }
+
+
+                    if (sub30Array.length) {
+                        const ultBuffSheet = ATKObjects.natashaSUltHealHOTHEALSHEET;
+                        battleActions.updateBuffBatchTargets(battleData,sub30Array,ultBuffSheet);
+                    }
+                }
+
+                
+
+
+                // let e4 = rank >= 4;
+                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
+                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
+                // for (let enemySlot of battleData.enemyPositions) {
+                //     besotted(battleData,sourceTurn,enemySlot,e4,values2);
+                // }
+
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
+                // poke("BasicATKStart",battleData,{source:"Gallagher"});
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
+                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
+
+                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
+                sourceTurn.ultyQueued = false;
+            },
+            natashaTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.natashaTechniqueREF ??= ATKObjects.Technique["Hypnosis Research"].variant1;
+
+                if (!ATKObjects.natashaTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.natashaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Physical"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.natashaTechniqueATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[3],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+
+                    ATKObjects.natashaTechWEAKENSHEET = {
+                        "stats": [WeakenPercent],
+                        [WeakenPercent]: values[1],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.techWeaken,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                const ATKObject = ATKObjects.natashaTechniqueATKObject;
+                const debuffSheet = ATKObjects.natashaTechWEAKENSHEET;
+                debuffSheet.AVApplied = battleData.sumAV;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
+                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
+                // for (let enemySlot of battleData.enemyPositions) {
+                //     besotted(battleData,sourceTurn,enemySlot,false,values2);
+                // }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+
+                const enemyPositions = battleData.enemyPositions;
+                // for (let enemyPosition of enemyPositions) {
+                //     battleActions.updateBuff(battleData,enemyPosition,buffSheet); 
+                // }
+                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet)
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [//skillHOT
+            {
+                "trigger": "HealStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+
+                    // let skillRef = ATKObjects.natashaTalentREF ??= ATKObjects.Talent["Innervation"].variant1;
+                    const logicRef = turnLogic[sourceTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    let values = ATKObjects.natashaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,ATKObjects.Talent["Innervation"].variant1,ownerTurn);
+                    const hpThreshold =  values[0];
+                    
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [HealingOutgoing], 
+                        [HealingOutgoing]: values[1],
+                        "source": "Talent",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.talentHeal,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    };
+
+                    if (hpRatio <= hpThreshold) {
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+                    else {
+                        removeBuff(battleData,ownerTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha Talent <=30%HP Healing bonus",
+                "owners": []
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const buffsObject = sourceTurn.buffsObject;
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffNames = turnLogic[ownerTurn.properName].buffNames;
+
+                    const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
+                    const skillHOTCheck = buffsObject[skillHOTName];
+
+                    const ultHOTName = this.ultHOTName ??= buffNames.ultHOT;
+                    const ultHOTCheck = buffsObject[ultHOTName];
+
+                    if (skillHOTCheck) {
+                        let skillRef = ATKObjects.natashaSkillHealREF
+                        let values = ATKObjects.natashaSkillHealREFVALUES
+
+                        // let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
+                        // let rank = sourceTurn.rank;
+                        // let e2 = rank >= 2;
+                        
+                        
+                        if (!ATKObjects.natashaSkillHealHOTOBJECT) {
+                            let characterName = ownerTurn.properName;
+                            let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                            ATKObjects.natashaSkillHealHOTOBJECT = {
+                                multipliers: {
+                                    primary: values[1],
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: values[4],
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: skillRef.slot
+                            }
+
+                            // let buffName = turnLogic[characterName].buffNames.lionsTail;
+                            // ATKObjects.natashaSkillHealEFFECTRESSHEET = {
+                            //     "stats": [EffectRES],
+                            //     [EffectRES]: 0.30,
+                            //     "source": characterName,
+                            //     "sourceOwner": sourceTurn.properName,
+                            //     "buffName": buffName,
+                            //     "duration": 2,
+                            //     "AVApplied": 0,
+                            //     "maxStacks": 1,
+                            //     "currentStacks": 1,
+                            //     "decay": false,
+                            //     "expireType": "EndTurn"
+                            // }
+            
+                        }
+
+                        // let targetTurn = battleData.nameBasedTurns[target];
+                        let healObject = ATKObjects.natashaSkillHealHOTOBJECT;
+                        battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
+
+                    }
+                    if (ultHOTCheck) {
+
+                        let skillRef = ATKObjects.natashaUltimateREF ??= ATKObjects.Ultimate["Gift of Rebirth"].variant1;
+                        //we aren't ref values from this since the values are from an eidolon
+                        
+                        
+                        if (!ATKObjects.natashaUltHealHOTOBJECT) {
+                            ATKObjects.natashaUltHealHOTOBJECT = {
+                                multipliers: {
+                                    primary: 0.06,
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: 160,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: skillRef.slot
+                            }
+                        }
+
+                        // let targetTurn = battleData.nameBasedTurns[target];
+                        let healObject = ATKObjects.natashaUltHealHOTOBJECT;
+                        battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
+
+                    }
+
+                    // if (ownerTurn.turnState) {
+                    //     let amount = 5;
+                    //     battleActions.updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Natasha - E2/Skill HoT turnstart listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    buffSheet = this.natashaTechWEAKENSHEET ??= {
+                        "stats": [HealingOutgoing],
+                        [HealingOutgoing]: 0.10,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceHealingBonus,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Natasha - Battlestart HealingOutgoing trace Healer",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.natashaUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Natasha - Ultimate queued - Ultimate",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const natashaTechnique = this.natashaTechnique ??= logicRef.skillFunctions.natashaTechnique;
+                        natashaTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "listenersToInjectLater": {//TODO: e1 proc technically counts as an ability use, but nobody would take advantage of that rn except for cyrene, which wouldn't be til later.
+            "e1HealOnceNatasha": {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    // const targetTurn = generalInfo.targetTurn;
+                    if (!sourceTurn.isEnemy) {return;}
+                    //only allow attacks from enemies, to natasha
+
+
+                    let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
+                    const namedTurns = battleData.nameBasedTurns;
+                    let tashaWasHit = false;
+                    for (let allyHit in targetsGotHit) {
+                        if (namedTurns[allyHit].properName === characterName) {
+                            tashaWasHit = true;
+                            break;
+                        }
+                    }
+
+                    if (tashaWasHit) {
+                        const hpRatio = ownerTurn.currentHP / ownerTurn.maxHP;
+
+                        if (hpRatio <= 0.30) {
+                            const logicRef = turnLogic[characterName];
+                            const ATKObjects = logicRef.ATKObjects;
+
+
+                            if (!ATKObjects.natashaE1HEALOBJECT) {
+            
+                                ATKObjects.natashaE1HEALOBJECT = {
+                                    multipliers: {
+                                        primary: 0.15,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: 400,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "E1"
+                                }
+                
+                            }
+                            // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+            
+                            // let targetTurn = battleData.nameBasedTurns[target];
+                            let healObject = ATKObjects.natashaE1HEALOBJECT;
+                            battleActions.healAlly(battleData,healObject,ownerTurn,ownerTurn,"E1",1,null);
+
+
+                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            //remove listener as it an only happen once per fight.
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha E1 once-per-battle healing",
+                "ownerTurn": {},
+            }
+        },
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        let characterName = ownerTurn.properName;
+    
+                        const logicRef = turnLogic[characterName];
+                        const ATKObjects = logicRef.ATKObjects;
+        
+        
+                        let attackEndings = battleData.battleListeners.AttackEnd ??= [];
+                        
+                        const listenerToInejct = ATKObjects.e1NatashaListener ??= logicRef.listenersToInjectLater.e1HealOnceNatasha;
+                        listenerToInejct.ownerTurn = ownerTurn;
+        
+                        attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+                    },
+                    "target": "self",
+                    "listenerName": "Exalted Sweep: energy regen on battleStart",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "AttackEnd",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let characterName = ownerTurn.properName;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        // const targetTurn = generalInfo.targetTurn;
+                        if (!sourceTurn.isEnemy) {return;}
+                        //only allow attacks from enemies, to natasha
+
+
+                        let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
+                        // const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
+                        const namedTurns = battleData.nameBasedTurns;
+                        for (let allyHit in targetsGotHit) {
+                            if (namedTurns[allyHit].properName === characterName) {
+                                battleActions.updateEnergy(battleData,5,ownerTurn,false,"E4: Miracle Cure");
+                                break;
+                            }
+                        }
+                    },
+                    "target": "allies",
+                    "listenerName": "Natasha E4 energy gain on attacked",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            // "nextBasicEnhanced": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "talentHeal": "Innervation",
+            "techWeaken": "Weaken (Natasha)",
+            "skillHOT": "Natasha Heal-Over-Time (Skill)",
+            "ultHOT": "Natasha Heal-Over-Time (Ult)",
+            "traceHealingBonus": "Natasha Trace Healer",
+        },
+        "characterValuesBattle": {},
+    },
     //Nihility
     "Silver Wolf": {
         logic(thisTurn,battleData) {
@@ -11241,7 +11909,7 @@ const turnLogic = {
 
                 if (!ATKObjects.saberBasicEnhancedATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[characterName].eba;
-                    hitSplitters[characterName].eba3[1].scalarOverride = values[3];//this assigns the multi to the enemies===1 extra dmg, that takes place between hit1 and hit2
+                    hitSplitters[characterName].eba3[1].perHitMultiOverride = values[3];//this assigns the multi to the enemies===1 extra dmg, that takes place between hit1 and hit2
 
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
@@ -11877,17 +12545,23 @@ const turnLogic = {
             // let desiredCasts = 5;
             // let maximumCasts = 5;
             const minimum = currentSP>0;
+            const basicIsEnhanced = statCalls.epicStacks && summonUp;
             // const skillIsUp = thisTurn.evernightSkillIsActive;
 
 
 
-            if (minimum && !summonUp && statCalls.memCharge != 1) {//thisTurn.numinosityIsActive
-                return {action: "Skill", points: -1, actionCall: shortCalls.rmcSkill, target: "self", endTurn: true};
+            // if (minimum && !summonUp && statCalls.memCharge != 1) {//thisTurn.numinosityIsActive
+            //     return {action: "Skill", points: -1, actionCall: shortCalls.rmcSkill, target: "self", endTurn: true};
+            // }
+
+            if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: shortCalls.rmcSkill, target: "self", endTurn: true};
+                return returnSkillCall;
             }
 
             if (!actionUsed) {
                 // const basicToCall = isEnhanced ? shortCalls.aggyBasicEnhanced : shortCalls.aggyBasicReg;
-                const basicIsEnhanced = statCalls.epicStacks && summonUp;
+                
                 const basicToCall = basicIsEnhanced ? shortCalls.rmcBasicEnhanced : shortCalls.rmcBasic;
                 return {action: "BasicATK", points: 1, actionCall: basicToCall, target: "enemy", endTurn: true};
             }
@@ -12979,6 +13653,1350 @@ const turnLogic = {
             "memsSupport": "Mem's Support",
             "memsSupportMemo": "Mem's Support (Memosprite)",
             "e6UltCrit": "Bearer of the Revelation",
+        },
+        "characterValuesBattle": {},
+    },
+    "Aglaea": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
+            const shortRef = this;
+            let actionUsed = false;
+
+            let statCalls = shortRef.characterValuesBattle;
+            let shortCalls = shortRef.skillFunctions;
+
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+            const isEnhanced = statCalls.supremeStanceActive;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: shortCalls.aggySkill, target: "self", endTurn: true};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {
+                const basicToCall = isEnhanced ? shortCalls.aggyBasicEnhanced : shortCalls.aggyBasicReg;
+                return {action: "BasicATK", points: isEnhanced ? 0 : 1, actionCall: basicToCall, target: "enemy", endTurn: true};
+            }
+            //default to basic atk when all else fails
+        },
+        "skillFunctions": {
+            aggyBasicReg(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aggyBasicRegREF ??= ATKObjects["Basic ATK"]["Thorned Nectar"].variant1;
+
+                if (!ATKObjects.aggyBasicRegATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.aggyBasicRegREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags;
+
+                    ATKObjects.aggyBasicRegATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.aggyBasicRegATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            aggySkill(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.aggySkillREF ??= ATKObjects.Skill["Rise, Exalted Renown"].variant1;
+                let values = ATKObjects.aggySkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot});
+                const summonUp = logicRef.characterValuesBattle.garmentIsActive;
+
+                if (summonUp) {
+                    if (!ATKObjects.aggySkillGarmentHEALOBJECT) {
+                        // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                        ATKObjects.aggySkillGarmentHEALOBJECT = {
+                            multipliers: {
+                                primary: values[0],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: null,
+                            DMGTags: [],
+                            slot: skillRef.slot
+                        }
+                    }
+                    let healObject = ATKObjects.aggySkillGarmentHEALOBJECT;
+                    const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
+                    battleActions.healAlly(battleData,healObject,garmentTurn,sourceTurn,skillRef.slot,1);
+                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:healTarget, targetSkill:skillRef.slot});
+                }
+                else {
+                    logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
+                    battleActions.actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea gained extra turn");
+                }
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                // if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            aggyBasicEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aggyBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant1;
+
+                if (!ATKObjects.aggyBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    let values = ATKObjects.aggyBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Basic","Attack","Joint"];
+                    const compositeCacheTag = tags + actionTags;
+
+                    const actionTags2 = ["Basic","Attack","Joint","Summon","Memosprite"];
+                    const compositeCacheTag2 = tags + actionTags;
+                    ATKObjects.aggyBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[1],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        isFUA: false,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                    ATKObjects.aggyBasicEnhancedGarmentATKOBJECT = {
+                        multipliers: {
+                            primary: values[2],
+                            blast: values[3],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        isFUA: false,
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2
+                        //yes, garmentmaker DOES inherit basic atk dmg on the joint attack, but ONLY the joint attack, jesus christ this game
+                    }
+
+                    const hitsRef = skillRef.hitSplits;
+                    hitsRef[hitsRef.length-1].isSourceLastHit = true;
+                    hitsRef[hitsRef.length-2].isSourceLastHit = true;
+                }
+                let ATKObject = ATKObjects.aggyBasicEnhancedATKOBJECT;
+                let ATKObject2 = ATKObjects.aggyBasicEnhancedGarmentATKOBJECT;
+                const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,garmentTurn,ATKObject,ATKObject2);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            addGarmentToField(battleData,sourceTurn) {
+                const garmentTurnObject = sourceTurn.aggyGarmentTURNEVENT;
+
+                garmentTurnObject.currentHP = garmentTurnObject.maxHP;//reset HP to full
+                garmentTurnObject.isDead = false;
+                garmentTurnObject.isActive = true;
+
+                garmentTurnObject.AV = garmentTurnObject.AVBase;//reset accumulated AV
+
+                //inserting into physical positions
+                const alliedSpots = battleData.allyPositions;
+                for (let i=0;i<alliedSpots.length;i++) {
+                    const currentTurn = alliedSpots[i];
+                    //look for aggy's position and put garment in AFTER her, slotwise, so if she's char1, garment is inserted between char1 and char2
+                    if (currentTurn.properName === sourceTurn.properName) {
+                        alliedSpots.splice(i+1,0,garmentTurnObject);
+                        break;
+                    }
+                }
+
+                // const logicRef = turnLogic[sourceTurn.properName];
+                const charValuesRef = sourceTurn.battleValues;
+
+                sourceTurn.activeSummons += 1;
+                sourceTurn.activeMemosprites += 1;
+                charValuesRef.garmentIsActive = true;
+
+                //inserting into the actual turn order
+                battleData.nextTurnAV.push(garmentTurnObject);
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: garmentTurnObject});
+                poke("AllyCreated",battleData,{targetTurn:garmentTurnObject});
+                battleActions.assignAttackTargetsEnemy(battleData);
+
+                battleActions.actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
+            },
+            garmentTurnAttack(battleData,memoTurn) {
+                // eventOwner: ownerTurn.name
+                const aggyTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const logicRef = turnLogic[aggyTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.garmentTurnAttackREF ??= ATKObjects["Memosprite Skill"]["Thorned Snare"].variant1;
+
+                if (!ATKObjects.garmentTurnAttackATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[aggyTurn.properName].memoSkill;
+                    let values = ATKObjects.garmentTurnAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,aggyTurn);
+                    const scalar = "ATK";
+                    // const tags = ["All","Basic","Lightning"];
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    // const actionTags = ["Basic","Attack"];
+                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const compositeCacheTag = tags + actionTags
+                    ATKObjects.garmentTurnAttackATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[1],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                    }
+                }
+                let ATKObject = ATKObjects.garmentTurnAttackATKOBJECT;
+
+                // console.log(memoTurn)
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
+                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,aggyTurn);
+                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
+            },
+            aggyUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                const valuesRef = sourceTurn.battleValues;
+
+                let skillRef = ATKObjects.aggyUltimateREF ??= ATKObjects.Ultimate["Dance, Destined Weaveress"].variant1;
+                let values = ATKObjects.aggyUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+
+                // const logicRef = turnLogic[characterName];
+                const summonUp = logicRef.characterValuesBattle.garmentIsActive;
+                if (summonUp) {
+                    if (!ATKObjects.aggyUltimateGarmentHEALOBJECT) {
+                        // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                        ATKObjects.aggyUltimateGarmentHEALOBJECT = {
+                            multipliers: {
+                                primary: 1,//as in heal 100%, the parameter for this doesn't exist in the ulty params, otherwise we'd be doing a values[x]
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: null,
+                            DMGTags: [],
+                            slot: skillRef.slot
+                        }
+                    }
+                    let healObject = ATKObjects.aggyUltimateGarmentHEALOBJECT;
+                    const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
+                    battleActions.healAlly(battleData,healObject,garmentTurn,sourceTurn,skillRef.slot,1);
+                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:healTarget, targetSkill:skillRef.slot});
+                }
+                else {
+                    logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
+                }
+
+
+                if (!ATKObjects.aggyUltimateSTANCESHEET) {
+                    const buffName = logicRef.buffNames.stance;
+                    // const rank = sourceTurn.rank;
+                    ATKObjects.aggyUltimateSTANCESHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: values[0],
+                        "statsOnHit": null,
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": rank>=4 ? 7 : 6,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let buffSheet = ATKObjects.aggyUltimateSTANCESHEET;
+
+                const energy = battleActions.updateEnergy;
+                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+                const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
+                const garmentBuffCheck = garmentTurn.buffsObject[logicRef.buffNames.spdStackMemo];
+
+                //only add supreme stance speed stacks if garment even has talent stacks
+                let stacksToInherit = garmentBuffCheck ? garmentBuffCheck.currentStacks : 0;
+                if (valuesRef.supremeStanceActive) {stacksToInherit = 0;}//if the countdown already exists, we can't inherit MORE stacks lol, so gotta stop that here
+                valuesRef.supremeStanceActive = true;
+                if (stacksToInherit) {
+                    //TODO: fix if she recasts and would accidentally inherit again
+                    buffSheet.currentStacks = stacksToInherit;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                }
+
+
+                if (rank >= 6) {
+                    if (!ATKObjects.aggyUltimateE6PENSHEET) {
+                        const buffName = logicRef.buffNames.e6Pen;
+                        // const rank = sourceTurn.rank;
+                        ATKObjects.aggyUltimateE6PENSHEET = {
+                            "stats": [ResistanceLightningPEN],
+                            [ResistanceLightningPEN]: 0.20,
+                            "statsOnHit": null,
+                            "source": "E6",
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+                    let buffSheet = ATKObjects.aggyUltimateE6PENSHEET;
+
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    battleActions.updateBuff(battleData,garmentTurn,buffSheet);
+                }
+
+
+
+
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                energy(battleData,skillRef.energyRegen,sourceTurn);
+
+
+                battleActions.actionAdvance(1,sourceTurn,battleData,"Aglaea Ult Advance");
+                const ActionEntry = sourceTurn.aggySupremeStanceCountdownTURNEVENT ??= {
+                    name:null,
+                    AV:10000/100,
+                    AVBase:10000/100,
+                    SPD:100,
+                    actionCounter: 0,
+                    turnState: 0,
+                    properName: "Aglaea Supreme Stance Timer",
+                    cantBeTargeted: true,
+                    isUniqueEvent: true,
+                    eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                    uniqueEventFunction: logicRef.skillFunctions.supremeStanceExpired,
+                    eventImage: "icon/skill/1402_ultimate.png",
+                };
+
+                if (ActionEntry.isActive) {
+                    ActionEntry.AV = ActionEntry.AVBase;//if this is an ulty recast, reset the timer by resetting the accumulated AV on the countdown event
+                }
+                else {
+                    ActionEntry.isActive = true;
+                    battleData.nextTurnAV.push(ActionEntry);
+                }
+                sourceTurn.ultyQueued = false;
+            },
+            supremeStanceExpired(battleData,eventTurn) {
+                const aggyTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
+                const garmentTurn = aggyTurn.aggyGarmentTURNEVENT;
+                // const logicRef = turnLogic[aggyTurn.properName];
+                const charValuesRef = aggyTurn.battleValues;
+                const wasNormalDeath = !charValuesRef.supremeStanceActive;
+                charValuesRef.supremeStanceActive = false;
+               
+                const logicRef = turnLogic[aggyTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let buffSheet = ATKObjects.aggyUltimateSTANCESHEET;
+                // const updateBuff = battleActions.updateBuff;
+                removeBuff(battleData,aggyTurn,buffSheet);
+                if (aggyTurn.rank >= 6) {
+                    let buffSheet = ATKObjects.aggyUltimateE6PENSHEET;
+                    removeBuff(battleData,aggyTurn,buffSheet);
+                    removeBuff(battleData,garmentTurn,buffSheet);
+                }
+
+                const eventName = eventTurn.properName;
+                eventTurn.isActive = false;
+                const nextAV = battleData.nextTurnAV;
+                const positions = battleData.allyPositions;
+                //removal from turn order
+                if (!wasNormalDeath) {
+                    for (let i=0;i<nextAV.length;i++) {
+                        let currentTurn = nextAV[i];
+                        if (currentTurn.properName === eventName) {
+                            nextAV.splice(i, 1);
+                            break;//we found the event to remove, so we need to obv remove it now
+                        }
+                    }
+                }
+
+
+                if (garmentTurn.isActive) {
+                    for (let i=0;i<nextAV.length;i++) {
+                        let deathTurn = nextAV[i];
+                        if (deathTurn.properName === garmentTurn) {
+                            nextAV.splice(i, 1);
+                            break;//we found the event to remove, so we need to obv remove it now
+                        }
+                    }
+                    //removal from actual lineup positions(for blast factors on enemy to ally attacks)
+                    for (let i=0;i<positions.length;i++) {
+                        let deathTurn = positions[i];
+                        if (deathTurn.properName === garmentTurn) {
+                            positions.splice(i, 1);
+                            break;//we found the event to remove, so we need to obv remove it now
+                        }
+                    }
+                    
+                    aggyTurn.activeSummons -= 1;
+                    aggyTurn.activeMemosprites -= 1;
+                    charValuesRef.garmentIsActive = false;
+
+                    garmentTurn.currentHP = 0;
+                    garmentTurn.isDead = true;
+                    garmentTurn.isActive = false;
+
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Remove", assignedTo: aggyTurn.properName, summonedBy: aggyTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: garmentTurn.eventImage, AV: battleData.sumAV});}
+                    battleActions.assignAttackTargetsEnemy(battleData);
+
+                    battleActions.updateEnergy(battleData,20,aggyTurn,false,"MemoTalent: Bloom of Drying Grass");
+
+                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: aggyTurn, summonedBy: aggyTurn, summonEvent: garmentTurn});
+                    poke("AllyDied",battleData,{targetTurn:garmentTurn});
+                }
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const inStance = currentTurn.battleValues.supremeStanceActive;
+
+                if (!ATKObjects.aggySupremeStanceSPDCONVERSION) {
+                    const characterName = currentTurn.properName;
+                    const buffName = turnLogic[characterName].buffNames.spdConversion;
+                    // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                    // let values = relicPathing[2];
+                    ATKObjects.aggySupremeStanceSPDCONVERSION = {
+                        "stats": [ATKFlat,ATKFlatNULL],
+                        [ATKFlat]: 0,
+                        [ATKFlatNULL]: -0,
+                        "source": "Trace",
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                const buffSheet = ATKObjects.aggySupremeStanceSPDCONVERSION;
+
+                const buffName = buffSheet.buffName;
+                const buffCheck = currentTurn.buffsObject[buffName];
+                const garmentTurn = currentTurn.aggyGarmentTURNEVENT;
+
+                const updateBuff = battleActions.updateBuff;
+                if (inStance) {
+                    const aggyRatio = 7.2;
+                    const garmentRatio = 3.6;
+                    const garmentTurnRef = currentTurn.aggyGarmentTURNEVENT;
+
+                    const currentStatsAggy = currentTurn.statTable;
+                    const currentStatsGarment = garmentTurnRef.statTable;
+
+                    const getSpeed = calcs.getSPDFinal;
+                    const aggySpeed = getSpeed(currentStatsAggy).SPDFinal;
+                    const garmentSpeed = getSpeed(currentStatsGarment).SPDFinal;
+                    const conversion = aggySpeed*aggyRatio + garmentSpeed*garmentRatio;
+
+                    if (buffCheck) {
+                        const statCheck = buffCheck[ATKFlat];
+                        if (statCheck === conversion) {return;}//if buff exists and the amount hasn't changed, then end it here
+                        else {
+                            //so if gallagher already has the buff, but the new conversion amount does NOT match the existing amount
+                            //then silently remove the old buff
+                            removeBuff(battleData,currentTurn,buffSheet,true);
+                            removeBuff(battleData,garmentTurn,buffSheet,true);
+                        }
+                    }
+
+                    buffSheet[ATKFlat] = conversion;
+                    buffSheet[ATKFlatNULL] = -conversion;
+                    updateBuff(battleData,currentTurn,buffSheet);
+                    updateBuff(battleData,garmentTurn,buffSheet);
+                }
+                //if we just exited the stance, then remove this
+                else if (buffCheck) {
+                    removeBuff(battleData,currentTurn,buffSheet);
+                    removeBuff(battleData,garmentTurn,buffSheet);
+                }
+            },
+            statCheckE6(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const inStance = currentTurn.battleValues.supremeStanceActive;
+
+                if (!ATKObjects.aggySupremeStanceSPDe6DMG) {
+                    const characterName = currentTurn.properName;
+                    const buffName = turnLogic[characterName].buffNames.e6DMG;
+                    // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                    // let values = relicPathing[2];
+                    ATKObjects.aggySupremeStanceSPDe6DMG = {
+                        "stats": [DamageBasic],
+                        [DamageBasic]: 0,
+                        "source": "E6",
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Joint"]
+                    }
+                }
+                const buffSheet = ATKObjects.aggySupremeStanceSPDe6DMG;
+
+                const buffName = buffSheet.buffName;
+                const buffCheck = currentTurn.buffsObject[buffName];
+                const garmentTurn = currentTurn.aggyGarmentTURNEVENT;
+
+                const updateBuff = battleActions.updateBuff;
+                if (inStance) {
+                    const garmentTurnRef = currentTurn.aggyGarmentTURNEVENT;
+
+                    const currentStatsAggy = currentTurn.statTable;
+                    const currentStatsGarment = garmentTurnRef.statTable;
+
+                    const getSpeed = calcs.getSPDFinal;
+                    const aggySpeed = getSpeed(currentStatsAggy).SPDFinal;
+                    const garmentSpeed = getSpeed(currentStatsGarment).SPDFinal;
+
+
+                    const stage3 = aggySpeed >= 320 || garmentSpeed >= 320;
+                    const stage2 = aggySpeed >= 240 || garmentSpeed >= 240;
+                    const stage1 = aggySpeed >= 160 || garmentSpeed >= 160;
+                    const bonusToGive = stage3 ? 0.60 : (stage2 ? 0.30 : (stage1 ? 0.10 : 0));
+
+                    //TODO: check this later if I can
+                    //rn there are several assumptions for e6 aggy, the first of which is that this is basic atk dmg isntead of joint atk vuln
+                    //the other assumption I'm making is that it's either or for the spd check and it applies to both
+                    //but the wording could easily also imply that it's a per-entity check AND bonus
+
+                    if (buffCheck) {
+                        const statCheck = buffCheck[DamageBasic];
+                        if (statCheck === bonusToGive) {return;}//if buff exists and the amount hasn't changed, then end it here
+                        else {
+                            //so if gallagher already has the buff, but the new conversion amount does NOT match the existing amount
+                            //then silently remove the old buff
+                            removeBuff(battleData,currentTurn,buffSheet,true);
+                            removeBuff(battleData,garmentTurn,buffSheet,true);
+                        }
+                    }
+
+                    buffSheet[DamageBasic] = bonusToGive;
+
+                    updateBuff(battleData,currentTurn,buffSheet);
+                    updateBuff(battleData,garmentTurn,buffSheet);
+                }
+                //if we just exited the stance, then remove this
+                else if (buffCheck) {
+                    removeBuff(battleData,currentTurn,buffSheet);
+                    removeBuff(battleData,garmentTurn,buffSheet);
+                }
+            },
+            aggyTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.aggyTechREF ??= ATKObjects.Technique["Meteoric Sunder"].variant1;
+
+                if (!ATKObjects.aggyTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.aggyTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Lightning"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.aggyTechATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.aggyTechATKObject
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                logicRef.characterValuesBattle.enemyWithSeam = battleData.primaryTarget;
+                logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+            seamStitchAdditionalDMG(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aggyTalentREF ??= ATKObjects["Talent"]["Rosy-Fingered"].variant1;
+                // let values = ownerTurn.aggyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                if (!ATKObjects.aggySeamStitchADDEDATKOBJECT) {
+                    let values = ATKObjects.aggyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const actionTags = ["Additional"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.aggySeamStitchADDEDATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            additional: values[0]
+                        },
+                        scalar,
+                        element: "Lightning",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.aggySeamStitchADDEDATKOBJECT;
+                
+                let targetTurn = logicRef.characterValuesBattle.enemyWithSeam;
+
+                battleActions.additionalDMGWrapper(battleData,sourceTurn,sourceTurn.properName,ATKObject,targetTurn,"Seam Stitch");
+            },
+            aggyE2Handler(battleData,sourceTurn,applyOrRemove) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                const valuesRef = sourceTurn.battleValues;
+                if (!ATKObjects.aggyE2DEFSHREDSHEET) {
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.aggyE2DEFSHREDSHEET = {
+                        "stats": [DEFShredAll],
+                        [DEFShredAll]: 0.14,
+                        "source": sourceTurn.properName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e2Shred,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        // "isDebuff": true,
+                        // "actionTags": ["FUA"]
+                    }
+                }
+                let buffSheet = ATKObjects.aggyE2DEFSHREDSHEET;
+                buffSheet.currentStacks = 1;
+                const buffName = buffSheet.buffName;
+                const buffCheck = sourceTurn.buffsObject[buffName];
+
+                // valuesRef.garmentIsActive
+
+                const updateBuff = battleActions.updateBuff;
+                const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
+                if (applyOrRemove === "Apply") {
+                    if (buffCheck && buffCheck.currentStacks === 3) {return;}
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                    if (valuesRef.garmentIsActive) {updateBuff(battleData,garmentTurn,buffSheet);}
+                }
+                else if (buffCheck) {
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                    removeBuff(battleData,garmentTurn,buffSheet);
+                }
+                
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "UpdateStatSPD",//SPD stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.isMemosprite) {
+                        const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                        if (ownerTurnRef.name != ownerTurn.name) {return;}
+                    }
+                    else if (sourceTurn.name != ownerTurn.name) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "The Myopic's Doom SPD check",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const fiftyPercent = ownerTurn.maxEnergy * 0.5;
+                    const currentEnergy = ownerTurn.currentEnergy;
+                    const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
+
+                    if (energyToRegen) {battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,true,"The Speeding Sol");}
+                },
+                "target": "self",
+                "listenerName": "The Speeding Sol: energy regen on battleStart",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "BattlePrep",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const rank = ownerTurn.rank;
+
+                    const charValuesRef = ownerTurn.battleValues;
+                    const buffNames = logicRef.buffNames;
+                    charValuesRef.enemyWithSeam = battleData.primaryTarget;
+                    // let targetTurn = charValuesRef.enemyWithSeam;
+
+                    // let values = ownerTurn.topazSkillREFVALUES = battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    ATKObjects.aggySeamStitchDEBUFFSHEET = {
+                        "stats": [VulnAll],
+                        [VulnAll]: rank >= 1 ? 0.15 : 0,
+                        "source": ownerTurn.properName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.seam,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                        // "actionTags": ["FUA"]
+                    }
+                    // let buffSheet = ownerTurn.aggySeamStitchDEBUFFSHEET
+                    // battleActions.updateBuff(battleData,targetTurn,buffSheet)
+
+
+
+                    // battleData.nameIndex[properName] = characterEntry;
+                    const aggyMenuStats = [...battleData.menuStats[ownerTurn.name]];
+                    let skillRef = ATKObjects.aggyTalentREF ??= ATKObjects["Talent"]["Rosy-Fingered"].variant1;
+                    let values = ATKObjects.aggyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    const SPDScalar = values[3];
+                    const HPScalar = values[4];
+                    const flatHP = values[5];
+
+
+                    // let AggroStats = calcs.getAggroFinal(menuStats);
+                    //     currentAggro: AggroStats.AggroFinal,
+                    //         baseAggro: AggroStats.AggroBaseFinal,
+
+
+                    Object.assign(aggyMenuStats,{
+                        "SPDBase": aggyMenuStats.SPDBase * SPDScalar,
+                        "SPDFlat": aggyMenuStats.SPDFlat * SPDScalar,
+                        "SPD%": aggyMenuStats["SPD%"],
+
+                        "HPBase": aggyMenuStats.HPBase * HPScalar,
+                        "HPFlat": aggyMenuStats.HPFlat * HPScalar + flatHP,
+                        "HP%": aggyMenuStats["HP%"],
+                        "LVL": 80,
+
+                        "CharacterAggroBase": characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+
+                        // "AggroBase": 0,"AggroBase%": 0,"Aggro%": 0,"AggroFlat": 0,
+                    });
+
+                    let SPDStats = calcs.getSPDFinal(aggyMenuStats);
+                    let HPStats = calcs.getHPFinal(aggyMenuStats);
+                    let AggroStats = calcs.getAggroFinal(aggyMenuStats);
+
+                    const skillFunctionsRef = logicRef.skillFunctions;
+                    const garmentTurnAttack = this.garmentTurnAttack ??= skillFunctionsRef.garmentTurnAttack;
+                    const ActionEntry = {
+                        AV:SPDStats.SPDActionValue,
+                        AVBase:SPDStats.SPDActionValue,
+                        SPD:SPDStats.SPDFinal,
+
+                        currentHP: HPStats.HPFinal,
+                        maxHP: HPStats.HPFinal,
+
+                        maxEnergy: ownerTurn.maxEnergy,
+
+                        currentAggro: AggroStats.AggroFinal,
+                        baseAggro: AggroStats.AggroBaseFinal,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        debuffCounter: 0,
+                        DOTCounter: 0,
+                        activeFinalMultipliers: {},
+                        finalMultiCounter: 0,
+                        shieldCounter: 0,
+                        shieldValueCurrent: 0,
+                        shieldValueMax: 0,
+                        activeShields: {},
+
+                        properName: "Garmentmaker",
+                        name: "aggyMemosprite",
+                        
+                        statTable: aggyMenuStats,
+                        statTableONHIT: new Array(greatTableSize).fill(0),
+                        buffsObject: {},
+                        teamDebuffs: {},
+                        buffsStartTurn: [],
+                        buffsEndTurn: [],
+                        tagSpecific: {},
+                        cacheTagValues: {
+                            "UpdateStatDamage": {
+                                //compositeCacheTag will define itself here when used, and the tag will be the key
+                            },
+                            "UpdateStatDEFShred": {},
+                            "UpdateStatPEN": {},
+                            "UpdateStatVulnerable": {},
+                            "UpdateStatCritRate": {},
+                            "UpdateStatCritDamage": {},
+                        },
+                        isDead: false,
+                        rank: ownerTurn.rank,
+                        element: ownerTurn.element,
+                        path: null,
+                        cantBeTargeted: false,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isMemosprite: true,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: garmentTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Garmentmaker"],
+
+                        deathFunction: skillFunctionsRef.supremeStanceExpired,
+                        deathParam: null,
+                    };
+                    battleData.nameIndex["Garmentmaker"] = "aggyMemosprite";
+
+                    // summaryTurns[properName] = 0;
+                    battleData.nameBasedTurns["aggyMemosprite"] = ActionEntry;
+                    ownerTurn.aggyGarmentTURNEVENT = ActionEntry;
+                    battleData.declaredMemosprites.push(ActionEntry);
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    ownerTurn.summonEventRef = "aggyGarmentTURNEVENT";
+                    ownerTurn.memospriteEventRef = "aggyGarmentTURNEVENT";
+                    
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Garmentmaker creation", bodyText: `Memosprite "${ActionEntry.properName}" entity constructed`});}
+                },
+                "target": "self",
+                "listenerName": "Aggy Garmentmaker construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+
+                    let charValuesRef = ownerTurn.battleValues;
+                    let targetTurn = charValuesRef.enemyWithSeam;
+
+                    if (!targetTurn || targetTurn.isDead) {charValuesRef.enemyWithSeam = null;}
+                },
+                "target": "self",
+                "listenerName": "Aggy Seam Stitch death removal",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // Financial Turmoil
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}//seam stitch is for AGGY's attacks, garment does not apply
+                    
+
+                    let charValuesRef = ownerTurn.battleValues;
+                    if (!charValuesRef.garmentIsActive) {return;}
+                    charValuesRef.enemyWithSeam = battleData.primaryTarget;
+                    let targetTurn = charValuesRef.enemyWithSeam;
+                    if (targetTurn === null || targetTurn.isDead) {return}//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let buffSheet = ATKObjects.aggySeamStitchDEBUFFSHEET;
+                    const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
+                    if (buffCheck) {return;}
+                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Seam stitch application listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "SummonOnFieldAdjustment",
+                condition(battleData,generalInfo) {
+                    // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+                    let ownerTurn = this.ownerTurn;
+                    const memoTurn = generalInfo.summonEvent;
+                    const summonAssignedTo = generalInfo.assignedTo;
+                    if (!memoTurn.isMemosprite || summonAssignedTo.name != ownerTurn.name || generalInfo.summonWas != "Remove") {return;}
+                    //if it's not a memosprite, if it wasn't assigned to aggy, and if it wasn't removed, then abort
+
+                    //memo talent when removed from field
+                    battleActions.updateEnergy(battleData,20,ownerTurn,false,"Memo Talent: Bloom of Drying Grass");
+
+
+                    let charValuesRef = ownerTurn.battleValues;
+                    const seamTarget = charValuesRef.enemyWithSeam;
+                    if (!seamTarget) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let buffSheet = ATKObjects.aggySeamStitchDEBUFFSHEET;
+                    const buffCheck = seamTarget.buffsObject[buffSheet.buffName];
+
+                    if (buffCheck) {removeBuff(battleData,seamTarget,buffSheet);}
+                    charValuesRef.enemyWithSeam = null;
+                },
+                "target": "self",
+                "listenerName": "Seam Stitch removal",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "SummonOnFieldAdjustment",
+                condition(battleData,generalInfo) {
+                    // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+                    let ownerTurn = this.ownerTurn;
+                    const memoTurn = generalInfo.summonEvent;
+
+                    const summonAssignedTo = generalInfo.assignedTo;
+                    if (!memoTurn.isMemosprite || generalInfo.summonWas != "Apply" || summonAssignedTo.name != ownerTurn.name) {return;}
+                    //if it's not a memosprite, if it's not applied, or if it's not applied to aggy, then abort
+
+                    let charValuesRef = ownerTurn.battleValues;
+
+                    if (charValuesRef.lastSpdStacksMemo) {
+                        charValuesRef.lastSpdStacksMemo = 1;//force it to 1 after confirming it had a value >= 1
+
+                        //garment is summoned by the ult BEFORE applying supreme stance
+                        //so we don't need to worry about assigning aggy's stacks here
+                        //also afaik there is no case where garment would ever be assigned stacks before
+                        //being summoned for the fist time, if that changes somehow then I need to redo this.
+
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        const buffSheet = ATKObjects.garmentTalentSPDSHEET;
+                        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Last Thread of Fate", bodyText: `Garmentmaker inherited one speed stack from prior life`});}
+                        battleActions.updateBuff(battleData,memoTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Last Thread of Fate stack monitor",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AdditionalTriggerAttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let charValuesRef = ownerTurn.battleValues;
+                    let targetTurn = charValuesRef.enemyWithSeam;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    
+                    if (!targetTurn || !targetsGotHit[targetTurn.name]) {return;}//if the enemy with seamstitch didn't even get hit, then abort
+                    
+                    if (sourceTurn.isMemosprite) {return;}
+                    else if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const seamStitchAdditionalDMG = this.seamStitchAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.seamStitchAdditionalDMG
+                    seamStitchAdditionalDMG(battleData,ownerTurn);
+                },
+                "target": "enemy",
+                "listenerName": "Seam Stitch additional dmg",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const rank = ownerTurn.rank;
+                    const e4Check = rank>=4;
+                    if (!sourceTurn.isMemosprite && !e4Check) {return;}//only garmentmaker's attacks will stack its talent
+                    else if (e4Check) {
+                        if (sourceTurn.isMemosprite) {
+                            const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                            if (ownerTurnRef.name != ownerTurn.name) {return;}
+                        }
+                        else if (sourceTurn.name != ownerTurn.name) {return;}
+                    }
+
+                    const memoOwnerTurn = e4Check ? ownerTurn : battleData.nameBasedTurns[sourceTurn.eventOwner];
+                    if (memoOwnerTurn.name != ownerTurn.name) {return;}//if this is not aggy's memosprite, then abort
+
+                    //basically at this point, the only way we would stack the talent is:
+                    //A) we're not E4 and the source was garmentmaker
+                    //or B) we're at E4 and the source was aglaea
+
+                    let charValuesRef = ownerTurn.battleValues;
+                    let targetTurn = charValuesRef.enemyWithSeam;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    if (!targetTurn || !targetsGotHit[targetTurn.name]) {return;}//if the enemy with seamstitch didn't even get hit, then abort
+
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!ATKObjects.garmentTalentSPDSHEET) {
+                        let skillRef = ATKObjects.aggyGarmentTalentREF ??= ATKObjects["Memosprite Talent"]["A Body Brewed by Tears"].variant1;
+                        let values = ATKObjects.aggyGarmentTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,memoOwnerTurn);
+
+                        const rank = ownerTurn.rank;
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.garmentTalentSPDSHEET = {
+                            "stats": [SPDFlat],
+                            [SPDFlat]: values[0],
+                            "source": "Memo Talent",
+                            "sourceOwner": memoOwnerTurn.properName,
+                            "buffName": buffNames.spdStackMemo,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": rank>=4 ? 7 : 6,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "removeOnDeath": true,
+                            // "isDebuff": true,
+                            // "actionTags": ["FUA"]
+                        }
+                    }
+                    const garmentTurn = ownerTurn.aggyGarmentTURNEVENT;
+                    const buffSheet = ATKObjects.garmentTalentSPDSHEET;
+                    const buffName = buffSheet.buffName;
+                    const buffCheck = memoOwnerTurn.buffsObject[buffName];
+
+                    if (buffCheck && buffCheck.currentStacks === buffCheck.maxStacks) {return;}
+
+                    charValuesRef.lastSpdStacksMemo += 1;
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,garmentTurn,buffSheet);
+                    if (charValuesRef.supremeStanceActive) {
+                        //if aggy is in ulty, we stack spd stacks for her too via the supreme stance buff
+                        const buffSheet2 = ATKObjects.aggyUltimateSTANCESHEET;
+                        buffSheet2.currentStacks = 1;
+
+                        updateBuff(battleData,memoOwnerTurn,buffSheet2);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Garmentmaker's talent speed stack controller",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    // const notMyTurn = !ownerTurn.turnState;
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+                    
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.aggyUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Aglaea - Ultimate queued",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const aggyTechnique = this.aggyTechnique ??= logicRef.skillFunctions.aggyTechnique;
+                        aggyTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Aggy Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "AttackDMGEnd",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let sourceTurn = generalInfo.sourceTurn;
+
+
+                        if (sourceTurn.isMemosprite) {
+                            const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                            if (ownerTurnRef.name != ownerTurn.name) {return;}
+                        }
+                        else if (sourceTurn.name != ownerTurn.name) {return;}
+                        //e1 is only for aggy or garment attacks
+                        battleActions.updateEnergy(battleData,20,ownerTurn,false,"E1 Post-attack regen");
+                    },
+                    "target": "self",
+                    "listenerName": "E1 energy bonus",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [
+                {
+                    "trigger": "BasicATKStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        let isSourcedFromAggy = false;
+                        if (sourceTurn.isMemosprite) {
+                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                        }
+                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+
+                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                    },
+                    "target": "self",
+                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "SkillStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        let isSourcedFromAggy = false;
+                        if (sourceTurn.isMemosprite) {
+                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                        }
+                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+
+                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                    },
+                    "target": "self",
+                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "UltimateStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        let isSourcedFromAggy = false;
+                        if (sourceTurn.isMemosprite) {
+                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                        }
+                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+
+                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                    },
+                    "target": "self",
+                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "MemoSkillStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        let isSourcedFromAggy = false;
+                        // console.log(sourceTurn.isMemosprite)
+                        if (sourceTurn.isMemosprite) {
+                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                        }
+                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+
+                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                    },
+                    "target": "self",
+                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [],
+            5: [],
+            6: [
+                {
+                    "trigger": "UpdateStatSPD",//SPD stat family
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        //in the future I could probably bundle the statcheck together with the memo talent spd check, but I'd prefer to keep this separate for now
+    
+                        if (sourceTurn.isMemosprite) {
+                            const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                            if (ownerTurnRef.name != ownerTurn.name) {return;}
+                        }
+                        else if (sourceTurn.name != ownerTurn.name) {return;}
+    
+                        const statCheckE6 = this.statCheckE6 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheckE6;
+                        statCheckE6(battleData,ownerTurn);
+                    },
+                    "target": "self",
+                    "listenerName": "Fluctuate in the Tapestry of Fates SPD check",
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "garmentIsActive": false,
+            "enemyWithSeam": null,
+            "supremeStanceActive": false,
+            "lastSpdStacksMemo": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "seam": "Seam Stitch",
+            "e2Shred": "Sail on the Raft of Eyelids",
+            "spdStackMemo": "A Body Brewed by Tears",
+            "stance": "Supreme Stance",
+            "spdConversion": "The Myopic's Doom",
+            "e6Pen": "Flicker Below the Surface of Marble",
+            "e6DMG": "Flicker Below the Surface of Marble (Joint)",
         },
         "characterValuesBattle": {},
     },
