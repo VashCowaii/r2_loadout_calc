@@ -7397,7 +7397,7 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     // let characterName = ownerTurn.properName;
                     let sourceTurn = generalInfo.sourceTurn;
-                    const buffsObject = sourceTurn.buffsObject;
+                    const buffsObject = sourceTurn.buffsObject ?? {};
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
 
