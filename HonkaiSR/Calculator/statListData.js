@@ -389,7 +389,7 @@ const propertyImagePaths = {
         }
     },
     "Weaken": {
-        "icon": noIconPath,
+        "icon": "/HonkaiSR/misc/IconBuffFatigueRatio.png",
         "sets": {
             [greatTableIndex["Weaken%"]]: {
                 "display": "Weaken %",
