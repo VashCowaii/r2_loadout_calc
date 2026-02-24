@@ -74,6 +74,12 @@ const customDisplayValuesLog = {
         {valueName: "Mem is Enhanced", refName: "memIsEnhanced", isBattleValue: true, isCharacterState: true},
         {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
     ], 
+    "Aglaea": [
+        {valueName: "Garment on Field", refName: "garmentIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Supreme Stance", refName: "supremeStanceActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Memo SPD Stacks", refName: "lastSpdStacksMemo", isBattleValue: true},
+        // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
+    ], 
     "Dan Heng • Permansor Terrae": [
         {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
         {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
@@ -105,6 +111,7 @@ const customDisplayValuesLog = {
         {valueName: "E1 Skillpoint Ready", refName: "e1SPRegenReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 1},
         {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
     ],  
+    "Natasha": [],  
 }
 
 const permaConditionsTextLibrary = {
@@ -524,7 +531,7 @@ const conditionLibrary = {
 
         switch (phase) {
             case "Pre-Action":
-                return (target.actionAssigned === false) === state;//if the turn is active, but the action isn't assigned yet
+                return (target.actionAssigned === false && target.turnState) === state;//if the turn is active, but the action isn't assigned yet
             case "Post-Action":
                 return (target.actionAssigned === true) === state;//if the turn is active, and the action WAS assigned/carried out
             case "Any Part":
@@ -694,6 +701,194 @@ const defaultConditions = {
         "Ultimate": {
             type: "AND",
             array: []
+        }
+    },
+    "Aglaea": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "OR",
+            "array": [
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "garmentIsActive",
+                            "state": false,
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "<",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "currentEnergy"
+                                },
+                                {
+                                    "type": "MATH",
+                                    "operator": "-",
+                                    "array": [
+                                        {
+                                            "type": "Character: Value",
+                                            "target": "Self",
+                                            "targetType": "Character",
+                                            "characterValue": "maxEnergy"
+                                        },
+                                        {
+                                            "type": "MATH",
+                                            "operator": "*",
+                                            "array": [
+                                                {
+                                                    "type": "User Value: Number",
+                                                    "inputValue": 20
+                                                },
+                                                {
+                                                    "type": "MATH",
+                                                    "operator": "+",
+                                                    "array": [
+                                                        {
+                                                            "type": "User Value: Number",
+                                                            "inputValue": 1
+                                                        },
+                                                        {
+                                                            "type": "Stat",
+                                                            "target": "Self",
+                                                            "targetType": "Character",
+                                                            "statName": "EnergyRegenRate"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "garmentIsActive",
+                            "state": true,
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "<",
+                            "array": [
+                                {
+                                    "type": "MATH",
+                                    "operator": "/",
+                                    "array": [
+                                        {
+                                            "type": "Character: Value",
+                                            "target": "Self",
+                                            "targetType": "Memosprite",
+                                            "characterValue": "currentHP"
+                                        },
+                                        {
+                                            "type": "Character: Value",
+                                            "target": "Self",
+                                            "targetType": "Memosprite",
+                                            "characterValue": "maxHP"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0.25
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "<",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "currentEnergy"
+                                },
+                                {
+                                    "type": "MATH",
+                                    "operator": "-",
+                                    "array": [
+                                        {
+                                            "type": "Character: Value",
+                                            "target": "Self",
+                                            "targetType": "Character",
+                                            "characterValue": "maxEnergy"
+                                        },
+                                        {
+                                            "type": "MATH",
+                                            "operator": "*",
+                                            "array": [
+                                                {
+                                                    "type": "User Value: Number",
+                                                    "inputValue": 20
+                                                },
+                                                {
+                                                    "type": "MATH",
+                                                    "operator": "+",
+                                                    "array": [
+                                                        {
+                                                            "type": "User Value: Number",
+                                                            "inputValue": 1
+                                                        },
+                                                        {
+                                                            "type": "Stat",
+                                                            "target": "Self",
+                                                            "targetType": "Character",
+                                                            "statName": "EnergyRegenRate"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "phase": "Pre-Action",
+                    "state": false
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": ">=",
+                    "array": [
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "AV"
+                        },
+                        {
+                            "type": "User Value: Number",
+                            "inputValue": 20
+                        }
+                    ]
+                }
+            ]
         }
     },
     "Cyrene": {
