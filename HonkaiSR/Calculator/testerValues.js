@@ -823,7 +823,8 @@ const defaultConditions = {
                     "target":"Self",
                     "stateName":"nextBasicEnhanced",
                     "state":false,
-                    "isBattleValue":true}
+                    "isBattleValue":true
+                }
             ]
         },
         "Ultimate": {
@@ -835,6 +836,45 @@ const defaultConditions = {
                     "targetType": "Character",
                     "phase": "Pre-Action",
                     "state": false
+                }
+            ]
+        }
+    },
+    "Natasha": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": "<",
+                    "array": [
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "currentEnergy"
+                        },
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "maxEnergy"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
                 }
             ]
         }

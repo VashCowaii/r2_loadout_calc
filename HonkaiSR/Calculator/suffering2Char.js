@@ -1996,10 +1996,11 @@ const battleActions = {
         let currentMulti = (customMulti ? customMulti(statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
         
 
-        let scalarOverride = atkEntry.scalarOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
-        if (scalarOverride) {currentMulti = scalarOverride;}
+        let perHitMultiOverride = atkEntry.perHitMultiOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
+        if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
+        let scalarToUse = atkEntry.scalarOverride ?? scalar;
 
-        let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar);//the stat that this attacks scales off of, so ATK or HP etc
+        let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalarToUse);//the stat that this attacks scales off of, so ATK or HP etc
 
         
         // console.log(multiOf)
@@ -2237,7 +2238,7 @@ const battleActions = {
             };
             
             const hitData = {
-                scalar,
+                scalar: scalarToUse,
                 bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
                 currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
@@ -7044,6 +7045,901 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Natasha": {//TODO: circle back and add weaken into the dmg calc functions  //TODO: skill cleanse later
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+            // let enhancedCheck = battleValues.nextBasicEnhanced;
+
+            // shouldHeal
+            // !enhancedCheck
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.natashaSkillHeal, target: null, endTurn: true};
+                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.natashaBasic, target: "enemy", endTurn: true}
+            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
+            return returnBasicCall;
+        },
+        "skillFunctions": {
+            natashaBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+
+                let skillRef = ATKObjects.natashaBasicREF ??= ATKObjects["Basic ATK"]["Behind the Kindness"].variant1;
+                if (!ATKObjects.natashaBasicATKOBJECT) {
+                    const rank = sourceTurn.rank;
+
+                    skillRef.hitSplits = rank >= 6 ? hitSplitters[sourceTurn.properName].basic2 : hitSplitters[sourceTurn.properName].basic;
+
+                    if (rank >= 6) {hitSplitters[sourceTurn.properName].basic2[1].perHitMultiOverride = 0.40;}
+
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Physical"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.natashaBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.natashaBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            natashaSkillHeal(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
+                let rank = sourceTurn.rank;
+                let e2 = rank >= 2;
+                
+                
+                if (!ATKObjects.natashaSkillHealHEALOBJECT) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    ATKObjects.natashaSkillHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[3],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+
+                    let buffName = turnLogic[characterName].buffNames.skillHOT;
+                    ATKObjects.natashaSkillHealHOTSHEET = {
+                        "stats": null,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 2 + 1,//the trace extends the duration by 1
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+    
+                }
+                const skillHOTSheet = ATKObjects.natashaSkillHealHOTSHEET;
+    
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+
+                battleActions.updateBuff(battleData,targetTurn,skillHOTSheet);
+
+                // let targetTurn = battleData.nameBasedTurns[target];
+                let healObject = ATKObjects.natashaSkillHealHEALOBJECT;
+                battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
+
+                // if (e2) {
+                //     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
+                //     buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                //     battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                //     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
+                // }
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            natashaUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.natashaUltimateREF ??= ATKObjects.Ultimate["Gift of Rebirth"].variant1;
+                let rank = sourceTurn.rank;
+
+                if (!ATKObjects.natashaUltimateHealHEALOBJECT) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.natashaUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.natashaUltimateHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+
+                    let buffName = turnLogic[characterName].buffNames.ultHOT;
+                    ATKObjects.natashaSUltHealHOTHEALSHEET = {
+                        "stats": null,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+    
+                }
+                // let ATKObject = ATKObjects.gallagherUltimateATKOBJECT;
+                let healObject = ATKObjects.natashaUltimateHealHEALOBJECT;
+                const allyPositions = battleData.allyPositions;
+                
+
+                if (rank >= 2) {
+                    const sub30Array = [];
+                    for (let ally of allyPositions) {
+                        const hpRatio = ally.currentHP / ally.maxHP;
+                        if (hpRatio <= 0.3) {
+                            sub30Array.push(ally);
+                        }
+                    }
+
+
+                    if (sub30Array.length) {
+                        const ultBuffSheet = ATKObjects.natashaSUltHealHOTHEALSHEET;
+                        battleActions.updateBuffBatchTargets(battleData,sub30Array,ultBuffSheet);
+                    }
+                }
+
+                
+
+
+                // let e4 = rank >= 4;
+                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
+                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
+                // for (let enemySlot of battleData.enemyPositions) {
+                //     besotted(battleData,sourceTurn,enemySlot,e4,values2);
+                // }
+
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
+                // poke("BasicATKStart",battleData,{source:"Gallagher"});
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
+                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
+
+                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
+                sourceTurn.ultyQueued = false;
+            },
+
+
+
+            gallagherTalentHeal(battleData,targetTurn,sourceTurn,batchArray,timesToHeal) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+
+                let skillRef = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
+
+                if (!ATKObjects.gallagherTalentHealHEALOBJECT) {
+                    let values = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    ATKObjects.gallagherTalentHealHEALOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+                }
+                
+                let healObject = ATKObjects.gallagherTalentHealHEALOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:sourceTurn.properName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TalentStart",battleData,{sourceTurn});
+                battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,timesToHeal,batchArray);
+                poke("TalentEnd",battleData,{sourceTurn});
+            },
+            gallagherBasicEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.gallagherBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Nectar Blitz"].variant1;
+
+                if (!ATKObjects.gallagherBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    let values = ATKObjects.gallagherBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Fire"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.gallagherBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.gallagherBasicEnhancedBLITZSHEET = {
+                        "stats": [ATKP],
+                        [ATKP]: -values[1],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": "Nectar Blitz -ATK%",
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                
+                let ATKObject = ATKObjects.gallagherBasicEnhancedATKOBJECT;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+                let targetTurn = battleData.primaryTarget//single target, so the enemy hit will always be one enemy, aka first key;
+                let buffSheet = ATKObjects.gallagherBasicEnhancedBLITZSHEET;
+                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                poke("BasicATKEnd",battleData,{sourceTurn});
+                logicRef.characterValuesBattle.nextBasicEnhanced = false;
+            },
+            
+            besotted(battleData,sourceTurn,targetTurn,e4,values2) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let buffName = ATKObjects.besottedBuffName ??= turnLogic[characterName].buffNames.besotted;
+
+
+                //technique isn't the ultimate, so e4 shouldn't modify it (I believe, at least)
+                //for now, technique always passes false/null to e4 to ensure that.
+                if (!ATKObjects.enemyBesottedSHEET) {
+                    ATKObjects.enemyBesottedSHEET = {
+                        "stats": [VulnBreak],
+                        [VulnBreak]: values2[0],
+                        "source": characterName,
+                        "sourceOwner": characterName,
+                        "buffName": buffName,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                let buffSheet = ATKObjects.enemyBesottedSHEET;
+                buffSheet.duration = (e4 ? 3 : 2) + (targetTurn.turnState ? 1 : 0),
+                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+            },
+            natashaTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.natashaTechniqueREF ??= ATKObjects.Technique["Hypnosis Research"].variant1;
+
+                if (!ATKObjects.natashaTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.natashaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Physical"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.natashaTechniqueATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[3],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+
+                    ATKObjects.natashaTechWEAKENSHEET = {
+                        "stats": [WeakenPercent],
+                        [WeakenPercent]: values[1],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.techWeaken,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                const ATKObject = ATKObjects.natashaTechniqueATKObject;
+                const debuffSheet = ATKObjects.natashaTechWEAKENSHEET;
+                debuffSheet.AVApplied = battleData.sumAV;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
+                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
+                // for (let enemySlot of battleData.enemyPositions) {
+                //     besotted(battleData,sourceTurn,enemySlot,false,values2);
+                // }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+
+                const enemyPositions = battleData.enemyPositions;
+                // for (let enemyPosition of enemyPositions) {
+                //     battleActions.updateBuff(battleData,enemyPosition,buffSheet); 
+                // }
+                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet)
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [//skillHOT
+            {
+                "trigger": "HealStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+
+                    // let skillRef = ATKObjects.natashaTalentREF ??= ATKObjects.Talent["Innervation"].variant1;
+                    const logicRef = turnLogic[sourceTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    let values = ATKObjects.natashaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,ATKObjects.Talent["Innervation"].variant1,ownerTurn);
+                    const hpThreshold =  values[0];
+                    
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [HealingOutgoing], 
+                        [HealingOutgoing]: values[1],
+                        "source": "Talent",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.talentHeal,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    };
+
+                    if (hpRatio <= hpThreshold) {
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+                    else {
+                        removeBuff(battleData,ownerTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha Talent <=30%HP Healing bonus",
+                "owners": []
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const buffsObject = sourceTurn.buffsObject;
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffNames = turnLogic[ownerTurn.properName].buffNames;
+
+                    const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
+                    const skillHOTCheck = buffsObject[skillHOTName];
+
+                    const ultHOTName = this.ultHOTName ??= buffNames.ultHOT;
+                    const ultHOTCheck = buffsObject[ultHOTName];
+
+                    if (skillHOTCheck) {
+                        let skillRef = ATKObjects.natashaSkillHealREF
+                        let values = ATKObjects.natashaSkillHealREFVALUES
+
+                        // let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
+                        // let rank = sourceTurn.rank;
+                        // let e2 = rank >= 2;
+                        
+                        
+                        if (!ATKObjects.natashaSkillHealHOTOBJECT) {
+                            let characterName = ownerTurn.properName;
+                            let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                            ATKObjects.natashaSkillHealHOTOBJECT = {
+                                multipliers: {
+                                    primary: values[1],
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: values[4],
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: skillRef.slot
+                            }
+
+                            // let buffName = turnLogic[characterName].buffNames.lionsTail;
+                            // ATKObjects.natashaSkillHealEFFECTRESSHEET = {
+                            //     "stats": [EffectRES],
+                            //     [EffectRES]: 0.30,
+                            //     "source": characterName,
+                            //     "sourceOwner": sourceTurn.properName,
+                            //     "buffName": buffName,
+                            //     "duration": 2,
+                            //     "AVApplied": 0,
+                            //     "maxStacks": 1,
+                            //     "currentStacks": 1,
+                            //     "decay": false,
+                            //     "expireType": "EndTurn"
+                            // }
+            
+                        }
+
+                        // let targetTurn = battleData.nameBasedTurns[target];
+                        let healObject = ATKObjects.natashaSkillHealHOTOBJECT;
+                        battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
+
+                    }
+                    if (ultHOTCheck) {
+
+                        let skillRef = ATKObjects.natashaUltimateREF ??= ATKObjects.Ultimate["Gift of Rebirth"].variant1;
+                        //we aren't ref values from this since the values are from an eidolon
+                        
+                        
+                        if (!ATKObjects.natashaUltHealHOTOBJECT) {
+                            ATKObjects.natashaUltHealHOTOBJECT = {
+                                multipliers: {
+                                    primary: 0.06,
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: 160,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: skillRef.slot
+                            }
+                        }
+
+                        // let targetTurn = battleData.nameBasedTurns[target];
+                        let healObject = ATKObjects.natashaUltHealHOTOBJECT;
+                        battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
+
+                    }
+
+                    // if (ownerTurn.turnState) {
+                    //     let amount = 5;
+                    //     battleActions.updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Natasha - E2/Skill HoT turnstart listener",
+                "ownerTurn": {},
+            },
+            
+            // {
+            //     "trigger": "AttackEnd",
+            //     condition(battleData,generalInfo) {
+            //         let ownerTurn = this.ownerTurn;
+            //         let characterName = ownerTurn.properName;
+            //         let sourceTurn = generalInfo.sourceTurn;
+            //         if (sourceTurn.isEnemy) {return;}//is the attack coming from an allied source
+            //         // let charSlot = sourceTurn.name;
+
+            //         let logicRef = turnLogic[characterName];
+            //         let buffName = this.buffName ??= logicRef.buffNames.besotted;
+            //         const targetsGotHit = generalInfo.targetsGotHit;
+            //         //CONFIRMED USING ASTA BOUNCE: healing was evaluated after the attack completed and bounces were finished, thank GOD
+            //         //this would have sucked major anus if we had to evaluate it on a hit-by-hit basis
+            //         let besottedWasFound = false;
+
+            //         let healCall = this.healCall ??= logicRef.skillFunctions.gallagherTalentHeal;
+            //         let timesToHeal = 0;
+            //         const enemyTurns = battleData.enemyBasedTurns;
+            //         for (let targetHit in targetsGotHit) {
+            //             const currentTarget = enemyTurns[targetHit];
+            //             if (currentTarget.buffsObject[buffName]) {
+            //                 timesToHeal += 1;
+            //                 besottedWasFound = true;
+            //             }
+            //         } 
+
+            //         if (besottedWasFound) {
+            //             let enhancedCheck = logicRef.characterValuesBattle.nextBasicEnhanced;
+            //             if (sourceTurn.properName === characterName && generalInfo.dmgSlot === "Basic ATK" && enhancedCheck) {
+            //                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Activated "Bottoms Up"`});}
+            //                 healCall(battleData,null,ownerTurn,battleData.allyPositions,1);
+            //             }
+            //             else {
+            //                 healCall(battleData,sourceTurn,ownerTurn,null,timesToHeal);
+            //             }
+            //         }
+            //     },
+            //     "target": "allies",
+            //     "listenerName": "Besotted Healing controller",
+            //     "ownerTurn": {},
+            // },
+            // {
+            //     "trigger": "UpdateStatBreak",
+            //     condition(battleData,generalInfo) {
+            //         let ownerTurn = this.ownerTurn;
+            //         let sourceTurn = generalInfo.sourceTurn;
+
+            //         if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+            //         const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+            //         statCheck(battleData,ownerTurn);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Novel Concoction B.E. check",
+            //     "ownerTurn": {},
+            // },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    buffSheet = this.natashaTechWEAKENSHEET ??= {
+                        "stats": [HealingOutgoing],
+                        [HealingOutgoing]: 0.10,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceHealingBonus,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Natasha - Battlestart HealingOutgoing trace Healer",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.natashaUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Natasha - Ultimate queued - Ultimate",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const natashaTechnique = this.natashaTechnique ??= logicRef.skillFunctions.natashaTechnique;
+                        natashaTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "listenersToInjectLater": {//TODO: e1 proc technically counts as an ability use, but nobody would take advantage of that rn except for cyrene, which wouldn't be til later.
+            "e1HealOnceNatasha": {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    // const targetTurn = generalInfo.targetTurn;
+                    if (!sourceTurn.isEnemy) {return;}
+                    //only allow attacks from enemies, to natasha
+
+
+                    let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
+                    const namedTurns = battleData.nameBasedTurns;
+                    let tashaWasHit = false;
+                    for (let allyHit in targetsGotHit) {
+                        if (namedTurns[allyHit].properName === characterName) {
+                            tashaWasHit = true;
+                            break;
+                        }
+                    }
+
+                    if (tashaWasHit) {
+                        const hpRatio = ownerTurn.currentHP / ownerTurn.maxHP;
+
+                        if (hpRatio <= 0.30) {
+                            const logicRef = turnLogic[characterName];
+                            const ATKObjects = logicRef.ATKObjects;
+
+
+                            if (!ATKObjects.natashaE1HEALOBJECT) {
+            
+                                ATKObjects.natashaE1HEALOBJECT = {
+                                    multipliers: {
+                                        primary: 0.15,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: 400,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "E1"
+                                }
+                
+                            }
+                            // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+            
+                            // let targetTurn = battleData.nameBasedTurns[target];
+                            let healObject = ATKObjects.natashaE1HEALOBJECT;
+                            battleActions.healAlly(battleData,healObject,ownerTurn,ownerTurn,"E1",1,null);
+
+
+                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            //remove listener as it an only happen once per fight.
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha E1 once-per-battle healing",
+                "ownerTurn": {},
+            }
+        },
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        let characterName = ownerTurn.properName;
+    
+                        const logicRef = turnLogic[characterName];
+                        const ATKObjects = logicRef.ATKObjects;
+        
+        
+                        let attackEndings = battleData.battleListeners.AttackEnd ??= [];
+                        
+                        const listenerToInejct = ATKObjects.e1NatashaListener ??= logicRef.listenersToInjectLater.e1HealOnceNatasha;
+                        listenerToInejct.ownerTurn = ownerTurn;
+        
+                        attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+                    },
+                    "target": "self",
+                    "listenerName": "Exalted Sweep: energy regen on battleStart",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "AttackEnd",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let characterName = ownerTurn.properName;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        // const targetTurn = generalInfo.targetTurn;
+                        if (!sourceTurn.isEnemy) {return;}
+                        //only allow attacks from enemies, to natasha
+
+
+                        let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
+                        // const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
+                        const namedTurns = battleData.nameBasedTurns;
+                        for (let allyHit in targetsGotHit) {
+                            if (namedTurns[allyHit].properName === characterName) {
+                                battleActions.updateEnergy(battleData,5,ownerTurn,false,"E4: Miracle Cure");
+                                break;
+                            }
+                        }
+                    },
+                    "target": "allies",
+                    "listenerName": "Natasha E4 energy gain on attacked",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [
+                // {
+                //     "trigger": "PreBattleEntersCombat",
+                //     condition(battleData,generalInfo) {
+                //         let ownerTurn = this.ownerTurn;
+    
+                //         let buffSheet = this.buffSheet ??= {
+                //             "stats": [DamageBreak,DamageBreakEfficiency],
+                //             [DamageBreak]: 0.20,
+                //             [DamageBreakEfficiency]: 0.20,
+                //             "source": "E6",
+                //             "sourceOwner": ownerTurn.properName,
+                //             "buffName": turnLogic[ownerTurn.properName].buffNames.e6Buff,
+                //             "duration": null,
+                //             "AVApplied": 0,
+                //             "maxStacks": 1,
+                //             "currentStacks": 1,
+                //             "decay": false,
+                //             "expireType": null
+                //         }
+                //         battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                //     },
+                //     "target": "self",
+                //     "listenerName": "Gallagher - +Break Effect/Efficiency - E6",
+                //     "announce": false,
+                //     "ownerTurn": {},
+                // },
+            ],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "nextBasicEnhanced": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "talentHeal": "Innervation",
+            "techWeaken": "Weaken (Natasha)",
+            "skillHOT": "Natasha Heal-Over-Time (Skill)",
+            "ultHOT": "Natasha Heal-Over-Time (Ult)",
+            "traceHealingBonus": "Natasha Trace Healer",
+
+            "concoction": "Novel Concoction",
+            "besotted": "Besotted",
+            "lionsTail": "Lion's Tail E2",
+
+            "e1Buff": "E1: Salty Dog",
+            "e6Buff": "E6: Blood and Sand",
+        },
+        "characterValuesBattle": {},
+    },
     //Nihility
     "Silver Wolf": {
         logic(thisTurn,battleData) {
@@ -11241,7 +12137,7 @@ const turnLogic = {
 
                 if (!ATKObjects.saberBasicEnhancedATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[characterName].eba;
-                    hitSplitters[characterName].eba3[1].scalarOverride = values[3];//this assigns the multi to the enemies===1 extra dmg, that takes place between hit1 and hit2
+                    hitSplitters[characterName].eba3[1].perHitMultiOverride = values[3];//this assigns the multi to the enemies===1 extra dmg, that takes place between hit1 and hit2
 
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];

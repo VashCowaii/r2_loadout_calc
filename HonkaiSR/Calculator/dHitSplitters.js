@@ -153,6 +153,56 @@ const hitSplitters = {
             }
         ],
     },
+    "Natasha": {//done
+        "basic": [
+            {
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true,
+            },
+        ],
+        "basic2": [
+            {
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true,
+            },
+            {
+                "primary": {
+                    "hitRatio": 1,
+                    "energyRatio": 0,
+                    "toughness": 0
+                },
+                "perHitMultiOverride": null,
+                "scalarOverride": "HP",
+            },
+        ],
+        "tech": [
+            {
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
+            }
+        ],
+    },
     "Gallagher": {//done
         "basic": [
             {
@@ -528,7 +578,7 @@ const hitSplitters = {
                     "energyRatio": 0,
                     "toughness": 0
                 },
-                "scalarOverride": null
+                "perHitMultiOverride": null
             },
             {
                 "all": {
