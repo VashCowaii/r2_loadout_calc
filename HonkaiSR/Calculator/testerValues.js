@@ -243,6 +243,18 @@ const conditionsCharacterDisplayWarning = {
             permaConditionsTextLibrary.energyMaxed
         ]
     },
+    "Aglaea": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyMaxed
+        ]
+    },
 }
 
 
