@@ -14785,9 +14785,11 @@ const turnLogic = {
 
                     if (buffCheck && buffCheck.currentStacks === buffCheck.maxStacks) {return;}
 
-                    charValuesRef.lastSpdStacksMemo += 1;
+                    
+                    
                     const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,garmentTurn,buffSheet);
+                    charValuesRef.lastSpdStacksMemo = garmentTurn.buffsObject[buffName]?.currentStacks ?? 0;
                     if (charValuesRef.supremeStanceActive) {
                         //if aggy is in ulty, we stack spd stacks for her too via the supreme stance buff
                         const buffSheet2 = ATKObjects.aggyUltimateSTANCESHEET;
