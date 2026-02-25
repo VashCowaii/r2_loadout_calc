@@ -186,6 +186,18 @@ const conditionsCharacterDisplayWarning = {
             permaConditionsTextLibrary.energyMaxed
         ]
     },
+    "Blade": {
+        hasEnhancedState: true,
+        "Skill": "Skill conditions are ignored when Blade's Basic ATK is enhanced.",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyMaxed
+        ]
+    },
 
     "Sunday": {
         hasEnhancedState: false,
@@ -768,6 +780,17 @@ const defaultConditions = {
                     "isBattleValue": true
                 }
             ]
+        }
+    },
+    "Blade": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
         }
     },
 

@@ -12528,6 +12528,676 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Blade": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
+            // let E1 = true;
+            let actionUsed = false;
+            const shortRef = this;
+
+            // const statCalls = shortRef.characterValuesBattle;
+            const shortCalls = shortRef.skillFunctions;
+
+            let currentSP = battleData.skillPointCurrent;
+
+            const isEnhanced = thisTurn.battleValues.hellscapeActive;
+            const minimum = currentSP >= 1;
+
+            if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.bladeSkillInstance, target: "enemy", endTurn: false};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {
+                const basicToCall = isEnhanced ? shortCalls.bladeBasicEnhanced : shortCalls.bladeBasic;
+                return {action: "BasicATK", points: isEnhanced ? 0 : 1, actionCall: basicToCall, target: "enemy", endTurn: true};
+            }
+            //default to basic atk when all else fails
+        },
+        "skillFunctions": {
+            bladeBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeBasicREF ??= ATKObjects["Basic ATK"]["Shard Sword"].variant1;
+
+                if (!ATKObjects.bladeBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.bladeBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Wind"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.bladeBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            bladeBasicEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Forest of Swords"].variant1;
+                let values = ATKObjects.bladeBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                if (!ATKObjects.bladeBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Wind"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: values[2],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bonusScalar: rank >=1 ? {
+                            primary: 1.5,
+                            blast: null,
+                            all: null,
+                            refName: "bladeHPTally",
+                            isDynamicValue: true,
+                            refValue: 0
+                        } : null,
+                    }
+                }
+                let ATKObject = ATKObjects.bladeBasicEnhancedATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true,isEnhanced:true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+                battleActions.consumeHP(battleData,false,values[0],sourceTurn,sourceTurn,skillRef.slot);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            bladeSkillInstance(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeSkillInstanceREF ??= ATKObjects["Skill"]["Hellscape"].variant1;
+                let values = ATKObjects.bladeSkillInstanceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                // const logicRef = turnLogic[sourceTurn.properName];
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.bladeSkillInstanceBUFFSHEET) {
+                    let characterName = sourceTurn.properName;
+                    //construct both the buff sheet and the atk object in one go on the first skill usage
+                    let buffName = logicRef.buffNames.hellscape;
+                    ATKObjects.bladeSkillInstanceBUFFSHEET = {
+                        "stats": [DamageAll,AggroP,CritRateBase],
+                        [DamageAll]: values[3],
+                        [AggroP]: values[4],
+                        [CritRateBase]: rank >= 2 ? 0.15 : 0,
+                        "source": "Skill",
+                        "sourceOwner": characterName,
+                        "buffName": buffName,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        expireFunction: logicRef.skillFunctions.hellscapeExpired,
+                        expireParam: sourceTurn.name
+                    }
+                }
+                
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                battleActions.consumeHP(battleData,false,values[0],sourceTurn,sourceTurn,skillRef.slot);
+
+                let buffSheet = ATKObjects.bladeSkillInstanceBUFFSHEET;
+                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                
+                sourceTurn.battleValues.hellscapeActive = true;
+
+
+                battleActions.nonViolentWrapper(battleData,skillRef,sourceTurn.properName);
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+
+                
+                // battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
+            },
+            hellscapeExpired(battleData,bladeSlot) {
+                const bladeTurn = battleData.nameBasedTurns[bladeSlot];
+                bladeTurn.battleValues.hellscapeActive = false;
+            },
+            bladeHPTallyFunction(battleData,bladeTurn,amountToGain) {
+                const oldAmount = bladeTurn.bladeHPTally ??= 0;
+                const HPCap = 0.9 * calcs.getHPFinal(bladeTurn.statTable).HPFinal;
+                bladeTurn.bladeHPTally = Math.min(HPCap,(bladeTurn.bladeHPTally ?? 0) + amountToGain);
+                if (battleData.isLoggyLogger) {
+                    // logToBattle(battleData,{logType: "GenericAction", source:"HP tally handler", bodyText: `Tally (Blade) ${oldAmount.toLocaleString()} --> ${bladeTurn.bladeHPTally.toLocaleString()}`});
+                    logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[bladeTurn.properName].traces.Point03.icon,sourceName: bladeTurn.properName, source:"HP Tally Handler", bodyText: `Tally (Blade): ${oldAmount} --> ${bladeTurn.bladeHPTally}`});
+                        
+                }
+            },
+            bladeFUA(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeFUAREF ??= ATKObjects.Talent["Shuhu's Gift"].variant1;
+
+                if (!ATKObjects.bladeFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    const rank = sourceTurn.rank;
+                    let values = ATKObjects.bladeFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","FUA","Wind"];
+                    const actionTags = ["FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeFUAATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1] + (rank >= 6 ? 0.50 : 0),
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: true,
+                    }
+
+                    ATKObjects.bladeFUAHEALOBJECT = {
+                        multipliers: {
+                            primary: values[2],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+                }
+                const ATKObject = ATKObjects.bladeFUAATKOBJECT;
+                const healObject = ATKObjects.bladeFUAHEALOBJECT;
+
+                poke("TalentStart",battleData,{sourceTurn});
+
+                battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
+                //the %healing is fixed, lines up with all other %healing I've seen done against max HP so far
+                //TODO: later, if a buff ever exists that give an ally or self a buff when healing is done, use that to check when the healing happens here, before or after dmg
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                battleActions.updateEnergy(battleData,15,sourceTurn,false,"Cyclone of Destruction");
+
+                poke("TalentEnd",battleData,{sourceTurn});
+
+                const valuesRef = sourceTurn.battleValues;
+                const chargeCap = sourceTurn.rank >= 6 ? 4 : 5;
+                const oldValue = valuesRef.charge;
+                valuesRef.charge = 0;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Blade FUA Used", bodyText: `Blade Charge ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});}
+
+                sourceTurn.bladeFUAIsQueued = false;
+            },
+            bladeUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.bladeUltimateREF ??= ATKObjects.Ultimate["Death Sentence"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.bladeUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Ultimate","Wind"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[2],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bonusScalar: {
+                            primary: values[4] + (rank >= 1 ? 1.5 : 0),
+                            blast: values[5],
+                            all: null,
+                            refName: "bladeHPTally",
+                            isDynamicValue: true,
+                            refValue: 0,
+                            bonusValue: null,//see hit wrapper if I ever forget how this was used
+                        },
+                    }
+                    ATKObjects.bladeUltimateHEALOBJECT = {
+                        multipliers: {
+                            primary: 0,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+                }
+                let ATKObject = ATKObjects.bladeUltimateATKOBJECT;
+
+
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                const maxHP = sourceTurn.maxHP;
+                const currentHP = sourceTurn.currentHP;
+                const currentHPRatio = currentHP / maxHP;
+                let variance = null;
+                let consume = false;
+                let heal = false;
+
+                if (currentHPRatio > 0.5) {
+                    variance = currentHPRatio - 0.5;
+                    consume = true;
+                }
+                else if (currentHPRatio < 0.5) {
+                    variance = 0.5 - currentHPRatio;
+                    heal = true;
+                }
+
+                if (consume) {
+                    battleActions.consumeHP(battleData,false,variance,sourceTurn,sourceTurn,skillRef.slot);
+                }
+                else if (heal) {
+                    const healObject = ATKObjects.bladeUltimateHEALOBJECT;
+                    healObject.multipliers.primary = variance;
+                    battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
+                }
+                //no else here bc if he is at 50%, then literally nothing happens, no heal or consume
+
+                // ATKObject.bonusScalar.refValue = sourceTurn.bladeHPTally;
+                
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                const oldAmount = sourceTurn.bladeHPTally;
+                sourceTurn.bladeHPTally *= 0.5
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ult used halving", bodyText: `Tally (Blade) ${oldAmount.toLocaleString()} --> ${sourceTurn.bladeHPTally.toLocaleString()}`});}
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                sourceTurn.ultyQueued = false;
+            },
+            bladeTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.bladeTechRef ??= ATKObjects.Technique["Karma Wind"].variant1;
+                let values = ATKObjects.bladeTechRefVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.bladeTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    const scalar = "HP";
+                    const tags = ["All","Technique","Wind"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeTechATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                const ATKObject = ATKObjects.bladeTechATKObject;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+                // poke("SkillEnd",battleData,{source:"Archer"});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const HPLost = generalInfo.HPLost
+                    const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
+                    bladeHPTallyFunction(battleData,ownerTurn,HPLost);
+                },
+                "target": "self",
+                "listenerName": "Blade HP tally - hp lost listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const wasAttack = generalInfo.wasAttack;
+                    if (wasAttack && !ownerTurn.bladeReadyForAttackCharge) {return;}
+                    ownerTurn.bladeReadyForAttackCharge = false;
+                    //blade can only gain 1 charge from an attack, so we have to monitor and make sure that we don't do it every time he loses HP in a single attack
+
+                    const valuesRef = ownerTurn.battleValues;
+                    const chargeCap = sourceTurn.rank >= 6 ? 4 : 5;
+                    const oldValue = valuesRef.charge;
+                    valuesRef.charge = Math.min(chargeCap,valuesRef.charge + 1);
+                    if (battleData.isLoggyLogger && oldValue != valuesRef.charge) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blade Charge ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Blade): ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
+                    }
+                    
+                    if (valuesRef.charge === chargeCap && !ownerTurn.bladeFUAIsQueued) {
+                        ownerTurn.bladeFUAIsQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn =  ownerTurn;
+                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Blade talent - charge from losing HP",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}
+                    
+                    ownerTurn.bladeReadyForAttackCharge = true;
+                },
+                "target": "self",
+                "listenerName": "Blade talent - charge from being attacked reset",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HealEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.targetTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const totalHealed = generalInfo.totalHealed;
+                    const converted = 0.25 * totalHealed;
+
+                    const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
+                    bladeHPTallyFunction(battleData,ownerTurn,converted);
+                },
+                "target": "self",
+                "listenerName": "Blade was healed, HP tally modification",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [HealingIncoming],
+                        [HealingIncoming]: 0.20,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceHealing,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Neverending Deaths: battlestart inc healing bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [DamageFUA],
+                        [DamageFUA]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.fuaDMG,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Cyclone of Destruction: battlestart FUA bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Blade - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const bladeTechnique = logicRef.skillFunctions.bladeTechnique;
+
+                        bladeTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Blade Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "AllyLostHP",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                        if (!this.bladeE4HPSHEET) {
+                            let characterName = sourceTurn.properName;
+                            let buffName = turnLogic[characterName].buffNames.e4HP;
+                            this.bladeE4HPSHEET = {
+                                "stats": [HPP],
+                                [HPP]: 0.20,
+                                "source": "E4",
+                                "sourceOwner": characterName,
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 2,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+
+                        const HPLost = generalInfo.HPLost;
+                        const currentHP = ownerTurn.currentHP;
+                        const maxHP = ownerTurn.maxHP;
+                        const halfWayPoint = maxHP * 0.5;
+                        const wasAboveHalf = currentHP + HPLost > halfWayPoint;
+                        if (!wasAboveHalf) {return;}
+                        const isBelowHalf = currentHP <= halfWayPoint;
+                        if (!isBelowHalf) {return;}
+                        //we only want to evaluate moments when HP was above half, and was brought below or equal to half, otherwise we don't do anything
+
+
+                        const buffSheet = this.bladeE4HPSHEET;
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+                        if (buffCheck.currentStacks === 2) {
+                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                        }
+                        //once we've reached max stacks, remove the listener so it's not trying to evaluate every fucking hp loss in the rest of the battle
+                    },
+                    "target": "self",
+                    "listenerName": "E4 hp lost listener - hp buff application",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "hellscapeActive": false,
+            "charge": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "hellscape": "Hellscape (Skill)",
+            "traceHealing": "Neverending Deaths",
+            "fuaDMG": "Cyclone of Destruction",
+            "e4HP": "Rejected by Death, Infected With Life",
+        },
+        "characterValuesBattle": {},
+    },
     
     //Remembrance
     "Trailblazer - Remembrance": {

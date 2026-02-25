@@ -2374,6 +2374,59 @@ const maslowCharactersDestruction = {
             addTeamWant: [],
         },
     },
+    "Blade": {
+        defaultMainSubs: ["CritRateBase","CritDamageBase","HP%","HPFlat"],
+        defaultTrashSub: ["DamageBreak","EffectRES","DEF%","SPDFlat"],
+        0: {
+            gives: ["FUASource"],
+            givesTeam: ["HealingSource","Consume"],
+            wants: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource"],
+            givesTeam: ["HealingSource","Consume"],
+            wants: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["FUASource"],
+            givesTeam: ["HealingSource","Consume"],
+            wants: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["FUASource"],
+            givesTeam: ["HealingSource","Consume"],
+            wants: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["FUASource"],
+            givesTeam: ["HealingSource","Consume"],
+            wants: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["FUASource"],
+            givesTeam: ["HealingSource","Consume"],
+            wants: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["FUASource"],
+            givesTeam: ["HealingSource","Consume"],
+            wants: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Basic","FUA","ULT","Wind","Consume",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersHarmony = {
     //HARMONY
