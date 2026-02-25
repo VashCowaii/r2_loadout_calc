@@ -3216,6 +3216,7 @@ const turnLogicLightcones = {
                         let lcNameRef = "Inherently Unjust Destiny";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
+                        
 
                         sourceTurn.inherentlyUnjustDEBUFFSHEET = {
                             "stats": [VulnAll],
@@ -3245,7 +3246,7 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "unjust": "Inherently Unjust Destiny",
-            "unjustVuln": "Inherently Unjust Destiny"
+            "unjustVuln": "Inherently Unjust Destiny (Vuln)"
         },
     },
     "Though Worlds Apart": {

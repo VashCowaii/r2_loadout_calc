@@ -80,6 +80,11 @@ const customDisplayValuesLog = {
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
     ],
+    "Aventurine": [
+        {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true},
+        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+    ],
     "Evernight": [
         {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Memoria", refName: "memoria", isBattleValue: true},
@@ -306,13 +311,25 @@ const conditionsCharacterDisplayWarning = {
     "Argenti": {
         hasEnhancedState: false,
         "Skill": "",
-        "Ultimate": "",
+        "Ultimate": "You as the user need to define conditions for Argenti that will determine if you use at Half-Energy or at full.",
 
         "SkillPermaConditions": [
             permaConditionsTextLibrary.atLeast1SP,
         ],
         "UltimatePermaConditions": [
             permaConditionsTextLibrary.energyHalf
+        ]
+    },
+    "Aventurine": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyMaxed
         ]
     },
 }
@@ -1165,6 +1182,17 @@ const defaultConditions = {
                     "sustainValue": "Any Ally: Has no Shield"
                 }
             ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Aventurine": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
         },
         "Ultimate": {
             "type": "AND",

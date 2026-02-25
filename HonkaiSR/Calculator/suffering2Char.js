@@ -15974,6 +15974,834 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Aventurine": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            const shortRef = this;
+            let actionUsed = false;
+            let shortCalls = shortRef.skillFunctions;
+
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.aventurineSkill, target: "self", endTurn: true};
+                return returnSkillCall;
+            }
+
+
+            if (!actionUsed) {
+                return {action: "BasicATK", points: 1, actionCall: shortCalls.aventurineBasic, target: "enemy", endTurn: true};
+            }
+        },
+        "skillFunctions": {
+            aventurineBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aventurineBasicREF ??= ATKObjects["Basic ATK"]["Straight Bet"].variant1;
+                if (!ATKObjects.aventurineBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.aventurineBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "DEF";
+                    const tags = ["All","Basic","Imaginary"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const logicRef = turnLogic[sourceTurn.properName];
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.aventurineBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0] * 0.7,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,compositeCacheTag
+                    }
+
+                    ATKObjects.aventurineBasicE2RESSHEET = {
+                        "stats": [ResistanceAll],
+                        [ResistanceAll]: -0.12,
+                        "source": sourceTurn.properName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.basicE2RES,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                let ATKObject = ATKObjects.aventurineBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+                if (sourceTurn.rank >= 2) {
+                    const buffSheet = ATKObjects.aventurineBasicE2RESSHEET;
+                    const targetTurn = battleData.primaryTarget;
+
+                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.aventurineLeverageCRITSHEET) {
+                    const characterName = currentTurn.properName;
+                    const buffName = turnLogic[characterName].buffNames.leverage;
+                    // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                    // let values = relicPathing[2];
+                    ATKObjects.aventurineLeverageCRITSHEET = {
+                        "stats": [CritRateBase,CritRateBaseNULL],
+                        [CritRateBase]: 0,
+                        [CritRateBaseNULL]: 0,
+                        "source": characterName,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let buffSheet = ATKObjects.aventurineLeverageCRITSHEET;
+                const buffName = buffSheet.buffName;
+                const buffCheck = currentTurn.buffsObject[buffName];
+
+
+                const currentStats = currentTurn.statTable;
+                const defBeyondThis = 1600;
+                const defFinal = Math.max(0,calcs.getDEFFinal(currentStats).DEFFinal - defBeyondThis - currentStats[DEFFlatNULL]);//can't benefit from converted bonuses
+                const conversion = Math.min(0.48,Math.floor(defFinal/100) * 0.02);
+
+                if (buffCheck) {
+                    const statCheck = buffCheck[CritRateBase];
+                    if (statCheck === conversion) {return;}//if buff exists and the amount hasn't changed, then end it here
+                    else {
+                        //so if gallagher already has the buff, but the new conversion amount does NOT match the existing amount
+                        //then silently remove the old buff
+                        removeBuff(battleData,currentTurn,buffCheck,true);
+                    }
+                }
+
+                if (!conversion) {return;}
+                buffSheet[CritRateBase] = conversion;
+                buffSheet[CritRateBaseNULL] = -conversion;
+                
+                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+            },
+            aventurineSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aventurineSkillShieldREF ??= ATKObjects.Skill["Cornerstone Deluxe"].variant1;
+                
+    
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+
+                // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+                //moved this into the actual shielf function, makes more sense there
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+
+                const shieldCall = ATKObjects.aventurineSkillShield ??= logicRef.skillFunctions.aventurineSkillShield;
+                //more than one thing can reference the skill shield itself, but may not be a skill cast
+                shieldCall(battleData,sourceTurn);
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            aventurineSkillShield(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aventurineSkillShieldREF ??= ATKObjects.Skill["Cornerstone Deluxe"].variant1;
+                let rank = sourceTurn.rank;
+                // let e2 = rank >= 2;
+                
+                
+                if (!ATKObjects.aventurineSkillShieldSHIELDSHEET) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.aventurineSkillShieldREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    // console.log(values)
+
+                    let buffName = turnLogic[characterName].buffNames.wager;
+                    ATKObjects.aventurineSkillShieldSHIELDSHEET = {
+                        "stats": [EffectRES,CritDamageBase],
+                        [EffectRES]: 0.50,
+                        [CritDamageBase]: rank >= 1 ? 0.20 : 0,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isShield": true,
+                        multipliers: values[0],//to give to existing shield of the same name
+                        flatAmounts: values[1],//to give to existing shield of the same name
+                        multipliersCAP: values[0]*2,//to limit by
+                        flatAmountsCAP: values[1]*2,//to limit by
+                        scalar: "DEF",
+                        shieldRemaining: 0,
+                        shieldCap: 0,
+                        // shieldTags: ["All","Skill","Imaginary"],
+                        // shieldActionTags: ["Skill"],
+                        slot: skillRef.slot,
+                        // shieldCapFixed: null,
+                        // shieldCapPercent: 2,
+                        removeOnDeath: true,
+                        shieldClass: "Fortified Wager",
+                    }
+                    // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
+                }
+
+                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+                const shieldBuffObject = ATKObjects.aventurineSkillShieldSHIELDSHEET;
+                const allyPositions = battleData.allyPositions;
+                const updateBuff = battleActions.updateBuff;
+                for (let ally of allyPositions) {
+                    shieldBuffObject.duration = ally.turnState ? 4 : 3;
+                    updateBuff(battleData,ally,shieldBuffObject,false,sourceTurn);
+                }
+            },
+            aventurineFUA(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aventurineFUAREF ??= ATKObjects.Talent["Shot Loaded Right"].variant1;
+
+                if (!ATKObjects.aventurineFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = ATKObjects.aventurineFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "DEF";
+                    const tags = ["All","FUA","Imaginary"];
+                    const actionTags = ["FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.aventurineFUAATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: true,
+                        bounceData: {
+                            multi: values[2],
+                            bounceCount: sourceTurn.rank >= 4 ? 10 : 7,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 1,
+                                    "toughness": 3.3333333333333335
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            }
+                        }
+                    }
+                }
+                let ATKObject = ATKObjects.aventurineFUAATKOBJECT;
+
+                const valuesRef = sourceTurn.battleValues;
+
+                poke("TalentStart",battleData,{sourceTurn});
+
+                poke("aventurineBetGained",battleData,{pointsGained: -7,sourceString:"FUA Launched"});
+                valuesRef.fuaStackDebt -= 7;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                const shieldCall = ATKObjects.aventurineTalentShield ??= logicRef.skillFunctions.aventurineTalentShield;
+                shieldCall(battleData,sourceTurn);
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen * (sourceTurn.rank >= 4 ? 10 : 7),sourceTurn);//adjust the energy gain by the hits count diff
+                poke("TalentEnd",battleData,{sourceTurn});
+
+                //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
+                // battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
+            },
+            aventurineTalentShield(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.aventurineSkillShieldREF ??= ATKObjects.Skill["Cornerstone Deluxe"].variant1;
+                let rank = sourceTurn.rank;
+                let e2 = rank >= 1;
+                
+                
+                if (!ATKObjects.aventurineTraceShieldSHIELDSHEET) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.aventurineSkillShieldREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    // console.log(values)
+
+                    let buffName = turnLogic[characterName].buffNames.wager;
+                    ATKObjects.aventurineTraceShieldSHIELDSHEET = {
+                        "stats": [EffectRES,CritDamageBase],
+                        [EffectRES]: 0.50,
+                        [CritDamageBase]: rank >= 1 ? 0.20 : 0,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isShield": true,
+                        multipliers: 0.072,//to give to existing shield of the same name
+                        flatAmounts: 96,//to give to existing shield of the same name
+                        multipliersCAP: values[0]*2,//to limit by
+                        flatAmountsCAP: values[1]*2,//to limit by
+                        scalar: "DEF",
+                        shieldRemaining: 0,
+                        shieldCap: 0,
+                        // shieldTags: ["All","Skill","Imaginary"],
+                        // shieldActionTags: ["Skill"],
+                        slot: skillRef.slot,
+                        // shieldCapFixed: null,
+                        // shieldCapPercent: 2,
+                        removeOnDeath: true,
+                        shieldClass: "Fortified Wager",
+                    }
+                    // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
+                }
+
+                const shieldBuffObject = ATKObjects.aventurineTraceShieldSHIELDSHEET;
+                
+                const allyPositions = battleData.allyPositions;
+                const updateBuff = battleActions.updateBuff;
+                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+                
+                let allyWithLowestShield = null;
+                let allyLowestAmount = 0;
+                const shieldName = shieldBuffObject.buffName;
+                let alliesChecked = 0;
+                for (let ally of allyPositions) {
+                    alliesChecked += 1;
+                    shieldBuffObject.duration = ally.turnState ? 4 : 3;
+                    updateBuff(battleData,ally,shieldBuffObject,false,sourceTurn);
+                    const shieldRead = ally.buffsObject[shieldName].shieldRemaining;
+                    if (alliesChecked === 1) {
+                        //first ally gets assigned regardless
+                        allyWithLowestShield = ally;
+                        allyLowestAmount = shieldRead;
+                    }
+                    else if (shieldRead < allyLowestAmount) {
+                        //then we look for people will less as we go
+                        allyWithLowestShield = ally;
+                        allyLowestAmount = shieldRead;
+                    }
+                }
+                shieldBuffObject.duration = allyWithLowestShield.turnState ? 4 : 3;
+                updateBuff(battleData,allyWithLowestShield,shieldBuffObject,false,sourceTurn);
+                
+            },
+            aventurineUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.archerUltimateREF ??= ATKObjects.Ultimate["Roulette Shark"].variant1;
+                poke("aventurineBetGained",battleData,{pointsGained: 4,sourceString:"Ult cast - AVG gain"});
+
+                if (!ATKObjects.aventurineUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.archerUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "DEF";
+                    const tags = ["All","Ultimate","Imaginary"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.aventurineUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.aventurineUltimateDEBUFFSHEET = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: values[2],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.ultDebuff,
+                        "duration": 0,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn",
+                        "actionTags": ["Attack"]
+                    }
+                }
+                const ATKObject = ATKObjects.aventurineUltimateATKOBJECT;
+
+                const buffSheet = ATKObjects.aventurineUltimateDEBUFFSHEET;
+                const targetEnemy = battleData.primaryTarget;
+                buffSheet.duration = targetEnemy.turnState ? 4 : 3;
+                
+                // poke("SkillStart",battleData,{source:"Archer"});//ultimate listeners are poked before and after ulty use, within the ulty queue dump function
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.updateBuff(battleData,targetEnemy,buffSheet);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                if (sourceTurn.rank >= 1) {
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Prisoner's Dilemma", bodyText: `E1 shield application triggered`});}
+                    logicRef.skillFunctions.aventurineSkillShield(battleData,sourceTurn);
+                }
+
+                sourceTurn.ultyQueued = false;
+            },
+            aventurineTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.aventurineTechREF ??= ATKObjects.Technique["The Red or the Black"].variant1;
+
+                if (!ATKObjects.aventurineTechDEFSHEET) {
+                    let values = ATKObjects.aventurineTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    let buffName = turnLogic[characterName].buffNames.technique;
+                    ATKObjects.aventurineTechDEFSHEET = {
+                        "stats": [DEFP],
+                        [DEFP]: values[1],//we do assume the middle value for the def buff, but later we can look into specifying it based on technique uses
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+                }
+                const buffSheet = ATKObjects.aventurineTechDEFSHEET
+                //TODO: since this is like tingyun and can be stacked before going into battle, look at adding multiple use counters based on how many uses the rest of the team needs
+                //like obv if the other 3 used theirs and they are one time use, he can use his twice instead, or if there are 2 dmg techniques, he can use his 3 times
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                const allies = battleData.allyPositions;
+                const updateBuff = battleActions.updateBuff;
+                for (let ally of allies) {
+                    updateBuff(battleData,ally,buffSheet);
+                }
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+            aventurineE6DMGHandler(battleData,shieldsFound,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.aventurineE6DMGSHEET) {
+                    ATKObjects.aventurineUltimateDEBUFFSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.50,
+                        "source": "E6",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e6DMGBuff,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+                const buffSheet = ATKObjects.aventurineUltimateDEBUFFSHEET;
+                const buffName = buffSheet.buffName;
+                const actualStacksToApply = Math.min(3,shieldsFound);
+
+                const buffCheck = sourceTurn.buffsObject[buffName];
+                const updateBuff = battleActions.updateBuff;
+                if (buffCheck) {//if the buff already exists
+                    const currentStacks = buffCheck.currentStacks;
+                    if (currentStacks === actualStacksToApply) {return;}//if we're capped on stacks, abort
+                    else if (actualStacksToApply > currentStacks) {//if we found more shields than we stacked for, update that diff in stacks and abort
+                        buffSheet.currentStacks = actualStacksToApply - currentStacks;
+                        updateBuff(battleData,sourceTurn,buffSheet);
+                        return;
+                    }
+                    else {//at this point the only option left is that the shield stacks are less than what we have rn, so we need to remove
+                        const silentOrNot = actualStacksToApply > 0;//if we still have shields active, then silently remove before we reapply, otherwise announce the removal in the log
+                        updateBuff(battleData,sourceTurn,buffSheet,silentOrNot);
+                    }
+                }
+                
+                buffSheet.currentStacks = actualStacksToApply;
+                updateBuff(battleData,sourceTurn,buffSheet);
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "aventurineBetGained",
+                condition(battleData,generalInfo) {
+                    // poke("aventurineBetGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.betStacks;
+                    valuesRef.betStacks = Math.min(10,oldValue + pointsGained);
+
+                    if (pointsGained>0) {
+                        const fuaCheck = valuesRef.betStacks-valuesRef.fuaStackDebt > 7;
+                        if (fuaCheck) {
+                            valuesRef.fuaStackDebt += 7;//offset potential future queues with this debt to stacks until the fua can actually launch;
+                            let characterName = ownerTurn.properName;
+
+                            const queueObject = this.queueObject ??= {
+                                attack: turnLogic[ownerTurn.properName].skillFunctions.aventurineFUA,
+                                target: "enemy",
+                                name: this.listenerName,
+                                properName: characterName,
+                                sourceTurn: null
+                            }
+                            queueObject.sourceTurn = ownerTurn;
+                            battleActions.queueFollowUpAttack(battleData,queueObject);
+                        }
+                    }
+
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
+                        
+                    }
+                    if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                },
+                "target": "self",
+                "listenerName": "Blind Bet Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ShieldWasHit",
+                condition(battleData,generalInfo) {
+                    // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                    let ownerTurn = this.ownerTurn;
+                    const currentShield = generalInfo.currentShield;
+
+                    if (currentShield.shieldClass != "Fortified Wager") {return;}//if this isn't fortified wager getting hit, then abort
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const stacksToGain = sourceTurn.properName === ownerTurn.properName ? 2 : 1;
+                    poke("aventurineBetGained",battleData,{pointsGained: stacksToGain,sourceString:"Ally hit with shield"});
+                },
+                "target": "self",
+                "listenerName": "Leverage battle start stat check trigger",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "FUAEnd",
+                condition(battleData,generalInfo) {
+                    // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                    let ownerTurn = this.ownerTurn;
+                    // const currentShield = generalInfo.currentShield;
+                    // let generalInfo = {sourceTurn,actionName};
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName === ownerTurn.properName) {return;}//it doesn't count av himself for this, which is odd frankly
+
+
+                    // const isBattleEvent = sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite;
+
+                    const logicRef = turnLogic[sourceTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let shieldRef = ATKObjects.aventurineSkillShieldSHIELDSHEET;
+                    if (!shieldRef) {return;}
+                    // ownerTurn.aventurineSkillShieldSHIELDSHEET.buffName
+                    let shieldCheck = sourceTurn.buffsObject[shieldRef.buffName];
+                    const valuesRef = ownerTurn.battleValues;
+
+                    if (shieldCheck && valuesRef.allyFUABetCounter < 3) {//if the ally had fortified wager and launched a fua, get a point
+                        valuesRef.allyFUABetCounter += 1;//resets on av turnstart
+                        poke("aventurineBetGained",battleData,{pointsGained: 1,sourceString:"Ally launched FUA"});
+                    }
+                },
+                "target": "self",
+                "listenerName": "Bingo! ally FUA listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    const ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}//only av's turn start will reset it
+
+                    const valuesRef = ownerTurn.battleValues;
+
+                    valuesRef.allyFUABetCounter = 0;
+                },
+                "target": "self",
+                "listenerName": "Ally fua counter reset for Bingo!",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Major Trace: Hot Hand", bodyText: `Battlestart shield application`});}
+                    const aventurineSkillShield = this.aventurineSkillShield ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineSkillShield;
+                    aventurineSkillShield(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Hot Hand battle start stat shield application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatDEF",//DEF stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.name != ownerTurn.name) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,sourceTurn);
+                },
+                "target": "self",
+                "listenerName": "Leverage DEF check",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Leverage battle start stat check trigger",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.aventurineUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Aventurine - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const aventurineTechnique = this.aventurineTechnique ??= logicRef.skillFunctions.aventurineTechnique;
+                        aventurineTechnique(battleData,"self",ownerTurn)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Aventurine Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "FUAStart",
+                    condition(battleData,generalInfo) {
+                        // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                        let ownerTurn = this.ownerTurn;
+                        // const currentShield = generalInfo.currentShield;
+                        // let generalInfo = {sourceTurn,actionName};
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}//has to be him
+
+                        if (!this.e4fuaDEFSHEET) {
+                            const characterName = ownerTurn.properName
+                            buffName = turnLogic[characterName].buffNames.e4DEFBuff;
+                            this.e4fuaDEFSHEET = {
+                                "stats": [DEFP],
+                                [DEFP]: 0.40,
+                                "source": characterName,
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffName,
+                                "duration": 3,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+                        const buffSheet = this.e4fuaDEFSHEET;
+                        buffSheet.duration = ownerTurn.turnState ? 3 : 2;
+
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Bingo! ally FUA listener",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [
+                {
+                    "trigger": "ShieldEnd",
+                    condition(battleData,generalInfo) {
+                        // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
+                        let ownerTurn = this.ownerTurn;
+                        // const currentShield = generalInfo.currentShield;
+                        // let generalInfo = {sourceTurn,actionName};
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.isEnemy) {return;}
+
+
+
+                        const allyPositions = battleData.allyPositions;
+
+                        let shieldsFound = 0;
+                        for (let ally of allyPositions) {
+                            if (ally.properName === ownerTurn.properName) {continue;}
+                            if (ally.shieldCounter) {shieldsFound += 1;}
+                        }
+
+                        const aventurineE6DMGHandler = this.aventurineE6DMGHandler ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineE6DMGHandler;
+                        aventurineE6DMGHandler(battleData,shieldsFound,ownerTurn);
+                    },
+                    "target": "self",
+                    "listenerName": "Stag Hunt Game shields listener (application)",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "ShieldsWereBroken",
+                    condition(battleData,generalInfo) {
+                        // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
+                        let ownerTurn = this.ownerTurn;
+                        // const currentShield = generalInfo.currentShield;
+                        // let generalInfo = {sourceTurn,actionName};
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.isEnemy) {return;}
+
+
+
+                        const allyPositions = battleData.allyPositions;
+
+                        let shieldsFound = 0;
+                        for (let ally of allyPositions) {
+                            if (ally.properName === ownerTurn.properName) {continue;}
+                            if (ally.shieldCounter) {shieldsFound += 1;}
+                        }
+
+                        const aventurineE6DMGHandler = this.aventurineE6DMGHandler ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineE6DMGHandler;
+                        aventurineE6DMGHandler(battleData,shieldsFound,ownerTurn);
+                    },
+                    "target": "self",
+                    "listenerName": "Stag Hunt Game shields listener (removal)",
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "betStacks": 0,
+            "fuaStackDebt": 0,
+            "allyFUABetCounter": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "leverage": "Leverage",
+            "wager": "Fortified Wager",
+            "ultDebuff": "Unnerved",
+            "technique": "The Red or the Black",
+            "basicE2RES": "Bounded Rationality",
+            "e4DEFBuff": "Unexpected Hanging Paradox",
+            "e6DMGBuff": "Stag Hunt Game",
+        },
+        "characterValuesBattle": {},
+    },
 
 
     //Erudition

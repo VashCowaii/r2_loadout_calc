@@ -942,17 +942,17 @@ const hitSplitters = {
             }
         ],
         "passive": [
-            {
-              "bounce": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 3.3333333333333335
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
+            // {
+            //   "bounce": {
+            //     "hitRatio": 1,
+            //     "energyRatio": 1,
+            //     "toughness": 3.3333333333333335
+            //   },
+            //   "isSourceFirstHit": true,
+            //   "isAttackFirstHit": true,
+            //   "isSourceLastHit": true,
+            //   "isAttackLastHit": true
+            // }
         ]
     },
     "Argenti": {//done
