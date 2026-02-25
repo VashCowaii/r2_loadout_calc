@@ -13701,11 +13701,12 @@ const turnLogic = {
                     const hasMemo = ownerTurn.memospriteEventRef;
                     if (!hasMemo) {return;}
 
-                    const logicRef = turnLogic[ownerTurn.properName];
+                    const memoTurn = ownerTurn[hasMemo];
+
+                    const logicRef = turnLogic[rmcTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
 
                     const buffSheet = ATKObjects.rmcMemsSupportMemoSHEET;
-                    const memoTurn = ownerTurn[hasMemo];
                     removeBuff(battleData,memoTurn,buffSheet);
                     memoTurn.rmcCharHasMemSupport = false;
                 }
