@@ -552,8 +552,11 @@ const battleActions = {
             else {
                 let currentHighest = 0;
                 let currentHighestCap = 0;
+                const currentShields = sourceTurn.activeShields;
+                // console.log(currentShields)
                 for (let shieldKey in currentShields) {
                     const currentShield = currentShields[shieldKey];
+                    if (currentShield == null) {continue;}
 
                     if (currentShield.shieldRemaining > currentHighest) {
                         currentHighest = currentShield.shieldRemaining;
@@ -641,6 +644,7 @@ const battleActions = {
                     let currentHighestCap = 0;
                     for (let shieldKey in currentShields) {
                         const currentShield = currentShields[shieldKey];
+                        if (currentShield == null) {continue;}
 
                         if (currentShield.shieldRemaining > currentHighest) {
                             currentHighest = currentShield.shieldRemaining;
