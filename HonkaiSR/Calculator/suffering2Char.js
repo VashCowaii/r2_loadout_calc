@@ -17856,9 +17856,12 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
                     
                     const buffsObject = ownerTurn.buffsObject;
+                    let currentStacksCheck = null;
+                    const rank = ownerTurn.rank;
+                    const maxStacks = rank >= 4 ? 12 : 10;
 
                     if (pointsGained>0) {
-                        const rank = ownerTurn.rank;
+                        
 
                         let skillRef = ATKObjects.argentiTalentREF ??= ATKObjects.Talent["Sublime Object"].variant1;
                         let values = ATKObjects.argentiTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
@@ -17869,7 +17872,7 @@ const turnLogic = {
                             battleActions.updateEnergy(battleData,totalEnergyGain,ownerTurn,false,"Talent Energy Gain/Enemy Hit");
                         }
 
-                        const maxStacks = rank >= 4 ? 12 : 10;
+                        
                         if (!ownerTurn.saberCoreGainCRITDMGSHEET) {
                             const buffNames = logicRef.buffNames;
                             const rank = ownerTurn.rank;
@@ -17900,13 +17903,22 @@ const turnLogic = {
                             buffSheet.currentStacks = pointsGained;
                             battleActions.updateBuff(battleData,ownerTurn,buffSheet);
                             const buffCheck = buffsObject[buffSheet.buffName];
-                            if (buffCheck.currentStacks === maxStacks) {ownerTurn.argentTalentStackingDONE = true;}//mark as completed so this buff is never called again
+                            if (buffCheck.currentStacks === maxStacks) {
+                                ownerTurn.argentTalentStackingDONE = true;
+                                currentStacksCheck = buffCheck.currentStacks
+                            }//mark as completed so this buff is never called again
                         }
                         else {return;}
                     }
 
                     const valuesRef = ownerTurn.battleValues;
-                    valuesRef.apotheosisStacks += pointsGained;
+                    if (ownerTurn.argentTalentStackingDONE) {
+                        valuesRef.apotheosisStacks = maxStacks;
+                    }
+                    else {
+                        valuesRef.apotheosisStacks += pointsGained;
+                    }
+                    
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
 
                 },
