@@ -15974,4 +15974,627 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+
+
+    //Erudition
+    "Argenti": {
+        logic(thisTurn,battleData) {
+            let statCalls = thisTurn.battleValues;
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+            // const isEnhanced = statCalls.isEnhanced;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.argentiSkill, target: "enemy", endTurn: true};
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.argentiBasic, target: "enemy", endTurn: true};
+            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.saberBasicEnhanced, target: "enemy", endTurn: true};
+            return returnBasicCall;
+            //default to basic atk when all else fails
+        },
+        "skillFunctions": {
+            argentiBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.argentiBasicREF ??= ATKObjects["Basic ATK"]["Fleeting Fragrance"].variant1;
+
+                
+                if (!ATKObjects.argentiBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Physical"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.argentiBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.argentiBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+                poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Basic ATK"});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            argentiSkill(battleData,target,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.argentiSkillREF ??= ATKObjects["Skill"]["Justice, Hereby Blooms"].variant1;
+                let values = ATKObjects.argentiSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                
+                if (!ATKObjects.argentiSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Physical"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.argentiSkillATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.argentiSkillATKOBJECT;
+
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: false, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                const enemyAmount = battleData.enemyPositions.length;
+                poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Skill"});
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            argentiUltimate(battleData,sourceTurn) {
+                // const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                // const logicRef = turnLogic[sourceTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.argentiUltimateREF ??= ATKObjects.Ultimate["For In This Garden, Supreme Beauty Bestows"].variant1;
+                const skillRef2 = ATKObjects.argentiUltimateREF2 ??= ATKObjects.Ultimate["Merit Bestowed in \"My\" Garden"].variant1;
+                const rank = sourceTurn.rank;
+
+
+                if (!ATKObjects.argentiUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    skillRef2.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const values2 = battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Physical"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.argentiUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                    ATKObjects.argentiUltimateATKOBJECT2 = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values2[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: {
+                            multi: values2[2],
+                            bounceCount: values2[1],
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 1,
+                                    "toughness": 5
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+
+
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.argentiE2ATKSHEET = {
+                        "stats": [ATKP],
+                        [ATKP]: 0.40,
+                        "source": "E2",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e2ATK,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+                let ATKObject = ATKObjects.argentiUltimateATKOBJECT;
+                let ATKObject2 = ATKObjects.argentiUltimateATKOBJECT2;
+
+                const maxEnergy = sourceTurn.maxEnergy;
+                const useEnhancedUlt = sourceTurn.currentEnergy === sourceTurn.maxEnergy;
+                const updateEnergy = battleActions.updateEnergy;
+
+                const enemyAmount = battleData.enemyPositions.length;
+                
+
+                if (rank >= 2 && enemyAmount >= 3) {
+                    const buffSheet = ATKObjects.argentiE2ATKSHEET;
+                    buffSheet.duration = sourceTurn.turnState ? 2 : 1;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                }
+
+                if (useEnhancedUlt) {//account for varying levels of energy drain based on which ult is used
+                    updateEnergy(battleData,-maxEnergy,sourceTurn);
+                    poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"});
+                    battleActions.attackWrapper(battleData,skillRef2,sourceTurn,ATKObject2);
+                }
+                else {
+                    updateEnergy(battleData,-maxEnergy * 0.5,sourceTurn);
+                    poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"});
+                    battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                }
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+
+                sourceTurn.ultyQueued = false;
+            },
+            saberBasicEnhanced(battleData,target,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+                let skillRef = ATKObjects.saberBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Release, the Golden Scepter"].variant1;
+                let values = ATKObjects.saberBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.saberBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[characterName].eba;
+                    hitSplitters[characterName].eba3[1].perHitMultiOverride = values[3];//this assigns the multi to the enemies===1 extra dmg, that takes place between hit1 and hit2
+
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Wind"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.saberBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        bounceData: null,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.saberBasicEnhancedATKOBJECT;
+
+                const enemyPositions = battleData.enemyPositions;
+                if (enemyPositions.length <= 2) {
+                    // let insert = 0;
+                    if (enemyPositions.length === 1) {
+                        // insert = values[3];
+                        skillRef.hitSplits = hitSplitters[characterName].eba3;
+                    }
+                    else {
+                        // insert = values[2];
+                        skillRef.hitSplits = hitSplitters[characterName].eba2;
+                    }
+
+                    // ATKObject.bounceData = {
+                    //     multi: insert,
+                    //     bounceCount: 1,
+                    //     hitSplit: {
+                    //         "primary": null,
+                    //         "blast": null,
+                    //         "all": {
+                    //             "hitRatio": 1,
+                    //             "energyRatio": 0,
+                    //             "toughness": 0
+                    //         },
+                    //         "allEnemiesHit": null,
+                    //         "unknownTypers": false
+                    //     },
+                    // }
+                }
+                else {
+                    // ATKObject.bounceData = null;
+                    skillRef.hitSplits = hitSplitters[characterName].eba;
+                }
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+                const buffSheet = ATKObjects.saberManaBurstNULLSHEET;
+                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+
+                const battleValues = sourceTurn.battleValues;
+                battleValues.advanceReady = true;
+                poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Enhanced Basic"});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+
+                battleValues.isEnhanced = false;
+            },
+            argentiTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.argentiTechREF ??= ATKObjects.Technique["Manifesto of Purest Virtue"].variant1;
+                let values = ATKObjects.argentiTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.argentiTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Physical"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.argentiTechATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.argentiTechATKObject
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,values[2],sourceTurn,false,"Argenti Technique");
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "ArgentiGainApotheosis",
+                condition(battleData,generalInfo) {
+                    // poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const characterName = ownerTurn.properName;
+                    const logicRef = this.logicRef ??= turnLogic[characterName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    
+                    const buffsObject = ownerTurn.buffsObject;
+
+                    if (pointsGained>0) {
+                        const rank = ownerTurn.rank;
+
+                        let skillRef = ATKObjects.argentiTalentREF ??= ATKObjects.Talent["Sublime Object"].variant1;
+                        let values = ATKObjects.argentiTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                        if (generalInfo.sourceString != "Turn Start") {
+                            //the trace gains a stack at turn start, but it down
+                            const totalEnergyGain = pointsGained * values[0];
+                            battleActions.updateEnergy(battleData,totalEnergyGain,ownerTurn,false,"Talent Energy Gain/Enemy Hit");
+                        }
+
+                        const maxStacks = rank >= 4 ? 12 : 10;
+                        if (!ownerTurn.saberCoreGainCRITDMGSHEET) {
+                            const buffNames = logicRef.buffNames;
+                            const rank = ownerTurn.rank;
+
+                            // greatTableIndex
+                            // greatTableKeys
+                            this.argentTalentSTACKSHEET ??= {
+                                "stats": [CritRateBase,CritDamageBase],
+                                [CritRateBase]: values[1],
+                                [CritDamageBase]: rank >= 1 ? 0.04 : 0,
+                                "source": "Talent",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.apotheosis,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": maxStacks,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            ownerTurn.argentTalentStackingDONE = false;
+                        }
+
+                        //REG CRIT DMG HANDLING
+                        if (!ownerTurn.argentTalentStackingDONE && pointsGained>0) {
+                            //only check this if we haven't finished stacking yet, and if the change in points is actually positive
+                            const buffSheet = this.argentTalentSTACKSHEET;
+                            buffSheet.currentStacks = pointsGained;
+                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            const buffCheck = buffsObject[buffSheet.buffName];
+                            if (buffCheck.currentStacks === maxStacks) {ownerTurn.argentTalentStackingDONE = true;}//mark as completed so this buff is never called again
+                        }
+                        else {return;}
+                    }
+
+                    const valuesRef = ownerTurn.battleValues;
+                    valuesRef.apotheosisStacks += pointsGained;
+                    if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+
+                },
+                "target": "self",
+                "listenerName": "Apotheosis Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    // let sourceTurn = generalInfo.sourceTurn;
+
+                    if (ownerTurn.turnState) {
+                        poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Turn Start"});
+                        // let amount = 5;
+                        // battleActions.updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Argenti Piety trace turnstart stack gain",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // if (!ownerTurn.battleValues.bondmateSlot) {return;}
+
+                    battleActions.updateEnergy(battleData,2,ownerTurn,false,"Generosity (Argenti)");
+                },
+                "target": "enemy",
+                "listenerName": "Argenti Generosity trace energy regen per enemy added to field",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+
+                    // let skillRef = ATKObjects.natashaTalentREF ??= ATKObjects.Talent["Innervation"].variant1;
+                    // const logicRef = turnLogic[sourceTurn.properName];
+                    // const ATKObjects = logicRef.ATKObjects;
+                    // let values = ATKObjects.natashaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,ATKObjects.Talent["Innervation"].variant1,ownerTurn);
+                    const hpThreshold = 0.5;
+                    
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageAll], 
+                        [DamageAll]: 0.15,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceDMGUp,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    };
+
+                    if (hpRatio <= hpThreshold) {
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+                    else {
+                        removeBuff(battleData,ownerTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Argenti Trace Courage <=50%HP DMG% bonus",
+                "owners": []
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy >= ownerTurn.maxEnergy * 0.5;
+                    let otherObscureCondition = energyCheck ? checkUlty(battleData,ownerTurn) : false;
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+                        const queueObject = this.queueObject ??= {
+                            attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.argentiUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Argenti - Ultimate queued",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const argentiTechnique = this.argentiTechnique ??= logicRef.skillFunctions.argentiTechnique;
+                        argentiTechnique(battleData,"self",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Argenti Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        // let characterName = ownerTurn.properName;
+                        // let sourceTurn = generalInfo.sourceTurn;
+    
+                        poke("ArgentiGainApotheosis",battleData,{pointsGained: 2,sourceString:"Turn Start"});
+                        //I know this says turnstart, but the string here is used to block energy gain
+                        //and since E4 doesn't gain energy with these 2 stacks, we use the same string param
+                    },
+                    "target": "self",
+                    "listenerName": "E4 Battlestart 2stack gain",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        // greatTableIndex
+                        // greatTableKeys
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [DEFShredUltimate],
+                            [DEFShredUltimate]: 0.30,
+                            "source": ownerTurn.properName,
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Shred,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Argenti E6 ult shred",
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "apotheosisStacks": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Impair",
+        "buffNames": {
+            "traceDMGUp": "Courage (Argenti)",
+            "apotheosis": "Apotheosis",
+            "e2ATK": "E2: Agate's Humility",
+            "e6Shred": "\"Your\" Resplendence",
+        },
+        "characterValuesBattle": {},
+    },
 }

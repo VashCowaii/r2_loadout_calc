@@ -2209,50 +2209,50 @@ const maslowCharactersRemembrance = {
         0: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource"],
-            wants: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
-            wantsTeam: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wants: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wantsTeam: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
             addTeamWant: [],
         },
         1: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource","Vuln"],
-            wants: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
-            wantsTeam: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wants: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wantsTeam: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
             addTeamWant: [],
         },
         2: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource","Vuln"],
-            wants: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
-            wantsTeam: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wants: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wantsTeam: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
             addTeamWant: [],
         },
         3: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource","Vuln"],
-            wants: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
-            wantsTeam: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wants: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wantsTeam: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
             addTeamWant: [],
         },
         4: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource","Vuln"],
-            wants: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
-            wantsTeam: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wants: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wantsTeam: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
             addTeamWant: [],
         },
         5: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource","Vuln"],
-            wants: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
-            wantsTeam: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wants: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wantsTeam: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
             addTeamWant: [],
         },
         6: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource","Vuln"],
-            wants: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
-            wantsTeam: ["Lightning","ATK",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wants: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
+            wantsTeam: ["Lightning","ATK","Basic",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...generalCharacterWants],
             addTeamWant: [],
         },
     },
@@ -2715,7 +2715,63 @@ const maslowCharactersPreservation = {
         },
     },
 }
-const maslowCharactersErudition = {}
+const maslowCharactersErudition = {
+    "Argenti": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Ultimate","Skill","Basic",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
+}
 
 
 const maslowCategoryCharacters = {

@@ -64,6 +64,9 @@ const customDisplayValuesLog = {
         {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
+    "Argenti": [
+        {valueName: "Talent Stacks", refName: "apotheosisStacks", isBattleValue: true},
+    ], 
     "Ruan Mei": [
         {valueName: "Overtone Active", refName: "overtoneIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Zone Active", refName: "ruanmeiZoneActive", isBattleValue: true, isCharacterState: true},
@@ -116,6 +119,7 @@ const customDisplayValuesLog = {
 
 const permaConditionsTextLibrary = {
     "energyMaxed": "Energy: Current === Energy: Max",
+    "energyHalf": "Energy Current >= (Energy Max * 0.5)",
     "energyMaxedCyrene": "First battle's ultimate: Energy: Current === Energy: Max<br>Any further ultimates: Energy Current >= 12",
     "atLeast1SP": "Skill Points: Current >= 1"
 }
@@ -253,6 +257,18 @@ const conditionsCharacterDisplayWarning = {
         ],
         "UltimatePermaConditions": [
             permaConditionsTextLibrary.energyMaxed
+        ]
+    },
+    "Argenti": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyHalf
         ]
     },
 }
@@ -1110,6 +1126,13 @@ const defaultConditions = {
             "type": "AND",
             "array": []
         }
+    },
+
+    //ERUDITON
+    "Argenti": {
+        hasEnhancedState: false,
+        "Skill": null,
+        "Ultimate": null,
     },
 }
 

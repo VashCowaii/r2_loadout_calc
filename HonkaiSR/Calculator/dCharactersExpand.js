@@ -2836,6 +2836,900 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Blade": {
+    "internalID": 1205,
+    "name": "Blade",
+    "path": "Destruction",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 485.1,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 97,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "1120501",
+        "name": "Blade Cuts the Deepest in Hell",
+        "rank": 1,
+        "desc": "Enhanced Basic ATK and Ultimate deal additionally increased DMG to one designated enemy, with the increased amount equal to 150% of the tally of HP loss from Ultimate.",
+        "icon": "icon/skill/1120_rank1.png",
+        "paramsEido": [
+          1.5,
+          0.9
+        ]
+      },
+      {
+        "id": "1120502",
+        "name": "Ten Thousand Sorrows From One Broken Dream",
+        "rank": 2,
+        "desc": "When Blade is in the \"Hellscape\" state, his CRIT Rate increases by 15%.",
+        "icon": "icon/skill/1120_rank2.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "1120503",
+        "name": "Hardened Blade Bleeds Coldest Shade",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1120_ultimate.png"
+      },
+      {
+        "id": "1120504",
+        "name": "Rejected by Death, Infected With Life",
+        "rank": 4,
+        "desc": "When Blade's current HP percentage drops from above 50% to 50% of his Max HP or lower, increases his Max HP by 20%. Stacks up to 2 time(s).",
+        "icon": "icon/skill/1120_rank4.png",
+        "paramsEido": [
+          0.2,
+          2
+        ]
+      },
+      {
+        "id": "1120505",
+        "name": "Death By Ten Lords' Gaze",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1120_skill.png"
+      },
+      {
+        "id": "1120506",
+        "name": "Reborn Into an Empty Husk",
+        "rank": 6,
+        "desc": "The maximum number of Charge stacks is reduced to 4. The Follow-Up ATK triggered by Talent deals additionally increased DMG, with the increased amount equal to 50% of Blade's Max HP.",
+        "icon": "icon/skill/1120_rank6.png",
+        "paramsEido": [
+          0.5
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        },
+        "eidoAbility": "Blade_Ren_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Shard Sword": {
+          "variant1": {
+            "skillID": 1120501,
+            "trigger": "Skill01",
+            "name": "Shard Sword",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Blade's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill01_Camera",
+              "Avatar_AdvancedRen_00_Skill01_Phase01",
+              "Avatar_AdvancedRen_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Forest of Swords": {
+          "variant1": {
+            "skillID": 1120508,
+            "trigger": "Skill11",
+            "name": "Forest of Swords",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Consumes HP equal to #1[i]% of Blade's Max HP and deals Wind DMG equal to #2[i]% of his Max HP to one designated enemy. In addition, deals Wind DMG equal to #3[i]% of Blade's Max HP to adjacent targets.\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when using \"Forest of Swords.\"\\n\"Forest of Swords\" cannot regenerate Skill Points.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.65,
+                0.26,
+                0.65,
+                0.2
+              ],
+              "2": [
+                0.1,
+                0.78,
+                0.312,
+                0.78,
+                0.24
+              ],
+              "3": [
+                0.1,
+                0.91,
+                0.364,
+                0.91,
+                0.28
+              ],
+              "4": [
+                0.1,
+                1.04,
+                0.416,
+                1.04,
+                0.32
+              ],
+              "5": [
+                0.1,
+                1.17,
+                0.468,
+                1.17,
+                0.36
+              ],
+              "6": [
+                0.1,
+                1.3,
+                0.52,
+                1.3,
+                0.4
+              ],
+              "7": [
+                0.1,
+                1.43,
+                0.572,
+                1.43,
+                0.44
+              ],
+              "8": [
+                0.1,
+                1.56,
+                0.624,
+                1.56,
+                0.48
+              ],
+              "9": [
+                0.1,
+                1.69,
+                0.676,
+                1.69,
+                0.52
+              ],
+              "10": [
+                0.1,
+                1.82,
+                0.728,
+                1.82,
+                0.56
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_AdvancedRen_00_Skill11_Phase01",
+              "Avatar_AdvancedRen_00_Skill11_Phase02",
+              "Avatar_Ren_00_Skill11_Camera"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              30
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Hellscape": {
+          "variant1": {
+            "skillID": 1120502,
+            "trigger": "Skill02",
+            "name": "Hellscape",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Consumes HP equal to #1[i]% of Blade's Max HP to enter the \"Hellscape\" state.\\nWhile \"Hellscape\" is active, his Skill cannot be used, his DMG dealt increases by #4[i]%, his chance of getting attacked by enemy targets greatly increases, and his Basic ATK \"Shard Sword\" is enhanced to \"Forest of Swords\" for #2[i] turn(s).\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when he uses his Skill.\\nThis Skill does not regenerate Energy. Using this Skill does not end the current turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                3,
+                1,
+                0.12,
+                10
+              ],
+              "2": [
+                0.3,
+                3,
+                1,
+                0.148,
+                10
+              ],
+              "3": [
+                0.3,
+                3,
+                1,
+                0.176,
+                10
+              ],
+              "4": [
+                0.3,
+                3,
+                1,
+                0.204,
+                10
+              ],
+              "5": [
+                0.3,
+                3,
+                1,
+                0.232,
+                10
+              ],
+              "6": [
+                0.3,
+                3,
+                1,
+                0.26,
+                10
+              ],
+              "7": [
+                0.3,
+                3,
+                1,
+                0.295,
+                10
+              ],
+              "8": [
+                0.3,
+                3,
+                1,
+                0.33,
+                10
+              ],
+              "9": [
+                0.3,
+                3,
+                1,
+                0.365,
+                10
+              ],
+              "10": [
+                0.3,
+                3,
+                1,
+                0.4,
+                10
+              ],
+              "11": [
+                0.3,
+                3,
+                1,
+                0.428,
+                10
+              ],
+              "12": [
+                0.3,
+                3,
+                1,
+                0.456,
+                10
+              ],
+              "13": [
+                0.3,
+                3,
+                1,
+                0.484,
+                10
+              ],
+              "14": [
+                0.3,
+                3,
+                1,
+                0.512,
+                10
+              ],
+              "15": [
+                0.3,
+                3,
+                1,
+                0.54,
+                10
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill02_Camera",
+              "Avatar_AdvancedRen_00_Skill02_Phase01",
+              "Avatar_AdvancedRen_00_Skill02_Phase02",
+              "Avatar_AdvancedRen_00_Bonus",
+              "Avatar_Ren_00_Bonus_Camera"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Death Sentence": {
+          "variant1": {
+            "skillID": 1120503,
+            "trigger": "Skill03",
+            "name": "Death Sentence",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Sets Blade's current HP to 50% of his Max HP and deals Wind DMG to one enemy equal to #1[i]% of his Max HP plus #5[i]% of the tally of Blade's HP loss in the current battle. At the same time, deals Wind DMG to adjacent targets equal to #3[f1]% of his Max HP plus #6[i]% of the tally of his HP loss in the current battle.\\nThe tally of Blade's HP loss in the current battle is capped at #7[i]% of his Max HP. This value will be reset and re-accumulated after his Ultimate has been used.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.9,
+                0.6,
+                0.36,
+                0.3,
+                0.72,
+                0.36,
+                0.9
+              ],
+              "2": [
+                0.96,
+                0.64,
+                0.384,
+                0.32,
+                0.768,
+                0.384,
+                0.9
+              ],
+              "3": [
+                1.02,
+                0.68,
+                0.408,
+                0.34,
+                0.816,
+                0.408,
+                0.9
+              ],
+              "4": [
+                1.08,
+                0.72,
+                0.432,
+                0.36,
+                0.864,
+                0.432,
+                0.9
+              ],
+              "5": [
+                1.14,
+                0.76,
+                0.456,
+                0.38,
+                0.912,
+                0.456,
+                0.9
+              ],
+              "6": [
+                1.2,
+                0.8,
+                0.48,
+                0.4,
+                0.96,
+                0.48,
+                0.9
+              ],
+              "7": [
+                1.275,
+                0.85,
+                0.51,
+                0.425,
+                1.02,
+                0.51,
+                0.9
+              ],
+              "8": [
+                1.35,
+                0.9,
+                0.54,
+                0.45,
+                1.08,
+                0.54,
+                0.9
+              ],
+              "9": [
+                1.425,
+                0.95,
+                0.57,
+                0.475,
+                1.14,
+                0.57,
+                0.9
+              ],
+              "10": [
+                1.5,
+                1,
+                0.6,
+                0.5,
+                1.2,
+                0.6,
+                0.9
+              ],
+              "11": [
+                1.56,
+                1.04,
+                0.624,
+                0.52,
+                1.248,
+                0.624,
+                0.9
+              ],
+              "12": [
+                1.62,
+                1.08,
+                0.648,
+                0.54,
+                1.296,
+                0.648,
+                0.9
+              ],
+              "13": [
+                1.68,
+                1.12,
+                0.672,
+                0.56,
+                1.344,
+                0.672,
+                0.9
+              ],
+              "14": [
+                1.74,
+                1.16,
+                0.696,
+                0.58,
+                1.392,
+                0.696,
+                0.9
+              ],
+              "15": [
+                1.8,
+                1.2,
+                0.72,
+                0.6,
+                1.44,
+                0.72,
+                0.9
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill03_Camera",
+              "Avatar_AdvancedRen_00_Skill03_EnterReady",
+              "Avatar_AdvancedRen_00_Skill03_Phase01",
+              "Avatar_AdvancedRen_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              60
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Shuhu's Gift": {
+          "variant1": {
+            "skillID": 1120504,
+            "trigger": "SkillP01",
+            "name": "Shuhu's Gift",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When Blade sustains DMG or consumes his HP, he gains 1 stack of Charge, stacking up to 5 times. A max of 1 Charge stack can be gained every time he is attacked.\\nWhen Charge stack reaches maximum, immediately launches 1 instance of Follow-Up ATK on all enemies, dealing Wind DMG equal to #2[i]% of Blade's Max HP. At the same time, restores Blade's HP by #3[i]% of his Max HP. After the Follow-Up ATK, all Charges are consumed.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.65,
+                0.25,
+                0.65
+              ],
+              "2": [
+                3,
+                0.715,
+                0.25,
+                0.715
+              ],
+              "3": [
+                3,
+                0.78,
+                0.25,
+                0.78
+              ],
+              "4": [
+                3,
+                0.845,
+                0.25,
+                0.845
+              ],
+              "5": [
+                3,
+                0.91,
+                0.25,
+                0.91
+              ],
+              "6": [
+                3,
+                0.975,
+                0.25,
+                0.975
+              ],
+              "7": [
+                3,
+                1.05625,
+                0.25,
+                1.05625
+              ],
+              "8": [
+                3,
+                1.1375,
+                0.25,
+                1.1375
+              ],
+              "9": [
+                3,
+                1.21875,
+                0.25,
+                1.21875
+              ],
+              "10": [
+                3,
+                1.3,
+                0.25,
+                1.3
+              ],
+              "11": [
+                3,
+                1.365,
+                0.25,
+                1.365
+              ],
+              "12": [
+                3,
+                1.43,
+                0.25,
+                1.43
+              ],
+              "13": [
+                3,
+                1.495,
+                0.25,
+                1.495
+              ],
+              "14": [
+                3,
+                1.56,
+                0.25,
+                1.56
+              ],
+              "15": [
+                3,
+                1.625,
+                0.25,
+                1.625
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_Passive_Camera",
+              "Avatar_AdvancedRen_00_PassiveSkill01",
+              "Avatar_AdvancedRen_00_Passive1Atk_Ability",
+              "Avatar_AdvancedRen_00_Passive1Atk02_Ability"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Karma Wind": {
+          "variant1": {
+            "skillID": 1120507,
+            "trigger": "SkillMaze",
+            "name": "Karma Wind",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering combat, consumes #2[i]% of Blade's Max HP while dealing Wind DMG equal to #1[i]% of his Max HP to all enemies.\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when this Technique is used.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_AdvancedRen_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1205_basic_atk.png",
+        "skillRef": {
+          "skillName": "Shard Sword",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1205_skill.png",
+        "skillRef": {
+          "skillName": "Hellscape",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1205_ultimate.png",
+        "skillRef": {
+          "skillName": "Death Sentence",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1205_talent.png",
+        "skillRef": {
+          "skillName": "Shuhu's Gift",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1205_technique.png",
+        "skillRef": {
+          "skillName": "Karma Wind",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Vita Infinita",
+        "icon": "icon/skill/1205_skilltree1.png",
+        "desc": "When Blade uses Ultimate, the amount cleared from the tally of HP loss is changed to #1[i]%.",
+        "params": [
+          0.5
+        ]
+      },
+      "Point07": {
+        "name": "Neverending Deaths",
+        "icon": "icon/skill/1205_skilltree2.png",
+        "desc": "HP restored from healing increases by #2[i]%. After receiving healing, converts #1[i]% of the healed amount to Ultimate's tally of HP loss.",
+        "params": [
+          0.25,
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Cyclone of Destruction",
+        "icon": "icon/skill/1205_skilltree3.png",
+        "desc": "Increases Follow-Up ATK DMG from Talent by #1[i]% and additionally regenerates #2[i] Energy.",
+        "params": [
+          0.2,
+          15
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1205.png",
+    "preview": "image/character_preview/1205.png",
+    "portrait": "image/character_portrait/1205.png",
+    "bannerOffsets": [
+      0,
+      -91,
+      0.52,
+      0,
+      -91,
+      0.52,
+      0,
+      -91,
+      0.52
+    ],
+    "isBuffed": true
+  },
   "Huohuo": {
     "internalID": 1217,
     "name": "Huohuo",
@@ -4311,6 +5205,1511 @@ let characters = {
       -38,
       -6,
       0.455
+    ],
+    "isBuffed": false
+  },
+  "Argenti": {
+    "internalID": 1302,
+    "name": "Argenti",
+    "path": "Erudition",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 180,
+    "baseStats": {
+      "ATKBase": 737.3520000000001,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 1047.816,
+      "SPDBase": 103,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "130201",
+        "name": "A Lacuna in Kingdom of Aesthetics",
+        "rank": 1,
+        "desc": "Each stack of Apotheosis additionally increases CRIT DMG by 4%.",
+        "icon": "icon/skill/1302_rank1.png",
+        "paramsEido": [
+          0.04
+        ]
+      },
+      {
+        "id": "130202",
+        "name": "Agate's Humility",
+        "rank": 2,
+        "desc": "If the number of enemies on the field equals to 3 or more when the Ultimate is used, ATK increases by 40% for 1 turn(s).",
+        "icon": "icon/skill/1302_rank2.png",
+        "paramsEido": [
+          3,
+          0.4,
+          1
+        ]
+      },
+      {
+        "id": "130203",
+        "name": "Thorny Road's Glory",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1302_skill.png"
+      },
+      {
+        "id": "130204",
+        "name": "Trumpet's Dedication",
+        "rank": 4,
+        "desc": "At the start of battle, gains 2 stack(s) of Apotheosis and increases the maximum stack limit of the Talent's effect by 2.",
+        "icon": "icon/skill/1302_rank4.png",
+        "paramsEido": [
+          2,
+          2
+        ]
+      },
+      {
+        "id": "130205",
+        "name": "Snow, From Somewhere in Cosmos",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1302_ultimate.png"
+      },
+      {
+        "id": "130206",
+        "name": "\"Your\" Resplendence",
+        "rank": 6,
+        "desc": "When using Ultimate, ignores 30% of enemy targets' DEF.",
+        "icon": "icon/skill/1302_rank6.png",
+        "paramsEido": [
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Fleeting Fragrance": {
+          "variant1": {
+            "skillID": 130201,
+            "trigger": "Skill01",
+            "name": "Fleeting Fragrance",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Argenti's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill01_Camera",
+              "Avatar_Argenti_00_Skill01_Phase01",
+              "Avatar_Argenti_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Justice, Hereby Blooms": {
+          "variant1": {
+            "skillID": 130202,
+            "trigger": "Skill02",
+            "name": "Justice, Hereby Blooms",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of Argenti's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6
+              ],
+              "2": [
+                0.66
+              ],
+              "3": [
+                0.72
+              ],
+              "4": [
+                0.78
+              ],
+              "5": [
+                0.84
+              ],
+              "6": [
+                0.9
+              ],
+              "7": [
+                0.975
+              ],
+              "8": [
+                1.05
+              ],
+              "9": [
+                1.125
+              ],
+              "10": [
+                1.2
+              ],
+              "11": [
+                1.26
+              ],
+              "12": [
+                1.32
+              ],
+              "13": [
+                1.38
+              ],
+              "14": [
+                1.44
+              ],
+              "15": [
+                1.5
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill02_Camera",
+              "Avatar_Argenti_00_Skill02_Phase01",
+              "Avatar_Argenti_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "For In This Garden, Supreme Beauty Bestows": {
+          "variant1": {
+            "skillID": 130203,
+            "trigger": "Skill03",
+            "name": "For In This Garden, Supreme Beauty Bestows",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Consumes #2[i] Energy and deals Physical DMG equal to #1[i]% of Argenti's ATK to all enemies.",
+            "energyCost": 90,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                90
+              ],
+              "2": [
+                1.024,
+                90
+              ],
+              "3": [
+                1.088,
+                90
+              ],
+              "4": [
+                1.152,
+                90
+              ],
+              "5": [
+                1.216,
+                90
+              ],
+              "6": [
+                1.28,
+                90
+              ],
+              "7": [
+                1.36,
+                90
+              ],
+              "8": [
+                1.44,
+                90
+              ],
+              "9": [
+                1.52,
+                90
+              ],
+              "10": [
+                1.6,
+                90
+              ],
+              "11": [
+                1.664,
+                90
+              ],
+              "12": [
+                1.728,
+                90
+              ],
+              "13": [
+                1.792,
+                90
+              ],
+              "14": [
+                1.856,
+                90
+              ],
+              "15": [
+                1.92,
+                90
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill03_Camera",
+              "Avatar_Argenti_00_Skill03_Camera_End01",
+              "Avatar_Argenti_00_Skill03_EnterReady",
+              "Avatar_Argenti_00_Skill03_Phase01",
+              "Avatar_Argenti_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Merit Bestowed in \"My\" Garden": {
+          "variant1": {
+            "skillID": 130214,
+            "trigger": "Skill31",
+            "name": "Merit Bestowed in \"My\" Garden",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Consumes #4[i] Energy and deals Physical DMG equal to #1[i]% of Argenti's ATK to all enemies. And further deals DMG for #2[i] extra time(s), with each time dealing Physical DMG equal to #3[i]% of Argenti's ATK to a random enemy.",
+            "energyCost": 180,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 25,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.68,
+                6,
+                0.57,
+                180
+              ],
+              "2": [
+                1.792,
+                6,
+                0.608,
+                180
+              ],
+              "3": [
+                1.904,
+                6,
+                0.646,
+                180
+              ],
+              "4": [
+                2.016,
+                6,
+                0.684,
+                180
+              ],
+              "5": [
+                2.128,
+                6,
+                0.722,
+                180
+              ],
+              "6": [
+                2.24,
+                6,
+                0.76,
+                180
+              ],
+              "7": [
+                2.38,
+                6,
+                0.8075,
+                180
+              ],
+              "8": [
+                2.52,
+                6,
+                0.855,
+                180
+              ],
+              "9": [
+                2.66,
+                6,
+                0.9025,
+                180
+              ],
+              "10": [
+                2.8,
+                6,
+                0.95,
+                180
+              ],
+              "11": [
+                2.912,
+                6,
+                0.988,
+                180
+              ],
+              "12": [
+                3.024,
+                6,
+                1.026,
+                180
+              ],
+              "13": [
+                3.136,
+                6,
+                1.064,
+                180
+              ],
+              "14": [
+                3.248,
+                6,
+                1.102,
+                180
+              ],
+              "15": [
+                3.36,
+                6,
+                1.14,
+                180
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill31_Camera",
+              "Avatar_Argenti_00_Skill31_Camera_End02",
+              "Avatar_Argenti_00_Skill31_EnterReady",
+              "Avatar_Argenti_00_Skill31_Phase01",
+              "Avatar_Argenti_00_Skill31_Phase02"
+            ],
+            "toughnessList": [
+              15,
+              60,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Sublime Object": {
+          "variant1": {
+            "skillID": 130204,
+            "trigger": "SkillP01",
+            "name": "Sublime Object",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "For every enemy hit when Argenti uses his Basic Attack, Skill, or Ultimate, regenerates Argenti's Energy by #1[i], and grants him a stack of Apotheosis, increasing his CRIT Rate by #2[f1]%. This effect can stack up to #3[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.01,
+                10
+              ],
+              "2": [
+                3,
+                0.0115,
+                10
+              ],
+              "3": [
+                3,
+                0.013,
+                10
+              ],
+              "4": [
+                3,
+                0.0145,
+                10
+              ],
+              "5": [
+                3,
+                0.015999999,
+                10
+              ],
+              "6": [
+                3,
+                0.0175,
+                10
+              ],
+              "7": [
+                3,
+                0.019375,
+                10
+              ],
+              "8": [
+                3,
+                0.02125,
+                10
+              ],
+              "9": [
+                3,
+                0.023125,
+                10
+              ],
+              "10": [
+                3,
+                0.025,
+                10
+              ],
+              "11": [
+                3,
+                0.0265,
+                10
+              ],
+              "12": [
+                3,
+                0.027999999,
+                10
+              ],
+              "13": [
+                3,
+                0.0295,
+                10
+              ],
+              "14": [
+                3,
+                0.031,
+                10
+              ],
+              "15": [
+                3,
+                0.0325,
+                10
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Manifesto of Purest Virtue": {
+          "variant1": {
+            "skillID": 130207,
+            "trigger": "SkillMaze",
+            "name": "Manifesto of Purest Virtue",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using the Technique, enemies in a set area are inflicted with Daze for #1[i] second(s). Dazed enemies will not actively attack the team.\\nWhen attacking a Dazed enemy to enter combat, deals Physical DMG to all enemies equal to #2[i]% of Argenti's ATK and regenerates his Energy by #3[i].",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.8,
+                15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Argenti_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1302_basic_atk.png",
+        "skillRef": {
+          "skillName": "Fleeting Fragrance",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1302_skill.png",
+        "skillRef": {
+          "skillName": "Justice, Hereby Blooms",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1302_ultimate.png",
+        "skillRef": {
+          "skillName": "For In This Garden, Supreme Beauty Bestows",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1302_talent.png",
+        "skillRef": {
+          "skillName": "Sublime Object",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1302_technique.png",
+        "skillRef": {
+          "skillName": "Manifesto of Purest Virtue",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Piety",
+        "icon": "icon/skill/1302_skilltree1.png",
+        "desc": "At the start of a turn, immediately gains #1[i] stack(s) of Apotheosis.",
+        "params": [
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Generosity",
+        "icon": "icon/skill/1302_skilltree2.png",
+        "desc": "When enemy targets enter combat, immediately regenerates #1[i] Energy for self.",
+        "params": [
+          2
+        ]
+      },
+      "Point08": {
+        "name": "Courage",
+        "icon": "icon/skill/1302_skilltree3.png",
+        "desc": "Deals #2[i]% more DMG to enemies whose HP percentage is #1[i]% or less.",
+        "params": [
+          0.5,
+          0.15
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1302.png",
+    "preview": "image/character_preview/1302.png",
+    "portrait": "image/character_portrait/1302.png",
+    "bannerOffsets": [
+      205.4,
+      -1.5,
+      0.74,
+      205.4,
+      -1.5,
+      0.74,
+      205.4,
+      -1.5,
+      0.74
+    ],
+    "isBuffed": false
+  },
+  "Aventurine": {
+    "internalID": 1304,
+    "name": "Aventurine",
+    "path": "Preservation",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 446.29200000000003,
+      "DEFBase": 654.885,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 106,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "130401",
+        "name": "Prisoner's Dilemma",
+        "rank": 1,
+        "desc": "Increases CRIT DMG by 20% for ally targets with Fortified Wager. After using the Ultimate, provides all allies with a Fortified Wager shield, whose Shield Effect is equal to 100% of the one provided by the Skill, lasting for 3 turn(s).",
+        "icon": "icon/skill/1304_rank1.png",
+        "paramsEido": [
+          0.2,
+          1,
+          3
+        ]
+      },
+      {
+        "id": "130402",
+        "name": "Bounded Rationality",
+        "rank": 2,
+        "desc": "When using the Basic ATK, reduces the target's All-Type RES by 12% for 3 turn(s).",
+        "icon": "icon/skill/1304_rank2.png",
+        "paramsEido": [
+          1.2,
+          0.12,
+          3
+        ]
+      },
+      {
+        "id": "130403",
+        "name": "Droprate Maxing",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1304_ultimate.png"
+      },
+      {
+        "id": "130404",
+        "name": "Unexpected Hanging Paradox",
+        "rank": 4,
+        "desc": "When triggering his Talent's Follow-Up ATK, first increases Aventurine's DEF by 40% for 2 turn(s), and additionally increases the Hits Per Action for his talent's Follow-Up ATK by 3.",
+        "icon": "icon/skill/1304_rank4.png",
+        "paramsEido": [
+          0.4,
+          2,
+          3
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "130405",
+        "name": "Ambiguity Aversion",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1304_skill.png"
+      },
+      {
+        "id": "130406",
+        "name": "Stag Hunt Game",
+        "rank": 6,
+        "desc": "For every teammate that holds a Shield, the DMG dealt by Aventurine increases by 50%, up to a maximum of 150%.",
+        "icon": "icon/skill/1304_rank6.png",
+        "paramsEido": [
+          0.5,
+          1.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Straight Bet": {
+          "variant1": {
+            "skillID": 130401,
+            "trigger": "Skill01",
+            "name": "Straight Bet",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Aventurine's DEF to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill01_Camera",
+              "Avatar_Aventurine_00_Skill01_Phase01",
+              "Avatar_Aventurine_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Cornerstone Deluxe": {
+          "variant1": {
+            "skillID": 130402,
+            "trigger": "Skill02",
+            "name": "Cornerstone Deluxe",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Provides all allies with a Fortified Wager shield that can block DMG equal to #1[f1]% of Aventurine's DEF plus #2[i], lasting for #3[i] turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to #4[i]% of the current Shield Effect provided by the Skill.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.16,
+                80,
+                3,
+                2
+              ],
+              "2": [
+                0.17,
+                128,
+                3,
+                2
+              ],
+              "3": [
+                0.18,
+                164,
+                3,
+                2
+              ],
+              "4": [
+                0.19,
+                200,
+                3,
+                2
+              ],
+              "5": [
+                0.2,
+                224,
+                3,
+                2
+              ],
+              "6": [
+                0.208,
+                248,
+                3,
+                2
+              ],
+              "7": [
+                0.216,
+                266,
+                3,
+                2
+              ],
+              "8": [
+                0.224,
+                284,
+                3,
+                2
+              ],
+              "9": [
+                0.232,
+                302,
+                3,
+                2
+              ],
+              "10": [
+                0.24,
+                320,
+                3,
+                2
+              ],
+              "11": [
+                0.248,
+                338,
+                3,
+                2
+              ],
+              "12": [
+                0.256,
+                356,
+                3,
+                2
+              ],
+              "13": [
+                0.264,
+                374,
+                3,
+                2
+              ],
+              "14": [
+                0.272,
+                392,
+                3,
+                2
+              ],
+              "15": [
+                0.28,
+                410,
+                3,
+                2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill02_Camera",
+              "Avatar_Aventurine_00_Skill02_Phase01",
+              "Avatar_Aventurine_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Roulette Shark": {
+          "variant1": {
+            "skillID": 130403,
+            "trigger": "Skill03",
+            "name": "Roulette Shark",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Randomly gains 1 to #1[i] points of \"Blind Bet.\" Then, inflicts \"Unnerved\" on one designated enemy target for #4[i] turn(s) and deals Imaginary DMG equal to #2[i]% of Aventurine's DEF to that enemy target. When an ally hits an \"Unnerved\" enemy target, the CRIT DMG dealt increases by #3[f1]%.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                7,
+                1.62,
+                0.09,
+                3
+              ],
+              "2": [
+                7,
+                1.728,
+                0.096,
+                3
+              ],
+              "3": [
+                7,
+                1.836,
+                0.102,
+                3
+              ],
+              "4": [
+                7,
+                1.944,
+                0.108,
+                3
+              ],
+              "5": [
+                7,
+                2.052,
+                0.114,
+                3
+              ],
+              "6": [
+                7,
+                2.16,
+                0.12,
+                3
+              ],
+              "7": [
+                7,
+                2.295,
+                0.1275,
+                3
+              ],
+              "8": [
+                7,
+                2.43,
+                0.135,
+                3
+              ],
+              "9": [
+                7,
+                2.565,
+                0.1425,
+                3
+              ],
+              "10": [
+                7,
+                2.7,
+                0.15,
+                3
+              ],
+              "11": [
+                7,
+                2.808,
+                0.156,
+                3
+              ],
+              "12": [
+                7,
+                2.916,
+                0.162,
+                3
+              ],
+              "13": [
+                7,
+                3.024,
+                0.168,
+                3
+              ],
+              "14": [
+                7,
+                3.132,
+                0.174,
+                3
+              ],
+              "15": [
+                7,
+                3.24,
+                0.18,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill03_Camera",
+              "Avatar_Aventurine_00_Skill03_EnterReady",
+              "Avatar_Aventurine_00_Skill03_Phase01",
+              "Avatar_Aventurine_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Shot Loaded Right": {
+          "variant1": {
+            "skillID": 130404,
+            "trigger": "SkillP01",
+            "name": "Shot Loaded Right",
+            "type": "Bounce",
+            "slot": "Talent",
+            "desc": "For any single ally with \"Fortified Wager,\" their Effect RES increases by #4[f1]%, and when they get attacked, Aventurine gains 1 point of \"Blind Bet.\" When Aventurine has \"Fortified Wager,\" he can resist Crowd Control debuffs. This effect can trigger again after #5[i] turn(s). Aventurine additionally gains #1[i] point(s) of \"Blind Bet\" after getting attacked. Upon reaching 7 points of \"Blind Bet,\" Aventurine consumes the 7 points to launch a #2[i]-hit Follow-Up ATK, with each hit dealing Imaginary DMG equal to #3[i]% of Aventurine's DEF to one random enemy. \"Blind Bet\" is capped at 10 points.",
+            "energyCost": null,
+            "energyRegen": 1,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 3,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                7,
+                0.125,
+                0.25,
+                2
+              ],
+              "2": [
+                1,
+                7,
+                0.1375,
+                0.275,
+                2
+              ],
+              "3": [
+                1,
+                7,
+                0.15,
+                0.3,
+                2
+              ],
+              "4": [
+                1,
+                7,
+                0.1625,
+                0.325,
+                2
+              ],
+              "5": [
+                1,
+                7,
+                0.175,
+                0.35,
+                2
+              ],
+              "6": [
+                1,
+                7,
+                0.1875,
+                0.375,
+                2
+              ],
+              "7": [
+                1,
+                7,
+                0.203125,
+                0.40625,
+                2
+              ],
+              "8": [
+                1,
+                7,
+                0.21875,
+                0.4375,
+                2
+              ],
+              "9": [
+                1,
+                7,
+                0.234375,
+                0.46875,
+                2
+              ],
+              "10": [
+                1,
+                7,
+                0.25,
+                0.5,
+                2
+              ],
+              "11": [
+                1,
+                7,
+                0.2625,
+                0.525,
+                2
+              ],
+              "12": [
+                1,
+                7,
+                0.275,
+                0.55,
+                2
+              ],
+              "13": [
+                1,
+                7,
+                0.2875,
+                0.575,
+                2
+              ],
+              "14": [
+                1,
+                7,
+                0.3,
+                0.6,
+                2
+              ],
+              "15": [
+                1,
+                7,
+                0.3125,
+                0.625,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_PassiveSkill01",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbility",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbilityPhase02",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbility_Camera"
+            ],
+            "toughnessList": [
+              10,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "The Red or the Black": {
+          "variant1": {
+            "skillID": 130407,
+            "trigger": "SkillMaze",
+            "name": "The Red or the Black",
+            "type": "Defense",
+            "slot": "Technique",
+            "desc": "After using the Technique, 1 of the following effects will be granted:\\nThere is a chance for DEF to increase by #1[i]%.\\nThere is a high chance for DEF to increase by #2[i]%.\\nThere is a small chance for DEF to increase by #3[i]%.\\n\\nWhen this Technique is used repeatedly, the acquired effect with the highest buff value is retained.\\nWhen the next battle starts, increases all allies' DEF by the corresponding value, lasting for #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.24,
+                0.36,
+                0.6,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Defence",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1304_basic_atk.png",
+        "skillRef": {
+          "skillName": "Straight Bet",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1304_skill.png",
+        "skillRef": {
+          "skillName": "Cornerstone Deluxe",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1304_ultimate.png",
+        "skillRef": {
+          "skillName": "Roulette Shark",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1304_talent.png",
+        "skillRef": {
+          "skillName": "Shot Loaded Right",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1304_technique.png",
+        "skillRef": {
+          "skillName": "The Red or the Black",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Leverage",
+        "icon": "icon/skill/1304_skilltree1.png",
+        "desc": "For every 100 of Aventurine's DEF that exceeds #3[i], increases his own CRIT Rate by #1[i]%, up to a maximum increase of #2[i]%.",
+        "params": [
+          0.02,
+          0.48,
+          1600
+        ]
+      },
+      "Point07": {
+        "name": "Hot Hand",
+        "icon": "icon/skill/1304_skilltree2.png",
+        "desc": "When battle starts, grants all allies a Fortified Wager shield, whose Shield Effect is equal to #2[i]% of the one provided by the Skill, lasting for #1[i] turn(s).",
+        "params": [
+          3,
+          1
+        ],
+        "traceAbility": "Aventurine_Aventurine_Trace02"
+      },
+      "Point08": {
+        "name": "Bingo!",
+        "icon": "icon/skill/1304_skilltree3.png",
+        "desc": "After a teammate with \"Fortified Wager\" launches Follow-Up ATK, Aventurine accumulates 1 \"Blind Bet\" point. This effect can trigger up to #3[i] time(s). Its trigger count resets at the start of Aventurine's turn. After Aventurine launches his Talent's Follow-Up ATK, provides all ally targets with a \"Fortified Wager\" that can offset DMG equal to #1[i]% of Aventurine's DEF plus #2[i], and additionally grants a \"Fortified Wager\" that can block DMG equal to #4[i]% of Aventurine's DEF plus #5[i] to the ally with the lowest Shield Effect, lasting for 3 turns.",
+        "params": [
+          0.072,
+          96,
+          3,
+          0.072,
+          96
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point09": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point11": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point15": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      },
+      "Point18": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1304.png",
+    "preview": "image/character_preview/1304.png",
+    "portrait": "image/character_portrait/1304.png",
+    "bannerOffsets": [
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61
     ],
     "isBuffed": false
   },
