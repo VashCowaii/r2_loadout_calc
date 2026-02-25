@@ -2,9 +2,19 @@
 
 
 const customEnergyBar = {
+    "STANDARDCIRCLEBAR"(turnRef,specialEnergyData) {
+        return `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+        style="height: ${
+            (turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy)
+            /(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy) 
+            * 100
+        }%;
+        background: linear-gradient(to bottom, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}80);"></div>
+        `;
+    },
     "Saber": {
         isJustExtraFill: true,
-        fillFunction(turnRef) {
+        fillFunction(turnRef,specialEnergyData) {
             const coreReso = turnRef.battleValues.coreResonance;
             const energyPossible = coreReso * 8;
 
@@ -15,14 +25,48 @@ const customEnergyBar = {
 
             const currentEnergy = turnRef.currentEnergy/turnRef.maxEnergy;
 
-            return `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+            return customEnergyBar.STANDARDCIRCLEBAR(turnRef,specialEnergyData) + `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
             style="height: ${
                 (energyPossible)
                 /(turnRef.maxEnergy) 
                 * 100
             }%;bottom: ${currentEnergy*100}%;
-            background: linear-gradient(to bottom, #FFFFFF80, #B9BABB80);"></div>`
+            background: linear-gradient(to bottom, #FFFFFF80, #B9BABB80);"></div>`;
+        }
+    },
+    "Argenti": {
+        isJustExtraFill: true,
+        fillFunction(turnRef,specialEnergyData) {
+            const halfMax = turnRef.maxEnergy * 0.5;
 
+            const energyPossible = Math.max(0, turnRef.currentEnergy - halfMax);
+            const energyOverflowRatio = energyPossible / halfMax
+
+            // "Physical": {
+            //         energyColor1: "#FFFFFF80",
+            //         energyColor2: "#B9BABB80"
+            //     },
+
+            // const currentEnergy = turnRef.currentEnergy/turnRef.maxEnergy;
+
+
+
+
+            return `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+                style="height: ${
+                    (Math.min(halfMax, turnRef.currentEnergy))
+                    /(halfMax) 
+                    * 100
+                }%;
+                background: linear-gradient(to bottom, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}80);"></div>
+                ` + `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+                style="height: ${
+                    (energyOverflowRatio)
+                    * 100
+                }%;bottom: 0%;
+                background: linear-gradient(to bottom,rgba(255, 255, 255, 0.67),rgba(185, 186, 187, 0.72));"></div>
+                ${energyOverflowRatio ? `<div class="actionDetailHeaderRowCharacterEnergyBoxInnerRing" style="border:2px solid ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor1}"></div>` : ""}
+                `;
         }
     }
 }
