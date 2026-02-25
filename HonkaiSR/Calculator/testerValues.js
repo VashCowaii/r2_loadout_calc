@@ -1215,7 +1215,12 @@ const defaultConditions = {
         "hasEnhancedState": false,
         "Skill": {
             "type": "AND",
-            "array": []
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: Has no Shield"
+                }
+            ]
         },
         "Ultimate": {
             "type": "AND",
