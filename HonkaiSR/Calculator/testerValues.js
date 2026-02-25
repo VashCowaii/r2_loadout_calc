@@ -2,9 +2,19 @@
 
 
 const customEnergyBar = {
+    "STANDARDCIRCLEBAR"(turnRef,specialEnergyData) {
+        return `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+        style="height: ${
+            (turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy)
+            /(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy) 
+            * 100
+        }%;
+        background: linear-gradient(to bottom, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}80);"></div>
+        `;
+    },
     "Saber": {
         isJustExtraFill: true,
-        fillFunction(turnRef) {
+        fillFunction(turnRef,specialEnergyData) {
             const coreReso = turnRef.battleValues.coreResonance;
             const energyPossible = coreReso * 8;
 
@@ -15,14 +25,48 @@ const customEnergyBar = {
 
             const currentEnergy = turnRef.currentEnergy/turnRef.maxEnergy;
 
-            return `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+            return customEnergyBar.STANDARDCIRCLEBAR(turnRef,specialEnergyData) + `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
             style="height: ${
                 (energyPossible)
                 /(turnRef.maxEnergy) 
                 * 100
             }%;bottom: ${currentEnergy*100}%;
-            background: linear-gradient(to bottom, #FFFFFF80, #B9BABB80);"></div>`
+            background: linear-gradient(to bottom, #FFFFFF80, #B9BABB80);"></div>`;
+        }
+    },
+    "Argenti": {
+        isJustExtraFill: true,
+        fillFunction(turnRef,specialEnergyData) {
+            const halfMax = turnRef.maxEnergy * 0.5;
 
+            const energyPossible = Math.max(0, turnRef.currentEnergy - halfMax);
+            const energyOverflowRatio = energyPossible / halfMax
+
+            // "Physical": {
+            //         energyColor1: "#FFFFFF80",
+            //         energyColor2: "#B9BABB80"
+            //     },
+
+            // const currentEnergy = turnRef.currentEnergy/turnRef.maxEnergy;
+
+
+
+
+            return `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+                style="height: ${
+                    (Math.min(halfMax, turnRef.currentEnergy))
+                    /(halfMax) 
+                    * 100
+                }%;
+                background: linear-gradient(to bottom, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}80);"></div>
+                ` + `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+                style="height: ${
+                    (energyOverflowRatio)
+                    * 100
+                }%;bottom: 0%;
+                background: linear-gradient(to bottom,rgba(255, 255, 255, 0.67),rgba(185, 186, 187, 0.72));"></div>
+                ${energyOverflowRatio ? `<div class="actionDetailHeaderRowCharacterEnergyBoxInnerRing" style="border:2px solid ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor1}"></div>` : ""}
+                `;
         }
     }
 }
@@ -35,6 +79,11 @@ const customDisplayValuesLog = {
         {valueName: "Charge", refName: "charge", isBattleValue: true},
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+    ],
+    "Aventurine": [
+        {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true},
+        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
     ],
     "Evernight": [
         {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true},
@@ -63,6 +112,9 @@ const customDisplayValuesLog = {
         {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true},
         {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
+    ], 
+    "Argenti": [
+        {valueName: "Talent Stacks", refName: "apotheosisStacks", isBattleValue: true},
     ], 
     "Ruan Mei": [
         {valueName: "Overtone Active", refName: "overtoneIsActive", isBattleValue: true, isCharacterState: true},
@@ -116,6 +168,7 @@ const customDisplayValuesLog = {
 
 const permaConditionsTextLibrary = {
     "energyMaxed": "Energy: Current === Energy: Max",
+    "energyHalf": "Energy Current >= (Energy Max * 0.5)",
     "energyMaxedCyrene": "First battle's ultimate: Energy: Current === Energy: Max<br>Any further ultimates: Energy Current >= 12",
     "atLeast1SP": "Skill Points: Current >= 1"
 }
@@ -124,6 +177,18 @@ const conditionsCharacterDisplayWarning = {
     "Saber": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Saber's Basic ATK is enhanced.",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyMaxed
+        ]
+    },
+    "Blade": {
+        hasEnhancedState: true,
+        "Skill": "Skill conditions are ignored when Blade's Basic ATK is enhanced.",
         "Ultimate": "",
 
         "SkillPermaConditions": [
@@ -244,6 +309,30 @@ const conditionsCharacterDisplayWarning = {
         ]
     },
     "Aglaea": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyMaxed
+        ]
+    },
+    "Argenti": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "You as the user need to define conditions for Argenti that will determine if you use at Half-Energy or at full.",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyHalf
+        ]
+    },
+    "Aventurine": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -693,6 +782,17 @@ const defaultConditions = {
             ]
         }
     },
+    "Blade": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
 
     //HUNT
     // "Archer": {
@@ -1110,6 +1210,24 @@ const defaultConditions = {
             "type": "AND",
             "array": []
         }
+    },
+    "Aventurine": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+
+    //ERUDITON
+    "Argenti": {
+        hasEnhancedState: false,
+        "Skill": null,
+        "Ultimate": null,
     },
 }
 

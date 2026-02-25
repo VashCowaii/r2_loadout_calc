@@ -4127,7 +4127,11 @@ const userTriggers = {
             "Lightning": "Icon_Shock.png",
             "Ice": "Icon_Freeze.png",
             "Physical": "Icon_Bleed.png"
-        }
+        };
+
+
+
+        
 
 
         function lineTypeDisplays(action,newIndex) {
@@ -4191,11 +4195,27 @@ const userTriggers = {
                     energyColor1: "#74C1FD",
                     energyColor2: "#705BFF"
                 },
-
-
-
                 
             }
+            const specialEnergyDisplayFunctions = {
+                "STANDARDBAR"(turnRef,action) {//this is ONLY for standard circle energy bars
+                    return `
+                        <div class="actionDetailHeaderRowCharacterEnergyBox" style="border:4px solid ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor1}">
+                            
+                            ${customEnergyBar[action.name] ? customEnergyBar[action.name].fillFunction(turnRef,specialEnergyData) : customEnergyBar.STANDARDCIRCLEBAR(turnRef,specialEnergyData)}
+                            <img src="/HonkaiSR/${characters[action.name].traces.Point03.icon}" class="actionDetailHeaderRowCharacterEnergyImage"/>
+    
+                            <div class="actionDetailHeaderRowCharacterEnergyValueBox">
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
+                            </div>
+                        </div>`
+                },
+            }
+
+
+
+
             switch (currentType) {
                 case "BattlePrep": 
                     returnString = `
@@ -4331,24 +4351,7 @@ const userTriggers = {
                         <div class="actionDetailHeaderRowCharacterImageAndEnergyBox">
                             <img src="/HonkaiSR/${isEnemy ? graphs.enemyCustomImages?.[turnRef.enemyRealName] ?? action.name.toLowerCase().includes("boss") ? "misc/Glorpard.png" : graphs.enemyCustomImages.default : (characters[action.name]?.preview ?? graphs.summonCustomImages[action.name] ?? turnRef.eventImage)}" class="${isEnemy || turnRef.isUniqueEvent ? "actionDetailHeaderRowEnemyImage" : "actionDetailHeaderRowCharacterImage"}"/>
 
-                            ${!isEnemy && (!turnRef.isSummon && !turnRef.isUniqueEvent) ? `
-                            <div class="actionDetailHeaderRowCharacterEnergyBox" style="border:4px solid ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor1}">
-                                
-                                <div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
-                                style="height: ${
-                                    (turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy)
-                                    /(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy) 
-                                    * 100
-                                }%;
-                                background: linear-gradient(to bottom, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}80);"></div>
-                                ${customEnergyBar[action.name] ? customEnergyBar[action.name].fillFunction(turnRef) : ""}
-                                <img src="/HonkaiSR/${characters[action.name].traces.Point03.icon}" class="actionDetailHeaderRowCharacterEnergyImage"/>
-
-                                <div class="actionDetailHeaderRowCharacterEnergyValueBox">
-                                    <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
-                                    <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
-                                </div>
-                            </div>` : ""}
+                            ${!isEnemy && (!turnRef.isSummon && !turnRef.isUniqueEvent) ? (specialEnergyDisplayFunctions[turnRef.properName] ? specialEnergyDisplayFunctions[turnRef.properName](turnRef,action) : specialEnergyDisplayFunctions.STANDARDBAR(turnRef,action)) : ""}
                             ${isEnemy ? weaknessString : ""}
                             ${!isEvent || isMemo ? `<div class="characterSearchButtonDMGDetailsTurnInspect clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Inspect</div>` : ""}
                         </div>

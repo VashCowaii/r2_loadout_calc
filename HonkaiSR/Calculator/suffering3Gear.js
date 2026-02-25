@@ -3216,6 +3216,7 @@ const turnLogicLightcones = {
                         let lcNameRef = "Inherently Unjust Destiny";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
+                        
 
                         sourceTurn.inherentlyUnjustDEBUFFSHEET = {
                             "stats": [VulnAll],
@@ -3245,7 +3246,7 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "unjust": "Inherently Unjust Destiny",
-            "unjustVuln": "Inherently Unjust Destiny"
+            "unjustVuln": "Inherently Unjust Destiny (Vuln)"
         },
     },
     "Though Worlds Apart": {
@@ -3353,6 +3354,107 @@ const turnLogicLightcones = {
         "buffNames": {
             "redoubt": "Redoubt [LC]",
             "redoubtSummon": "Redoubt (Summon) [LC]"
+        },
+    },
+
+
+    //ERUDITON
+    "An Instant Before A Gaze": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "An Instant Before A Gaze";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+
+                    // let buffName = this.buffNames.fuaDMG;
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageUltimate],
+                        [DamageUltimate]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.ultDMGBonus,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                        const energyMax = Math.min(rankParams[2],currentTurn.maxEnergy);
+                        const totalBonus = energyMax * rankParams[1]
+
+                        buffSheet[DamageUltimate] = totalBonus;
+                        buffSheet.sourceOwner = currentTurn.properName;
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "An Instant Before A Gaze - battlestart energycheck dmg bonus",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "ultDMGBonus": "A Knight's Pilgrimage [LC]",
+        },
+    },
+    "Today Is Another Peaceful Day": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Today Is Another Peaceful Day";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+
+                    // let buffName = this.buffNames.fuaDMG;
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.ultDMGBonus,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                        const energyMax = Math.min(rankParams[1],currentTurn.maxEnergy);
+                        const totalBonus = energyMax * rankParams[0]
+
+                        buffSheet[DamageAll] = totalBonus;
+                        buffSheet.sourceOwner = currentTurn.properName;
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Today Is Another Peaceful Day - battlestart energycheck dmg bonus",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "ultDMGBonus": "A Storm Is Coming [LC]",
         },
     },
 }
