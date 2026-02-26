@@ -811,7 +811,7 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "AttackDMGEnd",
+                "trigger": "HitEnemyEnd",
                 condition(battleData,generalInfo) {
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -862,32 +862,15 @@ const turnLogicLightcones = {
                             realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                         }
                     }
+
                     const dotSheet = sourceTurn.patienceIsAllErodeDOTSHEET;
-                    const buffName = dotSheet.buffName;
-                    dotSheet.AVApplied = battleData.sumAV;
-    
                     const enemiesHit = generalInfo.targetsGotHit;
                     const enemyTurns = battleData.enemyBasedTurns;
-                    const getChance = battleActions.getChanceToApply;
-                    const baseChance = dotSheet.baseChance;
-                    const updateBuff = battleActions.updateBuff;
-                    for (let enemySlot in enemiesHit) {
-                        const currentEnemy = enemyTurns[enemySlot];
-                        const buffCheck = currentEnemy.buffsObject[buffName];
-                        if (buffCheck) {continue;}
+                    const targetTurn = generalInfo.targetTurn;
 
-                        const totalTimesHit = enemiesHit[enemySlot];
-                        dotSheet.duration = currentEnemy.turnState ? 3 : 2
-                        const resultingChance = getChance(battleData,sourceTurn,currentEnemy,baseChance);
-                        let finalAVG = resultingChance;
-                        if (totalTimesHit && totalTimesHit>1 && resultingChance != 1) {
-                            const chanceToFail = 1 - resultingChance;
-                            const composite = chanceToFail ** totalTimesHit;
-                            finalAVG = 1 - composite;
-                        }
-                        dotSheet.avgChanceApplied = finalAVG;
-                        updateBuff(battleData,currentEnemy,dotSheet);
-                    }
+                    // console.log(enemiesHit);
+                    generalApplyDOT(battleData,sourceTurn,targetTurn,dotSheet,enemiesHit,enemyTurns,3,2,true);
+                    
                 },
                 "target": "enemy",
                 "listenerName": "Patience Is All You Need - erode application",

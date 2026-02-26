@@ -1826,7 +1826,7 @@ const maslowCharactersNihility = {
         },
     },
     "Kafka": {
-        defaultMainSubs: ["SPDFlat","ATK%","EHR","DamageBreak"],
+        defaultMainSubs: ["SPDFlat","ATK%","EffectHitRate","DamageBreak"],
         defaultTrashSub: ["ATKFlat","HP%","HPFlat","DEF%"],
         0: {
             gives: [],

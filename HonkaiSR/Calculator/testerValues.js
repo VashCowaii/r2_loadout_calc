@@ -80,6 +80,11 @@ const customDisplayValuesLog = {
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
     ],
+    "Kafka": [
+        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true},
+        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+    ],
     "Aventurine": [
         {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true},
         // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
@@ -333,6 +338,18 @@ const conditionsCharacterDisplayWarning = {
         ]
     },
     "Aventurine": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyMaxed
+        ]
+    },
+    "Kafka": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -1019,6 +1036,29 @@ const defaultConditions = {
         "Ultimate": {
             type: "AND",
             array: []
+        }
+    },
+    "Kafka": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "COMPARE",
+            "comparison": "<",
+            "array": [
+                {
+                    "type": "Character: Special Value",
+                    "target": "Self",
+                    "specialValue": "fuaStacks",
+                    "isBattleValue": true
+                },
+                {
+                    "type": "User Value: Number",
+                    "inputValue": 2
+                }
+            ]
         }
     },
 
