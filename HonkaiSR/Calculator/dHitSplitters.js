@@ -303,6 +303,45 @@ const hitSplitters = {
             }
         ],
     },
+    "Asta": {//done
+      "basic": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true,
+        }
+      ],
+      "skill": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+        }
+      ],
+      "tech": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 0,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true,
+        }
+      ],
+    },
 
     //DESTRUCTION
     "Saber": {//done

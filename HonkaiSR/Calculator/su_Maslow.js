@@ -2764,6 +2764,61 @@ const maslowCharactersHarmony = {
             addTeamWant: [],
         },
     },
+    "Asta": {
+        // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
+        defaultMainSubs: ["SPDFlat","ATK%","HP%","EffectRES"],
+        // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","HPFlat","DEF%"],
+        0: {
+            gives: [],
+            givesTeam: ["DOTSource","Debuff","ATK","SPD","Fire"],
+            wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["DOTSource","Debuff","ATK","SPD","Fire"],
+            wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["DOTSource","Debuff","ATK","SPD","Fire"],
+            wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["DOTSource","Debuff","ATK","SPD","Fire"],
+            wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["DOTSource","Debuff","ATK","SPD","Fire"],
+            wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["DOTSource","Debuff","ATK","SPD","Fire"],
+            wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["DOTSource","Debuff","ATK","SPD","Fire"],
+            wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersPreservation = {
     //PRESERVATION
