@@ -18953,7 +18953,7 @@ const turnLogic = {
 
                     // const isBattleEvent = sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite;
 
-                    const logicRef = turnLogic[sourceTurn.properName];
+                    const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
 
                     let shieldRef = ATKObjects.aventurineSkillShieldSHIELDSHEET;
