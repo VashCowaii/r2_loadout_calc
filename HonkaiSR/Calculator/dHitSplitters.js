@@ -1133,4 +1133,52 @@ const hitSplitters = {
         }
       ],
     },
+    "Hysilens": {
+      "basic": [
+        {
+          "primary": {
+            "hitRatio": 0.5,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+        {
+          "primary": {
+            "hitRatio": 0.5,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+      "skill": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+      "ult": [
+        {
+        "all": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 20
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+        }
+      ],
+    },
 }

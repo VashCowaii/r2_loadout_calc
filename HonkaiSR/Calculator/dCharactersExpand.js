@@ -10857,6 +10857,805 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Hysilens": {
+    "internalID": 1410,
+    "name": "Hysilens",
+    "path": "Nihility",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 485.1,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "141001",
+        "name": "You Ask Why Hearts Cry",
+        "rank": 1,
+        "desc": "While Hysilens is on the field, the DoT dealt by ally targets is equal to 116% of their original value. When Hysilens inflicts Wind Shear/Bleed/Burn/Shock on enemies via her Talent, there is a 100% base chance to additionally inflict the target with 1 instance of Wind Shear/Bleed/Burn/Shock state that is equivalent to those from the original Talent effect and can coexist with such pre-existing states.",
+        "icon": "icon/skill/1410_rank1.png",
+        "paramsEido": [
+          1.16,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "141002",
+        "name": "Tell Me Why Waves Roar High",
+        "rank": 2,
+        "desc": "While the Zone is active, the DMG Boost effect from Trace \"The Fiddle of Pearls\" applies to all allies.",
+        "icon": "icon/skill/1410_rank2.png"
+      },
+      {
+        "id": "141003",
+        "name": "Why Do Lights Bid Goodbye",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1410_ultimate.png"
+      },
+      {
+        "id": "141004",
+        "name": "Lo, How Time Flows By",
+        "rank": 4,
+        "desc": "While the Zone is active, reduces All-Type RES of all enemies by 20%.",
+        "icon": "icon/skill/1410_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "141005",
+        "name": "In Ablution, I Hum and Sigh",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1410_skill.png"
+      },
+      {
+        "id": "141006",
+        "name": "When to Return From Where You Lie",
+        "rank": 6,
+        "desc": "While the Zone is active, at the start of each turn or after one attack by an ally target, increases the maximum trigger count for Hysilens's Physical DoT effect to 12, and increases the multiplier of the DMG dealt by 20%.",
+        "icon": "icon/skill/1410_rank6.png",
+        "paramsEido": [
+          12,
+          0.2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Aeolian Mode: Echoes in Still Waters": {
+          "variant1": {
+            "skillID": 141001,
+            "trigger": "Skill01",
+            "name": "Aeolian Mode: Echoes in Still Waters",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Hysilens's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                1,
+                3
+              ],
+              "2": [
+                0.6,
+                1,
+                3
+              ],
+              "3": [
+                0.7,
+                1,
+                3
+              ],
+              "4": [
+                0.8,
+                1,
+                3
+              ],
+              "5": [
+                0.9,
+                1,
+                3
+              ],
+              "6": [
+                1,
+                1,
+                3
+              ],
+              "7": [
+                1.1,
+                1,
+                3
+              ],
+              "8": [
+                1.2,
+                1,
+                3
+              ],
+              "9": [
+                1.3,
+                1,
+                3
+              ],
+              "10": [
+                1.4,
+                1,
+                3
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_Skill01_Camera",
+              "Avatar_Harscyline_00_Skill01_Phase01",
+              "Avatar_Harscyline_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Overtone Hum: Chorus After Dark Tides": {
+          "variant1": {
+            "skillID": 141002,
+            "trigger": "Skill02",
+            "name": "Overtone Hum: Chorus After Dark Tides",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Has a #2[i]% base chance to increase the DMG taken by all enemies by #3[i]%, lasting for #4[i] turn(s). At the same time, deals Physical DMG equal to #1[i]% of Hysilens's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.7,
+                1,
+                0.1,
+                3
+              ],
+              "2": [
+                0.77,
+                1,
+                0.11,
+                3
+              ],
+              "3": [
+                0.84,
+                1,
+                0.12,
+                3
+              ],
+              "4": [
+                0.91,
+                1,
+                0.13,
+                3
+              ],
+              "5": [
+                0.98,
+                1,
+                0.14,
+                3
+              ],
+              "6": [
+                1.05,
+                1,
+                0.15,
+                3
+              ],
+              "7": [
+                1.1375,
+                1,
+                0.1625,
+                3
+              ],
+              "8": [
+                1.225,
+                1,
+                0.175,
+                3
+              ],
+              "9": [
+                1.3125,
+                1,
+                0.1875,
+                3
+              ],
+              "10": [
+                1.4,
+                1,
+                0.2,
+                3
+              ],
+              "11": [
+                1.47,
+                1,
+                0.21,
+                3
+              ],
+              "12": [
+                1.54,
+                1,
+                0.22,
+                3
+              ],
+              "13": [
+                1.61,
+                1,
+                0.23,
+                3
+              ],
+              "14": [
+                1.68,
+                1,
+                0.24,
+                3
+              ],
+              "15": [
+                1.75,
+                1,
+                0.25,
+                3
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_Skill02_Camera",
+              "Avatar_Harscyline_00_Skill02_Phase01",
+              "Avatar_Harscyline_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Maelstrom Rhapsody": {
+          "variant1": {
+            "skillID": 141003,
+            "trigger": "Skill03",
+            "name": "Maelstrom Rhapsody",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Hysilens deploys a Zone that reduces enemy targets' ATK by #6[f1]% and DEF by #3[f1]%, and deals Physical DMG equal to #1[i]% of Hysilens's ATK to all enemies.\\nFor every 1 instance of DoT taken by an enemy target within the Zone, Hysilens deals Physical DoT equal to #4[f1]% of her ATK to them. This damage triggers at the start of each turn or after one attack by an ally target, up to #5[i] time(s). And it cannot repeatedly trigger this effect.\\nThe Zone lasts for #2[i] turn(s) and this duration decreases by 1 at the start of this unit's every turn. When Hysilens gets knocked down, the Zone will also be dispelled.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.2,
+                3,
+                0.15,
+                0.32,
+                8,
+                0.15
+              ],
+              "2": [
+                1.28,
+                3,
+                0.16,
+                0.3728,
+                8,
+                0.15
+              ],
+              "3": [
+                1.36,
+                3,
+                0.17,
+                0.4256,
+                8,
+                0.15
+              ],
+              "4": [
+                1.44,
+                3,
+                0.18,
+                0.4784,
+                8,
+                0.15
+              ],
+              "5": [
+                1.52,
+                3,
+                0.19,
+                0.5312,
+                8,
+                0.15
+              ],
+              "6": [
+                1.6,
+                3,
+                0.2,
+                0.584,
+                8,
+                0.15
+              ],
+              "7": [
+                1.7,
+                3,
+                0.2125,
+                0.632,
+                8,
+                0.15
+              ],
+              "8": [
+                1.8,
+                3,
+                0.225,
+                0.68,
+                8,
+                0.15
+              ],
+              "9": [
+                1.9,
+                3,
+                0.2375,
+                0.74,
+                8,
+                0.15
+              ],
+              "10": [
+                2,
+                3,
+                0.25,
+                0.8,
+                8,
+                0.15
+              ],
+              "11": [
+                2.08,
+                3,
+                0.26,
+                0.84,
+                8,
+                0.15
+              ],
+              "12": [
+                2.16,
+                3,
+                0.27,
+                0.88,
+                8,
+                0.15
+              ],
+              "13": [
+                2.24,
+                3,
+                0.28,
+                0.92,
+                8,
+                0.15
+              ],
+              "14": [
+                2.32,
+                3,
+                0.29,
+                0.96,
+                8,
+                0.15
+              ],
+              "15": [
+                2.4,
+                3,
+                0.3,
+                1,
+                8,
+                0.15
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_Skill03_Camera",
+              "Avatar_Harscyline_00_Skill03_Phase01",
+              "Avatar_Harscyline_00_Skill03_Phase02",
+              "Avatar_Harscyline_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Sirenic Serenade": {
+          "variant1": {
+            "skillID": 141004,
+            "trigger": "SkillP01",
+            "name": "Sirenic Serenade",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "When an ally target attacks, there is a #1[i]% base chance for Hysilens to inflict the hit enemy target with one of the following states: Wind Shear, Bleed, Burn, or Shock. Priority is given to inflicting a different state.\\nWhile in the Wind Shear/Burn/Shock state, at the start of each turn, the enemy target takes Wind/Fire/Lightning DoT equal to #2[f1]% of Hysilens's ATK for #5[i] turn(s).\\nWhile in the Bleed state, at the start of each turn, the enemy target takes Physical DoT equal to #3[f1]% of their Max HP, up to #4[f1]% of Hysilens's ATK, lasting for #5[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.1,
+                0.2,
+                0.1,
+                2
+              ],
+              "2": [
+                1,
+                0.1165,
+                0.2,
+                0.1165,
+                2
+              ],
+              "3": [
+                1,
+                0.133,
+                0.2,
+                0.133,
+                2
+              ],
+              "4": [
+                1,
+                0.1495,
+                0.2,
+                0.1495,
+                2
+              ],
+              "5": [
+                1,
+                0.166,
+                0.2,
+                0.166,
+                2
+              ],
+              "6": [
+                1,
+                0.1825,
+                0.2,
+                0.1825,
+                2
+              ],
+              "7": [
+                1,
+                0.1975,
+                0.2,
+                0.1975,
+                2
+              ],
+              "8": [
+                1,
+                0.2125,
+                0.2,
+                0.2125,
+                2
+              ],
+              "9": [
+                1,
+                0.23125,
+                0.2,
+                0.23125,
+                2
+              ],
+              "10": [
+                1,
+                0.25,
+                0.2,
+                0.25,
+                2
+              ],
+              "11": [
+                1,
+                0.2625,
+                0.2,
+                0.2625,
+                2
+              ],
+              "12": [
+                1,
+                0.275,
+                0.2,
+                0.275,
+                2
+              ],
+              "13": [
+                1,
+                0.2875,
+                0.2,
+                0.2875,
+                2
+              ],
+              "14": [
+                1,
+                0.3,
+                0.2,
+                0.3,
+                2
+              ],
+              "15": [
+                1,
+                0.3125,
+                0.2,
+                0.3125,
+                2
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "At Ocean's Abode": {
+          "variant1": {
+            "skillID": 141007,
+            "trigger": "SkillMaze",
+            "name": "At Ocean's Abode",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] seconds and automatically moves forward. Enemies within the Special Dimension enter the \"Soulstruck\" state. \"Soulstruck\" enemies will not attack ally targets and will follow the dimension while it persists.\\nAfter entering combat with \"Soulstruck\" enemies, there is a #2[i]% base chance to inflict each enemy target with #3[i] of the following states: Wind Shear/Bleed/Burn/Shock, all of which are equivalent to those provided by Hysilens's Talent effect. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                1,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1410_basic_atk.png",
+        "skillRef": {
+          "skillName": "Aeolian Mode: Echoes in Still Waters",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1410_skill.png",
+        "skillRef": {
+          "skillName": "Overtone Hum: Chorus After Dark Tides",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1410_ultimate.png",
+        "skillRef": {
+          "skillName": "Maelstrom Rhapsody",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1410_talent.png",
+        "skillRef": {
+          "skillName": "Sirenic Serenade",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1410_technique.png",
+        "skillRef": {
+          "skillName": "At Ocean's Abode",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "The Gladius of Conquest",
+        "icon": "icon/skill/1410_skilltree1.png",
+        "desc": "At the start of combat, Hysilens deploys a Zone, equivalent to that provided by her Ultimate, lasting for #1[i] turn(s). Whenever Hysilens deploys a Zone, she recovers #2[i] Skill Point(s).",
+        "params": [
+          3,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "The Bubble of Banquets",
+        "icon": "icon/skill/1410_skilltree2.png",
+        "desc": "When Hysilens uses Ultimate, if the enemy target is currently afflicted with DoT(s), all DoTs currently applied on the target will immediately produce DMG equal to #1[i]% of their original DMG.",
+        "params": [
+          1.5
+        ]
+      },
+      "Point08": {
+        "name": "The Fiddle of Pearls",
+        "icon": "icon/skill/1410_skilltree3.png",
+        "desc": "For every #2[i]% of Hysilens's Effect Hit Rate that exceeds #1[i]%, increases her DMG dealt by #3[i]%, up to a max increase of #4[i]%.",
+        "params": [
+          0.6,
+          0.1,
+          0.15,
+          0.9
+        ]
+      },
+      "Point09": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1410.png",
+    "preview": "image/character_preview/1410.png",
+    "portrait": "image/character_portrait/1410.png",
+    "bannerOffsets": [
+      175,
+      12,
+      0.63,
+      175,
+      12,
+      0.63,
+      175,
+      12,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Dan Heng • Permansor Terrae": {
     "internalID": 1414,
     "name": "Dan Heng • Permansor Terrae",

@@ -82,8 +82,9 @@ const customDisplayValuesLog = {
     ],
     "Kafka": [
         {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true},
-        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+    ],
+    "Hysilens": [
+        {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
     ],
     "Aventurine": [
         {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true},
@@ -350,6 +351,18 @@ const conditionsCharacterDisplayWarning = {
         ]
     },
     "Kafka": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [
+            permaConditionsTextLibrary.atLeast1SP,
+        ],
+        "UltimatePermaConditions": [
+            permaConditionsTextLibrary.energyMaxed
+        ]
+    },
+    "Hysilens": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -1060,6 +1073,11 @@ const defaultConditions = {
                 }
             ]
         }
+    },
+    "Hysilens": {
+        "hasEnhancedState": false,
+        "Skill": null,
+        "Ultimate": null
     },
 
     //HARMONY

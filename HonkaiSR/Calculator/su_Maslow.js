@@ -1720,7 +1720,7 @@ const maslowCategoryLightcones = {
 const maslowCharactersNihility = {
     //NIHILITY
     "Black Swan": {
-        defaultMainSubs: ["SPDFlat","ATK%","EHR","DamageBreak"],
+        defaultMainSubs: ["SPDFlat","ATK%","EffectHitRate","DamageBreak"],
         defaultTrashSub: ["ATKFlat","HP%","EffectRES","HPFlat"],
         0: {
             gives: [],
@@ -1773,7 +1773,7 @@ const maslowCharactersNihility = {
         },
     },
     "Hysilens": {
-        defaultMainSubs: ["SPDFlat","ATK%","EHR","DamageBreak"],
+        defaultMainSubs: ["SPDFlat","ATK%","EffectHitRate","DamageBreak"],
         defaultTrashSub: ["ATKFlat","HP%","HPFlat","DEF%"],
         0: {
             gives: [],
