@@ -1209,7 +1209,7 @@ const turnLogicLightcones = {
                             let rankParams = lcPathing[ownerRank-1];
 
                             sourceTurn.resolutionShinesDEFSHREDSHEET = {
-                                "statsOnHit": [DEFP],
+                                "stats": [DEFP],
                                 [DEFP]: -rankParams[1],
                                 "source": lcNameRef,
                                 "sourceOwner": sourceTurn.properName,
@@ -1226,7 +1226,7 @@ const turnLogicLightcones = {
                         
                         let buffSheet = sourceTurn.resolutionShinesDEFSHREDSHEET;
                         buffSheet.duration = targetTurn.turnState ? 2 : 1;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
                     }
                 },
                 "target": "self",
