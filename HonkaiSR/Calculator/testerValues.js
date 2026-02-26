@@ -1127,11 +1127,22 @@ const defaultConditions = {
         }
     },
     "Asta": {
-        hasEnhancedState: false,
-        "Skill": null,
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
         "Ultimate": {
-            type: "AND",
-            array: []
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Buff",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "buffName": "Astral Blessing (Asta)",
+                    "state": false
+                }
+            ]
         }
     },
 
