@@ -1958,7 +1958,13 @@ const rotationsUISuffering = {
                 else {
                     if (potentialOperatorElement.value === "Delete") {
                         // delete characterConditions[skillSlot];
-                        currentConditions.splice(arrayToPass[currentIndex],1)
+
+                        // currentConditions.array = [];
+                        // currentConditions.array.push(rotationsUISuffering.getReturnStruct("AND"));
+
+                        characterConditions[skillSlot] = rotationsUISuffering.getReturnStruct("AND")
+                        characterConditions[skillSlot].array = [];
+                        // currentConditions.splice(arrayToPass[currentIndex],1)
                     }
                     else {
                         characterConditions[skillSlot] = rotationsUISuffering.getReturnStruct(potentialOperatorElement.value);
