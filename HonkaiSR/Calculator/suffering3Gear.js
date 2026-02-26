@@ -1183,6 +1183,62 @@ const turnLogicLightcones = {
             "prophet": "Prophet [Reforged Remembrance]"
         },
     },
+    "Resolution Shines As Pearls of Sweat": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "HitEnemyStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let targetTurn = generalInfo.targetTurn;
+
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    let lcNameRef = "Resolution Shines As Pearls of Sweat";
+                    let buffName = this.buffName ??= turnLogicLightcones[lcNameRef].buffNames.resolutionDebuff;
+                    let buffCheck = targetTurn.buffsObject[buffName];
+
+                    
+                    if (!buffCheck) {
+                        if (!sourceTurn.incessantRainCRITSHEET) {
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+
+                            sourceTurn.resolutionShinesDEFSHREDSHEET = {
+                                "statsOnHit": [DEFP],
+                                [DEFP]: -rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "isDebuff": true,
+                                "expireType": null,
+                            }
+                        }
+                        
+                        let buffSheet = sourceTurn.resolutionShinesDEFSHREDSHEET;
+                        buffSheet.duration = targetTurn.turnState ? 2 : 1;
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Resolution Shines As Pearls of Sweat - Debuff application handler",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "resolutionDebuff": "Resolution Shines As Pearls of Sweat",
+        },
+    },
 
     //DESTRUCTION
     "Whereabouts Should Dreams Rest": {

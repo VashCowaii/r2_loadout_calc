@@ -1,122 +1,6 @@
 const hitSplitters = {
-    "Silver Wolf": {//done
-        "basic": [
-            {
-              "primary": {
-                "hitRatio": 0.25,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true
-            },
-            {
-              "primary": {
-                "hitRatio": 0.25,
-                "energyRatio": 1,
-                "toughness": 10
-              }
-            },
-            {
-              "primary": {
-                "hitRatio": 0.5,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-        "skill": [
-            {
-            "primary": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 20
-            },
-            "isSourceFirstHit": true,
-            "isAttackFirstHit": true,
-            "isSourceLastHit": true,
-            "isAttackLastHit": true
-            }
-        ],
-        "ult": [
-            {
-            "all": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 20
-            },
-            "isSourceFirstHit": true,
-            "isAttackFirstHit": true,
-            "isSourceLastHit": true,
-            "isAttackLastHit": true
-            }
-        ],
-        "tech": [
-            {
-            "all": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 20
-            },
-            "isSourceFirstHit": true,
-            "isAttackFirstHit": true,
-            "isSourceLastHit": true,
-            "isAttackLastHit": true
-            }
-        ],
-    },
-    "Bronya": {//done
-        "basic": [
-            {
-              "primary": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-        "passive": [
-            {
-              "primary": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-    },
-    "Tingyun": {//done
-        "basic": [
-            {
-              "primary": {
-                "hitRatio": 0.3,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true
-            },
-            {
-              "primary": {
-                "hitRatio": 0.7,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-    },
+    
+    //ABUNDANCE
     "Huohuo": {//done
         "basic": [
             {
@@ -278,6 +162,8 @@ const hitSplitters = {
             }
         ],
     },
+
+    //HARMONY
     "Robin": {//done
         "basic": [
             {
@@ -367,68 +253,7 @@ const hitSplitters = {
             }
         ],
     },
-    "Dan Heng • Permansor Terrae": {//done
-        "basic": [
-            {
-                "primary": {
-                    "hitRatio": 0.3,
-                    "energyRatio": 1,
-                    "toughness": 10
-                },
-                "isSourceFirstHit": true,
-                "isAttackFirstHit": true
-            },
-            {
-                "primary": {
-                    "hitRatio": 0.7,
-                    "energyRatio": 1,
-                    "toughness": 10
-                },
-                "isSourceLastHit": true,
-                "isAttackLastHit": true
-            }
-        ],
-        "ult": [
-            {
-                "all": {
-                    "hitRatio": 1,
-                    "energyRatio": 1,
-                    "toughness": 20
-                },
-                "isSourceFirstHit": true,
-                "isAttackFirstHit": true
-            },
-        ],
-        "passive": [
-            {
-                "all": {
-                    "hitRatio": 0.25,
-                    "toughness": 20
-                },
-                "isSourceFirstHit": true,
-                "isAttackFirstHit": true
-            },
-            {
-                "all": {
-                    "hitRatio": 0.25,
-                    "toughness": 20
-                }
-            },
-            {
-                "all": {
-                    "hitRatio": 0.25,
-                    "toughness": 20
-                }
-            },
-            {
-                "all": {
-                    "hitRatio": 0.25,
-                    "toughness": 20
-                }
-            },
-        ],
-    },
-    "Trailblazer - Remembrance": {//done
+    "Bronya": {//done
         "basic": [
             {
               "primary": {
@@ -442,58 +267,35 @@ const hitSplitters = {
               "isAttackLastHit": true
             }
         ],
-        "eba": [
+        "passive": [
             {
-              "all": {
-                "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 20
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true
-            },
-            {
-              "all": {
+              "primary": {
                 "hitRatio": 1,
                 "energyRatio": 1,
                 "toughness": 10
               },
-              "isMemo": true,
-              "isSourceFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-        "ult": [
-            {
-              "all": {
-                "hitRatio": 1,
-                "toughness": 20
-              },
-              "isMemo": true,
               "isSourceFirstHit": true,
               "isAttackFirstHit": true,
               "isSourceLastHit": true,
               "isAttackLastHit": true
             }
         ],
-        "tech": [
+    },
+    "Tingyun": {//done
+        "basic": [
             {
-              "all": {
-                "hitRatio": 1,
-                "toughness": null
+              "primary": {
+                "hitRatio": 0.3,
+                "energyRatio": 1,
+                "toughness": 10
               },
               "isSourceFirstHit": true,
-              "isAttackFirstHit": true,
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-        "memoSkill": [
+              "isAttackFirstHit": true
+            },
             {
-              "all": {
-                "hitRatio": 1,
+              "primary": {
+                "hitRatio": 0.7,
+                "energyRatio": 1,
                 "toughness": 10
               },
               "isSourceLastHit": true,
@@ -501,6 +303,8 @@ const hitSplitters = {
             }
         ],
     },
+
+    //DESTRUCTION
     "Saber": {//done
         "basic": [
           {
@@ -652,6 +456,165 @@ const hitSplitters = {
           },
         ]
     },
+    "Blade": {
+        "basic": [
+            {
+              "primary": {
+                "hitRatio": 0.5,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.5,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "eba": [
+            {
+              "primary": {
+                "hitRatio": 0.5,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.5,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "ult": [
+            {
+              "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "passive": [
+            {
+              "all": {
+                "hitRatio": 0.33,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "all": {
+                "hitRatio": 0.33,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "all": {
+                "hitRatio": 0.34,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "tech": [
+            {
+              "all": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+    },
+
+    //ERUDITION
+    "Argenti": {//done
+      "basic": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true,
+        }
+      ],
+      "skill": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true,
+        },
+      ],
+      "ult": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+      ],
+      "tech": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 0,
+            "toughness": 0
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+    },
+
+    //REMEMBRANCE
     "Aglaea": {
         "basic": [
             {
@@ -810,62 +773,13 @@ const hitSplitters = {
             }
         ],
     },
-
-    "Blade": {
+    "Trailblazer - Remembrance": {//done
         "basic": [
             {
               "primary": {
-                "hitRatio": 0.5,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true
-            },
-            {
-              "primary": {
-                "hitRatio": 0.5,
-                "energyRatio": 1,
-                "toughness": 10
-              },
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-        "eba": [
-            {
-              "primary": {
-                "hitRatio": 0.5,
-                "energyRatio": 1,
-                "toughness": 20
-              },
-              "isSourceFirstHit": true,
-              "isAttackFirstHit": true
-            },
-            {
-              "primary": {
-                "hitRatio": 0.5,
-                "energyRatio": 1,
-                "toughness": 20
-              },
-              "blast": {
-                "hitRatio": 1,
-                "toughness": 10
-              },
-              "isSourceLastHit": true,
-              "isAttackLastHit": true
-            }
-        ],
-        "ult": [
-            {
-              "primary": {
                 "hitRatio": 1,
                 "energyRatio": 1,
-                "toughness": 20
-              },
-              "blast": {
-                "hitRatio": 1,
-                "toughness": 20
+                "toughness": 10
               },
               "isSourceFirstHit": true,
               "isAttackFirstHit": true,
@@ -873,29 +787,38 @@ const hitSplitters = {
               "isAttackLastHit": true
             }
         ],
-        "passive": [
+        "eba": [
             {
               "all": {
-                "hitRatio": 0.33,
+                "hitRatio": 1,
                 "energyRatio": 1,
-                "toughness": 10
+                "toughness": 20
               },
               "isSourceFirstHit": true,
-              "isAttackFirstHit": true
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true
             },
             {
               "all": {
-                "hitRatio": 0.33,
-                "energyRatio": 1,
-                "toughness": 10
-              }
-            },
-            {
-              "all": {
-                "hitRatio": 0.34,
+                "hitRatio": 1,
                 "energyRatio": 1,
                 "toughness": 10
               },
+              "isMemo": true,
+              "isSourceFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "ult": [
+            {
+              "all": {
+                "hitRatio": 1,
+                "toughness": 20
+              },
+              "isMemo": true,
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
               "isSourceLastHit": true,
               "isAttackLastHit": true
             }
@@ -904,8 +827,7 @@ const hitSplitters = {
             {
               "all": {
                 "hitRatio": 1,
-                "energyRatio": 1,
-                "toughness": 20
+                "toughness": null
               },
               "isSourceFirstHit": true,
               "isAttackFirstHit": true,
@@ -913,7 +835,19 @@ const hitSplitters = {
               "isAttackLastHit": true
             }
         ],
+        "memoSkill": [
+            {
+              "all": {
+                "hitRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
     },
+
+    //PRESERVATION
     "Aventurine": {
         "basic": [
             {
@@ -955,58 +889,70 @@ const hitSplitters = {
             // }
         ]
     },
-    "Argenti": {//done
-      "basic": [
-        {
-          "primary": {
-            "hitRatio": 1,
-            "energyRatio": 1,
-            "toughness": 10
-          },
-          "isSourceFirstHit": true,
-          "isAttackFirstHit": true,
-          "isSourceLastHit": true,
-          "isAttackLastHit": true,
-        }
-      ],
-      "skill": [
-        {
-          "all": {
-            "hitRatio": 1,
-            "energyRatio": 1,
-            "toughness": 10
-          },
-          "isSourceFirstHit": true,
-          "isAttackFirstHit": true,
-          "isSourceLastHit": true,
-          "isAttackLastHit": true,
-        },
-      ],
-      "ult": [
-        {
-          "all": {
-            "hitRatio": 1,
-            "energyRatio": 1,
-            "toughness": 20
-          },
-          "isSourceFirstHit": true,
-          "isAttackFirstHit": true
-        },
-      ],
-      "tech": [
-        {
-          "all": {
-            "hitRatio": 1,
-            "energyRatio": 0,
-            "toughness": 0
-          },
-          "isSourceFirstHit": true,
-          "isAttackFirstHit": true,
-          "isSourceLastHit": true,
-          "isAttackLastHit": true
-        }
-      ],
+    "Dan Heng • Permansor Terrae": {//done
+        "basic": [
+            {
+                "primary": {
+                    "hitRatio": 0.3,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
+            },
+            {
+                "primary": {
+                    "hitRatio": 0.7,
+                    "energyRatio": 1,
+                    "toughness": 10
+                },
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
+            }
+        ],
+        "ult": [
+            {
+                "all": {
+                    "hitRatio": 1,
+                    "energyRatio": 1,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
+            },
+        ],
+        "passive": [
+            {
+                "all": {
+                    "hitRatio": 0.25,
+                    "toughness": 20
+                },
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
+            },
+            {
+                "all": {
+                    "hitRatio": 0.25,
+                    "toughness": 20
+                }
+            },
+            {
+                "all": {
+                    "hitRatio": 0.25,
+                    "toughness": 20
+                }
+            },
+            {
+                "all": {
+                    "hitRatio": 0.25,
+                    "toughness": 20
+                }
+            },
+        ],
     },
+    
+
+    //NIHILITY
     "Kafka": {
       "basic": [
         {
@@ -1178,6 +1124,135 @@ const hitSplitters = {
         "isAttackFirstHit": true,
         "isSourceLastHit": true,
         "isAttackLastHit": true
+        }
+      ],
+    },
+    "Silver Wolf": {//done
+        "basic": [
+            {
+              "primary": {
+                "hitRatio": 0.25,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.25,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.5,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "skill": [
+            {
+            "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+            }
+        ],
+        "ult": [
+            {
+            "all": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+            }
+        ],
+        "tech": [
+            {
+            "all": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+            }
+        ],
+    },
+    "Pela": {//done
+      "basic": [
+        {
+          "primary": {
+            "hitRatio": 0.5,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+        {
+          "primary": {
+            "hitRatio": 0.5,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+      "skill": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+      "ult": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+      "tech": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
         }
       ],
     },
