@@ -811,7 +811,7 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "AttackDMGEnd",
+                "trigger": "HitEnemyEnd",
                 condition(battleData,generalInfo) {
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -862,32 +862,15 @@ const turnLogicLightcones = {
                             realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                         }
                     }
+
                     const dotSheet = sourceTurn.patienceIsAllErodeDOTSHEET;
-                    const buffName = dotSheet.buffName;
-                    dotSheet.AVApplied = battleData.sumAV;
-    
                     const enemiesHit = generalInfo.targetsGotHit;
                     const enemyTurns = battleData.enemyBasedTurns;
-                    const getChance = battleActions.getChanceToApply;
-                    const baseChance = dotSheet.baseChance;
-                    const updateBuff = battleActions.updateBuff;
-                    for (let enemySlot in enemiesHit) {
-                        const currentEnemy = enemyTurns[enemySlot];
-                        const buffCheck = currentEnemy.buffsObject[buffName];
-                        if (buffCheck) {continue;}
+                    const targetTurn = generalInfo.targetTurn;
 
-                        const totalTimesHit = enemiesHit[enemySlot];
-                        dotSheet.duration = currentEnemy.turnState ? 3 : 2
-                        const resultingChance = getChance(battleData,sourceTurn,currentEnemy,baseChance);
-                        let finalAVG = resultingChance;
-                        if (totalTimesHit && totalTimesHit>1 && resultingChance != 1) {
-                            const chanceToFail = 1 - resultingChance;
-                            const composite = chanceToFail ** totalTimesHit;
-                            finalAVG = 1 - composite;
-                        }
-                        dotSheet.avgChanceApplied = finalAVG;
-                        updateBuff(battleData,currentEnemy,dotSheet);
-                    }
+                    // console.log(enemiesHit);
+                    generalApplyDOT(battleData,sourceTurn,targetTurn,dotSheet,enemiesHit,enemyTurns,3,2,true);
+                    
                 },
                 "target": "enemy",
                 "listenerName": "Patience Is All You Need - erode application",
@@ -899,196 +882,197 @@ const turnLogicLightcones = {
             "erode": "Erode"
         },
     },
-    // "Why Does the Ocean Sing": {
-    //     logic(thisTurn,battleData) {},
-    //     "skillFunctions": {
-    //         debuffChecker(battleData,generalInfo,source,ownerSlot,ownerRank) {
-    //             let sourceTurn = generalInfo.sourceTurn;
+    "Why Does the Ocean Sing": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            debuffChecker(battleData,generalInfo,source,ownerSlot,ownerRank) {
+                let sourceTurn = generalInfo.sourceTurn;
 
-    //             const buffsRef = sourceTurn.buffsObject;
-    //             let debuffsOwned = 0;
-    //             for (let buffName in buffsRef) {
-    //                 const currentBuff = buffsRef[buffName];
-    //                 if (!currentBuff || !currentBuff.isDebuff) {continue;}
-    //                 const buffOwner = currentBuff.sourceOwner;
-    //                 debuffsOwned += buffOwner === source ? 1 : 0;
-    //             }
-    //             const finalStacks = Math.min(6,debuffsOwned);
-    //             const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+                const buffsRef = sourceTurn.buffsObject;
+                let debuffsOwned = 0;
+                for (let buffName in buffsRef) {
+                    const currentBuff = buffsRef[buffName];
+                    if (!currentBuff || !currentBuff.isDebuff) {continue;}
+                    const buffOwner = currentBuff.sourceOwner;
+                    debuffsOwned += buffOwner === source ? 1 : 0;
+                }
+                const finalStacks = Math.min(6,debuffsOwned);
+                const ownerTurn = battleData.nameBasedTurns[ownerSlot];
 
 
-    //             // let buffName = listenerRef.buffNames.debuffStacks;
-    //             let lcNameRef = "Why Does the Ocean Sing";
-    //             let buffName = turnLogicLightcones[lcNameRef].buffNames.spdBuff;
-    //             if (!ownerTurn.oceanSingEnthrallmentSHEET) {
+                let lcNameRef = "Why Does the Ocean Sing";
+                let buffName = turnLogicLightcones[lcNameRef].buffNames.debuffStacks;
+                if (!ownerTurn.oceanSingEnthrallmentSHEET) {
                     
-    //                 let lcPathing = lightcones[lcNameRef].params;
-    //                 let rankParams = lcPathing[ownerRank-1];
-    //                 let ownerName = ownerTurn.properName;
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+                    let ownerName = ownerTurn.properName;
                     
 
-    //                 ownerTurn.oceanSingEnthrallmentSHEET = {
-    //                     "stats": [VulnDOT],
-    //                     [VulnDOT]: rankParams[3],
-    //                     "source": lcNameRef,
-    //                     "sourceOwner": ownerName,
-    //                     "buffName": buffName,
-    //                     "duration": 3,
-    //                     "AVApplied": 0,
-    //                     "maxStacks": 6,
-    //                     "currentStacks": 1,
-    //                     "decay": false,
-    //                     "expireType": "EndTurn",
-    //                     "isDebuff": true
-    //                 }
-    //             }
-    //             let buffSheet = ownerTurn.oceanSingEnthrallmentSHEET;
+                    ownerTurn.oceanSingEnthrallmentSHEET = {
+                        "stats": [VulnDOT],
+                        [VulnDOT]: rankParams[3],
+                        "source": lcNameRef,
+                        "sourceOwner": ownerName,
+                        "buffName": buffName,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 6,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isDebuff": true
+                    }
+                }
+                let buffSheet = ownerTurn.oceanSingEnthrallmentSHEET;
                 
-    //             // battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                // battleActions.updateBuff(battleData,sourceTurn,buffSheet);
 
 
-    //             const buffCheck = buffsRef[buffName];
-    //             const updateBuff = battleActions.updateBuff;
-    //             if (buffCheck) {
-    //                 const stackCount = buffCheck.currentStacks;
-    //                 if (stackCount === finalStacks) {return;}
-    //                 else if (stackCount < finalStacks) {
-    //                     const stackDiff = finalStacks - stackCount;
-    //                     buffSheet.currentStacks = stackDiff;
-    //                     buffSheet.duration = sourceTurn.turnState ? 4 : 3;
-    //                     updateBuff(battleData,sourceTurn,buffSheet,false,null,true);
-    //                     return;
-    //                 }
-    //                 else {
-    //                     if (finalStacks) {removeBuff(battleData,sourceTurn,buffCheck,true,null,true);
-    //                     }
-    //                     else {
-    //                         removeBuff(battleData,sourceTurn,buffCheck,false,null,true);
-    //                         return;
-    //                     }
-    //                 }
-    //             }
+                const buffCheck = buffsRef[buffName];
+                const updateBuff = battleActions.updateBuff;
+                if (buffCheck) {
+                    const stackCount = buffCheck.currentStacks;
+                    if (stackCount === finalStacks) {return;}
+                    else if (stackCount < finalStacks) {
+                        const stackDiff = finalStacks - stackCount;
+                        buffSheet.currentStacks = stackDiff;
+                        buffSheet.duration = sourceTurn.turnState ? 4 : 3;
+                        updateBuff(battleData,sourceTurn,buffSheet,false,null,true);
+                        //NOTE: future me, if I ever consider removing the ignoreDebuffPokes here, DONT. Shit will memory leak without it.
+                        return;
+                    }
+                    else {
+                        if (finalStacks) {
+                            removeBuff(battleData,sourceTurn,buffCheck,true,null,true,true);
+                        }
+                        else {
+                            removeBuff(battleData,sourceTurn,buffCheck,false,null);
+                            return;
+                        }
+                    }
+                }
 
-    //             if (!finalStacks) {return;}
-    //             const realStacks = Math.min(6,finalStacks + (!buffCheck ? 1 : 0));
-    //             //since enthrallment counts as a debuff itself, that means when we add the debuff for the first time, we need to make sure that we add +1 stacks to account for that
-    //             //otherwise, what will happen is we'll apply it not accounting for enthrallment being a debuff, then appliedDebuff will trigger again, then we'll add one extra stack anyways
-    //             //so no point in looping through until stacks balance out, just do it here
-    //             buffSheet.currentStacks = realStacks;
-    //             buffSheet.duration = sourceTurn.turnState ? 4 : 3;
-    //             updateBuff(battleData,sourceTurn,buffSheet,false,null,buffCheck);
-    //         }
-    //     },
-    //     "listeners": [
-    //         // poke("DebuffApplied",battleData,{sourceTurn,currentReference});
-    //         // poke("DebuffRemoved",battleData,{sourceTurn,currentReference});
-    //         {
-    //             "trigger": "DebuffApplied",
-    //             condition(battleData,generalInfo) {
-    //                 // let ownerRef = this.owners;
-    //                 const source = generalInfo.currentReference.sourceOwner;
-    //                 const ownerSlot = battleData.nameIndex[source];
+                if (!finalStacks) {return;}
+                const realStacks = Math.min(6,finalStacks + (!buffCheck ? 1 : 0));
+                //since enthrallment counts as a debuff itself, that means when we add the debuff for the first time, we need to make sure that we add +1 stacks to account for that
+                //otherwise, what will happen is we'll apply it not accounting for enthrallment being a debuff, then appliedDebuff will trigger again, then we'll add one extra stack anyways
+                //so no point in looping through until stacks balance out, just do it here
+                buffSheet.currentStacks = realStacks;
+                buffSheet.duration = sourceTurn.turnState ? 4 : 3;
+                updateBuff(battleData,sourceTurn,buffSheet,false,null,buffCheck);
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "DebuffApplied",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    const source = generalInfo.currentReference.sourceOwner;
+                    const ownerSlot = battleData.nameIndex[source];
 
-    //                 let ownersSlots = this.ownersSlots;
-    //                 let ownerRank = ownersSlots[ownerSlot];
-    //                 if (!ownerRank) {return;}//if the debuff owner isn't an owner of the lightcone, abort early
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[ownerSlot];
+                    if (!ownerRank) {return;}//if the debuff owner isn't an owner of the lightcone, abort early
                     
-    //                 const debuffFunction = this.debuffFunction ??= turnLogicLightcones["Why Does the Ocean Sing"].skillFunctions.debuffChecker;
-    //                 debuffFunction(battleData,generalInfo,source,ownerSlot,ownerRank);
-    //             },
-    //             "target": "self",
-    //             "listenerName": "Why Does the Ocean Sing - debuffs owned check (application)",
-    //             "owners": [],
-    //         },
-    //         {
-    //             "trigger": "DebuffRemoved",
-    //             condition(battleData,generalInfo) {
-    //                 // let ownerRef = this.owners;
-    //                 const source = generalInfo.currentReference.sourceOwner;
-    //                 const ownerSlot = battleData.nameIndex[source];
+                    const debuffFunction = this.debuffFunction ??= turnLogicLightcones["Why Does the Ocean Sing"].skillFunctions.debuffChecker;
+                    debuffFunction(battleData,generalInfo,source,ownerSlot,ownerRank);
+                },
+                "target": "self",
+                "listenerName": "Why Does the Ocean Sing - debuffs owned check (application)",
+                "owners": [],
+            },
+            {
+                "trigger": "DebuffRemoved",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    const source = generalInfo.currentReference.sourceOwner;
+                    const ownerSlot = battleData.nameIndex[source];
 
-    //                 let ownersSlots = this.ownersSlots;
-    //                 let ownerRank = ownersSlots[ownerSlot];
-    //                 if (!ownerRank) {return;}//if the debuff owner isn't an owner of the lightcone, abort early
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[ownerSlot];
+                    if (!ownerRank) {return;}//if the debuff owner isn't an owner of the lightcone, abort early
 
-    //                 const debuffFunction = this.debuffFunction ??= turnLogicLightcones["Why Does the Ocean Sing"].skillFunctions.debuffChecker;
-    //                 debuffFunction(battleData,generalInfo,source,ownerSlot,ownerRank);
-    //             },
-    //             "target": "self",
-    //             "listenerName": "Why Does the Ocean Sing - debuffs owned check (removal)",
-    //             "owners": [],
-    //         },
-    //         {
-    //             "trigger": "AttackDMGEnd",
-    //             condition(battleData,generalInfo) {
-    //                 // poke("AttackDMGEnd",battleData,generalInfo);
-    //                 // let ownerRef = this.owners;
-    //                 let sourceTurn = generalInfo.sourceTurn;
-    //                 if (sourceTurn.isEnemy) {return;}
-    //                 const targetsGotHit = generalInfo.targetsGotHit;
-    //                 // let buffName = this.buffNames.debuffStacks;
+                    const debuffFunction = this.debuffFunction ??= turnLogicLightcones["Why Does the Ocean Sing"].skillFunctions.debuffChecker;
+                    debuffFunction(battleData,generalInfo,source,ownerSlot,ownerRank);
+                },
+                "target": "self",
+                "listenerName": "Why Does the Ocean Sing - debuffs owned check (removal)",
+                "owners": [],
+            },
+            {
+                "trigger": "HitEnemyStart",
+                condition(battleData,generalInfo) {
+                    // poke("AttackDMGEnd",battleData,generalInfo);
+                    // let ownerRef = this.owners;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    // let buffName = this.buffNames.debuffStacks;
 
-    //                 let lcNameRef = "Why Does the Ocean Sing";
-    //                 let buffName = turnLogicLightcones[lcNameRef].buffNames.spdBuff;
+                    let lcNameRef = "Why Does the Ocean Sing";
+                    const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+                    let buffName = buffNames.spdBuff;
+                    let buffNameVuln = buffNames.debuffStacks;
+                    
 
 
-    //                 const enemyTurns = battleData.enemyBasedTurns;
-    //                 let enthrallRef = null;
-    //                 for (let enemyHit in targetsGotHit) {
-    //                     const currentEnemy = enemyTurns[enemyHit];
-    //                     const buffCheck = currentEnemy.buffsObject[buffName];
-    //                     if (buffCheck) {
-    //                         enthrallRef = buffCheck;
-    //                         break;
-    //                     }
-    //                 }
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    let enthrallRef = null;
+                    for (let enemyHit in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemyHit];
+                        const buffCheck = currentEnemy.buffsObject[buffNameVuln];
+                        if (buffCheck && targetsGotHit[enemyHit] === 1) {//ONLY EVALUATE FIRST HITS, ERGO THE START OF AN ATTACK
+                            enthrallRef = buffCheck;
+                            break;
+                        }
+                    }
 
-    //                 if (enthrallRef) {
-    //                     const sourceOwner = enthrallRef.sourceOwner;
-    //                     const ownerSlot = battleData.nameIndex[sourceOwner];
-    //                     let ownersSlots = this.ownersSlots;
-    //                     const ownerRank = ownersSlots[ownerSlot];
-    //                     const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+                    if (enthrallRef) {
+                        const sourceOwner = enthrallRef.sourceOwner;
+                        const ownerSlot = battleData.nameIndex[sourceOwner];
+                        let ownersSlots = this.ownersSlots;
+                        const ownerRank = ownersSlots[ownerSlot];
+                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
 
-    //                     if (!ownerTurn.oceanSingEnthrallmentSPEEDSHEET) {
-    //                         let lcNameRef = "Why Does the Ocean Sing";
-    //                         let lcPathing = lightcones[lcNameRef].params;
-    //                         let rankParams = lcPathing[ownerRank-1];
-    //                         let ownerName = ownerTurn.properName;
-    //                         // let buffName = turnLogicLightcones[lcNameRef].buffNames.spdBuff;
+                        if (!ownerTurn.oceanSingEnthrallmentSPEEDSHEET) {
+                            let lcNameRef = "Why Does the Ocean Sing";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+                            let ownerName = ownerTurn.properName;
+                            // let buffName = turnLogicLightcones[lcNameRef].buffNames.spdBuff;
     
-    //                         ownerTurn.oceanSingEnthrallmentSPEEDSHEET = {
-    //                             "stats":[SPDP],
-    //                             [SPDP]: rankParams[5],
-    //                             "source": lcNameRef,
-    //                             "sourceOwner": ownerName.properName,
-    //                             "buffName": buffName,
-    //                             "duration": 3,
-    //                             "AVApplied": 0,
-    //                             "maxStacks": 1,
-    //                             "currentStacks": 1,
-    //                             "decay": false,
-    //                             "expireType": "EndTurn",
-    //                             "isDebuff": true
-    //                         }
-    //                     }
+                            ownerTurn.oceanSingEnthrallmentSPEEDSHEET = {
+                                "stats":[SPDP],
+                                [SPDP]: rankParams[5],
+                                "source": lcNameRef,
+                                "sourceOwner": ownerName,
+                                "buffName": buffName,
+                                "duration": 3,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                                "isDebuff": false
+                            }
+                        }
 
-    //                     let buffSheet = ownerTurn.oceanSingEnthrallmentSPEEDSHEET;
-    //                     buffSheet.duration = sourceTurn.turnState ? 4 : 3;
-    //                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
-    //                 }
-    //             },
-    //             "target": "self",
-    //             "listenerName": "Why Does the Ocean Sing - SPD check",
-    //             "owners": [],
-    //         },
-    //     ],
-    //     "buffNames": {
-    //         "debuffStacks": "Enthrallment [LC]",
-    //         "spdBuff": "Enthrallment SPD [LC]"
-    //     },
-    //     // let buffName = turnLogicLightcones[lcNameRef].buffNames.prophet;
-    // },
+                        let buffSheet = ownerTurn.oceanSingEnthrallmentSPEEDSHEET;
+                        buffSheet.duration = sourceTurn.turnState ? 4 : 3;
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Why Does the Ocean Sing - SPD check",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "debuffStacks": "Enthrallment [LC]",
+            "spdBuff": "Enthrallment SPD [LC]"
+        },
+    },
     "Reforged Remembrance": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},

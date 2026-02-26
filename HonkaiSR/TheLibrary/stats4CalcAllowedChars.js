@@ -17,4 +17,6 @@ global.calcAllowedSet = new Set([
     "Argenti",
     "Blade",
     "Aventurine",
+    "Kafka",
+    "Hysilens",
 ]);
