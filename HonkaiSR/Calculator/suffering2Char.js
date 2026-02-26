@@ -14481,43 +14481,6 @@ const turnLogic = {
                 "listenerName": "Asta - first turn prevent charge loss modifier",
                 "ownerTurn": {},
             },
-            // {
-            //     "trigger": "AdditionalTriggerAttackEnd",
-            //     condition(battleData,generalInfo) {
-            //         let ownerTurn = this.ownerTurn;
-            //         let characterName = ownerTurn.properName;
-
-            //         let sourceTurn = generalInfo.sourceTurn;
-            //         let charValuesRef = ownerTurn.battleValues;
-            //         let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-            //         if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-            //         let sourceCheck = sourceTurn.properName === targetTurn.properName;
-            //         if (!sourceCheck) {return;}//is the attack coming from an allied source
-            //         const benedictionDMG = this.benedictionDMG ??= turnLogic[characterName].skillFunctions.benedictionDMG
-            //         benedictionDMG(battleData,ownerTurn,targetTurn);
-            //     },
-            //     "target": "enemy",
-            //     "listenerName": "Tingyun benediction ally atk additional DMG controller",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "AdditionalTriggerAttackEnd",
-            //     condition(battleData,generalInfo) {
-            //         let ownerTurn = this.ownerTurn;
-            //         let characterName = ownerTurn.properName;
-
-            //         let charValuesRef = ownerTurn.battleValues;
-            //         let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-            //         if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-            //         let sourceCheck = ownerTurn.turnState && generalInfo.dmgSlot === "Basic ATK";
-            //         if (!sourceCheck) {return;}//is the attack coming from tingyun
-            //         const talentDMG = this.talentDMG ??= turnLogic[characterName].skillFunctions.talentDMG
-            //         talentDMG(battleData,ownerTurn,targetTurn);
-            //     },
-            //     "target": "enemy",
-            //     "listenerName": "Tingyun talent basic atk additional DMG controller",
-            //     "ownerTurn": {},
-            // },
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -14656,8 +14619,6 @@ const turnLogic = {
         },
         "ATKObjects": {},
         "characterValues": {
-            // "charWithBenediction": null,
-            // "benedictorKilledEnemy": false,
             "chargeStacks": 0,
             "skipCost": true,
         },
@@ -14670,20 +14631,6 @@ const turnLogic = {
             "traceDEF": "Constellation (Asta)",
             "traceATK": "Astrometry (Asta)",
             "e4Name": "Aurora Basks in Beauty and Bliss",
-
-            "selfSPD": "Nourished Joviality",
-            "benediction": "Benediction",
-            "clouds": "Amidst the Rejoicing Clouds",
-            "e1SPD": "Windfall of Lucky Springs",
-            "side1": "Side Note (1)",
-            "side2": "Side Note (2)",
-            "side3": "Side Note (3)",
-            "side4": "Side Note (4)",
-            "side5": "Side Note (5)",
-            "implant": "SW Weakness Implant",
-            "resReduction": "SW All-type RES Reduction"
-            // "guardian": "Major Trace: Guardian",
-            // "caladbolg": "Caladbolg II",
         },
         "characterValuesBattle": {},
     },
