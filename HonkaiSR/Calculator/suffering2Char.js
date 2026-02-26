@@ -14531,87 +14531,8 @@ const turnLogic = {
             },
         ],
         "eidolonListeners": {
-            1: [
-                // {
-                //     "trigger": "UltimateEnd",
-                //     condition(battleData,generalInfo) {
-                //         let ownerTurn = this.ownerTurn;
-                //         let characterName = ownerTurn.properName;
-    
-                //         let sourceTurn = generalInfo.sourceTurn;
-                //         let charValuesRef = ownerTurn.battleValues;
-                //         let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-                //         if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-    
-                //         let sourceCheck = sourceTurn.properName === targetTurn.properName;
-                //         if (!sourceCheck) {return;}
-    
-                //         let buffSheet = this.buffSheet ??= {
-                //             "stats": [SPDP],
-                //             [SPDP]: 0.20,
-                //             "source": characterName,
-                //             "sourceOwner": ownerTurn.properName,
-                //             "buffName": turnLogic[characterName].buffNames.e1SPD,
-                //             "duration": 1,
-                //             "AVApplied": 0,
-                //             "maxStacks": 1,
-                //             "currentStacks": 1,
-                //             "decay": false,
-                //             "expireType": "EndTurn"
-                //         }
-
-                //         buffSheet.duration = targetTurn.turnState ? 2 : 1;
-                //         battleActions.updateBuff(battleData,targetTurn,buffSheet);
-                //     },
-                //     "target": "self",
-                //     "listenerName": "Tingyun - E1 spd boost controller",
-                //     "announce": false,
-                //     "ownerTurn": {},
-                // },
-            ],
-            2: [
-                // {
-                //     "trigger": "StartTurn",
-                //     condition(battleData,generalInfo) {
-                //         let ownerTurn = this.ownerTurn;
-    
-                //         let sourceTurn = generalInfo.sourceTurn;
-                //         let charValuesRef = ownerTurn.battleValues;
-                //         let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-                //         if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-    
-                //         let sourceCheck = sourceTurn.properName === targetTurn.properName;
-                //         if (!sourceCheck) {return;}
-                //         charValuesRef.benedictorKilledEnemy = false;//reset the kill achieved for the E2 energy regen
-                //     },
-                //     "target": "self",
-                //     "listenerName": "Tingyun - E2 ally kill count reset",
-                //     "announce": false,
-                //     "ownerTurn": {},
-                // },
-                // {
-                //     "trigger": "EnemyDied",
-                //     condition(battleData,generalInfo) {//poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                //         let ownerTurn = this.ownerTurn;
-    
-                //         let sourceTurn = generalInfo.sourceTurn;
-                //         let charValuesRef = ownerTurn.battleValues;
-                //         let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-                //         if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-    
-                //         let sourceCheck = sourceTurn.properName === targetTurn.properName;
-                //         if (!sourceCheck || charValuesRef.benedictorKilledEnemy) {return;}//if this isn't the ally with benediction, or they've already killed within this turn, then abort
-    
-                //         charValuesRef.benedictorKilledEnemy = true;
-                //         let amount = 5;
-                //         battleActions.updateEnergy(battleData,amount,targetTurn,false,"Gainfully Gives, Givingly Gains");
-                //     },
-                //     "target": "self",
-                //     "listenerName": "Tingyun - E2 ally energy gain",
-                //     "announce": false,
-                //     "ownerTurn": {},
-                // },
-            ],
+            1: [],
+            2: [],
             3: [],
             4: [],
             5: [],
@@ -18723,14 +18644,14 @@ const turnLogic = {
             },
             // ownerTurn.battleValues.bondmateSlot
             // ownerTurn.dhptSouldragonTURNEVENT
-            dhptSkill(battleData,target,sourceTurn) {
+            dhptSkill(battleData,target,sourceTurn,targetOverride) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.dhptSkillShieldREF ??= ATKObjects.Skill["Terra Omnibus"].variant1;
     
-                const char1 = battleData.nameBasedTurns.char1;
+                const char1 = targetOverride ?? battleData.nameBasedTurns.char1;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:char1.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
@@ -18807,8 +18728,19 @@ const turnLogic = {
                 const dragonTurn = sourceTurn.dhptSouldragonTURNEVENT;
                 if (!dragonTurn.isActive || bondmateSlot != targetTurn.name) {
                     //if souldragon was removed from the owner, then remove the buff and back out nothing needs to be done
-                    removeBuff(battleData,targetTurn,buffCheck,false,null,false,true);
-                    return;
+                    removeBuff(battleData,bondmateTurn,buffSheet,false,null,false,true);
+
+                    if (dragonTurn.isActive) {
+                        bondmateTurn.activeSummons -= 1;
+                        poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: bondmateTurn, summonedBy: sourceTurn, summonEvent: dragonTurn});
+                        sourceTurn.battleValues.bondmateSlot = null;
+                        const skillFunctions = logicRef.skillFunctions;
+                        skillFunctions.addDragonToOrder(battleData,sourceTurn,targetTurn);
+                    }
+                    else {return;}
+                    
+                    
+                    // return;
                 }
 
                 if (buffCheck) {
@@ -18820,7 +18752,7 @@ const turnLogic = {
                 }
 
                 //if we reach this point, it's bc souldragon is on the field, a bondmate is designated, and there is a conversion to apply
-                updateBuff(battleData,bondmateTurn,buffSheet,false,null,false,true);
+                updateBuff(battleData,targetTurn,buffSheet,false,null,false,true);
             },
             dhptSkillShield(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -18985,6 +18917,15 @@ const turnLogic = {
             },
             addDragonToOrder(battleData,sourceTurn,targetTurn) {
                 const dragonTurn = sourceTurn.dhptSouldragonTURNEVENT;
+                const dragonWasAlreadyActive = dragonTurn.isActive;
+
+                if (dragonWasAlreadyActive) {
+                    targetTurn.activeSummons += 1;
+                    dragonTurn.currentlyOwnedBy = targetTurn.name;
+                    sourceTurn.battleValues.bondmateSlot = targetTurn.name;
+                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: targetTurn, summonedBy: sourceTurn, summonEvent: dragonTurn});
+                    return;
+                }
 
                 targetTurn.activeSummons += 1;
                 dragonTurn.currentlyOwnedBy = targetTurn.name;
@@ -19394,7 +19335,27 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 const dhptTechSkillCall = ATKObjects.dhptTechSkillCall ??= turnLogic[characterName].skillFunctions.dhptSkill;
-                dhptTechSkillCall(battleData,null,sourceTurn)
+
+                const allyPositions = battleData.allyPositions;
+                let targetOverride = null;
+                for (let ally of allyPositions) {
+                    const currentTurnLogic = turnLogic[ally.properName];
+                    const useTechnique = currentTurnLogic.useTechnique;
+                    const techniqueType = currentTurnLogic.techniqueType;
+
+                    // console.log(ally.properName,useTechnique,techniqueType)
+
+                    if (useTechnique && techniqueType === "Attack") {
+                        targetOverride = ally;
+                        break;
+                    }
+                }
+                // console.log(targetOverride)
+
+
+
+
+                dhptTechSkillCall(battleData,null,sourceTurn,targetOverride)
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 poke("TechniqueEnd",battleData,{sourceTurn});
