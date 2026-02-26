@@ -170,6 +170,10 @@ const customDisplayValuesLog = {
         {valueName: "E1 Skillpoint Ready", refName: "e1SPRegenReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 1},
         {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
     ],  
+    "Asta": [
+        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true},
+        {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
+    ],  
     "Natasha": [],  
 }
 
@@ -307,6 +311,13 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Pela": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Asta": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -1108,6 +1119,14 @@ const defaultConditions = {
         }
     },
     "Tribbie": {
+        hasEnhancedState: false,
+        "Skill": null,
+        "Ultimate": {
+            type: "AND",
+            array: []
+        }
+    },
+    "Asta": {
         hasEnhancedState: false,
         "Skill": null,
         "Ultimate": {
