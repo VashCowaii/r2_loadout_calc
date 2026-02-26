@@ -9117,13 +9117,20 @@ const turnLogic = {
         "eidolonListeners": {
             1: [
                 {
-                    "trigger": "AttackDMGStart",
+                    "trigger": "HitEnemyStart",
                     condition(battleData,generalInfo) {
                         // let ownerRef = this.owners;
                         let ownerTurn = this.ownerTurn;
                         let sourceTurn = generalInfo.sourceTurn;
+                        let targetTurn = generalInfo.targetTurn;
+                        const targetsGotHit = generalInfo.targetsGotHit;
 
                         if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                        const targetHits = targetsGotHit[targetTurn.name];
+
+                        if (targetHits != 1) {return;}
+
                         if (!this.e1DOTVulnDEBUFFSHEET) {
                             const characterName = ownerTurn.properName;
                             let buffName = turnLogic[characterName].buffNames.e1DOTVuln;
@@ -9144,14 +9151,17 @@ const turnLogic = {
                         }
                         const buffSheet = this.e1DOTVulnDEBUFFSHEET;
                          
-                        const targetsGotHit = generalInfo.targetsGotHit;
-                        const enemyTurns = battleData.enemyBasedTurns;
+                        // const enemyTurns = battleData.enemyBasedTurns;
                         const updateBuff = battleActions.updateBuff;
-                        for (let enemySlot in targetsGotHit) {
-                            const currentEnemy = enemyTurns[enemySlot];
-                            buffSheet.duration = currentEnemy.turnState ? 3 : 2;
-                            updateBuff(battleData,currentEnemy,buffSheet);//owner
-                        }
+                        buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                        updateBuff(battleData,targetTurn,buffSheet);//owner
+
+
+                        // for (let enemySlot in targetsGotHit) {
+                        //     const currentEnemy = enemyTurns[enemySlot];
+                        //     buffSheet.duration = currentEnemy.turnState ? 3 : 2;
+                        //     updateBuff(battleData,currentEnemy,buffSheet);//owner
+                        // }
                     },
                     "target": "self",
                     "listenerName": "Da Capo atk listener",
