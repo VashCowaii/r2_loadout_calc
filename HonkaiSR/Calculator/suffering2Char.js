@@ -10221,6 +10221,566 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Pela": {
+        logic(thisTurn,battleData) {
+
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.pelaSkill, target: "enemy", endTurn: true};
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.pelaBasic, target: "enemy", endTurn: true};
+            return returnBasicCall;
+        },
+        "skillFunctions": {
+            pelaBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.pelaBasicREF ??= ATKObjects["Basic ATK"]["Frost Shot"].variant1;
+
+                if (!ATKObjects.pelaBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.swBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Ice"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.pelaBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.pelaBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            pelaSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.pelaSkillREF ??= ATKObjects["Skill"]["Frostbite"].variant1;
+                let values = ATKObjects.pelaSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.pelaSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Ice"];
+                    const actionTags = ["Skill","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.pelaSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    };
+
+                    ATKObjects.pelaSkillDispelDMGSHEET = {
+                        "stats": [DEFP],
+                        [DEFP]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.skillDispelDMG,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    ATKObjects.pelaSkillDispelSPDSHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: 10,
+                        "source": "E2",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.skillDispelSPDE2,
+                        "duration": 3,//would be 2 but will always take place DURING her turn, so 3
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+
+                    ATKObjects.pelaSkillDE4PENSHEET = {
+                        "stats": [ResistanceIce],
+                        [ResistanceIce]: -0.12,
+                        "source": "E4",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.skillDispelE4,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn",
+                    }
+                }
+                let ATKObject = ATKObjects.pelaSkillATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                if (rank >= 4) {
+                    const bonusSheet3 = ATKObjects.pelaSkillDE4PENSHEET;
+                    battleActions.updateBuff(battleData,battleData.primaryTarget,bonusSheet3);
+                }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                let dispelCount = 0;
+                if (dispelCount) {
+                    const bonusSheet = ATKObjects.pelaSkillDispelDMGSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,bonusSheet);
+
+                    if (rank >= 2) {
+                        const bonusSheet2 = ATKObjects.pelaSkillDispelSPDSHEET;
+                        battleActions.updateBuff(battleData,sourceTurn,bonusSheet2);
+                    }
+                }
+
+
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            pelaUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.pelaUltimateREF ??= ATKObjects.Ultimate["Zone Suppression"].variant1;
+
+                if (!ATKObjects.pelaUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.silverwolfUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Ice"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.pelaUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[3],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.pelaUltimateDEFDEBUFFSHEET = {
+                        "stats": [DEFP],
+                        [DEFP]: -values[1],
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.defDebuff,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                
+                const updateBuff = battleActions.updateBuff;
+                let ATKObject = ATKObjects.pelaUltimateATKOBJECT;
+                let buffSheet = ATKObjects.pelaUltimateDEFDEBUFFSHEET;
+                for (let enemySlot of battleData.enemyPositions) {
+                    buffSheet.duration = enemySlot.turnState ? 3 : 2;
+                    updateBuff(battleData,enemySlot,buffSheet);
+                }
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                sourceTurn.ultyQueued = false;
+            },
+            pelaTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.pelaTechniqueREF ??= ATKObjects.Technique["Preemptive Strike"].variant1;
+
+                if (!ATKObjects.pelaTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.swTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Ice"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.pelaTechniqueATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[3],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: true,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.pelaTechniqueDEFDEBUFFSHEET = {
+                        "stats": [DEFP],
+                        [DEFP]: -values[1],
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.defDebuff,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                const ATKObject = ATKObjects.pelaTechniqueATKObject;
+
+                // defDebuffTech
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                let buffSheet = ATKObjects.pelaTechniqueDEFDEBUFFSHEET;
+                for (let enemySlot of battleData.enemyPositions) {
+                    buffSheet.duration = enemySlot.turnState ? 3 : 2;
+                    battleActions.updateBuff(battleData,enemySlot,buffSheet);
+                }
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+            pelaE6DMG(battleData,generalInfo,allyTurn,allTargetsArray) {
+                const logicRef = turnLogic[allyTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.pelaE6DMGREF) {
+                    const scalar = "ATK";
+                    const tags = ["All","Ice"];
+                    const actionTags = ["Additional"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.pelaE6DMGREF = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            additional: 0.40
+                        },
+                        scalar,
+                        element: "Ice",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.pelaE6DMGREF;
+
+                //aight so for sw we get every enemy that the ult hit passed through here
+                //then we check every enemy hit for debuffs, then we hit them for each debuff up to 5, god that's gonna clutter the log like fuckin mad
+
+                const allyAssignedName = allyTurn.properName;
+                const addedWrapper = battleActions.additionalDMGWrapper;
+                for (let enemySlot of allTargetsArray) {
+                    let debuffCount = enemySlot.debuffCounter;
+
+                    if (debuffCount) {addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,enemySlot,"E6 Feeble Pursuit");}
+                }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "AllyCreated",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    let targetTurn = generalInfo.targetTurn;
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [EffectHitRate],
+                        [EffectHitRate]: 0.10,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceEHR,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "The Secret Strategy trace bonus to allies",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != characterName) {return;}
+
+                    let targetTurn = generalInfo.targetTurn;
+                    let targetDebuffs = targetTurn.debuffCounter;
+
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[characterName].buffNames.traceAgainstDebuffed,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    let buffName = buffSheet.buffName;
+                    const buffCheck = sourceTurn.buffsObject[buffName];
+
+                    
+                    const updateBuff = battleActions.updateBuff;
+                    if (!buffCheck && targetDebuffs) {
+                        updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                    else if (buffCheck && targetDebuffs) {return;}
+                    else {
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+
+                },
+                "target": "self",
+                "listenerName": "Bash trace bonus DMG ONHIT",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    let foundDebuff = false;
+                    for (targetHit in targetsGotHit) {
+                        const currentEnemy = enemyTurns[targetHit];
+                        if (currentEnemy.debuffCounter) {
+                            foundDebuff = true;
+                            break;
+                        }
+                    }
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (foundDebuff) {
+                        let skillRef = ATKObjects.pelaTalentREF ??= ATKObjects["Talent"]["Data Collecting"].variant1;
+                        let values = ATKObjects.pelaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                        battleActions.updateEnergy(battleData,values[0],sourceTurn,false,"Pela Talent Regen");
+                    }
+
+                    
+                    const bonusSheet = ATKObjects.pelaSkillDispelDMGSHEET;
+                    const buffName = bonusSheet?.buffName;
+                    if (ownerTurn.buffsObject[buffName]) {
+                        removeBuff(battleData,ownerTurn,bonusSheet)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Wipe Out - Listen to attack end dmg buff removal // TALENT ENERGY REGEN",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.pelaUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Pela - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const swTechnique = this.swTechnique ??= logicRef.skillFunctions.pelaTechnique
+                        swTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Silver Wolf Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "EnemyDied",
+                    condition(battleData,generalInfo) {
+                        // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                        let ownerTurn = this.ownerTurn;
+    
+                        battleActions.updateEnergy(battleData,5,ownerTurn,false,"Pela E1 Death Regen");
+                    },
+                    "target": "enemy",
+                    "listenerName": "Pela E1 Enemy Death Regen",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [
+                {
+                    "trigger": "AdditionalTriggerAttackEnd",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let characterName = ownerTurn.properName;
+    
+                        let sourceTurn = generalInfo.sourceTurn;
+                        let enemiesAttackedThisAction = battleData.enemyPositions;//her ult is an AOE attack so... everyone gets hit
+    
+                        //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
+                        if (sourceTurn.properName != characterName || sourceTurn.rank < 4 || generalInfo.dmgSlot != "Ultimate") {return;}
+
+                        const pelaE6DMG = this.pelaE6DMG ??= turnLogic[characterName].skillFunctions.pelaE6DMG;
+                        pelaE6DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
+                    },
+                    "target": "enemy",
+                    "listenerName": "Silver Wolf E4 additional DMG controller",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "bugCycleCounter": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "defDebuff": "Exposed -DEF% (Pela)",
+            "defDebuffTech": "Exposed -DEF% (Pela)",
+
+            "traceEHR": "The Secret Strategy (Pela)",
+            "traceAgainstDebuffed": "Bash (Pela)",
+            "skillDispelDMG": "Wipe Out (Pela)",
+            "skillDispelSPDE2": "E2: Adamant Charge",
+            "skillDispelE4": "E4: Full Analysis",
+        },
+        "characterValuesBattle": {},
+    },
 
 
     //Hunt

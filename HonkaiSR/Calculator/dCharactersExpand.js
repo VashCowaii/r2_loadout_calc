@@ -1599,6 +1599,625 @@ let characters = {
     ],
     "isBuffed": true
   },
+  "Asta": {
+    "internalID": 1009,
+    "name": "Asta",
+    "path": "Harmony",
+    "element": "Fire",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 511.56,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1023.12,
+      "SPDBase": 106,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "100901",
+        "name": "Star Sings Sans Verses or Vocals",
+        "rank": 1,
+        "desc": "When using Skill, deals DMG for 1 extra time to a random enemy.",
+        "icon": "icon/skill/1009_rank1.png"
+      },
+      {
+        "id": "100902",
+        "name": "Moon Speaks in Wax and Wane",
+        "rank": 2,
+        "desc": "After using her Ultimate, Asta's Charging stacks will not be reduced in the next turn.",
+        "icon": "icon/skill/1009_rank2.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "100903",
+        "name": "Meteor Showers for Wish and Want",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1009_skill.png"
+      },
+      {
+        "id": "100904",
+        "name": "Aurora Basks in Beauty and Bliss",
+        "rank": 4,
+        "desc": "Asta's Energy Regeneration Rate increases by 15% when she has 2 or more Charging stacks.",
+        "icon": "icon/skill/1009_rank4.png",
+        "paramsEido": [
+          2,
+          0.15
+        ]
+      },
+      {
+        "id": "100905",
+        "name": "Nebula Secludes in Runes and Riddles",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1009_ultimate.png"
+      },
+      {
+        "id": "100906",
+        "name": "Cosmos Dreams in Calm and Comfort",
+        "rank": 6,
+        "desc": "Charging stack(s) lost in each turn is reduced by 1.",
+        "icon": "icon/skill/1009_rank6.png",
+        "paramsEido": [
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Spectrum Beam": {
+          "variant1": {
+            "skillID": 100901,
+            "trigger": "Skill01",
+            "name": "Spectrum Beam",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Asta_00_Skill01_Camera",
+              "Avatar_Asta_00_Skill01_Phase01",
+              "Avatar_Asta_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Meteor Storm": {
+          "variant1": {
+            "skillID": 100902,
+            "trigger": "Skill02",
+            "name": "Meteor Storm",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to one designated enemy and further deals DMG for 4 extra times, with each time dealing Fire DMG equal to #1[i]% of Asta's ATK to a random enemy.",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.275
+              ],
+              "3": [
+                0.3
+              ],
+              "4": [
+                0.325
+              ],
+              "5": [
+                0.35
+              ],
+              "6": [
+                0.375
+              ],
+              "7": [
+                0.40625
+              ],
+              "8": [
+                0.4375
+              ],
+              "9": [
+                0.46875
+              ],
+              "10": [
+                0.5
+              ],
+              "11": [
+                0.525
+              ],
+              "12": [
+                0.55
+              ],
+              "13": [
+                0.575
+              ],
+              "14": [
+                0.6
+              ],
+              "15": [
+                0.625
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Asta_00_Skill02_Camera",
+              "Avatar_Asta_00_Skill02_Phase01",
+              "Avatar_Asta_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Astral Blessing": {
+          "variant1": {
+            "skillID": 100903,
+            "trigger": "Skill03",
+            "name": "Astral Blessing",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Increases SPD of all allies by #1[i] for #2[i] turn(s).",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                36,
+                2
+              ],
+              "2": [
+                37.4,
+                2
+              ],
+              "3": [
+                38.8,
+                2
+              ],
+              "4": [
+                40.2,
+                2
+              ],
+              "5": [
+                41.6,
+                2
+              ],
+              "6": [
+                43,
+                2
+              ],
+              "7": [
+                44.75,
+                2
+              ],
+              "8": [
+                46.5,
+                2
+              ],
+              "9": [
+                48.25,
+                2
+              ],
+              "10": [
+                50,
+                2
+              ],
+              "11": [
+                51.4,
+                2
+              ],
+              "12": [
+                52.8,
+                2
+              ],
+              "13": [
+                54.2,
+                2
+              ],
+              "14": [
+                55.6,
+                2
+              ],
+              "15": [
+                57,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Asta_00_Skill03_Camera",
+              "Avatar_Asta_00_Skill03_EnterReady",
+              "Avatar_Asta_00_Skill03_Phase01",
+              "Avatar_Asta_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Astrometry": {
+          "variant1": {
+            "skillID": 100904,
+            "trigger": "SkillP01",
+            "name": "Astrometry",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "Gains 1 stack of Charging for every different enemy hit by Asta plus an extra stack if the enemy hit has Fire Weakness.\\nFor every stack of Charging Asta has, all allies' ATK increases by #1[f1]%, up to #2[i] time(s).\\nStarting from her second turn, Asta's Charging stack count is reduced by #3[i] at the beginning of every turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.07,
+                5,
+                3
+              ],
+              "2": [
+                0.077,
+                5,
+                3
+              ],
+              "3": [
+                0.084,
+                5,
+                3
+              ],
+              "4": [
+                0.091,
+                5,
+                3
+              ],
+              "5": [
+                0.098,
+                5,
+                3
+              ],
+              "6": [
+                0.105,
+                5,
+                3
+              ],
+              "7": [
+                0.11375,
+                5,
+                3
+              ],
+              "8": [
+                0.1225,
+                5,
+                3
+              ],
+              "9": [
+                0.13125,
+                5,
+                3
+              ],
+              "10": [
+                0.14,
+                5,
+                3
+              ],
+              "11": [
+                0.147,
+                5,
+                3
+              ],
+              "12": [
+                0.154,
+                5,
+                3
+              ],
+              "13": [
+                0.161,
+                5,
+                3
+              ],
+              "14": [
+                0.168,
+                5,
+                3
+              ],
+              "15": [
+                0.175,
+                5,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Asta_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Miracle Flash": {
+          "variant1": {
+            "skillID": 100907,
+            "trigger": "SkillMaze",
+            "name": "Miracle Flash",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals Fire DMG equal to #1[i]% of Asta's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Asta_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1009_basic_atk.png",
+        "skillRef": {
+          "skillName": "Spectrum Beam",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1009_skill.png",
+        "skillRef": {
+          "skillName": "Meteor Storm",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1009_ultimate.png",
+        "skillRef": {
+          "skillName": "Astral Blessing",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1009_talent.png",
+        "skillRef": {
+          "skillName": "Astrometry",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1009_technique.png",
+        "skillRef": {
+          "skillName": "Miracle Flash",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Sparks",
+        "icon": "icon/skill/1009_skilltree1.png",
+        "desc": "Asta's Basic ATK has a #1[i]% base chance to Burn the enemy target for #2[i] turn(s).\nBurned enemies take Fire DoT equal to #3[i]% of DMG dealt by Asta's Basic ATK at the start of each turn.",
+        "params": [
+          0.8,
+          3,
+          0.5
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Ignite",
+        "icon": "icon/skill/1009_skilltree2.png",
+        "desc": "When Asta is on the field, all allies' Fire DMG increases by #1[i]%.",
+        "params": [
+          0.18
+        ],
+        "traceAbility": "Asta_Asta_Trace02"
+      },
+      "Point08": {
+        "name": "Constellation",
+        "icon": "icon/skill/1009_skilltree3.png",
+        "desc": "Asta's DEF increases by #1[i]% for every current Charging stack she possesses.",
+        "params": [
+          0.06
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1009.png",
+    "preview": "image/character_preview/1009.png",
+    "portrait": "image/character_portrait/1009.png",
+    "bannerOffsets": [
+      28,
+      22,
+      0.53,
+      28,
+      22,
+      0.53,
+      28,
+      22,
+      0.53
+    ],
+    "isBuffed": false
+  },
   "Bronya": {
     "internalID": 1101,
     "name": "Bronya",
@@ -2960,6 +3579,692 @@ let characters = {
       -11,
       -35,
       0.57
+    ],
+    "isBuffed": false
+  },
+  "Pela": {
+    "internalID": 1106,
+    "name": "Pela",
+    "path": "Nihility",
+    "element": "Ice",
+    "rarity": 4,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 546.84,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 987.8399999999999,
+      "SPDBase": 105,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "110601",
+        "name": "Victory Report",
+        "rank": 1,
+        "desc": "When an enemy is defeated, Pela regenerates 5 Energy.",
+        "icon": "icon/skill/1106_rank1.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "110602",
+        "name": "Adamant Charge",
+        "rank": 2,
+        "desc": "Using Skill to dispel buff(s) increases SPD by 10% for 2 turn(s).",
+        "icon": "icon/skill/1106_rank2.png",
+        "paramsEido": [
+          0.1,
+          2,
+          1
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          }
+        }
+      },
+      {
+        "id": "110603",
+        "name": "Suppressive Force",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1106_skill.png"
+      },
+      {
+        "id": "110604",
+        "name": "Full Analysis",
+        "rank": 4,
+        "desc": "When using Skill, there is a 100% base chance to reduce the target enemy's Ice RES by 12% for 2 turn(s).",
+        "icon": "icon/skill/1106_rank4.png",
+        "paramsEido": [
+          1,
+          0.12,
+          2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "110605",
+        "name": "Absolute Jeopardy",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1106_ultimate.png"
+      },
+      {
+        "id": "110606",
+        "name": "Feeble Pursuit",
+        "rank": 6,
+        "desc": "After Pela attacks, if the enemy target is debuffed, deals Ice Additional DMG equal to 40% of Pela's ATK to the enemy.",
+        "icon": "icon/skill/1106_rank6.png",
+        "paramsEido": [
+          0.4
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Frost Shot": {
+          "variant1": {
+            "skillID": 110601,
+            "trigger": "Skill01",
+            "name": "Frost Shot",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Pela's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Pela_00_Skill01_Camera",
+              "Avatar_Pela_00_Skill01_Phase01",
+              "Avatar_Pela_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Frostbite": {
+          "variant1": {
+            "skillID": 110602,
+            "trigger": "Skill02",
+            "name": "Frostbite",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Removes #2[i] buff(s) and deals Ice DMG equal to #1[i]% of Pela's ATK to one designated target enemy.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.05,
+                1
+              ],
+              "2": [
+                1.155,
+                1
+              ],
+              "3": [
+                1.26,
+                1
+              ],
+              "4": [
+                1.365,
+                1
+              ],
+              "5": [
+                1.47,
+                1
+              ],
+              "6": [
+                1.575,
+                1
+              ],
+              "7": [
+                1.70625,
+                1
+              ],
+              "8": [
+                1.8375,
+                1
+              ],
+              "9": [
+                1.96875,
+                1
+              ],
+              "10": [
+                2.1,
+                1
+              ],
+              "11": [
+                2.205,
+                1
+              ],
+              "12": [
+                2.31,
+                1
+              ],
+              "13": [
+                2.415,
+                1
+              ],
+              "14": [
+                2.52,
+                1
+              ],
+              "15": [
+                2.625,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Pela_00_Skill02_Camera",
+              "Avatar_Pela_00_Skill02_Phase01",
+              "Avatar_Pela_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Zone Suppression": {
+          "variant1": {
+            "skillID": 110603,
+            "trigger": "Skill03",
+            "name": "Zone Suppression",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Ice DMG equal to #4[i]% of Pela's ATK to all enemies, with a #1[i]% base chance to inflict Exposed on all enemies.\\nWhen Exposed, enemies' DEF is reduced by #2[i]% for #3[i] turn(s).",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.3,
+                2,
+                0.6
+              ],
+              "2": [
+                1,
+                0.31,
+                2,
+                0.64
+              ],
+              "3": [
+                1,
+                0.32,
+                2,
+                0.68
+              ],
+              "4": [
+                1,
+                0.33,
+                2,
+                0.72
+              ],
+              "5": [
+                1,
+                0.34,
+                2,
+                0.76
+              ],
+              "6": [
+                1,
+                0.35,
+                2,
+                0.8
+              ],
+              "7": [
+                1,
+                0.3625,
+                2,
+                0.85
+              ],
+              "8": [
+                1,
+                0.375,
+                2,
+                0.9
+              ],
+              "9": [
+                1,
+                0.3875,
+                2,
+                0.95
+              ],
+              "10": [
+                1,
+                0.4,
+                2,
+                1
+              ],
+              "11": [
+                1,
+                0.41,
+                2,
+                1.04
+              ],
+              "12": [
+                1,
+                0.42,
+                2,
+                1.08
+              ],
+              "13": [
+                1,
+                0.43,
+                2,
+                1.12
+              ],
+              "14": [
+                1,
+                0.44,
+                2,
+                1.16
+              ],
+              "15": [
+                1,
+                0.45,
+                2,
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Pela_00_Skill03_Camera",
+              "Avatar_Pela_00_Skill03_Phase01",
+              "Avatar_Pela_00_Skill03_Phase02",
+              "Avatar_Pela_00_Skill03_Cutin"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Data Collecting": {
+          "variant1": {
+            "skillID": 110604,
+            "trigger": "SkillP01",
+            "name": "Data Collecting",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "If the enemy is debuffed after Pela's attack, Pela will restore #1[f1] additional Energy. This effect can only be triggered 1 time per attack.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5
+              ],
+              "2": [
+                5.5
+              ],
+              "3": [
+                6
+              ],
+              "4": [
+                6.5
+              ],
+              "5": [
+                7
+              ],
+              "6": [
+                7.5
+              ],
+              "7": [
+                8.125
+              ],
+              "8": [
+                8.75
+              ],
+              "9": [
+                9.375
+              ],
+              "10": [
+                10
+              ],
+              "11": [
+                10.5
+              ],
+              "12": [
+                11
+              ],
+              "13": [
+                11.5
+              ],
+              "14": [
+                12
+              ],
+              "15": [
+                12.5
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Pela_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Preemptive Strike": {
+          "variant1": {
+            "skillID": 110607,
+            "trigger": "SkillMaze",
+            "name": "Preemptive Strike",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. Upon entering battle, Pela deals Ice DMG equal to #4[i]% of her ATK to a random enemy, with a #1[i]% base chance of lowering the DEF of all enemies by #2[i]% for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.2,
+                2,
+                0.8
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Pela_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1106_basic_atk.png",
+        "skillRef": {
+          "skillName": "Frost Shot",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1106_skill.png",
+        "skillRef": {
+          "skillName": "Frostbite",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1106_ultimate.png",
+        "skillRef": {
+          "skillName": "Zone Suppression",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1106_talent.png",
+        "skillRef": {
+          "skillName": "Data Collecting",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1106_technique.png",
+        "skillRef": {
+          "skillName": "Preemptive Strike",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Bash",
+        "icon": "icon/skill/1106_skilltree1.png",
+        "desc": "Deals #1[i]% more DMG to debuffed enemy targets.",
+        "params": [
+          0.2
+        ],
+        "traceAbility": "Pela_Pela_Trace01",
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      "Point07": {
+        "name": "The Secret Strategy",
+        "icon": "icon/skill/1106_skilltree2.png",
+        "desc": "When Pela is on the battlefield, all allies' Effect Hit Rate increases by #1[i]%.",
+        "params": [
+          0.1
+        ],
+        "traceAbility": "Pela_Pela_Trace02"
+      },
+      "Point08": {
+        "name": "Wipe Out",
+        "icon": "icon/skill/1106_skilltree3.png",
+        "desc": "When using Skill to dispel buff(s), increases the DMG dealt by the next attack by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          }
+        }
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1106.png",
+    "preview": "image/character_preview/1106.png",
+    "portrait": "image/character_portrait/1106.png",
+    "bannerOffsets": [
+      116,
+      68,
+      0.64,
+      116,
+      68,
+      0.64,
+      116,
+      68,
+      0.64
     ],
     "isBuffed": false
   },

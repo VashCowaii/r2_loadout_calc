@@ -1933,6 +1933,61 @@ const maslowCharactersNihility = {
             addTeamWant: [],
         },
     },
+    "Pela": {
+        // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
+        defaultMainSubs: ["SPDFlat","EffectHitRate","HP%","CritRateBase"],
+        // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
+        defaultTrashSub: ["ATK%","DamageBreak","ATKFlat","EffectRES"],
+        0: {
+            gives: [],
+            givesTeam: ["Shred","Debuff","EHR"],
+            wants: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["Shred","Debuff","EHR"],
+            wants: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["Shred","Debuff","EHR"],
+            wants: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["Shred","Debuff","EHR"],
+            wants: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["Shred","Debuff","EHR","PEN"],
+            wants: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["Shred","Debuff","EHR","PEN"],
+            wants: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["Shred","Debuff","EHR","PEN"],
+            wants: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["ATK","Ice",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersAbundance = {
     "Huohuo": {

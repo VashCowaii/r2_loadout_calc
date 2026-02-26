@@ -151,6 +151,7 @@ const customDisplayValuesLog = {
         {valueName: "Ally with Benediction", refName: "charWithBenediction", isBattleValue: true, isCharacterSlot:true},
     ],
     "Silver Wolf": [],
+    "Pela": [],
     "Gallagher": [
         {valueName: "Basic Enhanced", refName: "nextBasicEnhanced", isBattleValue: true, isCharacterState: true},
     ],
@@ -185,24 +186,16 @@ const conditionsCharacterDisplayWarning = {
         "Skill": "Skill conditions are ignored when Saber's Basic ATK is enhanced.",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Blade": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Blade's Basic ATK is enhanced.",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
 
     "Sunday": {
@@ -210,169 +203,115 @@ const conditionsCharacterDisplayWarning = {
         "Skill": "",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Bronya": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Trailblazer - Remembrance": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Mem is already on field, and RMC's Basic ATK is enhanced.",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Cyrene": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Cyrene's Basic ATK is enhanced.",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxedCyrene
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedCyrene]
     },
     "Tribbie": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Robin": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Silver Wolf": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Tingyun": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
 
     "Dan Heng • Permansor Terrae": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
-
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Aglaea": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
-
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Argenti": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "You as the user need to define conditions for Argenti that will determine if you use at Half-Energy or at full.",
-
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyHalf
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
     },
     "Aventurine": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
-
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Kafka": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
 
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Hysilens": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
-
-        "SkillPermaConditions": [
-            permaConditionsTextLibrary.atLeast1SP,
-        ],
-        "UltimatePermaConditions": [
-            permaConditionsTextLibrary.energyMaxed
-        ]
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Pela": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
 }
 
@@ -1044,6 +983,14 @@ const defaultConditions = {
 
     //NIHILITY
     "Silver Wolf": {
+        hasEnhancedState: false,
+        "Skill": null,
+        "Ultimate": {
+            type: "AND",
+            array: []
+        }
+    },
+    "Pela": {
         hasEnhancedState: false,
         "Skill": null,
         "Ultimate": {

@@ -1,22 +1,41 @@
 global.calcAllowedSet = new Set([
+    //NIHILITY
     "Silver Wolf",
+    "Kafka",
+    "Hysilens",
+    "Pela",
+
+    //ERUDITION
+    "Argenti",
+
+    //DESTRUCTION
+    "Saber",
+    "Blade",
+
+    //HUNT
+
+    //HARMONY
     "Bronya",
     "Tingyun",
-    "Huohuo",
-    "Gallagher",
     "Robin",
     "Sunday",
     "Tribbie",
-    "Dan Heng • Permansor Terrae",
-    "Trailblazer - Remembrance",
-    "Saber",
+    "Asta",
 
+    //ABUNDANCE
+    "Huohuo",
+    "Gallagher",
     "Natasha",
+
+    //PRESERVATION
+    "Dan Heng • Permansor Terrae",
+    "Aventurine",
+
+
+    //REMEMBRANCE
+    "Trailblazer - Remembrance",
     "Aglaea",
 
-    "Argenti",
-    "Blade",
-    "Aventurine",
-    "Kafka",
-    "Hysilens",
+    //ELATION
+
 ]);
