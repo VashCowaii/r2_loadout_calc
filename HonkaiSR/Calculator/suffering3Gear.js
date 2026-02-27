@@ -1873,7 +1873,7 @@ const turnLogicLightcones = {
                     
                     const actionAdvance = battleActions.actionAdvance;
                     for (let targetTurn of battleData.allyPositions) {
-                        if (targetTurn.turnState) {continue;}//can't advance someone within their own turn, skip them
+                        if (targetTurn.turnState && !targetTurn.actionAssigned) {continue;}//can't advance someone within their own turn, skip them
 
                         actionAdvance(values,targetTurn,battleData,lcNameRef);
                     }
@@ -3618,7 +3618,7 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
 
-                        if (!ownerRank || sourceTurn.turnState) {return;}//advancing in your own turn = nothing
+                        if (!ownerRank || (sourceTurn.turnState && !sourceTurn.actionAssigned)) {return;}//advancing in your own turn = nothing
                         let relicNameRef = "Eagle of Twilight Line";
                         battleActions.actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
                     },
