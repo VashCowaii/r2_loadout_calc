@@ -368,6 +368,112 @@ const turnLogicLightcones = {
             "dmgStack": "Answers of Their Own"
         },
     },
+    "Cruising in the Stellar Sea": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    // poke("FUAStart",battleData,{sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+
+
+                    if (!sourceTurn.cruisingStellarCRITSHEET) {
+                        let lcNameRef = "Cruising in the Stellar Sea";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.critBonus;
+                        sourceTurn.cruisingStellarCRITSHEET = {
+                            "statsOnHit": [CritRateBase],
+                            [CritRateBase]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 5,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+
+
+                    const targetTurn = generalInfo.targetTurn;
+
+                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+                    const hpThreshold = 0.50;
+
+                    const buffSheet = sourceTurn.cruisingStellarCRITSHEET;
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                    if (hpRatio <= hpThreshold) {
+                        if (buffCheck) {return;}
+                        else {
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                    }
+                    else if (buffCheck) {
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Cruising <= 50%HP crit buff",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort if the kill owner was not a lc owner
+
+
+
+                    if (!sourceTurn.cruisingStellarATKSHEET) {
+                        let lcNameRef = "Cruising in the Stellar Sea";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                        sourceTurn.cruisingStellarATKSHEET = {
+                            "stats": [ATKP],
+                            [ATKP]: rankParams[3],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.cruisingStellarATKSHEET;
+                    buffSheet.duration = sourceTurn.turnState ? 3 : 2;
+
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Cruising - kill atk buff",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "critBonus": "Cruising in the Stellar Sea (Crit)",
+            "dmgStack": "Cruising in the Stellar Sea (ATK)"
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {
@@ -2320,8 +2426,6 @@ const turnLogicLightcones = {
                     }
 
                     const allySheet = sourceTurn.pastSelfInMirrorDMGSheet;
-                    allySheet.AVApplied = battleData.sumAV;
-                    // const allyTurns = battleData.nameBasedTurns;
                     const allyPositions = battleData.allyPositions;
                     for (let ally of allyPositions) {
                         allySheet.duration = ally.turnState ? 4 : 3;
@@ -2357,6 +2461,146 @@ const turnLogicLightcones = {
             "allyDMG": "Past Self in Mirror [LC]",
             // "hruntingStack": "Hrunting Stack"
         },
+    },
+    "Memories of the Past": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            lcRegenEnergy(battleData,targetTurn,energyToRegen) {
+                battleActions.updateEnergy(battleData,energyToRegen,targetTurn,false,"Memories of the Past [LC]");
+                targetTurn.lcMemoriesOfThePastCanRegen = false;
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let ownerSlotter in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotter];
+                        currentOwner.lcMemoriesOfThePastCanRegen = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Memories of the Past endturn regen reset listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}
+
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || !sourceTurn.lcMemoriesOfThePastCanRegen) {return;}//then abort non-owners
+
+                    let lcNameRef = "Memories of the Past";
+                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+                    const regenValue = rankParams[1];
+
+                    regenFunction(battleData,sourceTurn,regenValue);
+                },
+                "target": "self",
+                "listenerName": "Memories of the Past - owner attacked listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {},
+    },
+    "Meshing Cogs": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            lcRegenEnergy(battleData,targetTurn,energyToRegen) {
+                battleActions.updateEnergy(battleData,energyToRegen,targetTurn,false,"Meshing Cogs [LC]");
+                targetTurn.lcMeshingCogsCanRegen = false;
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let ownerSlotter in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotter];
+                        currentOwner.lcMeshingCogsCanRegen = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Meshing Cogs endturn regen reset listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}
+
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || !sourceTurn.lcMeshingCogsCanRegen) {return;}//then abort non-owners
+
+                    let lcNameRef = "Meshing Cogs";
+                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+                    const regenValue = rankParams[0];
+
+                    regenFunction(battleData,sourceTurn,regenValue);
+                },
+                "target": "self",
+                "listenerName": "Meshing Cogs - owner attack listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}
+
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    let ownersSlots = this.ownersSlots;
+
+                    let lcNameRef = "Meshing Cogs";
+                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    for (let allyHit in targetsGotHit) {
+                        
+                        const currentRank = ownersSlots[allyHit];
+                        const currentAlly = allyTurns[allyHit];
+                        if (!currentRank || !currentAlly.lcMeshingCogsCanRegen) {continue;}
+                        else {
+                            console.log(currentAlly.properName)
+                            const rankParams = lcPathing[currentRank-1];
+                            const regenValue = rankParams[0];
+                            regenFunction(battleData,currentAlly,regenValue);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Meshing Cogs - owner was attacked listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {},
     },
 
 

@@ -173,8 +173,9 @@ const customDisplayValuesLog = {
     "Asta": [
         {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true},
         {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
-    ],  
+    ],
     "Natasha": [],  
+    "Lynx": [], 
 }
 
 const permaConditionsTextLibrary = {
@@ -318,6 +319,27 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Asta": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Ruan Mei": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Lynx": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Topaz & Numby": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -1145,6 +1167,25 @@ const defaultConditions = {
             ]
         }
     },
+    "Ruan Mei": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Buff",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "buffName": "Overtone (Countdown)",
+                    "state": false
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
 
     //ABUNDANCE
     "Huohuo": {
@@ -1183,6 +1224,45 @@ const defaultConditions = {
         }
     },
     "Natasha": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": "<",
+                    "array": [
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "currentEnergy"
+                        },
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "maxEnergy"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
+                }
+            ]
+        }
+    },
+    "Lynx": {
         "hasEnhancedState": false,
         "Skill": {
             "type": "AND",
@@ -1268,6 +1348,50 @@ const defaultConditions = {
         hasEnhancedState: false,
         "Skill": null,
         "Ultimate": null,
+    },
+
+    //HUNT
+    "Topaz & Numby": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "phase": "Any Part",
+                    "state": false
+                },
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Summon",
+                    "phase": "Any Part",
+                    "state": false
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": "=",
+                    "array": [
+                        {
+                            "type": "Character: Special Value",
+                            "target": "Self",
+                            "specialValue": "bonanzaStacks",
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "User Value: Number",
+                            "inputValue": 0
+                        }
+                    ]
+                }
+            ]
+        }
     },
 }
 

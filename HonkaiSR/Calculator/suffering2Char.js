@@ -7615,7 +7615,7 @@ const turnLogic = {
                         battleActions.queueUltimateUse(battleData,queueObject);
                     }
                 },
-                "target": "enemy",
+                "target": "team",
                 "listenerName": "Natasha - Ultimate queued - Ultimate",
                 "ownerTurn": {},
             },
@@ -7777,6 +7777,524 @@ const turnLogic = {
             "skillHOT": "Natasha Heal-Over-Time (Skill)",
             "ultHOT": "Natasha Heal-Over-Time (Ult)",
             "traceHealingBonus": "Natasha Trace Healer",
+        },
+        "characterValuesBattle": {},
+    },
+    "Lynx": {//TODO: ult cleanse later  //TODO: CC RES, I think a stat exists for it but it doesn't get used anywhere yet //TODO: skill at e2 allowing debuff resistance? That's new
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.lynxSkillHeal, target: null, endTurn: true};
+                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.lynxBasic, target: "enemy", endTurn: true}
+            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
+            return returnBasicCall;
+        },
+        "skillFunctions": {
+            lynxBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+
+                let skillRef = ATKObjects.lynxBasicREF ??= ATKObjects["Basic ATK"]["Ice Crampon Technique"].variant1;
+                if (!ATKObjects.lynxBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Quantum"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.lynxBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.lynxBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            lynxSkillHeal(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.lynxSkillHealREF ??= ATKObjects.Skill["Salted Camping Cans"].variant1;
+                let values = ATKObjects.lynxSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                // let rank = sourceTurn.rank;
+                // let e2 = rank >= 2;
+                
+                
+                if (!ATKObjects.lynxSkillHealHEALOBJECT) {
+
+                    ATKObjects.lynxSkillHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[3],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[4],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+                }
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+
+                logicRef.skillFunctions.lynxHPConversion(battleData,sourceTurn,targetTurn);
+
+                let healObject = ATKObjects.lynxSkillHealHEALOBJECT;
+                battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
+
+                // if (e2) {
+                //     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
+                //     buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                //     battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                //     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
+                // }
+
+                const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
+                talentHealSheet.duration = targetTurn.turnState ? 4 : 3;
+                battleActions.updateBuff(battleData,targetTurn,talentHealSheet);
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            lynxHPConversion(battleData,sourceTurn,targetTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                let rank = sourceTurn.rank;
+
+                let skillRef = ATKObjects.lynxSkillHealREF;
+                let values = ATKObjects.lynxSkillHealREFVALUES;
+
+                if (!ATKObjects.lynxSkillHealHOTSHEET) {
+                    const rank = sourceTurn.rank;
+
+                    const buffNames = logicRef.buffNames;
+                    let buffName = buffNames.skillHOT;
+                    let buffName2 = buffNames.E4Attack;
+
+                    ATKObjects.lynxSkillHealHOTSHEET = {
+                        "stats": [HPFlat,HPFlatNULL,AggroP,EffectRES],
+                        [HPFlat]: 0,
+                        [HPFlatNULL]: -0,
+                        [AggroP]: 0,
+                        [EffectRES]: rank >= 6 ? 0.30 : 0,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    ATKObjects.lynxE4ATKSHEET = {
+                        "stats": [ATKFlat],
+                        [ATKFlat]: 0,
+                        "source": "E4 + Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName2,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+                const statTable = sourceTurn.statTable;
+                const hpRatio = values[0] + (rank >= 6 ? 0.06 : 0);
+
+                const hpMax = calcs.getHPFinal(statTable).HPFinal;
+                const conversion = hpRatio * (hpMax + statTable[HPFlatNULL]);
+                const finalHPValue = conversion + values[1];
+
+                const buffSheet = ATKObjects.lynxSkillHealHOTSHEET;
+                buffSheet[HPFlat] = finalHPValue;
+                buffSheet[HPFlatNULL] = -conversion;//the flat amount isn't converted HP, which is actually unusual bc conversions NORMALLY include that value as converted
+                buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                const updateBuff = battleActions.updateBuff;
+
+                if (rank >= 4) {
+                    const ATKRatio = 0.03;
+                    const finalATKConversion = (hpMax + statTable[HPFlatNULL]) * ATKRatio;
+                    const buffSheet2 = ATKObjects.lynxE4ATKSHEET;
+
+                    buffSheet.duration = targetTurn.turnState ? 2 : 1;
+
+                    const buffCheck2 = targetTurn.buffsObject[buffSheet2.buffName];
+
+                    if (buffCheck2) {
+                        const atkAMount = buffCheck2[ATKFlat];
+                        if (atkAMount != finalATKConversion) {
+                            removeBuff(battleData,targetTurn,buffCheck2,true,null,false,true);
+                        }
+                    }
+                    buffSheet2[ATKFlat] = finalATKConversion;
+                    updateBuff(battleData,targetTurn,buffSheet2,false,null,false);
+                }
+                
+
+
+                if (targetTurn.path === "Destruction" || targetTurn.path === "Preservation") {
+                    buffSheet[AggroP] = values[5];
+                }
+                else {
+                    buffSheet[AggroP] = 0;
+                }
+
+
+                const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
+                
+
+                if (buffCheck) {
+                    const hpAmount = buffCheck[HPFlat];
+                    if (hpAmount != finalHPValue) {
+                        removeBuff(battleData,targetTurn,buffCheck,true,null,false,true);
+                    }
+                }
+
+                //LYNX HP CONVERSION IS NOT A DYNAMIC LISTENER
+                //it's one time per application, doesn't check after the fact, fuck yeah I love that
+
+                updateBuff(battleData,targetTurn,buffSheet,false,null,false);
+            },
+            lynxUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.lynxUltimateREF ??= ATKObjects.Ultimate["Snowfield First Aid"].variant1;
+                let rank = sourceTurn.rank;
+
+                if (!ATKObjects.lynxUltimateHealHEALOBJECT) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.lynxUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.lynxUltimateHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[2],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+
+                }
+                // let ATKObject = ATKObjects.gallagherUltimateATKOBJECT;
+                let healObject = ATKObjects.lynxUltimateHealHEALOBJECT;
+                const allyPositions = battleData.allyPositions;
+
+                const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
+
+                const updateBuff = battleActions.updateBuff;
+                
+
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
+                // poke("BasicATKStart",battleData,{source:"Gallagher"});
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
+
+                for (let ally of allyPositions) {
+                    talentHealSheet.duration = ally.turnState ? 4 : 3;
+                    updateBuff(battleData,ally,talentHealSheet);
+                }
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
+                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
+
+                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
+                sourceTurn.ultyQueued = false;
+            },
+            lynxTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.lynxTechniqueREF ??= ATKObjects.Technique["Chocolate Energy Bar"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                const allyPositions = battleData.allyPositions;
+
+                const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
+
+                const updateBuff = battleActions.updateBuff;
+
+                for (let ally of allyPositions) {
+                    talentHealSheet.duration = ally.turnState ? 4 : 3;
+                    updateBuff(battleData,ally,talentHealSheet);
+                }
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [//skillHOT
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.lynxTalentREF ??= ATKObjects.Talent["Outdoor Survival Experience"].variant1;
+                    let values = ATKObjects.lynxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                    const buffNames = logicRef.buffNames
+                    let buffName = buffNames.talentHOT;
+
+                    
+                    ATKObjects.lynxTalentHealHOTHEALSHEET = this.lynxTalentHealHOTHEALSHEET ??= {
+                        "stats": null,
+                        "source": "Talent",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffName,
+                        "duration": 3,//technically 2 turns but the trace makes it 3
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+                },
+                "target": "self",
+                "listenerName": "Lynx define talent heal sheet/refs on battlestart",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const buffsObject = sourceTurn.buffsObject ?? {};
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffNames = turnLogic[ownerTurn.properName].buffNames;
+
+                    const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
+                    const skillHOTCheck = buffsObject[skillHOTName];
+
+                    const ultHOTName = this.ultHOTName ??= buffNames.talentHOT;
+                    const talentHOTCheck = buffsObject[ultHOTName];
+
+                    if (talentHOTCheck) {
+                        let skillRef = ATKObjects.lynxTalentREF;
+                        let values = ATKObjects.lynxTalentREFVALUES;
+                        //we aren't ref values from this since the values are from an eidolon
+                        
+                        
+                        if (!ATKObjects.lynxHOTHealHOTOBJECT) {
+                            ATKObjects.lynxHOTHealHOTOBJECT = {
+                                multipliers: {
+                                    primary: values[1] + (skillHOTCheck ? values[3] : 0),
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: values[2] + (skillHOTCheck ? values[4] : 0),
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: skillRef.slot
+                            }
+                        }
+
+                        // let targetTurn = battleData.nameBasedTurns[target];
+                        let healObject = ATKObjects.lynxHOTHealHOTOBJECT;
+                        battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha - E2/Skill HoT turnstart listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    const survivalName = turnLogic[ownerTurn.properName].buffNames.skillHOT;
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    let totalAlliesHit = 0;
+                    for (let allyHit in targetsGotHit) {
+                        const currentAlly = allyTurns[allyHit];
+                        const buffCheck = currentAlly.buffsObject[survivalName];
+                        if (buffCheck) {totalAlliesHit++;}
+                    }
+
+                    if (totalAlliesHit) {
+                        battleActions.updateEnergy(battleData,2 * totalAlliesHit,ownerTurn,false,"Trace: Advance Surveying - Allies hit with Survival Response");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Advance Surveying trace - allies hit with skill buff",
+                "owners": []
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.lynxUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Lynx - Ultimate queued - Ultimate",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const lynxTechnique = this.lynxTechnique ??= logicRef.skillFunctions.lynxTechnique;
+                        lynxTechnique(battleData,"team",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Lynx Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "HealStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want lynx's healing, not anyone else's
+    
+                        const targetTurn = generalInfo.targetTurn;
+                        const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+                        const hpThreshold = 0.50;
+                        
+                        let buffSheet = this.buffSheet ??= {
+                            "stats": [HealingOutgoing], 
+                            [HealingOutgoing]: 0.20,
+                            "source": "E1",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.E1Outgoing,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        };
+    
+                        if (hpRatio <= hpThreshold) {
+                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        }
+                        else {
+                            removeBuff(battleData,ownerTurn,buffSheet);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Lynx E1 <=50%HP Healing bonus",
+                    "owners": []
+                },
+            ],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            // "nextBasicEnhanced": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Restore",
+        "buffNames": {
+            "skillHOT": "Survival Response (Lynx)",
+            "talentHOT": "Lynx Talent Heal-Over-Time",
+            "E1Outgoing": "E1: Morning of Snow Hike",
+            "E4Attack": "E4: Dusk of Warm Campfire",
         },
         "characterValuesBattle": {},
     },
@@ -10793,6 +11311,643 @@ const turnLogic = {
 
 
     //Hunt
+    "Topaz & Numby": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let actionUsed = false;
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.topazSkill, target: "enemy", endTurn: true};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {
+                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.topazBasic, target: "enemy", endTurn: true};
+            }
+        },
+        "skillFunctions": {
+            topazBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.topazBasicREF ??= ATKObjects["Basic ATK"]["Deficit..."].variant1;
+
+                if (!ATKObjects.topazBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","FUA","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Basic","FUA","Attack"];
+                    ATKObjects.topazBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.topazBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                poke("FUAStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("FUAEnd",battleData,{sourceTurn});
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            topazSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const valuesRef = sourceTurn.battleValues;
+                const isEnhanced = valuesRef.isBonanzaActive;
+                //unenhanced variant2 is created in the listeners
+                let skillRef = isEnhanced ? ATKObjects.topazSkillEnhancedREF ??= ATKObjects["Skill"]["Difficulty Paying?"].variant2 : ATKObjects.topazSkillREF ??= ATKObjects["Skill"]["Difficulty Paying?"].variant1;
+                // ownerTurn.topazSkillREF = ownerTurn["Skill"]["Difficulty Paying?"].variant2;
+                
+
+                if (!ATKObjects.topazSkillATKOBJECT) {
+                    // skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","FUA","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Skill","Numby","FUA","Attack","Summon"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.topazSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        bonusMultiplier: 0,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.topazSkillATKOBJECT;
+                if (isEnhanced) {
+                    const ultValuesRef = ATKObjects.topazUltimateREFVALUES[0];//don't need to worry about ??='ing it here bc you'll never be enhanced until an ult is called, at which point ??= will assign in ult's call
+                    ATKObject.bonusMultiplier = ultValuesRef;
+                }
+                else {ATKObject.bonusMultiplier = 0;}
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                poke("FUAStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                if (isEnhanced) {
+                    valuesRef.bonanzaStacks -= 1;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Numby Action", bodyText: `Windfall Bonanza Stacks: ${valuesRef.bonanzaStacks+1} --> ${valuesRef.bonanzaStacks}`});}
+                    valuesRef.isBonanzaActive = valuesRef.bonanzaStacks>0 ? true : false;
+                    if (!valuesRef.isBonanzaActive) {
+                        const buffName = logicRef.buffNames.bonanza;
+                        removeBuff(battleData,sourceTurn,sourceTurn.buffsObject[buffName]);
+                    }
+                    battleActions.updateEnergy(battleData,10,sourceTurn,false,"Stonks Market");
+                }
+                if (sourceTurn.rank>=2) {battleActions.updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
+                poke("FUAEnd",battleData,{sourceTurn});
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            numbyTurnAttack(battleData,eventTurn) {
+                const sourceTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                const valuesRef = sourceTurn.battleValues;
+                const isEnhanced = valuesRef.isBonanzaActive;
+                // console.log(eventTurn.eventOwner)
+                //unenhanced variant2 is created in the listeners
+                let skillRef = isEnhanced ? ATKObjects.topazTalentEnhancedREF ??= ATKObjects["Talent"]["Trotter Market!?"].variant2 : ATKObjects.topazTalentREF ??= ATKObjects["Talent"]["Trotter Market!?"].variant1;
+
+                if (!ATKObjects.topazNumbyAutoATKOBJECT) {
+                    // skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","FUA","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Numby","FUA","Attack","Summon"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.topazNumbyAutoATKOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        bonusMultiplier: 0,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.topazNumbyAutoATKOBJECT;
+                if (isEnhanced) {
+                    const ultValuesRef = ATKObjects.topazUltimateREFVALUES[0];//don't need to worry about ??='ing it here bc you'll never be enhanced until an ult is called, at which point ??= will assign in ult's call
+                    ATKObject.bonusMultiplier = ultValuesRef;
+                }
+                else {ATKObject.bonusMultiplier = 0;}
+
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "FUAStart", name:eventTurn.properName, target: "enemy", AV: battleData.sumAV, fuaName: "numbyTurnAttack", isEnhanced, eventOverrideImage: eventTurn.eventImage});}
+                // poke("BasicATKStart",battleData,{sourceTurn});
+                poke("FUAStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                if (isEnhanced) {
+                    valuesRef.bonanzaStacks -= 1;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Numby Action", bodyText: `Windfall Bonanza Stacks: ${valuesRef.bonanzaStacks+1} --> ${valuesRef.bonanzaStacks}`});}
+                    valuesRef.isBonanzaActive = valuesRef.bonanzaStacks>0 ? true : false;
+                    if (!valuesRef.isBonanzaActive) {
+                        const buffName = logicRef.buffNames.bonanza;
+                        removeBuff(battleData,sourceTurn,sourceTurn.buffsObject[buffName]);
+                    }
+                    battleActions.updateEnergy(battleData,10,sourceTurn,false,"Stonks Market");
+                }
+                if (sourceTurn.rank>=2) {battleActions.updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
+                poke("FUAEnd",battleData,{sourceTurn});
+                // poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            topazUltimate(battleData,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                const valuesRef = logicRef.characterValuesBattle;
+                let skillRef = ATKObjects.topazUltimateREF ??= ATKObjects.Ultimate["Turn a Profit!"].variant1;
+                let values = ATKObjects.topazUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.topazUltimateBONANZASHEET) {
+                    const buffName = logicRef.buffNames.bonanza;
+                    ATKObjects.topazUltimateBONANZASHEET = {
+                        "stats": [CritDamageBase,ResistanceFirePEN],
+                        [CritDamageBase]: values[1],
+                        [ResistanceFirePEN]: rank >= 6 ? 0.10 : 0,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Numby"]
+                    }
+                }
+                let buffSheet = ATKObjects.topazUltimateBONANZASHEET;
+
+                // console.log(buffSheet)
+
+                const energy = battleActions.updateEnergy;
+                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                
+                valuesRef.bonanzaStacks = rank>=6 ? 3 : 2;
+                valuesRef.isBonanzaActive = true;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Windfall Bonanza Stacks --> ${valuesRef.bonanzaStacks}`});}
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+
+                energy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            topazTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.Technique["Explicit Subsidy"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                let attackEndings = battleData.battleListeners.AttackEnd ??= [];
+                const listenerToInejct = logicRef.listenersToInjectLater.techniqueEnergyGain;
+                listenerToInejct.ownerTurn = sourceTurn;
+
+                attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const numbyTurnAttack = ATKObjects.numbyTurnAttack ??= turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttack;
+                    const ActionEntry = ownerTurn.topazNUMBYTURNEVENT ??= {
+                        // name:characterEntry,
+                        AV:10000/80,
+                        AVBase:10000/80,
+                        SPD:80,
+                        actionCounter: 0,
+                        turnState: 0,
+                        name: "topazSummon",
+                        properName: "Numby",
+                        // buffsObject: {},
+                        // buffsStartTurn: [],
+                        // buffsEndTurn: [],
+                        // additionalDMGObject: {},
+                        cantBeTargeted: true,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isActive: true,
+                        isMemosprite: false,
+                        currentlyOwnedBy: ownerTurn.name,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: numbyTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Numby"],
+                    };
+                    ownerTurn.summonEventRef = "topazNUMBYTURNEVENT";
+                    ownerTurn.activeSummons += 1;
+                    battleData.declaredSummons.push(ActionEntry);
+                    battleData.nextTurnAV.push(ActionEntry);
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+
+                    const buffNames = logicRef.buffNames;
+                    let charValuesRef = logicRef.characterValuesBattle;
+                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
+                    let targetTurn = charValuesRef.enemyWithDebt;
+
+                    if (!ATKObjects.topazHitsplitsAdjustment) {//this is necessary just to assign the varying hitsplits between the enhanced and unenhanced FUA's
+                        const talentPath = ATKObjects["Talent"]["Trotter Market!?"];
+                        const talentRef = ATKObjects.topazTalentREF ??= talentPath.variant1;
+                        talentPath.variant2 = {...talentRef};
+
+                        talentRef.hitSplits = hitSplitters[ownerTurn.properName].passive;
+                        talentPath.variant2.hitSplits = hitSplitters[ownerTurn.properName].passive2;
+                        
+                        const skillPath = ATKObjects["Skill"]["Difficulty Paying?"];
+                        let skillRef = ATKObjects.topazSkillREF ??= skillPath.variant1;
+                        skillPath.variant2 = {...skillRef};
+
+                        skillRef.hitSplits = hitSplitters[ownerTurn.properName].skill;
+                        skillPath.variant2.hitSplits = hitSplitters[ownerTurn.properName].skill2;
+                        
+                        ATKObjects.topazSkillEnhancedREF = skillPath.variant2;
+                        ATKObjects.topazTalentEnhancedREF = talentPath.variant2;
+                    }
+
+
+                    // let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    let skillRef = ATKObjects.topazSkillEnhancedREF;
+                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
+                        "stats": [VulnFUA],
+                        [VulnFUA]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
+                        "source": ownerTurn.properName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.debt,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                        "actionTags": ["FUA"]
+                    }
+                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Topaz: numby event creation",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let charValuesRef = logicRef.characterValuesBattle;
+                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
+                    let targetTurn = charValuesRef.enemyWithDebt;
+
+                    if (targetTurn === null || targetTurn.isDead) {return}//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
+
+                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
+                    if (!charValuesRef.enemyWithDebt) {return}//battle would be over, in this case
+                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET;
+                    battleActions.updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt death swap",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    //ally dmg dealt bc it IS dmg dealt, it's not attack specific, which sucks
+                    //TODO: really doubt I'll ever do it, but consider doing weakness specific sheets in the future
+                    //would let me do things like genius 4pc and this without needing to evaluate every instance of dmg
+                    //the flip-side tho is that we'd need like, multi sheets for those to have weakness + x,y,z etc
+                    //at least I think so, idk. Might be simpler than that, we'll see once I build out more characters in the calc
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    // Financial Turmoil
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    let targetTurn = generalInfo.targetTurn;
+
+                    if (!ATKObjects.topazTurmoilFireWeakSHEET) {
+                        const characterName = sourceTurn.properName;
+                        const logicRef = turnLogic[characterName];
+                        let buffName = logicRef.buffNames.turmoil;
+                        ATKObjects.topazTurmoilFireWeakSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.15,
+                            "source": characterName,
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+                    let buffSheet = ATKObjects.topazTurmoilFireWeakSHEET;
+                    const buffName = buffSheet.buffName;
+                    const buffCheck = sourceTurn.buffsObject[buffName];
+
+                    if (targetTurn.statTable[WeaknessFire] <= 0) {//if there is no quantum weakness
+                        if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}//then remove the buff if we have it
+                        else {return;}
+                    }
+                    else {//if weakness found, apply buff
+                        if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Financial Turmoil - Fire-weak bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.topazUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Topaz - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const topazTechnique = this.topazTechnique ??= logicRef.skillFunctions.topazTechnique
+                        topazTechnique(battleData,"self",ownerTurn)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Topaz Technique",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HitEnemyStart",
+                condition(battleData,generalInfo) {
+                    const ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    // const targetsGotHit = generalInfo.targetsGotHit;
+                    const targetTurn = generalInfo.targetTurn;
+
+                    // const characterName = ownerTurn.properName;
+                    // const logicRef = turnLogic[characterName];
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt.properName != targetTurn.properName) {return;}
+
+                    
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    if (targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+
+                    const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
+                    if (numbyTurn.turnState) {return}//numby can't advance himself, but topaz can advance him
+
+                    const isFUA = generalInfo.ATKObject.isFUA;
+                    if (isFUA) {
+                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
+                    }
+
+                    const slot = generalInfo.slot;
+                    const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
+                    if (battleValues.isBonanzaActive && slotCheck) {
+                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
+                    }
+                    //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
+                },
+                "target": "enemy",
+                "listenerName": "Numby's advancement controller",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "HitEnemyStart",
+                    condition(battleData,generalInfo) {
+                        const ownerTurn = this.ownerTurn;
+
+                        
+
+                        const sourceTurn = generalInfo.sourceTurn;
+                        const targetsGotHit = generalInfo.targetsGotHit;
+                        const targetTurn = generalInfo.targetTurn;
+                        const isFUA = generalInfo.ATKObject.isFUA;
+                        if (sourceTurn.isEnemy || !isFUA || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+
+
+                        const characterName = ownerTurn.properName;
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        const enemyWithDebt = logicRef.characterValuesBattle.enemyWithDebt;
+                        // if (targetTurn.properName != enemyWithDebt.properName) {return}//can only apply to those with proof of debt, aka the primary target
+                        //in theory this is a completely useless check as topaz will only ever do single target dmg, and bc of that only the primary target will be hit
+
+
+                        if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
+                        const buffName = logicRef.buffNames.e1Debtor;
+                        if (!ATKObjects.topazE1DebtorSTACKSHEET) {
+    
+                            ATKObjects.topazE1DebtorSTACKSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.25,
+                                "source": characterName,
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 2,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isDebuff": true,
+                                "actionTags": ["FUA"]
+                            }
+                        }
+                        let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
+
+
+                        battleActions.updateBuff(battleData,enemyWithDebt,buffSheet);
+                        const buffCheck = enemyWithDebt.buffsObject[buffName];
+                        if (buffCheck.currentStacks === 2) {
+                            enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
+                        }
+                    },
+                    "target": "enemy",
+                    "listenerName": "Future Market Debtor controller",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "StartTurn",
+                    condition(battleData,generalInfo) {
+                        const ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+
+                        const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
+                        if (numbyTurn.properName != sourceTurn.properName) {return;}
+                        battleActions.actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
+                    },
+                    "target": "owner",
+                    "listenerName": "Agile Operation",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "listenersToInjectLater": {
+            "techniqueEnergyGain": {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // Financial Turmoil
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+                    const dmgSlot = generalInfo.dmgSlot;
+                    if (dmgSlot != "Skill" && dmgSlot != "Talent") {return;}
+
+                    battleActions.updateEnergy(battleData,60,sourceTurn,false,"Technique: Explicit Subsidy");
+                    //then remove, bc this is the only time it'll get called
+                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                },
+                "target": "self",
+                "listenerName": "Topaz Technique attack listener",
+                "ownerTurn": {},
+            }
+        },
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "bonanzaStacks": 0,
+            "isBonanzaActive": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "debt": "Proof of Debt",
+            "e1Debtor": "Debtor (Future Market)",
+            "bonanza": "Windfall Bonanza!",
+            "turmoil": "Financial Turmoil",
+        },
+        "characterValuesBattle": {},
+    },
 
     //Harmony
     "Tingyun": {
@@ -14563,6 +15718,711 @@ const turnLogic = {
             "traceDEF": "Constellation (Asta)",
             "traceATK": "Astrometry (Asta)",
             "e4Name": "Aurora Basks in Beauty and Bliss",
+        },
+        "characterValuesBattle": {},
+    },
+    "Ruan Mei": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let actionUsed = false;
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.ruanmeiSkill, target: "self", endTurn: true};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {
+                // let skillRef = skillPathing["Basic ATK"].Monodrama.variant1;
+                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.ruanmeiBasic, target: "enemy", endTurn: true};
+            }
+        },
+        "skillFunctions": {
+            ruanmeiBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.ruanmeiBasicREF ??= ATKObjects["Basic ATK"]["Threading Fragrance"].variant1;
+
+                if (!ATKObjects.ruanmeiBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Ice"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ruanmeiBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ruanmeiBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+
+                // turnLogic[characterName].skillFunctions.bronyaTalent(battleData,sourceTurn);
+            },
+            ruanmeiSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.ruanmeiSkillREF ??= ATKObjects.Skill["String Sings Slow Swirls"].variant1;
+                let values = ATKObjects.ruanmeiSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // console.log(targetTurn)
+                // const targetTurn = battleData.nameBasedTurns.char1;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+
+                if (!ATKObjects.ruanmeiSkillOWNERSHEET) {
+                    const rank = sourceTurn.rank;
+                    const logicRef = turnLogic[characterName];
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.ruanmeiSkillOWNERSHEET = {
+                        "stats": null,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillCountdown,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.overtoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.ruanmeiSkillBUFFSHEET = {
+                        "stats": [DamageAll,DamageBreakEfficiency],
+                        [DamageAll]: 0,
+                        [DamageBreakEfficiency]: values[1],
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillBuff,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+
+                const ownerSheet = ATKObjects.ruanmeiSkillOWNERSHEET;
+                const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
+
+                const countdownName = ownerSheet.buffName;
+                const buffCheck = sourceTurn.buffsObject[countdownName];
+                sourceTurn.battleValues.overtoneIsActive = true;
+
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,ownerSheet);
+
+                const overtoneBEConversion = ATKObjects.ruanBEConversionFunction ??= turnLogic[sourceTurn.properName].skillFunctions.overtoneBEConversion
+                buffSheet[DamageAll] = overtoneBEConversion(battleData,sourceTurn);
+
+                if (!buffCheck) {
+                    const allyTurns = battleData.nameBasedTurns;
+
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                }
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            overtoneBEConversion(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let values = ATKObjects.ruanmeiSkillREFPARAM;
+                const breakEffect = sourceTurn.statTable[DamageBreak];
+                //reader entry shows the conversion takes ALL break effect, even converted, as it pulls from the composite character SUM.
+                const beyondThis = 1.2;
+                const validBE = breakEffect - beyondThis;
+
+                let conversion = 0;
+                const conversionCounts = Math.floor(validBE/0.1);
+                if (validBE > 0) {conversion = Math.min(0.36, conversionCounts * 0.06)}
+
+                return values[0] + conversion;
+            },
+            overtoneExpired(battleData,ruanmeiSlot) {
+                const ruanmeiTurn = battleData.nameBasedTurns[ruanmeiSlot];
+                ruanmeiTurn.battleValues.overtoneIsActive = false;
+
+                const logicRef = turnLogic[ruanmeiTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
+                // const updateBuff = battleActions.updateBuff;
+
+                const allyTurns = battleData.nameBasedTurns;
+                for (let allySlot in allyTurns) {
+                    const currentTurn = allyTurns[allySlot];
+                    removeBuff(battleData,currentTurn,buffSheet);
+                }
+            },
+            ruanmeiUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.ruanmeiUltimateREF ??= ATKObjects.Ultimate["Petals to Stream, Repose in Dream"].variant1;
+
+                const getEnergy = battleActions.updateEnergy;
+                getEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
+
+                if (!ATKObjects.ruanmeiUltimateZoneCountdownSHEET) {
+                    const buffNames = logicRef.buffNames;
+                    const characterName = sourceTurn.properName;
+                    const rank = sourceTurn.rank;
+                    let values = ATKObjects.ruanmeiUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    // "zoneDebuff": "Guess Who Lives Here",
+                    // "zoneCountdown": "Guess Who Lives Here (Countdown)",
+                    ATKObjects.ruanmeiUltimateZoneBuffSHEET = {
+                        "stats": [ResistanceAllPEN,DEFShredAll],
+                        [ResistanceAllPEN]: values[0],
+                        [DEFShredAll]: rank >= 1 ? 0.20 : 0,
+                        "source": "Ultimate Zone",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.zoneBuff,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    ATKObjects.ruanmeiUltimateZoneCountdownSHEET = {
+                        "stats": null,
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.zoneCountdown,
+                        "duration": 2 + (rank >= 6 ? 1 : 0),
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.ultimateZoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                }
+
+                const countdownSheet = ATKObjects.ruanmeiUltimateZoneCountdownSHEET;
+                const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,countdownSheet);
+                sourceTurn.battleValues.ruanmeiZoneActive = true;
+
+                if (!buffCheck) {
+                    //only if the countdown owner, tribbie, does NOT already have the countdown active, then apply the debuffs to all enemies
+                    //this is bc we have an enemyCreated listener that looks for enemies that are added while the field is active
+                    //and bc of that, along with the fact that the debuff never expires unless the zone does, we don't need reup the duration
+
+                    const buffSheet = ATKObjects.ruanmeiUltimateZoneBuffSHEET;
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                }
+
+                getEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            ultimateZoneExpired(battleData,ruanmeiSlot) {
+                const ruanmeiTurn = battleData.nameBasedTurns[ruanmeiSlot];
+                ruanmeiTurn.battleValues.ruanmeiZoneActive = false;
+
+                const logicRef = turnLogic[ruanmeiTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.ruanmeiUltimateZoneBuffSHEET;
+                const allyTurns = battleData.nameBasedTurns;
+
+                for (let allySlot in allyTurns) {
+                    const currentTurn = allyTurns[allySlot];
+                    removeBuff(battleData,currentTurn,buffSheet);
+                }
+            },
+            ruanmeiTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.ruanmeiTechREF ??= ATKObjects.Technique["Silken Serenade"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                const ruanmeiSkill = ATKObjects.ruanmeiSkill ??= turnLogic[sourceTurn.properName].skillFunctions.ruanmeiSkill;
+                ruanmeiSkill(battleData,"self",sourceTurn)
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    // let sourceTurn = generalInfo.sourceTurn;
+
+                    if (ownerTurn.turnState) {
+                        let amount = 5;
+                        battleActions.updateEnergy(battleData,amount,ownerTurn,false,"Days Wane, Thoughts Wax");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Days Wane, Thoughts Wax - turn start regen",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatBreak",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName || !sourceTurn.battleValues.overtoneIsActive) {return;}
+                    //ruan mei's skill dmg conversion from BE IS dynamic, so while overtone is active, when ruan gets
+                    //more break effect we need to potentially redo the buff
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
+                    const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+
+                    const currentBonus = buffCheck?.[DamageAll] ?? 0;
+                    const accurateBonus = (this.ruanBEConversionFunction ??= turnLogic[sourceTurn.properName].skillFunctions.overtoneBEConversion)(battleData,sourceTurn);
+
+                    if (currentBonus != accurateBonus) {
+                        buffSheet[DamageAll] = accurateBonus;
+
+                        const allyTurns = battleData.nameBasedTurns;
+
+                        const updateBuff = battleActions.updateBuff;
+                        for (let allySlot in allyTurns) {
+                            const currentTurn = allyTurns[allySlot];
+                            removeBuff(battleData,currentTurn,buffSheet,true);
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Overtone reapplication when ruan gains BE",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const buffNames = logicRef.buffNames;
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [DamageBreak],
+                        [DamageBreak]: 0.20,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.traceBE,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Inert Respiration trace battlestart break effect",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // const logicRef = turnLogic[ownerTurn.properName];
+                    
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    const buffNames = logicRef.buffNames;
+
+                    let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
+                    let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [SPDP],
+                        [SPDP]: values[0],
+                        "statsOnHit": null,
+                        "source": "Talent",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.talentSPD,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        if (currentTurn.properName === ownerTurn.properName) {continue;}
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Talent battlestart SPD bonus for allies other than ruan",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "BrokeEnemyWeakness",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const targetTurn = generalInfo.targetTurn;
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
+                    let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    const breakMulti = values[1] + (ownerTurn.rank >= 6 ? 2 : 0);
+                    const breakObject = generalInfo.breakObject;
+                    const tags = [generalInfo[ownerTurn.element]];
+                    const isBroken =  generalInfo.isBroken;
+
+                    const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
+                        ATKObject: {actionTags: ["Break"]}
+                    }
+
+                    battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
+
+                    // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags,isBroken,generalInfo});
+                },
+                "target": "self",
+                "listenerName": "Talent break dmg on break instance",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy || !ownerTurn.battleValues.ruanmeiZoneActive) {return;}
+                    // const logicRef = turnLogic[ownerTurn.properName];
+                    // const buffNames = logicRef.buffNames;
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    
+                    if (!ATKObjects.ruanmeiUltimateBloomSheet) {
+                        const characterName = ownerTurn.properName;
+                        const logicRef = turnLogic[characterName];
+                        const buffNames = logicRef.buffNames;
+                        
+                        // const rank = sourceTurn.rank;
+                        // let values = sourceTurn.tribbieUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                        // "zoneDebuff": "Guess Who Lives Here",
+                        // "zoneCountdown": "Guess Who Lives Here (Countdown)",
+                        ATKObjects.ruanmeiUltimateBloomSheet = {
+                            "stats": null,
+                            "source": "Ultimate Zone",
+                            "sourceOwner": characterName,
+                            "buffName": buffNames.zoneDebuff,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "isDebuff": true,
+                        }
+                    }
+
+                    const debuffSheet = ATKObjects.ruanmeiUltimateBloomSheet;
+
+
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let enemySlot in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemySlot];
+                        if (currentEnemy.ruanmeiWaitingToRecover) {continue;}
+                        updateBuff(battleData,currentEnemy,debuffSheet);
+                        currentEnemy.ruanmeiWaitingToRecover = true;
+                        currentEnemy.ruanmeiWaitingToDelay = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Zone active - ally attack thanataplum application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "RecoveringFromBreak",
+                condition(battleData,generalInfo) {
+                    // poke("RecoveringFromBreak", battleData, {sourceTurn});
+
+                    // currentEnemy.ruanmeiWaitingToRecover = true;
+                    // currentEnemy.ruanmeiWaitingToDelay = true;
+
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!sourceTurn.ruanmeiWaitingToDelay) {return;}
+
+                    const debuffSheet = ATKObjects.ruanmeiUltimateBloomSheet;
+                    const buffCheck = sourceTurn.buffsObject[debuffSheet.buffName];
+
+                    if (!buffCheck) {return;}
+
+                    removeBuff(battleData,sourceTurn,buffCheck);
+
+                    let values = ATKObjects.ruanmeiUltimateREFVALUES;
+                    const breakMulti = values[4];
+                    const breakObject = {
+                        toughnessBase:0,
+                        element:ownerTurn.element,
+                        rawReduction:0
+                    };
+                    const tags = [generalInfo[ownerTurn.element]];
+                    // const isBroken =  generalInfo.isBroken;
+                    //if the enemy is attemption to recover from break, it's bc they were already broken
+                    //we can just pass through true here on the break instance and that's fine
+
+                    const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
+                        ATKObject: {actionTags: ["Break"]}
+                    }
+
+                    battleActions.getBreakDamage(battleData,breakObject,ownerTurn,sourceTurn,tags,true,genInfoNew,breakMulti);
+
+                    const breakEffect = ownerTurn.statTable[DamageBreak];
+                    const delayValue = -((breakEffect * values[3]) + values[4]);
+                    sourceTurn.AV = 0;
+                    battleActions.actionAdvance(delayValue,sourceTurn,battleData,"Thanataplum Rebloom");
+                    sourceTurn.ruanmeiWaitingToDelay = false;
+                    sourceTurn.turnShouldEnd = true;
+                },
+                "target": "self",
+                "listenerName": "Zone active - enemy attempted to recover from weakness break",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "RecoveringFromBreak",
+                condition(battleData,generalInfo) {
+                    // poke("RecoveredFromBreak", battleData, {sourceTurn});
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    sourceTurn.ruanmeiWaitingToRecover = false;
+                },
+                "target": "self",
+                "listenerName": "Zone active - enemy recovered fully from weakness break",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+                    
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck ? checkUlty(battleData,ownerTurn) : false;
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Ruan Mei - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const ruanmeiTechnique = this.ruanmeiTechnique ??= logicRef.skillFunctions.ruanmeiTechnique;
+                        ruanmeiTechnique(battleData,"self",ownerTurn)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Ruan Mei Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [
+                {
+                    "trigger": "AllyDMGStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        const targetTurn = generalInfo.targetTurn;
+
+                        if (!this.ruanmeiE2ATKSHEET) {
+                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                            this.ruanmeiE2ATKSHEET = {
+                                "stats": [ATKP],
+                                [ATKP]: 0.40,
+                                "source": "E2",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffNames.e2ATK,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                        }
+                        const buffSheet = this.ruanmeiE2ATKSHEET;
+                        const buffName = buffSheet.buffName;
+                        const buffCheck = sourceTurn.buffsObject[buffName];
+
+                        //TODO: if we can ever check E2, I need to know whether the ATK buff would technically apply before or after the break dmg
+                        //bc in practice the target would be designated as broken at that point
+                        //why does it matter? someone like firefly, who scales break effect off of ATK
+                        const brokenCheck = targetTurn.isBroken;
+                        const updateBuff = battleActions.updateBuff;
+
+                        if (brokenCheck) {
+                            if (buffCheck) {return;}
+                            else {updateBuff(battleData,sourceTurn,buffSheet);}
+                        }
+                        else {
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
+                            else {return;}
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Reedside Promenade - ally dealing dmg listner",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [
+                {
+                    "trigger": "BrokeEnemyWeakness",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        // const logicRef = turnLogic[ownerTurn.properName];
+                        // const buffNames = logicRef.buffNames;
+                        
+                        
+                        if (!this.ruanmeiE4BESHEET) {
+                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                            this.ruanmeiE4BESHEET = {
+                                "stats": [DamageBreak],
+                                [DamageBreak]: 1,
+                                "source": "E4",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffNames.e4BE,
+                                "duration": 3,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+                        const buffSheet = this.ruanmeiE4BESHEET;
+                        buffSheet.duration = ownerTurn.turnState ? 4 : 3;
+
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "E4 weakness broken listener",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "listenersToInjectLater": {},
+        "characterValues": {
+            "overtoneIsActive": false,
+            "ruanmeiZoneActive": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Enhance",
+        "buffNames": {
+            "traceBE": "Inert Respiration",
+            "skillCountdown": "Overtone (Countdown)",
+            "skillBuff": "Overtone (DMG)",
+            "talentSPD": "Somatotypical Helix",
+            "zoneCountdown": "Petals to Stream, Repose in Dream (Countdown)",
+            "zoneBuff": "Petals to Stream, Repose in Dream (Ally)",
+            "zoneDebuff": "Thanatoplum Rebloom",
+            "e2ATK": "E2: Reedside Promenade",
+            "e4BE": "E4: Chatoyant Éclat",
         },
         "characterValuesBattle": {},
     },
