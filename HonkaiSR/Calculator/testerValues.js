@@ -339,6 +339,13 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Topaz & Numby": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
 }
 
 
@@ -1341,6 +1348,50 @@ const defaultConditions = {
         hasEnhancedState: false,
         "Skill": null,
         "Ultimate": null,
+    },
+
+    //HUNT
+    "Topaz & Numby": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "phase": "Any Part",
+                    "state": false
+                },
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Summon",
+                    "phase": "Any Part",
+                    "state": false
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": "=",
+                    "array": [
+                        {
+                            "type": "Character: Special Value",
+                            "target": "Self",
+                            "specialValue": "bonanzaStacks",
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "User Value: Number",
+                            "inputValue": 0
+                        }
+                    ]
+                }
+            ]
+        }
     },
 }
 

@@ -11311,6 +11311,643 @@ const turnLogic = {
 
 
     //Hunt
+    "Topaz & Numby": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let actionUsed = false;
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.topazSkill, target: "enemy", endTurn: true};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {
+                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.topazBasic, target: "enemy", endTurn: true};
+            }
+        },
+        "skillFunctions": {
+            topazBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.topazBasicREF ??= ATKObjects["Basic ATK"]["Deficit..."].variant1;
+
+                if (!ATKObjects.topazBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","FUA","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Basic","FUA","Attack"];
+                    ATKObjects.topazBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.topazBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                poke("FUAStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("FUAEnd",battleData,{sourceTurn});
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            topazSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const valuesRef = sourceTurn.battleValues;
+                const isEnhanced = valuesRef.isBonanzaActive;
+                //unenhanced variant2 is created in the listeners
+                let skillRef = isEnhanced ? ATKObjects.topazSkillEnhancedREF ??= ATKObjects["Skill"]["Difficulty Paying?"].variant2 : ATKObjects.topazSkillREF ??= ATKObjects["Skill"]["Difficulty Paying?"].variant1;
+                // ownerTurn.topazSkillREF = ownerTurn["Skill"]["Difficulty Paying?"].variant2;
+                
+
+                if (!ATKObjects.topazSkillATKOBJECT) {
+                    // skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","FUA","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Skill","Numby","FUA","Attack","Summon"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.topazSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        bonusMultiplier: 0,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.topazSkillATKOBJECT;
+                if (isEnhanced) {
+                    const ultValuesRef = ATKObjects.topazUltimateREFVALUES[0];//don't need to worry about ??='ing it here bc you'll never be enhanced until an ult is called, at which point ??= will assign in ult's call
+                    ATKObject.bonusMultiplier = ultValuesRef;
+                }
+                else {ATKObject.bonusMultiplier = 0;}
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                poke("FUAStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                if (isEnhanced) {
+                    valuesRef.bonanzaStacks -= 1;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Numby Action", bodyText: `Windfall Bonanza Stacks: ${valuesRef.bonanzaStacks+1} --> ${valuesRef.bonanzaStacks}`});}
+                    valuesRef.isBonanzaActive = valuesRef.bonanzaStacks>0 ? true : false;
+                    if (!valuesRef.isBonanzaActive) {
+                        const buffName = logicRef.buffNames.bonanza;
+                        removeBuff(battleData,sourceTurn,sourceTurn.buffsObject[buffName]);
+                    }
+                    battleActions.updateEnergy(battleData,10,sourceTurn,false,"Stonks Market");
+                }
+                if (sourceTurn.rank>=2) {battleActions.updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
+                poke("FUAEnd",battleData,{sourceTurn});
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            numbyTurnAttack(battleData,eventTurn) {
+                const sourceTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                const valuesRef = sourceTurn.battleValues;
+                const isEnhanced = valuesRef.isBonanzaActive;
+                // console.log(eventTurn.eventOwner)
+                //unenhanced variant2 is created in the listeners
+                let skillRef = isEnhanced ? ATKObjects.topazTalentEnhancedREF ??= ATKObjects["Talent"]["Trotter Market!?"].variant2 : ATKObjects.topazTalentREF ??= ATKObjects["Talent"]["Trotter Market!?"].variant1;
+
+                if (!ATKObjects.topazNumbyAutoATKOBJECT) {
+                    // skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","FUA","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Numby","FUA","Attack","Summon"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.topazNumbyAutoATKOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        bonusMultiplier: 0,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.topazNumbyAutoATKOBJECT;
+                if (isEnhanced) {
+                    const ultValuesRef = ATKObjects.topazUltimateREFVALUES[0];//don't need to worry about ??='ing it here bc you'll never be enhanced until an ult is called, at which point ??= will assign in ult's call
+                    ATKObject.bonusMultiplier = ultValuesRef;
+                }
+                else {ATKObject.bonusMultiplier = 0;}
+
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "FUAStart", name:eventTurn.properName, target: "enemy", AV: battleData.sumAV, fuaName: "numbyTurnAttack", isEnhanced, eventOverrideImage: eventTurn.eventImage});}
+                // poke("BasicATKStart",battleData,{sourceTurn});
+                poke("FUAStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                if (isEnhanced) {
+                    valuesRef.bonanzaStacks -= 1;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Numby Action", bodyText: `Windfall Bonanza Stacks: ${valuesRef.bonanzaStacks+1} --> ${valuesRef.bonanzaStacks}`});}
+                    valuesRef.isBonanzaActive = valuesRef.bonanzaStacks>0 ? true : false;
+                    if (!valuesRef.isBonanzaActive) {
+                        const buffName = logicRef.buffNames.bonanza;
+                        removeBuff(battleData,sourceTurn,sourceTurn.buffsObject[buffName]);
+                    }
+                    battleActions.updateEnergy(battleData,10,sourceTurn,false,"Stonks Market");
+                }
+                if (sourceTurn.rank>=2) {battleActions.updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
+                poke("FUAEnd",battleData,{sourceTurn});
+                // poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            topazUltimate(battleData,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                const valuesRef = logicRef.characterValuesBattle;
+                let skillRef = ATKObjects.topazUltimateREF ??= ATKObjects.Ultimate["Turn a Profit!"].variant1;
+                let values = ATKObjects.topazUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.topazUltimateBONANZASHEET) {
+                    const buffName = logicRef.buffNames.bonanza;
+                    ATKObjects.topazUltimateBONANZASHEET = {
+                        "stats": [CritDamageBase,ResistanceFirePEN],
+                        [CritDamageBase]: values[1],
+                        [ResistanceFirePEN]: rank >= 6 ? 0.10 : 0,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Numby"]
+                    }
+                }
+                let buffSheet = ATKObjects.topazUltimateBONANZASHEET;
+
+                // console.log(buffSheet)
+
+                const energy = battleActions.updateEnergy;
+                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                
+                valuesRef.bonanzaStacks = rank>=6 ? 3 : 2;
+                valuesRef.isBonanzaActive = true;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Windfall Bonanza Stacks --> ${valuesRef.bonanzaStacks}`});}
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+
+                energy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            topazTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.Technique["Explicit Subsidy"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                let attackEndings = battleData.battleListeners.AttackEnd ??= [];
+                const listenerToInejct = logicRef.listenersToInjectLater.techniqueEnergyGain;
+                listenerToInejct.ownerTurn = sourceTurn;
+
+                attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const numbyTurnAttack = ATKObjects.numbyTurnAttack ??= turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttack;
+                    const ActionEntry = ownerTurn.topazNUMBYTURNEVENT ??= {
+                        // name:characterEntry,
+                        AV:10000/80,
+                        AVBase:10000/80,
+                        SPD:80,
+                        actionCounter: 0,
+                        turnState: 0,
+                        name: "topazSummon",
+                        properName: "Numby",
+                        // buffsObject: {},
+                        // buffsStartTurn: [],
+                        // buffsEndTurn: [],
+                        // additionalDMGObject: {},
+                        cantBeTargeted: true,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isActive: true,
+                        isMemosprite: false,
+                        currentlyOwnedBy: ownerTurn.name,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: numbyTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Numby"],
+                    };
+                    ownerTurn.summonEventRef = "topazNUMBYTURNEVENT";
+                    ownerTurn.activeSummons += 1;
+                    battleData.declaredSummons.push(ActionEntry);
+                    battleData.nextTurnAV.push(ActionEntry);
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+
+                    const buffNames = logicRef.buffNames;
+                    let charValuesRef = logicRef.characterValuesBattle;
+                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
+                    let targetTurn = charValuesRef.enemyWithDebt;
+
+                    if (!ATKObjects.topazHitsplitsAdjustment) {//this is necessary just to assign the varying hitsplits between the enhanced and unenhanced FUA's
+                        const talentPath = ATKObjects["Talent"]["Trotter Market!?"];
+                        const talentRef = ATKObjects.topazTalentREF ??= talentPath.variant1;
+                        talentPath.variant2 = {...talentRef};
+
+                        talentRef.hitSplits = hitSplitters[ownerTurn.properName].passive;
+                        talentPath.variant2.hitSplits = hitSplitters[ownerTurn.properName].passive2;
+                        
+                        const skillPath = ATKObjects["Skill"]["Difficulty Paying?"];
+                        let skillRef = ATKObjects.topazSkillREF ??= skillPath.variant1;
+                        skillPath.variant2 = {...skillRef};
+
+                        skillRef.hitSplits = hitSplitters[ownerTurn.properName].skill;
+                        skillPath.variant2.hitSplits = hitSplitters[ownerTurn.properName].skill2;
+                        
+                        ATKObjects.topazSkillEnhancedREF = skillPath.variant2;
+                        ATKObjects.topazTalentEnhancedREF = talentPath.variant2;
+                    }
+
+
+                    // let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    let skillRef = ATKObjects.topazSkillEnhancedREF;
+                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
+                        "stats": [VulnFUA],
+                        [VulnFUA]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
+                        "source": ownerTurn.properName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.debt,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                        "actionTags": ["FUA"]
+                    }
+                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Topaz: numby event creation",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let charValuesRef = logicRef.characterValuesBattle;
+                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
+                    let targetTurn = charValuesRef.enemyWithDebt;
+
+                    if (targetTurn === null || targetTurn.isDead) {return}//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
+
+                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
+                    if (!charValuesRef.enemyWithDebt) {return}//battle would be over, in this case
+                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET;
+                    battleActions.updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt death swap",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    //ally dmg dealt bc it IS dmg dealt, it's not attack specific, which sucks
+                    //TODO: really doubt I'll ever do it, but consider doing weakness specific sheets in the future
+                    //would let me do things like genius 4pc and this without needing to evaluate every instance of dmg
+                    //the flip-side tho is that we'd need like, multi sheets for those to have weakness + x,y,z etc
+                    //at least I think so, idk. Might be simpler than that, we'll see once I build out more characters in the calc
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    // Financial Turmoil
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    let targetTurn = generalInfo.targetTurn;
+
+                    if (!ATKObjects.topazTurmoilFireWeakSHEET) {
+                        const characterName = sourceTurn.properName;
+                        const logicRef = turnLogic[characterName];
+                        let buffName = logicRef.buffNames.turmoil;
+                        ATKObjects.topazTurmoilFireWeakSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.15,
+                            "source": characterName,
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+                    let buffSheet = ATKObjects.topazTurmoilFireWeakSHEET;
+                    const buffName = buffSheet.buffName;
+                    const buffCheck = sourceTurn.buffsObject[buffName];
+
+                    if (targetTurn.statTable[WeaknessFire] <= 0) {//if there is no quantum weakness
+                        if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}//then remove the buff if we have it
+                        else {return;}
+                    }
+                    else {//if weakness found, apply buff
+                        if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Financial Turmoil - Fire-weak bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.topazUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Topaz - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const topazTechnique = this.topazTechnique ??= logicRef.skillFunctions.topazTechnique
+                        topazTechnique(battleData,"self",ownerTurn)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Topaz Technique",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HitEnemyStart",
+                condition(battleData,generalInfo) {
+                    const ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    // const targetsGotHit = generalInfo.targetsGotHit;
+                    const targetTurn = generalInfo.targetTurn;
+
+                    // const characterName = ownerTurn.properName;
+                    // const logicRef = turnLogic[characterName];
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt.properName != targetTurn.properName) {return;}
+
+                    
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    if (targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+
+                    const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
+                    if (numbyTurn.turnState) {return}//numby can't advance himself, but topaz can advance him
+
+                    const isFUA = generalInfo.ATKObject.isFUA;
+                    if (isFUA) {
+                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
+                    }
+
+                    const slot = generalInfo.slot;
+                    const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
+                    if (battleValues.isBonanzaActive && slotCheck) {
+                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
+                    }
+                    //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
+                },
+                "target": "enemy",
+                "listenerName": "Numby's advancement controller",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "HitEnemyStart",
+                    condition(battleData,generalInfo) {
+                        const ownerTurn = this.ownerTurn;
+
+                        
+
+                        const sourceTurn = generalInfo.sourceTurn;
+                        const targetsGotHit = generalInfo.targetsGotHit;
+                        const targetTurn = generalInfo.targetTurn;
+                        const isFUA = generalInfo.ATKObject.isFUA;
+                        if (sourceTurn.isEnemy || !isFUA || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+
+
+                        const characterName = ownerTurn.properName;
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        const enemyWithDebt = logicRef.characterValuesBattle.enemyWithDebt;
+                        // if (targetTurn.properName != enemyWithDebt.properName) {return}//can only apply to those with proof of debt, aka the primary target
+                        //in theory this is a completely useless check as topaz will only ever do single target dmg, and bc of that only the primary target will be hit
+
+
+                        if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
+                        const buffName = logicRef.buffNames.e1Debtor;
+                        if (!ATKObjects.topazE1DebtorSTACKSHEET) {
+    
+                            ATKObjects.topazE1DebtorSTACKSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.25,
+                                "source": characterName,
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 2,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isDebuff": true,
+                                "actionTags": ["FUA"]
+                            }
+                        }
+                        let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
+
+
+                        battleActions.updateBuff(battleData,enemyWithDebt,buffSheet);
+                        const buffCheck = enemyWithDebt.buffsObject[buffName];
+                        if (buffCheck.currentStacks === 2) {
+                            enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
+                        }
+                    },
+                    "target": "enemy",
+                    "listenerName": "Future Market Debtor controller",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "StartTurn",
+                    condition(battleData,generalInfo) {
+                        const ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+
+                        const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
+                        if (numbyTurn.properName != sourceTurn.properName) {return;}
+                        battleActions.actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
+                    },
+                    "target": "owner",
+                    "listenerName": "Agile Operation",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "listenersToInjectLater": {
+            "techniqueEnergyGain": {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // Financial Turmoil
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+                    const dmgSlot = generalInfo.dmgSlot;
+                    if (dmgSlot != "Skill" && dmgSlot != "Talent") {return;}
+
+                    battleActions.updateEnergy(battleData,60,sourceTurn,false,"Technique: Explicit Subsidy");
+                    //then remove, bc this is the only time it'll get called
+                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                },
+                "target": "self",
+                "listenerName": "Topaz Technique attack listener",
+                "ownerTurn": {},
+            }
+        },
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "bonanzaStacks": 0,
+            "isBonanzaActive": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "debt": "Proof of Debt",
+            "e1Debtor": "Debtor (Future Market)",
+            "bonanza": "Windfall Bonanza!",
+            "turmoil": "Financial Turmoil",
+        },
+        "characterValuesBattle": {},
+    },
 
     //Harmony
     "Tingyun": {

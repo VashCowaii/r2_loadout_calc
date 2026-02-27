@@ -1325,4 +1325,225 @@ const hitSplitters = {
         }
       ],
     },
+
+    //HUNT
+    "Topaz & Numby": {
+      "basic": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+      "skill": [
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        },
+      ],
+      "skill2": [
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.3,
+            "toughness": 20
+          },
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+      "passive": [
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+        },
+        {
+          "primary": {
+              "hitRatio": 1/7,
+              "toughness": 20
+          },
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        },
+      ],
+      "passive2": [
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.1,
+            "toughness": 20
+          }
+        },
+        {
+          "primary": {
+            "hitRatio": 0.3,
+            "toughness": 20
+          },
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+    },
 }
