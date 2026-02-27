@@ -13653,7 +13653,8 @@ const turnLogic = {
                 const actionAdvance = battleActions.actionAdvance;
                 for (let i=nextAVDupe.length-1;i>=0;i--) {
                     const currentTurn = nextAVDupe[i];
-                    if (currentTurn.isEnemy || currentTurn.isUniqueEvent && !currentTurn.isMemosprite) {continue;}
+
+                    if (currentTurn.isEnemy || currentTurn.isUniqueEvent && !currentTurn.isMemosprite || (currentTurn.turnState && !currentTurn.actionAssigned)) {continue;}
                     actionAdvance(1,currentTurn,battleData,"Robin's Ultimate");
                 }
                 
