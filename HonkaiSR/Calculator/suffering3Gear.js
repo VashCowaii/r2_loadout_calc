@@ -368,6 +368,112 @@ const turnLogicLightcones = {
             "dmgStack": "Answers of Their Own"
         },
     },
+    "Cruising in the Stellar Sea": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    // poke("FUAStart",battleData,{sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+
+
+                    if (!sourceTurn.cruisingStellarCRITSHEET) {
+                        let lcNameRef = "Cruising in the Stellar Sea";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.critBonus;
+                        sourceTurn.cruisingStellarCRITSHEET = {
+                            "statsOnHit": [CritRateBase],
+                            [CritRateBase]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 5,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+
+
+                    const targetTurn = generalInfo.targetTurn;
+
+                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+                    const hpThreshold = 0.50;
+
+                    const buffSheet = sourceTurn.cruisingStellarCRITSHEET;
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                    if (hpRatio <= hpThreshold) {
+                        if (buffCheck) {return;}
+                        else {
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                    }
+                    else if (buffCheck) {
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Cruising <= 50%HP crit buff",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort if the kill owner was not a lc owner
+
+
+
+                    if (!sourceTurn.cruisingStellarATKSHEET) {
+                        let lcNameRef = "Cruising in the Stellar Sea";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                        sourceTurn.cruisingStellarATKSHEET = {
+                            "stats": [ATKP],
+                            [ATKP]: rankParams[3],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.cruisingStellarATKSHEET;
+                    buffSheet.duration = sourceTurn.turnState ? 3 : 2;
+
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Cruising - kill atk buff",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "critBonus": "Cruising in the Stellar Sea (Crit)",
+            "dmgStack": "Cruising in the Stellar Sea (ATK)"
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {
