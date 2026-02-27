@@ -3741,6 +3741,88 @@ const turnLogicLightcones = {
             "ultDMGBonus": "A Storm Is Coming [LC]",
         },
     },
+    "The Great Cosmic Enterprise": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    // poke("FUAStart",battleData,{sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetStats = targetTurn.statTable;
+
+                    let weaknessCount = 0;
+                    for (let weakName of checkWeakArray) {
+                        weaknessCount += targetStats[weakName] ? 1 : 0;
+                    }
+
+                    if (!sourceTurn.greatCosmicDMGSHEET) {
+                        let lcNameRef = "The Great Cosmic Enterprise";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
+                        sourceTurn.greatCosmicDMGSHEET = {
+                            "statsOnHit": [DamageAll],
+                            [DamageAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 7,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.greatCosmicDMGSHEET;
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                    const updateBuff = battleActions.updateBuff;
+                    if (buffCheck) {
+                        const currentStacks = buffCheck.currentStacks;
+                        if (currentStacks === weaknessCount) {return;}
+                        else if (currentStacks < weaknessCount) {
+                            const stackDiff = weaknessCount - currentStacks;
+                            buffSheet.currentStacks = stackDiff;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                        else {//if stacks are higher than they should be
+                            if (weaknessCount) {//if we have stacks then update
+                                removeBuff(battleData,sourceTurn,buffSheet,true,null,true);
+                                buffSheet.currentStacks = weaknessCount;
+                                updateBuff(battleData,sourceTurn,buffSheet,false,null)
+                            }
+                            else {//otherwise remove
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        }
+                    }
+                    else if (weaknessCount) {
+                        buffSheet.currentStacks = weaknessCount;
+                        updateBuff(battleData,sourceTurn,buffSheet,false,null);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Great Cosmic Enterprise weakness dmg listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "cosmicDMG": "The Great Cosmic Enterprise",
+        },
+    },
 }
 
 
