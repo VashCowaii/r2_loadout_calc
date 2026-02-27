@@ -2361,6 +2361,7 @@ const turnLogicLightcones = {
         "skillFunctions": {
             lcRegenEnergy(battleData,targetTurn,energyToRegen) {
                 battleActions.updateEnergy(battleData,energyToRegen,targetTurn,false,"Memories of the Past [LC]");
+                targetTurn.lcMemoriesOfThePastCanRegen = false;
             },
         },
         "listeners": [
@@ -2389,7 +2390,7 @@ const turnLogicLightcones = {
 
                     let ownersSlots = this.ownersSlots;
                     let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//then abort non-owners
+                    if (!ownerRank || !sourceTurn.lcMemoriesOfThePastCanRegen) {return;}//then abort non-owners
 
                     let lcNameRef = "Memories of the Past";
                     const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
@@ -2402,6 +2403,93 @@ const turnLogicLightcones = {
                 },
                 "target": "self",
                 "listenerName": "Memories of the Past - owner attacked listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {},
+    },
+    "Meshing Cogs": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            lcRegenEnergy(battleData,targetTurn,energyToRegen) {
+                battleActions.updateEnergy(battleData,energyToRegen,targetTurn,false,"Meshing Cogs [LC]");
+                targetTurn.lcMeshingCogsCanRegen = false;
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let ownerSlotter in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotter];
+                        currentOwner.lcMeshingCogsCanRegen = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Meshing Cogs endturn regen reset listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}
+
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || !sourceTurn.lcMeshingCogsCanRegen) {return;}//then abort non-owners
+
+                    let lcNameRef = "Meshing Cogs";
+                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+                    const regenValue = rankParams[0];
+
+                    regenFunction(battleData,sourceTurn,regenValue);
+                },
+                "target": "self",
+                "listenerName": "Meshing Cogs - owner attack listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}
+
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    let ownersSlots = this.ownersSlots;
+
+                    let lcNameRef = "Meshing Cogs";
+                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    for (let allyHit in targetsGotHit) {
+                        
+                        const currentRank = ownersSlots[allyHit];
+                        const currentAlly = allyTurns[allyHit];
+                        if (!currentRank || !currentAlly.lcMeshingCogsCanRegen) {continue;}
+                        else {
+                            console.log(currentAlly.properName)
+                            const rankParams = lcPathing[currentRank-1];
+                            const regenValue = rankParams[0];
+                            regenFunction(battleData,currentAlly,regenValue);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Meshing Cogs - owner was attacked listener",
                 "owners": [],
                 "ownersSlots": {}
             },
