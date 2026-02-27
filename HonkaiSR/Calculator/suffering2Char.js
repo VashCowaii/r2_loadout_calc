@@ -7615,7 +7615,7 @@ const turnLogic = {
                         battleActions.queueUltimateUse(battleData,queueObject);
                     }
                 },
-                "target": "enemy",
+                "target": "team",
                 "listenerName": "Natasha - Ultimate queued - Ultimate",
                 "ownerTurn": {},
             },
@@ -7777,6 +7777,524 @@ const turnLogic = {
             "skillHOT": "Natasha Heal-Over-Time (Skill)",
             "ultHOT": "Natasha Heal-Over-Time (Ult)",
             "traceHealingBonus": "Natasha Trace Healer",
+        },
+        "characterValuesBattle": {},
+    },
+    "Lynx": {//TODO: ult cleanse later  //TODO: CC RES, I think a stat exists for it but it doesn't get used anywhere yet //TODO: skill at e2 allowing debuff resistance? That's new
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.lynxSkillHeal, target: null, endTurn: true};
+                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.lynxBasic, target: "enemy", endTurn: true}
+            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
+            return returnBasicCall;
+        },
+        "skillFunctions": {
+            lynxBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+
+                let skillRef = ATKObjects.lynxBasicREF ??= ATKObjects["Basic ATK"]["Ice Crampon Technique"].variant1;
+                if (!ATKObjects.lynxBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Quantum"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.lynxBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.lynxBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            lynxSkillHeal(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.lynxSkillHealREF ??= ATKObjects.Skill["Salted Camping Cans"].variant1;
+                let values = ATKObjects.lynxSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                // let rank = sourceTurn.rank;
+                // let e2 = rank >= 2;
+                
+                
+                if (!ATKObjects.lynxSkillHealHEALOBJECT) {
+
+                    ATKObjects.lynxSkillHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[3],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[4],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+                }
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+
+                logicRef.skillFunctions.lynxHPConversion(battleData,sourceTurn,targetTurn);
+
+                let healObject = ATKObjects.lynxSkillHealHEALOBJECT;
+                battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
+
+                // if (e2) {
+                //     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
+                //     buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                //     battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                //     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
+                // }
+
+                const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
+                talentHealSheet.duration = targetTurn.turnState ? 4 : 3;
+                battleActions.updateBuff(battleData,targetTurn,talentHealSheet);
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            lynxHPConversion(battleData,sourceTurn,targetTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                let rank = sourceTurn.rank;
+
+                let skillRef = ATKObjects.lynxSkillHealREF;
+                let values = ATKObjects.lynxSkillHealREFVALUES;
+
+                if (!ATKObjects.lynxSkillHealHOTSHEET) {
+                    const rank = sourceTurn.rank;
+
+                    const buffNames = logicRef.buffNames;
+                    let buffName = buffNames.skillHOT;
+                    let buffName2 = buffNames.E4Attack;
+
+                    ATKObjects.lynxSkillHealHOTSHEET = {
+                        "stats": [HPFlat,HPFlatNULL,AggroP,EffectRES],
+                        [HPFlat]: 0,
+                        [HPFlatNULL]: -0,
+                        [AggroP]: 0,
+                        [EffectRES]: rank >= 6 ? 0.30 : 0,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    ATKObjects.lynxE4ATKSHEET = {
+                        "stats": [ATKFlat],
+                        [ATKFlat]: 0,
+                        "source": "E4 + Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName2,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+                const statTable = sourceTurn.statTable;
+                const hpRatio = values[0] + (rank >= 6 ? 0.06 : 0);
+
+                const hpMax = calcs.getHPFinal(statTable).HPFinal;
+                const conversion = hpRatio * (hpMax + statTable[HPFlatNULL]);
+                const finalHPValue = conversion + values[1];
+
+                const buffSheet = ATKObjects.lynxSkillHealHOTSHEET;
+                buffSheet[HPFlat] = finalHPValue;
+                buffSheet[HPFlatNULL] = -conversion;//the flat amount isn't converted HP, which is actually unusual bc conversions NORMALLY include that value as converted
+                buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                const updateBuff = battleActions.updateBuff;
+
+                if (rank >= 4) {
+                    const ATKRatio = 0.03;
+                    const finalATKConversion = (hpMax + statTable[HPFlatNULL]) * ATKRatio;
+                    const buffSheet2 = ATKObjects.lynxE4ATKSHEET;
+
+                    buffSheet.duration = targetTurn.turnState ? 2 : 1;
+
+                    const buffCheck2 = targetTurn.buffsObject[buffSheet2.buffName];
+
+                    if (buffCheck2) {
+                        const atkAMount = buffCheck2[ATKFlat];
+                        if (atkAMount != finalATKConversion) {
+                            removeBuff(battleData,targetTurn,buffCheck2,true,null,false,true);
+                        }
+                    }
+                    buffSheet2[ATKFlat] = finalATKConversion;
+                    updateBuff(battleData,targetTurn,buffSheet2,false,null,false);
+                }
+                
+
+
+                if (targetTurn.path === "Destruction" || targetTurn.path === "Preservation") {
+                    buffSheet[AggroP] = values[5];
+                }
+                else {
+                    buffSheet[AggroP] = 0;
+                }
+
+
+                const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
+                
+
+                if (buffCheck) {
+                    const hpAmount = buffCheck[HPFlat];
+                    if (hpAmount != finalHPValue) {
+                        removeBuff(battleData,targetTurn,buffCheck,true,null,false,true);
+                    }
+                }
+
+                //LYNX HP CONVERSION IS NOT A DYNAMIC LISTENER
+                //it's one time per application, doesn't check after the fact, fuck yeah I love that
+
+                updateBuff(battleData,targetTurn,buffSheet,false,null,false);
+            },
+            lynxUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.lynxUltimateREF ??= ATKObjects.Ultimate["Snowfield First Aid"].variant1;
+                let rank = sourceTurn.rank;
+
+                if (!ATKObjects.lynxUltimateHealHEALOBJECT) {
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.lynxUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.lynxUltimateHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[2],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+
+                }
+                // let ATKObject = ATKObjects.gallagherUltimateATKOBJECT;
+                let healObject = ATKObjects.lynxUltimateHealHEALOBJECT;
+                const allyPositions = battleData.allyPositions;
+
+                const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
+
+                const updateBuff = battleActions.updateBuff;
+                
+
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
+                // poke("BasicATKStart",battleData,{source:"Gallagher"});
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
+
+                for (let ally of allyPositions) {
+                    talentHealSheet.duration = ally.turnState ? 4 : 3;
+                    updateBuff(battleData,ally,talentHealSheet);
+                }
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
+                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
+
+                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
+                sourceTurn.ultyQueued = false;
+            },
+            lynxTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.lynxTechniqueREF ??= ATKObjects.Technique["Chocolate Energy Bar"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                const allyPositions = battleData.allyPositions;
+
+                const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
+
+                const updateBuff = battleActions.updateBuff;
+
+                for (let ally of allyPositions) {
+                    talentHealSheet.duration = ally.turnState ? 4 : 3;
+                    updateBuff(battleData,ally,talentHealSheet);
+                }
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [//skillHOT
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.lynxTalentREF ??= ATKObjects.Talent["Outdoor Survival Experience"].variant1;
+                    let values = ATKObjects.lynxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                    const buffNames = logicRef.buffNames
+                    let buffName = buffNames.talentHOT;
+
+                    
+                    ATKObjects.lynxTalentHealHOTHEALSHEET = this.lynxTalentHealHOTHEALSHEET ??= {
+                        "stats": null,
+                        "source": "Talent",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffName,
+                        "duration": 3,//technically 2 turns but the trace makes it 3
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+                },
+                "target": "self",
+                "listenerName": "Lynx define talent heal sheet/refs on battlestart",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const buffsObject = sourceTurn.buffsObject ?? {};
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffNames = turnLogic[ownerTurn.properName].buffNames;
+
+                    const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
+                    const skillHOTCheck = buffsObject[skillHOTName];
+
+                    const ultHOTName = this.ultHOTName ??= buffNames.talentHOT;
+                    const talentHOTCheck = buffsObject[ultHOTName];
+
+                    if (talentHOTCheck) {
+                        let skillRef = ATKObjects.lynxTalentREF;
+                        let values = ATKObjects.lynxTalentREFVALUES;
+                        //we aren't ref values from this since the values are from an eidolon
+                        
+                        
+                        if (!ATKObjects.lynxHOTHealHOTOBJECT) {
+                            ATKObjects.lynxHOTHealHOTOBJECT = {
+                                multipliers: {
+                                    primary: values[1] + (skillHOTCheck ? values[3] : 0),
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: values[2] + (skillHOTCheck ? values[4] : 0),
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: skillRef.slot
+                            }
+                        }
+
+                        // let targetTurn = battleData.nameBasedTurns[target];
+                        let healObject = ATKObjects.lynxHOTHealHOTOBJECT;
+                        battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Natasha - E2/Skill HoT turnstart listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    const survivalName = turnLogic[ownerTurn.properName].buffNames.skillHOT;
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    let totalAlliesHit = 0;
+                    for (let allyHit in targetsGotHit) {
+                        const currentAlly = allyTurns[allyHit];
+                        const buffCheck = currentAlly.buffsObject[survivalName];
+                        if (buffCheck) {totalAlliesHit++;}
+                    }
+
+                    if (totalAlliesHit) {
+                        battleActions.updateEnergy(battleData,2 * totalAlliesHit,ownerTurn,false,"Trace: Advance Surveying - Allies hit with Survival Response");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Advance Surveying trace - allies hit with skill buff",
+                "owners": []
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.lynxUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Lynx - Ultimate queued - Ultimate",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const lynxTechnique = this.lynxTechnique ??= logicRef.skillFunctions.lynxTechnique;
+                        lynxTechnique(battleData,"team",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Lynx Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "HealStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want lynx's healing, not anyone else's
+    
+                        const targetTurn = generalInfo.targetTurn;
+                        const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+                        const hpThreshold = 0.50;
+                        
+                        let buffSheet = this.buffSheet ??= {
+                            "stats": [HealingOutgoing], 
+                            [HealingOutgoing]: 0.20,
+                            "source": "E1",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.E1Outgoing,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        };
+    
+                        if (hpRatio <= hpThreshold) {
+                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        }
+                        else {
+                            removeBuff(battleData,ownerTurn,buffSheet);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Lynx E1 <=50%HP Healing bonus",
+                    "owners": []
+                },
+            ],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            // "nextBasicEnhanced": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Restore",
+        "buffNames": {
+            "skillHOT": "Survival Response (Lynx)",
+            "talentHOT": "Lynx Talent Heal-Over-Time",
+            "E1Outgoing": "E1: Morning of Snow Hike",
+            "E4Attack": "E4: Dusk of Warm Campfire",
         },
         "characterValuesBattle": {},
     },

@@ -78,6 +78,8 @@ const maslowFrontFacingTags = {
     "SkillPoints": "Skill Point Modification",
     "TeamCountChange": "Team Count Modification",
     "DamageReduction": "Damage Reduction",
+
+    "Taunt": "Aggro Modification",
 }
 const maslowDisplayTagsReversed = {};
 for (let maslowKey in maslowFrontFacingTags) {
@@ -2146,6 +2148,59 @@ const maslowCharactersAbundance = {
             givesTeam: ["HealingSource","Vuln","EffectRES"],
             wants: [...wantsBreak,...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             wantsTeam: [...wantsBreak,...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
+    "Lynx": {
+        defaultMainSubs: ["SPDFlat","HP%","EffectRES","DamageBreak"],
+        defaultTrashSub: ["HPFlat","DEF%","ATK%","ATKFlat"],
+        0: {
+            gives: [],
+            givesTeam: ["HealingSource","Taunt"],
+            wants: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["HealingSource","Taunt"],
+            wants: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["HealingSource","Taunt"],
+            wants: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["HealingSource","Taunt"],
+            wants: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["HealingSource","Taunt","ATK"],
+            wants: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["HealingSource","Taunt","ATK"],
+            wants: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["HealingSource","Taunt","ATK","EffectRES"],
+            wants: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...isHealer,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             addTeamWant: [],
         },
     },

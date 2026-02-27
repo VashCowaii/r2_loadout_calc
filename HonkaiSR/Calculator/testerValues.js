@@ -175,6 +175,7 @@ const customDisplayValuesLog = {
         {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
     ],
     "Natasha": [],  
+    "Lynx": [], 
 }
 
 const permaConditionsTextLibrary = {
@@ -325,6 +326,13 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Ruan Mei": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Lynx": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -1209,6 +1217,45 @@ const defaultConditions = {
         }
     },
     "Natasha": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": "<",
+                    "array": [
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "currentEnergy"
+                        },
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "maxEnergy"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
+                }
+            ]
+        }
+    },
+    "Lynx": {
         "hasEnhancedState": false,
         "Skill": {
             "type": "AND",

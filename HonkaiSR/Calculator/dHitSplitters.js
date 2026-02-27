@@ -162,6 +162,21 @@ const hitSplitters = {
             }
         ],
     },
+    "Lynx": {//done
+      "basic": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true,
+        },
+      ],
+    },
 
     //HARMONY
     "Robin": {//done
