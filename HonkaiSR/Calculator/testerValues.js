@@ -173,7 +173,7 @@ const customDisplayValuesLog = {
     "Asta": [
         {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true},
         {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
-    ],  
+    ],
     "Natasha": [],  
 }
 
@@ -318,6 +318,13 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Asta": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Ruan Mei": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -1143,6 +1150,25 @@ const defaultConditions = {
                     "state": false
                 }
             ]
+        }
+    },
+    "Ruan Mei": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Buff",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "buffName": "Overtone (Countdown)",
+                    "state": false
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
         }
     },
 

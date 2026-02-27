@@ -13,6 +13,7 @@ global.calcAllowedSet = new Set([
     "Blade",
 
     //HUNT
+    "Topaz & Numby",
 
     //HARMONY
     "Bronya",
@@ -21,11 +22,13 @@ global.calcAllowedSet = new Set([
     "Sunday",
     "Tribbie",
     "Asta",
+    "Ruan Mei",
 
     //ABUNDANCE
     "Huohuo",
     "Gallagher",
     "Natasha",
+    "Lynx",
 
     //PRESERVATION
     "Dan Heng • Permansor Terrae",

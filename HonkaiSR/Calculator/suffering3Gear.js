@@ -2320,8 +2320,6 @@ const turnLogicLightcones = {
                     }
 
                     const allySheet = sourceTurn.pastSelfInMirrorDMGSheet;
-                    allySheet.AVApplied = battleData.sumAV;
-                    // const allyTurns = battleData.nameBasedTurns;
                     const allyPositions = battleData.allyPositions;
                     for (let ally of allyPositions) {
                         allySheet.duration = ally.turnState ? 4 : 3;

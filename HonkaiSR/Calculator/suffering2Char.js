@@ -14566,6 +14566,711 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Ruan Mei": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let actionUsed = false;
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.ruanmeiSkill, target: "self", endTurn: true};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {
+                // let skillRef = skillPathing["Basic ATK"].Monodrama.variant1;
+                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.ruanmeiBasic, target: "enemy", endTurn: true};
+            }
+        },
+        "skillFunctions": {
+            ruanmeiBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.ruanmeiBasicREF ??= ATKObjects["Basic ATK"]["Threading Fragrance"].variant1;
+
+                if (!ATKObjects.ruanmeiBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Ice"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ruanmeiBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ruanmeiBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+
+                // turnLogic[characterName].skillFunctions.bronyaTalent(battleData,sourceTurn);
+            },
+            ruanmeiSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.ruanmeiSkillREF ??= ATKObjects.Skill["String Sings Slow Swirls"].variant1;
+                let values = ATKObjects.ruanmeiSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // console.log(targetTurn)
+                // const targetTurn = battleData.nameBasedTurns.char1;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+
+                if (!ATKObjects.ruanmeiSkillOWNERSHEET) {
+                    const rank = sourceTurn.rank;
+                    const logicRef = turnLogic[characterName];
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.ruanmeiSkillOWNERSHEET = {
+                        "stats": null,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillCountdown,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.overtoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.ruanmeiSkillBUFFSHEET = {
+                        "stats": [DamageAll,DamageBreakEfficiency],
+                        [DamageAll]: 0,
+                        [DamageBreakEfficiency]: values[1],
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillBuff,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+
+                const ownerSheet = ATKObjects.ruanmeiSkillOWNERSHEET;
+                const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
+
+                const countdownName = ownerSheet.buffName;
+                const buffCheck = sourceTurn.buffsObject[countdownName];
+                sourceTurn.battleValues.overtoneIsActive = true;
+
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,ownerSheet);
+
+                const overtoneBEConversion = ATKObjects.ruanBEConversionFunction ??= turnLogic[sourceTurn.properName].skillFunctions.overtoneBEConversion
+                buffSheet[DamageAll] = overtoneBEConversion(battleData,sourceTurn);
+
+                if (!buffCheck) {
+                    const allyTurns = battleData.nameBasedTurns;
+
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                }
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            overtoneBEConversion(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let values = ATKObjects.ruanmeiSkillREFPARAM;
+                const breakEffect = sourceTurn.statTable[DamageBreak];
+                //reader entry shows the conversion takes ALL break effect, even converted, as it pulls from the composite character SUM.
+                const beyondThis = 1.2;
+                const validBE = breakEffect - beyondThis;
+
+                let conversion = 0;
+                const conversionCounts = Math.floor(validBE/0.1);
+                if (validBE > 0) {conversion = Math.min(0.36, conversionCounts * 0.06)}
+
+                return values[0] + conversion;
+            },
+            overtoneExpired(battleData,ruanmeiSlot) {
+                const ruanmeiTurn = battleData.nameBasedTurns[ruanmeiSlot];
+                ruanmeiTurn.battleValues.overtoneIsActive = false;
+
+                const logicRef = turnLogic[ruanmeiTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
+                // const updateBuff = battleActions.updateBuff;
+
+                const allyTurns = battleData.nameBasedTurns;
+                for (let allySlot in allyTurns) {
+                    const currentTurn = allyTurns[allySlot];
+                    removeBuff(battleData,currentTurn,buffSheet);
+                }
+            },
+            ruanmeiUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.ruanmeiUltimateREF ??= ATKObjects.Ultimate["Petals to Stream, Repose in Dream"].variant1;
+
+                const getEnergy = battleActions.updateEnergy;
+                getEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
+
+                if (!ATKObjects.ruanmeiUltimateZoneCountdownSHEET) {
+                    const buffNames = logicRef.buffNames;
+                    const characterName = sourceTurn.properName;
+                    const rank = sourceTurn.rank;
+                    let values = ATKObjects.ruanmeiUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    // "zoneDebuff": "Guess Who Lives Here",
+                    // "zoneCountdown": "Guess Who Lives Here (Countdown)",
+                    ATKObjects.ruanmeiUltimateZoneBuffSHEET = {
+                        "stats": [ResistanceAllPEN,DEFShredAll],
+                        [ResistanceAllPEN]: values[0],
+                        [DEFShredAll]: rank >= 1 ? 0.20 : 0,
+                        "source": "Ultimate Zone",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.zoneBuff,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    ATKObjects.ruanmeiUltimateZoneCountdownSHEET = {
+                        "stats": null,
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.zoneCountdown,
+                        "duration": 2 + (rank >= 6 ? 1 : 0),
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.ultimateZoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                }
+
+                const countdownSheet = ATKObjects.ruanmeiUltimateZoneCountdownSHEET;
+                const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,countdownSheet);
+                sourceTurn.battleValues.ruanmeiZoneActive = true;
+
+                if (!buffCheck) {
+                    //only if the countdown owner, tribbie, does NOT already have the countdown active, then apply the debuffs to all enemies
+                    //this is bc we have an enemyCreated listener that looks for enemies that are added while the field is active
+                    //and bc of that, along with the fact that the debuff never expires unless the zone does, we don't need reup the duration
+
+                    const buffSheet = ATKObjects.ruanmeiUltimateZoneBuffSHEET;
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                }
+
+                getEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            ultimateZoneExpired(battleData,ruanmeiSlot) {
+                const ruanmeiTurn = battleData.nameBasedTurns[ruanmeiSlot];
+                ruanmeiTurn.battleValues.ruanmeiZoneActive = false;
+
+                const logicRef = turnLogic[ruanmeiTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.ruanmeiUltimateZoneBuffSHEET;
+                const allyTurns = battleData.nameBasedTurns;
+
+                for (let allySlot in allyTurns) {
+                    const currentTurn = allyTurns[allySlot];
+                    removeBuff(battleData,currentTurn,buffSheet);
+                }
+            },
+            ruanmeiTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.ruanmeiTechREF ??= ATKObjects.Technique["Silken Serenade"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                const ruanmeiSkill = ATKObjects.ruanmeiSkill ??= turnLogic[sourceTurn.properName].skillFunctions.ruanmeiSkill;
+                ruanmeiSkill(battleData,"self",sourceTurn)
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    // let sourceTurn = generalInfo.sourceTurn;
+
+                    if (ownerTurn.turnState) {
+                        let amount = 5;
+                        battleActions.updateEnergy(battleData,amount,ownerTurn,false,"Days Wane, Thoughts Wax");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Days Wane, Thoughts Wax - turn start regen",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatBreak",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName || !sourceTurn.battleValues.overtoneIsActive) {return;}
+                    //ruan mei's skill dmg conversion from BE IS dynamic, so while overtone is active, when ruan gets
+                    //more break effect we need to potentially redo the buff
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
+                    const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+
+                    const currentBonus = buffCheck?.[DamageAll] ?? 0;
+                    const accurateBonus = (this.ruanBEConversionFunction ??= turnLogic[sourceTurn.properName].skillFunctions.overtoneBEConversion)(battleData,sourceTurn);
+
+                    if (currentBonus != accurateBonus) {
+                        buffSheet[DamageAll] = accurateBonus;
+
+                        const allyTurns = battleData.nameBasedTurns;
+
+                        const updateBuff = battleActions.updateBuff;
+                        for (let allySlot in allyTurns) {
+                            const currentTurn = allyTurns[allySlot];
+                            removeBuff(battleData,currentTurn,buffSheet,true);
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Overtone reapplication when ruan gains BE",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const buffNames = logicRef.buffNames;
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [DamageBreak],
+                        [DamageBreak]: 0.20,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.traceBE,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Inert Respiration trace battlestart break effect",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // const logicRef = turnLogic[ownerTurn.properName];
+                    
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    const buffNames = logicRef.buffNames;
+
+                    let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
+                    let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [SPDP],
+                        [SPDP]: values[0],
+                        "statsOnHit": null,
+                        "source": "Talent",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.talentSPD,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        if (currentTurn.properName === ownerTurn.properName) {continue;}
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Talent battlestart SPD bonus for allies other than ruan",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "BrokeEnemyWeakness",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const targetTurn = generalInfo.targetTurn;
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
+                    let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    const breakMulti = values[1] + (ownerTurn.rank >= 6 ? 2 : 0);
+                    const breakObject = generalInfo.breakObject;
+                    const tags = [generalInfo[ownerTurn.element]];
+                    const isBroken =  generalInfo.isBroken;
+
+                    const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
+                        ATKObject: {actionTags: ["Break"]}
+                    }
+
+                    battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
+
+                    // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags,isBroken,generalInfo});
+                },
+                "target": "self",
+                "listenerName": "Talent break dmg on break instance",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy || !ownerTurn.battleValues.ruanmeiZoneActive) {return;}
+                    // const logicRef = turnLogic[ownerTurn.properName];
+                    // const buffNames = logicRef.buffNames;
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    
+                    if (!ATKObjects.ruanmeiUltimateBloomSheet) {
+                        const characterName = ownerTurn.properName;
+                        const logicRef = turnLogic[characterName];
+                        const buffNames = logicRef.buffNames;
+                        
+                        // const rank = sourceTurn.rank;
+                        // let values = sourceTurn.tribbieUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                        // "zoneDebuff": "Guess Who Lives Here",
+                        // "zoneCountdown": "Guess Who Lives Here (Countdown)",
+                        ATKObjects.ruanmeiUltimateBloomSheet = {
+                            "stats": null,
+                            "source": "Ultimate Zone",
+                            "sourceOwner": characterName,
+                            "buffName": buffNames.zoneDebuff,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "isDebuff": true,
+                        }
+                    }
+
+                    const debuffSheet = ATKObjects.ruanmeiUltimateBloomSheet;
+
+
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let enemySlot in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemySlot];
+                        if (currentEnemy.ruanmeiWaitingToRecover) {continue;}
+                        updateBuff(battleData,currentEnemy,debuffSheet);
+                        currentEnemy.ruanmeiWaitingToRecover = true;
+                        currentEnemy.ruanmeiWaitingToDelay = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Zone active - ally attack thanataplum application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "RecoveringFromBreak",
+                condition(battleData,generalInfo) {
+                    // poke("RecoveringFromBreak", battleData, {sourceTurn});
+
+                    // currentEnemy.ruanmeiWaitingToRecover = true;
+                    // currentEnemy.ruanmeiWaitingToDelay = true;
+
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+
+                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!sourceTurn.ruanmeiWaitingToDelay) {return;}
+
+                    const debuffSheet = ATKObjects.ruanmeiUltimateBloomSheet;
+                    const buffCheck = sourceTurn.buffsObject[debuffSheet.buffName];
+
+                    if (!buffCheck) {return;}
+
+                    removeBuff(battleData,sourceTurn,buffCheck);
+
+                    let values = ATKObjects.ruanmeiUltimateREFVALUES;
+                    const breakMulti = values[4];
+                    const breakObject = {
+                        toughnessBase:0,
+                        element:ownerTurn.element,
+                        rawReduction:0
+                    };
+                    const tags = [generalInfo[ownerTurn.element]];
+                    // const isBroken =  generalInfo.isBroken;
+                    //if the enemy is attemption to recover from break, it's bc they were already broken
+                    //we can just pass through true here on the break instance and that's fine
+
+                    const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
+                        ATKObject: {actionTags: ["Break"]}
+                    }
+
+                    battleActions.getBreakDamage(battleData,breakObject,ownerTurn,sourceTurn,tags,true,genInfoNew,breakMulti);
+
+                    const breakEffect = ownerTurn.statTable[DamageBreak];
+                    const delayValue = -((breakEffect * values[3]) + values[4]);
+                    sourceTurn.AV = 0;
+                    battleActions.actionAdvance(delayValue,sourceTurn,battleData,"Thanataplum Rebloom");
+                    sourceTurn.ruanmeiWaitingToDelay = false;
+                    sourceTurn.turnShouldEnd = true;
+                },
+                "target": "self",
+                "listenerName": "Zone active - enemy attempted to recover from weakness break",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "RecoveringFromBreak",
+                condition(battleData,generalInfo) {
+                    // poke("RecoveredFromBreak", battleData, {sourceTurn});
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    sourceTurn.ruanmeiWaitingToRecover = false;
+                },
+                "target": "self",
+                "listenerName": "Zone active - enemy recovered fully from weakness break",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+                    
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck ? checkUlty(battleData,ownerTurn) : false;
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Ruan Mei - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const ruanmeiTechnique = this.ruanmeiTechnique ??= logicRef.skillFunctions.ruanmeiTechnique;
+                        ruanmeiTechnique(battleData,"self",ownerTurn)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Ruan Mei Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [
+                {
+                    "trigger": "AllyDMGStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        const targetTurn = generalInfo.targetTurn;
+
+                        if (!this.ruanmeiE2ATKSHEET) {
+                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                            this.ruanmeiE2ATKSHEET = {
+                                "stats": [ATKP],
+                                [ATKP]: 0.40,
+                                "source": "E2",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffNames.e2ATK,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                        }
+                        const buffSheet = this.ruanmeiE2ATKSHEET;
+                        const buffName = buffSheet.buffName;
+                        const buffCheck = sourceTurn.buffsObject[buffName];
+
+                        //TODO: if we can ever check E2, I need to know whether the ATK buff would technically apply before or after the break dmg
+                        //bc in practice the target would be designated as broken at that point
+                        //why does it matter? someone like firefly, who scales break effect off of ATK
+                        const brokenCheck = targetTurn.isBroken;
+                        const updateBuff = battleActions.updateBuff;
+
+                        if (brokenCheck) {
+                            if (buffCheck) {return;}
+                            else {updateBuff(battleData,sourceTurn,buffSheet);}
+                        }
+                        else {
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
+                            else {return;}
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Reedside Promenade - ally dealing dmg listner",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [
+                {
+                    "trigger": "BrokeEnemyWeakness",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        // const logicRef = turnLogic[ownerTurn.properName];
+                        // const buffNames = logicRef.buffNames;
+                        
+                        
+                        if (!this.ruanmeiE4BESHEET) {
+                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                            this.ruanmeiE4BESHEET = {
+                                "stats": [DamageBreak],
+                                [DamageBreak]: 1,
+                                "source": "E4",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffNames.e4BE,
+                                "duration": 3,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+                        const buffSheet = this.ruanmeiE4BESHEET;
+                        buffSheet.duration = ownerTurn.turnState ? 4 : 3;
+
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "E4 weakness broken listener",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "listenersToInjectLater": {},
+        "characterValues": {
+            "overtoneIsActive": false,
+            "ruanmeiZoneActive": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Enhance",
+        "buffNames": {
+            "traceBE": "Inert Respiration",
+            "skillCountdown": "Overtone (Countdown)",
+            "skillBuff": "Overtone (DMG)",
+            "talentSPD": "Somatotypical Helix",
+            "zoneCountdown": "Petals to Stream, Repose in Dream (Countdown)",
+            "zoneBuff": "Petals to Stream, Repose in Dream (Ally)",
+            "zoneDebuff": "Thanatoplum Rebloom",
+            "e2ATK": "E2: Reedside Promenade",
+            "e4BE": "E4: Chatoyant Éclat",
+        },
+        "characterValuesBattle": {},
+    },
     
     //Destruction
     "Saber": {

@@ -4268,6 +4268,1454 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Lynx": {
+    "internalID": 1110,
+    "name": "Lynx",
+    "path": "Abundance",
+    "element": "Quantum",
+    "rarity": 4,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 493.91999999999996,
+      "DEFBase": 551.25,
+      "HPBase": 1058.4,
+      "SPDBase": 100,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "111001",
+        "name": "Morning of Snow Hike",
+        "rank": 1,
+        "desc": "When healing allies with HP percentage equal to or lower than 50%, Lynx's Outgoing Healing increases by 20%. This effect also works on continuous healing.",
+        "icon": "icon/skill/1110_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.2
+        ]
+      },
+      {
+        "id": "111002",
+        "name": "Noon of Portable Furnace",
+        "rank": 2,
+        "desc": "A target with \"Survival Response\" can resist debuff application for 1 time(s).",
+        "icon": "icon/skill/1110_rank2.png",
+        "paramsEido": [
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "111003",
+        "name": "Afternoon of Avalanche Beacon",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1110_skill.png"
+      },
+      {
+        "id": "111004",
+        "name": "Dusk of Warm Campfire",
+        "rank": 4,
+        "desc": "When \"Survival Response\" is gained, increases the target's ATK by an amount equal to 3.0% of Lynx's Max HP for 1 turn(s).",
+        "icon": "icon/skill/1110_rank4.png",
+        "paramsEido": [
+          0.03,
+          1
+        ]
+      },
+      {
+        "id": "111005",
+        "name": "Night of Aurora Tea",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1110_ultimate.png"
+      },
+      {
+        "id": "111006",
+        "name": "Dawn of Explorers' Chart",
+        "rank": 6,
+        "desc": "Additionally boosts the Max HP increasing effect of \"Survival Response\" by an amount equal to 6.0% of Lynx's Max HP and increases Effect RES by 30%.",
+        "icon": "icon/skill/1110_rank6.png",
+        "paramsEido": [
+          0.06,
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Ice Crampon Technique": {
+          "variant1": {
+            "skillID": 111001,
+            "trigger": "Skill01",
+            "name": "Ice Crampon Technique",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of this character's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Lynx_00_Skill01_Phase01",
+              "Avatar_Lynx_00_Skill01_Phase02",
+              "Avatar_Lynx_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Salted Camping Cans": {
+          "variant1": {
+            "skillID": 111002,
+            "trigger": "Skill02",
+            "name": "Salted Camping Cans",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Applies \"Survival Response\" to a single target ally and increases their Max HP by #1[f1]% of Lynx's Max HP plus #2[i]. If the target ally is a character on the Path of Destruction or Preservation, the chance of them being attacked by enemies will greatly increase. \"Survival Response\" lasts for #3[i] turn(s).\\nRestores the target's HP by #4[f1]% of Lynx's Max HP plus #5[i].",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.05,
+                50,
+                2,
+                0.08,
+                80,
+                5
+              ],
+              "2": [
+                0.052500002,
+                80,
+                2,
+                0.085,
+                128,
+                5
+              ],
+              "3": [
+                0.055,
+                102.5,
+                2,
+                0.09,
+                164,
+                5
+              ],
+              "4": [
+                0.0575,
+                125,
+                2,
+                0.095,
+                200,
+                5
+              ],
+              "5": [
+                0.06,
+                140,
+                2,
+                0.1,
+                224,
+                5
+              ],
+              "6": [
+                0.0625,
+                155,
+                2,
+                0.104,
+                248,
+                5
+              ],
+              "7": [
+                0.065625,
+                166.25,
+                2,
+                0.108,
+                266,
+                5
+              ],
+              "8": [
+                0.06875,
+                177.5,
+                2,
+                0.112,
+                284,
+                5
+              ],
+              "9": [
+                0.071875,
+                188.75,
+                2,
+                0.116,
+                302,
+                5
+              ],
+              "10": [
+                0.075,
+                200,
+                2,
+                0.12,
+                320,
+                5
+              ],
+              "11": [
+                0.0775,
+                211.25,
+                2,
+                0.124,
+                338,
+                5
+              ],
+              "12": [
+                0.08,
+                222.5,
+                2,
+                0.128,
+                356,
+                5
+              ],
+              "13": [
+                0.0825,
+                233.75,
+                2,
+                0.132,
+                374,
+                5
+              ],
+              "14": [
+                0.085,
+                245,
+                2,
+                0.13599999,
+                392,
+                5
+              ],
+              "15": [
+                0.0875,
+                256.25,
+                2,
+                0.14,
+                410,
+                5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lynx_00_Skill02_Phase01",
+              "Avatar_Lynx_00_Skill02_Phase02",
+              "Avatar_Lynx_00_Skill02_Camera_Self",
+              "Avatar_Lynx_00_Skill02_Camera_Other"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Snowfield First Aid": {
+          "variant1": {
+            "skillID": 111003,
+            "trigger": "Skill03",
+            "name": "Snowfield First Aid",
+            "type": "Restore",
+            "slot": "Ultimate",
+            "desc": "Dispels #1[i] debuff(s) from all allies and immediately restores their respective HP by an amount equal to #2[f1]% of Lynx's Max HP plus #3[i].",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.09,
+                90
+              ],
+              "2": [
+                1,
+                0.095625,
+                144
+              ],
+              "3": [
+                1,
+                0.10125,
+                184.5
+              ],
+              "4": [
+                1,
+                0.106875,
+                225
+              ],
+              "5": [
+                1,
+                0.1125,
+                252
+              ],
+              "6": [
+                1,
+                0.117,
+                279
+              ],
+              "7": [
+                1,
+                0.1215,
+                299.25
+              ],
+              "8": [
+                1,
+                0.126,
+                319.5
+              ],
+              "9": [
+                1,
+                0.1305,
+                339.75
+              ],
+              "10": [
+                1,
+                0.135,
+                360
+              ],
+              "11": [
+                1,
+                0.1395,
+                380.25
+              ],
+              "12": [
+                1,
+                0.144,
+                400.5
+              ],
+              "13": [
+                1,
+                0.1485,
+                420.75
+              ],
+              "14": [
+                1,
+                0.153,
+                441
+              ],
+              "15": [
+                1,
+                0.1575,
+                461.25
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lynx_00_Skill03_EnterReady",
+              "Avatar_Lynx_00_Skill03_Phase01",
+              "Avatar_Lynx_00_Skill03_Phase02",
+              "Avatar_Lynx_00_Skill03_Camera"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Outdoor Survival Experience": {
+          "variant1": {
+            "skillID": 111004,
+            "trigger": "SkillP01",
+            "name": "Outdoor Survival Experience",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "When using Lynx's Skill or Ultimate, applies continuous healing to the target ally for #1[i] turn(s), restoring the target ally's HP by an amount equal to #2[f1]% of Lynx's Max HP plus #3[i] at the start of each turn. If the target has \"Survival Response,\" the continuous healing effect additionally restores HP by an amount equal to #4[f1]% of Lynx's Max HP plus #5[i].",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.024,
+                24,
+                0.03,
+                30
+              ],
+              "2": [
+                2,
+                0.0255,
+                38.4,
+                0.031875,
+                48
+              ],
+              "3": [
+                2,
+                0.026999999,
+                49.2,
+                0.03375,
+                61.5
+              ],
+              "4": [
+                2,
+                0.0285,
+                60,
+                0.035625,
+                75
+              ],
+              "5": [
+                2,
+                0.03,
+                67.2,
+                0.0375,
+                84
+              ],
+              "6": [
+                2,
+                0.0312,
+                74.4,
+                0.039,
+                93
+              ],
+              "7": [
+                2,
+                0.0324,
+                79.8,
+                0.0405,
+                99.75
+              ],
+              "8": [
+                2,
+                0.0336,
+                85.2,
+                0.042,
+                106.5
+              ],
+              "9": [
+                2,
+                0.0348,
+                90.6,
+                0.0435,
+                113.25
+              ],
+              "10": [
+                2,
+                0.036,
+                96,
+                0.044999998,
+                120
+              ],
+              "11": [
+                2,
+                0.0372,
+                101.4,
+                0.0465,
+                126.75
+              ],
+              "12": [
+                2,
+                0.038399998,
+                106.8,
+                0.048,
+                133.5
+              ],
+              "13": [
+                2,
+                0.0396,
+                112.2,
+                0.0495,
+                140.25
+              ],
+              "14": [
+                2,
+                0.0408,
+                117.6,
+                0.051,
+                147
+              ],
+              "15": [
+                2,
+                0.042,
+                123,
+                0.052500002,
+                153.75
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lynx_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Chocolate Energy Bar": {
+          "variant1": {
+            "skillID": 111007,
+            "trigger": "SkillMaze",
+            "name": "Chocolate Energy Bar",
+            "type": "Restore",
+            "slot": "Technique",
+            "desc": "After Lynx uses her Technique, at the start of the next battle, all allies are granted her Talent's continuous healing effect, lasting for #1[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Restore",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Lynx_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1110_basic_atk.png",
+        "skillRef": {
+          "skillName": "Ice Crampon Technique",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1110_skill.png",
+        "skillRef": {
+          "skillName": "Salted Camping Cans",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1110_ultimate.png",
+        "skillRef": {
+          "skillName": "Snowfield First Aid",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1110_talent.png",
+        "skillRef": {
+          "skillName": "Outdoor Survival Experience",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1110_technique.png",
+        "skillRef": {
+          "skillName": "Chocolate Energy Bar",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Advance Surveying",
+        "icon": "icon/skill/1110_skilltree1.png",
+        "desc": "After a target with \"Survival Response\" is hit, Lynx regenerates #1[i] Energy immediately.",
+        "params": [
+          2
+        ]
+      },
+      "Point07": {
+        "name": "Exploration Techniques",
+        "icon": "icon/skill/1110_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Survival in the Extreme",
+        "icon": "icon/skill/1110_skilltree3.png",
+        "desc": "Extends the duration of the continuous healing effect granted by Talent for #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1110.png",
+    "preview": "image/character_preview/1110.png",
+    "portrait": "image/character_portrait/1110.png",
+    "bannerOffsets": [
+      -44,
+      42,
+      0.56,
+      -44,
+      42,
+      0.56,
+      -44,
+      42,
+      0.56
+    ],
+    "isBuffed": false
+  },
+  "Topaz & Numby": {
+    "internalID": 1112,
+    "name": "Topaz & Numby",
+    "path": "The Hunt",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 412.33500000000004,
+      "HPBase": 931.392,
+      "SPDBase": 110,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "111201",
+        "name": "Future Market",
+        "rank": 1,
+        "desc": "When enemies afflicted with \"Proof of Debt\" receive Follow-Up ATKs, they will enter the \"Debtor\" state. This can take effect only once within a single attack.\nThe \"Debtor\" state increases the CRIT DMG of Follow-Up ATKs inflicted on the enemy target by 25%, stacking up to 2 time(s). When \"Proof of Debt\" is removed, the \"Debtor\" state is also removed.",
+        "icon": "icon/skill/1112_rank1.png",
+        "paramsEido": [
+          0.25,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "111202",
+        "name": "Bona Fide Acquisition",
+        "rank": 2,
+        "desc": "After Numby takes action and launches an attack, Topaz regenerates 5 Energy.",
+        "icon": "icon/skill/1112_rank2.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "111203",
+        "name": "Seize the Big and Free the Small",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1112_skill.png"
+      },
+      {
+        "id": "111204",
+        "name": "Agile Operation",
+        "rank": 4,
+        "desc": "After Numby's turn begins, Topaz's action advances by 20%.",
+        "icon": "icon/skill/1112_rank4.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "111205",
+        "name": "Inflationary Demand",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1112_ultimate.png"
+      },
+      {
+        "id": "111206",
+        "name": "Incentive Mechanism",
+        "rank": 6,
+        "desc": "Numby's attack count during the \"Windfall Bonanza!\" state increases by 1, and its Fire RES PEN increases by 10% when it attacks.",
+        "icon": "icon/skill/1112_rank6.png",
+        "paramsEido": [
+          1,
+          0.1
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Deficit...": {
+          "variant1": {
+            "skillID": 111201,
+            "trigger": "Skill01",
+            "name": "Deficit...",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Topaz's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Topaz_00_Skill01_Camera",
+              "Avatar_Topaz_00_Skill01_Phase01",
+              "Avatar_Topaz_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Difficulty Paying?": {
+          "variant1": {
+            "skillID": 111202,
+            "trigger": "Skill02",
+            "name": "Difficulty Paying?",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Inflicts one designated enemy target with a \"Proof of Debt\" state, increasing the Follow-Up ATK DMG it receives by #2[i]%. \"Proof of Debt\" only takes effect on the most recent target it is applied to. If there are no enemies inflicted with \"Proof of Debt\" on the field when an ally's turn starts or when an ally takes action, Topaz will inflict a random enemy with \"Proof of Debt.\"\\nNumby deals Fire DMG equal to #1[i]% of Topaz's ATK to this target. Using this Skill to deal DMG is considered as launching a Follow-Up ATK.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.75,
+                0.25
+              ],
+              "2": [
+                0.825,
+                0.275
+              ],
+              "3": [
+                0.9,
+                0.3
+              ],
+              "4": [
+                0.975,
+                0.325
+              ],
+              "5": [
+                1.05,
+                0.35
+              ],
+              "6": [
+                1.125,
+                0.375
+              ],
+              "7": [
+                1.21875,
+                0.40625
+              ],
+              "8": [
+                1.3125,
+                0.4375
+              ],
+              "9": [
+                1.40625,
+                0.46875
+              ],
+              "10": [
+                1.5,
+                0.5
+              ],
+              "11": [
+                1.575,
+                0.525
+              ],
+              "12": [
+                1.65,
+                0.55
+              ],
+              "13": [
+                1.725,
+                0.575
+              ],
+              "14": [
+                1.8,
+                0.6
+              ],
+              "15": [
+                1.875,
+                0.625
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Topaz_00_Skill02_Camera",
+              "Avatar_Topaz_00_Skill02_Phase01",
+              "Avatar_Topaz_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Turn a Profit!": {
+          "variant1": {
+            "skillID": 111203,
+            "trigger": "Skill03",
+            "name": "Turn a Profit!",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Numby enters the Windfall Bonanza! state and its DMG multiplier increases by #1[i]% and CRIT DMG increases by #2[i]%. Also, when enemies with Proof of Debt are hit by an ally's Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by #3[i]%. Numby exits the Windfall Bonanza! state after using #4[i] attacks.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.75,
+                0.125,
+                0.5,
+                2
+              ],
+              "2": [
+                0.825,
+                0.1375,
+                0.5,
+                2
+              ],
+              "3": [
+                0.9,
+                0.15,
+                0.5,
+                2
+              ],
+              "4": [
+                0.975,
+                0.1625,
+                0.5,
+                2
+              ],
+              "5": [
+                1.05,
+                0.175,
+                0.5,
+                2
+              ],
+              "6": [
+                1.125,
+                0.1875,
+                0.5,
+                2
+              ],
+              "7": [
+                1.21875,
+                0.203125,
+                0.5,
+                2
+              ],
+              "8": [
+                1.3125,
+                0.21875,
+                0.5,
+                2
+              ],
+              "9": [
+                1.40625,
+                0.234375,
+                0.5,
+                2
+              ],
+              "10": [
+                1.5,
+                0.25,
+                0.5,
+                2
+              ],
+              "11": [
+                1.575,
+                0.2625,
+                0.5,
+                2
+              ],
+              "12": [
+                1.65,
+                0.275,
+                0.5,
+                2
+              ],
+              "13": [
+                1.725,
+                0.2875,
+                0.5,
+                2
+              ],
+              "14": [
+                1.8,
+                0.3,
+                0.5,
+                2
+              ],
+              "15": [
+                1.875,
+                0.3125,
+                0.5,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Topaz_00_Skill03_Camera",
+              "Avatar_Topaz_00_Skill03_EnterReady",
+              "Avatar_Topaz_00_Skill03_Phase01",
+              "Avatar_Topaz_00_Skill03_Phase02",
+              "Avatar_Klara_00_Skill03_EnterReady",
+              "Avatar_Klara_00_Skill03_Phase01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Trotter Market!?": {
+          "variant1": {
+            "skillID": 111204,
+            "trigger": "SkillP01",
+            "name": "Trotter Market!?",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "Summons Numby at the start of battle. Numby has #1[i] SPD by default. When taking action, Numby launches Follow-Up ATKs on one enemy target afflicted with \"Proof of Debt,\" dealing Fire DMG equal to #2[i]% of Topaz's ATK.\\nWhen enemies afflicted with \"Proof of Debt\" receive an ally's Follow-Up ATKs, Numby's action is Advanced Forward by #3[i]%. The action Advance Forward effect cannot be triggered during Numby's own turn.\\nWhen Topaz is downed, Numby disappears.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                80,
+                0.75,
+                0.5
+              ],
+              "2": [
+                80,
+                0.825,
+                0.5
+              ],
+              "3": [
+                80,
+                0.9,
+                0.5
+              ],
+              "4": [
+                80,
+                0.975,
+                0.5
+              ],
+              "5": [
+                80,
+                1.05,
+                0.5
+              ],
+              "6": [
+                80,
+                1.125,
+                0.5
+              ],
+              "7": [
+                80,
+                1.21875,
+                0.5
+              ],
+              "8": [
+                80,
+                1.3125,
+                0.5
+              ],
+              "9": [
+                80,
+                1.40625,
+                0.5
+              ],
+              "10": [
+                80,
+                1.5,
+                0.5
+              ],
+              "11": [
+                80,
+                1.575,
+                0.5
+              ],
+              "12": [
+                80,
+                1.65,
+                0.5
+              ],
+              "13": [
+                80,
+                1.725,
+                0.5
+              ],
+              "14": [
+                80,
+                1.8,
+                0.5
+              ],
+              "15": [
+                80,
+                1.875,
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Topaz_00_PassiveSkill01",
+              "Avatar_Topaz_Rank04_ReduceDelay",
+              "Avatar_Topaz_00_BE_NormalAttackDamage",
+              "Avatar_Topaz_00_BE_UltraAttackDamage"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Explicit Subsidy": {
+          "variant1": {
+            "skillID": 111207,
+            "trigger": "SkillMaze",
+            "name": "Explicit Subsidy",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "Summons Numby when Topaz enters the overworld. Numby will automatically search for Basic Treasures and Trotters within a set radius.\\nUsing her Technique will regenerate #1[i] Energy for Topaz after Numby's first attack in the next battle.\\nIf Topaz is still in the team after using her Technique and defeating overworld enemies, a small bonus amount of credits will be added to the earned credits. A maximum of #2[i] bonus credits can be received per calendar day.\\nAfter using her Technique and defeating enemies in Simulated Universe or Divergent Universe, additionally receive a small amount of Cosmic Fragments with a small chance to obtain 1 random Curio.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                60,
+                10000
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Topaz_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1112_basic_atk.png",
+        "skillRef": {
+          "skillName": "Deficit...",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1112_skill.png",
+        "skillRef": {
+          "skillName": "Difficulty Paying?",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1112_ultimate.png",
+        "skillRef": {
+          "skillName": "Turn a Profit!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1112_talent.png",
+        "skillRef": {
+          "skillName": "Trotter Market!?",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1112_technique.png",
+        "skillRef": {
+          "skillName": "Explicit Subsidy",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Overdraft",
+        "icon": "icon/skill/1112_skilltree1.png",
+        "desc": "When Topaz uses Basic ATK to deal DMG, it is considered as a Follow-Up ATK.",
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Financial Turmoil",
+        "icon": "icon/skill/1112_skilltree2.png",
+        "desc": "Increases Topaz & Numby's DMG dealt to enemy targets with Fire Weakness by #1[i]%.",
+        "params": [
+          0.15
+        ]
+      },
+      "Point08": {
+        "name": "Stonks Market",
+        "icon": "icon/skill/1112_skilltree3.png",
+        "desc": "After Numby uses an attack while in the Windfall Bonanza! state, Topaz additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1112.png",
+    "preview": "image/character_preview/1112.png",
+    "portrait": "image/character_portrait/1112.png",
+    "bannerOffsets": [
+      -1,
+      -63,
+      0.55,
+      -1,
+      -63,
+      0.55,
+      -1,
+      -63,
+      0.55
+    ],
+    "isBuffed": false
+  },
   "Tingyun": {
     "internalID": 1202,
     "name": "Tingyun",
@@ -8036,6 +9484,714 @@ let characters = {
       205.4,
       -1.5,
       0.74
+    ],
+    "isBuffed": false
+  },
+  "Ruan Mei": {
+    "internalID": 1303,
+    "name": "Ruan Mei",
+    "path": "Harmony",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 659.7360000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1086.624,
+      "SPDBase": 104,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130301",
+        "name": "Neuronic Embroidery",
+        "rank": 1,
+        "desc": "While the Ultimate's Zone is deployed, the DMG dealt by all allies ignores 20% of the target's DEF.",
+        "icon": "icon/skill/1303_rank1.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "130302",
+        "name": "Reedside Promenade",
+        "rank": 2,
+        "desc": "While Ruan Mei is on the field, all allies increase their ATK by 40% when dealing DMG to enemies that are Weakness Broken.",
+        "icon": "icon/skill/1303_rank2.png",
+        "paramsEido": [
+          0.4
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          }
+        }
+      },
+      {
+        "id": "130303",
+        "name": "Viridescent Pirouette",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1303_ultimate.png"
+      },
+      {
+        "id": "130304",
+        "name": "Chatoyant Éclat",
+        "rank": 4,
+        "desc": "When an enemy target's Weakness is Broken, Ruan Mei's Break Effect increases by 100% for 3 turn(s).",
+        "icon": "icon/skill/1303_rank4.png",
+        "paramsEido": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "130305",
+        "name": "Languid Barrette",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1303_skill.png"
+      },
+      {
+        "id": "130306",
+        "name": "Sash Cascade",
+        "rank": 6,
+        "desc": "Extends the duration of the Ultimate's Zone by 1 turn(s). The Talent's Break DMG multiplier additionally increases by 200%.",
+        "icon": "icon/skill/1303_rank6.png",
+        "paramsEido": [
+          1,
+          2
+        ],
+        "extraEffects": {
+          "Break DMG": {
+            "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Threading Fragrance": {
+          "variant1": {
+            "skillID": 130301,
+            "trigger": "Skill01",
+            "name": "Threading Fragrance",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Ruan Mei's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_Skill01_Camera",
+              "Avatar_RuanMei_Skill01_Phase01",
+              "Avatar_RuanMei_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "String Sings Slow Swirls": {
+          "variant1": {
+            "skillID": 130302,
+            "trigger": "Skill02",
+            "name": "String Sings Slow Swirls",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "After using her Skill, Ruan Mei gains Overtone, lasting for #3[i] turn(s). This duration decreases by 1 at the start of Ruan Mei's every turn. When Ruan Mei has Overtone, all allies' DMG increases by #1[f1]% and Weakness Break Efficiency increases by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.16,
+                0.5,
+                3
+              ],
+              "2": [
+                0.176,
+                0.5,
+                3
+              ],
+              "3": [
+                0.192,
+                0.5,
+                3
+              ],
+              "4": [
+                0.208,
+                0.5,
+                3
+              ],
+              "5": [
+                0.224,
+                0.5,
+                3
+              ],
+              "6": [
+                0.24,
+                0.5,
+                3
+              ],
+              "7": [
+                0.26,
+                0.5,
+                3
+              ],
+              "8": [
+                0.28,
+                0.5,
+                3
+              ],
+              "9": [
+                0.3,
+                0.5,
+                3
+              ],
+              "10": [
+                0.32,
+                0.5,
+                3
+              ],
+              "11": [
+                0.336,
+                0.5,
+                3
+              ],
+              "12": [
+                0.352,
+                0.5,
+                3
+              ],
+              "13": [
+                0.368,
+                0.5,
+                3
+              ],
+              "14": [
+                0.384,
+                0.5,
+                3
+              ],
+              "15": [
+                0.4,
+                0.5,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_Skill02_Camera",
+              "Avatar_RuanMei_Skill02_Phase01",
+              "Avatar_RuanMei_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Petals to Stream, Repose in Dream": {
+          "variant1": {
+            "skillID": 130303,
+            "trigger": "Skill03",
+            "name": "Petals to Stream, Repose in Dream",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Ruan Mei deploys a Zone that lasts for #2[i] turns. The Zone's duration decreases by 1 at the start of her turn.\\nWhile inside the Zone, all allies' All-Type RES PEN increases by #1[f1]% and their attacks apply Thanatoplum Rebloom to the enemies hit.\\nWhen these enemies attempt to recover from Weakness Break, Thanatoplum Rebloom is triggered, extending the duration of their Weakness Break, delaying their action by an amount equal to #3[i]% of Ruan Mei's Break Effect plus #4[i]%, and dealing Break DMG equal to #5[i]% of Ruan Mei's Ice Break DMG.\\nEnemy targets cannot have Thanatoplum Rebloom re-applied to them until they recover from Weakness Break.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                2,
+                0.2,
+                0.1,
+                0.3
+              ],
+              "2": [
+                0.16,
+                2,
+                0.2,
+                0.1,
+                0.32
+              ],
+              "3": [
+                0.17,
+                2,
+                0.2,
+                0.1,
+                0.34
+              ],
+              "4": [
+                0.18,
+                2,
+                0.2,
+                0.1,
+                0.36
+              ],
+              "5": [
+                0.19,
+                2,
+                0.2,
+                0.1,
+                0.38
+              ],
+              "6": [
+                0.2,
+                2,
+                0.2,
+                0.1,
+                0.4
+              ],
+              "7": [
+                0.2125,
+                2,
+                0.2,
+                0.1,
+                0.425
+              ],
+              "8": [
+                0.225,
+                2,
+                0.2,
+                0.1,
+                0.45
+              ],
+              "9": [
+                0.2375,
+                2,
+                0.2,
+                0.1,
+                0.475
+              ],
+              "10": [
+                0.25,
+                2,
+                0.2,
+                0.1,
+                0.5
+              ],
+              "11": [
+                0.26,
+                2,
+                0.2,
+                0.1,
+                0.52
+              ],
+              "12": [
+                0.27,
+                2,
+                0.2,
+                0.1,
+                0.54
+              ],
+              "13": [
+                0.28,
+                2,
+                0.2,
+                0.1,
+                0.56
+              ],
+              "14": [
+                0.29,
+                2,
+                0.2,
+                0.1,
+                0.58
+              ],
+              "15": [
+                0.3,
+                2,
+                0.2,
+                0.1,
+                0.6
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_Skill03_Camera",
+              "Avatar_RuanMei_Skill03_EnterReady",
+              "Avatar_RuanMei_Skill03_Phase01",
+              "Avatar_RuanMei_Skill03_Phase02",
+              "Avatar_RuanMei_TriggerImprintEffect"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              },
+              "Break DMG": {
+                "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Somatotypical Helix": {
+          "variant1": {
+            "skillID": 130304,
+            "trigger": "SkillP01",
+            "name": "Somatotypical Helix",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "Increases SPD by #1[f1]% for all teammates (i.e., excluding this unit). When allies Break an enemy target's Weakness, Ruan Mei deals to this enemy target Break DMG equal to #2[f1]% of her Ice Break DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.08,
+                0.6
+              ],
+              "2": [
+                0.082,
+                0.66
+              ],
+              "3": [
+                0.084,
+                0.72
+              ],
+              "4": [
+                0.086,
+                0.78
+              ],
+              "5": [
+                0.088,
+                0.84
+              ],
+              "6": [
+                0.09,
+                0.9
+              ],
+              "7": [
+                0.0925,
+                0.975
+              ],
+              "8": [
+                0.095,
+                1.05
+              ],
+              "9": [
+                0.0975,
+                1.125
+              ],
+              "10": [
+                0.1,
+                1.2
+              ],
+              "11": [
+                0.102,
+                1.26
+              ],
+              "12": [
+                0.104,
+                1.32
+              ],
+              "13": [
+                0.106,
+                1.38
+              ],
+              "14": [
+                0.108,
+                1.44
+              ],
+              "15": [
+                0.11,
+                1.5
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RuanMei_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Break DMG": {
+                "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Silken Serenade": {
+          "variant1": {
+            "skillID": 130307,
+            "trigger": "SkillMaze",
+            "name": "Silken Serenade",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using the Technique, gains Silken Serenade. At the start of the next battle, automatically triggers the Skill for #1[i] time(s) without consuming Skill Points.\\nIn Simulated Universe or Divergent Universe, when Ruan Mei has Silken Serenade, the team actively attacking enemies will always be regarded as attacking their Weakness to enter combat, and this attack can reduce all enemies' Toughness regardless of Weakness types. When breaking Weakness, triggers Weakness Break Effect corresponding to the attacker's Type. For every Blessing in possession (up to a max of #4[i] Blessings will be taken into account), additionally increases the Toughness Reduction of this attack by #2[i]%. After breaking an enemy target's Weakness, additionally deals to the enemy target Break DMG equal to #3[i]% of Ruan Mei's Ice Break DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1,
+                1,
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_SkillMazeInLevel",
+              "Avatar_RuanMei_00_SkillMazeInLevel_Insert"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1303_basic_atk.png",
+        "skillRef": {
+          "skillName": "Threading Fragrance",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1303_skill.png",
+        "skillRef": {
+          "skillName": "String Sings Slow Swirls",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1303_ultimate.png",
+        "skillRef": {
+          "skillName": "Petals to Stream, Repose in Dream",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1303_talent.png",
+        "skillRef": {
+          "skillName": "Somatotypical Helix",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1303_technique.png",
+        "skillRef": {
+          "skillName": "Silken Serenade",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Inert Respiration",
+        "icon": "icon/skill/1303_skilltree1.png",
+        "desc": "Increases Break Effect by #1[i]% for all allies.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Days Wane, Thoughts Wax",
+        "icon": "icon/skill/1303_skilltree2.png",
+        "desc": "Ruan Mei regenerates #1[i] Energy at the start of her turn.",
+        "params": [
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Candle Lights on Still Waters",
+        "icon": "icon/skill/1303_skilltree3.png",
+        "desc": "In battle, for every #2[i]% of Ruan Mei's Break Effect that exceeds #1[i]%, her Skill additionally increases allies' DMG by #3[i]%, up to a maximum of #4[i]%.",
+        "params": [
+          1.2,
+          0.1,
+          0.06,
+          0.36
+        ]
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1303.png",
+    "preview": "image/character_preview/1303.png",
+    "portrait": "image/character_portrait/1303.png",
+    "bannerOffsets": [
+      -6.1,
+      23,
+      0.55,
+      -6.1,
+      23,
+      0.55,
+      -6.1,
+      23,
+      0.55
     ],
     "isBuffed": false
   },

@@ -2819,6 +2819,61 @@ const maslowCharactersHarmony = {
             addTeamWant: [],
         },
     },
+    "Ruan Mei": {
+        // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
+        defaultMainSubs: ["SPDFlat","DamageBreak","HP%","EffectRES"],
+        // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DEF%","HPFlat","DEFFlat"],
+        0: {
+            gives: [],
+            givesTeam: ["Debuff","All","SPD","Break","PEN"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["Debuff","All","SPD","Break","PEN","Shred"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["Debuff","All","SPD","Break","PEN","Shred","ATK"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["Debuff","All","SPD","Break","PEN","Shred","ATK"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["Debuff","All","SPD","Break","PEN","Shred","ATK"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["Debuff","All","SPD","Break","PEN","Shred","ATK"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["Debuff","All","SPD","Break","PEN","Shred","ATK"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersPreservation = {
     //PRESERVATION
