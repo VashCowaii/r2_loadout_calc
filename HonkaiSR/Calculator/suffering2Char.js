@@ -1641,6 +1641,7 @@ const battleActions = {
         const sourceDeposit = sourceCache.UpdateStatDR[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatDR[compositeCacheTag] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
+        // const hasChanged = !targetDeposit.valueIsCurrentAsTarget;
 
         const standardDRIndex = DamageReductionStandard;
 
@@ -1663,10 +1664,10 @@ const battleActions = {
 
             }
 
-            sourceDeposit.cacheValue = bonus;
+            targetDeposit.cacheValue = bonus;
         }
 
-        return Math.max(0.01,1 - sourceDeposit.cacheValue);
+        return Math.max(0.01,1 - targetDeposit.cacheValue);
 
         // greatTableIndex
         // return bonus;
