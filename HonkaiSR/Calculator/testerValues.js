@@ -176,6 +176,7 @@ const customDisplayValuesLog = {
     ],
     "Natasha": [],  
     "Lynx": [], 
+    "Anaxa": [],
 }
 
 const permaConditionsTextLibrary = {
@@ -340,6 +341,13 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Topaz & Numby": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Anaxa": {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "",
@@ -1345,6 +1353,11 @@ const defaultConditions = {
 
     //ERUDITON
     "Argenti": {
+        hasEnhancedState: false,
+        "Skill": null,
+        "Ultimate": null,
+    },
+    "Anaxa": {
         hasEnhancedState: false,
         "Skill": null,
         "Ultimate": null,

@@ -2632,7 +2632,7 @@ const battleActions = {
         totalsRef.totalAVGDMG += DMGTotalAVG;
         totalsRef.totalOverkill += DMGOverkill;
     },
-    hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo) {
+    hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo,forceEntryWeakness) {
         const sourceTurn = generalInfo.sourceTurn;
         const ATKObject = generalInfo.ATKObject;
         const tags = ATKObject.DMGTags;
@@ -2684,7 +2684,7 @@ const battleActions = {
 
             let enemyWeakness = enemyStats[weaknessKeys[element]];
             // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && (enemyWeakness || ATKObject.allToughness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
+            if (toughnessBase && (enemyWeakness || ATKObject.allToughness || forceEntryWeakness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
                 
                 // console.log(targetTurn.currentToughness)
                 if (!targetTurn.isBroken) {
@@ -3562,7 +3562,7 @@ const battleActions = {
             const atkEntry = bounceRef.hitSplit;
             const isLastHit = true;
             const bounceLength = bounceOrder.length;
-            let currentEnemyIndex = 0;
+            let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
             const isBounce = true;
 
             if (atkEntry.all) {
@@ -3789,7 +3789,7 @@ const battleActions = {
             const atkEntry = bounceRef.hitSplit;
             const isLastHit = true;
             const bounceLength = bounceOrder.length;
-            let currentEnemyIndex = 0;
+            let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
             const isBounce = true;
 
             if (atkEntry.all) {
@@ -4080,7 +4080,7 @@ const battleActions = {
             const atkEntry = bounceRef.hitSplit;
             const isLastHit = true;
             const bounceLength = bounceOrder.length;
-            let currentEnemyIndex = 0;
+            let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
             const isBounce = true;
 
             if (atkEntry.all) {
@@ -5124,9 +5124,11 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BattleStartWeakness", name:firstTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"BattleStartWeakness"});}
                 for (let enemy of enemyPositions) {
-                    if (!enemy.statTable[greatTableIndex[`Weakness${firstTurnElement}`]]) {continue;}
+                    if (!enemy.statTable[greatTableIndex[`Weakness${firstTurnElement}`]] && !battleData.forceEntryWeakness) {continue;}
 
-                    battleActions.hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo)
+                    //battleData.forceEntryWeakness right now only anaxa can force this to be true
+
+                    battleActions.hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo,battleData.forceEntryWeakness)
                                     // hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo)
                 }
 
@@ -8458,6 +8460,7 @@ const turnLogic = {
                             "currentStacks": 1,
                             "decay": false,
                             "isDebuff": true,
+                            "isImplant": true,
                             "expireType": "EndTurn"
                         }
                     }
@@ -21206,25 +21209,8 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 const dhptTechSkillCall = ATKObjects.dhptTechSkillCall ??= turnLogic[characterName].skillFunctions.dhptSkill;
-
-                const allyPositions = battleData.allyPositions;
-                let targetOverride = null;
-                for (let ally of allyPositions) {
-                    const currentTurnLogic = turnLogic[ally.properName];
-                    const useTechnique = currentTurnLogic.useTechnique;
-                    const techniqueType = currentTurnLogic.techniqueType;
-
-                    // console.log(ally.properName,useTechnique,techniqueType)
-
-                    if (useTechnique && techniqueType === "Attack") {
-                        targetOverride = ally;
-                        break;
-                    }
-                }
+                let targetOverride = superGlobal.getStartingAttacker(battleData);
                 // console.log(targetOverride)
-
-
-
 
                 dhptTechSkillCall(battleData,null,sourceTurn,targetOverride)
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -22921,6 +22907,939 @@ const turnLogic = {
             "apotheosis": "Apotheosis",
             "e2ATK": "E2: Agate's Humility",
             "e6Shred": "\"Your\" Resplendence",
+        },
+        "characterValuesBattle": {},
+    },
+    "Anaxa": {
+        logic(thisTurn,battleData) {
+
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.anaxaSkill, target: "enemy", endTurn: true};
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.anaxaBasic, target: "enemy", endTurn: true};
+            return returnBasicCall;
+        },
+        "skillFunctions": {
+            anaxaBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.anaxaBasicREF ??= ATKObjects["Basic ATK"]["Pain, Brews Truth"].variant1;
+
+                if (!ATKObjects.anaxaBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    // let characterName = sourceTurn.properName;
+                    let values = ATKObjects.anaxaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Wind"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.anaxaBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        // dotApplyFunction: logicRef.skillFunctions.astaTraceDOT,
+                    }
+                }
+                let ATKObject = ATKObjects.anaxaBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                const basicEnergyTotal = skillRef.energyRegen + 10;//10 being from the trace
+                battleActions.updateEnergy(battleData,basicEnergyTotal,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            anaxaSkill(battleData,target,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.anaxaSkillREF ??= ATKObjects["Skill"]["Fractal, Exiles Fallacy"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.anaxaSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+
+                    let values = ATKObjects.anaxaSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Wind"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags;
+                    ATKObjects.anaxaSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: {
+                            multi: values[0],
+                            bounceCount: 4,
+                            bounceSkipFirstTarget: true,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 1,
+                                    "toughness": 5
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+
+                    ATKObjects.anaxaSkillPerTargetDMGSHEET ??= {
+                        "stats": [DamageSkill],
+                        [DamageSkill]: values[2],
+                        "source": "Skill",
+                        "sourceOwner": characterName,
+                        "buffName": logicRef.buffNames.skillTargetBonus,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 10,//technicaly there is no stack limit on this, I'm just putting 10 bc that seems reasonable
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    ATKObjects.anaxaE4SkillATKSHEET ??= {
+                        "stats": [ATKP],
+                        [ATKP]: 0.30,
+                        "source": "E4",
+                        "sourceOwner": characterName,
+                        "buffName": logicRef.buffNames.e4ATKBonus,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 2,//technicaly there is no stack limit on this, I'm just putting 10 bc that seems reasonable
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+                let ATKObject = ATKObjects.anaxaSkillATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: false, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                const enemyTargets = battleData.enemyPositions.length;
+                const buffSheet = ATKObjects.anaxaSkillPerTargetDMGSHEET;
+                buffSheet.currentStacks = enemyTargets;
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,buffSheet);
+
+                if (rank >= 4) {
+                    const e4Sheet = ATKObjects.anaxaE4SkillATKSHEET;
+                    updateBuff(battleData,sourceTurn,e4Sheet);
+                }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen * 5,sourceTurn);
+
+                removeBuff(battleData,sourceTurn,buffSheet);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            anaxaUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.anaxaUltimateREF ??= ATKObjects.Ultimate["Sprouting Life Sculpts Earth"].variant1;
+
+                if (!ATKObjects.anaxaUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.anaxaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Wind"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.anaxaUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.anaxaUltSublimationSHEET = {
+                        "stats": [WeaknessWind,WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum],
+                        [WeaknessWind]: 1,
+                        [WeaknessFire]: 1,
+                        [WeaknessIce]: 1,
+                        [WeaknessImaginary]: 1,
+                        [WeaknessLightning]: 1,
+                        [WeaknessPhysical]: 1,
+                        [WeaknessQuantum]: 1,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.sublimation,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "StartTurn",
+                    }
+                }
+                const ATKObject = ATKObjects.anaxaUltimateATKOBJECT;
+
+                const buffSheet = ATKObjects.anaxaUltSublimationSHEET;
+                
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+                const enemyPositions = battleData.enemyPositions;
+                const updateBuff = battleActions.updateBuff;
+                for (let enemy of enemyPositions) {
+                    updateBuff(battleData,enemy,buffSheet);
+                    if (enemy.turnState && enemy.enemyType != "boss") {enemy.turnShouldEnd;}//brick actions for enemies that aren't bosses
+                    //TODO: later I need to work out an actual bricking mechanism to prevent any action, but for now this will do.
+                }
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                sourceTurn.ultyQueued = false;
+            },
+            anaxaTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.anaxaTechniqueREF ??= ATKObjects.Technique["Prism of the Pupil"].variant1;
+                let values = ATKObjects.anaxaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.anaxaTechTerrifiedSHEET) {
+
+                    ATKObjects.anaxaTechTerrifiedSHEET = {
+                        "stats": [weaknessAll],
+                        [weaknessAll]: 1,
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.terrified,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+                const ATKObject = ATKObjects.astaTechniqueATKObject;
+
+                const buffSheet = ATKObjects.anaxaTechTerrifiedSHEET;
+                const enemyPositions = battleData.enemyPositions;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                const attacker = superGlobal.getStartingAttacker(battleData);
+                const attackerElement = attacker.element;
+
+                const implantEntry = ATKObjects.anaxaTechImplantLister[attackerElement];
+
+                const implantWeakness = superGlobal.implantGeneralWeakness;
+                for (let enemy of enemyPositions) {
+                    implantWeakness(battleData,enemy,3,"Technique",sourceTurn.properName,implantEntry.index,implantEntry.name);
+                }
+                battleData.forceEntryWeakness = true;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Anaxa Technique", bodyText: `Forced matching weakness enabled for BattleStart toughness reduction, this is separate from attack techniques.`});}
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+            anaxaImplantWeakness(battleData,sourceTurn,targetTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const buffNames = logicRef.buffNames;
+
+                const checkWeakArray = ATKObjects.checkWeakArray ??= [WeaknessWind,WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum];
+                const implantNameArray = ATKObjects.implantNameArray ??= ["anaxaWind","anaxaFire","anaxaIce","anaxaImaginary","anaxaLightning","anaxaPhysical","anaxaQuantum"];
+                const implantLength = checkWeakArray.length;
+
+                const targetStats = targetTurn.statTable;
+
+                const battleValues = sourceTurn.battleValues;
+                const currentIndex = battleValues.implantIndex;
+
+                const implantWeakness = superGlobal.implantGeneralWeakness;
+                let implantViable = false;
+                const duration = targetTurn.turnState ? 3 : 2;
+                for (let i=0;i<checkWeakArray.length;i++) {
+                    let indexOffset = i + currentIndex;
+                    if (indexOffset >= implantLength) {indexOffset -= implantLength;}
+
+                    const suggestedImplant = checkWeakArray[indexOffset];
+                    if (targetStats[suggestedImplant]) {continue;}
+
+                    implantViable = true;
+                    // let buffSheet = ATKObjects[suggestedImplant];
+                    battleValues.implantIndex++
+                    // updateBuff(battleData,targetTurn,buffSheet,false,null);
+                    const buffName = implantNameArray[indexOffset];
+                    implantWeakness(battleData,targetTurn,duration,"Talent",sourceTurn.properName,suggestedImplant,buffNames[buffName]);
+                    break;
+                }
+
+                if (!implantViable) {
+                    const suggestedImplant = checkWeakArray[currentIndex];
+                    // let buffSheet = ATKObjects[suggestedImplant];
+                    battleValues.implantIndex++;
+                    // updateBuff(battleData,targetTurn,buffSheet,false,null);
+                    const buffName = implantNameArray[currentIndex];
+                    implantWeakness(battleData,targetTurn,duration,"Talent",sourceTurn.properName,suggestedImplant,buffNames[buffName]);
+                }
+
+                if (battleValues.implantIndex == 7) {battleValues.implantIndex = 0;}
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (ownerTurn.properName != sourceTurn.properName) {return;}
+
+                    const skillSlot = generalInfo.dmgSlot;
+                    if (skillSlot != "Skill" && skillSlot != "Basic ATK") {return;}
+                    const slotIsSkill = skillSlot === "Skill";
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (battleValues.extraSkillActive) {
+                        battleValues.extraSkillActive = false;
+                        return;
+                    }
+
+                    const disclosureName = battleValues.anaxaDisclosureName;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    let foundDisclosure = false;
+                    for (let enemyHit in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemyHit];
+                        const buffCheck = currentEnemy.buffsObject[disclosureName];
+
+                        if (buffCheck) {
+                            foundDisclosure = true;
+                            break;
+                        }
+                    }
+
+                    if (foundDisclosure) {
+                        battleValues.extraSkillActive = true;
+                        
+                        if (slotIsSkill) {
+                            logToBattle(battleData,{logType: "GenericAction", source:"Skill Duplication", bodyText: `Anaxa gained extra turn`});
+                            const queueObject = this.queueObjectSkill ??= {
+                                attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaSkill,
+                                target: "enemy",
+                                name: this.listenerName,
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                isExtraTurn: true,
+                                skipEXDisplay: true,
+                            }
+                            queueObject.sourceTurn = ownerTurn;
+                            battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        }
+                        else {
+                            logToBattle(battleData,{logType: "GenericAction", source:"Basic ATK Duplication", bodyText: `Anaxa gained extra turn`});
+                            const queueObject = this.queueObjectBasic ??= {
+                                attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaBasic,
+                                target: "enemy",
+                                name: this.listenerName,
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                isExtraTurn: true,
+                                skipEXDisplay: true,
+                            }
+                            queueObject.sourceTurn = ownerTurn;
+                            battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Disclosure Ability Duplication listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "BattlePrep",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffNames = logicRef.buffNames
+
+                    ATKObjects.anaxaTechImplantLister = this.anaxaTechImplantLister ??={
+                        "Wind": {
+                            index: WeaknessWind,
+                            name: buffNames.anaxaWind,
+                        },
+                        0: this.Wind,
+                        "Fire": {
+                            index: WeaknessFire,
+                            name: buffNames.anaxaFire,
+                        },
+                        1: this.Fire,
+                        "Ice": {
+                            index: WeaknessIce,
+                            name: buffNames.anaxaIce,
+                        },
+                        2: this.Ice,
+                        "Imaginary": {
+                            index: WeaknessImaginary,
+                            name: buffNames.anaxaImaginary,
+                        },
+                        3: this.Imaginary,
+                        "Lightning": {
+                            index: WeaknessLightning,
+                            name: buffNames.anaxaLightning,
+                        },
+                        4: this.Lightning,
+                        "Physical": {
+                            index: WeaknessPhysical,
+                            name: buffNames.anaxaPhysical,
+                        },
+                        5: this.Physical,
+                        "Quantum": {
+                            index: WeaknessQuantum,
+                            name: buffNames.anaxaQuantum,
+                        },
+                        6: this.Quantum,
+                    }
+                },
+                "target": "self",
+                "listenerName": "Battle prep implant index construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetStats = targetTurn.statTable;
+
+                    let weaknessCount = 0;
+                    for (let weakName of checkWeakArray) {
+                        weaknessCount += targetStats[weakName] ? 1 : 0;
+                    }
+
+                    const buffSheet = this.anaxaTraceShredSHEET ??= {
+                        "statsOnHit": [DEFShredAll],
+                        [DEFShredAll]: 0.04,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceShred,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 7,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    };
+                    const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+
+                    const updateBuff = battleActions.updateBuff;
+                    if (buffCheck) {
+                        const currentStacks = buffCheck.currentStacks;
+                        if (currentStacks === weaknessCount) {return;}
+                        else if (currentStacks < weaknessCount) {
+                            const stackDiff = weaknessCount - currentStacks;
+                            buffSheet.currentStacks = stackDiff;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        }
+                        else {//if stacks are higher than they should be
+                            if (weaknessCount) {//if we have stacks then update
+                                removeBuff(battleData,ownerTurn,buffSheet,true,null,true);
+                                buffSheet.currentStacks = weaknessCount;
+                                updateBuff(battleData,ownerTurn,buffSheet,false,null)
+                            }
+                            else {//otherwise remove
+                                removeBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        }
+                    }
+                    else if (weaknessCount) {
+                        buffSheet.currentStacks = weaknessCount;
+                        updateBuff(battleData,ownerTurn,buffSheet,false,null);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Qualitative Shift trace weakness shred checker",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HitEnemyEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+
+                    const implantFunction = this.implantFunction ??= turnLogic[ownerTurn.properName].skillFunctions.anaxaImplantWeakness;
+                    implantFunction(battleData,ownerTurn,generalInfo.targetTurn)
+                },
+                "target": "self",
+                "listenerName": "Qualitative Shift trace weakness shred checker",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatWeakness",//Weakness stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}//we only care about weakness updates on enemies
+
+                    const checkWeakArray = this.checkWeakArray ??= [WeaknessWind,WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum];
+
+                    const targetStats = sourceTurn.statTable;
+
+                    let weaknessCount = 0;
+                    for (let weakName of checkWeakArray) {
+                        weaknessCount += targetStats[weakName] ? 1 : 0;
+                    }
+                    const discloseQuality = weaknessCount>=5;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                
+
+                    if (!ATKObjects.anaxaQualDisclosureSHEET) {
+                        let skillRef = ATKObjects.anaxaTalentREF ??= ATKObjects["Talent"]["Tetrad Wisdom Reigns Thrice"].variant1;
+                        let values = ATKObjects.anaxaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+    
+                        ATKObjects.anaxaQualDisclosureSHEET ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: values[0],
+                            "source": "Talent",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.anaxaDisclosure,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,//technicaly there is no stack limit on this, I'm just putting 10 bc that seems reasonable
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "isDebuff": true,
+                            "isSourceSpecific": true
+                        }
+                    }
+                    const buffSheet = ATKObjects.anaxaQualDisclosureSHEET;
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                    if (discloseQuality) {
+                        if (!buffCheck) {
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet)
+                        }
+                    }
+                    else if (buffCheck){
+                        removeBuff(battleData,sourceTurn,buffSheet)
+                    }
+                },
+                "target": "self",
+                "listenerName": "talent qDisclosure listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const buffName = ownerTurn.battleValues.anaxaDisclosureName ??= logicRef.buffNames.anaxaDisclosure;
+
+                    const enemyPositions = battleData.enemyPositions;
+                    let enemyIsDisclosed = false;
+                    for (let enemy of enemyPositions) {
+                        const buffCheck = enemy.buffsObject[buffName];
+                        if (buffCheck) {
+                            enemyIsDisclosed = true;
+                            break;
+                        }
+                    }
+
+                    if (!enemyIsDisclosed) {
+                        battleActions.updateEnergy(battleData,30,ownerTurn,false,"Roaming Signifier");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Roaming Signifier trace turnstart energy if no disclosure",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    let eruditionBoyos = -1;
+                    for (let allySlot in allyTurns) {
+                        const currentAlly = allyTurns[allySlot];
+                        if (currentAlly.isUniqueEvent || currentAlly.path != "Erudition") {continue;}
+                        eruditionBoyos++;
+                    }
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    const buffNames = logicRef.buffNames;
+                    const rank = ownerTurn.rank;
+                    const isE6 = rank >= 6;
+
+                    if (eruditionBoyos || isE6) {
+                        if (!ATKObjects.anaxaMultiEruditionSHEET) {
+                            
+                            const characterName = ownerTurn.properName;
+                            ATKObjects.anaxaMultiEruditionSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.50,
+                                "source": "Trace",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.multiErudition,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        const buffSheet = ATKObjects.anaxaMultiEruditionSHEET;
+                        const allyTurns = battleData.nameBasedTurns;
+                        let fullyAllyTurnArray = [];
+                        for (let allySlot in allyTurns) {
+                            const currentAlly = allyTurns[allySlot];
+                            fullyAllyTurnArray.push(currentAlly);
+                        }
+                        updateBuffBatchTargets(battleData,fullyAllyTurnArray,buffSheet);
+                    }
+                    if (!eruditionBoyos || isE6) {
+                        if (!ATKObjects.anaxaSoloEruditionSHEET) {
+                            
+                            const characterName = ownerTurn.properName;
+                            ATKObjects.anaxaSoloEruditionSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.50,
+                                "source": "Trace",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.soloErudition,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        const buffSheet = ATKObjects.anaxaSoloEruditionSHEET;
+
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Imperative Hiatus erudition teammate listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Anaxa - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const anaxaTechnique = this.anaxaTechnique ??= logicRef.skillFunctions.anaxaTechnique
+                        anaxaTechnique(battleData,"enemy",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Anaxa Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        let attackEndings = battleData.battleListeners.SkillEnd ??= [];
+                
+                        const listenerToInejct = ATKObjects.techListener ??= logicRef.listenersToInjectLater.anaxaE1SkillPointListener;
+                        listenerToInejct.ownerTurn = ownerTurn;
+
+                        attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+                    },
+                    "target": "self",
+                    "listenerName": "Anaxa E1 bonus skill point listener injection",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "HitEnemyStart",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                        const targetsGotHit = generalInfo.targetsGotHit;
+                        const targetTurn = generalInfo.targetTurn;
+
+                        const enemyHitCounter = targetsGotHit[targetTurn.name];
+                        if (enemyHitCounter != 1) {return;}//only evaluate first hits
+
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+                        
+                        if (!ATKObjects.anaxaE1SkillShred) {
+                            const buffNames = logicRef.buffNames;
+                            const characterName = ownerTurn.properName;
+                            ATKObjects.anaxaE1SkillShred = {
+                                "stats": [DEFP],
+                                [DEFP]: -0.16,
+                                "source": "E1",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.e1DEFReduce,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "isDebuff": true,
+                                "expireType": "EndTurn",
+                            }
+                        }
+                        const buffSheet = ATKObjects.anaxaE1SkillShred;
+
+                        const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
+                        if (buffCheck) {
+                            const currentDuration = buffCheck.duration;
+                            if (currentDuration === 2) {return;}//if the debuff already exists and is already max duration, skip renewal bc there's no point
+                            else {
+                                battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                            }
+                        }
+                        else {
+                            battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Qualitative Shift trace weakness shred checker",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [
+                {
+                    "trigger": "EnemyCreated",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let targetTurn = generalInfo.slotRef;
+
+                        let buffSheet = this.buffSheet ??= {
+                            "stats": [ResistanceAll],
+                            [ResistanceAll]: -0.20,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2RESRED,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "isDebuff": true,
+                            "expireType": null
+                        };
+                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+
+                        const implantFunction = this.implantFunction ??= turnLogic[ownerTurn.properName].skillFunctions.anaxaImplantWeakness;
+                        implantFunction(battleData,ownerTurn,targetTurn)
+                    },
+                    "target": "enemy",
+                    "listenerName": "E2 Vuln Zombie Network",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [],
+            5: [],
+            6: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        // let ownerRef = this.owners;
+                        const ownerTurn = this.ownerTurn;
+                        // const targetTurn = generalInfo.targetTurn;
+
+                        if (!this.E6AnaxaFinalDMGSHEET) {
+                            const characterName = ownerTurn.properName;
+                            const logicRef = turnLogic[characterName];
+                            const buffNames = logicRef.buffNames;
+                            this.E6AnaxaFinalDMGSHEET = {
+                                "stats": null,
+                                "multiplier": 1.3,
+                                "source": "E6",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.e6FinalMulti,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isFinalMulti": true,
+                                "actionTags": ["All"]
+                            }
+                        }
+                        const multiSheet = this.E6AnaxaFinalDMGSHEET;
+
+                        battleActions.updateBuff(battleData,ownerTurn,multiSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Everything Is in Everything - final dmg multi for anaxa",
+                    "owners": []
+                },
+            ],
+        },
+        "listenersToInjectLater": {
+            "anaxaE1SkillPointListener": {
+                "trigger": "SkillEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Anaxa E1 First Skill Use"});
+
+                    //then remove, bc this is the only time it'll get called
+                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                },
+                "target": "self",
+                "listenerName": "Anaxa E1 bonus skill point listener",
+                "ownerTurn": {},
+            }
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "implantIndex": 0,
+            "extraSkillActive": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Impair",
+        "buffNames": {
+            "skillTargetBonus": "Skill Target Count Bonus (Anaxa)",
+            "multiErudition": "Imperative Hiatus (>=2)",
+            "soloErudition": "Imperative Hiatus (=1)",
+            "traceShred": "Qualitative Shift (Anaxa)",
+            "anaxaDisclosure": "Qualitative Disclosure",
+            "sublimation": "Sublimation (Anaxa)",
+            "terrified": "Terrified (Anaxa)",
+            "e1DEFReduce": "Magician, Isolated by Stars",
+            "e2RESRED": "E2: Soul, True to History",
+            "e4ATKBonus": "E4: Blaze, Plunged to Canyon",
+            "e6FinalMulti": "E6: Everything Is in Everything",
+
+            "anaxaWind": "Implant Wind (Anaxa)",
+            "anaxaFire": "Implant Fire (Anaxa)",
+            "anaxaIce": "Implant Ice (Anaxa)",
+            "anaxaImaginary": "Implant Imaginary (Anaxa)",
+            "anaxaLightning": "Implant Lightning (Anaxa)",
+            "anaxaPhysical": "Implant Physical (Anaxa)",
+            "anaxaQuantum": "Implant Quantum (Anaxa)",
         },
         "characterValuesBattle": {},
     },

@@ -958,6 +958,7 @@ const sim = {
             
             sourceTurn.actionAssigned = false;
             sourceTurn.turnState = false;
+            sourceTurn.turnShouldEnd = false
         }
         return battleData;
     },
@@ -1135,6 +1136,7 @@ const sim = {
                 let actionName = currentUltimate.name;
                 let target = currentUltimate.target;
                 let generalInfo = {sourceTurn,actionName,target};
+                let skipEXDisplay = currentUltimate.skipEXDisplay;
 
                 const isExtraTurn = currentUltimate.isExtraTurn
 
@@ -1150,8 +1152,8 @@ const sim = {
                     poke("UltimateEnd",battleData,generalInfo);
                 }
                 else {
-                    if (isLog) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
-                    currentUltyFunction(battleData,sourceTurn);
+                    if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    currentUltyFunction(battleData,target,sourceTurn);
 
                 }
 

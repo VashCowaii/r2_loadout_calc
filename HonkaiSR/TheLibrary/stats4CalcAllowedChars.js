@@ -7,6 +7,7 @@ global.calcAllowedSet = new Set([
 
     //ERUDITION
     "Argenti",
+    "Anaxa",
 
     //DESTRUCTION
     "Saber",
@@ -14,6 +15,7 @@ global.calcAllowedSet = new Set([
 
     //HUNT
     "Topaz & Numby",
+    "Archer",
 
     //HARMONY
     "Bronya",
@@ -29,6 +31,7 @@ global.calcAllowedSet = new Set([
     "Gallagher",
     "Natasha",
     "Lynx",
+    "Luocha",
 
     //PRESERVATION
     "Dan Heng • Permansor Terrae",

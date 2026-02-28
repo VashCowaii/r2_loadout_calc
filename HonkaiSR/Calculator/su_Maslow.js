@@ -3099,6 +3099,61 @@ const maslowCharactersErudition = {
             addTeamWant: [],
         },
     },
+    "Anaxa": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: [],
+            givesTeam: ["WeaknessImplant","Debuff","All"],
+            wants: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["WeaknessImplant","Debuff","All","Shred"],
+            wants: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["WeaknessImplant","Debuff","All","Shred","PEN"],
+            wants: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["WeaknessImplant","Debuff","All","Shred","PEN"],
+            wants: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["WeaknessImplant","Debuff","All","Shred","PEN"],
+            wants: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["WeaknessImplant","Debuff","All","Shred","PEN"],
+            wants: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["WeaknessImplant","Debuff","All","Shred","PEN"],
+            wants: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Ultimate","Skill",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersHunt = {
     "Topaz & Numby": {
