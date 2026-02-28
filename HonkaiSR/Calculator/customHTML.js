@@ -1665,7 +1665,7 @@ const conditionMathList = [
     "-",
     "*",
     "/",
-    // "^"
+    "%"
 ]
 
 const conditionComparatorCharValueConversions = {
