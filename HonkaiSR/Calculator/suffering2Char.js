@@ -11346,10 +11346,11 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Basic","FUA","Attack"];
                     const compositeCacheTag = tags + actionTags;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","FUA","Attack"];
+                    
                     ATKObjects.topazBasicATKOBJECT = {
                         multipliers: {
                             primary: values[0],
