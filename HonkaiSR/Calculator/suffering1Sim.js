@@ -567,6 +567,7 @@ const sim = {
                 maxEnergy: charEntryTemp.energyMax ?? 0,//TODO: account for special energy stacks like acheron bullshit later
                 currentEnergy: charEntryTemp.energyMax ? charEntryTemp.energyMax * startingEnergyPercent : 0,
                 actionCounter: 0,
+                ultsUsed: 0,
                 turnState: false,
                 actionAssigned: false,
                 turnShouldEnd: false,
@@ -1138,7 +1139,7 @@ const sim = {
                 let generalInfo = {sourceTurn,actionName,target};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
 
-                const isExtraTurn = currentUltimate.isExtraTurn
+                const isExtraTurn = currentUltimate.isExtraTurn;
 
                 const currentUltyFunction = currentUltimate.attack;
 
@@ -1146,6 +1147,7 @@ const sim = {
                     if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
                     poke("UltimateStart",battleData,generalInfo);
 
+                    sourceTurn.ultsUsed++;
                     currentUltyFunction(battleData,sourceTurn);
                     //nonViolentWrapper gets called on buff-type ultimates within their own respective functions.
                     //later I might call it here and clarify attack-type or not in the ultyQueue object entries, just not sure if it's worth doing other than my own convenience (might be less performant on cycles, though it'd be barely)

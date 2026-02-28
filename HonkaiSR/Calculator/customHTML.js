@@ -1690,6 +1690,8 @@ const conditionComparatorCharValueConversions = {
 
     "AV": "Remaining AV to Turn",
     "AVBase": "Base AV/Turn",
+
+    "ultsUsed": "Total Ultimates Used",
 }
 
 let conditionCharacterStatList = Object.keys(greatTableKnowerOfAll);
