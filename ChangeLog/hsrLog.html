@@ -9,6 +9,7 @@
     <h1>Feb 28th, 2026</h1>
     <ul>
         <h3>Calculator</h3>
+        <h4>Additions</h3>
         <li>Added the following characters to the calculator:
             <ul>
                 <li>Anaxa</li>
@@ -19,6 +20,7 @@
             <ul>
                 <li>The Great Cosmic Enterprise</li>
                 <li>Life Should Be Cast to Flames</li>
+                <li>Landau's Choice</li>
             </ul>
         </li>
         <li>Added the following Planar relics sets the calculator:
@@ -26,8 +28,11 @@
                 <li>Tengoku@Livestream (this is the last planar set I was missing in the calc)</li>
             </ul>
         </li>
-        <li>Fixed an optimization issue where the Swordplay lightcone could try to keep applying the bonus even after the stacks were completed. This didn't actually matter for any math, this is purely an optimization fix to prevent buff handling from trying to apply when it was already done.</li>
-        <li>Fixed an issue where Topaz' basic atk had a typo on one of its references, which could break the attack.</li>
+        <li>Added the following Body relics sets the calculator:
+            <ul>
+                <li>Guard of Wuthering Snow</li>
+            </ul>
+        </li>
         <li>Added the following values/conditions to user-defined character rotations:
             <ul>
                 <li>Character Value: Total Ultimates Used</li>
@@ -43,6 +48,21 @@
                 </li>
             </ul>
         </li>
+        <li>Added the ability to factor for standard Damage Reduction on characters and enemies. For enemies they already had broken/nonbroken DR that modified damage, but characters could never benefit from any form of DR since it was a lower priority function.
+            <ul>
+                <li>Given this change, DR has been added as a stat bonus to the following entities that prior to this update didn't provide it but should have:
+                    <ul>
+                        <li>DHPT E4</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <h4>Fixes</h3>
+        <li>Fixed an optimization issue where the Swordplay lightcone could try to keep applying the bonus even after the stacks were completed. This didn't actually matter for any math, this is purely an optimization fix to prevent buff handling from trying to apply when it was already done.</li>
+        <li>Fixed an issue where Topaz' basic atk had a typo on one of its references, which could break the attack.</li>
+        <li>Fixed a bug where if loading the page and using the default enemies, if the default enemies were created a long time ago then their stat data array would be too short and didn't account for potentially newer stats that make the array bigger.</li>
+        <li>Fixed an issue where the lc Resolution Shines As Pearls of Sweat was missing an expire type for the debuff, making it last forever.</li>
     </ul>
 </div>
 

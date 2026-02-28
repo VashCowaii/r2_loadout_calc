@@ -89,6 +89,8 @@ const greatTableKnowerOfAll = {
 
     "ElationDMG": 0,
     "Weaken%": 0,
+
+    "DamageReductionStandard": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
@@ -291,6 +293,8 @@ const ElationDMG = greatTableIndex.ElationDMG;
 
 const WeakenPercent = greatTableIndex["Weaken%"];
 
+const DamageReductionStandard = greatTableIndex["DamageReductionStandard"];
+
 
 
 const battleTableKnowerOfAll = {
@@ -385,6 +389,17 @@ const propertyImagePaths = {
                 "display": "Empty",
                 "specific": "Empty",
                 "unit": ""
+            },
+        }
+    },
+
+    "DamageReduction": {
+        "icon": "/HonkaiSR/misc/IconBuffDamageReduction.png",
+        "sets": {
+            [greatTableIndex["DamageReductionStandard"]]: {
+                "display": "Damage Reduction",
+                "specific": "Damage Reduction: Standard",
+                "unit": "%"
             },
         }
     },
