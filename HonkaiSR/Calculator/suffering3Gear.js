@@ -3823,6 +3823,116 @@ const turnLogicLightcones = {
             "cosmicDMG": "The Great Cosmic Enterprise",
         },
     },
+    "Life Should Be Cast to Flames": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    //NOTE: the energy regen is uniform, not reliant upon superimposition
+                    battleActions.updateEnergy(battleData,10,sourceTurn,false,"Life Should Be Cast to Flames (LC)");
+                },
+                "target": "self",
+                "listenerName": "Life Should Be Cast to Flames - energy on turnstart",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    // poke("FUAStart",battleData,{sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const targetTurn = generalInfo.targetTurn;
+                    // const targetStats = targetTurn.statTable;
+                    const targetBuffs = targetTurn.buffsObject;
+                    let foundImplantedByOwner = false;
+                    for (let buffObject in targetBuffs) {
+                        const currentBuff = targetBuffs[buffObject];
+                        if (currentBuff && currentBuff.isImplant && currentBuff.sourceOwner === sourceTurn.properName) {
+                            foundImplantedByOwner = true;
+                            break;
+                        }
+                    }
+
+
+                    if (!sourceTurn.lifeShouldBeCastFlamesDMGSHEET) {
+                        let lcNameRef = "Life Should Be Cast to Flames";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        const lcBuffNames = turnLogicLightcones[lcNameRef].buffNames;
+                        let buffName = lcBuffNames.dmgBonus;
+                        let buffName2 = lcBuffNames.defShred;
+                        sourceTurn.lifeShouldBeCastFlamesDMGSHEET = {
+                            "statsOnHit": [DamageAll],
+                            [DamageAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+
+                        sourceTurn.lifeShouldBeCastFlamesDEFSHEET = {
+                            "stats": [DEFP],
+                            [DEFP]: -rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName2,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "isDebuff": true,
+                            "expireType": "EndTurn"
+                        }
+                    }
+
+                    const updateBuff = battleActions.updateBuff;
+                    const buffSheet = sourceTurn.lifeShouldBeCastFlamesDMGSHEET;
+                    const buffCheck = targetBuffs[buffSheet.buffName];
+                    if (foundImplantedByOwner) {
+                        if (!buffCheck) {
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                    }
+                    else if (buffCheck) {
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+
+                    const buffJustApplied = buffCheck && buffCheck.AVApplied === battleData.sumAV;
+                    if (!buffJustApplied) {
+                        const buffSheet2 = sourceTurn.lifeShouldBeCastFlamesDEFSHEET;
+                        buffSheet2.duration = targetTurn.turnState ? 3 : 2;
+                        updateBuff(battleData,targetTurn,buffSheet2);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Life Should Be Cast to Flames, implant check and def reduction",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "dmgBonus": "Life Should Be Cast to Flames (DMG)",
+            "defShred": "Life Should Be Cast to Flames (-DEF)",
+        },
+    },
 }
 
 
