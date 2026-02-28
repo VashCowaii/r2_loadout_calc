@@ -1159,6 +1159,13 @@ const sim = {
                 const currentUltyFunction = currentUltimate.attack;
 
                 if (!isExtraTurn) {
+                    const enemyChecker = battleData.enemyPositions.length;
+                    if (!enemyChecker) {
+                        sourceTurn.ultyQueued = false;
+                        logToBattle(battleData,{logType: "GenericAction", source:"Failed Ult", bodyText: `No enemies remaining, ult queue aborted for ${sourceTurn.properName}`});
+                        continue;
+                    }
+
                     if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
                     poke("UltimateStart",battleData,generalInfo);
 
