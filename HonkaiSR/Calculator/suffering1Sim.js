@@ -355,6 +355,14 @@ const sim = {
             let slot = "enemy" + enemiesMade;
             let stats = [...currentEntry.stats];
 
+            const statsLength = stats.length;
+            if (statsLength != greatTableSize) {
+                const sizeDiff = greatTableSize - statsLength;
+                for (let b=0;b<sizeDiff;b++) {
+                    stats.push(0);
+                }
+            }
+
             summaryTurns[name] = 0;
 
             //most of the enemy stat stuff now happens within userTriggers.addEnemyToWave() to keep more work outside of the loops
@@ -399,6 +407,7 @@ const sim = {
                     "UpdateStatDamage": {
                         //compositeCacheTag will define itself here when used, and the tag will be the key
                     },
+                    "UpdateStatDR": {},
                     "UpdateStatDEFShred": {},
                     "UpdateStatPEN": {},
                     "UpdateStatVulnerable": {},
@@ -605,6 +614,7 @@ const sim = {
                     "UpdateStatDamage": {
                         //compositeCacheTag will define itself here when used, and the tag will be the key
                     },
+                    "UpdateStatDR": {},
                     "UpdateStatDEFShred": {},
                     "UpdateStatPEN": {},
                     "UpdateStatVulnerable": {},
