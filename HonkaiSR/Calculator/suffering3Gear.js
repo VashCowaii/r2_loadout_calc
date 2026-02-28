@@ -6039,6 +6039,118 @@ const turnLogicRelics = {
             },
         }
     },
+    "Guard of Wuthering Snow": {//
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownersSlots = this.ownersSlots;
+
+                        let relicNameRef = "Guard of Wuthering Snow";
+                        let pcRef = "2pc";
+                        let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                        let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.guardDR2pc;
+
+                        // greatTableIndex
+                        // greatTableKeys
+                        let buffSheet = this.buffSheet ??= {
+                            "stats": [DamageReductionStandard],
+                            [DamageReductionStandard]: relicPathing[0],
+                            "source": relicNameRef,
+                            "sourceOwner": "",
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const updateBuff = battleActions.updateBuff
+                        for (let ally in ownersSlots) {
+                            let currentTurn = namedTurns[ally];
+                            buffSheet.sourceOwner = currentTurn.properName;
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Guard of Wuthering Snow 2pc DR",
+                    "owners": [],
+                    "ownersSlots": {}
+                },
+            ],
+            "buffNames": {
+                "guardDR2pc": "Guard of Wuthering Snow (DR)",
+            },
+        },
+        "4pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "StartTurn",
+                    condition(battleData,generalInfo) {
+                        let sourceTurn = generalInfo.sourceTurn; 
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                        if (!ownerRank) {return;}
+
+                        const hpRatio = sourceTurn.currentHP / sourceTurn.maxHP;
+                        const hpThreshold = 0.50;
+                        const canHeal = hpRatio <= hpThreshold;
+
+
+                        if (!this.healObject) {
+                            let relicNameRef = "Guard of Wuthering Snow";
+                            // let pcRef = "4pc";
+                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+
+                            this.healObject ??= {
+                                multipliers: {
+                                    primary: relicPathing[1],
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Relic"
+                            }
+                        }
+                        const healObject = this.healObject;
+
+                        if (canHeal) {
+                            battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,"Relic",1,null);
+                            battleActions.updateEnergy(battleData,5,sourceTurn,false,"Guard of Wuthering Snow")
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Guard of Wuthering Snow - turnstart heal check",
+                    "owners": [],
+                    "ownersSlots": {}
+                },
+            ],
+            "buffNames": {
+                // "critBuff4pc": "Self-Enshrouded Recluse (Crit DMG)",
+                // "shieldBuff4pc": "Self-Enshrouded Recluse (4pc)",
+            },
+            "buffNamesPerCharacter": {
+                // "critBuff4pc": "Self-Enshrouded Recluse (Crit DMG)",
+            },
+        }
+    },
+
+    
     
 
     //PLANAR SETS
