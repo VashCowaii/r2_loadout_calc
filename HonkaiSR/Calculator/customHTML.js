@@ -1586,6 +1586,7 @@ const conditionListValueArray = [
     "Character: Value",
     "Character: Special Value",
     "Team: Value",
+    "Battle: Value",
 ]
 const conditionListCharacterValueArray = [
     "currentEnergy",
@@ -1613,6 +1614,13 @@ const conditionListCharacterValueArray = [
 const conditionListTeamValueArray = [
     "Skill Points: Current",
     "Skill Points: Max",
+]
+const conditionListBattleValueArray = [
+    "Cycle: AV Passed",
+    "Cycle: AV Remaining",
+    "Cycle: Current Cycle",
+    "Total AV Passed",
+    "Waves Completed",
 ]
 const conditionListSustainValueArray = [
     "Any Ally: Has no Shield",
@@ -1898,6 +1906,11 @@ const rotationsUISuffering = {
 
             //TEAM VALUES
             case "Team: Value": return {type: "Team: Value", teamValue: "Skill Points: Current"}
+
+            //BATTLE VALUES
+            case "Battle: Value": return {type: "Battle: Value", battleValue: "Cycle: AV Passed"}
+
+            
             // case "Skill Points: Current":
             //     return {type: "Skill Points: Current"}
             // case "Skill Points: Max":
@@ -2824,6 +2837,48 @@ const rotationsUISuffering = {
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
                             ${rotationsUISuffering.getConditionList(destination.teamValue ?? "Skill Points: Current",conditionListTeamValueArray)}
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>`;
+
+        return returnString
+    },
+    "Battle: Value"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
+        // {type: "Character: Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
+
+        // indexCounter++;
+        indexCounter++;
+        const newArray = [...arrayToPass];
+        newArray.push(indexCounter);
+        const arrayIDString = newArray.join("|");
+        const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
+
+        const valueNameElem = readSelection(`${baseIDString}ValueName`);
+        if (valueNameElem) {destination.battleValue = valueNameElem.value;}
+
+
+
+        
+        const getConditionList = rotationsUISuffering.getConditionList;
+
+        let returnString = `<div class="rotationsConditionsRowHolder">
+            <div class="rotationsConditionsRowHolderInner">
+
+                <div class="rotationsConditionsImageAdjacentHolderBox">
+
+                    <div class="rotationsConditionsRowHeader">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                            ${getConditionList("Battle: Value",conditionListValueArray)}
+                        </select>
+                    </div>
+
+                    <div class="rotationsSectionConditionHolderBox">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                            ${rotationsUISuffering.getConditionList(destination.battleValue ?? "Cycle: AV Passed",conditionListBattleValueArray)}
                         </select>
                     </div>
 

@@ -538,12 +538,38 @@ const conditionLibrary = {
     "Team: Value"(battleData,sourceTurn,condition) {
         return conditionLibrary[condition.teamValue](battleData,sourceTurn);
     },
+    "Battle: Value"(battleData,sourceTurn,condition) {
+        return conditionLibrary[condition.battleValue](battleData,sourceTurn);
+    },
     "Skill Points: Current"(battleData,sourceTurn,condition) {
         return battleData.skillPointCurrent
     },
     "Skill Points: Max"(battleData,sourceTurn,condition) {
         return battleData.battleTable.SPMax
     },
+
+
+    //BATTLE VALUES
+    "Cycle: AV Passed"(battleData,sourceTurn,condition) {
+        return battleData.cycleAVPassed;
+    },
+    "Cycle: AV Remaining"(battleData,sourceTurn,condition) {
+        return battleData.cycleAV;
+    },
+    "Cycle: Current Cycle"(battleData,sourceTurn,condition) {
+        return battleData.currentCycle;
+    },
+    "Total AV Passed"(battleData,sourceTurn,condition) {
+        return battleData.sumAV;
+    },
+    "Waves Completed"(battleData,sourceTurn,condition) {
+        return battleData.wavesCompleted;
+    },
+    
+
+    
+
+    
 
     //SUSTAIN CHECKS
     "Sustain Checks"(battleData,sourceTurn,condition) {

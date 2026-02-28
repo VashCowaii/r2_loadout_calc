@@ -185,6 +185,7 @@ const sim = {
             }
             battleData.sumAV += battleData.cycleAV;
             battleData.cycleAV = 100;
+            battleData.cycleAVPassed = 0;
             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
             
 
@@ -263,6 +264,7 @@ const sim = {
     pullToCurrentAV(battleData,sourceTurn) {
         battleData.sumAV += sourceTurn.AV;
         battleData.cycleAV -= sourceTurn.AV;
+        battleData.cycleAVPassed += sourceTurn.AV;
         for (let AVentry of battleData.nextTurnAV) {
             if (AVentry.name != sourceTurn.name) {
                 AVentry.AV = Math.max(0,AVentry.AV - sourceTurn.AV);//prevent negative action value
@@ -432,6 +434,7 @@ const sim = {
             "isLoggyLogger": isLoggyLogger ?? false,
             "sumAV": 0,
             "cycleAV": 150,
+            "cycleAVPassed": 0,
             "currentCycle": 0,
             "cyclesMax": 1,//+1 bc 0 counts as a cycle in this loop
             "nextTurnAV": [],
