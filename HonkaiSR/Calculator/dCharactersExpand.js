@@ -6368,6 +6368,712 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Luocha": {
+    "internalID": 1203,
+    "name": "Luocha",
+    "path": "Abundance",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 756.756,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 1280.664,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "120301",
+        "name": "Ablution of the Quick",
+        "rank": 1,
+        "desc": "While the Zone is active, ATK of all allies increases by 20%.",
+        "icon": "icon/skill/1203_rank1.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "120302",
+        "name": "Bestowal From the Pure",
+        "rank": 2,
+        "desc": "When his Skill is triggered, if the target ally's HP percentage is lower than 50%, Luocha's Outgoing Healing increases by 30%. If the target ally's HP percentage is at 50% or higher, the ally receives a Shield that can absorb DMG equal to 18% of Luocha's ATK plus 240, lasting for 2 turns.",
+        "icon": "icon/skill/1203_rank2.png",
+        "paramsEido": [
+          0.3,
+          0.18,
+          240,
+          2
+        ]
+      },
+      {
+        "id": "120303",
+        "name": "Surveyal by the Fool",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1203_skill.png"
+      },
+      {
+        "id": "120304",
+        "name": "Heavy Lies the Crown",
+        "rank": 4,
+        "desc": "When Luocha's Zone is active, enemies become Weakened and deal 12% less DMG.",
+        "icon": "icon/skill/1203_rank4.png",
+        "paramsEido": [
+          0.12
+        ]
+      },
+      {
+        "id": "120305",
+        "name": "Cicatrix 'Neath the Pain",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1203_ultimate.png"
+      },
+      {
+        "id": "120306",
+        "name": "Reunion With the Dust",
+        "rank": 6,
+        "desc": "When Ultimate is used, there is a 100% fixed chance to reduce all enemies' All-Type RES by 20% for 2 turn(s).",
+        "icon": "icon/skill/1203_rank6.png",
+        "paramsEido": [
+          1,
+          0.2,
+          2
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Thorns of the Abyss": {
+          "variant1": {
+            "skillID": 120301,
+            "trigger": "Skill01",
+            "name": "Thorns of the Abyss",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Luocha's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Luocha_00_Skill01_Camera",
+              "Avatar_Luocha_00_Skill01_Phase01",
+              "Avatar_Luocha_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Prayer of Abyss Flower": {
+          "variant1": {
+            "skillID": 120302,
+            "trigger": "Skill02",
+            "name": "Prayer of Abyss Flower",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "After using his Skill, Luocha immediately restores the target ally's HP equal to #1[i]% of Luocha's ATK plus #2[i]. Meanwhile, Luocha gains 1 stack of Abyss Flower.\\nWhen any ally's HP percentage drops to #3[i]% or lower, an effect equivalent to Luocha's Skill will immediately be triggered and applied to this ally for one time (without consuming Skill Points). This effect can be triggered again after #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                200,
+                0.5,
+                2
+              ],
+              "2": [
+                0.425,
+                320,
+                0.5,
+                2
+              ],
+              "3": [
+                0.45,
+                410,
+                0.5,
+                2
+              ],
+              "4": [
+                0.475,
+                500,
+                0.5,
+                2
+              ],
+              "5": [
+                0.5,
+                560,
+                0.5,
+                2
+              ],
+              "6": [
+                0.52,
+                620,
+                0.5,
+                2
+              ],
+              "7": [
+                0.54,
+                665,
+                0.5,
+                2
+              ],
+              "8": [
+                0.56,
+                710,
+                0.5,
+                2
+              ],
+              "9": [
+                0.58,
+                755,
+                0.5,
+                2
+              ],
+              "10": [
+                0.6,
+                800,
+                0.5,
+                2
+              ],
+              "11": [
+                0.62,
+                845,
+                0.5,
+                2
+              ],
+              "12": [
+                0.64,
+                890,
+                0.5,
+                2
+              ],
+              "13": [
+                0.66,
+                935,
+                0.5,
+                2
+              ],
+              "14": [
+                0.68,
+                980,
+                0.5,
+                2
+              ],
+              "15": [
+                0.7,
+                1025,
+                0.5,
+                2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luocha_00_Skill02_Camera",
+              "Avatar_Luocha_00_Skill02_Phase01",
+              "Avatar_Luocha_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Death Wish": {
+          "variant1": {
+            "skillID": 120303,
+            "trigger": "Skill03",
+            "name": "Death Wish",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Removes #2[i] buff(s) from all enemies and deals all enemies Imaginary DMG equal to #1[i]% of Luocha's ATK. At the same time, Luocha gains 1 stack of Abyss Flower.",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.2,
+                1
+              ],
+              "2": [
+                1.28,
+                1
+              ],
+              "3": [
+                1.36,
+                1
+              ],
+              "4": [
+                1.44,
+                1
+              ],
+              "5": [
+                1.52,
+                1
+              ],
+              "6": [
+                1.6,
+                1
+              ],
+              "7": [
+                1.7,
+                1
+              ],
+              "8": [
+                1.8,
+                1
+              ],
+              "9": [
+                1.9,
+                1
+              ],
+              "10": [
+                2,
+                1
+              ],
+              "11": [
+                2.08,
+                1
+              ],
+              "12": [
+                2.16,
+                1
+              ],
+              "13": [
+                2.24,
+                1
+              ],
+              "14": [
+                2.32,
+                1
+              ],
+              "15": [
+                2.4,
+                1
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luocha_00_Skill03_Camera",
+              "Avatar_Luocha_00_Skill03_EnterReady",
+              "Avatar_Luocha_00_Skill03_Phase01",
+              "Avatar_Luocha_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Cycle of Life": {
+          "variant1": {
+            "skillID": 120304,
+            "trigger": "SkillP01",
+            "name": "Cycle of Life",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "When Abyss Flower reaches #1[i] stacks, Luocha consumes all stacks of Abyss Flower to deploy a Zone against the enemy.\\nWhen any enemy in the Zone is attacked by an ally, the attacking ally's HP is immediately restored by an amount equal to #2[f1]% of Luocha's ATK plus #4[i].\\nThe Zone's effect lasts for #3[i] turns. When Luocha is knocked down, the Zone will be dispelled.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.12,
+                2,
+                60
+              ],
+              "2": [
+                2,
+                0.1275,
+                2,
+                96
+              ],
+              "3": [
+                2,
+                0.135,
+                2,
+                123
+              ],
+              "4": [
+                2,
+                0.1425,
+                2,
+                150
+              ],
+              "5": [
+                2,
+                0.15,
+                2,
+                168
+              ],
+              "6": [
+                2,
+                0.156,
+                2,
+                186
+              ],
+              "7": [
+                2,
+                0.162,
+                2,
+                199.5
+              ],
+              "8": [
+                2,
+                0.168,
+                2,
+                213
+              ],
+              "9": [
+                2,
+                0.174,
+                2,
+                226.5
+              ],
+              "10": [
+                2,
+                0.18,
+                2,
+                240
+              ],
+              "11": [
+                2,
+                0.186,
+                2,
+                253.5
+              ],
+              "12": [
+                2,
+                0.192,
+                2,
+                267
+              ],
+              "13": [
+                2,
+                0.198,
+                2,
+                280.5
+              ],
+              "14": [
+                2,
+                0.204,
+                2,
+                294
+              ],
+              "15": [
+                2,
+                0.21,
+                2,
+                307.5
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luocha_00_PassiveSkill01_Camera",
+              "Avatar_Luocha_00_PassiveSkill01",
+              "Avatar_Luocha_00_Passive01_InsertAbility",
+              "Avatar_Luocha_00_Skill02_InsertAbility"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Mercy of a Fool": {
+          "variant1": {
+            "skillID": 120307,
+            "trigger": "SkillMaze",
+            "name": "Mercy of a Fool",
+            "type": "Restore",
+            "slot": "Technique",
+            "desc": "After the Technique is used, the Talent will be immediately triggered at the start of the next battle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "attackType": "Maze",
+            "skillEffect": "Restore",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Luocha_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1203_basic_atk.png",
+        "skillRef": {
+          "skillName": "Thorns of the Abyss",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1203_skill.png",
+        "skillRef": {
+          "skillName": "Prayer of Abyss Flower",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1203_ultimate.png",
+        "skillRef": {
+          "skillName": "Death Wish",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1203_talent.png",
+        "skillRef": {
+          "skillName": "Cycle of Life",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1203_technique.png",
+        "skillRef": {
+          "skillName": "Mercy of a Fool",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Cleansing Revival",
+        "icon": "icon/skill/1203_skilltree1.png",
+        "desc": "When Skill's effect is triggered, dispel #1[i] debuff(s) from one designated ally.",
+        "params": [
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Sanctified",
+        "icon": "icon/skill/1203_skilltree2.png",
+        "desc": "When any enemy in the Zone is attacked by an ally, all allies (except the attacker) restore HP equal to #1[f1]% of Luocha's ATK plus #2[i].",
+        "params": [
+          0.07,
+          93
+        ]
+      },
+      "Point08": {
+        "name": "Through the Valley",
+        "icon": "icon/skill/1203_skilltree3.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.7
+        ],
+        "traceAbility": "Luocha_Luocha_Trace03",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1203.png",
+    "preview": "image/character_preview/1203.png",
+    "portrait": "image/character_portrait/1203.png",
+    "bannerOffsets": [
+      10.4,
+      -36.6,
+      0.63,
+      10.4,
+      -36.6,
+      0.63,
+      10.4,
+      -36.6,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Blade": {
     "internalID": 1205,
     "name": "Blade",
@@ -14318,6 +15024,647 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Anaxa": {
+    "internalID": 1405,
+    "name": "Anaxa",
+    "path": "Erudition",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 756.756,
+      "DEFBase": 557.865,
+      "HPBase": 970.2,
+      "SPDBase": 97,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "140501",
+        "name": "Magician, Isolated by Stars",
+        "rank": 1,
+        "desc": "After using Skill for the first time, recovers 1 Skill Point(s). When using Skill to hit enemy targets, decreases the targets' DEF by 16%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1405_rank1.png",
+        "paramsEido": [
+          0.16,
+          2,
+          1
+        ],
+        "eidoAbility": "Anaxa_Anaxa_Eidolon1"
+      },
+      {
+        "id": "140502",
+        "name": "Soul, True to History",
+        "rank": 2,
+        "desc": "When enemy targets enter the battlefield, triggers 1 instance of the Talent's Weakness Implant effect, and reduces their All-Type RES by 20%.",
+        "icon": "icon/skill/1405_rank2.png",
+        "paramsEido": [
+          0.2
+        ],
+        "eidoAbility": "Anaxa_Anaxa_Eidolon2"
+      },
+      {
+        "id": "140503",
+        "name": "Pupil, Etched into Cosmos",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1405_ultimate.png"
+      },
+      {
+        "id": "140504",
+        "name": "Blaze, Plunged to Canyon",
+        "rank": 4,
+        "desc": "When using Skill, increases ATK by 30%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
+        "icon": "icon/skill/1405_rank4.png",
+        "paramsEido": [
+          0.3,
+          2,
+          2
+        ]
+      },
+      {
+        "id": "140505",
+        "name": "Embryo, Set Beyond Vortex",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1405_skill.png"
+      },
+      {
+        "id": "140506",
+        "name": "Everything Is in Everything",
+        "rank": 6,
+        "desc": "The DMG dealt by Anaxa is 130% of the original DMG. The 2 effects in the Trace \"Imperative Hiatus\" will be triggered directly and will no longer depend on the number of \"Erudition\" characters in the team.",
+        "icon": "icon/skill/1405_rank6.png",
+        "paramsEido": [
+          1.3
+        ],
+        "eidoAbility": "Anaxa_Anaxa_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Pain, Brews Truth": {
+          "variant1": {
+            "skillID": 140501,
+            "trigger": "Skill01",
+            "name": "Pain, Brews Truth",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Anaxa's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_Skill01_Camera",
+              "Avatar_Anaxa_00_Skill01_Phase01",
+              "Avatar_Anaxa_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Fractal, Exiles Fallacy": {
+          "variant1": {
+            "skillID": 140502,
+            "trigger": "Skill02",
+            "name": "Fractal, Exiles Fallacy",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Anaxa's ATK to one designated enemy and additionally deals #2[i] instance(s) of DMG. Each instance of DMG deals Wind DMG equal to #1[i]% of Anaxa's ATK to one random enemy, prioritizing Bouncing to enemy targets that have not been hit by this instance of Skill.\\nWhen used, for each attackable enemy on the field, this Skill has its DMG dealt increased by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.35,
+                4,
+                0.2
+              ],
+              "2": [
+                0.385,
+                4,
+                0.2
+              ],
+              "3": [
+                0.42,
+                4,
+                0.2
+              ],
+              "4": [
+                0.455,
+                4,
+                0.2
+              ],
+              "5": [
+                0.49,
+                4,
+                0.2
+              ],
+              "6": [
+                0.525,
+                4,
+                0.2
+              ],
+              "7": [
+                0.56875,
+                4,
+                0.2
+              ],
+              "8": [
+                0.6125,
+                4,
+                0.2
+              ],
+              "9": [
+                0.65625,
+                4,
+                0.2
+              ],
+              "10": [
+                0.7,
+                4,
+                0.2
+              ],
+              "11": [
+                0.735,
+                4,
+                0.2
+              ],
+              "12": [
+                0.77,
+                4,
+                0.2
+              ],
+              "13": [
+                0.805,
+                4,
+                0.2
+              ],
+              "14": [
+                0.84,
+                4,
+                0.2
+              ],
+              "15": [
+                0.875,
+                4,
+                0.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_Skill02_Camera",
+              "Avatar_Anaxa_00_Skill02_Phase01",
+              "Avatar_Anaxa_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Sprouting Life Sculpts Earth": {
+          "variant1": {
+            "skillID": 140503,
+            "trigger": "Skill03",
+            "name": "Sprouting Life Sculpts Earth",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts the \"Sublimation\" state on all enemies, then deals Wind DMG equal to #1[i]% of Anaxa's ATK to all enemies.\\nIn the \"Sublimation\" state, the targets will be simultaneously inflicted with Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses, lasting until the start of the targets' turn. If the targets do not have Control RES, they are unable to take action in the \"Sublimation\" state.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8
+              ],
+              "2": [
+                0.88
+              ],
+              "3": [
+                0.96
+              ],
+              "4": [
+                1.04
+              ],
+              "5": [
+                1.12
+              ],
+              "6": [
+                1.2
+              ],
+              "7": [
+                1.3
+              ],
+              "8": [
+                1.4
+              ],
+              "9": [
+                1.5
+              ],
+              "10": [
+                1.6
+              ],
+              "11": [
+                1.68
+              ],
+              "12": [
+                1.76
+              ],
+              "13": [
+                1.84
+              ],
+              "14": [
+                1.92
+              ],
+              "15": [
+                2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_Skill03_Camera",
+              "Avatar_Anaxa_00_Skill03_EnterReady",
+              "Avatar_Anaxa_00_Skill03_Phase01",
+              "Avatar_Anaxa_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Tetrad Wisdom Reigns Thrice": {
+          "variant1": {
+            "skillID": 140504,
+            "trigger": "SkillP01",
+            "name": "Tetrad Wisdom Reigns Thrice",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "Each time Anaxa lands 1 hit on enemy targets, inflicts 1 Weakness of a random Type to the targets, lasting for #2[i] turn(s), with priority to the Weakness Type that the target doesn't already possess.\\nWhile Anaxa is on the field, inflicts the \"Qualitative Disclosure\" state on enemy targets that have at least #3[i] different Types of Weaknesses. Anaxa deals #1[i]% increased DMG to targets afflicted with the \"Qualitative Disclosure\" state. In addition, after using Basic ATK or Skill on them, unleashes 1 additional instance of Skill on the targets. This additional Skill does not consume any Skill Points and cannot trigger this effect again. If the target has been defeated before the additional Skill is used, it will be cast on one random enemy instead.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.18,
+                3,
+                5
+              ],
+              "2": [
+                0.192,
+                3,
+                5
+              ],
+              "3": [
+                0.204,
+                3,
+                5
+              ],
+              "4": [
+                0.216,
+                3,
+                5
+              ],
+              "5": [
+                0.228,
+                3,
+                5
+              ],
+              "6": [
+                0.24,
+                3,
+                5
+              ],
+              "7": [
+                0.255,
+                3,
+                5
+              ],
+              "8": [
+                0.27,
+                3,
+                5
+              ],
+              "9": [
+                0.285,
+                3,
+                5
+              ],
+              "10": [
+                0.3,
+                3,
+                5
+              ],
+              "11": [
+                0.312,
+                3,
+                5
+              ],
+              "12": [
+                0.324,
+                3,
+                5
+              ],
+              "13": [
+                0.336,
+                3,
+                5
+              ],
+              "14": [
+                0.348,
+                3,
+                5
+              ],
+              "15": [
+                0.36,
+                3,
+                5
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Prism of the Pupil": {
+          "variant1": {
+            "skillID": 140507,
+            "trigger": "SkillMaze",
+            "name": "Prism of the Pupil",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, inflicts the Terrified state on enemies in a set area. Terrified enemies will flee in a direction away from Anaxa for #1[i] second(s). When allies enter combat via actively attacking a Terrified enemy, it will always be considered as entering battle via attacking a Weakness. After entering battle, Anaxa applies 1 Weakness of the attacker's Type to every enemy target, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1405_basic_atk.png",
+        "skillRef": {
+          "skillName": "Pain, Brews Truth",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1405_skill.png",
+        "skillRef": {
+          "skillName": "Fractal, Exiles Fallacy",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1405_ultimate.png",
+        "skillRef": {
+          "skillName": "Sprouting Life Sculpts Earth",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1405_talent.png",
+        "skillRef": {
+          "skillName": "Tetrad Wisdom Reigns Thrice",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1405_technique.png",
+        "skillRef": {
+          "skillName": "Prism of the Pupil",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Roaming Signifier",
+        "icon": "icon/skill/1405_skilltree1.png",
+        "desc": "When using Basic ATK, additionally regenerates #1[i] Energy.\nAt the start of the turn, if there are no enemy targets in the \"Qualitative Disclosure\" state, immediately regenerates #2[i] Energy.",
+        "params": [
+          10,
+          30
+        ]
+      },
+      "Point07": {
+        "name": "Imperative Hiatus",
+        "icon": "icon/skill/1405_skilltree2.png",
+        "desc": "Based on the number of \"Erudition\" characters in the team, one of the following effects will be triggered in the current battle:\n1 character: Increases Anaxa's CRIT DMG by #1[i]%.\nAt least 2 characters: Increases DMG dealt by all allies by #2[i]%.",
+        "params": [
+          1.4,
+          0.5
+        ],
+        "traceAbility": "Anaxa_Anaxa_Trace02"
+      },
+      "Point08": {
+        "name": "Qualitative Shift",
+        "icon": "icon/skill/1405_skilltree3.png",
+        "desc": "For every 1 different Weakness Type an enemy target has, the DMG that Anaxa deals to that target ignores #1[i]% of their DEF. Up to a max of 7 Weakness Types can be taken into account for this effect.",
+        "params": [
+          0.04
+        ],
+        "traceAbility": "Anaxa_Anaxa_Trace03"
+      },
+      "Point09": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1405.png",
+    "preview": "image/character_preview/1405.png",
+    "portrait": "image/character_portrait/1405.png",
+    "bannerOffsets": [
+      0,
+      12,
+      0.63,
+      0,
+      12,
+      0.63,
+      0,
+      12,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Hysilens": {
     "internalID": 1410,
     "name": "Hysilens",
@@ -18048,6 +19395,717 @@ let characters = {
       0.64,
       134,
       2,
+      0.64
+    ],
+    "isBuffed": false
+  },
+  "Archer": {
+    "internalID": 1015,
+    "name": "Archer",
+    "path": "The Hunt",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 220,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1164.2399999999998,
+      "SPDBase": 105,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "101501",
+        "name": "The Unreached Dream",
+        "rank": 1,
+        "desc": "After using Skill 3 time(s) within one turn, recovers 2 Skill Point(s) for allies.",
+        "icon": "icon/skill/1015_rank1.png",
+        "paramsEido": [
+          3,
+          2
+        ]
+      },
+      {
+        "id": "101502",
+        "name": "The Unfulfilled Happiness",
+        "rank": 2,
+        "desc": "When using Ultimate, reduces the enemy target's Quantum RES by 20%, and applies Quantum Weakness to it, lasting for 2 turn(s).",
+        "icon": "icon/skill/1015_rank2.png",
+        "paramsEido": [
+          0.2,
+          2
+        ]
+      },
+      {
+        "id": "101503",
+        "name": "The Untamed Will",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1015_skill.png"
+      },
+      {
+        "id": "101504",
+        "name": "The Unsung Life",
+        "rank": 4,
+        "desc": "Increases the Ultimate DMG dealt by 150%.",
+        "icon": "icon/skill/1015_rank4.png",
+        "paramsEido": [
+          1.5
+        ]
+      },
+      {
+        "id": "101505",
+        "name": "The Nameless Watch",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1015_ultimate.png"
+      },
+      {
+        "id": "101506",
+        "name": "The Endless Pilgrimage",
+        "rank": 6,
+        "desc": "When the turn starts, recovers 1 Skill Point for allies. The maximum number of stacks allowed for the DMG boost effect provided by this unit's Skill increases by 1. The Skill DMG dealt ignores 20% of DEF.",
+        "icon": "icon/skill/1015_rank6.png",
+        "paramsEido": [
+          1,
+          0.2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Kanshou and Bakuya": {
+          "variant1": {
+            "skillID": 101501,
+            "trigger": "Skill01",
+            "name": "Kanshou and Bakuya",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Archer's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 9,
+            "configAbilityList": [
+              "Avatar_Archer_00_Skill01_Camera",
+              "Avatar_Archer_00_Skill01_Phase01",
+              "Avatar_Archer_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Caladbolg II: Fake Spiral Sword": {
+          "variant1": {
+            "skillID": 101502,
+            "trigger": "Skill02",
+            "name": "Caladbolg II: Fake Spiral Sword",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Enters the \"Circuit Connection\" state. Deals Quantum DMG equal to #1[i]% of Archer's ATK to one designated enemy. After using Skill in the \"Circuit Connection\" state, the current turn does not end, and the DMG dealt by Archer's Skill increases by #2[i]%. This effect can stack up to #3[i] time(s), lasting until he exits the \"Circuit Connection\" state. After actively using Skill #5[i] time(s) or when Skill Points are insufficient to use Skill again, exits the \"Circuit Connection\" state. After all enemy targets have been defeated in each wave, exits the \"Circuit Connection\" state.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 2,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.8,
+                0.6,
+                2,
+                1,
+                5
+              ],
+              "2": [
+                1.98,
+                0.64,
+                2,
+                1,
+                5
+              ],
+              "3": [
+                2.16,
+                0.68,
+                2,
+                1,
+                5
+              ],
+              "4": [
+                2.34,
+                0.72,
+                2,
+                1,
+                5
+              ],
+              "5": [
+                2.52,
+                0.76,
+                2,
+                1,
+                5
+              ],
+              "6": [
+                2.7,
+                0.8,
+                2,
+                1,
+                5
+              ],
+              "7": [
+                2.925,
+                0.85,
+                2,
+                1,
+                5
+              ],
+              "8": [
+                3.15,
+                0.9,
+                2,
+                1,
+                5
+              ],
+              "9": [
+                3.375,
+                0.95,
+                2,
+                1,
+                5
+              ],
+              "10": [
+                3.6,
+                1,
+                2,
+                1,
+                5
+              ],
+              "11": [
+                3.78,
+                1.04,
+                2,
+                1,
+                5
+              ],
+              "12": [
+                3.96,
+                1.08,
+                2,
+                1,
+                5
+              ],
+              "13": [
+                4.14,
+                1.12,
+                2,
+                1,
+                5
+              ],
+              "14": [
+                4.32,
+                1.16,
+                2,
+                1,
+                5
+              ],
+              "15": [
+                4.5,
+                1.2,
+                2,
+                1,
+                5
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Archer_00_Skill02_Camera",
+              "Avatar_Archer_00_Skill02_Phase01",
+              "Avatar_Archer_00_Skill02_Phase02",
+              "Avatar_Archer_00_Skill02_End_Camera",
+              "Avatar_Archer_00_Skill02_C02_Camera",
+              "Avatar_Archer_00_Skill02_C01andC02_Camera"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "End": {
+          "variant1": {
+            "skillID": 101509,
+            "trigger": "Skill21",
+            "name": "End",
+            "type": "End",
+            "slot": "Skill",
+            "desc": "Exits \"Circuit Connection\" state and ends the turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Archer_00_Skill02Cancel_Phase01",
+              "Avatar_Archer_00_Skill02Cancel_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Unlimited Blade Works": {
+          "variant1": {
+            "skillID": 101503,
+            "trigger": "Skill03",
+            "name": "Unlimited Blade Works",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Archer's ATK to one designated enemy and gains #2[i] point(s) of Charge, up to a maximum of #3[i].",
+            "energyCost": 220,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                6,
+                2,
+                4
+              ],
+              "2": [
+                6.4,
+                2,
+                4
+              ],
+              "3": [
+                6.8,
+                2,
+                4
+              ],
+              "4": [
+                7.2,
+                2,
+                4
+              ],
+              "5": [
+                7.6,
+                2,
+                4
+              ],
+              "6": [
+                8,
+                2,
+                4
+              ],
+              "7": [
+                8.5,
+                2,
+                4
+              ],
+              "8": [
+                9,
+                2,
+                4
+              ],
+              "9": [
+                9.5,
+                2,
+                4
+              ],
+              "10": [
+                10,
+                2,
+                4
+              ],
+              "11": [
+                10.4,
+                2,
+                4
+              ],
+              "12": [
+                10.8,
+                2,
+                4
+              ],
+              "13": [
+                11.2,
+                2,
+                4
+              ],
+              "14": [
+                11.6,
+                2,
+                4
+              ],
+              "15": [
+                12,
+                2,
+                4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Archer_00_Skill03_Camera",
+              "Avatar_Archer_00_Skill03_EnterReady",
+              "Avatar_Archer_00_Skill03_Phase01",
+              "Avatar_Archer_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Mind's Eye (True)": {
+          "variant1": {
+            "skillID": 101504,
+            "trigger": "SkillP01",
+            "name": "Mind's Eye (True)",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "After Archer's teammates attack enemy targets, Archer consumes 1 Charge and immediately launches Follow-Up ATK on the primary target, dealing Quantum DMG equal to #1[i]% of Archer's ATK and recovering 1 Skill Point. If the target is defeated before this Follow-Up ATK is launched, the Follow-Up ATK will be directed at one random enemy instead.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1
+              ],
+              "2": [
+                1.1
+              ],
+              "3": [
+                1.2
+              ],
+              "4": [
+                1.3
+              ],
+              "5": [
+                1.4
+              ],
+              "6": [
+                1.5
+              ],
+              "7": [
+                1.625
+              ],
+              "8": [
+                1.75
+              ],
+              "9": [
+                1.875
+              ],
+              "10": [
+                2
+              ],
+              "11": [
+                2.1
+              ],
+              "12": [
+                2.2
+              ],
+              "13": [
+                2.3
+              ],
+              "14": [
+                2.4
+              ],
+              "15": [
+                2.5
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Archer_00_PassiveSkill01",
+              "Avatar_Archer_00_Insert_Phase01",
+              "Avatar_Archer_00_Insert_Phase02",
+              "Avatar_Archer_00_Insert_Camera",
+              "Avatar_Archer_00_Bonus",
+              "Avatar_Archer_00_Bonus_Camera"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Clairvoyance": {
+          "variant1": {
+            "skillID": 101507,
+            "trigger": "SkillMaze",
+            "name": "Clairvoyance",
+            "slot": "Technique",
+            "desc": "Immediately attacks enemies. After entering combat, deals Quantum DMG equal to #1[i]% of Archer's ATK to all enemies and gains #2[i] point(s) of Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                1
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Archer_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1015_basic_atk.png",
+        "skillRef": {
+          "skillName": "Kanshou and Bakuya",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1015_skill.png",
+        "skillRef": {
+          "skillName": "Caladbolg II: Fake Spiral Sword",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1015_ultimate.png",
+        "skillRef": {
+          "skillName": "Unlimited Blade Works",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1015_talent.png",
+        "skillRef": {
+          "skillName": "Mind's Eye (True)",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1015_technique.png",
+        "skillRef": {
+          "skillName": "Clairvoyance",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Projection Magecraft",
+        "icon": "icon/skill/1015_skilltree1.png",
+        "desc": "When Archer is on the field, increases the maximum Skill Point limit by #1[i].",
+        "params": [
+          2
+        ],
+        "traceAbility": "Archer_Archer_Trace01"
+      },
+      "Point07": {
+        "name": "Hero of Justice",
+        "icon": "icon/skill/1015_skilltree2.png",
+        "desc": "When Archer enters combat, gains #1[i] point(s) of Charge.",
+        "params": [
+          1
+        ],
+        "traceAbility": "Archer_Archer_Trace02"
+      },
+      "Point08": {
+        "name": "Guardian",
+        "icon": "icon/skill/1015_skilltree3.png",
+        "desc": "After allies gain a Skill Point, if there are #3[i] Skill Points or more, increases Archer's CRIT DMG by #1[i]% for #2[i] turn(s).",
+        "params": [
+          1.2,
+          1,
+          4
+        ],
+        "traceAbility": "Archer_Archer_Trace03"
+      },
+      "Point09": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1015.png",
+    "preview": "image/character_preview/1015.png",
+    "portrait": "image/character_portrait/1015.png",
+    "bannerOffsets": [
+      45,
+      33,
+      0.64,
+      45,
+      33,
+      0.64,
+      45,
+      33,
       0.64
     ],
     "isBuffed": false

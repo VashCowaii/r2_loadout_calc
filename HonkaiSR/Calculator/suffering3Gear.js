@@ -61,7 +61,7 @@ const turnLogicLightcones = {
             {
                 "trigger": "SkillEnd",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;
+                    // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
                     let ownersSlots = this.ownersSlots;
@@ -259,7 +259,7 @@ const turnLogicLightcones = {
                     sourceTurn.swordplayHitsCountTrackingInProgress = true;
                 },
                 "target": "self",
-                "listenerName": "The Ashblazing Grand Duke - Hit tracking start",
+                "listenerName": "Swordplay - Hit tracking start",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -281,14 +281,15 @@ const turnLogicLightcones = {
                     if (targetTurn.properName != enemyTurn.properName) {return;}
 
                     const buffSheet = sourceTurn.swordplayRepeatHitDMGSHEET;
-                    const buffCheck = sourceTurn.buffsObject[buffSheet.name];
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                     //if we're in a super hit-spammy attack, and reached the 5 point already, then abort without bothering the buff handler
                     if (buffCheck && buffCheck.currentStacks === 5) {return;}
+                    // console.log(sourceTurn.properName)
                     
                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "The Ashblazing Grand Duke - Hit scaling",
+                "listenerName": "Swordplay - Hit scaling",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -304,7 +305,7 @@ const turnLogicLightcones = {
                     sourceTurn.swordplayHitsCountTrackingInProgress = false;
                 },
                 "target": "self",
-                "listenerName": "The Ashblazing Grand Duke - Hit tracking end",
+                "listenerName": "Swordplay - Hit tracking end",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -3739,6 +3740,198 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "ultDMGBonus": "A Storm Is Coming [LC]",
+        },
+    },
+    "The Great Cosmic Enterprise": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    // poke("FUAStart",battleData,{sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetStats = targetTurn.statTable;
+
+                    let weaknessCount = 0;
+                    for (let weakName of checkWeakArray) {
+                        weaknessCount += targetStats[weakName] ? 1 : 0;
+                    }
+
+                    if (!sourceTurn.greatCosmicDMGSHEET) {
+                        let lcNameRef = "The Great Cosmic Enterprise";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
+                        sourceTurn.greatCosmicDMGSHEET = {
+                            "statsOnHit": [DamageAll],
+                            [DamageAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 7,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.greatCosmicDMGSHEET;
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                    const updateBuff = battleActions.updateBuff;
+                    if (buffCheck) {
+                        const currentStacks = buffCheck.currentStacks;
+                        if (currentStacks === weaknessCount) {return;}
+                        else if (currentStacks < weaknessCount) {
+                            const stackDiff = weaknessCount - currentStacks;
+                            buffSheet.currentStacks = stackDiff;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                        else {//if stacks are higher than they should be
+                            if (weaknessCount) {//if we have stacks then update
+                                removeBuff(battleData,sourceTurn,buffSheet,true,null,true);
+                                buffSheet.currentStacks = weaknessCount;
+                                updateBuff(battleData,sourceTurn,buffSheet,false,null)
+                            }
+                            else {//otherwise remove
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        }
+                    }
+                    else if (weaknessCount) {
+                        buffSheet.currentStacks = weaknessCount;
+                        updateBuff(battleData,sourceTurn,buffSheet,false,null);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Great Cosmic Enterprise weakness dmg listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "cosmicDMG": "The Great Cosmic Enterprise",
+        },
+    },
+    "Life Should Be Cast to Flames": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    //NOTE: the energy regen is uniform, not reliant upon superimposition
+                    battleActions.updateEnergy(battleData,10,sourceTurn,false,"Life Should Be Cast to Flames (LC)");
+                },
+                "target": "self",
+                "listenerName": "Life Should Be Cast to Flames - energy on turnstart",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    // poke("FUAStart",battleData,{sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const targetTurn = generalInfo.targetTurn;
+                    // const targetStats = targetTurn.statTable;
+                    const targetBuffs = targetTurn.buffsObject;
+                    let foundImplantedByOwner = false;
+                    for (let buffObject in targetBuffs) {
+                        const currentBuff = targetBuffs[buffObject];
+                        if (currentBuff && currentBuff.isImplant && currentBuff.sourceOwner === sourceTurn.properName) {
+                            foundImplantedByOwner = true;
+                            break;
+                        }
+                    }
+
+
+                    if (!sourceTurn.lifeShouldBeCastFlamesDMGSHEET) {
+                        let lcNameRef = "Life Should Be Cast to Flames";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        const lcBuffNames = turnLogicLightcones[lcNameRef].buffNames;
+                        let buffName = lcBuffNames.dmgBonus;
+                        let buffName2 = lcBuffNames.defShred;
+                        sourceTurn.lifeShouldBeCastFlamesDMGSHEET = {
+                            "statsOnHit": [DamageAll],
+                            [DamageAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+
+                        sourceTurn.lifeShouldBeCastFlamesDEFSHEET = {
+                            "stats": [DEFP],
+                            [DEFP]: -rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName2,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "isDebuff": true,
+                            "expireType": "EndTurn"
+                        }
+                    }
+
+                    const updateBuff = battleActions.updateBuff;
+                    const buffSheet = sourceTurn.lifeShouldBeCastFlamesDMGSHEET;
+                    const buffCheck = targetBuffs[buffSheet.buffName];
+                    if (foundImplantedByOwner) {
+                        if (!buffCheck) {
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                    }
+                    else if (buffCheck) {
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+
+                    const buffJustApplied = buffCheck && buffCheck.AVApplied === battleData.sumAV;
+                    if (!buffJustApplied) {
+                        const buffSheet2 = sourceTurn.lifeShouldBeCastFlamesDEFSHEET;
+                        buffSheet2.duration = targetTurn.turnState ? 3 : 2;
+                        updateBuff(battleData,targetTurn,buffSheet2);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Life Should Be Cast to Flames, implant check and def reduction",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "dmgBonus": "Life Should Be Cast to Flames (DMG)",
+            "defShred": "Life Should Be Cast to Flames (-DEF)",
         },
     },
 }

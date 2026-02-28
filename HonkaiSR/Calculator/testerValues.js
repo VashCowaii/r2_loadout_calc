@@ -80,6 +80,11 @@ const customDisplayValuesLog = {
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
     ],
+    "Archer": [
+        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true},
+        {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
+        {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
+    ],
     "Kafka": [
         {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true},
     ],
@@ -176,13 +181,16 @@ const customDisplayValuesLog = {
     ],
     "Natasha": [],  
     "Lynx": [], 
+    "Anaxa": [],
 }
 
 const permaConditionsTextLibrary = {
     "energyMaxed": "Energy: Current === Energy: Max",
     "energyHalf": "Energy Current >= (Energy Max * 0.5)",
     "energyMaxedCyrene": "First battle's ultimate: Energy: Current === Energy: Max<br>Any further ultimates: Energy Current >= 12",
-    "atLeast1SP": "Skill Points: Current >= 1"
+    "atLeast1SP": "Skill Points: Current >= 1",
+    "atLeast2SP": "Skill Points: Current >= 2",
+    "archerSub5casts": "Skill Use Count < 5",
 }
 
 const conditionsCharacterDisplayWarning = {
@@ -344,6 +352,20 @@ const conditionsCharacterDisplayWarning = {
         "Skill": "",
         "Ultimate": "",
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Anaxa": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Archer": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast2SP,permaConditionsTextLibrary.archerSub5casts],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
 }
@@ -1349,6 +1371,11 @@ const defaultConditions = {
         "Skill": null,
         "Ultimate": null,
     },
+    "Anaxa": {
+        hasEnhancedState: false,
+        "Skill": null,
+        "Ultimate": null,
+    },
 
     //HUNT
     "Topaz & Numby": {
@@ -1391,6 +1418,70 @@ const defaultConditions = {
                     ]
                 }
             ]
+        }
+    },
+    "Archer": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "OR",
+            "array": [
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "skillStarted",
+                            "state": false,
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": ">=",
+                            "array": [
+                                {
+                                    "type": "Team: Value",
+                                    "teamValue": "Skill Points: Current"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 6
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "skillStarted",
+                            "state": true,
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": ">=",
+                            "array": [
+                                {
+                                    "type": "Team: Value",
+                                    "teamValue": "Skill Points: Current"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 2
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
         }
     },
 }
