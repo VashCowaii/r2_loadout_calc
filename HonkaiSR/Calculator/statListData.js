@@ -394,7 +394,7 @@ const propertyImagePaths = {
     },
 
     "DamageReduction": {
-        "icon": "/HonkaiSR/misc/IconBuffFatigueRatio.png",
+        "icon": "/HonkaiSR/misc/IconBuffDamageReduction.png",
         "sets": {
             [greatTableIndex["DamageReductionStandard"]]: {
                 "display": "Damage Reduction",
