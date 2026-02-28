@@ -61,7 +61,7 @@ const turnLogicLightcones = {
             {
                 "trigger": "SkillEnd",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;
+                    // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
                     let ownersSlots = this.ownersSlots;

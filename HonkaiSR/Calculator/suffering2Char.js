@@ -11951,6 +11951,587 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Archer": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
+            let E1 = true;
+            let actionUsed = false;
+
+            const statCalls = thisTurn.battleValues;
+
+            let currentSP = battleData.skillPointCurrent;
+            let minimumPointsToStart = 2;
+            let desiredCasts = 5;
+            let maximumCasts = 5;
+
+            //separated from below bc the turn controller will keep looping back into the action controller here while the turn is active
+            //and this needs to be distinct as the start condition, rather than be involved in the continous casting
+            let skipSecondaryCheckSameSkill = false;
+            if (currentSP >= minimumPointsToStart && !statCalls.skillStarted && checkSkill(battleData,thisTurn)) {
+                statCalls.skillStarted = true;
+                skipSecondaryCheckSameSkill = true;
+            }
+
+            if (statCalls.skillStarted) {
+                actionUsed = true;
+                if (currentSP >= 2 && statCalls.skillCounter < maximumCasts && (skipSecondaryCheckSameSkill || checkSkill(battleData,thisTurn))) {
+                    statCalls.skillCounter += 1;
+                    return this.returnSkillCall ??= {action: "Skill", points: -2, actionCall: this.skillFunctions.archerSkillInstance, target: "enemy", endTurn: false};
+                }
+                else {
+                    statCalls.skillCounter = 0;
+                    statCalls.skillStarted = false;
+                    return {action: "EndTurn", endTurn: true};
+                }
+            }
+
+            // if (minimum && checkSkill(battleData,thisTurn)) {
+            //     const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.topazSkill, target: "enemy", endTurn: true};
+            //     return returnSkillCall;
+            // }
+
+            if (!actionUsed) {return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.archerBasic, target: "enemy", endTurn: true};}
+            //default to basic atk when all else fails
+        },
+        "skillFunctions": {
+            archerBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.archerBasicREF ??= ATKObjects["Basic ATK"]["Kanshou and Bakuya"].variant1;
+
+                if (!ATKObjects.archerBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.archerBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Quantum"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.archerBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.archerBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            archerFUA(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const valuesRef = sourceTurn.battleValues;
+                valuesRef.charge -= 1;
+                valuesRef.chargeDebt -= 1;
+
+                let skillRef = ATKObjects.archerFUAREF ??= ATKObjects.Talent["Mind's Eye (True)"].variant1;
+
+                if (!ATKObjects.archerFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = ATKObjects.archerFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","FUA","Quantum"];
+                    const actionTags = ["FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.archerFUAATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.archerFUAATKOBJECT;
+
+                poke("TalentStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("TalentEnd",battleData,{sourceTurn});
+
+                //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
+                battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
+            },
+            archerSkillInstance(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                let skillRef = ATKObjects.archerSkillInstanceREF ??= ATKObjects["Skill"]["Caladbolg II: Fake Spiral Sword"].variant1;
+
+                if (!ATKObjects.archerSkillInstanceATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.archerSkillInstanceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Quantum"];
+                    const actionTags = ["Skill","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.archerSkillInstanceATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                    //construct both the buff sheet and the atk object in one go on the first skill usage
+                    let buffName = logicRef.buffNames.caladbolg;
+                    let e6 = sourceTurn.rank >= 6;
+                    ATKObjects.archerSkillInstanceBUFFSHEET = {
+                        "stats": [DamageSkill],
+                        [DamageSkill]: values[1],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": e6 ? 3 : 2,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+                }
+                
+                let ATKObject = ATKObjects.archerSkillInstanceATKOBJECT;
+                
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                if (rank >= 1 && sourceTurn.battleValues.skillCounter === 3) {//fail condition right off if no source exists or it's not archer
+                    let cost = 2;
+                    battleActions.updateSkillPoints(cost,battleData,{sourceTurn,sourceName:"E1: Skill Point Refund"})
+                }
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+
+                //used to be in its own listener but kinda no reason to do that other than be fancy, best suited in here
+                //helps condense skillRef/values calls as well since it's the same skill that sources it
+                
+                let buffSheet = ATKObjects.archerSkillInstanceBUFFSHEET;
+
+                const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                if (!buffCheck || buffCheck.currentStacks < buffCheck.maxStacks) {battleActions.updateBuff(battleData,sourceTurn,buffSheet);}
+            },
+            archerUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.archerUltimateREF ??= ATKObjects.Ultimate["Unlimited Blade Works"].variant1;
+
+                if (!ATKObjects.archerUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Quantum"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.archerUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.archerUltimateATKOBJECT;
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+
+                let e2 = sourceTurn.rank >= 2;
+                if (e2) {
+                    let currentEnemy = battleData.primaryTarget;
+
+                    if (!ATKObject.archerUltimateE2IMPLANTSHEET) {
+                        ATKObject.archerUltimateE2IMPLANTSHEET = {
+                            "stats": [ResistanceQuantum,WeaknessQuantum],
+                            [ResistanceQuantum]: -0.20,
+                            [WeaknessQuantum]: 1,
+                            "source": characterName,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": logicRef.buffNames.implant,
+                            "duration": 0,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "isDebuff": true,
+                            "isImplant": true,
+                            "expireType": "EndTurn"
+                        }
+                    }
+                    const buffSheet = ATKObject.archerUltimateE2IMPLANTSHEET;
+                    buffSheet.duration = currentEnemy.turnState ? 3 : 2;
+                    battleActions.updateBuff(battleData,currentEnemy,buffSheet);
+                    //NOTE: the e2 weakness implant can double stack with silver wolf's implant, but sw implant has to come first
+                    //just checked and sw weakness check DOES look for implanted weaknesses too, and won't do the 20% RES reduction if archer's goes first.
+                }
+                
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                let chargeRef = sourceTurn.battleValues;
+
+                let newCharge = Math.min(4,chargeRef.charge + 2)
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
+                chargeRef.charge = newCharge;
+                // poke("SkillEnd",battleData,{source:"Archer"});
+                sourceTurn.ultyQueued = false;
+            },
+            archerTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.archerTechREF ??= ATKObjects.Technique["Clairvoyance"].variant1;
+
+                if (!ATKObjects.archerTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Quantum"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.archerTechATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.archerTechATKObject;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                let chargeRef = sourceTurn.battleValues;
+
+                let newCharge = Math.min(4,chargeRef.charge + 1)
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Technique", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
+                chargeRef.charge = newCharge;
+                poke("TechniqueEnd",battleData,{sourceTurn});
+                // poke("SkillEnd",battleData,{source:"Archer"});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PreBattleSettings",
+                condition(battleData,generalInfo) {
+                    // let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+
+                    battleData.battleTable.SPMax += 2;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: "Skill Point Max +2"});}
+                },
+                "target": "self",
+                "listenerName": "Archer - +SP Max - Major Trace: Projection Magecraft",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    let chargeRef = ownerTurn.battleValues;
+                    let newCharge = Math.min(4,chargeRef.charge + 1)
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
+                    chargeRef.charge = newCharge;
+                },
+                "target": "self",
+                "listenerName": "Archer - +Charge - Major Trace: Hero of Justice",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let logicRef = turnLogic[characterName];
+                    let chargeRef = ownerTurn.battleValues;
+
+                    if (sourceTurn.isEnemy) {return;}
+                    if (sourceTurn.properName != characterName && (chargeRef.charge - chargeRef.chargeDebt) > 0) {//fail condition right off if no source exists or it's archer
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[characterName].skillFunctions.archerFUA,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: characterName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Archer Charge ${chargeRef.charge} --> ${chargeRef.charge-1}/4`});}
+                        // chargeRef.charge -= 1;
+                        chargeRef.chargeDebt += 1;
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Archer - Follow-up queued - Talent",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.archerUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Archer - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "SPChange",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    //fail condition right off if no source exists or it's a negative change, or if not enough points to actually trigger
+                    let changeIsPositive = generalInfo && generalInfo.SPChange > 0;
+                    let highEnoughSP = battleData.skillPointCurrent >= 4;
+                    if (changeIsPositive && highEnoughSP) {
+
+                        if (!this.spChangeGuardianCRITDMGSHEET) {
+                            let buffName = turnLogic[characterName].buffNames.guardian;
+                            this.spChangeGuardianCRITDMGSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 1.20,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffName,
+                                "duration": 0,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+
+                        let buffSheet = this.spChangeGuardianCRITDMGSHEET;
+                        buffSheet.duration = ownerTurn.turnState ? 2 : 1;//if archer himself is the source of the skill point gain WITHIN HIS OWN TURN, then we don't let it expire at the end of his turn
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Archer - Applied: Guardian - Major Trace: Guardian",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const archerTechnique = this.archerTechnique ??= logicRef.skillFunctions.archerTechnique;
+                        archerTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Archer Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        let buffSheet = this.buffSheet ??= {
+                            "stats": [DamageUltimate],
+                            [DamageUltimate]: 1.5,
+                            "source": "E4",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": "E4: The Unsung Life",
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Archer - +Ult DMG - E4",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [
+                {
+                    "trigger": "StartTurn",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        // let characterName = ownerTurn.properName;
+                        let sourceTurn = generalInfo.sourceTurn;
+    
+                        if (ownerTurn.turnState) {
+                            let cost = 1;
+                            battleActions.updateSkillPoints(cost,battleData,{sourceTurn,sourceName:this.listenerName});
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Archer - +SP/StartTurn - E6",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        let buffSheet = this.buffSheet ??= {
+                            "stats": [DEFShredSkill],
+                            [DEFShredSkill]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": "E6: The Endless Pilgrimage",
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Archer - Skill DEF Shred - E6",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "skillCounter": 0,
+            "skillStarted": false,
+            "charge": 0,
+            "chargeDebt": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "guardian": "Major Trace: Guardian",
+            "caladbolg": "Caladbolg II",
+            "implant": "E2: The Unfulfilled Happiness",
+            "e6Shred": "E6: The Endless Pilgrimage",
+        },
+        "characterValuesBattle": {},
+    },
 
     //Harmony
     "Tingyun": {
