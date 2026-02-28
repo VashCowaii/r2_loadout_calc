@@ -23564,12 +23564,12 @@ const turnLogic = {
                 }
 
                 if (battleValues.implantIndex == 7) {battleValues.implantIndex = 0;}
-            }
+            },
         },
         "listeners": [
             {
                 "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
+                condition(battleData,generalInfo,wasDeferred) {
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
                     if (ownerTurn.properName != sourceTurn.properName) {return;}
@@ -23600,35 +23600,51 @@ const turnLogic = {
                     }
 
                     if (foundDisclosure) {
-                        battleValues.extraSkillActive = true;
-                        
-                        if (slotIsSkill) {
-                            logToBattle(battleData,{logType: "GenericAction", source:"Skill Duplication", bodyText: `Anaxa gained extra turn`});
-                            const queueObject = this.queueObjectSkill ??= {
-                                attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaSkill,
-                                target: "enemy",
-                                name: this.listenerName,
-                                properName: ownerTurn.properName,
-                                sourceTurn: null,
-                                isExtraTurn: true,
-                                skipEXDisplay: true,
+                        const enemyChecker = battleData.enemyPositions.length;
+
+                        if (enemyChecker) {
+                            battleValues.extraSkillActive = true;
+                            if (slotIsSkill) {
+                                logToBattle(battleData,{logType: "GenericAction", source:"Skill Duplication", bodyText: `Anaxa gained extra turn`});
+                                const queueObject = this.queueObjectSkill ??= {
+                                    attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaSkill,
+                                    target: "enemy",
+                                    name: this.listenerName,
+                                    properName: ownerTurn.properName,
+                                    sourceTurn: null,
+                                    isExtraTurn: true,
+                                    skipEXDisplay: true,
+                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                battleActions.queueInstantUltimateUse(battleData,queueObject);
                             }
-                            queueObject.sourceTurn = ownerTurn;
-                            battleActions.queueInstantUltimateUse(battleData,queueObject);
+                            else {
+                                logToBattle(battleData,{logType: "GenericAction", source:"Basic ATK Duplication", bodyText: `Anaxa gained extra turn`});
+                                const queueObject = this.queueObjectBasic ??= {
+                                    attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaBasic,
+                                    target: "enemy",
+                                    name: this.listenerName,
+                                    properName: ownerTurn.properName,
+                                    sourceTurn: null,
+                                    isExtraTurn: true,
+                                    skipEXDisplay: true,
+                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                battleActions.queueInstantUltimateUse(battleData,queueObject);
+                            }
                         }
                         else {
-                            logToBattle(battleData,{logType: "GenericAction", source:"Basic ATK Duplication", bodyText: `Anaxa gained extra turn`});
-                            const queueObject = this.queueObjectBasic ??= {
-                                attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaBasic,
-                                target: "enemy",
-                                name: this.listenerName,
-                                properName: ownerTurn.properName,
-                                sourceTurn: null,
-                                isExtraTurn: true,
-                                skipEXDisplay: true,
-                            }
-                            queueObject.sourceTurn = ownerTurn;
-                            battleActions.queueInstantUltimateUse(battleData,queueObject);
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+
+                            let attackEndings = battleData.battleListeners.WaveStartFinished ??= [];
+                
+                            const listenerToInejct = ATKObjects.deferDupeListener ??= logicRef.listenersToInjectLater.anaxaDeferDupeToNextWave;
+                            listenerToInejct.ownerTurn = ownerTurn;
+                            listenerToInejct.supplementGeneralInfo = generalInfo;
+                            logToBattle(battleData,{logType: "GenericAction", source:"Ability Duplication", bodyText: `No enemies remaining, ability dupe deferred to next wave`});
+
+                            attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
                         }
                     }
                 },
@@ -24130,6 +24146,26 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Anaxa E1 bonus skill point listener",
+                "ownerTurn": {},
+            },
+            "anaxaDeferDupeToNextWave": {
+                "trigger": "WaveStartFinished",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const listenerRef = logicRef.listeners;
+
+                    for (let regListener of listenerRef) {
+                        if (regListener.listenerName === "Disclosure Ability Duplication listener") {
+                            regListener.condition(battleData,this.supplementGeneralInfo,true);
+                            break;
+                        }
+                    }
+                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                },
+                "target": "self",
+                "listenerName": "Robin Technique wave start listener",
                 "ownerTurn": {},
             }
         },
