@@ -11953,15 +11953,12 @@ const turnLogic = {
     },
     "Archer": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
-            let E1 = true;
             let actionUsed = false;
 
             const statCalls = thisTurn.battleValues;
 
             let currentSP = battleData.skillPointCurrent;
             let minimumPointsToStart = 2;
-            let desiredCasts = 5;
             let maximumCasts = 5;
 
             //separated from below bc the turn controller will keep looping back into the action controller here while the turn is active
@@ -11984,11 +11981,6 @@ const turnLogic = {
                     return {action: "EndTurn", endTurn: true};
                 }
             }
-
-            // if (minimum && checkSkill(battleData,thisTurn)) {
-            //     const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.topazSkill, target: "enemy", endTurn: true};
-            //     return returnSkillCall;
-            // }
 
             if (!actionUsed) {return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.archerBasic, target: "enemy", endTurn: true};}
             //default to basic atk when all else fails
