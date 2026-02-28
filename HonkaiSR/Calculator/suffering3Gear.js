@@ -259,7 +259,7 @@ const turnLogicLightcones = {
                     sourceTurn.swordplayHitsCountTrackingInProgress = true;
                 },
                 "target": "self",
-                "listenerName": "The Ashblazing Grand Duke - Hit tracking start",
+                "listenerName": "Swordplay - Hit tracking start",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -281,14 +281,15 @@ const turnLogicLightcones = {
                     if (targetTurn.properName != enemyTurn.properName) {return;}
 
                     const buffSheet = sourceTurn.swordplayRepeatHitDMGSHEET;
-                    const buffCheck = sourceTurn.buffsObject[buffSheet.name];
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                     //if we're in a super hit-spammy attack, and reached the 5 point already, then abort without bothering the buff handler
                     if (buffCheck && buffCheck.currentStacks === 5) {return;}
+                    // console.log(sourceTurn.properName)
                     
                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "The Ashblazing Grand Duke - Hit scaling",
+                "listenerName": "Swordplay - Hit scaling",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -304,7 +305,7 @@ const turnLogicLightcones = {
                     sourceTurn.swordplayHitsCountTrackingInProgress = false;
                 },
                 "target": "self",
-                "listenerName": "The Ashblazing Grand Duke - Hit tracking end",
+                "listenerName": "Swordplay - Hit tracking end",
                 "owners": [],
                 "ownersSlots": {}
             },
