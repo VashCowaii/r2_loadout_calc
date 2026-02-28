@@ -1137,8 +1137,11 @@ const battleActions = {
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueFUA", name: entry.name});}
     },
     queueUltimateUse(battleData,entry) {
-        battleData.ultimateQueue.push(entry);
-        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueUltimate", name: entry.name});}
+        const enemyChecker = battleData.enemyPositions.length;
+        if (enemyChecker) {
+            battleData.ultimateQueue.push(entry);
+            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueUltimate", name: entry.name});}
+        }
     },
     queueInstantUltimateUse(battleData,entry) {//this is needed for cases like ica that queue an action within the ultimate queue, but instantly, so at the start of the queue.
         battleData.ultimateQueue.unshift(entry);

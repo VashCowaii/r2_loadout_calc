@@ -65,7 +65,11 @@
         <li>Fixed an issue where the lc Resolution Shines As Pearls of Sweat was missing an expire type for the debuff, making it last forever.</li>
         <li>Fixed an issue where after the new DR for player characters was added, persisting DR cache data was accidentally stored on the attacker's cache instead of the target.</li>
         <li>Fixed an issue where Anaxa's duplicated skill, if launched after all enemies in a wave died, would not defer to the next wave and would instead run on already dead targets.</li>
-        <li>Fixed an issue where if ultimates were queued before enemies died, and then enemies died before they could launch, the ultimates would still run when no enemies remained in that wave. Ultimates will now dequeue and wait.</li>
+        <li>Fixed an issue where if ultimates were queued before enemies died, and then enemies died before they could launch, the ultimates would still run when no enemies remained in that wave. Ultimates will now dequeue and wait.
+            <ul>
+                <li>As it only makes sense, I also added a check to the ulty queue function that will block new queues if all enemies are dead in a wave.</li>
+            </ul>
+        </li>
     </ul>
 </div>
 
