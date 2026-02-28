@@ -3641,6 +3641,58 @@ const turnLogicLightcones = {
             "redoubtSummon": "Redoubt (Summon) [LC]"
         },
     },
+    "Landau's Choice": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownersSlots = this.ownersSlots;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        // let ownerName = currentTurn.properName;
+
+                        if (!currentTurn.landausChoiceDRAGGROSHEET) {
+                            let lcNameRef = "Landau's Choice";
+                            let buffName = turnLogicLightcones[lcNameRef].buffNames.drAggro;
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentTurn.name];
+                            let rankParams = lcPathing[ownerRank-1];
+    
+                            currentTurn.landausChoiceDRAGGROSHEET = {
+                                "stats": [AggroP,DamageReductionStandard],
+                                [AggroP]: rankParams[0],
+                                [DamageReductionStandard]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentTurn.properName,
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        let buffSheet = currentTurn.landausChoiceDRAGGROSHEET;
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Landau's Choice - DR/AggroBuff",
+                "owners": [],
+                "buffNames": {},
+            },
+        ],
+        "buffNames": {
+            "drAggro": "Landau's Choice [LC]"
+        },
+    },
 
 
     //ERUDITON
