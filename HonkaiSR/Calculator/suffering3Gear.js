@@ -8027,4 +8027,93 @@ const turnLogicRelics = {
             },
         }
     },
+    "Tengoku@Livestream": {
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "StartTurn",
+                    condition(battleData,generalInfo) {
+                        let ownersSlots = this.ownersSlots;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        if (!ownerRank) {return;}
+
+                        sourceTurn.tengokuTrackingActive = true;
+                        sourceTurn.tengokuTrackingCounter = 0;
+                    },
+                    "target": "self",
+                    "listenerName": "Tengoku@Livestream turnstart listener",
+                    "owners": []
+                },
+                {
+                    "trigger": "EndTurn",
+                    condition(battleData,generalInfo) {
+                        let ownersSlots = this.ownersSlots;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        if (!ownerRank) {return;}
+
+                        sourceTurn.tengokuTrackingActive = false;
+                        sourceTurn.tengokuTrackingCounter = 0;
+                    },
+                    "target": "self",
+                    "listenerName": "Tengoku@Livestream turnend listener",
+                    "owners": []
+                },
+                {
+                    "trigger": "SPChange",
+                    condition(battleData,generalInfo) {
+                        // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+                        let ownersSlots = this.ownersSlots;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                        if (!ownerRank || !sourceTurn.tengokuTrackingActive) {return;}
+
+                        const cost = generalInfo.SPChange;
+
+                        if (cost > 0) {return;}
+
+                        sourceTurn.tengokuTrackingCounter -= cost;
+
+                        if (sourceTurn.tengokuTrackingCounter >= 3) {
+
+                            if (!sourceTurn.tengokuSPCritDMGSHEET) {
+                                let relicNameRef = "Tengoku@Livestream";
+                                const buffName = this.buffName ??= turnLogicRelics[relicNameRef]["2pc"].buffNames.critDMG;
+                                let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                                sourceTurn.tengokuSPCritDMGSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: relicPathing[2],
+                                    "source": relicNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            const buffSheet = sourceTurn.tengokuSPCritDMGSHEET;
+
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+
+                            //disable further tracking, someone like archer might spend a gajllion in the bounds of the same turn which would be shite
+                            sourceTurn.tengokuTrackingCounter = 0;
+                            sourceTurn.tengokuTrackingActive = false
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Tengoku@Livestream skill points listener",
+                    "owners": []
+                },
+            ],
+            "buffNames": {
+                "critDMG": "Tengoku@Livestream"
+            },
+        }
+    },
 }
