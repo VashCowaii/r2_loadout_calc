@@ -173,6 +173,8 @@ const sim = {
             battleData.cycleAV = AVToRevertTo;
 
             sim.createEnemyTargets(battleData,enemiesToMake);
+            poke("WaveStartFinished",battleData,{});
+            sim.clearUltimateQueue(battleData)
         }
         else if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
             //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
