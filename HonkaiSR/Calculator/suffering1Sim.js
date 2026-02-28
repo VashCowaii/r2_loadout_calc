@@ -185,6 +185,7 @@ const sim = {
             }
             battleData.sumAV += battleData.cycleAV;
             battleData.cycleAV = 100;
+            battleData.cycleAVPassed = 0;
             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
             
 
@@ -263,6 +264,7 @@ const sim = {
     pullToCurrentAV(battleData,sourceTurn) {
         battleData.sumAV += sourceTurn.AV;
         battleData.cycleAV -= sourceTurn.AV;
+        battleData.cycleAVPassed += sourceTurn.AV;
         for (let AVentry of battleData.nextTurnAV) {
             if (AVentry.name != sourceTurn.name) {
                 AVentry.AV = Math.max(0,AVentry.AV - sourceTurn.AV);//prevent negative action value
@@ -432,6 +434,7 @@ const sim = {
             "isLoggyLogger": isLoggyLogger ?? false,
             "sumAV": 0,
             "cycleAV": 150,
+            "cycleAVPassed": 0,
             "currentCycle": 0,
             "cyclesMax": 1,//+1 bc 0 counts as a cycle in this loop
             "nextTurnAV": [],
@@ -567,6 +570,7 @@ const sim = {
                 maxEnergy: charEntryTemp.energyMax ?? 0,//TODO: account for special energy stacks like acheron bullshit later
                 currentEnergy: charEntryTemp.energyMax ? charEntryTemp.energyMax * startingEnergyPercent : 0,
                 actionCounter: 0,
+                ultsUsed: 0,
                 turnState: false,
                 actionAssigned: false,
                 turnShouldEnd: false,
@@ -1138,7 +1142,7 @@ const sim = {
                 let generalInfo = {sourceTurn,actionName,target};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
 
-                const isExtraTurn = currentUltimate.isExtraTurn
+                const isExtraTurn = currentUltimate.isExtraTurn;
 
                 const currentUltyFunction = currentUltimate.attack;
 
@@ -1146,6 +1150,7 @@ const sim = {
                     if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
                     poke("UltimateStart",battleData,generalInfo);
 
+                    sourceTurn.ultsUsed++;
                     currentUltyFunction(battleData,sourceTurn);
                     //nonViolentWrapper gets called on buff-type ultimates within their own respective functions.
                     //later I might call it here and clarify attack-type or not in the ultyQueue object entries, just not sure if it's worth doing other than my own convenience (might be less performant on cycles, though it'd be barely)
