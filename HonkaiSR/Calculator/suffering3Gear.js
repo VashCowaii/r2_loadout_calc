@@ -1327,7 +1327,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "isDebuff": true,
-                                "expireType": null,
+                                "expireType": "EndTurn",
                             }
                         }
                         
