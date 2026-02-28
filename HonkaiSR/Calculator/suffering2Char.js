@@ -1651,7 +1651,6 @@ const battleActions = {
 
             
             if (actionTags) {
-                console.log(standardDRIndex,targetStats,targetStats[standardDRIndex],tableONHIT[standardDRIndex],targetStatsSourceBased[standardDRIndex],targetStatsOnTurn[standardDRIndex])
                 bonus += targetStats[standardDRIndex] + tableONHIT[standardDRIndex] + targetStatsSourceBased[standardDRIndex] + targetStatsOnTurn[standardDRIndex]; 
 
                 for (let action of actionTags) {
