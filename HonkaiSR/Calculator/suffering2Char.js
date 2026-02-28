@@ -1142,6 +1142,9 @@ const battleActions = {
             battleData.ultimateQueue.push(entry);
             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueUltimate", name: entry.name});}
         }
+        else {
+            entry.sourceTurn.ultyQueued = false;
+        }
     },
     queueInstantUltimateUse(battleData,entry) {//this is needed for cases like ica that queue an action within the ultimate queue, but instantly, so at the start of the queue.
         battleData.ultimateQueue.unshift(entry);
