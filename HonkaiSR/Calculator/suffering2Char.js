@@ -1656,7 +1656,6 @@ const battleActions = {
                 for (let action of actionTags) {
                     bonus += (actionTables[action]?.[standardDRIndex] ?? 0) + (actionTablesTarget[action]?.[standardDRIndex] ?? 0);
                 }
-
             }
             else {
 
@@ -20890,11 +20889,12 @@ const turnLogic = {
                     // greatTableIndex
                     // greatTableKeys
                     ATKObjects.dhptBondmateATKSHEET = {
-                        "stats": [ATKFlat,ATKFlatNULL,ResistanceAllPEN,DEFShredAll],
+                        "stats": [ATKFlat,ATKFlatNULL,ResistanceAllPEN,DEFShredAll,DamageReductionStandard],
                         [ATKFlat]: 0,
                         [ATKFlatNULL]: -0,
                         [ResistanceAllPEN]: rank >= 1 ? 0.18 : 0,
                         [DEFShredAll]: rank >= 6 ? 0.12 : 0,
+                        [DamageReductionStandard]: rank >= 4 ? 0.20 : 0,
                         "source": "Trace",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -21707,9 +21707,7 @@ const turnLogic = {
             ],
             2: [],
             3: [],
-            4: [
-                //TODO: when I connect the DR stuff, just go into the ATK conversion function and add the DR instance there
-            ],
+            4: [],
             5: [],
             6: [
                 {
