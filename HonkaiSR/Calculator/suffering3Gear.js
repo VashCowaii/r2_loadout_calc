@@ -681,6 +681,86 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
+    "Echoes of the Coffin": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    const targetsHit = Math.min(3,Object.keys(targetsGotHit).length);
+
+                    if (targetsHit) {
+                        if (!sourceTurn.echoesOfTheCoffinEnergyRegen) {
+                            let lcNameRef = "Echoes of the Coffin";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+
+                            sourceTurn.echoesOfTheCoffinEnergyRegen = rankParams[2];
+                        }
+                        const energyRegen = sourceTurn.echoesOfTheCoffinEnergyRegen * targetsHit;
+                        battleActions.updateEnergy(battleData,energyRegen,sourceTurn,false,"Echoes of the Coffin - Enemies Hit");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Echoes of the Coffin - enemy hit regen listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "UltimateEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+
+                    if (!sourceTurn.echoesOfTheCoffinSPDSHEET) {
+                        let lcNameRef = "Echoes of the Coffin";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.echoesOfTheCoffinSPDSHEET = {
+                            "stats": [SPDBase],
+                            [SPDBase]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.echoesSPD,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+                    let buffSheet = sourceTurn.echoesOfTheCoffinSPDSHEET;
+
+                    const allyPositions = battleData.allyPositions;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ally of allyPositions) {
+                        buffSheet.duration = ally.turnState ? 2 : 1;
+                        updateBuff(battleData,ally,buffSheet)
+                    }
+                },
+                "target": "team",
+                "listenerName": "Echoes of the Coffin ult end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "echoesSPD": "Echoes of the Coffin SPD",
+        },
+    },
 
     //NIHILITY
     "Incessant Rain": {
