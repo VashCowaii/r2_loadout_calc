@@ -165,13 +165,16 @@ const customDisplayValuesLog = {
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
     "Luocha": [
-        // {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
-        // {valueName: "Clease Remaining", refName: "cleanseCounter"},
+        {valueName: "Skill Injection Ready", refName: "isReadyToInjectSkill", isBattleValue: true, isCharacterState: true},
+        {valueName: "Skill Injection Cooldown", refName: "skillInjectCooldown", isBattleValue: true},
+        {valueName: "Zone Active", refName: "zoneIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Zone Queued", refName: "zoneIsQueued", isBattleValue: true, isCharacterState: true},
+        
+        {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true}, 
     ],
     "Tribbie": [
         {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true},
         {valueName: "Ult Zone Active", refName: "tribbieZoneActive", isCharacterState: true},
-
         
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
@@ -1169,11 +1172,53 @@ const defaultConditions = {
         }
     },
     "Luocha": {
-        hasEnhancedState: false,
-        "Skill": null,
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "OR",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 50%"
+                },
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "zoneIsQueued",
+                            "state": false,
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "zoneIsActive",
+                            "state": false,
+                            "isBattleValue": true
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": {
-            type: "AND",
-            array: []
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "zoneIsActive",
+                    "state": false,
+                    "isBattleValue": true
+                },
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "zoneIsQueued",
+                    "state": false,
+                    "isBattleValue": true
+                }
+            ]
         }
     },
     "Gallagher": {

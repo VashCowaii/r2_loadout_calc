@@ -8052,6 +8052,801 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    //TODO: add ult enemy buff removal later, also for pela probably as well if I forgot
+    //TODO: skill cleanse, when enemy debuffs can be applied later
+    //TODO: CC resistance, same as above
+    "Luocha": {//TODO: the FUA heal has a higher priority than Blade FUA, diff tags and already confirmed they match up with that, need to rework the priority system after he's done
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.luochaSkillHeal, target: null, endTurn: true}
+                returnSkillCall.target = battleActions.findLowestHPAlly(battleData);
+                return returnSkillCall;
+            }
+
+            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.luochaBasic, target: "enemy", endTurn: true}
+            return returnBasicCall;
+        },
+        "skillFunctions": {
+            luochaBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.luochaBasicREF ??= ATKObjects["Basic ATK"]["Thorns of the Abyss"].variant1;
+                if (!ATKObjects.luochaBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Imaginary"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.luochaBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.luochaBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            luochaSkillHeal(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.luochaSkillHealHealREF ??= ATKObjects.Skill["Prayer of Abyss Flower"].variant1;
+                let rank = sourceTurn.rank;
+                // let e2 = rank >= 2;
+                targetTurn = targetTurn ?? sourceTurn;
+                //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
+                
+                //Q: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider?
+                //YES on wavestrider, even subtargets count, NO on sacerdos, only single targets count unless sunday bc reasons
+                if (!ATKObjects.luochaSkillHealHealHEALOBJECT) {
+                    let values = ATKObjects.luochaSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.luochaSkillHealHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "ATK",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot
+                    }
+
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.luochaE2HealBonus = {
+                        "stats": [HealingOutgoing],
+                        [HealingOutgoing]: 0.12,
+                        "source": "E2",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e2Heal,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                        "removeOnDeath": true
+                    }
+
+                    ATKObjects.luochaE2SHIELDSHEET = {
+                        "stats": null,
+                        "source": "E2",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e2Shield,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isShield": true,
+                        multipliers: 0.18,//to give to existing shield of the same name
+                        flatAmounts: 240,//to give to existing shield of the same name
+                        multipliersCAP: 0.18,//to limit by
+                        flatAmountsCAP: 240,//to limit by
+                        scalar: "ATK",
+                        shieldRemaining: 0,
+                        shieldCap: 0,
+                        // shieldTags: ["All","Skill","Imaginary"],
+                        // shieldActionTags: ["Skill"],
+                        slot: skillRef.slot,
+                        // shieldCapFixed: null,
+                        // shieldCapPercent: 2,
+                        removeOnDeath: true,
+                        shieldClass: "Luocha E2",
+                    }
+                    // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
+                }
+                
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+                const updateBuff = battleActions.updateBuff
+
+                if (rank >= 2) {
+                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+                    const hpThreshold = 0.50;
+
+                    if (hpRatio < hpThreshold) {
+                        const bonusHealing = ATKObjects.luochaE2HealBonus;
+                        updateBuff(battleData,targetTurn,bonusHealing);
+                    }
+                    else {
+                        poke("TargetShield",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                        const e2ShieldSHEET = ATKObjects.luochaE2SHIELDSHEET;
+                        e2ShieldSHEET.duration = targetTurn.turnState ? 3 : 2;
+                        updateBuff(battleData,targetTurn,e2ShieldSHEET,false,sourceTurn);
+                    }
+                }
+
+
+
+                // let targetTurn = battleData.nameBasedTurns[target];
+                let healObject = ATKObjects.luochaSkillHealHealHEALOBJECT;
+                battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null);
+                if (rank >= 2) {
+                    const bonusHealing = ATKObjects.luochaE2HealBonus;
+                    const buffCheck = targetTurn.buffsObject[bonusHealing.buffName];
+                    if (buffCheck) {
+                        removeBuff(battleData,targetTurn,bonusHealing)
+                    }
+                }
+
+                poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"Luocha Skill Use"});
+
+                // logicRef.skillFunctions.huohuoApplyDivineProvision(battleData,sourceTurn);
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            luochaQueuedSkillHeal(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const healFunction = logicRef.skillFunctions.luochaSkillHeal;
+
+                const hpRatioPrior = targetTurn.currentHP / targetTurn.maxHP;
+                const hpThreshold = 0.50;
+                const targetCanSkillHeal = targetTurn.currentHP > 0 && hpRatioPrior <= hpThreshold;
+
+                if (targetCanSkillHeal) {
+                    healFunction(battleData,targetTurn,sourceTurn);
+                }
+                else {
+                    const isLoggyLogger = battleData.isLoggyLogger;
+                    if (isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericAction", source:"Retargeting for Skill Injection", bodyText: `Initial target is dead or above 50%, finding new target for Skill Heal.`});
+                    }
+                    const allyPositions = battleData.allyPositions;
+                    let newTarget = null;
+                    let newHPRatio = 1;
+                    
+                    for (let ally of allyPositions) {
+                        const hpRatio = ally.currentHP / ally.maxHP;
+                        if (hpRatio < newHPRatio) {
+                            newHPRatio = hpRatio;
+                            newTarget = ally;
+                        }
+                    }
+
+                    if (newHPRatio <= hpThreshold) {
+                        healFunction(battleData,newTarget,sourceTurn);
+                    }
+                    else {
+                        if (isLoggyLogger) {
+                            logToBattle(battleData,{logType: "GenericAction", source:"Skill Injection Failed", bodyText: `No allies under 50%HP found, Luocha skill injection aborted.`});
+                        }
+                        valuesRef.isReadyToInjectSkill = true;
+                        valuesRef.skillInjectCooldown = 0;
+                    }
+                }
+            },
+
+            luochaUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.luochaUltimateREF ??= ATKObjects.Ultimate["Death Wish"].variant1;
+                let rank = sourceTurn.rank;
+
+                if (!ATKObjects.luochaUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Imaginary"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.luochaUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+
+                    ATKObjects.luochaE6RESSHEET = {
+                        "stats": [ResistanceAll],
+                        [ResistanceAll]: -0.20,
+                        "source": "E6",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e6RES,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                let ATKObject = ATKObjects.luochaUltimateATKOBJECT;
+
+
+                // let e4 = rank >= 4;
+                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
+                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
+                // for (let enemySlot of battleData.enemyPositions) {
+                //     besotted(battleData,sourceTurn,enemySlot,e4,values2);
+                // }
+
+
+                // poke("BasicATKStart",battleData,{source:"Gallagher"});
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                const updateBuff = battleActions.updateBuff;
+
+                if (rank >= 6) {
+                    const enemyPositions = battleData.enemyPositions;
+                    const debuffSheet = ATKObjects.luochaE6RESSHEET;
+                    for (let enemy of enemyPositions) {
+                        debuffSheet.duration = enemy.turnState ? 3 : 2;
+                        updateBuff(battleData,enemy,debuffSheet);
+                    }
+                }
+
+                poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"Luocha Ult Use"});
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
+                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
+
+                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
+                sourceTurn.ultyQueued = false;
+            },
+            luochaAddZone(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.luochaAddZoneREF ??= ATKObjects.Talent["Cycle of Life"].variant1;
+                const battleValues = sourceTurn.battleValues;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.luochaAddZoneCountdownSHEET) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const buffNames = logicRef.buffNames;
+                    const characterName = sourceTurn.properName;
+                    let values = ATKObjects.luochaAddZoneREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    // "zoneDebuff": "Guess Who Lives Here",
+                    // "zoneCountdown": "Guess Who Lives Here (Countdown)",
+                    ATKObjects.luochaE4WEAKENSHEET = {
+                        "stats": [WeakenPercent],
+                        [WeakenPercent]: 0.12,
+                        "source": "E4",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.e4Weaken,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                        "removeOnDeath": true
+                    }
+                    ATKObjects.luochaAddZoneCountdownSHEET = {
+                        "stats": null,
+                        "source": "Talent",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.zoneCountdown,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        expireFunction: logicRef.skillFunctions.luochaZoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+
+                    ATKObjects.luochaE1ATKSHEET = {
+                        "stats": [ATKP],
+                        [ATKP]: 0.20,
+                        "source": "E1",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e1ATK,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+
+                const countdownSheet = ATKObjects.luochaAddZoneCountdownSHEET;
+                countdownSheet.duration = sourceTurn.turnState ? 3 : 2;
+                const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,countdownSheet);
+                battleValues.zoneIsActive = true;
+                battleValues.zoneIsQueued = false;
+                poke("luochaAbyssGained",battleData,{pointsGained: -2,sourceString:"Zone Deployed"});
+
+                if (rank >= 1) {
+                    const atkSheet = ATKObjects.luochaE1ATKSHEET;
+                    const allyTargets = [];
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let ally in allyTurns) {
+                        const currentAlly = allyTurns[ally];
+                        allyTargets.push(currentAlly);
+                    }
+                    updateBuffBatchTargets(battleData,allyTargets,atkSheet);
+
+                    if (rank >= 4) {
+                        const debuffSheet = ATKObjects.luochaE4WEAKENSHEET;
+                        const enemyPositions = battleData.enemyPositions;
+                        for (let enemy of enemyPositions) {
+                            updateBuff(battleData,enemy,debuffSheet);
+                        }
+                    }
+                }
+
+
+                
+
+                // if (!buffCheck) {
+                //     //only if the countdown owner, tribbie, does NOT already have the countdown active, then apply the debuffs to all enemies
+                //     //this is bc we have an enemyCreated listener that looks for enemies that are added while the field is active
+                //     //and bc of that, along with the fact that the debuff never expires unless the zone does, we don't need reup the duration
+                //     const enemyPositions = battleData.enemyPositions;
+                //     const debuffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
+                //     for (let enemy of enemyPositions) {
+                //         updateBuff(battleData,enemy,debuffSheet);
+                //     }
+
+                //     const statCheck = ATKObjects.tribbieHPStatcheck ??= logicRef.skillFunctions.statCheck;
+                //     statCheck(battleData,sourceTurn);
+                // }
+
+            },
+            luochaZoneExpired(battleData,luochaSlot) {
+                const luochaTurn = battleData.nameBasedTurns[luochaSlot];
+                luochaTurn.battleValues.zoneIsActive = false;
+                const rank = luochaTurn.rank;
+
+
+                if (rank >= 1) {
+                    const logicRef = turnLogic[luochaTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const atkSheet = ATKObjects.luochaE1ATKSHEET;
+                    const allyTargets = [];
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let ally in allyTurns) {
+                        const currentAlly = allyTurns[ally];
+                        allyTargets.push(currentAlly);
+                    }
+                    removeBuffFromBatch(battleData,allyTargets,atkSheet);
+
+
+                    if (rank >= 4) {
+                        const debuffSheet = ATKObjects.luochaE4WEAKENSHEET;
+                        const enemyPositions = battleData.enemyPositions;
+                        removeBuffFromBatch(battleData,enemyPositions,debuffSheet);
+                    }
+                }
+
+                // const logicRef = turnLogic[luochaTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+
+                // const buffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
+                // const enemyPositions = battleData.enemyPositions;
+                // // const updateBuff = battleActions.updateBuff;
+                // for (let enemy of enemyPositions) {
+                //     removeBuff(battleData,enemy,buffSheet);
+                // }
+
+                // // const buffSheetHP = luochaTurn.tribbieZoneHPBuffSHEET;
+                // const statCheck = ATKObjects.tribbieHPStatcheck ??= logicRef.skillFunctions.statCheck
+                // statCheck(battleData,luochaTurn);
+            },
+
+
+            luochaTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.luochaTechniqueREF ??= ATKObjects.Technique["Mercy of a Fool"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                poke("luochaAbyssGained",battleData,{pointsGained: 2,sourceString:"Luocha Technique"});
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "luochaAbyssGained",
+                condition(battleData,generalInfo) {
+                    // poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+                    const zoneIsActive = valuesRef.zoneIsActive;
+                    if (zoneIsActive && pointsGained > 0) {return;}
+
+                    const oldValue = valuesRef.abyssFlowerStacks;
+                    valuesRef.abyssFlowerStacks = Math.min(2,oldValue + pointsGained);
+
+                    if (valuesRef.abyssFlowerStacks>=2 && !zoneIsActive && !valuesRef.zoneIsQueued) {
+                        valuesRef.zoneIsQueued = true;
+
+                        const queueObject = this.queueObjectSkill ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.luochaAddZone,
+                            target: "ally",
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            isExtraTurn: true,
+                            // skipEXDisplay: true,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        // queueObject.target = sourceTurn;
+                        battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    }
+
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Abyss Flower (Luocha): ${oldValue} --> ${valuesRef.abyssFlowerStacks}/2 [${sourceString}]`});
+                        
+                    }
+                    if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                },
+                "target": "self",
+                "listenerName": "Abyss Flower Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const zoneIsActive = ownerTurn.battleValues.zoneIsActive;
+                    if (sourceTurn.isEnemy || !zoneIsActive) {return;}
+
+                    const sourceIsHealable = !sourceTurn.isUniqueEvent || (sourceTurn.isUniqueEvent && sourceTurn.isMemosprite);
+                    if (!sourceIsHealable) {return}//can't heal a battle event
+
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.luochaAddZoneREF;
+                    
+
+                    if (!ATKObjects.luochaSelfHealHEALOBJECT) {
+                        let values = ATKObjects.luochaAddZoneREFVALUES;
+                        let characterName = ownerTurn.properName;
+
+                        ATKObjects.luochaSelfHealHEALOBJECT = {
+                            multipliers: {
+                                primary: values[1],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: values[3],
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: "ATK",
+                            DMGTags: [],
+                            allToughness: false,
+                            slot: skillRef.slot
+                        }
+
+                        ATKObjects.luochaTeamHealHEALOBJECT = {
+                            multipliers: {
+                                primary: 0.07,
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: 93,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: "ATK",
+                            DMGTags: [],
+                            allToughness: false,
+                            slot: skillRef.slot
+                        }
+
+                        // let buffName = turnLogic[characterName].buffNames.lionsTail;
+                        // ATKObjects.natashaSkillHealEFFECTRESSHEET = {
+                        //     "stats": [EffectRES],
+                        //     [EffectRES]: 0.30,
+                        //     "source": characterName,
+                        //     "sourceOwner": sourceTurn.properName,
+                        //     "buffName": buffName,
+                        //     "duration": 2,
+                        //     "AVApplied": 0,
+                        //     "maxStacks": 1,
+                        //     "currentStacks": 1,
+                        //     "decay": false,
+                        //     "expireType": "EndTurn"
+                        // }
+        
+                    }
+
+                    // let targetTurn = battleData.nameBasedTurns[target];
+                    let healObject = ATKObjects.luochaSelfHealHEALOBJECT;
+                    let healObject2 = ATKObjects.luochaTeamHealHEALOBJECT;
+                    battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null);
+
+                    const traceHealTargets = [];
+                    const allyPositions = battleData.allyPositions;
+                    for (let ally of allyPositions) {
+                        if (ally.properName === sourceTurn.properName) {continue}
+                        traceHealTargets.push(ally);
+                    }
+                    if (traceHealTargets.length) {
+                        battleActions.healAlly(battleData,healObject2,null,ownerTurn,skillRef.slot,1,traceHealTargets,true);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Luocha skill check <=50% HP allies",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+
+                    const isNotHealable = sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite;
+                    if (sourceTurn.isEnemy || isNotHealable) {return;}
+
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const hpRatio = sourceTurn.currentHP / sourceTurn.maxHP;
+                    const hpThreshold = 0.50;
+
+
+                    if (valuesRef.isReadyToInjectSkill && hpRatio <= hpThreshold) {
+                        valuesRef.isReadyToInjectSkill = false;
+                        valuesRef.skillInjectCooldown = 2;
+
+                        if (battleData.isLoggyLogger) {
+                            logToBattle(battleData,{logType: "GenericAction", source:"Queued Skill Use", bodyText: `Ally found with <= 50%HP, Luocha Skill Use triggered.`});
+                        }
+                        
+                        const queueObject = this.queueObjectSkill ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
+                            target: "ally",
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            isExtraTurn: true,
+                            skipEXDisplay: true,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = sourceTurn;
+                        battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Luocha skill check <=50% HP allies",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const valuesRef = ownerTurn.battleValues;
+
+                    if (!valuesRef.isReadyToInjectSkill) {
+                        valuesRef.skillInjectCooldown -= 1;
+
+                        if (valuesRef.skillInjectCooldown === 0) {
+                            valuesRef.isReadyToInjectSkill = true;
+                        }
+                    }
+                },
+                "target": "allies",
+                "listenerName": "Luocha skill injection cooldown",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.luochaUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Luocha - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const luochaTechnique = this.luochaTechnique ??= logicRef.skillFunctions.luochaTechnique
+                        luochaTechnique(battleData,"enemy",ownerTurn)
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Luocha Technique",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.70,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                },
+                "target": "self",
+                "listenerName": "The Cursed One - CC RES application",
+                "announce": false,
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [],
+            3: [],
+            4: [
+                {
+                    "trigger": "EnemyCreated",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        let targetTurn = generalInfo.slotRef;
+    
+                        if (!ownerTurn.battleValues.zoneIsActive) {return;}
+    
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+    
+                        let buffSheet = ATKObjects.luochaE4WEAKENSHEET;
+                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    },
+                    "target": "enemy",
+                    "listenerName": "E4 enemy created while zone active listener",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "isReadyToInjectSkill": true,
+            "skillInjectCooldown": 0,
+            "abyssFlowerStacks": 0,
+            "zoneIsActive": false,
+            "zoneIsQueued": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Restore",
+        "buffNames": {
+            "zoneCountdown": "Cycle of Life (Zone Countdown)",
+            "ccRES": "Through the Valley",
+            "e6RES": "E6: Reunion With the Dust",
+            "e4Weaken": "E4: Heavy Lies the Crown",
+            "e2Heal": "E2: Bestowal From the Pure (Healing)",
+            "e2Shield": "E2: Bestowal From the Pure (Shield)",
+            "e1ATK": "E1: Ablution of the Quick",
+        },
+        "characterValuesBattle": {},
+    },
     //Nihility
     "Silver Wolf": {
         logic(thisTurn,battleData) {
