@@ -646,7 +646,7 @@ const vashWavePresets = {
               0,
               0
             ],
-            "enemyTypeAttack": "",
+            "enemyTypeAttack": "Single Target",
             "enemyType": "minion",
             "energyGain": 10,
             "weaknessOverrides": {
@@ -986,7 +986,7 @@ const vashWavePresets = {
               0,
               0
             ],
-            "enemyTypeAttack": "",
+            "enemyTypeAttack": "Single Target",
             "enemyType": "minion",
             "energyGain": 10,
             "weaknessOverrides": {
