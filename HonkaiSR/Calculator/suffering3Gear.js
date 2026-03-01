@@ -6281,6 +6281,46 @@ const turnLogicRelics = {
             },
         }
     },
+    "Thief of Shooting Meteor": {//
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [],
+            "buffNames": {},
+        },
+        "4pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "BrokeEnemyWeakness",
+                    condition(battleData,generalInfo) {
+                        // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                        // let ownerRef = this.owners;
+                        let sourceTurn = generalInfo.sourceTurn;
+            
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        if (!ownerRank) {return;}
+
+                        battleActions.updateEnergy(battleData,3,sourceTurn,false,"Thief of Shooting Meteor");
+                    },
+                    "target": "self",
+                    "listenerName": "Thief of Shooting Meteor - weakness break listener",
+                    "owners": [],
+                },
+            ],
+            "buffNames": {
+                // "critBuff4pc": "Self-Enshrouded Recluse (Crit DMG)",
+                // "shieldBuff4pc": "Self-Enshrouded Recluse (4pc)",
+            },
+            "buffNamesPerCharacter": {
+                // "critBuff4pc": "Self-Enshrouded Recluse (Crit DMG)",
+            },
+        }
+    },
+
+    
 
     
     
