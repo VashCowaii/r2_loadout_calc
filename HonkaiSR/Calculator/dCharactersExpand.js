@@ -17316,6 +17316,902 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Yao Guang": {
+    "internalID": 1502,
+    "name": "Yao Guang",
+    "path": "Elation",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 180,
+    "baseStats": {
+      "ATKBase": 465.696,
+      "DEFBase": 654.885,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150201",
+        "name": "Chuckle Chimes Where Jade Falls",
+        "rank": 1,
+        "desc": "In Aha's extra turn triggered by Ultimate, the fixed amount of Punchline taken into account increases to 40. When dealing Elation DMG, all ally targets ignore 20% of the target's DEF.",
+        "icon": "icon/skill/1502_rank1.png",
+        "paramsEido": [
+          0.2,
+          40
+        ],
+        "extraEffects": {
+          "Aha": {
+            "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          },
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          },
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          }
+        },
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon1"
+      },
+      {
+        "id": "150202",
+        "name": "Blind Arrows Guided by Feathers",
+        "rank": 2,
+        "desc": "While the Zone is active, increases all ally targets' SPD by 12%, and additionally increases Elation by 16%.",
+        "icon": "icon/skill/1502_rank2.png",
+        "paramsEido": [
+          0.16,
+          0.12
+        ],
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon2"
+      },
+      {
+        "id": "150203",
+        "name": "Auspices Mirrored In Decalight",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1502_skill.png"
+      },
+      {
+        "id": "150204",
+        "name": "Threads of Fate Colored by Plumes",
+        "rank": 4,
+        "desc": "In Aha's extra turn triggered by Yao Guang's Ultimate, the DMG dealt by all ally characters' Elation Skill becomes 150% of the original DMG.",
+        "icon": "icon/skill/1502_rank4.png",
+        "paramsEido": [
+          1.5
+        ],
+        "extraEffects": {
+          "Aha": {
+            "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        },
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon4"
+      },
+      {
+        "id": "150205",
+        "name": "Bejeweled in Radiant Grace",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1502_ultimate.png"
+      },
+      {
+        "id": "150206",
+        "name": "Ferried Along the Astral Arc",
+        "rank": 6,
+        "desc": "All ally targets' Elation DMG merrymakes by 25%. Increases the DMG multiplier of Yao Guang's Elation Skill by 100% of its original multiplier.",
+        "icon": "icon/skill/1502_rank6.png",
+        "paramsEido": [
+          0.25,
+          1
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "Merrymake": {
+            "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
+          }
+        },
+        "eidoAbility": "YaoGuang_YaoGuang_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Whistlebolt Sings Joy": {
+          "variant1": {
+            "skillID": 150201,
+            "trigger": "Skill01",
+            "name": "Whistlebolt Sings Joy",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Yao Guang's ATK to one designated enemy and Physical DMG equal to #2[i]% of Yao Guang's ATK to targets adjacent to it. The Energy regenerated from Basic ATK increases to 30.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.45,
+                0.15
+              ],
+              "2": [
+                0.54,
+                0.18
+              ],
+              "3": [
+                0.63,
+                0.21
+              ],
+              "4": [
+                0.72,
+                0.24
+              ],
+              "5": [
+                0.81,
+                0.27
+              ],
+              "6": [
+                0.9,
+                0.3
+              ],
+              "7": [
+                0.99,
+                0.33
+              ],
+              "8": [
+                1.08,
+                0.36
+              ],
+              "9": [
+                1.17,
+                0.39
+              ],
+              "10": [
+                1.26,
+                0.42
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              15
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Decalight Unveils All": {
+          "variant1": {
+            "skillID": 150202,
+            "trigger": "Skill02",
+            "name": "Decalight Unveils All",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Deploys a Zone for #1[i] turn(s). This duration decreases by 1 at the start of this unit's every turn. While the Zone is active, increases all allies' Elation by an amount equal to #2[f1]% of Yao Guang's Elation. After Yao Guang uses Basic ATK or Skill, gains #3[i] Punchline.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.1,
+                3
+              ],
+              "2": [
+                3,
+                0.11,
+                3
+              ],
+              "3": [
+                3,
+                0.12,
+                3
+              ],
+              "4": [
+                3,
+                0.13,
+                3
+              ],
+              "5": [
+                3,
+                0.14,
+                3
+              ],
+              "6": [
+                3,
+                0.15,
+                3
+              ],
+              "7": [
+                3,
+                0.1625,
+                3
+              ],
+              "8": [
+                3,
+                0.175,
+                3
+              ],
+              "9": [
+                3,
+                0.1875,
+                3
+              ],
+              "10": [
+                3,
+                0.2,
+                3
+              ],
+              "11": [
+                3,
+                0.21,
+                3
+              ],
+              "12": [
+                3,
+                0.22,
+                3
+              ],
+              "13": [
+                3,
+                0.23,
+                3
+              ],
+              "14": [
+                3,
+                0.24,
+                3
+              ],
+              "15": [
+                3,
+                0.25,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Hexagram of Feathered Fortune": {
+          "variant1": {
+            "skillID": 150203,
+            "trigger": "Skill03",
+            "name": "Hexagram of Feathered Fortune",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Gains #1[i] Punchline. Aha immediately gains 1 extra turn where a fixed amount of #4[i] Punchline is taken into account. This turn, does not consume Punchline, and increases all allies' All-Type RES PEN by #2[f1]% for #3[i] turn(s).",
+            "energyCost": 180,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5,
+                0.1,
+                3,
+                20,
+                1
+              ],
+              "2": [
+                5,
+                0.11,
+                3,
+                20,
+                1
+              ],
+              "3": [
+                5,
+                0.12,
+                3,
+                20,
+                1
+              ],
+              "4": [
+                5,
+                0.13,
+                3,
+                20,
+                1
+              ],
+              "5": [
+                5,
+                0.14,
+                3,
+                20,
+                1
+              ],
+              "6": [
+                5,
+                0.15,
+                3,
+                20,
+                1
+              ],
+              "7": [
+                5,
+                0.1625,
+                3,
+                20,
+                1
+              ],
+              "8": [
+                5,
+                0.175,
+                3,
+                20,
+                1
+              ],
+              "9": [
+                5,
+                0.1875,
+                3,
+                20,
+                1
+              ],
+              "10": [
+                5,
+                0.2,
+                3,
+                20,
+                1
+              ],
+              "11": [
+                5,
+                0.21,
+                3,
+                20,
+                1
+              ],
+              "12": [
+                5,
+                0.22,
+                3,
+                20,
+                1
+              ],
+              "13": [
+                5,
+                0.23,
+                3,
+                20,
+                1
+              ],
+              "14": [
+                5,
+                0.24,
+                3,
+                20,
+                1
+              ],
+              "15": [
+                5,
+                0.25,
+                3,
+                20,
+                1
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              },
+              "Aha": {
+                "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              },
+              "RES PEN": {
+                "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Behold Wherever Light Unfolds": {
+          "variant1": {
+            "skillID": 150204,
+            "trigger": "SkillP01",
+            "name": "Behold Wherever Light Unfolds",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "While Yao Guang holds \"Certified Banger\":\\nAfter an ally target uses an attack, triggers the \"Great Boon\" effect, dealing 1 additional instance of #1[f1]% Elation DMG of the corresponding Type to 1 random hit target. If this attack consumes Skill Points, then additionally triggers \"Great Boon\" 1 time.\\nWhen triggering the \"Great Boon\" effect, if the attacker's Elation is lower than that of Yao Guang, then this instance of Elation DMG will take Yao Guang's Elation into calculation.\\nTriggering the \"Great Boon\" effect is not considered as using 1 instance of attack.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1
+              ],
+              "2": [
+                0.11
+              ],
+              "3": [
+                0.12
+              ],
+              "4": [
+                0.13
+              ],
+              "5": [
+                0.14
+              ],
+              "6": [
+                0.15
+              ],
+              "7": [
+                0.1625
+              ],
+              "8": [
+                0.175
+              ],
+              "9": [
+                0.1875
+              ],
+              "10": [
+                0.2
+              ],
+              "11": [
+                0.21
+              ],
+              "12": [
+                0.22
+              ],
+              "13": [
+                0.23
+              ],
+              "14": [
+                0.24
+              ],
+              "15": [
+                0.25
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Untethered Glimmer Sails Far": {
+          "variant1": {
+            "skillID": 150207,
+            "trigger": "SkillMaze",
+            "name": "Untethered Glimmer Sails Far",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, automatically triggers Skill 1 time at the start of the next battle without consuming any Skill Points. When Yao Guang is in the team, breaking destructible objects immediately grants Fortune Pouch, up to #1[i] within every Earth Week.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                8
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Elation Skill": {
+        "Let Thy Fortune Burst in Flames": {
+          "variant1": {
+            "skillID": 150220,
+            "trigger": "Skill04",
+            "name": "Let Thy Fortune Burst in Flames",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Inflicts \"Woe's Whisper\" on all enemies, lasting for #4[i] turn(s). Enemy targets under the \"Woe's Whisper\" state take #3[f1]% increased DMG. Deals #2[i]% Physical Elation DMG to all enemies. Then, deals #5[i] instance(s) of #6[i]% Physical Elation DMG to one random enemy.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                0.16,
+                3,
+                5,
+                0.1
+              ],
+              "2": [
+                1,
+                0.55,
+                0.16,
+                3,
+                5,
+                0.11
+              ],
+              "3": [
+                1,
+                0.6,
+                0.16,
+                3,
+                5,
+                0.12
+              ],
+              "4": [
+                1,
+                0.65,
+                0.16,
+                3,
+                5,
+                0.13
+              ],
+              "5": [
+                1,
+                0.7,
+                0.16,
+                3,
+                5,
+                0.14
+              ],
+              "6": [
+                1,
+                0.75,
+                0.16,
+                3,
+                5,
+                0.15
+              ],
+              "7": [
+                1,
+                0.8125,
+                0.16,
+                3,
+                5,
+                0.1625
+              ],
+              "8": [
+                1,
+                0.875,
+                0.16,
+                3,
+                5,
+                0.175
+              ],
+              "9": [
+                1,
+                0.9375,
+                0.16,
+                3,
+                5,
+                0.1875
+              ],
+              "10": [
+                1,
+                1,
+                0.16,
+                3,
+                5,
+                0.2
+              ],
+              "11": [
+                1,
+                1.05,
+                0.16,
+                3,
+                5,
+                0.21
+              ],
+              "12": [
+                1,
+                1.1,
+                0.16,
+                3,
+                5,
+                0.22
+              ],
+              "13": [
+                1,
+                1.15,
+                0.16,
+                3,
+                5,
+                0.23
+              ],
+              "14": [
+                1,
+                1.2,
+                0.16,
+                3,
+                5,
+                0.24
+              ],
+              "15": [
+                1,
+                1.25,
+                0.16,
+                3,
+                5,
+                0.25
+              ]
+            },
+            "element": "Physical",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              15,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1502_basic_atk.png",
+        "skillRef": {
+          "skillName": "Whistlebolt Sings Joy",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1502_skill.png",
+        "skillRef": {
+          "skillName": "Decalight Unveils All",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1502_ultimate.png",
+        "skillRef": {
+          "skillName": "Hexagram of Feathered Fortune",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1502_talent.png",
+        "skillRef": {
+          "skillName": "Behold Wherever Light Unfolds",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1502_technique.png",
+        "skillRef": {
+          "skillName": "Untethered Glimmer Sails Far",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Amaze-In Grace",
+        "icon": "icon/skill/1502_skilltree1.png",
+        "desc": "When Yao Guang's SPD is #1[i] or higher, increases this unit's Elation by #2[i]%. For every #3[i] SPD exceeded, increases this unit's Elation by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          120,
+          0.3,
+          1,
+          0.01,
+          200
+        ],
+        "traceAbility": "YaoGuang_YaoGuang_Trace01"
+      },
+      "Point07": {
+        "name": "Poised and Sated",
+        "icon": "icon/skill/1502_skilltree2.png",
+        "desc": "Increases this unit's CRIT DMG by #4[i]%. After using Elation Skill, recovers #1[i] Skill Point(s) for the team.",
+        "params": [
+          1,
+          0.25,
+          0.4,
+          0.6
+        ],
+        "traceAbility": "YaoGuang_YaoGuang_Trace02"
+      },
+      "Point08": {
+        "name": "Felicity Ensemble",
+        "icon": "icon/skill/1502_skilltree3.png",
+        "desc": "When Yao Guang gains \"Certified Banger,\" its duration increases by #2[i] turn(s).",
+        "params": [
+          20,
+          1
+        ],
+        "traceAbility": "YaoGuang_YaoGuang_Trace03",
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMG": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMG": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/1502_elation.png",
+        "skillRef": {
+          "skillName": "Let Thy Fortune Burst in Flames",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1502.png",
+    "preview": "image/character_preview/1502.png",
+    "portrait": "image/character_portrait/1502.png",
+    "bannerOffsets": [
+      43,
+      28,
+      0.66,
+      43,
+      28,
+      0.66,
+      43,
+      28,
+      0.66
+    ],
+    "isBuffed": false
+  },
   "Trailblazer - Remembrance": {
     "internalID": 8007,
     "name": "Trailblazer - Remembrance",

@@ -164,10 +164,17 @@ const customDisplayValuesLog = {
         {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
+    "Luocha": [
+        {valueName: "Skill Injection Ready", refName: "isReadyToInjectSkill", isBattleValue: true, isCharacterState: true},
+        {valueName: "Skill Injection Cooldown", refName: "skillInjectCooldown", isBattleValue: true},
+        {valueName: "Zone Active", refName: "zoneIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Zone Queued", refName: "zoneIsQueued", isBattleValue: true, isCharacterState: true},
+        
+        {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true}, 
+    ],
     "Tribbie": [
         {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true},
         {valueName: "Ult Zone Active", refName: "tribbieZoneActive", isCharacterState: true},
-
         
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
@@ -193,7 +200,21 @@ const permaConditionsTextLibrary = {
     "archerSub5casts": "Skill Use Count < 5",
 }
 
+const defaultStandardAbilityDisplayWarnings = {
+    hasEnhancedState: false,
+    "Skill": "",
+    "Ultimate": "",
+    "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+    "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+};
 const conditionsCharacterDisplayWarning = {
+    "defaultStandardWarnings": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
     "Saber": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Saber's Basic ATK is enhanced.",
@@ -210,15 +231,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
-
-    "Sunday": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
+    "Sunday": defaultStandardAbilityDisplayWarnings,
     "Bronya": {
         hasEnhancedState: false,
         "Skill": "",
@@ -243,48 +256,13 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedCyrene]
     },
-    "Tribbie": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Robin": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Silver Wolf": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Tingyun": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-
-    "Dan Heng • Permansor Terrae": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
+    "Tribbie": defaultStandardAbilityDisplayWarnings,
+    "Robin": defaultStandardAbilityDisplayWarnings,
+    "Silver Wolf": defaultStandardAbilityDisplayWarnings,
+    "Tingyun": defaultStandardAbilityDisplayWarnings,
+    "Dan Heng • Permansor Terrae": defaultStandardAbilityDisplayWarnings,
     "Aglaea": {
-        hasEnhancedState: false,
+        hasEnhancedState: true,
         "Skill": "",
         "Ultimate": "",
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
@@ -297,70 +275,16 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
     },
-    "Aventurine": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Kafka": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Hysilens": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Pela": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Asta": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Ruan Mei": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Lynx": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Topaz & Numby": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Anaxa": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
+    "Aventurine": defaultStandardAbilityDisplayWarnings,
+    "Kafka": defaultStandardAbilityDisplayWarnings,
+    "Hysilens": defaultStandardAbilityDisplayWarnings,
+    "Pela": defaultStandardAbilityDisplayWarnings,
+    "Asta": defaultStandardAbilityDisplayWarnings,
+    "Ruan Mei": defaultStandardAbilityDisplayWarnings,
+    "Lynx": defaultStandardAbilityDisplayWarnings,
+    "Topaz & Numby": defaultStandardAbilityDisplayWarnings,
+    "Anaxa": defaultStandardAbilityDisplayWarnings,
+    "Huohuo": defaultStandardAbilityDisplayWarnings,
     "Archer": {
         hasEnhancedState: false,
         "Skill": "",
@@ -368,6 +292,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast2SP,permaConditionsTextLibrary.archerSub5casts],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Luocha": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -1244,6 +1169,56 @@ const defaultConditions = {
         "Ultimate": {
             type: "AND",
             array: []
+        }
+    },
+    "Luocha": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "OR",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 50%"
+                },
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "zoneIsQueued",
+                            "state": false,
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "Character: State",
+                            "target": "Self",
+                            "stateName": "zoneIsActive",
+                            "state": false,
+                            "isBattleValue": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "zoneIsActive",
+                    "state": false,
+                    "isBattleValue": true
+                },
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "zoneIsQueued",
+                    "state": false,
+                    "isBattleValue": true
+                }
+            ]
         }
     },
     "Gallagher": {
