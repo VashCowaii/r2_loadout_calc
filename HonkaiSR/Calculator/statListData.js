@@ -87,10 +87,11 @@ const greatTableKnowerOfAll = {
     
     "DEFFlatNULL": 0,
 
-    "ElationDMG": 0,
+    "ElationDMGAll": 0,
     "Weaken%": 0,
 
     "DamageReductionStandard": 0,
+    "SPDFlatNull": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
@@ -289,11 +290,14 @@ const WeaknessImaginary = greatTableIndex.WeaknessImaginary;
 const WeaknessWind = greatTableIndex.WeaknessWind;
 const WeaknessPhysical = greatTableIndex.WeaknessPhysical;
 
-const ElationDMG = greatTableIndex.ElationDMG;
+const ElationDMGAll = greatTableIndex.ElationDMGAll;
 
 const WeakenPercent = greatTableIndex["Weaken%"];
 
 const DamageReductionStandard = greatTableIndex["DamageReductionStandard"];
+
+const SPDFlatNull = greatTableIndex.SPDFlatNull;
+
 
 
 
@@ -304,7 +308,7 @@ const battleTableKnowerOfAll = {
 const possibleTags = [
     "All",
     "Basic","Skill","Ultimate",
-    "DOT","FUA","Break","BreakSuper",
+    "DOT","FUA","Break","BreakSuper","Elation",
     "Ice","Lightning","Fire","Quantum","Imaginary","Wind","Physical",
 ]
 const possibleScalars = [
@@ -416,7 +420,7 @@ const propertyImagePaths = {
     "Elation": {
         "icon": initialPropertyPath + "IconJoy.png",
         "sets": {
-            [greatTableIndex["ElationDMG"]]: {
+            [greatTableIndex["ElationDMGAll"]]: {
                 "display": "Elation DMG",
                 "specific": "Elation DMG",
                 "unit": "%"
@@ -659,6 +663,11 @@ const propertyImagePaths = {
             [greatTableIndex["SPDFlat"]]: {
                 "display": "SPD",
                 "specific": "SPD Flat",
+                "unit": ""
+            },
+            [greatTableIndex["SPDFlatNull"]]: {
+                "display": "SPD (LOCKED)",
+                "specific": "SPD Flat (LOCKED)",
                 "unit": ""
             },
             "SPDBaseFinal": {
@@ -1421,7 +1430,7 @@ const cacheTagFamilies = {
         ...propertyImagePaths.CritDamage.sets,
     },
 }
-const familyCacheTagSet = new Set (["UpdateStatDamage","UpdateStatDEFShred","UpdateStatPEN","UpdateStatVulnerable","UpdateStatCritRate","UpdateStatCritDamage"])
+const familyCacheTagSet = new Set (["UpdateStatDamage","UpdateStatDR","UpdateStatDEFShred","UpdateStatPEN","UpdateStatVulnerable","UpdateStatCritRate","UpdateStatCritDamage"])
 
 // const testArray = new Array(greatTableSize);
 // testArray[0] += 1
@@ -1564,6 +1573,7 @@ const scalarPercKey = {};
 const scalarFlatKey = {};
 const resistanceKeys = {};
 const weaknessKeys = {};
+const elationKeys = {};
 
 const taggers = basicShorthand.establishTagNames;
 taggers(resPENKeys,possibleTags,"Resistance","PEN");
@@ -1576,6 +1586,8 @@ taggers(scalarFlatKey,possibleScalars,"","Flat",true);
 taggers(resistanceKeys,possibleTags,"Resistance","",true);
 taggers(weaknessKeys,possibleTags,"Weakness","",true);
 
+taggers(elationKeys,possibleTags,"ElationDMG","");
+
 // console.log(resPENKeys)
 // console.log(vulnKeys)
 // console.log(dmgKeys)
@@ -1585,6 +1597,7 @@ taggers(weaknessKeys,possibleTags,"Weakness","",true);
 // console.log(scalarFlatKey)
 // console.log(resistanceKeys)
 // console.log(weaknessKeys)
+// console.log(elationKeys)
 
 
 

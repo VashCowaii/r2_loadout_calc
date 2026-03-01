@@ -61400,7 +61400,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.04
+          "ElationDMGAll": 0.04
         }
       },
       "Point10": {
@@ -61414,7 +61414,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.04
+          "ElationDMGAll": 0.04
         }
       },
       "Point12": {
@@ -61428,7 +61428,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.06
+          "ElationDMGAll": 0.06
         }
       },
       "Point14": {
@@ -61442,7 +61442,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.06
+          "ElationDMGAll": 0.06
         }
       },
       "Point16": {
@@ -61463,7 +61463,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.08
+          "ElationDMGAll": 0.08
         }
       },
       "Point22": {
@@ -62317,7 +62317,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.04
+          "ElationDMGAll": 0.04
         }
       },
       "Point13": {
@@ -62345,7 +62345,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.06
+          "ElationDMGAll": 0.06
         }
       },
       "Point17": {
