@@ -3819,6 +3819,7 @@ const graphs = {
         "Mem": "misc/18007B.png",
         "Souldragon": "icon/skill/1414_skill.png",
         "Demiurge": "misc/11415B.png",
+        "Aha Instant": "BEicons/HoshinoKami_007.png",
     },
     enemyCustomImages: {
         "default": "misc/glorp.png",
@@ -4654,6 +4655,8 @@ const graphs = {
 
             characterObject.char4.name,
             ...(characters[characterObject.char4.name].hasRemembranceSummon ? [characters[characterObject.char4.name].summonName] : []),
+
+            ...(battleData.isElationTypeBattle ? ["Aha Instant"] : [])
         ]
 
         const dmgCheckRef = battleTotalsObject.DMG;
