@@ -1542,6 +1542,8 @@ const customMenu = {
                             <option value="Glorp-ard">Glorp-ard</option>
                             <option value="quantumDoggo">Calyx: Destruction</option>
                             <option value="MoX6">MoX: 6</option>
+                            <option value="EchoCocolia">Cocolia (Echo)</option>
+                            
                         </select>
                     </div>
                 </div>
@@ -2017,8 +2019,52 @@ const customMenu = {
                 </div>` : ""}
             </div>` : "";
 
+
+            const elationString = hitData.elationValueToUse ? `
+            <div class="totalHealingBoxBreakdownRows">
+                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">${hitData.scalar}</div>
+                    <div class="totalHealingValueBoss">${hitData.elationValueToUse.toLocaleString()}</div>
+                </div>
+                ${hitData.bonusDMGCustom ? `
+                    <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                        <div class="totalHealingHeader">${hitData.bonudDMGCustomRefName ?? "No ref given"}</div>
+                        <div class="totalHealingValueBoss">${(hitData.bonusDMGScalar).toLocaleString() ?? 0}</div>
+                    </div>
+                    <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                        <div class="totalHealingHeader">${hitData.bonudDMGCustomRefName ?? "No ref given"} Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.bonusDMGMulti * 100).toLocaleString() ?? 0}%</div>
+                    </div>` : ""}
+                ${hitData.currentSplit ? `<div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">Split</div>
+                    <div class="totalHealingValueBoss">${(hitData.currentSplit * 100).toLocaleString()}%</div>
+                </div>` : ""}
+                
+                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">Multi</div>
+                    <div class="totalHealingValueBoss">${(hitData.currentMulti * 100).toLocaleString()}%</div>
+                </div>
+                ${hitData.finalMulti > 1 ? `
+                    <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                        <div class="totalHealingHeader">Final Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.finalMulti * 100).toLocaleString()}%</div>
+                    </div>` : ""}
+                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">DMG/Hit</div>
+                    <div class="totalHealingValueBoss">${hitData.DMGTotalEnd.toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">DMG/Crit</div>
+                    <div class="totalHealingValueBoss">${hitData.DMGTotalCrit.toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">AVG/Hit</div>
+                    <div class="totalHealingValueBoss">${hitData.DMGTotalAVG.toLocaleString()}</div>
+                </div>
+            </div>` : "";
+
             
-            const standardCheck = breakString === "" && dotString === "" && trueString === "";
+            const standardCheck = breakString === "" && dotString === "" && trueString === "" && elationString === "";
             // multiOf
 
             // bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
@@ -2086,6 +2132,64 @@ const customMenu = {
                     ${hitData.sumDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
                         <div class="totalHealingHeader">DMG</div>
                         <div class="totalHealingValueBoss">${(hitData.sumDMG).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.totalCritDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Crit DMG</div>
+                        <div class="totalHealingValueBoss">${(hitData.totalCritDMG + 1).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumVULN ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Vuln</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumVULN).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDEF ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DEF</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDEF).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumRES ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">RES</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumRES).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDR ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DR</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDR).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.isBroken && hitData.isBroken != 1 ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Not Broken</div>
+                        <div class="totalHealingValueBoss">${(hitData.isBroken).toLocaleString()}x</div>
+                    </div>` : ""}
+
+
+                    ${hitData.currentSplit ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Split</div>
+                        <div class="totalHealingValueBoss">${(hitData.currentSplit).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.currentMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.currentMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    
+                </div>`;
+            }
+            else if (elationString != "") {
+                if (hitData.scalar) {bonusTotalArray.push({rowName: "Scalar",rowDisplayValue: hitData.scalar})}
+                if (hitData.multiOf) {bonusTotalArray.push({rowName: "Scalar SUM",rowDisplayValue: hitData.elationValueToUse.toLocaleString()})}
+                if (hitData.sumDMG) {bonusTotalArray.push({rowName: "Elation DMG%",rowDisplayValue: `${((hitData.sumDMG - 1) * 100).toLocaleString()}%`})}
+                if (hitData.totalCritRate) {bonusTotalArray.push({rowName: "CRIT Rate",rowDisplayValue: `${(hitData.totalCritRate * 100).toLocaleString()}%`})}
+                if (hitData.totalCritDMG) {bonusTotalArray.push({rowName: "CRIT DMG",rowDisplayValue: `${(hitData.totalCritDMG * 100).toLocaleString()}%`})}
+
+                bonusesStringMultis = `
+                <div class="totalHealingBoxBreakdownRows">
+                    ${hitData.sumDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Elation DMG</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDMG).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.punchlineMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Punchline Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.punchlineMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumMerry ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">MerryMake Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumMerry).toLocaleString()}x</div>
                     </div>` : ""}
                     ${hitData.totalCritDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
                         <div class="totalHealingHeader">Crit DMG</div>
@@ -2246,10 +2350,10 @@ const customMenu = {
             let rowAlternating = 2;
             for (let entry of bonusTotalArray) {
                 // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="imageRowStatisticImageMain"/></div>
-                bonusTotalString += `<div class="imageRowStatisticBox${rowAlternating}DETAILS">
+                bonusTotalString += `<div class="imageRowStatisticBox${rowAlternating}DETAILSScalars">
                     
                     <div class="imageRowStatisticNameBoxDMGDetails">${entry.rowName}</div>
-                    <div class="imageRowStatisticStatBox">${entry.rowDisplayValue}</div>
+                    <div class="imageRowStatisticStatBoxScalarDisplays">${entry.rowDisplayValue}</div>
                 </div>`
 
                 if (rowAlternating==2) {rowAlternating--;}
@@ -2299,6 +2403,7 @@ const customMenu = {
                 ${breakString}
                 ${dotString}
                 ${trueString}
+                ${elationString}
                 ${standardString}
                 <div class="customMenuSearchNote">The overview doesn't include, say, how much DMG% went into the calculation, but DMG Stats below will.</div>
                 ${bonusesString}
@@ -2978,6 +3083,7 @@ const customMenu = {
             let basicMiniAction = {
                 "FUAStart": "FuA",
                 "SkillStart": "Skill",
+                "ElationSkillStart": "Elation",
                 "BasicATKStart": "Basic",
                 "TechniqueStart": "Tech.",
                 "MemoSkillStart": "Skill",
@@ -4013,6 +4119,7 @@ const userTriggers = {
         // "SpeedAdvanced",
         "FUAStart",
         "SkillStart",
+        "ElationSkillStart",
         "MemoSkillStart",
         "BasicATKStart",
         "TechniqueStart",
@@ -4048,6 +4155,7 @@ const userTriggers = {
         "UltimateStart": "Ultimate Start",
         "FUAStart": "Follow-up Attack (Action Queue)",
         "SkillStart": "Skill Start",
+        "ElationSkillStart": "Elation Skill Start",
         "MemoSkillStart": "Memosprite Skill Start",
         "BasicATKStart": "Basic ATK Start",
 
@@ -4138,8 +4246,6 @@ const userTriggers = {
             let currentType = action.logType;
             let turnRef = action.turnRef ? JSON.parse(action.turnRef) : null;
             let returnString = ``;
-
-            // battleData.battleLog.push({logType: "EnergyChange", target: battleDataCharacterRow.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:battleDataCharacterRow.currentEnergy, maximum, source:sourceName});
 
             // &#8592;  left
             // &#8594;  right
@@ -4384,6 +4490,15 @@ const userTriggers = {
                     <div class="actionDetailBody">Target: ${action.target}</div>
                     `
                     break;
+                case "ElationSkillStart": 
+                // case "TalentStart":
+                    // battleData.battleLog.push({logType: "BasicATKStart", name:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV});
+                    returnString = `
+                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s ${action.actionSlot} ${action.isEnhanced ? "Enhanced" : ""}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
+                    <div class="actionDetailBody">Target: ${action.target}</div>
+                    `
+                    break;
                 case "FUAStart": 
                     // battleData.battleLog.push({logType: "FUAStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
                     returnString = `
@@ -4456,6 +4571,37 @@ const userTriggers = {
                         </div>
                         <img src="${propertyImagePaths.EnergyRegen.icon}" class="characterDisplayLogStatIcon"/>
                         ${action.isOverflow ? "[OVERFLOW] " : ""}${+action.amount.toFixed(7)} || ${+action.oldEnergy.toFixed(7)}/${action.maximum} --> ${+action.newEnergy.toFixed(7)}/${action.maximum} ${action.source ? ` [${action.source}]` : ""}
+                    </div>`;
+                    // returnString = `<div class="actionDetailBody">
+                    // <img src="${propertyImagePaths.EnergyRegen.icon}" class="characterDisplayLogStatIcon"/>
+                    // --${action.target} ${action.amount>=0 ? "gained" : "lost"} ${+action.amount.toFixed(7)} energy. ${+action.oldEnergy.toFixed(7)}/${action.maximum} --> ${+action.newEnergy.toFixed(7)}/${action.maximum} ${action.source ? ` -- from ${action.source}` : ""}
+                    // </div>`;
+                    // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
+                    break;
+                case "PunchlineChange":
+                    // battleData.battleLog.push({logType: "PunchlineChange", amount, oldEnergy, newEnergy:battleDataCharacterRow.currentEnergy, source:sourceName})
+                    returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            <img src="/HonkaiSR/${characters[action.target] ? characters[action.target].icon : ("BEicons/HoshinoKami_007.png")}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        </div>
+                        <img src="/HonkaiSR/misc/IconElation04_B_Color.png" class="characterDisplayLogStatIcon"/>
+                        ${+action.amount.toFixed(7)} || ${+action.oldEnergy.toFixed(7)} --> ${+action.newEnergy.toFixed(7)} ${action.source ? ` [${action.source}]` : ""}
+                    </div>`;
+                    // returnString = `<div class="actionDetailBody">
+                    // <img src="${propertyImagePaths.EnergyRegen.icon}" class="characterDisplayLogStatIcon"/>
+                    // --${action.target} ${action.amount>=0 ? "gained" : "lost"} ${+action.amount.toFixed(7)} energy. ${+action.oldEnergy.toFixed(7)}/${action.maximum} --> ${+action.newEnergy.toFixed(7)}/${action.maximum} ${action.source ? ` -- from ${action.source}` : ""}
+                    // </div>`;
+                    // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
+                    break;
+                case "CertifiedBangerChange":
+                    // battleData.battleLog.push({logType: "PunchlineChange", amount, oldEnergy, newEnergy:battleDataCharacterRow.currentEnergy, source:sourceName})
+                    
+                    returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            <img src="/HonkaiSR/${characters[action.target].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        </div>
+                        <img src="/HonkaiSR/misc/OutlineElationBless_Grey.png" class="characterDisplayLogStatIcon"/>
+                        ${+action.amount.toFixed(7)} || ${+action.oldEnergy.toFixed(7)} --> ${+action.newEnergy.toFixed(7)} ${action.source ? ` [${action.source}]` : ""}
                     </div>`;
                     // returnString = `<div class="actionDetailBody">
                     // <img src="${propertyImagePaths.EnergyRegen.icon}" class="characterDisplayLogStatIcon"/>
