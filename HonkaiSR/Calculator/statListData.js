@@ -92,6 +92,8 @@ const greatTableKnowerOfAll = {
 
     "DamageReductionStandard": 0,
     "SPDFlatNull": 0,
+    "ElationDMGAllNULL": 0,
+    "MerryMakeAll": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
@@ -298,6 +300,10 @@ const DamageReductionStandard = greatTableIndex["DamageReductionStandard"];
 
 const SPDFlatNull = greatTableIndex.SPDFlatNull;
 
+const ElationDMGAllNULL = greatTableIndex.ElationDMGAllNULL;
+const MerryMakeAll = greatTableIndex.MerryMakeAll;
+
+
 
 
 
@@ -383,6 +389,7 @@ const pathImagePaths = {
     },
 }
 
+
 const initialPropertyPath = "/HonkaiSR/icon/property/";
 const noIconPath = "";
 const propertyImagePaths = {
@@ -423,6 +430,21 @@ const propertyImagePaths = {
             [greatTableIndex["ElationDMGAll"]]: {
                 "display": "Elation DMG",
                 "specific": "Elation DMG",
+                "unit": "%"
+            },
+            [greatTableIndex["ElationDMGAllNULL"]]: {
+                "display": "Elation DMG (LOCKED)",
+                "specific": "Elation DMG (LOCKED)",
+                "unit": "%"
+            },
+        }
+    },
+    "MerryMake": {
+        "icon": initialPropertyPath + "IconJoy.png",
+        "sets": {
+            [greatTableIndex["MerryMakeAll"]]: {
+                "display": "Elation Merrymake",
+                "specific": "Elation Merrymake",
                 "unit": "%"
             },
         }
@@ -1387,8 +1409,39 @@ const propertyImagePaths = {
 
 }
 
+
 //kind of cancer but I don't want to double-define things in case I change them later, would rather have one reference used twice so changes will be applied universally
 const cacheTagFamilies = {
+    "Elation": {
+        ...propertyImagePaths.Elation.sets,
+        // [ElationDMGAll]: propertyImagePaths.Elation.sets.ElationDMGAll,
+        // [DamageFire]: propertyImagePaths.Fire.sets.DamageFire,
+        // [DamageIce]: propertyImagePaths.Ice.sets.DamageIce,
+        // [DamageLightning]: propertyImagePaths.Lightning.sets.DamageLightning,
+        // [DamageWind]: propertyImagePaths.Wind.sets.DamageWind,
+        // [DamageQuantum]: propertyImagePaths.Quantum.sets.DamageQuantum,
+        // [DamageImaginary]: propertyImagePaths.Imaginary.sets.DamageImaginary,
+    },
+    "MerryMake": {
+        ...propertyImagePaths.MerryMake.sets,
+        // [ElationDMGAll]: propertyImagePaths.Elation.sets.ElationDMGAll,
+        // [DamageFire]: propertyImagePaths.Fire.sets.DamageFire,
+        // [DamageIce]: propertyImagePaths.Ice.sets.DamageIce,
+        // [DamageLightning]: propertyImagePaths.Lightning.sets.DamageLightning,
+        // [DamageWind]: propertyImagePaths.Wind.sets.DamageWind,
+        // [DamageQuantum]: propertyImagePaths.Quantum.sets.DamageQuantum,
+        // [DamageImaginary]: propertyImagePaths.Imaginary.sets.DamageImaginary,
+    },
+    "DamageReduction": {
+        ...propertyImagePaths.DamageReduction.sets,
+        // [ElationDMGAll]: propertyImagePaths.Elation.sets.ElationDMGAll,
+        // [DamageFire]: propertyImagePaths.Fire.sets.DamageFire,
+        // [DamageIce]: propertyImagePaths.Ice.sets.DamageIce,
+        // [DamageLightning]: propertyImagePaths.Lightning.sets.DamageLightning,
+        // [DamageWind]: propertyImagePaths.Wind.sets.DamageWind,
+        // [DamageQuantum]: propertyImagePaths.Quantum.sets.DamageQuantum,
+        // [DamageImaginary]: propertyImagePaths.Imaginary.sets.DamageImaginary,
+    },
     "Damage": {
         ...propertyImagePaths.Damage.sets,
         [DamagePhysical]: propertyImagePaths.Physical.sets.DamagePhysical,
@@ -1430,7 +1483,7 @@ const cacheTagFamilies = {
         ...propertyImagePaths.CritDamage.sets,
     },
 }
-const familyCacheTagSet = new Set (["UpdateStatDamage","UpdateStatDR","UpdateStatDEFShred","UpdateStatPEN","UpdateStatVulnerable","UpdateStatCritRate","UpdateStatCritDamage"])
+const familyCacheTagSet = new Set (["UpdateStatDamage","UpdateStatElation","UpdateStatMerryMake","UpdateStatDamageReduction","UpdateStatDEFShred","UpdateStatPEN","UpdateStatVulnerable","UpdateStatCritRate","UpdateStatCritDamage"])
 
 // const testArray = new Array(greatTableSize);
 // testArray[0] += 1
@@ -1574,6 +1627,7 @@ const scalarFlatKey = {};
 const resistanceKeys = {};
 const weaknessKeys = {};
 const elationKeys = {};
+const merryMakeKeys = {};
 
 const taggers = basicShorthand.establishTagNames;
 taggers(resPENKeys,possibleTags,"Resistance","PEN");
@@ -1587,6 +1641,10 @@ taggers(resistanceKeys,possibleTags,"Resistance","",true);
 taggers(weaknessKeys,possibleTags,"Weakness","",true);
 
 taggers(elationKeys,possibleTags,"ElationDMG","");
+taggers(merryMakeKeys,possibleTags,"MerryMake","");
+
+
+
 
 // console.log(resPENKeys)
 // console.log(vulnKeys)
