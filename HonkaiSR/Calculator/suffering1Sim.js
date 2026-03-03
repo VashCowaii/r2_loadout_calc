@@ -409,7 +409,9 @@ const sim = {
                     "UpdateStatDamage": {
                         //compositeCacheTag will define itself here when used, and the tag will be the key
                     },
-                    "UpdateStatDR": {},
+                    "UpdateStatElation": {},
+                    "UpdateStatMerryMake": {},
+                    "UpdateStatDamageReduction": {},
                     "UpdateStatDEFShred": {},
                     "UpdateStatPEN": {},
                     "UpdateStatVulnerable": {},
@@ -501,6 +503,9 @@ const sim = {
             // extraTurnPriority: 0,
             battleLogicTemp: {},
             teamSPD: 0,
+            punchline: 0,
+            punchlineForced: 0,
+            bangersDone: 0,
         };
         if (isLoggyLogger) {logToBattle(battleData,{logType: "BattlePrep"});}
         const summaryTurns = battleData.battleTotal.Turns;
@@ -514,6 +519,7 @@ const sim = {
         const getSPD = calcs.getSPDFinal;
         const getHP = calcs.getHPFinal;
         const getAggro = calcs.getAggroFinal;
+        let elationCharactersThisFight = 0;
 
 
         // battleSettings.useTechniquesChar1
@@ -616,7 +622,9 @@ const sim = {
                     "UpdateStatDamage": {
                         //compositeCacheTag will define itself here when used, and the tag will be the key
                     },
-                    "UpdateStatDR": {},
+                    "UpdateStatElation": {},
+                    "UpdateStatMerryMake": {},
+                    "UpdateStatDamageReduction": {},
                     "UpdateStatDEFShred": {},
                     "UpdateStatPEN": {},
                     "UpdateStatVulnerable": {},
@@ -633,12 +641,16 @@ const sim = {
                 activeSummons: 0,
                 activeMemosprites: 0,
                 actionCounter: 0,
+                certifiedBanger: 0,
                 notPresentInActionOrder: false,
                 battleValues: logicRef?.characterValuesBattle,
             };
             battleData.charactersRemaining += 1;
             summaryTurns[properName] = 0;
             let slotRef = namedTurns[characterEntry];
+            if (slotRef.path === "Elation") {
+                elationCharactersThisFight++;
+            }
             
             slotRef.statTable[LVL] = 80;
 
@@ -735,6 +747,28 @@ const sim = {
                 extra2pc.push(push2pc);
             }
         }
+
+
+        // if (elationCharactersThisFight || true) {//dumb to use true, but was using it to force aha to spawn with no elation units
+        if (elationCharactersThisFight) {
+            // let ownerArray = lightconeOwners[lightconeSet];
+            const logicRef = turnLogic["Aha Instant"];
+            battleData.isElationTypeBattle = true;
+
+            if (logicRef?.listeners && logicRef.listeners.length) {
+                for (let eachListener of logicRef.listeners) {
+                    // eachListener.owners = ownerArray;
+                    // eachListener.completedCounter = 0;
+                    // eachListener.ownerTurn = slotRef;
+
+                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+
+                    currentListenerArray.push(eachListener);
+                }
+            }
+        }
+
 
         for (let lightconeSet in lightconeOwners) {
             let ownerArray = lightconeOwners[lightconeSet];

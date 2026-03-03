@@ -4066,6 +4066,144 @@ const turnLogicLightcones = {
             "defShred": "Life Should Be Cast to Flames (-DEF)",
         },
     },
+
+    //ELATION
+    "When She Decided to See": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            updateFortune(battleData,currentTurn,ownerRank) {
+                let ownerName = currentTurn.name;
+
+                if (!currentTurn.updateFortuneCRITSHEET) {
+                    let lcNameRef = "When She Decided to See";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+
+                    const logicRef = turnLogicLightcones[lcNameRef];
+                    const buffNames = logicRef.buffNames;
+                    let buffName3 = buffNames.greatFortune;
+                    let buffName2 = buffNames.greatFortuneSelf;
+                    const uniqueName = `${buffName3} (${currentTurn.properName})`;
+                    buffNames[currentTurn.properName] = uniqueName;
+                    currentTurn.updateFortuneCRITSHEETOwner = {
+                        "stats": [EnergyRegenRate],
+                        [EnergyRegenRate]: rankParams[4],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": buffName2,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "expireFunction": logicRef.skillFunctions.expireFunction,
+                        "expireParam": {sourceTurn:currentTurn.name,uniqueName,countdownName: buffName2}//owner, in this case
+                    }
+
+                    currentTurn.updateFortuneCRITSHEET = {
+                        "stats": [CritRateBase,CritDamageBase],
+                        [CritRateBase]: rankParams[1],
+                        [CritDamageBase]: rankParams[2],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": uniqueName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    
+                }
+                
+                
+                let turnOverride = currentTurn.turnState ? 4 : 3;
+
+                let buffSheet2 = currentTurn.updateFortuneCRITSHEETOwner;
+                buffSheet2.duration = turnOverride;
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,currentTurn,buffSheet2);
+
+                let buffSheet3 = currentTurn.updateFortuneCRITSHEET;
+                const thisName = buffSheet3.buffName;
+
+                const allyTurns = battleData.nameBasedTurns;
+                for (let targetSlot in allyTurns) {
+                    const targetTurn = allyTurns[targetSlot];
+                    // if (targetTurn.name === ownerName) {continue;}//we don't apply crit bonuses to the owner, at least I don't think
+                    if (targetTurn.buffsObject[thisName]) {continue;}//if they already have, no need to renew it's perma anyways
+
+                    updateBuff(battleData,targetTurn,buffSheet3);
+                }
+            },
+            expireFunction(battleData,expireParam) {
+                const ownerName = expireParam.sourceTurn;//not actually a turn object, rather this is a slot
+                const uniqueBuffName = expireParam.uniqueName;
+                const allyTurns = battleData.nameBasedTurns;
+                
+                for (let targetSlot in allyTurns) {
+                    const targetTurn = allyTurns[targetSlot]
+                    // if (targetTurn.name === ownerName) {continue;}
+                    removeBuff(battleData,targetTurn,targetTurn.buffsObject[uniqueBuffName]);
+                }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownersSlots = this.ownersSlots;
+
+                    const updateFortune = this.shortRef ??= turnLogicLightcones["When She Decided to See"].skillFunctions.updateFortune;
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let ownerRank = ownersSlots[charSlot];
+                        let currentTurn = namedTurns[charSlot];
+
+                        updateFortune(battleData,currentTurn,ownerRank);
+                    }
+                },
+                "target": "self",
+                "listenerName": "When She Decided to See - battlestart Great Fortune application",
+                "owners": []
+            },
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//then abort non-owners
+
+                    const updateFortune = this.shortRef ??= turnLogicLightcones["When She Decided to See"].skillFunctions.updateFortune;
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let ownerRank = ownersSlots[charSlot];
+                        let currentTurn = namedTurns[charSlot];
+
+                        updateFortune(battleData,currentTurn,ownerRank);
+                    }
+                },
+                "target": "self",
+                "listenerName": "When She Decided to See - ult use Great Fortune application",
+                "owners": [],
+                "ownersSlots": {}
+            }
+        ],
+        "buffNames": {
+            "greatFortune": "Great Fortune (LC)",
+            "greatFortuneSelf": "Great Fortune (LC Countdown)",
+        },
+        "buffNamesPerCharacter": {
+            "greatFortune": "Great Fortune (LC)",
+        },
+    },
 }
 
 
@@ -6319,8 +6457,260 @@ const turnLogicRelics = {
             },
         }
     },
+    "Diviner of Distant Reach": {
+        "2pc": {},
+        "4pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PreBattleSettings",
+                    condition(battleData,generalInfo) {
+                        let ownersSlots = this.ownersSlots;
 
-    
+                        let relicNameRef = "Diviner of Distant Reach";
+                        let pcRef = "4pc";
+                        let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+
+                        let buffSheet1 = this.buffSheet1 ??= {
+                            "stats": [CritRateBase],
+                            [CritRateBase]: relicPathing[3],
+                            "source": relicNameRef,
+                            "sourceOwner": "",
+                            "buffName": turnLogicRelics[relicNameRef][pcRef].buffNames.critBuff1,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        let buffSheet2 = this.buffSheet2 ??= {
+                            "stats": [CritRateBase],
+                            [CritRateBase]: relicPathing[2],
+                            "source": relicNameRef,
+                            "sourceOwner": "",
+                            "buffName": turnLogicRelics[relicNameRef][pcRef].buffNames.critBuff2,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const menuStatsREF = battleData.menuStats;
+                        const updateBuff = battleActions.updateBuff
+                        const getFinalSPD = calcs.getSPDFinal;
+                        for (let ally in ownersSlots) {
+                            let currentTurn = namedTurns[ally];
+                            let menuStats = menuStatsREF[ally];
+                            let SPD = getFinalSPD(menuStats).SPDFinal;
+                            // const memoRef = currentTurn.memospriteEventRef;
+                            
+                            const ownerName = currentTurn.properName;
+                            buffSheet1.sourceOwner = ownerName;
+                            buffSheet2.sourceOwner = ownerName;
+
+                            if (SPD > 160) {
+                                updateBuff(battleData,currentTurn,buffSheet1);
+                                // if (memoRef) {updateBuff(battleData,currentTurn[memoRef],buffSheet1);}
+                            }
+                            else if (SPD > 120) {
+                                updateBuff(battleData,currentTurn,buffSheet2);
+                                // if (memoRef) {updateBuff(battleData,currentTurn[memoRef],buffSheet2);}
+                            }
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Diviner of Distant Reach SPDCheck",
+                    "owners": [],
+                    "ownersSlots": {}
+                },
+                {
+                    "trigger": "ElationSkillStart",
+                    condition(battleData,generalInfo) {
+                        let sourceTurn = generalInfo.sourceTurn;
+            
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        if (!ownerRank) {return;}
+
+                        let relicNameRef = "Diviner of Distant Reach";
+                        let pcRef = "4pc";
+                        let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+
+                        let buffSheet1 = this.buffSheet1 ??= {
+                            "stats": [ElationDMGAll],
+                            [ElationDMGAll]: relicPathing[4],
+                            "source": relicNameRef,
+                            "sourceOwner": "",
+                            "buffName": turnLogicRelics[relicNameRef][pcRef].buffNames.elationSkillFirst,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+
+                        buffSheet1.sourceOwner = sourceTurn.properName;
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        let targetBatchArray = [];
+                        for (let allySlot in namedTurns) {
+                            const currentAlly = namedTurns[allySlot];
+                            battleActions.updateBuff(battleData,currentAlly,buffSheet1);
+                            // targetBatchArray.push(currentAlly);
+                        };
+                        // updateBuffBatchTargets(battleData,targetBatchArray,buffSheet1);
+
+                        battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                    },
+                    "target": "self",
+                    "listenerName": "Diviner of Distant Reach First Elation Skill",
+                    "owners": [],
+                    "ownersSlots": {}
+                },
+            ],
+            "buffNames": {
+                "critBuff1": "Diviner of Distant Reach (>=160)",
+                "critBuff2": "Diviner of Distant Reach (>=120)",
+                "elationSkillFirst": "Diviner of Distant Reach (Elation)",
+            },
+        }
+    },
+    "Ever-Glorious Magical Girl": {
+        "2pc": {},
+        "4pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownersSlots = this.ownersSlots;
+
+                        if (!this.buffSheet1) {
+                            let relicNameRef = "Ever-Glorious Magical Girl";
+                            let pcRef = "4pc";
+                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.defaultShred;
+
+                            this.buffSheet1 = {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: relicPathing[0],
+                                "source": relicNameRef,
+                                "sourceOwner": "",
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Elation"],
+                            }
+                        }
+
+                        let buffSheet1 = this.buffSheet1;
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const updateBuff = battleActions.updateBuff
+                        for (let ally in ownersSlots) {
+                            let currentTurn = namedTurns[ally];
+                            const memoRef = currentTurn.memospriteEventRef;
+                            
+                            const ownerName = currentTurn.properName;
+                            buffSheet1.sourceOwner = ownerName;
+
+                            updateBuff(battleData,currentTurn,buffSheet1);
+                            if (memoRef) {updateBuff(battleData,currentTurn[memoRef],buffSheet1);}
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Ever-Glorious Magical Girl battlestart shred bonus",
+                    "owners": [],
+                    "ownersSlots": {}
+                },
+                {
+                    "trigger": "PunchlineChanged",
+                    condition(battleData,generalInfo) {
+                        let ownersSlots = this.ownersSlots;
+                        // poke("PunchlineChanged",battleData,{sourceTurn,newAmount,amount});
+                        const value = generalInfo.newAmount;
+                        if (value <= 0) {return;}
+
+                        const currentStacks = battleData.everGloriousMagicalTrackerStacks ??= 0;
+                        battleData.everGloriousMagicalTrackerPunchline ??= 0
+                        battleData.everGloriousMagicalTrackerPunchline += value;
+
+                        const addedValue = Math.floor(battleData.everGloriousMagicalTrackerPunchline / 5);
+                        if (addedValue >= 1) {
+                            battleData.everGloriousMagicalTrackerPunchline -= addedValue*5;
+                        }
+                        else {return;}
+                        const finalValue = Math.min(10,(battleData.everGloriousMagicalTrackerStacks + addedValue));
+                        const stacksToAdd = finalValue - currentStacks;
+
+                        if (stacksToAdd === 0) {
+                            //if we have nothing to add it's bc we are already capped and can kill this listener since it is teamwide and not individual
+                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                        }
+                        battleData.everGloriousMagicalTrackerStacks += stacksToAdd;
+
+
+                        if (!this.buffSheet1) {
+                            let relicNameRef = "Ever-Glorious Magical Girl";
+                            let pcRef = "4pc";
+                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.stackShred;
+
+                            this.buffSheet1 = {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: relicPathing[2],
+                                "source": relicNameRef,
+                                "sourceOwner": "",
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 10,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Elation"],
+                            }
+                        }
+
+                        let buffSheet1 = this.buffSheet1;
+                        buffSheet1.currentStacks = stacksToAdd;
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const updateBuff = battleActions.updateBuff
+                        for (let ally in ownersSlots) {
+                            let currentTurn = namedTurns[ally];
+                            const memoRef = currentTurn.memospriteEventRef;
+                            
+                            const ownerName = currentTurn.properName;
+                            buffSheet1.sourceOwner = ownerName;
+
+                            updateBuff(battleData,currentTurn,buffSheet1);
+                            if (memoRef) {updateBuff(battleData,currentTurn[memoRef],buffSheet1);}
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Ever-Glorious Magical Girl Stack listener",
+                    "owners": [],
+                    "ownersSlots": {}
+                },
+            ],
+            "buffNames": {
+                "defaultShred": "Ever-Glorious Magical Girl (Default)",
+                "stackShred": "Ever-Glorious Magical Girl (Stack)",
+            },
+        }
+    },
 
     
     

@@ -40,7 +40,7 @@
 
     "Level_FinalDamageAddedRatio": "StageFinalDMG",
 
-    "ElationDamageAddedRatioBase": "ElationDMG",
+    "ElationDamageAddedRatioBase": "ElationDMGAll",
 
     "SPHitRatio": "EnergyRegenHitRate",
     "SPRatioBase": "EnergyRegenRate",

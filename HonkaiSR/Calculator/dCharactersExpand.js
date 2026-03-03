@@ -18141,7 +18141,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.04
+          "ElationDMGAll": 0.04
         }
       },
       "Point13": {
@@ -18169,7 +18169,7 @@ let characters = {
         "name": "Elation Boost",
         "icon": "icon/property/IconJoy.png",
         "stats": {
-          "ElationDMG": 0.06
+          "ElationDMGAll": 0.06
         }
       },
       "Point17": {

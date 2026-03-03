@@ -1265,7 +1265,8 @@ div {
     justify-content: center;
     align-items: center;
 }
-.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBoxMain,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
+.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBoxMain,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS,
+.imageRowStatisticBox1DETAILSScalars,.imageRowStatisticBox2DETAILSScalars {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1274,13 +1275,16 @@ div {
     /* padding-left: 10px; */
     box-sizing: border-box;
 }
-.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
+.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS,.imageRowStatisticBox1DETAILSScalars,.imageRowStatisticBox2DETAILSScalars {
     justify-content: space-between;
     padding-left: 2px;
     padding-right: 2px;
 }
-.imageRowStatisticBox1,.imageRowStatisticBox1DETAILS {
+.imageRowStatisticBox1,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox1DETAILSScalars {
     background-color: #c0c1d60D;
+}
+.imageRowStatisticBox1DETAILSScalars,.imageRowStatisticBox2DETAILSScalars {
+    height: auto;
 }
 .imageRowStatisticBoxMain {
     background-color: #FFFFFF66;
@@ -1325,13 +1329,17 @@ div {
 .imageRowStatisticNameBoxFilterRow {
     width: 100%;
 }
-.imageRowStatisticStatBox, .imageRowStatisticStatBoxMain {
+.imageRowStatisticStatBox, .imageRowStatisticStatBoxMain, .imageRowStatisticStatBoxScalarDisplays {
     width: 30%;
     display: flex;
     justify-content: right;
     align-items: center;
     padding-right: 2px;
     font-size: 18px;
+}
+.imageRowStatisticStatBoxScalarDisplays {
+    white-space: normal;
+    text-align: right;
 }
 .imageRowStatisticStatBoxMain {
     color: #f2a33c;

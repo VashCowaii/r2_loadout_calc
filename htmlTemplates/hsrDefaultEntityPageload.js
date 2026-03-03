@@ -43,6 +43,7 @@ const scriptsToLoad = [
     "/HonkaiSR/TheLibrary/EnemyConfigs/dMegaMappingPathing.js",
 
     "/HonkaiSR/TheLibrary/painAndSuffering.js",
+    "/HonkaiSR/Calculator/customHTMLTrees.js",
     "/HonkaiSR/TheLibrary/newTester.js",
 
     "/MainJS/buildTime.js",

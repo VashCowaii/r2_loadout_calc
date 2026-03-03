@@ -1802,5 +1802,70 @@ const hitSplitters = {
           "isAttackLastHit": true
         }
       ]
-    }
+    },
+
+    //ELATION
+    "Yao Guang": {//done
+        "basic": [
+          {
+            "primary": {
+              "hitRatio": 0.25,
+              "energyRatio": 0.25,
+              "toughness": 10
+            },
+            "blast": {
+              "hitRatio": 0.25,
+              "toughness": 5
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true
+          },
+          {
+            "primary": {
+              "hitRatio": 0.25,
+              "energyRatio": 0.25,
+              "toughness": 10
+            },
+            "blast": {
+              "hitRatio": 0.25,
+              "toughness": 5
+            }
+          },
+          {
+            "primary": {
+              "hitRatio": 0.25,
+              "energyRatio": 0.25,
+              "toughness": 10
+            },
+            "blast": {
+              "hitRatio": 0.25,
+              "toughness": 5
+            }
+          },
+          {
+            "primary": {
+              "hitRatio": 0.25,
+              "energyRatio": 0.25,
+              "toughness": 10
+            },
+            "blast": {
+              "hitRatio": 0.25,
+              "toughness": 5
+            },
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+          }
+        ],
+        "elation": [
+          {
+            "all": {
+              "hitRatio": 1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true
+          },
+        ]
+    },
 }
