@@ -49,7 +49,7 @@ const battleActions = {
         // if (!amount) {return}
         // greatTableIndex
         // greatTableKeys
-        let minimum = 1;
+        let minimum = 0;
         let maximum = 999;
         let oldEnergy = battleData.punchline;
         let newAmount = amount;
