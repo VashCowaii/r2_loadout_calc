@@ -81,6 +81,11 @@ const maslowFrontFacingTags = {
 
     "Taunt": "Aggro Modification",
     "Weaken": "Weaken Enemy DMG",
+
+
+    "MerryMake": "Elation MerryMake Bonus",
+    "Elation": "Elation DMG%",
+    "ElationSource": "Elation Entity"
 }
 const maslowDisplayTagsReversed = {};
 for (let maslowKey in maslowFrontFacingTags) {
@@ -557,6 +562,38 @@ const maslowCategoryRelics = {
             addTeamWant: [],
         }
     },
+    "Diviner of Distant Reach": {
+        2: {
+            gives: ["SPD"],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["Elation","CritRate"],
+            givesTeam: ["Elation"],
+            wants: ["ElationSource"],
+            wantsTeam: [],
+            addTeamWant: [],
+        }
+    },
+    "Ever-Glorious Magical Girl": {
+        2: {
+            gives: ["CritDMG"],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["Shred"],
+            givesTeam: [],
+            wants: ["ElationSource"],
+            wantsTeam: [],
+            addTeamWant: [],
+        }
+    },
 }
 
 const maslowCategoryPlanars = {
@@ -731,9 +768,6 @@ const maslowCategoryPlanars = {
         wantsTeam: [],
         addTeamWant: [],
     },
-
-
-
     
 }
 
@@ -3322,6 +3356,64 @@ const maslowCharactersHunt = {
     },
 }
 
+const maslowCharactersElation = {
+    "Yao Guang": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","DamageBreak"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","ATK%","EffectRES","HP%"],
+        0: {
+            gives: ["ElationSource"],
+            givesTeam: ["ElationSource","SkillPoints","Elation","Vuln"],
+            wants: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["ElationSource"],
+            givesTeam: ["ElationSource","SkillPoints","Elation","Vuln","Shred"],
+            wants: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["ElationSource"],
+            givesTeam: ["ElationSource","SkillPoints","Elation","Vuln","Shred","SPD"],
+            wants: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["ElationSource"],
+            givesTeam: ["ElationSource","SkillPoints","Elation","Vuln","Shred","SPD"],
+            wants: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["ElationSource"],
+            givesTeam: ["ElationSource","SkillPoints","Elation","Vuln","Shred","SPD"],
+            wants: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["ElationSource"],
+            givesTeam: ["ElationSource","SkillPoints","Elation","Vuln","Shred","SPD"],
+            wants: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["ElationSource"],
+            givesTeam: ["ElationSource","SkillPoints","Elation","Vuln","Shred","SPD","MerryMake"],
+            wants: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["Elation","Physical",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
+}
+
 
 const maslowCategoryCharacters = {
     ...maslowCharactersNihility,
@@ -3331,7 +3423,8 @@ const maslowCategoryCharacters = {
     ...maslowCharactersHarmony,
     ...maslowCharactersPreservation,
     ...maslowCharactersErudition,
-    ...maslowCharactersHunt
+    ...maslowCharactersHunt,
+    ...maslowCharactersElation
 }
 
 
