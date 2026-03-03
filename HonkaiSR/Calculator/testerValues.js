@@ -189,6 +189,10 @@ const customDisplayValuesLog = {
     "Natasha": [],  
     "Lynx": [], 
     "Anaxa": [],
+    "Yao Guang": [
+        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Certified Banger", refName: "certifiedBanger"},
+    ],
 }
 
 const permaConditionsTextLibrary = {
@@ -293,6 +297,7 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Luocha": defaultStandardAbilityDisplayWarnings,
+    "Yao Guang": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -1479,6 +1484,27 @@ const defaultConditions = {
                             ]
                         }
                     ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+
+    //ELATION
+    "Yao Guang": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "skillZoneActive",
+                    "state": false,
+                    "isBattleValue": true
                 }
             ]
         },
