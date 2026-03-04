@@ -4255,6 +4255,7 @@ const turnLogicLightcones = {
                             "currentStacks": 1,
                             "decay": false,
                             "expireType": null,
+                            "actionTags": ["Elation"],
                         }
                         sourceTurn.floweryWorldTEAMSHEET = {
                             "stats": [ElationDMGAll],
