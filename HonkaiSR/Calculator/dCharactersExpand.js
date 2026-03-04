@@ -17316,6 +17316,1171 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Sparxie": {
+    "internalID": 1501,
+    "name": "Sparxie",
+    "path": "Elation",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 460.845,
+      "HPBase": 1047.816,
+      "SPDBase": 107,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150101",
+        "name": "#GoingViral #WhoIsShe",
+        "rank": 1,
+        "desc": "When Aha Instant ends, gains 5 Punchline. For every 1 Punchline owned, increases All-Type RES PEN for all allies by 1.5%, up to a max increase of 15%.",
+        "icon": "icon/skill/1501_rank1.png",
+        "paramsEido": [
+          5,
+          0.015,
+          0.15
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          },
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "150102",
+        "name": "#AudienceKnows",
+        "rank": 2,
+        "desc": "When Aha Instant ends, Sparxie gains 1 extra turn and 2 \"Thrill.\" For every 1 \"Thrill\" consumed, increases this unit's CRIT DMG by 10%, lasting for 2 turn(s) and stacking up to 4 time(s).",
+        "icon": "icon/skill/1501_rank2.png",
+        "paramsEido": [
+          2,
+          0.1,
+          2,
+          4
+        ],
+        "extraEffects": {
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        }
+      },
+      {
+        "id": "150103",
+        "name": "#LinkUp #HeartSkip",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1501_skill.png"
+      },
+      {
+        "id": "150104",
+        "name": "#LockedIn #FaceCard",
+        "rank": 4,
+        "desc": "When using Ultimate, additionally gains 5 Punchline and increases this unit's Elation by 36% for 3 turn(s).",
+        "icon": "icon/skill/1501_rank4.png",
+        "paramsEido": [
+          5,
+          0.36,
+          3
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      },
+      {
+        "id": "150105",
+        "name": "#HealingTheWorld #GoodVibesOnly",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1501_ultimate.png"
+      },
+      {
+        "id": "150106",
+        "name": "#BuiltDifferent #GoingExtinct",
+        "rank": 6,
+        "desc": "Increases All-Type RES PEN by 20%. For every 1 Punchline taken into account, the number of additional DMG instances dealt by the Elation Skill increases by 1, up to a max of 40.",
+        "icon": "icon/skill/1501_rank6.png",
+        "paramsEido": [
+          1,
+          40,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Cat Got Your Flametongue?": {
+          "variant1": {
+            "skillID": 150101,
+            "trigger": "Skill01",
+            "name": "Cat Got Your Flametongue?",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Sparxie's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Bloom! Winner Takes All": {
+          "variant1": {
+            "skillID": 150108,
+            "trigger": "Skill11",
+            "name": "Bloom! Winner Takes All",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Finalizes the livestream. Deals Fire DMG equal to #1[i]% of Sparxie's ATK to one designated enemy, and Fire DMG equal to #2[f1]% of Sparxie's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 40,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                0.25
+              ],
+              "2": [
+                0.6,
+                0.3
+              ],
+              "3": [
+                0.7,
+                0.35
+              ],
+              "4": [
+                0.8,
+                0.4
+              ],
+              "5": [
+                0.9,
+                0.45
+              ],
+              "6": [
+                1,
+                0.5
+              ],
+              "7": [
+                1.1,
+                0.55
+              ],
+              "8": [
+                1.2,
+                0.6
+              ],
+              "9": [
+                1.3,
+                0.65
+              ],
+              "10": [
+                1.4,
+                0.7
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              15
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 150110,
+            "trigger": "Skill12",
+            "name": "Bloom! Winner Takes All",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": 40,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                0.25
+              ],
+              "2": [
+                0.6,
+                0.3
+              ],
+              "3": [
+                0.7,
+                0.35
+              ],
+              "4": [
+                0.8,
+                0.4
+              ],
+              "5": [
+                0.9,
+                0.45
+              ],
+              "6": [
+                1,
+                0.5
+              ],
+              "7": [
+                1.1,
+                0.55
+              ],
+              "8": [
+                1.2,
+                0.6
+              ],
+              "9": [
+                1.3,
+                0.65
+              ],
+              "10": [
+                1.4,
+                0.7
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              15
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Boom! Sparxicle's Poppin'": {
+          "variant1": {
+            "skillID": 150102,
+            "trigger": "Skill02",
+            "name": "Boom! Sparxicle's Poppin'",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Start a livestream to turn Basic ATK into \"Bloom! Winner Takes All\" and trigger \"Engagement Farming\" 1 time. During this ability, \"Engagement Farming\" can be triggered repeatedly, up to #1[i] time(s). Using this ability is not considered as using a Skill.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "2": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "3": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "4": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "5": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "6": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "7": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "8": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "9": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "10": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "11": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "12": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "13": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "14": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ],
+              "15": [
+                20,
+                28,
+                3,
+                7,
+                4
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Engagement Farming": {
+          "variant1": {
+            "skillID": 150109,
+            "trigger": "Skill21",
+            "name": "Engagement Farming",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Causes \"Bloom! Winner Takes All\" to increase the DMG multiplier against one designated enemy by #4[f1]% and the DMG multiplier against adjacent targets by #5[f1]%. Randomly gains one of the following gifts:\\n\"Straight Fire\": #3[i] Punchline point(s) and #1[i] Skill point(s).\\n\"Unreal Banger\": #2[i] Punchline point(s).\\nUsing this ability is not considered as using a Skill.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                1,
+                2,
+                0.1,
+                0.05
+              ],
+              "2": [
+                2,
+                1,
+                2,
+                0.11,
+                0.055
+              ],
+              "3": [
+                2,
+                1,
+                2,
+                0.12,
+                0.06
+              ],
+              "4": [
+                2,
+                1,
+                2,
+                0.13,
+                0.065
+              ],
+              "5": [
+                2,
+                1,
+                2,
+                0.14,
+                0.07
+              ],
+              "6": [
+                2,
+                1,
+                2,
+                0.15,
+                0.075
+              ],
+              "7": [
+                2,
+                1,
+                2,
+                0.1625,
+                0.08125
+              ],
+              "8": [
+                2,
+                1,
+                2,
+                0.175,
+                0.0875
+              ],
+              "9": [
+                2,
+                1,
+                2,
+                0.1875,
+                0.09375
+              ],
+              "10": [
+                2,
+                1,
+                2,
+                0.2,
+                0.1
+              ],
+              "11": [
+                2,
+                1,
+                2,
+                0.21,
+                0.105
+              ],
+              "12": [
+                2,
+                1,
+                2,
+                0.22,
+                0.11
+              ],
+              "13": [
+                2,
+                1,
+                2,
+                0.23,
+                0.115
+              ],
+              "14": [
+                2,
+                1,
+                2,
+                0.24,
+                0.12
+              ],
+              "15": [
+                2,
+                1,
+                2,
+                0.25,
+                0.125
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Party's Wildin' and Camera's Rollin'": {
+          "variant1": {
+            "skillID": 150103,
+            "trigger": "Skill03",
+            "name": "Party's Wildin' and Camera's Rollin'",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Gains #1[i] Punchline point(s). Deals Fire DMG equal to (#3[f1] × Elation + #2[f1]%) of Sparxie's ATK to all enemies.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.3,
+                0.6
+              ],
+              "2": [
+                2,
+                0.32,
+                0.6
+              ],
+              "3": [
+                2,
+                0.34,
+                0.6
+              ],
+              "4": [
+                2,
+                0.36,
+                0.6
+              ],
+              "5": [
+                2,
+                0.38,
+                0.6
+              ],
+              "6": [
+                2,
+                0.4,
+                0.6
+              ],
+              "7": [
+                2,
+                0.425,
+                0.6
+              ],
+              "8": [
+                2,
+                0.45,
+                0.6
+              ],
+              "9": [
+                2,
+                0.475,
+                0.6
+              ],
+              "10": [
+                2,
+                0.5,
+                0.6
+              ],
+              "11": [
+                2,
+                0.52,
+                0.6
+              ],
+              "12": [
+                2,
+                0.54,
+                0.6
+              ],
+              "13": [
+                2,
+                0.56,
+                0.6
+              ],
+              "14": [
+                2,
+                0.58,
+                0.6
+              ],
+              "15": [
+                2,
+                0.6,
+                0.6
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Sleight of Sparx Hand": {
+          "variant1": {
+            "skillID": 150104,
+            "trigger": "SkillP01",
+            "name": "Sleight of Sparx Hand",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "While Sparxie holds \"Certified Banger\":\\nUsing Enhanced Basic ATK deals #3[i]% Fire Elation DMG to one designated enemy, and #4[f1]% Fire Elation DMG to their adjacent targets. Additionally, for every 1 instance of \"Engagement Farming\" triggered, the Enhanced Basic ATK deals 1 extra instance of #1[f1]% Fire Elation DMG to 1 random attacked enemy target.\\nUsing Ultimate deals #2[i]% Fire Elation DMG to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.24,
+                0.2,
+                0.1
+              ],
+              "2": [
+                0.11,
+                0.264,
+                0.22,
+                0.11
+              ],
+              "3": [
+                0.12,
+                0.288,
+                0.24,
+                0.12
+              ],
+              "4": [
+                0.13,
+                0.312,
+                0.26,
+                0.13
+              ],
+              "5": [
+                0.14,
+                0.336,
+                0.28,
+                0.14
+              ],
+              "6": [
+                0.15,
+                0.36,
+                0.3,
+                0.15
+              ],
+              "7": [
+                0.1625,
+                0.39,
+                0.325,
+                0.1625
+              ],
+              "8": [
+                0.175,
+                0.42,
+                0.35,
+                0.175
+              ],
+              "9": [
+                0.1875,
+                0.45,
+                0.375,
+                0.1875
+              ],
+              "10": [
+                0.2,
+                0.48,
+                0.4,
+                0.2
+              ],
+              "11": [
+                0.21,
+                0.504,
+                0.42,
+                0.21
+              ],
+              "12": [
+                0.22,
+                0.528,
+                0.44,
+                0.22
+              ],
+              "13": [
+                0.23,
+                0.552,
+                0.46,
+                0.23
+              ],
+              "14": [
+                0.24,
+                0.576,
+                0.48,
+                0.24
+              ],
+              "15": [
+                0.25,
+                0.6,
+                0.5,
+                0.25
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              15,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Content Monetization": {
+          "variant1": {
+            "skillID": 150107,
+            "trigger": "SkillMaze",
+            "name": "Content Monetization",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using the Technique, inflicts enemies within a set area with \"Block\" for #3[i] second(s). \"Blocked\" enemies cannot detect ally targets.\\nAfter entering combat via actively attacking a \"Blocked\" enemy, deals Fire DMG to all enemies equal to #2[i]% of Sparxie's ATK and recovers #1[i] Skill Point(s) for allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.5,
+                10
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Elation Skill": {
+        "Signal Overflow: The Great Encore!": {
+          "variant1": {
+            "skillID": 150120,
+            "trigger": "Skill04",
+            "name": "Signal Overflow: The Great Encore!",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Deals #2[f1]% Fire Elation DMG to all enemies and deals #3[i] additional instance(s) of DMG. Each instance deals #1[f1]% Fire Elation DMG to one random enemy. Grants #4[i] \"Thrill\" point(s) to Sparxie, which can be used to offset Sparxie's Skill Point consumption. Consuming \"Thrill\" is considered as consuming Skill Points.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 6,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.125,
+                0.25,
+                20,
+                2
+              ],
+              "2": [
+                0.1375,
+                0.275,
+                20,
+                2
+              ],
+              "3": [
+                0.15,
+                0.3,
+                20,
+                2
+              ],
+              "4": [
+                0.1625,
+                0.325,
+                20,
+                2
+              ],
+              "5": [
+                0.175,
+                0.35,
+                20,
+                2
+              ],
+              "6": [
+                0.1875,
+                0.375,
+                20,
+                2
+              ],
+              "7": [
+                0.203125,
+                0.40625,
+                20,
+                2
+              ],
+              "8": [
+                0.21875,
+                0.4375,
+                20,
+                2
+              ],
+              "9": [
+                0.234375,
+                0.46875,
+                20,
+                2
+              ],
+              "10": [
+                0.25,
+                0.5,
+                20,
+                2
+              ],
+              "11": [
+                0.2625,
+                0.525,
+                20,
+                2
+              ],
+              "12": [
+                0.275,
+                0.55,
+                20,
+                2
+              ],
+              "13": [
+                0.2875,
+                0.575,
+                20,
+                2
+              ],
+              "14": [
+                0.3,
+                0.6,
+                20,
+                2
+              ],
+              "15": [
+                0.3125,
+                0.625,
+                20,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              5,
+              20,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1501_basic_atk.png",
+        "skillRef": {
+          "skillName": "Cat Got Your Flametongue?",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1501_skill.png",
+        "skillRef": {
+          "skillName": "Boom! Sparxicle's Poppin'",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1501_ultimate.png",
+        "skillRef": {
+          "skillName": "Party's Wildin' and Camera's Rollin'",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1501_talent.png",
+        "skillRef": {
+          "skillName": "Sleight of Sparx Hand",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1501_technique.png",
+        "skillRef": {
+          "skillName": "Content Monetization",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Sweet! Punchline Signing",
+        "icon": "icon/skill/1501_skilltree1.png",
+        "desc": "For every #2[i] of Sparxie's ATK that exceeds #1[i], increases this unit's Elation by #3[f1]%, up to a maximum increase of #4[f1]%.",
+        "params": [
+          2000,
+          100,
+          0.05,
+          0.8
+        ]
+      },
+      "Point07": {
+        "name": "Dazzling! Persona Kaleidoscope",
+        "icon": "icon/skill/1501_skilltree2.png",
+        "desc": "When there are 1/2/(3 or more) Elation characters in the team, using Sparxie's Ultimate will additionally gain #1[i]/#2[i]/#3[i] Punchline and #4[i]/#5[i]/#6[i] \"Thrill\".",
+        "params": [
+          2,
+          4,
+          8,
+          1,
+          1,
+          4
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Frenzy! Palette of Truth and Lies",
+        "icon": "icon/skill/1501_skilltree3.png",
+        "desc": "For every 1 Punchline currently owned, increases all allies' CRIT DMG by #1[i]%, up to a max increase of #2[i]%.",
+        "params": [
+          0.08,
+          0.8
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      },
+      "Point09": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.04
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.06
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.08
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/1501_elation.png",
+        "skillRef": {
+          "skillName": "Signal Overflow: The Great Encore!",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1501.png",
+    "preview": "image/character_preview/1501.png",
+    "portrait": "image/character_portrait/1501.png",
+    "bannerOffsets": [
+      51.6,
+      60.6,
+      0.58,
+      51.6,
+      60.6,
+      0.58,
+      51.6,
+      60.6,
+      0.58
+    ],
+    "isBuffed": false
+  },
   "Yao Guang": {
     "internalID": 1502,
     "name": "Yao Guang",

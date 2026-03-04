@@ -1868,4 +1868,73 @@ const hitSplitters = {
           },
         ]
     },
+    "Sparxie": {//done
+      "basic": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        },
+      ],
+      "eba": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 10
+          },
+          "blast": {
+            "hitRatio": 1,
+            "toughness": 5
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        },
+      ],
+      "ult": [
+        {
+          "primary": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 20
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        },
+      ],
+      "elation": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 1,
+            "toughness": 6
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true
+        },
+      ],
+      "tech": [
+        {
+          "all": {
+            "hitRatio": 1,
+            "energyRatio": 0,
+            "toughness": 0
+          },
+          "isSourceFirstHit": true,
+          "isAttackFirstHit": true,
+          "isSourceLastHit": true,
+          "isAttackLastHit": true
+        }
+      ],
+    },
 }

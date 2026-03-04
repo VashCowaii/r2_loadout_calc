@@ -4204,6 +4204,137 @@ const turnLogicLightcones = {
             "greatFortune": "Great Fortune (LC)",
         },
     },
+    "Dazzled by a Flowery World": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntePreBattleSettingsrsCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownersSlots = this.ownersSlots;
+
+                    const elationCount = Math.min(3,battleData.elationEntityArray.length);
+                    battleData.battleTable.SPMax += elationCount;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: "Skill Point Max +2 [Dazzled by a Flowery World]"});}
+                },
+                "target": "self",
+                "listenerName": "Dazzled by a Flowery World - SPMax Increase",
+                "owners": []
+            },
+            {
+                "trigger": "SPChange",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//then abort non-owners
+
+                    const SPChange = generalInfo.SPChange;
+                    if (SPChange > 0) {return;}
+                    sourceTurn.dazzleFlowerTracker -= SPChange;
+
+
+                    if (!sourceTurn.updateFortuneCRITSHEET) {
+                        let lcNameRef = "Dazzled by a Flowery World";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+    
+                        const logicRef = turnLogicLightcones[lcNameRef];
+                        const buffNames = logicRef.buffNames;
+    
+                        sourceTurn.floweryWorldSHREDSHEET = {
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: rankParams[5],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffNames.genShred,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 5,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        sourceTurn.floweryWorldTEAMSHEET = {
+                            "stats": [ElationDMGAll],
+                            [ElationDMGAll]: rankParams[3],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffNames.genTeam,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.floweryWorldSHREDSHEET;
+                    buffSheet.currentStacks = -SPChange;
+
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                    if (!buffCheck || buffCheck && buffCheck.currentStacks < buffCheck.maxStacks) {
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                    
+
+                    if (sourceTurn.dazzleFlowerTracker >= 4) {
+                        const buffSheet2 = sourceTurn.floweryWorldTEAMSHEET;
+
+                        if (!sourceTurn.buffsObject[buffSheet2.buffName]) {
+                            const allyTurns = battleData.nameBasedTurns;
+                        let batchTargetArray = [];
+                        for (let allySlot in allyTurns) {
+                            batchTargetArray.push(allyTurns[allySlot]);
+                        }
+                        updateBuffBatchTargets(battleData,batchTargetArray,buffSheet2);
+                        }
+
+                        
+                    }
+                },
+                "target": "self",
+                "listenerName": "Dazzled by a Flowery World - SP used tracker",
+                "owners": []
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//then abort non-owners
+
+                    sourceTurn.dazzleFlowerTracker = 0;
+                },
+                "target": "self",
+                "listenerName": "Dazzled by a Flowery World SP used reset 1",
+                "owners": []
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//then abort non-owners
+
+                    sourceTurn.dazzleFlowerTracker = 0;
+                },
+                "target": "self",
+                "listenerName": "Dazzled by a Flowery World SP used reset 2",
+                "owners": []
+            },
+        ],
+        "buffNames": {
+            "genShred": "Dazzled by a Flowery World (Shred)",
+            "genTeam": "Stream Promo (LC)",
+        },
+    },
 }
 
 

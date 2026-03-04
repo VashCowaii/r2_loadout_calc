@@ -1,12 +1,13 @@
 const battleActions = {
-    updateSkillPoints(cost,battleData,generalInfo) {
+    updateSkillPoints(cost,battleData,generalInfo,skipConsume) {
         let minimum = 0;
         let maximum = battleData.battleTable.SPMax;
         let sourceTurn = generalInfo.sourceTurn;
         let sourceName = sourceTurn.properName;
 
         let oldSP = battleData.skillPointCurrent;
-        battleData.skillPointCurrent = Math.max(minimum,Math.min(maximum,battleData.skillPointCurrent + cost));
+        const proposedValue = Math.max(minimum,Math.min(maximum,battleData.skillPointCurrent + cost));
+        battleData.skillPointCurrent = skipConsume && proposedValue < oldSP ? battleData.skillPointCurrent : proposedValue;
         let newSP = battleData.skillPointCurrent;
         let actualGain = newSP-oldSP;
 
@@ -2154,7 +2155,7 @@ const battleActions = {
     },
     hitWrapper(battleData,targetTurn,atkEntry,hitType,generalInfo,isLastHit,isBounce) {
         const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
-        const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,scalar,bonusScalar,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys} = ATKObject;
+        const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,scalar,bonusScalar,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys} = ATKObject;
         const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues,finalMultiCounter} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
@@ -2177,13 +2178,16 @@ const battleActions = {
 
         const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : statTable;
         targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
+
+        // ElationPercentOverride
+        const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (battleActions.pullElationDMGBonus(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject};
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge);
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot});
         let atkEntryRef = atkEntry[hitType];
         let currentSplit = atkEntryRef.hitRatio;//the hit split of the current attack
-        let currentMulti = (customMulti ? customMulti(statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
+        let currentMulti = (customMulti ? customMulti(sourceTurn,targetTurn,dmgNeedsElationComposite,statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
         
 
         let perHitMultiOverride = atkEntry.perHitMultiOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
@@ -5905,14 +5909,15 @@ const turnLogic = {
                     // entity.certifiedBanger += battleData.punchline;
 
                     currentElationSkill(battleData,"enemy",entity);
+                }
 
+                for (let entity of elationEntityArray) {
                     buffSheet.currentStacks = usablePunchline;
                     
                     updateBangerValue(battleData,usablePunchline,entity,"Gained Certified Banger");
                     buffSheet.duration = (turnExceptions[entity.properName] ?? 2) + (entity.turnState ? 1 : 0);
                     buffSheet.expireParam = {sourceTurn: entity.name, stackCount: usablePunchline};
                     updateBuff(battleData,entity,buffSheet);
-                    
                 }
 
 
@@ -26125,13 +26130,12 @@ const turnLogic = {
                     // console.log(sourceTurn)
                     const sourceElation = sourceTurn.statTable[ElationDMGAll];
                     const yaoElation = ownerTurn.statTable[ElationDMGAll];
+                    ATKObject.BangerValueOverride = ownerTurn.certifiedBanger;
                     if (yaoElation > sourceElation) {
                         ATKObject.ElationPercentOverride = yaoElation;
-                        ATKObject.BangerValueOverride = ownerTurn.certifiedBanger;
                     }
                     else {
                         ATKObject.ElationPercentOverride = null;
-                        ATKObject.BangerValueOverride
                     }
 
                     battleActions.elationDMGWrapper(battleData,sourceTurn,sourceTurn.properName,ATKObject,targetTurn,"Yao Guang Talent Elation DMG");
@@ -26228,7 +26232,7 @@ const turnLogic = {
                     }
                     else if (currentStacks === usableSPD) {return;}//if the healing stacks is equal to what we already have, then abort
                     else {//otheriwse if we have too many stacks, remove it with a silent log tag, so we can apply the correct buff after
-                        removeBuff(battleData,currentTurn,buffCheck2,true);
+                        removeBuff(battleData,currentTurn,buffCheck2,usableSPD,null,false,usableSPD);
                         // removeBuff(battleData,demiTurn,buffCheck2,true);
                     }
                 }
@@ -26736,9 +26740,6 @@ const turnLogic = {
                 "listenerName": "Talent certified elation additional dmg",
                 "ownerTurn": {},
             },
-
-
-
             {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
@@ -26777,174 +26778,6 @@ const turnLogic = {
                 "listenerName": "Poised and Sated elation skill skill point gain",
                 "ownerTurn": {},
             },
-
-
-            
-            // {
-            //     "trigger": "PreBattleEntersCombat",
-            //     condition(battleData,generalInfo) {
-            //         let ownerTurn = this.ownerTurn;
-
-            //         const logicRef = turnLogic[ownerTurn.properName];
-            //         const ATKObjects = logicRef.ATKObjects;
-
-            //         const numbyTurnAttack = ATKObjects.numbyTurnAttack ??= turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttack;
-            //         const ActionEntry = ownerTurn.topazNUMBYTURNEVENT ??= {
-            //             // name:characterEntry,
-            //             AV:10000/80,
-            //             AVBase:10000/80,
-            //             SPD:80,
-            //             actionCounter: 0,
-            //             turnState: 0,
-            //             name: "topazSummon",
-            //             properName: "Numby",
-            //             // buffsObject: {},
-            //             // buffsStartTurn: [],
-            //             // buffsEndTurn: [],
-            //             // additionalDMGObject: {},
-            //             cantBeTargeted: true,
-            //             diesWithOwner: true,
-            //             isUniqueEvent: true,
-            //             isSummon: true,
-            //             isActive: true,
-            //             isMemosprite: false,
-            //             currentlyOwnedBy: ownerTurn.name,
-            //             eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
-            //             uniqueEventFunction: numbyTurnAttack,//logicRef.skillFunctions.combustionExpired,
-            //             eventImage: graphs.summonCustomImages["Numby"],
-            //         };
-            //         ownerTurn.summonEventRef = "topazNUMBYTURNEVENT";
-            //         ownerTurn.activeSummons += 1;
-            //         battleData.declaredSummons.push(ActionEntry);
-            //         battleData.nextTurnAV.push(ActionEntry);
-            //         battleData.battleTotal.Turns[ActionEntry.properName] = 0;
-            //         poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
-
-            //         const buffNames = logicRef.buffNames;
-            //         let charValuesRef = logicRef.characterValuesBattle;
-            //         charValuesRef.enemyWithDebt = battleData.primaryTarget;
-            //         let targetTurn = charValuesRef.enemyWithDebt;
-
-            //         if (!ATKObjects.topazHitsplitsAdjustment) {//this is necessary just to assign the varying hitsplits between the enhanced and unenhanced FUA's
-            //             const talentPath = ATKObjects["Talent"]["Trotter Market!?"];
-            //             const talentRef = ATKObjects.topazTalentREF ??= talentPath.variant1;
-            //             talentPath.variant2 = {...talentRef};
-
-            //             talentRef.hitSplits = hitSplitters[ownerTurn.properName].passive;
-            //             talentPath.variant2.hitSplits = hitSplitters[ownerTurn.properName].passive2;
-                        
-            //             const skillPath = ATKObjects["Skill"]["Difficulty Paying?"];
-            //             let skillRef = ATKObjects.topazSkillREF ??= skillPath.variant1;
-            //             skillPath.variant2 = {...skillRef};
-
-            //             skillRef.hitSplits = hitSplitters[ownerTurn.properName].skill;
-            //             skillPath.variant2.hitSplits = hitSplitters[ownerTurn.properName].skill2;
-                        
-            //             ATKObjects.topazSkillEnhancedREF = skillPath.variant2;
-            //             ATKObjects.topazTalentEnhancedREF = talentPath.variant2;
-            //         }
-
-
-            //         // let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-            //         let skillRef = ATKObjects.topazSkillEnhancedREF;
-            //         let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
-            //             "stats": [VulnFUA],
-            //             [VulnFUA]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
-            //             "source": ownerTurn.properName,
-            //             "sourceOwner": ownerTurn.properName,
-            //             "buffName": buffNames.debt,
-            //             "duration": 1,
-            //             "AVApplied": 0,
-            //             "maxStacks": 1,
-            //             "currentStacks": 1,
-            //             "decay": false,
-            //             "expireType": null,
-            //             "isDebuff": true,
-            //             "actionTags": ["FUA"]
-            //         }
-            //         battleActions.updateBuff(battleData,targetTurn,buffSheet);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Topaz: numby event creation",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "EnemyDied",
-            //     condition(battleData,generalInfo) {
-            //         // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-            //         let ownerTurn = this.ownerTurn;
-
-            //         const logicRef = turnLogic[ownerTurn.properName];
-            //         const ATKObjects = logicRef.ATKObjects;
-
-            //         let charValuesRef = logicRef.characterValuesBattle;
-            //         charValuesRef.enemyWithDebt = battleData.primaryTarget;
-            //         let targetTurn = charValuesRef.enemyWithDebt;
-
-            //         if (targetTurn === null || targetTurn.isDead) {return}//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
-
-            //         charValuesRef.enemyWithDebt = battleData.primaryTarget;
-            //         if (!charValuesRef.enemyWithDebt) {return}//battle would be over, in this case
-            //         let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET;
-            //         battleActions.updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Topaz: Proof of Debt death swap",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "AllyDMGStart",
-            //     condition(battleData,generalInfo) {
-            //         //ally dmg dealt bc it IS dmg dealt, it's not attack specific, which sucks
-            //         //TODO: really doubt I'll ever do it, but consider doing weakness specific sheets in the future
-            //         //would let me do things like genius 4pc and this without needing to evaluate every instance of dmg
-            //         //the flip-side tho is that we'd need like, multi sheets for those to have weakness + x,y,z etc
-            //         //at least I think so, idk. Might be simpler than that, we'll see once I build out more characters in the calc
-            //         let ownerTurn = this.ownerTurn;
-
-            //         const logicRef = turnLogic[ownerTurn.properName];
-            //         const ATKObjects = logicRef.ATKObjects;
-            //         // Financial Turmoil
-            //         const sourceTurn = generalInfo.sourceTurn;
-            //         if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-            //         let targetTurn = generalInfo.targetTurn;
-
-            //         if (!ATKObjects.topazTurmoilFireWeakSHEET) {
-            //             const characterName = sourceTurn.properName;
-            //             const logicRef = turnLogic[characterName];
-            //             let buffName = logicRef.buffNames.turmoil;
-            //             ATKObjects.topazTurmoilFireWeakSHEET = {
-            //                 "stats": [DamageAll],
-            //                 [DamageAll]: 0.15,
-            //                 "source": characterName,
-            //                 "sourceOwner": ownerTurn.properName,
-            //                 "buffName": buffName,
-            //                 "duration": 1,
-            //                 "AVApplied": 0,
-            //                 "maxStacks": 1,
-            //                 "currentStacks": 1,
-            //                 "decay": false,
-            //                 "expireType": null
-            //             }
-            //         }
-            //         let buffSheet = ATKObjects.topazTurmoilFireWeakSHEET;
-            //         const buffName = buffSheet.buffName;
-            //         const buffCheck = sourceTurn.buffsObject[buffName];
-
-            //         if (targetTurn.statTable[WeaknessFire] <= 0) {//if there is no quantum weakness
-            //             if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}//then remove the buff if we have it
-            //             else {return;}
-            //         }
-            //         else {//if weakness found, apply buff
-            //             if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
-            //             battleActions.updateBuff(battleData,sourceTurn,buffSheet);
-            //         }
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Financial Turmoil - Fire-weak bonus",
-            //     "ownerTurn": {},
-            // },
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -26972,62 +26805,6 @@ const turnLogic = {
                 "listenerName": "Yao Guang - Ultimate queued",
                 "ownerTurn": {},
             },
-            // {
-            //     "trigger": "PreBattleStartTechniquesNormal",
-            //     condition(battleData,generalInfo) {
-            //         let ownerTurn = this.ownerTurn;
-            //         let characterName = ownerTurn.properName;
-            //         //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-            //         //StartBattle for dmg techniques that could have conflicts
-
-            //         let logicRef = turnLogic[characterName];
-            //         let useTechnique = logicRef.useTechnique;
-            //         if (useTechnique && battleData.techniquesAllowed) {
-            //             const topazTechnique = this.topazTechnique ??= logicRef.skillFunctions.topazTechnique
-            //             topazTechnique(battleData,"self",ownerTurn)
-            //         }
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Topaz Technique",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "HitEnemyStart",
-            //     condition(battleData,generalInfo) {
-            //         const ownerTurn = this.ownerTurn;
-            //         const sourceTurn = generalInfo.sourceTurn;
-            //         // const targetsGotHit = generalInfo.targetsGotHit;
-            //         const targetTurn = generalInfo.targetTurn;
-
-            //         // const characterName = ownerTurn.properName;
-            //         // const logicRef = turnLogic[characterName];
-            //         const battleValues = ownerTurn.battleValues;
-            //         const enemyWithDebt = battleValues.enemyWithDebt;
-            //         if (enemyWithDebt.properName != targetTurn.properName) {return;}
-
-                    
-            //         const targetsGotHit = generalInfo.targetsGotHit;
-            //         if (targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
-
-            //         const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
-            //         if (numbyTurn.turnState) {return}//numby can't advance himself, but topaz can advance him
-
-            //         const isFUA = generalInfo.ATKObject.isFUA;
-            //         if (isFUA) {
-            //             battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
-            //         }
-
-            //         const slot = generalInfo.slot;
-            //         const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
-            //         if (battleValues.isBonanzaActive && slotCheck) {
-            //             battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
-            //         }
-            //         //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
-            //     },
-            //     "target": "enemy",
-            //     "listenerName": "Numby's advancement controller",
-            //     "ownerTurn": {},
-            // },
             {
                 "trigger": "PreBattleStartTechniquesNormal",
                 condition(battleData,generalInfo) {
@@ -27139,26 +26916,6 @@ const turnLogic = {
         },
         "ATKObjects": {},
         "listenersBattle": [],
-        "listenersToInjectLater": {
-            "techniqueEnergyGain": {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // Financial Turmoil
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-                    const dmgSlot = generalInfo.dmgSlot;
-                    if (dmgSlot != "Skill" && dmgSlot != "Talent") {return;}
-
-                    battleActions.updateEnergy(battleData,60,sourceTurn,false,"Technique: Explicit Subsidy");
-                    //then remove, bc this is the only time it'll get called
-                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
-                },
-                "target": "self",
-                "listenerName": "Topaz Technique attack listener",
-                "ownerTurn": {},
-            }
-        },
         "buffsBattle": {},
         "buffsBattleTemp": {},
         "characterValues": {
@@ -27168,7 +26925,7 @@ const turnLogic = {
             "isBonanzaActive": false,
         },
         "useTechnique": true,
-        "techniqueType": "Attack",
+        "techniqueType": "Support",
         "buffNames": {
             "spdAt120": "Amaze-In Grace (120SPD)",
             "spdOver120": "Amaze-In Grace (>120SPD)",
@@ -27182,13 +26939,1045 @@ const turnLogic = {
             "e4FinalMulti": "E4: Threads of Fate Colored by Plumes",
             "e6Merry": "E6: Ferried Along the Astral Arc",
 
-
             "traceCritDMG": "Poised and Sated",
+        },
+        "characterValuesBattle": {},
+    },
+    "Sparxie": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let actionUsed = false;
+            let currentSP = battleData.skillPointCurrent;
+            const statCalls = thisTurn.battleValues;
+            const minimum = currentSP>0 || statCalls.thrill>0;
 
-            "debt": "Proof of Debt",
-            "e1Debtor": "Debtor (Future Market)",
-            "bonanza": "Windfall Bonanza!",
-            "turmoil": "Financial Turmoil",
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: 0, actionCall: this.skillFunctions.sparxSkillInstance, target: "self", endTurn: true};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.sparxBasic, target: "enemy", endTurn: true};}
+        },
+        "skillFunctions": {
+            sparxBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.sparxBasicREF ??= ATKObjects["Basic ATK"]["Cat Got Your Flametongue?"].variant1;
+
+                if (!ATKObjects.sparxBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.sparxBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.sparxBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.sparxATKConversionSHEET) {
+                    const characterName = currentTurn.properName;
+                    const buffNames = turnLogic[characterName].buffNames;
+                    ATKObjects.sparxATKConversionSHEET = {
+                        "stats": [ElationDMGAll,ElationDMGAllNULL],
+                        [ElationDMGAll]: 0.05,
+                        [ElationDMGAllNULL]: -0.05,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.atkConversion,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 16,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+
+                //5% up to 80%
+
+                const ATKBeyondThis = 2000;
+                const maxStacks = 16;
+                const currentStats = currentTurn.statTable;
+                const currentATK = calcs.getATKFinal(currentStats).ATKFinal + currentStats[ATKFlatNULL];
+                const validATK = Math.max(0,currentATK-ATKBeyondThis);
+                const usableATK = Math.min(maxStacks,Math.floor(validATK/100));
+
+                const dmgExtraSheet = ATKObjects.sparxATKConversionSHEET;
+                const updateBuff = battleActions.updateBuff;
+
+                // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
+                const buffsObject = currentTurn.buffsObject;
+
+                const buffCheck2 = buffsObject[dmgExtraSheet.buffName];
+                if (buffCheck2) {//if the outgoing healing buff exists
+                    const currentStacks = buffCheck2.currentStacks;
+                    if (!validATK) {//but we're under 200spd, then remove it
+                        removeBuff(battleData,currentTurn,buffCheck2);
+                        return;
+                        // removeBuff(battleData,demiTurn,buffCheck2);
+                    }
+                    else if (currentStacks < usableATK) {//otherwise if we don't have enough healing bonus, then add the diff in stacks
+                        const stackDiff = usableATK-currentStacks;
+                        dmgExtraSheet.currentStacks = stackDiff;
+                        
+                        updateBuff(battleData,currentTurn,dmgExtraSheet);
+                        // updateBuff(battleData,demiTurn,dmgExtraSheet);
+                        return;
+                    }
+                    else if (currentStacks === usableATK) {return;}//if the healing stacks is equal to what we already have, then abort
+                    else {//otheriwse if we have too many stacks, remove it with a silent log tag, so we can apply the correct buff after
+                        removeBuff(battleData,currentTurn,buffCheck2,true,null,false,true);
+                        // removeBuff(battleData,demiTurn,buffCheck2,true);
+                    }
+                }
+                else if (!usableATK) {return;}//if we have no whole number spd above 200, then abort at this point
+                
+                //the only reason we should reach this far, is if we should actually apply a buff
+                dmgExtraSheet.currentStacks = usableATK;
+                updateBuff(battleData,currentTurn,dmgExtraSheet);
+                // updateBuff(battleData,demiTurn,dmgExtraSheet);
+            },
+            sparxUltimate(battleData,sourceTurn) {
+                // const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+                // const logicRef = turnLogic[sourceTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.sparxUltimateREF ??= ATKObjects.Ultimate["Party's Wildin' and Camera's Rollin'"].variant1;
+
+                if (!ATKObjects.sparxUltimateATKOBJECT) {
+
+                    
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realElationDMGKeys = keyShortcut(elationKeys,tags);
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.sparxUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: 0,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: null,
+                        valuesRef: values,
+                        customMulti: logicRef.skillFunctions.pullMultiCUSTOMSPARXULT,
+                        dmgNeedsElationComposite: true,
+                    };
+
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.sparxieE4CRITDMGSHEET = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: 0.36,
+                        "source": "E4",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e4CritDMG,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let ATKObject = ATKObjects.sparxUltimateATKOBJECT;
+
+                const isE4 = rank >= 4;
+                const updateEnergy = battleActions.updateEnergy;
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                const e4PunchlineGain = isE4 ? 5 : 0;
+                battleActions.updatePunchlineValue(battleData,2 + sourceTurn.ultBonusPunchline + e4PunchlineGain,sourceTurn,"Sparxie Ultimate");
+                poke("sparxieThrillGained",battleData,{pointsGained: sourceTurn.ultBonusThrill,sourceString:"Sparxie Ultimate"});
+
+                if (isE4) {
+                    const buffSheetE4 = ATKObjects.sparxieE4CRITDMGSHEET;
+                    buffSheetE4.duration = sourceTurn.turnState ? 4 : 3;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheetE4)
+                }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            pullMultiCUSTOMSPARXULT(sourceTurn,targetTurn,dmgNeedsElationComposite,table,tableONHIT,hitType,ATKObject) {
+                // console.log("multi reached")
+                // const totalBreak = Math.min(3.6,table[DamageBreak] + tableONHIT[DamageBreak]);
+                //0.3   //values[1]
+                // 0.6   //values[2]
+                const values = ATKObject.valuesRef;
+
+                // console.log(values[2],dmgNeedsElationComposite,values[1])
+                const conversion = values[2] * dmgNeedsElationComposite + values[1];
+                return conversion;
+            },
+            sparxUltCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo) {
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // const targetsGotHit = generalInfo.targetsGotHit;
+                // const primaryTarget = battleData.primaryTarget;
+
+                let skillRef = ATKObjects.sparxTalentREF ??= ATKObjects["Talent"]["Sleight of Sparx Hand"].variant1;
+                // let values = ownerTurn.aggyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                if (!ATKObjects.sparxUltCertifiedElationADDEDATKOBJECT) {
+                    let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    // const scalar = "ATK";
+                    const tags = ["All","Fire","Elation"];
+                    const actionTags = ["Elation"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realElationDMGKeys = keyShortcut(elationKeys,tags);
+                    const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.sparxUltCertifiedElationADDEDATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            elation: values[1]
+                        },
+                        // scalar,
+                        element: "Fire",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        forcePunchline: null,
+                        ElationPercentOverride: null,
+                        BangerValueOverride: null,
+                    }
+                }
+                let ATKObject = ATKObjects.sparxUltCertifiedElationADDEDATKOBJECT;
+                
+                // let targetTurn = battleData.primaryTarget;
+                const enemyPositions = battleData.enemyPositions;
+                const addProc = battleActions.elationDMGWrapper;
+                if (enemyPositions.length) {
+                    for (let enemy of enemyPositions) {
+                        addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,enemy,"Sparxie Talent Ult Elation DMG");
+                    }
+                }
+            },
+            sparxSkillInstance(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+                const updateSkillPoints = battleActions.updateSkillPoints;
+                const battleValues = sourceTurn.battleValues;
+
+                let ignoreInitialCost = false;
+                if (battleValues.thrill) {
+                    ignoreInitialCost = true;
+                    poke("sparxieThrillGained",battleData,{pointsGained: -1,sourceString:"Thrill subverted Skill Point cost"});
+                }
+                updateSkillPoints(-1,battleData,{sourceTurn,sourceName:"Skill"},ignoreInitialCost);
+
+                let skillRef = ATKObjects.sparxSkillInstanceREF ??= ATKObjects["Skill"]["Engagement Farming"].variant1;
+                let values = ATKObjects.sparxSkillInstanceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                
+                
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                // poke("SkillStart",battleData,{sourceTurn});
+
+                const rngArray = sourceTurn.rngArray ??= [1,1,2,1,1];
+
+                const rngIndex = rngArray[battleValues.rngCurrentIndex];
+                battleValues.rngCurrentIndex++;
+                if (battleValues.rngCurrentIndex === 5) {battleValues.rngCurrentIndex = 0;}
+                battleValues.skillCounter++;
+
+                
+
+                if (rngIndex === 2) {
+                    battleActions.updatePunchlineValue(battleData,2,sourceTurn,"Skill: Straight Fire");
+                    updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Skill: Straight Fire"});
+                }
+                else {
+                    battleActions.updatePunchlineValue(battleData,1,sourceTurn,"Skill: Unreal Banger");
+                }
+
+                const skillFunctions = logicRef.skillFunctions;
+                const repeatSkillFunction = logicRef.skillFunctions.sparxRepeatSkillFunction;
+                const currentSP = battleData.skillPointCurrent;
+                const refObjectCost = {sourceTurn,sourceName:"Skill: Engagement Farming"}
+                let canContinue = currentSP && checkSkill(battleData,sourceTurn);
+
+
+
+                let ignoreContinueCost = false;
+                while (canContinue && battleValues.skillCounter < 20) {
+                    repeatSkillFunction(battleData,sourceTurn);
+
+                    if (battleValues.thrill) {
+                        ignoreContinueCost = true;
+                        poke("sparxieThrillGained",battleData,{pointsGained: -1,sourceString:"Thrill subverted Skill Point cost"});
+                    }
+                    else {ignoreContinueCost = false;}
+                    updateSkillPoints(-1,battleData,refObjectCost,ignoreContinueCost);
+
+                    const currentSP2 = battleData.skillPointCurrent;
+                    canContinue = currentSP2 && battleValues.skillCounter < 20 && checkSkill(battleData,sourceTurn);
+                }
+
+                skillFunctions.sparxBasicEnhanced(battleData,target,sourceTurn);
+            },
+            sparxRepeatSkillFunction(battleData,sourceTurn) {
+                const battleValues = sourceTurn.battleValues;
+                const rngArray = sourceTurn.rngArray ??= [1,1,2,1,1];
+                // checkSkill(battleData,thisTurn)
+                
+
+                const rngIndex = rngArray[battleValues.rngCurrentIndex];
+                battleValues.rngCurrentIndex++;
+                if (battleValues.rngCurrentIndex === 5) {battleValues.rngCurrentIndex = 0;}
+                battleValues.skillCounter++;
+
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point02.icon,sourceName: sourceTurn.properName, source:"Sparxie Skill", bodyText: `Engagement Farming Continued: #${battleValues.skillCounter}`});
+                }
+
+                if (rngIndex === 2) {
+                    battleActions.updatePunchlineValue(battleData,2,sourceTurn,"Skill: Straight Fire");
+                    battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Skill: Straight Fire"});
+                }
+                else {
+                    battleActions.updatePunchlineValue(battleData,1,sourceTurn,"Skill: Unreal Banger");
+                }
+            },
+            sparxBasicEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const battleValues = sourceTurn.battleValues;
+
+                let skillRef = ATKObjects.sparxBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Bloom! Winner Takes All"].variant1;
+                let values = ATKObjects.sparxBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.sparxBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.sparxBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],       
+                            blast: values[1],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.sparxBasicEnhancedATKOBJECT;
+                const multipliers = ATKObject.multipliers;
+                // ATKObject.bonusMultiplier
+
+                const skillCounter = battleValues.skillCounter;
+                const valuesSkill = ATKObjects.sparxSkillInstanceREFVALUES;
+                const stBonus = valuesSkill[3];
+                const blastBonus = valuesSkill[4];
+
+                multipliers.primary = values[0] + (skillCounter * stBonus);
+                multipliers.blast = values[1] + (skillCounter * blastBonus);
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true,isEnhanced: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleValues.skillCounter = 0;
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            sparxEBACertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo) {
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // const targetsGotHit = generalInfo.targetsGotHit;
+                // const primaryTarget = battleData.primaryTarget;
+
+                let skillRef = ATKObjects.sparxTalentREF ??= ATKObjects["Talent"]["Sleight of Sparx Hand"].variant1;
+                // let values = ownerTurn.aggyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                if (!ATKObjects.sparxEBACertifiedElationADDEDATKOBJECT) {
+                    let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    // const scalar = "ATK";
+                    const tags = ["All","Fire","Elation"];
+                    const actionTags = ["Elation"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realElationDMGKeys = keyShortcut(elationKeys,tags);
+                    const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.sparxEBACertifiedElationADDEDATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            elation: values[2]
+                        },
+                        // scalar,
+                        element: "Fire",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        forcePunchline: null,
+                        ElationPercentOverride: null,
+                        BangerValueOverride: null,
+                    }
+                    ATKObjects.sparxEBABlastCertifiedElationADDEDATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            elation: values[3]
+                        },
+                        // scalar,
+                        element: "Fire",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        forcePunchline: null,
+                        ElationPercentOverride: null,
+                        BangerValueOverride: null,
+                    }
+                    ATKObjects.sparxEBABounceCertifiedElationADDEDATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            elation: values[0]
+                        },
+                        // scalar,
+                        element: "Fire",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        forcePunchline: null,
+                        ElationPercentOverride: null,
+                        BangerValueOverride: null,
+                    }
+                }
+                let ATKObjectPrimary = ATKObjects.sparxEBACertifiedElationADDEDATKOBJECT;
+                let ATKObjectBlast = ATKObjects.sparxEBABlastCertifiedElationADDEDATKOBJECT;
+                let ATKObjectBounce = ATKObjects.sparxEBABounceCertifiedElationADDEDATKOBJECT;
+                
+                // let targetTurn = battleData.primaryTarget;
+                // const enemyPositions = battleData.enemyPositions;
+                const addProc = battleActions.elationDMGWrapper;
+
+                const targetsGotHit = generalInfo.targetsGotHit;
+                let fullTargetHitArray = [];
+
+                const currentPrimaryTarget = battleData.primaryTarget;
+                if (targetsGotHit[currentPrimaryTarget?.name]) {
+                    fullTargetHitArray.push(currentPrimaryTarget);
+                    addProc(battleData,ownerTurn,ownerTurn.properName,ATKObjectPrimary,currentPrimaryTarget,"Sparxie Talent EBA Primary Elation DMG");
+                }
+
+                // battleData.primaryTarget
+                // battleData.blastTargets 
+                const currentBlastTargets = battleData.blastTargets;
+                if (currentBlastTargets.length) {
+                    for (let blastHit of currentBlastTargets) {
+                        if (targetsGotHit[blastHit?.name]) {
+                            fullTargetHitArray.push(blastHit);
+                            addProc(battleData,ownerTurn,ownerTurn.properName,ATKObjectBlast,blastHit,"Sparxie Talent EBA Blast Elation DMG");
+                        }
+                    }
+                }
+
+                const fullHitCount = fullTargetHitArray.length;
+                if (fullHitCount) {
+                    const totalBouceCount = ownerTurn.battleValues.skillCounter;
+                    let enemyIndex = 0;
+
+                    for (let i=0;i<totalBouceCount;i++) {
+                        if (enemyIndex >= fullTargetHitArray.length) {
+                            enemyIndex = 0;
+                        }
+                        const currentEnemy = fullTargetHitArray[enemyIndex];
+                        enemyIndex++;
+                        // console.log(fullTargetHitArray.length,enemyIndex,battleData.sumAV)
+                        if (currentEnemy.isDead) {
+                            i--;
+                            enemyIndex--;
+                            fullTargetHitArray.splice(enemyIndex,1);
+                            if (!fullTargetHitArray.length) {break;}
+                            continue;
+                        }
+                        addProc(battleData,ownerTurn,ownerTurn.properName,ATKObjectBounce,currentEnemy,"Sparxie Talent EBA Bounce Elation DMG");
+                    }
+                }
+            },
+            elationSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.sparxElationSkillREF ??= ATKObjects["Elation Skill"]["Signal Overflow: The Great Encore!"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "ElationSkillStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("ElationSkillStart",battleData,{sourceTurn});
+                const rank = sourceTurn.rank;
+
+
+                if (!ATKObjects.sparxElationSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].elation;
+                    const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    // const scalar = null;
+                    const tags = ["All","Elation","ElationSkill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realElationDMGKeys = keyShortcut(elationKeys,tags);
+                    const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
+                    // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    // const e6MultiBonus = rank >= 6 ? 2 : 1;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.sparxElationSkillATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1],
+                        },
+                        // scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isElation: true,
+                        bounceData: {
+                            multi: values[0],
+                            bounceCount: 20,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 1,
+                                    "toughness": 1
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+
+                    // ATKObjects.yaoElationSkillVULNSHEET = {
+                    //     "stats": [VulnAll],
+                    //     [VulnAll]: values[2],
+                    //     "source": "Skill",
+                    //     "sourceOwner": sourceTurn.properName,
+                    //     "buffName": logicRef.buffNames.elationVuln,
+                    //     "duration": 3,
+                    //     "AVApplied": 0,
+                    //     "maxStacks": 1,
+                    //     "currentStacks": 1,
+                    //     "decay": false,
+                    //     "expireType": "EndTurn",
+                    //     "isDebuff": true,
+                    // }
+                }
+                let ATKObject = ATKObjects.sparxElationSkillATKOBJECT;
+
+                if (rank >= 6) {
+                    const bounceData = ATKObject.bounceData;
+                    bounceData.bounceCount = 20 + battleData.punchline;
+                }
+                
+                // const debuffSheet = ATKObjects.yaoElationSkillVULNSHEET;
+
+                // const enemyPositions = battleData.enemyPositions;
+                // const updateBuff = battleActions.updateBuff;
+                // for (let enemy of enemyPositions) {
+                //     debuffSheet.duration = enemy.turnState ? 4 : 3;
+                //     updateBuff(battleData,enemy,debuffSheet);
+                // }
+                poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Elation Skill"});
+                // updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+
+                poke("ElationSkillEnd",battleData,{sourceTurn});
+            },
+            sparxTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.sparxTechniqueREF ??= ATKObjects.Technique["Content Monetization"].variant1;
+                let values = ATKObjects.sparxTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.sparxTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Fire"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.argentiTechATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.argentiTechATKObject
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Sparxie Technique"});
+                // battleActions.updateEnergy(battleData,values[2],sourceTurn,false,"Sparxie Technique");
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "sparxieThrillGained",
+                condition(battleData,generalInfo) {
+                    // poke("sparxieThrillGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.thrill;
+                    valuesRef.thrill = Math.min(999,oldValue + pointsGained);
+
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Thrill (Sparxie): ${oldValue} --> ${valuesRef.thrill} [${sourceString}]`});
+                    }
+
+
+                    const rank = ownerTurn.rank;
+                    if (pointsGained<0 && rank>=2) {
+                        const buffSheet = this.sparxieE2ThrillCRITDMGSHEET ??= {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: 10,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2CritDMG,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 4,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        };
+                        buffSheet.duration = ownerTurn.turnState ? 3 : 2;
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Thrill Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    ownerTurn.participantID = 144;//TODO: remove this later, attach participant ID to the character entity in parsing, just forgot to do that before
+
+                },
+                "target": "self",
+                "listenerName": "participant ID battlestart assignment",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PunchlineChanged",//SPD stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!ATKObjects.sparxieTracePunchlineCRITDMGSHEET) {
+                        const characterName = ownerTurn.properName;
+                        const buffNames = turnLogic[characterName].buffNames;
+                        const rank = ownerTurn.rank;
+                        ATKObjects.sparxieTracePunchlineCRITDMGSHEET = {
+                            "stats": [CritDamageBase,ResistanceAllPEN],
+                            [CritDamageBase]: 0.08,
+                            [ResistanceAllPEN]: rank >= 1 ? 0.015 : 0,
+                            "source": "Trace",
+                            "sourceOwner": characterName,
+                            "buffName": buffNames.traceCritDMG,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 10,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+                    const buffSheet = ATKObjects.sparxieTracePunchlineCRITDMGSHEET;
+                    const punchline = Math.min(10,battleData.punchline);
+
+                    const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    let batchTargetArray = [];
+                    if (buffCheck) {
+                        const currentValue = buffCheck.currentStacks;
+                        if (currentValue === punchline) {return;}
+                        
+                        for (let allySlot in allyTurns) {
+                            const currentAlly = allyTurns[allySlot];
+                            batchTargetArray.push(currentAlly)
+                        }
+                        
+                        if (currentValue < punchline) {
+                            const stackDiff = punchline - currentValue;
+                            buffSheet.currentStacks = stackDiff;
+                            updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
+                            return;//at this point we would be finished so leave
+                        }
+                        else {//if we reach this point it's bc current != punchline, so no if is required on this part
+                            removeBuffFromBatch(battleData,batchTargetArray,buffCheck,punchline,null,false,punchline);
+                        }
+                    }
+                    if (!punchline) {return;}
+
+
+                    if (!batchTargetArray.length) {
+                        for (let allySlot in allyTurns) {
+                            const currentAlly = allyTurns[allySlot];
+                            batchTargetArray.push(currentAlly)
+                        }
+                    }
+                    buffSheet.currentStacks = punchline;
+                    updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Frenzy! Palette of Truth and Lies punchline crit dmg listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatATK",//SPD stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.isSummon || sourceTurn.properName != ownerTurn.properName) {return;}
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Sweet! Punchline Signing ATK check",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Sweet! Punchline Signing ATK check battlestart force proc",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AdditionalTriggerAttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const dmgSlot = generalInfo.dmgSlot;
+                    if ((dmgSlot != "Ultimate" && dmgSlot != "Basic ATK") || !ownerTurn.certifiedBanger) {return;}
+
+                    if (dmgSlot === "Ultimate") {
+                        const sparxUltCertifiedAdditionalDMG = this.sparxUltCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.sparxUltCertifiedAdditionalDMG;
+                        sparxUltCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
+                    }
+                    else if (ownerTurn.battleValues.skillCounter) {
+                        const sparxEBACertifiedAdditionalDMG = this.sparxEBACertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.sparxEBACertifiedAdditionalDMG;
+                        sparxEBACertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
+                    }
+
+                    // if (useExtrahit) {
+                    // sparxUltCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
+                    // }
+                },
+                "target": "enemy",
+                "listenerName": "Talent certified elation additional dmg",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const elationCharacters = battleData.elationEntityArray.length;
+                    const punchlineBonusArray = this.punchlineBonusArray ??= [2,4,8];
+                    const thrillBonusArray = this.thrillBonusArray ??= [1,1,4];
+
+                    
+                    const bonusIndex = Math.min(3,elationCharacters) - 1;
+                    const currentBonusValue = punchlineBonusArray[bonusIndex];
+                    const currentBonusValueThrill = thrillBonusArray[bonusIndex];
+
+                    ownerTurn.ultBonusPunchline = currentBonusValue;
+                    ownerTurn.ultBonusThrill = currentBonusValueThrill;
+
+                },
+                "target": "self",
+                "listenerName": "Dazzling! Persona Kaleidoscope battlestart elation count checker",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.sparxUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sparxie - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const sparxTechnique = this.sparxTechnique ??= logicRef.skillFunctions.sparxTechnique;
+                        sparxTechnique(battleData,"self",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sparxie Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "AhaInstantEnd",
+                    condition(battleData,generalInfo) {
+                        const ownerTurn = this.ownerTurn;
+                        battleActions.updatePunchlineValue(battleData,5,ownerTurn,"Sparxie E1");
+                    },
+                    "target": "owner",
+                    "listenerName": "#GoingViral #WhoIsShe aha instant end punchline gain",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [
+                {
+                    "trigger": "AhaInstantEnd",
+                    condition(battleData,generalInfo) {
+                        const ownerTurn = this.ownerTurn;
+                        poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Sparxie E2"});
+                        // battleActions.updatePunchlineValue(battleData,5,ownerTurn,"Sparxie E1");
+
+                        battleData.actionCounter += 1;
+                        const extraTurnObject = this.extraTurnObject ??= {
+                            turnRef: null,
+                            AV:0,
+                            AVBase:0,
+                            SPD:1,
+                            actionCounter: 0,
+                            isExtraTurn: true,
+                            hasPriority: null,
+                            extraTurnKeepsBuffs: true,
+                        }
+                        extraTurnObject.turnRef = ownerTurn;
+                        extraTurnObject.actionCounter = battleData.actionCounter;
+                        battleActions.queueExtraTurn(battleData,extraTurnObject,true);
+                        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"E2: Aha Instant End", bodyText: `Sparxie gained extra turn`});}
+                    },
+                    "target": "owner",
+                    "listenerName": "#AudienceKnows aha instant end extra turn gain",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [],
+            5: [],
+            6: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        const buffSheet = this.yaoguangE1SHREDSHEET ??= {
+                            "stats": [ResistanceAllPEN],
+                            [ResistanceAllPEN]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6PEN,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        };
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "E6 pen bonus",
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "skillCounter": 0,
+            "skillCounterCapped": 0,
+            "skillStarted": false,
+            "rngCurrentIndex": 0,
+            "thrill": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Impair",
+        "buffNames": {
+            "traceCritDMG": "Frenzy! Palette of Truth and Lies",
+            "atkConversion": "Sweet! Punchline Signing",
+            "e2CritDMG": "E2: #AudienceKnows",
+            "e4CritDMG": "E4: #LockedIn #FaceCard",
+            "e6PEN": "E6: #BuiltDifferent #GoingExtinct",
         },
         "characterValuesBattle": {},
     },
