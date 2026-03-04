@@ -4209,7 +4209,7 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntePreBattleSettingsrsCombat",
+                "trigger": "PreBattleSettings",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let ownersSlots = this.ownersSlots;
