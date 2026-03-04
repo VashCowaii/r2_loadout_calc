@@ -194,7 +194,7 @@ const customDisplayValuesLog = {
         {valueName: "Certified Banger", refName: "certifiedBanger"},
     ],
     "Sparxie": [
-        // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true},
         {valueName: "Certified Banger", refName: "certifiedBanger"},
     ],
 }

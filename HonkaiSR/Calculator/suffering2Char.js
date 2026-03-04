@@ -27292,7 +27292,7 @@ const turnLogic = {
                     logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point02.icon,sourceName: sourceTurn.properName, source:"Sparxie Skill", bodyText: `Engagement Farming Continued: #${battleValues.skillCounter}`});
                 }
 
-                if (rngIndex === 2) {
+                if (rngIndex === 2 && battleValues.skillCounter < 15) {
                     battleActions.updatePunchlineValue(battleData,2,sourceTurn,"Skill: Straight Fire");
                     battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Skill: Straight Fire"});
                 }
