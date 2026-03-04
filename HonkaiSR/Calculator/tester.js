@@ -3054,6 +3054,7 @@ const customMenu = {
             }
             if (currentLogType === "ActionAdvanced" || currentLogType === "ActionAdvancedBreakDelay") {
                 let characterRef = characters[actionNameSource];
+                // console.log(actionNameSource)
     
                 eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
