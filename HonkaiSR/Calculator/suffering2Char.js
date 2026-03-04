@@ -27665,7 +27665,7 @@ const turnLogic = {
                     if (pointsGained<0 && rank>=2) {
                         const buffSheet = this.sparxieE2ThrillCRITDMGSHEET ??= {
                             "stats": [CritDamageBase],
-                            [CritDamageBase]: 10,
+                            [CritDamageBase]: 0.10,
                             "source": "E2",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e2CritDMG,
