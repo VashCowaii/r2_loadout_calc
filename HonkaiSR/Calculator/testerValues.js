@@ -193,6 +193,10 @@ const customDisplayValuesLog = {
         {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Certified Banger", refName: "certifiedBanger"},
     ],
+    "Sparxie": [
+        // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Certified Banger", refName: "certifiedBanger"},
+    ],
 }
 
 const permaConditionsTextLibrary = {
@@ -298,6 +302,7 @@ const conditionsCharacterDisplayWarning = {
     },
     "Luocha": defaultStandardAbilityDisplayWarnings,
     "Yao Guang": defaultStandardAbilityDisplayWarnings,
+    "Sparxie": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -1513,6 +1518,13 @@ const defaultConditions = {
             "array": []
         }
     },
+    "Sparxie": {
+        "hasEnhancedState": false,
+        "Skill": null,
+        "Ultimate": null
+    },
+
+    
 }
 
 const checkUlty = defaultConditions.getUltimateCondition;

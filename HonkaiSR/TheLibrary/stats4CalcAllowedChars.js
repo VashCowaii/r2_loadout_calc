@@ -44,4 +44,5 @@ global.calcAllowedSet = new Set([
 
     //ELATION
     "Yao Guang",
+    "Sparxie",
 ]);
