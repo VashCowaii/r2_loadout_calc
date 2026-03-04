@@ -506,6 +506,7 @@ const sim = {
             punchline: 0,
             punchlineForced: 0,
             bangersDone: 0,
+            punchlineConsume: true,
         };
         if (isLoggyLogger) {logToBattle(battleData,{logType: "BattlePrep"});}
         const summaryTurns = battleData.battleTotal.Turns;
