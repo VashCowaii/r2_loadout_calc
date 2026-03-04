@@ -5886,11 +5886,13 @@ const graphs = {
         for (let entry of log) {
             if (entry.logType === "StartTurn") {
                 let turnRef = JSON.parse(entry.turnRef);
+                // console.log(turnRef)
 
                 const isUniqueEvent = turnRef.isUniqueEvent;
                 const isEnemy = turnRef.isEnemy;
                 const isEventOrEnemy = isUniqueEvent || isEnemy;
                 const charName = turnRef.properName;
+                if (charName === "Aha Instant") {continue;}
                 const slotNumber = turnRef.eventOwner ? turnPoints[battleData.nameBasedTurns[turnRef.eventOwner].properName] : turnPoints[charName] ?? 4;
                 const characterIconPath = "/HonkaiSR/" + 
                 (turnRef.eventImage ?? (characters[charName] ? characters[charName].preview : 
