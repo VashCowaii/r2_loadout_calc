@@ -26950,32 +26950,10 @@ const turnLogic = {
             const statCalls = thisTurn.battleValues;
             const minimum = currentSP>0 || statCalls.thrill>0;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: 0, actionCall: this.skillFunctions.sparxSkillInstance, target: "self", endTurn: true};
                 return returnSkillCall;
             }
-
-            // //separated from below bc the turn controller will keep looping back into the action controller here while the turn is active
-            // //and this needs to be distinct as the start condition, rather than be involved in the continous casting
-            // let skipSecondaryCheckSameSkill = false;
-            // if (currentSP >= minimumPointsToStart && !statCalls.skillStarted && checkSkill(battleData,thisTurn)) {
-            //     statCalls.skillStarted = true;
-            //     skipSecondaryCheckSameSkill = true;
-            // }
-
-            // if (statCalls.skillStarted) {
-            //     actionUsed = true;
-            //     if (currentSP >= 1 && statCalls.skillCounterCapped < maximumCasts && (skipSecondaryCheckSameSkill || checkSkill(battleData,thisTurn))) {
-            //         statCalls.skillCounterCapped += 1;
-            //         return this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.sparxSkillInstance, target: "self", endTurn: false};
-            //     }
-            //     else {
-            //         statCalls.skillCounterCapped = 0;
-            //         statCalls.skillStarted = false;
-            //         return {action: "EndTurn", endTurn: true};
-            //     }
-            // }
 
             if (!actionUsed) {return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.sparxBasic, target: "enemy", endTurn: true};}
         },
