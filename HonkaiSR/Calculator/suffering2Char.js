@@ -27240,6 +27240,7 @@ const turnLogic = {
                 const rngIndex = rngArray[battleValues.rngCurrentIndex];
                 battleValues.rngCurrentIndex++;
                 if (battleValues.rngCurrentIndex === 5) {battleValues.rngCurrentIndex = 0;}
+                else if (battleValues.rngCurrentIndex >= 3) {battleValues.rngCurrentIndex -= 2}
                 battleValues.skillCounter++;
 
                 
