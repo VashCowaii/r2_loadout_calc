@@ -27918,9 +27918,29 @@ const turnLogic = {
                             isExtraTurn: true,
                             hasPriority: null,
                             extraTurnKeepsBuffs: true,
+                            name: "Sparxie gained extra turn",
+                            properName: ownerTurn.properName,
                         }
+
+
+
+
+                        // const queueObject = ATKObjects.queueAhaInstantObject ??= {
+                        //     attack: turnLogic["Aha Instant"].skillFunctions.startAhaInstant,
+                        //     target: "enemy",
+                        //     name: "Yao Guang Ultimate 'Aha Instant' Queue",
+                        //     properName: battleData.ahaInstantTURNEVENT.properName,
+                        //     sourceTurn: null,
+                        //     isExtraTurn: true,
+                        // }
+                        // queueObject.sourceTurn = battleData.ahaInstantTURNEVENT;
+                        // battleActions.queueInstantUltimateUse(battleData,queueObject);
+
+
+
                         extraTurnObject.turnRef = ownerTurn;
                         extraTurnObject.actionCounter = battleData.actionCounter;
+                        battleData.extraTurnIsActive
                         battleActions.queueExtraTurn(battleData,extraTurnObject,true);
                         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"E2: Aha Instant End", bodyText: `Sparxie gained extra turn`});}
                     },
