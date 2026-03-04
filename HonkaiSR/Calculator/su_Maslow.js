@@ -1733,6 +1733,22 @@ const maslowLightconesNihility = {
         addTeamWant: [],
     },
 }
+const maslowLightconesElation = {
+    "When She Decided to See": {
+        gives: ["EnergyRegen"],
+        givesTeam: ["CritRate","CritDMG"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Dazzled by a Flowery World": {
+        gives: ["CritDMG","Shred"],
+        givesTeam: ["Elation"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+}
 const maslowCategoryLightcones = {
     ...maslowLightconesDestruction,
     ...maslowLightconesHarmony,
@@ -1742,6 +1758,7 @@ const maslowCategoryLightcones = {
     ...maslowLightconesRemembrance,
     ...maslowLightconesAbundance,
     ...maslowLightconesNihility,
+    ...maslowLightconesElation,
 }
 
 
