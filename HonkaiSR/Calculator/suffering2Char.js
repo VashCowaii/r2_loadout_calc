@@ -18746,7 +18746,6 @@ const turnLogic = {
                 const critDMGTotalBonus = bonusRatio*critDMG + fixedBonus;
 
                 const buffCheck = targetTurn.buffsObject[buffName];
-                console.log(!!buffCheck,buffCheck)
 
                 const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if the buff already exists

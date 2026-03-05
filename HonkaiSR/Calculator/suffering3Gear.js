@@ -4399,6 +4399,90 @@ const turnLogicLightcones = {
             "greatFortune": "Mushy Shroomy's Adventures (LC)",
         },
     },
+    "Sneering": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AhaInstantStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlotName in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotName];
+
+                        if (!currentOwner.elationSneeringELATIONSHEET) {
+                            let lcNameRef = "Sneering";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+        
+                            currentOwner.elationSneeringELATIONSHEET = {
+                                "stats": [ElationDMGAll],
+                                [ElationDMGAll]: rankParams[0],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffNames.elationBonus,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        let buffSheet3 = currentOwner.elationSneeringELATIONSHEET;
+                        updateBuff(battleData,currentOwner,buffSheet3);
+                    }
+
+                    
+                    
+                },
+                "target": "self",
+                "listenerName": "Sneering - aha instant start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AhaInstantEnd",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    // const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlotName in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotName];
+
+                        let buffSheet3 = currentOwner.elationSneeringELATIONSHEET;
+                        removeBuff(battleData,currentOwner,buffSheet3);
+                    }
+
+                    
+                    
+                },
+                "target": "self",
+                "listenerName": "Sneering - aha instant end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "elationBonus": "Sneering (LC)",
+        },
+    },
 }
 
 
