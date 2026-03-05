@@ -214,6 +214,7 @@ const permaConditionsTextLibrary = {
     "atLeast1SP": "Skill Points: Current >= 1",
     "atLeast2SP": "Skill Points: Current >= 2",
     "archerSub5casts": "Skill Use Count < 5",
+    "atLeast1SPORFree": "Skill Points: Current >= 1 OR Free Skill Cast",
 }
 
 const defaultStandardAbilityDisplayWarnings = {
@@ -311,7 +312,13 @@ const conditionsCharacterDisplayWarning = {
     "Luocha": defaultStandardAbilityDisplayWarnings,
     "Yao Guang": defaultStandardAbilityDisplayWarnings,
     "Sparxie": defaultStandardAbilityDisplayWarnings,
-    "Sparkle": defaultStandardAbilityDisplayWarnings,
+    "Sparkle": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SPORFree,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
 }
 
 
