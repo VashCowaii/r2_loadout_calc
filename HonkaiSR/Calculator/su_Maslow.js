@@ -3034,6 +3034,61 @@ const maslowCharactersHarmony = {
             addTeamWant: [],
         },
     },
+    "Sparkle": {
+        // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
+        defaultMainSubs: ["HP%","EffectRES","SPDFlat","CritDamageBase"],
+        // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
+        defaultTrashSub: ["DEF%","HPFlat","ATK%","DEFFlat"],
+        0: {
+            gives: [],
+            givesTeam: ["Advance","SkillPoints","CritDMG","Vuln","ATK","PEN"],
+            wants: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["Advance","SkillPoints","CritDMG","Vuln","ATK","PEN"],
+            wants: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["Advance","SkillPoints","CritDMG","Vuln","ATK","PEN","Shred"],
+            wants: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["Advance","SkillPoints","CritDMG","Vuln","ATK","PEN","Shred"],
+            wants: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["Advance","SkillPoints","CritDMG","Vuln","ATK","PEN","Shred"],
+            wants: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["Advance","SkillPoints","CritDMG","Vuln","ATK","PEN","Shred"],
+            wants: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["Advance","SkillPoints","CritDMG","Vuln","ATK","PEN","Shred"],
+            wants: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: ["CritDMG",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersPreservation = {
     //PRESERVATION

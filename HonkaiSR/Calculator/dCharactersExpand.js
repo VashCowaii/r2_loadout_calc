@@ -11659,6 +11659,713 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Sparkle": {
+    "internalID": 1306,
+    "name": "Sparkle",
+    "path": "Harmony",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 485.1,
+      "HPBase": 1397.088,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "1130601",
+        "name": "Suspension of Disbelief",
+        "rank": 1,
+        "desc": "Increases the ATK of ally targets with \"Cipher\" by 40%. When the battle starts or when using Skill, increases Sparkle's SPD by 15%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1130_rank1.png",
+        "paramsEido": [
+          0.4,
+          0.15,
+          2
+        ]
+      },
+      {
+        "id": "1130602",
+        "name": "Purely Fictitious",
+        "rank": 2,
+        "desc": "Each stack of the Talent's effect additionally reduces the enemy target's DEF by 10%.",
+        "icon": "icon/skill/1130_rank2.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "1130603",
+        "name": "Pipedream",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1130_skill.png"
+      },
+      {
+        "id": "1130604",
+        "name": "Life Is a Gamble",
+        "rank": 4,
+        "desc": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1.",
+        "icon": "icon/skill/1130_rank4.png"
+      },
+      {
+        "id": "1130605",
+        "name": "Parallax Truth",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1130_ultimate.png"
+      },
+      {
+        "id": "1130606",
+        "name": "Narrative Polysemy",
+        "rank": 6,
+        "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to 30% of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with \"Cipher.\" When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with \"Cipher.\"",
+        "icon": "icon/skill/1130_rank6.png",
+        "paramsEido": [
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Monodrama": {
+          "variant1": {
+            "skillID": 1130601,
+            "trigger": "Skill01",
+            "name": "Monodrama",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Sparkle's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Dreamdiver": {
+          "variant1": {
+            "skillID": 1130602,
+            "trigger": "Skill02",
+            "name": "Dreamdiver",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Increases the CRIT DMG of a designated ally by #1[f1]% of Sparkle's CRIT DMG plus #2[f1]%, lasting for #3[i] turn(s). And at the same time, advances this ally's action by #4[i]%.\\nWhen Sparkle uses this ability on herself, the Action Advance effect will not trigger.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                0.27,
+                2,
+                0.5
+              ],
+              "2": [
+                0.132,
+                0.288,
+                2,
+                0.5
+              ],
+              "3": [
+                0.144,
+                0.306,
+                2,
+                0.5
+              ],
+              "4": [
+                0.156,
+                0.324,
+                2,
+                0.5
+              ],
+              "5": [
+                0.168,
+                0.342,
+                2,
+                0.5
+              ],
+              "6": [
+                0.18,
+                0.36,
+                2,
+                0.5
+              ],
+              "7": [
+                0.195,
+                0.3825,
+                2,
+                0.5
+              ],
+              "8": [
+                0.21,
+                0.405,
+                2,
+                0.5
+              ],
+              "9": [
+                0.225,
+                0.4275,
+                2,
+                0.5
+              ],
+              "10": [
+                0.24,
+                0.45,
+                2,
+                0.5
+              ],
+              "11": [
+                0.252,
+                0.468,
+                2,
+                0.5
+              ],
+              "12": [
+                0.264,
+                0.486,
+                2,
+                0.5
+              ],
+              "13": [
+                0.276,
+                0.504,
+                2,
+                0.5
+              ],
+              "14": [
+                0.288,
+                0.522,
+                2,
+                0.5
+              ],
+              "15": [
+                0.3,
+                0.54,
+                2,
+                0.5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "The Hero with a Thousand Faces": {
+          "variant1": {
+            "skillID": 1130603,
+            "trigger": "Skill03",
+            "name": "The Hero with a Thousand Faces",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Recovers #2[i] Skill Point(s) for allies. If Skill Points overflow during recovery, the excess points will be recorded, up to a max of #5[i] points. When an ally character's turn ends, if Skill Points are below the maximum, Sparkle consumes the recorded value to recover Skill Points until the upper limit is reached. Then, grants all allies \"Cipher.\" For ally targets with \"Cipher,\" each stack of Boost of DMG taken by enemies provided by Sparkle's Talent additionally increases by #3[f2]%, lasting for #4[i] turn(s).",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                6,
+                0.036,
+                3,
+                10
+              ],
+              "2": [
+                2,
+                6,
+                0.038399998,
+                3,
+                10
+              ],
+              "3": [
+                2,
+                6,
+                0.0408,
+                3,
+                10
+              ],
+              "4": [
+                2,
+                6,
+                0.0432,
+                3,
+                10
+              ],
+              "5": [
+                2,
+                6,
+                0.0456,
+                3,
+                10
+              ],
+              "6": [
+                2,
+                6,
+                0.048,
+                3,
+                10
+              ],
+              "7": [
+                2,
+                6,
+                0.051,
+                3,
+                10
+              ],
+              "8": [
+                2,
+                6,
+                0.054,
+                3,
+                10
+              ],
+              "9": [
+                2,
+                6,
+                0.057,
+                3,
+                10
+              ],
+              "10": [
+                2,
+                6,
+                0.06,
+                3,
+                10
+              ],
+              "11": [
+                2,
+                6,
+                0.0624,
+                3,
+                10
+              ],
+              "12": [
+                2,
+                6,
+                0.0648,
+                3,
+                10
+              ],
+              "13": [
+                2,
+                6,
+                0.0672,
+                3,
+                10
+              ],
+              "14": [
+                2,
+                6,
+                0.0696,
+                3,
+                10
+              ],
+              "15": [
+                2,
+                6,
+                0.072,
+                3,
+                10
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Red Herring": {
+          "variant1": {
+            "skillID": 1130604,
+            "trigger": "SkillP01",
+            "name": "Red Herring",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "While Sparkle is on the battlefield, additionally increases the max number of Skill Points by #3[i]. Whenever an ally target consumes 1 Skill Point, Sparkle gains 1 stack of \"Figment,\" with each stack increasing the DMG taken by all enemies by #2[f1]%. This effect lasts for #1[i] turn(s) and can stack up to #4[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.02,
+                2,
+                3
+              ],
+              "2": [
+                2,
+                0.022,
+                2,
+                3
+              ],
+              "3": [
+                2,
+                0.024,
+                2,
+                3
+              ],
+              "4": [
+                2,
+                0.026,
+                2,
+                3
+              ],
+              "5": [
+                2,
+                0.027999999,
+                2,
+                3
+              ],
+              "6": [
+                2,
+                0.03,
+                2,
+                3
+              ],
+              "7": [
+                2,
+                0.0325,
+                2,
+                3
+              ],
+              "8": [
+                2,
+                0.035,
+                2,
+                3
+              ],
+              "9": [
+                2,
+                0.0375,
+                2,
+                3
+              ],
+              "10": [
+                2,
+                0.04,
+                2,
+                3
+              ],
+              "11": [
+                2,
+                0.042,
+                2,
+                3
+              ],
+              "12": [
+                2,
+                0.044,
+                2,
+                3
+              ],
+              "13": [
+                2,
+                0.046,
+                2,
+                3
+              ],
+              "14": [
+                2,
+                0.048,
+                2,
+                3
+              ],
+              "15": [
+                2,
+                0.05,
+                2,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Unreliable Narrator": {
+          "variant1": {
+            "skillID": 1130607,
+            "trigger": "SkillMaze",
+            "name": "Unreliable Narrator",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, grants all allies Misdirect for #2[i] seconds. Characters with Misdirect will not be detected by enemies, and entering combat in the Misdirect state recovers #1[i] Skill Point(s) for the team and regenerates #2[i] Energy for Sparkle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1306_basic_atk.png",
+        "skillRef": {
+          "skillName": "Monodrama",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1306_skill.png",
+        "skillRef": {
+          "skillName": "Dreamdiver",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1306_ultimate.png",
+        "skillRef": {
+          "skillName": "The Hero with a Thousand Faces",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1306_talent.png",
+        "skillRef": {
+          "skillName": "Red Herring",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1306_technique.png",
+        "skillRef": {
+          "skillName": "Unreliable Narrator",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Almanac",
+        "icon": "icon/skill/1306_skilltree1.png",
+        "desc": "Using Basic ATK additionally regenerates #1[i] Energy. When an ally character who holds the CRIT DMG Boost effect provided by the Skill consumes Skill Points, Sparkle additionally regenerates #2[i] Energy.",
+        "params": [
+          10,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Artificial Flower",
+        "icon": "icon/skill/1306_skilltree2.png",
+        "desc": "If an ally character consumes #1[i] or more Skill Points in a single turn, Sparkle's next use of Skill will not consume Skill Points.",
+        "params": [
+          3
+        ]
+      },
+      "Point08": {
+        "name": "Nocturne",
+        "icon": "icon/skill/1306_skilltree3.png",
+        "desc": "Increases all allies's ATK by #1[i]%. When an ally character holds the CRIT DMG Boost effect provided by the Skill, All-Type RES PEN increases by #2[i]%.",
+        "params": [
+          0.45,
+          0.1
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1306.png",
+    "preview": "image/character_preview/1306.png",
+    "portrait": "image/character_portrait/1306.png",
+    "bannerOffsets": [
+      12,
+      51,
+      0.54,
+      12,
+      51,
+      0.54,
+      12,
+      51,
+      0.54
+    ],
+    "isBuffed": true
+  },
   "Robin": {
     "internalID": 1309,
     "name": "Robin",

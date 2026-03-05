@@ -4336,6 +4336,302 @@ const turnLogicLightcones = {
             "genTeam": "Stream Promo (LC)",
         },
     },
+    "Mushy Shroomy's Adventures": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "ElationSkillStart",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//then abort non-owners
+
+                    if (!sourceTurn.mushyShroomyAdventureVULNSHEET) {
+                        let lcNameRef = "Mushy Shroomy's Adventures";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+    
+                        const logicRef = turnLogicLightcones[lcNameRef];
+                        const buffNames = logicRef.buffNames;
+                        let buffName3 = buffNames.elationVuln;
+                        const uniqueName = `${buffName3} (${sourceTurn.properName})`;
+                        buffNames[sourceTurn.properName] = uniqueName;
+    
+                        sourceTurn.mushyShroomyAdventureVULNSHEET = {
+                            "stats": [VulnAll],
+                            [VulnAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": uniqueName,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "actionTags": ["Elation"]
+                        }
+                        
+                    }
+    
+                    let buffSheet3 = sourceTurn.mushyShroomyAdventureVULNSHEET;
+                    
+                    const enemyPositions = battleData.enemyPositions;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let enemy of enemyPositions) {
+                        buffSheet3.duration = enemy.turnState ? 3 : 2;
+                        updateBuff(battleData,enemy,buffSheet3)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Mushy Shroomy's Adventures - elation skill vuln debuff",
+                "owners": [],
+                "ownersSlots": {}
+            }
+        ],
+        "buffNames": {
+            "elationVuln": "Mushy Shroomy's Adventures (LC)",
+        },
+        "buffNamesPerCharacter": {
+            "greatFortune": "Mushy Shroomy's Adventures (LC)",
+        },
+    },
+    "Today's Good Luck": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "ElationSkillStart",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || sourceTurn.elationTodaysGoodLuckDONE) {return;}//then abort non-owners or people done with the stacking since it's perma
+
+                    if (!sourceTurn.elationTodaysGoodLuck) {
+                        let lcNameRef = "Today's Good Luck";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+    
+                        const logicRef = turnLogicLightcones[lcNameRef];
+                        const buffNames = logicRef.buffNames;
+    
+                        sourceTurn.elationTodaysGoodLuck = {
+                            "stats": [ElationDMGAll],
+                            [ElationDMGAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffNames.elationBonus,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        
+                    }
+    
+                    let buffSheet3 = sourceTurn.elationTodaysGoodLuck;
+
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet3);
+
+                    const buffCheck = sourceTurn.buffsObject[buffSheet3.buffName];
+
+                    if (buffCheck) {
+                        if (buffCheck.currentStacks === buffCheck.maxStacks) {
+                            sourceTurn.elationTodaysGoodLuckDONE = true;
+                            battleData.elationTodaysGoodLuckTRACKCOUNT ??= 0;
+                            battleData.elationTodaysGoodLuckTRACKCOUNT++;
+
+                            if (battleData.elationTodaysGoodLuckTRACKCOUNT === ownerRef.length) {
+                                battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            }
+                        }
+                    }
+                    
+                    // const enemyPositions = battleData.enemyPositions;
+                    // const updateBuff = battleActions.updateBuff;
+                    // for (let enemy of enemyPositions) {
+                    //     buffSheet3.duration = enemy.turnState ? 3 : 2;
+                    //     updateBuff(battleData,enemy,buffSheet3)
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Today's Good Luck - elation skill listener",
+                "owners": [],
+                "ownersSlots": {}
+            }
+        ],
+        "buffNames": {
+            "elationBonus": "Today's Good Luck (LC)",
+        },
+    },
+    "Sneering": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AhaInstantStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlotName in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotName];
+
+                        if (!currentOwner.elationSneeringELATIONSHEET) {
+                            let lcNameRef = "Sneering";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+        
+                            currentOwner.elationSneeringELATIONSHEET = {
+                                "stats": [ElationDMGAll],
+                                [ElationDMGAll]: rankParams[0],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffNames.elationBonus,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        let buffSheet3 = currentOwner.elationSneeringELATIONSHEET;
+                        updateBuff(battleData,currentOwner,buffSheet3);
+                    }
+
+                    
+                    
+                },
+                "target": "self",
+                "listenerName": "Sneering - aha instant start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "AhaInstantEnd",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    // const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlotName in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotName];
+
+                        let buffSheet3 = currentOwner.elationSneeringELATIONSHEET;
+                        removeBuff(battleData,currentOwner,buffSheet3);
+                    }
+
+                    
+                    
+                },
+                "target": "self",
+                "listenerName": "Sneering - aha instant end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "elationBonus": "Sneering (LC)",
+        },
+    },
+    "Lingering Tear": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PunchlineChanged",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+
+                    const punchline = battleData.punchline;
+                    const applyBuff = punchline >= 10;
+
+
+                    if (applyBuff && !battleData.elationLingeringTearACTIVE) {
+                        battleData.elationLingeringTearACTIVE = true;
+                    }
+                    else if (applyBuff && battleData.elationLingeringTearACTIVE) {return;}
+                    else if (!applyBuff && !battleData.elationLingeringTearACTIVE) {return;}
+                    else if (!applyBuff && battleData.elationLingeringTearACTIVE) {
+                        battleData.elationLingeringTearACTIVE = false;
+                    }
+                    
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlotName in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotName];
+
+                        if (!currentOwner.elationLingeringTearCRITDMGSHEET) {
+                            let lcNameRef = "Lingering Tear";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+        
+                            currentOwner.elationLingeringTearCRITDMGSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffNames.critDMG,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        let buffSheet3 = currentOwner.elationLingeringTearCRITDMGSHEET;
+
+                        if (battleData.elationLingeringTearACTIVE) {
+                            updateBuff(battleData,currentOwner,buffSheet3);
+                        }
+                        else {
+                            removeBuff(battleData,currentOwner,buffSheet3);
+                        } 
+                    }
+
+                    
+                    
+                },
+                "target": "self",
+                "listenerName": "Lingering Tear - punchline listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "critDMG": "Lingering Tear (LC)",
+        },
+    },
 }
 
 
