@@ -4483,6 +4483,83 @@ const turnLogicLightcones = {
             "elationBonus": "Sneering (LC)",
         },
     },
+    "Lingering Tear": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PunchlineChanged",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+
+                    const punchline = battleData.punchline;
+                    const applyBuff = punchline >= 10;
+
+
+                    if (applyBuff && !battleData.elationLingeringTearACTIVE) {
+                        battleData.elationLingeringTearACTIVE = true;
+                    }
+                    else if (applyBuff && battleData.elationLingeringTearACTIVE) {return;}
+                    else if (!applyBuff && !battleData.elationLingeringTearACTIVE) {return;}
+                    else if (!applyBuff && battleData.elationLingeringTearACTIVE) {
+                        battleData.elationLingeringTearACTIVE = false;
+                    }
+                    
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlotName in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlotName];
+
+                        if (!currentOwner.elationLingeringTearCRITDMGSHEET) {
+                            let lcNameRef = "Lingering Tear";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+        
+                            currentOwner.elationLingeringTearCRITDMGSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffNames.critDMG,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        let buffSheet3 = currentOwner.elationLingeringTearCRITDMGSHEET;
+
+                        if (battleData.elationLingeringTearACTIVE) {
+                            updateBuff(battleData,currentOwner,buffSheet3);
+                        }
+                        else {
+                            removeBuff(battleData,currentOwner,buffSheet3);
+                        } 
+                    }
+
+                    
+                    
+                },
+                "target": "self",
+                "listenerName": "Lingering Tear - punchline listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "critDMG": "Lingering Tear (LC)",
+        },
+    },
 }
 
 
