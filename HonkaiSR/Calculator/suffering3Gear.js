@@ -4336,6 +4336,69 @@ const turnLogicLightcones = {
             "genTeam": "Stream Promo (LC)",
         },
     },
+    "Mushy Shroomy's Adventures": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "ElationSkillStart",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//then abort non-owners
+
+                    if (!sourceTurn.mushyShroomyAdventureVULNSHEET) {
+                        let lcNameRef = "Mushy Shroomy's Adventures";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+    
+                        const logicRef = turnLogicLightcones[lcNameRef];
+                        const buffNames = logicRef.buffNames;
+                        let buffName3 = buffNames.elationVuln;
+                        const uniqueName = `${buffName3} (${sourceTurn.properName})`;
+                        buffNames[sourceTurn.properName] = uniqueName;
+    
+                        sourceTurn.mushyShroomyAdventureVULNSHEET = {
+                            "stats": [VulnAll],
+                            [VulnAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": uniqueName,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "actionTags": ["Elation"]
+                        }
+                        
+                    }
+    
+                    let buffSheet3 = sourceTurn.mushyShroomyAdventureVULNSHEET;
+                    
+                    const enemyPositions = battleData.enemyPositions;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let enemy of enemyPositions) {
+                        buffSheet3.duration = enemy.turnState ? 3 : 2;
+                        updateBuff(battleData,enemy,buffSheet3)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Mushy Shroomy's Adventures - elation skill vuln debuff",
+                "owners": [],
+                "ownersSlots": {}
+            }
+        ],
+        "buffNames": {
+            "elationVuln": "Mushy Shroomy's Adventures (LC)",
+        },
+        "buffNamesPerCharacter": {
+            "greatFortune": "Mushy Shroomy's Adventures (LC)",
+        },
+    },
 }
 
 
