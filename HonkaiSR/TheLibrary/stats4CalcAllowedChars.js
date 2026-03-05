@@ -25,6 +25,7 @@ global.calcAllowedSet = new Set([
     "Tribbie",
     "Asta",
     "Ruan Mei",
+    "Sparkle",
 
     //ABUNDANCE
     "Huohuo",

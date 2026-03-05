@@ -36340,30 +36340,6 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
-      "Point06": {
-        "name": "Almanac",
-        "icon": "icon/skill/1306_skilltree1.png",
-        "desc": "When using Basic ATK, additionally regenerates #1[i] Energy.",
-        "params": [
-          10
-        ]
-      },
-      "Point07": {
-        "name": "Artificial Flower",
-        "icon": "icon/skill/1306_skilltree2.png",
-        "desc": "The CRIT DMG Boost effect provided by the Skill will be extended until the start of the target's next turn."
-      },
-      "Point08": {
-        "name": "Nocturne",
-        "icon": "icon/skill/1306_skilltree3.png",
-        "desc": "Increases all allies' ATK by #4[i]%. When there are 1/2/3 Quantum-Type allies in the team, additionally increases Quantum-Type allies' ATK by #1[i]%/#2[i]%/#3[i]%.",
-        "params": [
-          0.05,
-          0.15,
-          0.3,
-          0.15
-        ]
-      },
       "Point09": {
         "name": "HP Boost",
         "icon": "icon/property/IconMaxHP.png",
@@ -36432,6 +36408,37 @@ let characters = {
         "icon": "icon/property/IconMaxHP.png",
         "stats": {
           "HP%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Almanac",
+        "icon": "icon/skill/1306_skilltree1.png",
+        "desc": "Using Basic ATK additionally regenerates #1[i] Energy. When an ally character who holds the CRIT DMG Boost effect provided by the Skill consumes Skill Points, Sparkle additionally regenerates #2[i] Energy.",
+        "params": [
+          10,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Artificial Flower",
+        "icon": "icon/skill/1306_skilltree2.png",
+        "desc": "If an ally character consumes #1[i] or more Skill Points in a single turn, Sparkle's next use of Skill will not consume Skill Points.",
+        "params": [
+          3
+        ]
+      },
+      "Point08": {
+        "name": "Nocturne",
+        "icon": "icon/skill/1306_skilltree3.png",
+        "desc": "Increases all allies's ATK by #1[i]%. When an ally character holds the CRIT DMG Boost effect provided by the Skill, All-Type RES PEN increases by #2[i]%.",
+        "params": [
+          0.45,
+          0.1
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
         }
       }
     },
@@ -37144,50 +37151,6 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
-      "Point06": {
-        "name": "Viscera's Disquiet",
-        "icon": "icon/skill/1307_skilltree1.png",
-        "desc": "After using Skill to attack one designated enemy that has Wind Shear, Bleed, Burn, or Shock, each of these debuffs respectively has a #1[i]% base chance of inflicting 1 extra stack of Arcana.",
-        "params": [
-          0.65
-        ],
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          },
-          "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
-          }
-        }
-      },
-      "Point07": {
-        "name": "Goblet's Dredges",
-        "icon": "icon/skill/1307_skilltree2.png",
-        "desc": "When an enemy target enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of Arcana.\nEvery time an enemy target receives 1 instance of DoT during a single attack by an ally, there is a #1[i]% base chance for the target to be inflicted with 1 stack of Arcana. The maximum number of stacks that can be inflicted during 1 single attack is #2[i].",
-        "params": [
-          0.65,
-          3
-        ],
-        "traceAbility": "BlackSwan_BlackSwan_Trace02",
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          },
-          "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
-          }
-        }
-      },
-      "Point08": {
-        "name": "Candleflame's Portent",
-        "icon": "icon/skill/1307_skilltree3.png",
-        "desc": "Increases this unit's DMG by an amount equal to #1[i]% of Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
-        "params": [
-          0.6,
-          0.72
-        ],
-        "traceAbility": "BlackSwan_BlackSwan_Trace03"
-      },
       "Point09": {
         "name": "ATK Boost",
         "icon": "icon/property/IconAttack.png",
@@ -37257,6 +37220,53 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
+      },
+      "Point06": {
+        "name": "Viscera's Disquiet",
+        "icon": "icon/skill/1307_skilltree1.png",
+        "desc": "When an enemy target gets attacked by Black Swan, there is a #1[i]% base chance of inflicting #2[i] stack(s) of \"Arcana\" on them.",
+        "params": [
+          0.65,
+          5
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace01",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Goblet's Dredges",
+        "icon": "icon/skill/1307_skilltree2.png",
+        "desc": "When an enemy targets enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of \"Arcana,\" and a #2[i]% base chance to be inflicted with the DEF reduction effect from the Skill, which lasts for #3[i] turn(s).\nAfter using Basic ATK or Ultimate, there is also a #2[i]% base chance to inflict the DEF reduction effect from the Skill on the hit enemy targets, which lasts for #3[i] turn(s).",
+        "params": [
+          0.65,
+          1,
+          3
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace02",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Candleflame's Portent",
+        "icon": "icon/skill/1307_skilltree3.png",
+        "desc": "Increases the DMG dealt by all allies by an amount equal to #1[i]% of Black Swan's Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
+        "params": [
+          0.6,
+          0.72
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace03"
       }
     },
     "hasSummon": false,
@@ -67957,14 +67967,36 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Torture",
+        "icon": "icon/skill/1005_skilltree1.png",
+        "desc": "When the Ultimate is used, enemy targets will now receive DMG immediately from all currently applied DoT sources instead of just receiving DMG immediately from the currently applied Shock state.",
+        "traceAbility": "Kafkav0_Kafka_Trace01"
+      },
       "Point07": {
         "name": "Plunder",
         "icon": "icon/skill/1005_skilltree2.png",
-        "desc": "If an enemy target is defeated while Shocked, Kafka additionally regenerates #1[i] Energy.",
+        "desc": "If an enemy is defeated while Shocked, Kafka additionally regenerates #1[i] Energy.",
         "params": [
           5
         ],
-        "traceAbility": "Kafkav0_Advanced_Kafka_Trace02"
+        "traceAbility": "Kafkav0_Kafka_Trace02"
+      },
+      "Point08": {
+        "name": "Thorns",
+        "icon": "icon/skill/1005_skilltree3.png",
+        "desc": "The base chance for target enemies to be Shocked by the Ultimate, the Technique, and the Talent-triggered Follow-Up ATK increases by #1[i]%.",
+        "params": [
+          0.3
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          },
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
       },
       "Point09": {
         "name": "ATK Boost",
@@ -68034,29 +68066,6 @@ let characters = {
         "icon": "icon/property/IconAttack.png",
         "stats": {
           "ATK%": 0.08
-        }
-      },
-      "Point06": {
-        "name": "Torture",
-        "icon": "icon/skill/1005_skilltree1.png",
-        "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
-        "params": [
-          0.75,
-          1
-        ],
-        "traceAbility": "Kafkav0_Advanced_Kafka_Trace01"
-      },
-      "Point08": {
-        "name": "Thorns",
-        "icon": "icon/skill/1005_skilltree3.png",
-        "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
-        "params": [
-          0.8
-        ],
-        "extraEffects": {
-          "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
-          }
         }
       }
     },
@@ -68770,6 +68779,43 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Generate",
+        "icon": "icon/skill/1006_skilltree1.png",
+        "desc": "The duration of \"Bug\" is extended by #1[i] turn(s). Every time an enemy is inflicted with Weakness Break, Silver Wolf has a #2[i]% base chance of implanting a random \"Bug\" on that target.",
+        "params": [
+          1,
+          0.65
+        ],
+        "traceAbility": "SilverWolfv0_Silwolf_Trace01",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Inject",
+        "icon": "icon/skill/1006_skilltree2.png",
+        "desc": "The duration of the Weakness implanted by Silver Wolf's Skill increases by #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Side Note",
+        "icon": "icon/skill/1006_skilltree3.png",
+        "desc": "If there are #1[i] or more debuff(s) affecting the enemy when the Skill is used, then the Skill decreases the enemy's All-Type RES by an additional #2[i]%.",
+        "params": [
+          3,
+          0.03
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
       "Point09": {
         "name": "ATK Boost",
         "icon": "icon/property/IconAttack.png",
@@ -68839,40 +68885,6 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
-      },
-      "Point06": {
-        "name": "Generate",
-        "icon": "icon/skill/1006_skilltree1.png",
-        "desc": "The duration of \"Bug\" is extended by #1[i] turn(s). Every time an enemy's Weakness gets broken, Silver Wolf has a #2[i]% base chance of implanting a random \"Bug\" on that target.",
-        "params": [
-          1,
-          1
-        ],
-        "traceAbility": "SilverWolfv0_Advanced_Silwolf_Trace01",
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          }
-        }
-      },
-      "Point07": {
-        "name": "Inject",
-        "icon": "icon/skill/1006_skilltree2.png",
-        "desc": "When the battle starts, immediately regenerates #1[i] Energy. When Silver Wolf's turn starts, she regenerates #2[i] Energy.",
-        "params": [
-          20,
-          5
-        ]
-      },
-      "Point08": {
-        "name": "Side Note",
-        "icon": "icon/skill/1006_skilltree3.png",
-        "desc": "For every #1[i]% Effect Hit Rate that Silver Wolf has, additionally increases her ATK by #2[i]%, up to a max of #3[i]%.",
-        "params": [
-          0.1,
-          0.1,
-          0.5
-        ]
       }
     },
     "hasSummon": false,
@@ -69652,6 +69664,41 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Vita Infinita",
+        "icon": "icon/skill/1205_skilltree1.png",
+        "desc": "When Blade's current HP percentage is at 50% of Max HP or lower, the HP restored when receiving healing increases by #1[i]%.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Neverending Deaths",
+        "icon": "icon/skill/1205_skilltree2.png",
+        "desc": "If Blade hits a Weakness Broken enemy after using \"Forest of Swords,\" he will restore HP equal to #1[i]% of his Max HP plus #2[i].",
+        "params": [
+          0.05,
+          100
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Cyclone of Destruction",
+        "icon": "icon/skill/1205_skilltree3.png",
+        "desc": "Increases DMG dealt by the Talent's Follow-Up ATK by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
       "Point09": {
         "name": "HP Boost",
         "icon": "icon/property/IconMaxHP.png",
@@ -69720,37 +69767,6 @@ let characters = {
         "icon": "icon/property/IconMaxHP.png",
         "stats": {
           "HP%": 0.08
-        }
-      },
-      "Point06": {
-        "name": "Vita Infinita",
-        "icon": "icon/skill/1205_skilltree1.png",
-        "desc": "When Blade uses Ultimate, the amount cleared from the tally of HP loss is changed to #1[i]%.",
-        "params": [
-          0.5
-        ]
-      },
-      "Point07": {
-        "name": "Neverending Deaths",
-        "icon": "icon/skill/1205_skilltree2.png",
-        "desc": "HP restored from healing increases by #2[i]%. After receiving healing, converts #1[i]% of the healed amount to Ultimate's tally of HP loss.",
-        "params": [
-          0.25,
-          0.2
-        ]
-      },
-      "Point08": {
-        "name": "Cyclone of Destruction",
-        "icon": "icon/skill/1205_skilltree3.png",
-        "desc": "Increases Follow-Up ATK DMG from Talent by #1[i]% and additionally regenerates #2[i] Energy.",
-        "params": [
-          0.2,
-          15
-        ],
-        "extraEffects": {
-          "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
-          }
         }
       }
     },
@@ -70505,6 +70521,35 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Deathrealm",
+        "icon": "icon/skill/1212_skilltree1.png",
+        "desc": "While in the Spectral Transmigration state, increases Effect RES by #1[i]%.",
+        "params": [
+          0.35
+        ]
+      },
+      "Point07": {
+        "name": "Sword Champion",
+        "icon": "icon/skill/1212_skilltree2.png",
+        "desc": "After using \"Transcendent Flash,\" the next action advances by #1[i]%.",
+        "params": [
+          0.1
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Frost Wraith",
+        "icon": "icon/skill/1212_skilltree3.png",
+        "desc": "While in the Spectral Transmigration state, increases DMG dealt by Ultimate by #1[i]%.",
+        "params": [
+          0.2
+        ]
+      },
       "Point09": {
         "name": "CRIT DMG Boost",
         "icon": "icon/property/IconCriticalDamage.png",
@@ -70574,32 +70619,6 @@ let characters = {
         "stats": {
           "CritDamageBase": 0.107
         }
-      },
-      "Point06": {
-        "name": "Deathrealm",
-        "icon": "icon/skill/1212_skilltree1.png",
-        "desc": "While in the \"Spectral Transmigration\" state, increases Effect RES by #1[i]%, and increases the Ultimate DMG dealt by #2[i]%.",
-        "params": [
-          0.35,
-          0.2
-        ]
-      },
-      "Point07": {
-        "name": "Sword Champion",
-        "icon": "icon/skill/1212_skilltree2.png",
-        "desc": "After using \"Transcendent Flash,\" additionally regenerates #1[i] Energy. And after using \"Moon On Glacial River,\" additionally regenerates #2[i] Energy.",
-        "params": [
-          15,
-          8
-        ]
-      },
-      "Point08": {
-        "name": "Frost Wraith",
-        "icon": "icon/skill/1212_skilltree3.png",
-        "desc": "Upon obtaining \"Syzygy,\" if its stack limit has been reached, Jingliu's next attack ignores #1[i]% of the target's DEF.",
-        "params": [
-          0.25
-        ]
       }
     },
     "hasSummon": false,

@@ -545,11 +545,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                       "valuePerStack": {
                         "MDF_HealEnhanceRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
                           "constants": [],
                           "variables": [
-                            0.5
+                            0.2
                           ]
                         }
                       }
@@ -688,11 +688,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                       "valuePerStack": {
                         "MDF_HealEnhanceRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
                           "constants": [],
                           "variables": [
-                            0.5
+                            0.2
                           ]
                         }
                       }

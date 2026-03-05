@@ -119,7 +119,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Advance",
-                  "multiAdd": "-15"
+                  "multiAdd": "-0.1"
                 }
               ]
             }
@@ -128,11 +128,11 @@ const configAbility = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] (15) || INVERT || RETURN",
-                "displayLines": "-15",
+                "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                "displayLines": "-0.1",
                 "constants": [],
                 "variables": [
-                  15
+                  0.1
                 ]
               },
               "adjustmentType": "Advance"
