@@ -44,12 +44,12 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "Skill03_P2_Chance",
           "value": {
-            "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
-            "displayLines": "(1 + 0.8)",
+            "operator": "Variables[0] (1) || Variables[1] (0.3) || ADD || RETURN",
+            "displayLines": "(1 + 0.3)",
             "constants": [],
             "variables": [
               1,
-              0.8
+              0.3
             ]
           }
         }

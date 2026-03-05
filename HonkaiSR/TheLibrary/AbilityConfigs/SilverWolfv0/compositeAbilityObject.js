@@ -238,11 +238,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_Silwolf_00_AddModifier_Chance",
                   "value": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
+                    "operator": "Variables[0] (0.65) || RETURN",
+                    "displayLines": "0.65",
                     "constants": [],
                     "variables": [
-                      1
+                      0.65
                     ]
                   }
                 },
@@ -1519,11 +1519,11 @@ const compositeAbilityObject = {
                 "value1": "_DebuffCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
+                  "operator": "Variables[0] (3) || RETURN",
+                  "displayLines": "3",
                   "constants": [],
                   "variables": [
-                    0.1
+                    3
                   ]
                 }
               }
@@ -1555,12 +1555,12 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || Variables[1] (0.1) || ADD || RETURN",
-                  "displayLines": "(0.1 + 0.1)",
+                  "operator": "Variables[0] (0.1) || Variables[1] (0.03) || ADD || RETURN",
+                  "displayLines": "(0.1 + 0.03)",
                   "constants": [],
                   "variables": [
                     0.1,
-                    0.1
+                    0.03
                   ]
                 }
               }
@@ -1618,12 +1618,12 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
               "duration": {
-                "operator": "Variables[0] (2) || Variables[1] (20) || ADD || RETURN",
-                "displayLines": "(2 + 20)",
+                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
+                "displayLines": "(2 + 1)",
                 "constants": [],
                 "variables": [
                   2,
-                  20
+                  1
                 ]
               },
               "baseChance": {

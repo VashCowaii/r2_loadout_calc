@@ -1855,7 +1855,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Advance",
-                      "multiAdd": "-15"
+                      "multiAdd": "-0.1"
                     }
                   ]
                 }
@@ -1864,11 +1864,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Assign Advance/Delay to Current Ability Use",
                   "adjustmentValue": {
-                    "operator": "Variables[0] (15) || INVERT || RETURN",
-                    "displayLines": "-15",
+                    "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                    "displayLines": "-0.1",
                     "constants": [],
                     "variables": [
-                      15
+                      0.1
                     ]
                   },
                   "adjustmentType": "Advance"
@@ -2666,11 +2666,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-62616171\">MWJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
                           "constants": [],
                           "variables": [
-                            0.25
+                            0.2
                           ]
                         }
                       }
@@ -4079,11 +4079,11 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (15) || INVERT || RETURN",
-                "displayLines": "-15",
+                "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                "displayLines": "-0.1",
                 "constants": [],
                 "variables": [
-                  15
+                  0.1
                 ]
               }
             }
@@ -4104,7 +4104,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Advance",
-                  "multiAdd": "-15"
+                  "multiAdd": "-0.1"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -4125,11 +4125,11 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (15) || INVERT || RETURN",
-                "displayLines": "-15",
+                "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                "displayLines": "-0.1",
                 "constants": [],
                 "variables": [
-                  15
+                  0.1
                 ]
               }
             }
