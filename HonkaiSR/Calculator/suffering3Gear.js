@@ -4399,6 +4399,78 @@ const turnLogicLightcones = {
             "greatFortune": "Mushy Shroomy's Adventures (LC)",
         },
     },
+    "Today's Good Luck": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "ElationSkillStart",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || sourceTurn.elationTodaysGoodLuckDONE) {return;}//then abort non-owners or people done with the stacking since it's perma
+
+                    if (!sourceTurn.elationTodaysGoodLuck) {
+                        let lcNameRef = "Today's Good Luck";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+    
+                        const logicRef = turnLogicLightcones[lcNameRef];
+                        const buffNames = logicRef.buffNames;
+    
+                        sourceTurn.elationTodaysGoodLuck = {
+                            "stats": [ElationDMGAll],
+                            [ElationDMGAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffNames.elationBonus,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        
+                    }
+    
+                    let buffSheet3 = sourceTurn.elationTodaysGoodLuck;
+
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet3);
+
+                    const buffCheck = sourceTurn.buffsObject[buffSheet3.buffName];
+
+                    if (buffCheck) {
+                        if (buffCheck.currentStacks === buffCheck.maxStacks) {
+                            sourceTurn.elationTodaysGoodLuckDONE = true;
+                            battleData.elationTodaysGoodLuckTRACKCOUNT ??= 0;
+                            battleData.elationTodaysGoodLuckTRACKCOUNT++;
+
+                            if (battleData.elationTodaysGoodLuckTRACKCOUNT === ownerRef.length) {
+                                battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            }
+                        }
+                    }
+                    
+                    // const enemyPositions = battleData.enemyPositions;
+                    // const updateBuff = battleActions.updateBuff;
+                    // for (let enemy of enemyPositions) {
+                    //     buffSheet3.duration = enemy.turnState ? 3 : 2;
+                    //     updateBuff(battleData,enemy,buffSheet3)
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Today's Good Luck - elation skill listener",
+                "owners": [],
+                "ownersSlots": {}
+            }
+        ],
+        "buffNames": {
+            "elationBonus": "Today's Good Luck (LC)",
+        },
+    },
     "Sneering": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
