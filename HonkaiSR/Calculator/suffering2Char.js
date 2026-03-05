@@ -13,6 +13,7 @@ const battleActions = {
 
         if (!battleData.battleTotal.SP[sourceName]) {battleData.battleTotal.SP[sourceName] = 0;}
         battleData.battleTotal.SP[sourceName] += actualGain;
+        const overflow = proposedValue > battleData.skillPointCurrent ? proposedValue - battleData.skillPointCurrent : 0;
         // battleTotal: {
         //     DMG: {},
         //     Turns: {},
@@ -21,7 +22,7 @@ const battleActions = {
         // },
 
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillPointChange", cost, oldSP, newSP, actualGain, maximum, AV:battleData.sumAV, source:sourceName, sourceName:generalInfo.sourceName});}
-        poke("SPChange",battleData,{SPChange: cost, sourceTurn});
+        poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow});
     },
     updateEnergy(battleData,amount,sourceTurn,isFixed,sourceName) {
         // if (!amount) {return}
@@ -223,6 +224,7 @@ const battleActions = {
     updateBuff(battleData,sourceTurn,buffSheet,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes) {
         let buffRef = sourceTurn.buffsObject;
         let buffName = buffSheet.buffName;
+        // console.log(battleData.sumAV,buffSheet)
 
         
         // console.log(sourceTurn)
@@ -18632,6 +18634,812 @@ const turnLogic = {
             "zoneDebuff": "Thanatoplum Rebloom",
             "e2ATK": "E2: Reedside Promenade",
             "e4BE": "E4: Chatoyant Éclat",
+        },
+        "characterValuesBattle": {},
+    },
+    "Sparkle": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let actionUsed = false;
+            let minimum = currentSP >= 1;
+
+            const skillIsFree = thisTurn.nextSkillFree;
+
+            if ((minimum || skillIsFree) && checkSkill(battleData,thisTurn)) {
+                actionUsed = true;
+
+                const skillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.sparkleAdvance, target: null, endTurn: true};
+                skillCall.target = battleData.nameBasedTurns.char1;
+                skillCall.points = skillIsFree ? 0 : -1;
+                return skillCall;
+            }
+
+
+            if (!actionUsed) {
+                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.sparkleBasic, target: "enemy", endTurn: true};
+            }
+        },
+        "skillFunctions": {
+            sparkleBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.sparkleBasicREF ??= ATKObjects["Basic ATK"]["Monodrama"].variant1;
+
+                if (!ATKObjects.sparkleBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.sparkleBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Quantum"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.sparkleBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.sparkleBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+
+                battleActions.updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
+            },
+            applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {//duration change/expire added   //RES PEN added for trace
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                let skillRef = ATKObjects.applyDreamdiverREF ??= ATKObjects.Skill.Dreamdiver.variant1;
+                let values = ATKObjects.applyDreamdiverVALUESREF ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+
+                if (!ATKObjects.applyDreamdiverCRITDMGSHEET) {
+                    // console.log(battleData.sumAV)
+                    let characterName = sourceTurn.properName;
+                    let buffName = turnLogic[characterName].buffNames.dreamdiver;
+                    ATKObjects.applyDreamdiverCRITDMGSHEET = {
+                        "stats": [CritDamageBase,CritDamageBaseNULL,ResistanceAllPEN],
+                        [CritDamageBase]: 0,
+                        [CritDamageBaseNULL]: -0,
+                        [ResistanceAllPEN]: 0.10,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+                }
+                let buffSheet = ATKObjects.applyDreamdiverCRITDMGSHEET;
+                const buffName = buffSheet.buffName;
+
+                const stats = sourceTurn.statTable;
+                const critDMG = stats[CritDamageBase] + stats[CritDamageBaseNULL];//null is for shit that can't be included in the ratio
+                const fixedBonus = values[1];
+                const bonusRatio = values[0] + (e6 ? 0.30 : 0);//e6 boosts the conversion ratio by 30%
+                const critDMGTotalBonus = bonusRatio*critDMG + fixedBonus;
+
+                const buffCheck = targetTurn.buffsObject[buffName];
+                console.log(!!buffCheck,buffCheck)
+
+                const updateBuff = battleActions.updateBuff;
+                if (buffCheck) {//if the buff already exists
+                    const statCheck = buffCheck[CritDamageBase];
+                    if (statCheck === critDMGTotalBonus) {//if the bonus is the same, then just renew it
+                        updateBuff(battleData,targetTurn,buffSheet);
+                        return;//can obv end here bc that's it in this case
+                    }
+                    else {
+                        removeBuff(battleData,targetTurn,buffSheet,true,null,false,true);//otherwise silently remove it without triggering a log event
+                    }
+                }
+
+                buffSheet.duration = targetTurn.turnState ? 3 : 2;
+                buffSheet[CritDamageBase] = critDMGTotalBonus;
+                buffSheet[CritDamageBaseNULL] = -critDMGTotalBonus;
+
+                
+                updateBuff(battleData,targetTurn,buffSheet);
+            },
+            sparkleAdvance(battleData,targetTurn,sourceTurn) {//no changes
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (sourceTurn.nextSkillFree) {
+                    sourceTurn.nextSkillFree = false;
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point07.icon,sourceName: sourceTurn.properName, source:"Sparkle Skill", bodyText: `Sparkle Skill Cast was Free, reverting back to full skill cost`});
+                    }
+                }
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.applyDreamdiverREF ??= ATKObjects.Skill.Dreamdiver.variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                let rank = sourceTurn.rank;
+                let e6 = rank >= 6;
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+                
+                let diver = ATKObjects.diverFunction ??= logicRef.skillFunctions.applyDreamdiver;
+                diver(battleData,targetTurn,sourceTurn,e6);
+
+
+                if (rank >= 1) {
+                    const buffSheet = ATKObjects.sparkleE1SPDSheet;
+                    buffSheet.duration = sourceTurn.turnState ? 3 : 2;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                }
+
+                if (e6) {
+                    let buffName = logicRef.buffNames.cipher;
+                    for (let targetTurn2 of battleData.allyPositions) {
+                        let buffCheck = targetTurn2.buffsObject[buffName];
+                        if (buffCheck && targetTurn2.name != sourceTurn.name) {//we skip the char she JUST applied it to via the reg skill
+                            diver(battleData,targetTurn2,sourceTurn,e6);
+                        }
+                    }
+                }
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            sparkleUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.sparkleUltimateREF ??= ATKObjects.Ultimate["The Hero with a Thousand Faces"].variant1;
+                let values = ATKObjects.sparkleUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                let rank = sourceTurn.rank;
+                let e4 = rank >= 4;
+                let e6 = rank >= 6;
+
+                let spRecovery = 6 + (e4 ? 1 : 0);
+
+                const energy = battleActions.updateEnergy;
+                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+
+                const old = battleData.skillPointCurrent;
+                const adjusted = old + spRecovery;
+                const maximum = battleData.battleTable.SPMax;
+
+                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
+                
+                if (adjusted > maximum) {
+                    const reserve = adjusted - maximum;
+                    // battleValues.reservePoints += reserve;
+                    poke("sparkleReserveSPGained",battleData,{pointsGained: reserve,sourceString:"Ult caused Overflow SP"});
+                }
+
+
+                const buffNAMES = logicRef.buffNames;
+                let buffName = buffNAMES.cipher;
+                let buffName2 = buffNAMES.redHerring;
+                let buffName3 = buffNAMES.dreamdiver;
+
+                if (!ATKObjects.sparkleUltimateCIPHERSHEET) {
+                    let e1 = rank >= 1;
+                    ATKObjects.sparkleUltimateCIPHERSHEET = {
+                        "stats": [ATKP],
+                        [ATKP]: e1 ? 0.40 : 0,//cipher is actually completely empty, barring the e1 buff. mainly serves to boost the red herring stacks from talent
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 0,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "expireFunction": logicRef.skillFunctions.cipherExpired,//we just need to specify in tingyun's stats that no target has benediction anymore, when removed
+                        "expireParam": null,
+                        "removeOnDeath": true,
+                    }
+                }
+                let buffSheet = ATKObjects.sparkleUltimateCIPHERSHEET;
+                
+                let dreamDiverFound = false;
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
+                const recreate = logicRef.skillFunctions.sparkleRecreateHerringBuff;
+                const updateBuff = battleActions.updateBuff;
+                for (let targetTurn of battleData.allyPositions) {
+                    const currentBuffs = targetTurn.buffsObject;
+                    let alreadyHasHerring = currentBuffs[buffName2];
+                    let alreadyHasDiver = currentBuffs[buffName3];
+                    if (alreadyHasDiver) {dreamDiverFound = true;}//for e6
+                    
+                    buffSheet.duration = targetTurn.turnState ? 4 : 3;//procs that occur within their own turn, will last beyond that turn. I think. I hope. Archer's guardian works that way, at least.
+                    buffSheet.expireParam = currentBuffs[buffName] ? null : {targetTurn:targetTurn.name,sourceTurn:sourceTurn.name};//no need to construct the expire param if they already have it
+                    //ALSO, needs to be a slot that passes on the param, bc this is cyclic in the log otherwise
+                    updateBuff(battleData,targetTurn,buffSheet);
+
+                    if (alreadyHasHerring) {
+                        recreate(battleData,targetTurn,sourceTurn);
+                        //then remake the herring buff object
+                        //also set a trigger that will remake it again when the cipher buff expires if it ever does
+                    }
+                }
+
+                if (e6 && dreamDiverFound) {
+                    let diver = logicRef.skillFunctions.applyDreamdiver;
+                    for (let targetTurn of battleData.allyPositions) {
+                        diver(battleData,targetTurn,sourceTurn,e6);
+                        //the phrasing here technically implies we should look for people with cipher but like
+                        //bro we just ulted, everyone has cipher, who are we shitting rn. Just give it to em.
+                    }
+                    //my fear is that this is like cipher's dmg increase that is tied to red herring
+                    //bc if it is, jesus FUCKING christ that will be annoying. Not that I can't account
+                    //for it bc I absolutely can, I just don't want to lmfao. No way to know though without e6 on-hand
+                    //so we'll see later if some e6-haver complains.
+                }
+
+                energy(battleData,skillRef.energyRegen,sourceTurn);
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                sourceTurn.ultyQueued = false;
+            },
+            cipherExpired(battleData,param) {
+                const namedTurns = battleData.nameBasedTurns;
+                let targetTurn = namedTurns[param.targetTurn];
+                let sourceTurn = namedTurns[param.sourceTurn];
+                let characterName = sourceTurn.properName;
+
+                let logicRef = turnLogic[characterName];
+                let buffName2 = logicRef.buffNames.redHerring;
+                let alreadyHasHerring = targetTurn.buffsObject[buffName2];
+
+                if (alreadyHasHerring) {//if herring is on this character, redo the herring buff to remove the bonus dmg added from cipher
+                    logicRef.skillFunctions.sparkleRecreateHerringBuff(battleData,targetTurn,sourceTurn);
+                }
+            },
+            sparkleRecreateHerringBuff(battleData,currentSlot,ownerTurn) {
+                //ideally this should remain silent in logging when remade since red herring existed already, we just don't have a really correct way to have two separate buffs where one scales the values of the other
+                //so this is my super hacky fix for that, for now. Not sure how best to do this but I can look at it again later.
+                let silent = true;
+                let isRedone = true;
+                
+
+                turnLogic.Sparkle.skillFunctions.sparkleCreateHerringBuff(battleData,ownerTurn,null,silent,isRedone,currentSlot);
+            },
+            sparkleCreateHerringBuff(battleData,sourceTurn,totalChange,silent,isRedone,currentSlot) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.sparkleCreateHerringBuffREF ??= ATKObjects.Talent["Red Herring"].variant1;
+                let values = ATKObjects.sparkleCreateHerringBuffREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!isRedone && !silent) {
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:"team", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                    poke("TalentStart",battleData,{sourceTurn});
+                }
+
+                const buffNames = turnLogic[characterName].buffNames;
+                let buffName = buffNames.redHerring;
+                let cipherName = buffNames.cipher;
+                const buffsObject = sourceTurn.buffsObject;
+                if (!ATKObjects.sparkleCreateHerringBuffDMGSHEET) {
+                    let e2 = sourceTurn.rank >= 2;
+                    ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF = {
+                        "stats": null,
+                        "source": "Talent",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.talentFakeDebuff,
+                        "duration": 0,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                        "isDebuff": true,
+                    }
+                    ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown = {
+                        "stats": null,
+                        "source": "Talent",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.redHerringCountdown,
+                        "duration": 0,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": totalChange,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                        expireFunction: logicRef.skillFunctions.talentZoneExpired,
+                        expireParam: {
+                            buffName,
+                            slot:sourceTurn.name,
+                            fakeName: ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF},
+                    }
+                    
+                    let skillRef2 = ATKObjects.sparkleUltimateREF ??= ATKObjects.Ultimate["The Hero with a Thousand Faces"].variant1;
+                    let values2 = ATKObjects.sparkleUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                    
+                    ATKObjects.sparkleCreateHerringBuffDMGSHEET = {
+                        "stats": [DEFShredAll],
+                        "statsOnHit": [VulnAll],
+                        [VulnAll]: 0,
+                        [DEFShredAll]: e2 ? 0.10 : 0,//the e2 def shred is independent of cipher existing or not, purely related to e2 alone so we can give a static add here
+                        "source": "Talent",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "duration": 0,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": totalChange,
+                        "decay": false,
+                        "expireType": null,
+                        // "removeOnDeath": true,
+                    }
+                }
+
+                let values2 = ATKObjects.sparkleUltimateREFVALUES
+
+                const buffSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEET;
+                // const redoName = turnToRedo ? turnToRedo.properName : null;
+                const updateBuff = battleActions.updateBuff;
+
+                const noCipherValue = values[1];
+                const fullCipherValue = values[1] + values2[2];
+
+                const countdown = ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown;
+                let batchTargetArray = [];
+
+                const allyTurns = battleData.nameBasedTurns;
+
+                const buffCheck = buffsObject[countdown.buffName];
+                
+                for (let allySlot in allyTurns) {
+                    const currentAlly = allyTurns[allySlot];
+                    if (currentAlly.isUnselectable) {continue;}
+                    batchTargetArray.push(currentAlly);
+                }
+
+                if (buffCheck) {
+                    const stackCheck = buffCheck.currentStacks === buffCheck.maxStacks;
+                    
+                    if (isRedone) {
+                        buffSheet.currentStacks = buffCheck.currentStacks;
+
+                        if (currentSlot) {
+                            removeBuff(battleData,currentSlot,buffSheet,true,null,false,true);
+                            const hasCipherBuff = currentSlot.buffsObject[cipherName];
+                            buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
+                            
+                            updateBuff(battleData,currentSlot,buffSheet);
+                        }
+                        else {
+                            for (let ally of batchTargetArray) {
+                                removeBuff(battleData,ally,buffSheet,true,null,false,true);
+                                const hasCipherBuff = ally.buffsObject[cipherName];
+                                buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
+                                
+                                updateBuff(battleData,ally,buffSheet);
+                            }
+                        }
+
+                        return;
+                    }
+                    else if (!stackCheck) {
+                        buffSheet.currentStacks = totalChange;
+                        for (let ally of batchTargetArray) {
+                            const hasCipherBuff = ally.buffsObject[cipherName];
+                            buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
+                            updateBuff(battleData,ally,buffSheet);
+                        }
+                        //the reason we don't care about updating the vulnAll value here is bc it already exists on the target
+                        //w/e buff that exists if reapplied will keep the values it started with, so if we just add more stacks
+                        //it doesn't redo the value it has, so no removal needs to happen here p much ever
+                        //since we already handled updating the vuln value in the isRedone check
+
+                        countdown.duration = sourceTurn.turnState ? 3 : 2;
+                        battleActions.updateBuff(battleData,sourceTurn,countdown);
+                    }
+                    else {
+                        //since if we're already at max stacks, the only thing that changes is the duration getting refreshed,
+                        //we're gonna skip the buff handler here entirely, and just handle duration with direct assignment
+                        buffCheck.duration = sourceTurn.turnState ? 3 : 2;
+                        // updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
+                    }
+                }
+                else {
+                    buffSheet.currentStacks = totalChange;
+                    for (let ally of batchTargetArray) {
+                        const hasCipherBuff = ally.buffsObject[cipherName];
+                        buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
+                        updateBuff(battleData,ally,buffSheet);
+                    }
+                    
+                    countdown.duration = sourceTurn.turnState ? 3 : 2;
+                    battleActions.updateBuff(battleData,sourceTurn,countdown);
+
+                    sourceTurn.battleValues.talentZoneActive = true;
+
+                    const fakeSheet = ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
+                    const enemyPositions = battleData.enemyPositions;
+                    updateBuffBatchTargets(battleData,enemyPositions,fakeSheet,false,null,true)
+                }
+
+                if (!isRedone && !silent) {
+                    battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                    poke("TalentEnd",battleData,{sourceTurn});
+                }
+            },
+            talentZoneExpired(battleData,expireParam) {
+                const sparkleTurn = battleData.nameBasedTurns[expireParam.slot];
+                const buffSheet = sparkleTurn.buffsObject[expireParam.buffName]
+                let batchTargetArray = [];
+
+                sparkleTurn.battleValues.talentZoneActive = false;
+                const allyTurns = battleData.nameBasedTurns;
+                
+                for (let allySlot in allyTurns) {
+                    const currentAlly = allyTurns[allySlot];
+                    if (currentAlly.isUnselectable) {continue;}
+                    batchTargetArray.push(currentAlly);
+                }
+                removeBuffFromBatch(battleData,batchTargetArray,buffSheet);
+
+                
+                const fakeObject = expireParam.fakeName;
+
+                const enemyPositions = battleData.enemyPositions;
+                removeBuffFromBatch(battleData,enemyPositions,fakeObject,false,null,true);
+            },
+            sparkleTechnique(battleData,target,sourceTurn) {//energy gain added
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.sparkleTechREF ??= ATKObjects.Technique["Unreliable Narrator"].variant1;
+
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                let spRecovery = 3;
+                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
+                battleActions.updateEnergy(battleData,20,sourceTurn,false,"Sparkle Technique");
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "sparkleReserveSPGained",
+                condition(battleData,generalInfo) {
+                    // poke("sparkleReserveSPGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.reservePoints;
+                    valuesRef.reservePoints = Math.min(10,oldValue + pointsGained);
+
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Reserve SP (Sparkle): ${oldValue} --> ${valuesRef.reservePoints}/10 [${sourceString}]`});
+                        
+                    }
+                    if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                },
+                "target": "self",
+                "listenerName": "Reserve SP Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "SPChange",//RESERVE SP ADDED
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    //fail condition if the change isn't for points spent
+                    let spChange = generalInfo.SPChange;
+                    let changeIsNegative = spChange < 0;
+
+                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow});
+
+                    if (changeIsNegative) {
+                        const fullChange = -spChange;
+                        const battleValues = ownerTurn.battleValues;
+
+                        const reservePoints = battleValues.reservePoints;
+                        if (reservePoints) {
+                            const maximum = battleData.battleTable.SPMax;
+                            const current = battleData.skillPointCurrent;
+                            const actualDiff = maximum - current;
+
+                            if (actualDiff) {
+                                const amountToGain = reservePoints > actualDiff ? actualDiff : reservePoints;
+                                // battleValues.reservePoints -= amountToGain;
+                                poke("sparkleReserveSPGained",battleData,{pointsGained: -amountToGain,sourceString:"Used reserve SP"});
+                                battleActions.updateSkillPoints(amountToGain,battleData,{sourceTurn: ownerTurn,sourceName:"Sparkle: Reserve Skill Points"});
+                            }
+                        }
+
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (!ownerTurn.nextSkillFree) {//TRACE: Artificial Flower
+                            
+                            sourceTurn.sparkleTraceSpentTracking ??= 0;
+                            sourceTurn.sparkleTraceSpentTracking += fullChange;
+
+                            if (sourceTurn.sparkleTraceSpentTracking >= 3) {
+                                ownerTurn.nextSkillFree = true;
+                                if (battleData.isLoggyLogger) {
+                                    // GenericActionWithImage
+                                    logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point07.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Ally spent >=3 SP in a turn, next Sparkle Skill is free`});
+                                    // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
+                                }
+                            }
+                        }
+
+
+                        let totalChange = Math.min(3, fullChange);//since the bonus caps out at 3 stacks we limit it to a maximum of 3 total spent that can stack here
+                        const sparkleCreateHerringBuff = this.sparkleCreateHerringBuff ??= turnLogic[characterName].skillFunctions.sparkleCreateHerringBuff;
+                        sparkleCreateHerringBuff(battleData,ownerTurn,totalChange,false);
+
+                        const dreamDiverBuffName = this.dreamName ??= turnLogic[ownerTurn.properName].buffNames.dreamdiver;
+                        if (sourceTurn.buffsObject[dreamDiverBuffName]) {
+                            battleActions.updateEnergy(battleData,1,ownerTurn,false,"Ally with Dreamdiver used SP");
+                        }
+                    }
+                },
+                "target": "team",
+                "listenerName": "Sparkle - Applied: Red Herring - Talent",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (!ownerTurn.battleValues.talentZoneActive) {return;}
+
+
+                    let targetTurn = generalInfo.slotRef;
+
+                    let buffSheet = this.buffSheet ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
+
+                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "enemy",
+                "listenerName": "Talent vuln(fake) application for new enemies added to field",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    const sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return};
+                    //only evaluate turn starts from character entities
+
+                    sourceTurn.sparkleTraceSpentTracking = 0;
+                },
+                "target": "self",
+                "listenerName": "Sparkle - SP Spent tracker reset (turn start)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    const sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return};
+                    //only evaluate turn starts from character entities
+
+                    sourceTurn.sparkleTraceSpentTracking = 0;
+                },
+                "target": "self",
+                "listenerName": "Sparkle - SP Spent tracker reset (turn end)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleSettings",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let e4 = ownerTurn.rank >= 4;
+                    battleData.battleTable.SPMax += 2 + (e4 ? 1 : 0);
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: "Skill Point Max +2"});}
+                },
+                "target": "self",
+                "listenerName": "Sparkle - +SP Max - Talent",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {//DONE
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    const logicRef = turnLogic[characterName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+
+                    if (!ATKObjects.sparkleE1SPDSheet) {
+                        ATKObjects.sparkleE1SPDSheet = this.sparkleE1SPDSheet ??= {
+                            "stats": [SPDP],
+                            [SPDP]: 0.15,
+                            "source": "E1",
+                            "sourceOwner": characterName,
+                            "buffName": logicRef.buffNames.e1SPD,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "removeOnDeath": true,
+                        }
+                    }
+
+                    const buffSheet = ATKObjects.sparkleE1SPDSheet;
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {//DONE
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let buffSheet2 = this.buffSheet2 ??= {
+                        "stats": [ATKP],
+                        [ATKP]: 0.45,
+                        "source": characterName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.nocturne,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    let batchTargetArray = [];
+                    const allyTurns = battleData.nameBasedTurns;
+                    //TODO: adjust a few things for isUnselectable
+                    for (let allySlot in allyTurns) {
+                        const currentAlly = allyTurns[allySlot];
+                        if (!currentAlly.isUnselectable) {
+                            batchTargetArray.push(currentAlly);
+                        }
+                    }
+                    updateBuffBatchTargets(battleData,batchTargetArray,buffSheet2);
+                },
+                "target": "self",
+                "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+
+
+
+                        // const queueObject = this.queueObject ??= {
+                        //     attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.saberUltimate,
+                        //     target: this.target,
+                        //     name: this.listenerName,
+                        //     properName: ownerTurn.properName,
+                        //     sourceTurn: ownerTurn,
+                        //     isAttackUlt: true,
+                        // }
+                        // queueObject.sourceTurn = ownerTurn;
+                    }
+                },
+                "target": "team",
+                "listenerName": "Sparkle - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const sparkleTechnique = this.sparkleTechnique ??= logicRef.skillFunctions.sparkleTechnique;
+                        sparkleTechnique(battleData,"self",ownerTurn)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sparkle Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "reservePoints": 0,
+            "nextSkillFree": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Buff",
+        "buffNames": {
+            "nocturne": "Nocturne: Bonus ATK%",
+            "redHerringCountdown": "Figment (Sparkle)",
+            "e1SPD": "E1: Suspension of Disbelief",
+            "talentFakeDebuff": "Red Herring (Debuff)",
+
+            "cipher": "Cipher",
+            "redHerring": "Red Herring",
+            "dreamdiver": "Dreamdiver"
         },
         "characterValuesBattle": {},
     },

@@ -2971,7 +2971,6 @@ const customMenu = {
             const isEvent = action.eventOverrideImage;
             const currentLogType = action.logType;
 
-
             // "actionOrderFiltersChars": {
             //         "char1": true,
             //         "char2": true,

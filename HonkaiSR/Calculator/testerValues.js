@@ -196,6 +196,14 @@ const customDisplayValuesLog = {
     "Sparxie": [
         {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true},
         {valueName: "Certified Banger", refName: "certifiedBanger"},
+        {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true},
+        
+    ],
+    "Sparkle": [
+        {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true},
+        {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
+        {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true},
+        
     ],
 }
 
@@ -303,6 +311,7 @@ const conditionsCharacterDisplayWarning = {
     "Luocha": defaultStandardAbilityDisplayWarnings,
     "Yao Guang": defaultStandardAbilityDisplayWarnings,
     "Sparxie": defaultStandardAbilityDisplayWarnings,
+    "Sparkle": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -1519,6 +1528,11 @@ const defaultConditions = {
         }
     },
     "Sparxie": {
+        "hasEnhancedState": false,
+        "Skill": null,
+        "Ultimate": null
+    },
+    "Sparkle": {
         "hasEnhancedState": false,
         "Skill": null,
         "Ultimate": null
