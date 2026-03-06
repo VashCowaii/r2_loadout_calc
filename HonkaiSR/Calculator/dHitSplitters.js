@@ -685,6 +685,255 @@ const hitSplitters = {
             }
         ],
     },
+    "Jingliu": {
+        "basic": [
+            {
+              "primary": {
+                "hitRatio": 0.3,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.7,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "skill": [
+            {
+              "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            },
+        ],
+        "skill2": [
+          {
+            "primary": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+          },
+          {
+            "primary": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+          },
+          {
+            "primary": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+          },
+          {
+            "primary": {
+              "hitRatio": 0.2,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.2,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+          },
+          {
+            "primary": {
+              "hitRatio": 0.5,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.5,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+          },
+        ],
+        "skill2E1": [
+          {
+            "primary": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+          },
+          {
+            "primary": {
+              "hitRatio": 0.10,
+              "energyRatio": 0,
+              "toughness": 0
+            },
+            "perHitMultiOverride": 0.80,
+          },
+          {
+            "primary": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+          },
+          {
+            "primary": {
+              "hitRatio": 0.10,
+              "energyRatio": 0,
+              "toughness": 0
+            },
+            "perHitMultiOverride": 0.80,
+          },
+          {
+            "primary": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.1,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+          },
+          {
+            "primary": {
+              "hitRatio": 0.10,
+              "energyRatio": 0,
+              "toughness": 0
+            },
+            "perHitMultiOverride": 0.80,
+          },
+          {
+            "primary": {
+              "hitRatio": 0.2,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.2,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+          },
+          {
+            "primary": {
+              "hitRatio": 0.20,
+              "energyRatio": 0,
+              "toughness": 0
+            },
+            "perHitMultiOverride": 0.80,
+          },
+          {
+            "primary": {
+              "hitRatio": 0.5,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 0.5,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+          },
+          {
+            "primary": {
+              "hitRatio": 0.50,
+              "energyRatio": 0,
+              "toughness": 0
+            },
+            "perHitMultiOverride": 0.80,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+          },
+        ],
+        "ult": [
+            {
+              "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "ultE1": [
+            {
+              "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 20
+              },
+              "blast": {
+                "hitRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+            },
+            {
+              "primary": {
+                "hitRatio": 1,
+                "energyRatio": 0,
+                "toughness": 0
+              },
+              "perHitMultiOverride": 0.80,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            },
+        ],
+    },
 
     //ERUDITION
     "Argenti": {//done

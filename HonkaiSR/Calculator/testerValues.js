@@ -202,8 +202,15 @@ const customDisplayValuesLog = {
     "Sparkle": [
         {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true},
         {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
-        {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    ],
+    "Jingliu": [
+        {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true},
+        {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true},
+        {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
         
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
 }
 
@@ -317,6 +324,13 @@ const conditionsCharacterDisplayWarning = {
         "Skill": "",
         "Ultimate": "",
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SPORFree,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Jingliu": {
+        hasEnhancedState: true,
+        "Skill": "When Enhanced, Skill conditions will be ignored since it is the only action she can take.",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
 }
@@ -796,6 +810,11 @@ const defaultConditions = {
             "array": []
         }
     },
+    "Jingliu": {
+        "hasEnhancedState": false,
+        "Skill": null,
+        "Ultimate": null
+    },
 
     //HUNT
     // "Archer": {
@@ -1187,6 +1206,11 @@ const defaultConditions = {
             "array": []
         }
     },
+    "Sparkle": {
+        "hasEnhancedState": false,
+        "Skill": null,
+        "Ultimate": null
+    },
 
     //ABUNDANCE
     "Huohuo": {
@@ -1535,11 +1559,6 @@ const defaultConditions = {
         }
     },
     "Sparxie": {
-        "hasEnhancedState": false,
-        "Skill": null,
-        "Ultimate": null
-    },
-    "Sparkle": {
         "hasEnhancedState": false,
         "Skill": null,
         "Ultimate": null
