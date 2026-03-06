@@ -171,15 +171,15 @@ const customDisplayValuesLog = {
         {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
-    "Luocha": [
+    "Luocha": [//tracker done
         {valueName: "Skill Injection Ready", refName: "isReadyToInjectSkill", isBattleValue: true, isCharacterState: true},
         {valueName: "Skill Injection Cooldown", refName: "skillInjectCooldown", isBattleValue: true},
         {valueName: "Zone Active", refName: "zoneIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Zone Queued", refName: "zoneIsQueued", isBattleValue: true, isCharacterState: true},
         
-        {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true}, 
+        {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true,summaryValue: "luochaAbyssSummer",summaryType: "SUM"}, 
     ],
-    "Tribbie": [
+    "Tribbie": [//no tracker needed
         {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true},
         {valueName: "Ult Zone Active", refName: "tribbieZoneActive", isCharacterState: true},
         
@@ -189,7 +189,7 @@ const customDisplayValuesLog = {
         {valueName: "E1 Skillpoint Ready", refName: "e1SPRegenReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 1},
         {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
     ],  
-    "Asta": [
+    "Asta": [//tracker done
         {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM"},
         {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
     ],
