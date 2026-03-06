@@ -1925,6 +1925,15 @@ const customMenu = {
             }
             weaknessString += "</div>";
 
+
+
+            let classDMGColoring = null;
+            const checkDMGTags = currentAction.tags ? new Set (currentAction.tags) : null;
+            if (checkDMGTags) {
+                if (checkDMGTags.has("Elation")) {classDMGColoring = "elationDMGColoring";}
+                // else if (checkDMGTags.has("True")) {classDMGColoring = "trueDMGColoring";}
+            }
+
             const breakString = currentAction.hitType === "SuperBreak" || currentAction.hitType === "Break" ? `
             <div class="totalHealingBoxBreakdownRows">
                 ${hitData.instanceMulti ? `<div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
@@ -4767,6 +4776,20 @@ const userTriggers = {
                     const targetIsEnemy = targetTurnHitEnemy.isEnemy;
                     let enemyNumber = targetIsEnemy ? targetTurnHitEnemy.enemyNumber : null;
 
+                    let classDMGColoring = null;
+                    // const checkDMGTags = currentAction.tags ? new Set (currentAction.tags) : null;
+                    // if (checkDMGTags) {
+                    //     if (checkDMGTags.has("Elation")) {classDMGColoring = "elationDMGColoring";}
+                    //     // else if (checkDMGTags.has("True")) {classDMGColoring = "trueDMGColoring";}
+                    // }
+                    if (action.hitType === "Elation") {
+                        classDMGColoring = "elationDMGColoring";
+                    }
+
+
+                    const elationOpen = classDMGColoring === "elationDMGColoring" ? `<span class="elationDMGColoring">` : null;
+                    const elationClose = classDMGColoring === "elationDMGColoring" ? `</span>` : null;
+
 
                     // element
 
@@ -4913,7 +4936,7 @@ const userTriggers = {
                             </div>
 
                             
-                            <div class="actionDetailBodyInner">${hitData.currentSplit ? `${+(hitData.currentSplit*100).toFixed(2)}% `: ""} ${action.enemyIsDead ? "[KILL] " : ""}${action.enemyIsBroken ? "[BREAK]" : ""} ${action.hitType} DMG: ${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose}/${colorOpening}${hitData.DMGTotalCrit.toLocaleString()}${colorClose} (AVG ${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})${action.sourceString ? ` - [${action.sourceString}]` : ""}</div>
+                            <div class="actionDetailBodyInner">${hitData.currentSplit ? `${+(hitData.currentSplit*100).toFixed(2)}% `: ""} ${action.enemyIsDead ? "[KILL] " : ""}${action.enemyIsBroken ? "[BREAK]" : ""} ${action.hitType} DMG: ${elationOpen ?? colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${elationClose ?? colorClose}/${elationOpen ?? colorOpening}${hitData.DMGTotalCrit.toLocaleString()}${elationClose ?? colorClose} (AVG ${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})${action.sourceString ? ` - [${action.sourceString}]` : ""}</div>
                         </div>`;
                     }
                     // battleData.battleLog.push({logType: "HitEnemy", hitType: "Single Target", target: enemyPrimary.properName, source:charName, hitData});

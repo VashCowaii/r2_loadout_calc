@@ -70,6 +70,43 @@ const battleActions = {
         if (battleData.isLoggyLogger) {
             // logToBattle(battleData,{logType: "EnergyChange", target: sourceTurn.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:sourceTurn.currentEnergy, maximum, source:sourceName});
             logToBattle(battleData,{logType: "PunchlineChange", amount, oldEnergy, newEnergy:battleData.punchline, source:sourceName});
+
+            if (amount > 0) {
+                
+                battleData.teamPunchlineSummer ??= 0;
+                battleData.teamPunchlineSummer += amount;
+                // console.log(ownerTurn.saberSumResonance)
+            }
+            logToBattle(battleData,{
+                logType: "SUMMARY:SUM",
+                function: "teamPunchlineSummer",
+                AV: battleData.sumAV,
+                currentValue: battleData.punchline,
+                currentSumValue: battleData.teamPunchlineSummer ??= 0,
+                currentAddedValue: amount
+            });
+
+            if (battleData.nameBasedTurns[sourceTurn?.name]) {
+
+                const nameSummer = `punchlineSummer${sourceTurn.properName}`
+                if (amount > 0) {
+                
+                    sourceTurn.punchlineGenerated ??= 0;
+                    sourceTurn.punchlineGenerated += amount;
+
+                    sourceTurn[nameSummer] ??= 0;
+                    sourceTurn[nameSummer] += amount;
+                    // console.log(ownerTurn.saberSumResonance)
+                }
+                logToBattle(battleData,{
+                    logType: "SUMMARY:SUM",
+                    function: nameSummer,
+                    AV: battleData.sumAV,
+                    currentValue: sourceTurn.punchlineGenerated,
+                    currentSumValue: sourceTurn[nameSummer],
+                    currentAddedValue: amount
+                });
+            }
         }
         // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
         poke("PunchlineChanged",battleData,{sourceTurn,newAmount,amount});
@@ -98,6 +135,22 @@ const battleActions = {
         if (battleData.isLoggyLogger) {
             // logToBattle(battleData,{logType: "EnergyChange", target: sourceTurn.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:sourceTurn.currentEnergy, maximum, source:sourceName});
             logToBattle(battleData,{logType: "CertifiedBangerChange", target: sourceTurn.properName, amount, oldEnergy, newEnergy:sourceTurn.certifiedBanger, source:sourceName});
+
+            const bangerNamer = `certifiedBangerSummer${sourceTurn.properName}`;
+            if (amount > 0) {
+                
+                sourceTurn[bangerNamer] ??= 0;
+                sourceTurn[bangerNamer] += amount;
+                // console.log(ownerTurn.saberSumResonance)
+            }
+            logToBattle(battleData,{
+                logType: "SUMMARY:SUM",
+                function: bangerNamer,
+                AV: battleData.sumAV,
+                currentValue: sourceTurn.certifiedBanger,
+                currentSumValue: sourceTurn[bangerNamer],
+                currentAddedValue: sourceTurn.certifiedBanger - oldEnergy
+            });
         }
         // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
         poke("CertifiedBangerChanged",battleData,{sourceTurn,newAmount,amount});
@@ -9647,6 +9700,19 @@ const turnLogic = {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Abyss Flower (Luocha): ${oldValue} --> ${valuesRef.abyssFlowerStacks}/2 [${sourceString}]`});
                         
+                        if (pointsGained > 0) {
+                            ownerTurn.luochaAbyssSummer ??= 0;
+                            ownerTurn.luochaAbyssSummer += valuesRef.abyssFlowerStacks - oldValue;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "luochaAbyssSummer",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.abyssFlowerStacks,
+                            currentSumValue: ownerTurn.luochaAbyssSummer,
+                            currentAddedValue: valuesRef.abyssFlowerStacks - oldValue
+                        });
                     }
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
                 },
@@ -10897,10 +10963,27 @@ const turnLogic = {
                 let skillRef = ATKObjects.kafkaFUAREF ??= ATKObjects.Talent["Gentle but Cruel"].variant1;
 
                 const valuesRef = sourceTurn.battleValues;
+                const oldValue = valuesRef.fuaStacks;
                 //stack debt is accrued when the FUA is queued, as such we not only need to reduce the stack count, but also clear associated stack debt so the correct amount of FUA's can be queued
                 valuesRef.fuaStacks -= 1;
                 valuesRef.fuaStackDebt -= 1;
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"FUA Launched", bodyText: `Kafka FUA Stacks ${valuesRef.fuaStacks + 1} --> ${valuesRef.fuaStacks}/2`});}
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericAction", source:"FUA Launched", bodyText: `Kafka FUA Stacks ${valuesRef.fuaStacks + 1} --> ${valuesRef.fuaStacks}/2`});
+
+                    // if (valuesRef.fuaStacks > oldValue) {
+                    //     sourceTurn.kafkaFUAStackSum ??= 0;
+                    //     sourceTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                        
+                    // }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "kafkaFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: valuesRef.fuaStacks,
+                        currentSumValue: sourceTurn.kafkaFUAStackSum,
+                        currentAddedValue: valuesRef.fuaStacks - oldValue
+                    });
+                }
 
                 if (!ATKObjects.kafkaFUAATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
@@ -10998,7 +11081,23 @@ const turnLogic = {
                 const valuesRef = sourceTurn.battleValues;
                 const oldValue = valuesRef.fuaStacks;
                 valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Thorns - Post ult stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});}
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericAction", source:"Thorns - Post ult stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
+
+                    if (valuesRef.fuaStacks > oldValue) {
+                        sourceTurn.kafkaFUAStackSum ??= 0;
+                        sourceTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                        
+                    }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "kafkaFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: valuesRef.fuaStacks,
+                        currentSumValue: sourceTurn.kafkaFUAStackSum,
+                        currentAddedValue: valuesRef.fuaStacks - oldValue
+                    });
+                }
 
                 sourceTurn.ultyQueued = false;
             },
@@ -11220,7 +11319,23 @@ const turnLogic = {
                     const valuesRef = ownerTurn.battleValues;
                     const oldValue = valuesRef.fuaStacks;
                     valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Kafka Turn-start stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});}
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericAction", source:"Kafka Turn-start stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
+
+                        if (valuesRef.fuaStacks > oldValue) {
+                            ownerTurn.kafkaFUAStackSum ??= 0;
+                            ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "kafkaFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.fuaStacks,
+                            currentSumValue: ownerTurn.kafkaFUAStackSum,
+                            currentAddedValue: valuesRef.fuaStacks - oldValue
+                        });
+                    }
                 },
                 "target": "self",
                 "listenerName": "Kafka turnend stack gain",
@@ -13666,8 +13781,24 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const valuesRef = sourceTurn.battleValues;
+                const oldValue = valuesRef.charge;
                 valuesRef.charge -= 1;
                 valuesRef.chargeDebt -= 1;
+                if (battleData.isLoggyLogger) {
+                    // if (newCharge > oldValue) {
+                    //     sourceTurn.archerFUAStackSum ??= 0;
+                    //     sourceTurn.archerFUAStackSum += newCharge - oldValue;
+                        
+                    // }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "archerFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: valuesRef.charge,
+                        currentSumValue: sourceTurn.archerFUAStackSum,
+                        currentAddedValue: valuesRef.charge - oldValue
+                    });
+                }
 
                 let skillRef = ATKObjects.archerFUAREF ??= ATKObjects.Talent["Mind's Eye (True)"].variant1;
 
@@ -13859,8 +13990,25 @@ const turnLogic = {
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 let chargeRef = sourceTurn.battleValues;
 
+                const oldValue = chargeRef.charge;
                 let newCharge = Math.min(4,chargeRef.charge + 2)
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});
+
+                    if (newCharge > oldValue) {
+                        sourceTurn.archerFUAStackSum ??= 0;
+                        sourceTurn.archerFUAStackSum += newCharge - oldValue;
+                        
+                    }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "archerFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: newCharge,
+                        currentSumValue: sourceTurn.archerFUAStackSum,
+                        currentAddedValue: newCharge - oldValue
+                    });
+                }
                 chargeRef.charge = newCharge;
                 // poke("SkillEnd",battleData,{source:"Archer"});
                 sourceTurn.ultyQueued = false;
@@ -13935,10 +14083,27 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    let chargeRef = ownerTurn.battleValues;
-                    let newCharge = Math.min(4,chargeRef.charge + 1)
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
-                    chargeRef.charge = newCharge;
+                    let valuesRef = ownerTurn.battleValues;
+                    const oldValue = valuesRef.charge
+                    let newCharge = Math.min(4,valuesRef.charge + 1);
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${valuesRef.charge} --> ${newCharge}/4`});
+
+                        if (newCharge > oldValue) {
+                            ownerTurn.archerFUAStackSum ??= 0;
+                            ownerTurn.archerFUAStackSum += newCharge - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "archerFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: newCharge,
+                            currentSumValue: ownerTurn.archerFUAStackSum,
+                            currentAddedValue: newCharge - oldValue
+                        });
+                    }
+                    valuesRef.charge = newCharge;
                 },
                 "target": "self",
                 "listenerName": "Archer - +Charge - Major Trace: Hero of Justice",
@@ -17649,6 +17814,20 @@ const turnLogic = {
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
+                    
+                        if (pointsGained > 0) {
+                            ownerTurn.astaChargeSummer ??= 0;
+                            ownerTurn.astaChargeSummer += valuesRef.chargeStacks - oldValue;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "astaChargeSummer",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.chargeStacks,
+                            currentSumValue: ownerTurn.astaChargeSummer,
+                            currentAddedValue: valuesRef.chargeStacks - oldValue
+                        });
                     }
 
                     if (!ATKObjects.astaChargeATKSHEET) {
@@ -19160,6 +19339,19 @@ const turnLogic = {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Reserve SP (Sparkle): ${oldValue} --> ${valuesRef.reservePoints}/10 [${sourceString}]`});
                         
+                        if (pointsGained > 0) {
+                            ownerTurn.sparkleReserveSum ??= 0;
+                            ownerTurn.sparkleReserveSum += valuesRef.reservePoints - oldValue;
+                            // console.log(ownerTurn.sparkleReserveSum)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparkleReserveSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.reservePoints,
+                            currentSumValue: ownerTurn.sparkleReserveSum,
+                            currentAddedValue: valuesRef.reservePoints - oldValue
+                        });
                     }
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
                 },
@@ -19653,7 +19845,23 @@ const turnLogic = {
                 if (oldAmount) {
                     valuesRef.overflowEnergy = 0;
                     // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate use: Blessing of the Lake", bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> 0`});}
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: -oldAmount, oldEnergy:oldAmount, newEnergy:0, maximum:sourceTurn.rank>=6 ? 200 : 120, source:"Blessing of the Lake"});}
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: -oldAmount, oldEnergy:oldAmount, newEnergy:0, maximum:sourceTurn.rank>=6 ? 200 : 120, source:"Blessing of the Lake"});
+                    
+                        if (valuesRef.overflowEnergy > oldAmount) {
+                            sourceTurn.saberOverflowSummer ??= 0;
+                            sourceTurn.saberOverflowSummer += amountGained;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "saberOverflowSummer",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.overflowEnergy,
+                            currentSumValue: sourceTurn.saberOverflowSummer,
+                            currentAddedValue: -oldAmount
+                        });
+                    }
                     updateEnergy(battleData,oldAmount,sourceTurn,true,"Blessing of the Lake");
                 }
                 valuesRef.isEnhanced = true;
@@ -19869,11 +20077,25 @@ const turnLogic = {
                     const oldValue = valuesRef.coreResonance;
                     valuesRef.coreResonance += pointsGained;
                     const resoRef = valuesRef.coreResonance;
-                    const sourceString = generalInfo.sourceString
+                    const sourceString = generalInfo.sourceString;
                     if (pointsGained && battleData.isLoggyLogger) {
                         // GenericActionWithImage
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Core Resonance: ${oldValue} --> ${resoRef} [${sourceString}]`});
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
+
+                        if (pointsGained > 0) {
+                            ownerTurn.saberSumResonance ??= 0;
+                            ownerTurn.saberSumResonance += valuesRef.coreResonance - oldValue;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "saberSumResonance",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.coreResonance,
+                            currentSumValue: ownerTurn.saberSumResonance,
+                            currentAddedValue: valuesRef.coreResonance - oldValue
+                        });
                     }
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
 
@@ -19939,7 +20161,23 @@ const turnLogic = {
                         // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
 
 
-                        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});}
+                        if (battleData.isLoggyLogger) {
+                            logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
+                        
+                            if (valuesRef.overflowEnergy > oldAmount) {
+                                ownerTurn.saberOverflowSummer ??= 0;
+                                ownerTurn.saberOverflowSummer += amountGained;
+                                // console.log(ownerTurn.saberSumResonance)
+                            }
+                            logToBattle(battleData,{
+                                logType: "SUMMARY:SUM",
+                                function: "saberOverflowSummer",
+                                AV: battleData.sumAV,
+                                currentValue: valuesRef.overflowEnergy,
+                                currentSumValue: ownerTurn.saberOverflowSummer,
+                                currentAddedValue: amountGained
+                            });
+                        }
                     }
 
                     poke("SaberGainCoreResonance",battleData,{pointsGained: 0,sourceString:null});//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
@@ -20481,7 +20719,20 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {
                     // logToBattle(battleData,{logType: "GenericAction", source:"HP tally handler", bodyText: `Tally (Blade) ${oldAmount.toLocaleString()} --> ${bladeTurn.bladeHPTally.toLocaleString()}`});
                     logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[bladeTurn.properName].traces.Point03.icon,sourceName: bladeTurn.properName, source:"HP Tally Handler", bodyText: `Tally (Blade): ${oldAmount} --> ${bladeTurn.bladeHPTally}`});
+                       
+                    if (amountToGain > 0) {
+                        bladeTurn.bladeHPTallySummer ??= 0;
+                        bladeTurn.bladeHPTallySummer += bladeTurn.bladeHPTally - oldAmount;
                         
+                    }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "bladeHPTallySummer",
+                        AV: battleData.sumAV,
+                        currentValue: bladeTurn.bladeHPTally,
+                        currentSumValue: bladeTurn.bladeHPTallySummer,
+                        currentAddedValue: bladeTurn.bladeHPTally - oldAmount
+                    });
                 }
             },
             bladeFUA(battleData,sourceTurn) {
@@ -20743,6 +20994,20 @@ const turnLogic = {
                     if (battleData.isLoggyLogger && oldValue != valuesRef.charge) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blade Charge ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Blade): ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
+                    
+                        // if (pointsGained > 0) {
+                            ownerTurn.bladeFUAStackSum ??= 0;
+                            ownerTurn.bladeFUAStackSum += valuesRef.charge - oldValue;
+                            
+                        // }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "bladeFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.charge,
+                            currentSumValue: ownerTurn.bladeFUAStackSum,
+                            currentAddedValue: valuesRef.charge - oldValue
+                        });
                     }
                     
                     if (valuesRef.charge === chargeCap && !ownerTurn.bladeFUAIsQueued) {
@@ -21388,6 +21653,19 @@ const turnLogic = {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Syzygy (Jingliu): ${oldValue} --> ${valuesRef.weirdStacks}/${maxValue} [${sourceString}]`});
                         
+                        if (pointsGained > 0) {
+                            ownerTurn.jingliuSyzygySum ??= 0;
+                            ownerTurn.jingliuSyzygySum += valuesRef.weirdStacks - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "jingliuSyzygySum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.weirdStacks,
+                            currentSumValue: ownerTurn.jingliuSyzygySum,
+                            currentAddedValue: valuesRef.weirdStacks - oldValue
+                        });
                     }
 
 
@@ -21487,12 +21765,31 @@ const turnLogic = {
                     // if (sourceTurn.isE) {return;}
 
                     const valuesRef = ownerTurn.battleValues;
+                    const oldValue = valuesRef.hpLossCount;
                     valuesRef.hpLossCount++;
+
+                    
 
                     if (valuesRef.hpLossCount >= 20) {
                         valuesRef.hpLossCount -= 20;
                         const sourceObject = this.sourceObject ??= {pointsGained: 1,sourceString:"HP Loss Counter >= 20"}
                         poke("jingliuWeirdStackGained",battleData,sourceObject);
+                    }
+
+                    if (battleData.isLoggyLogger) {
+                        // if (pointsGained > 0) {
+                            ownerTurn.jingliuHPCounterSUm ??= 0;
+                            ownerTurn.jingliuHPCounterSUm += 1;
+                            
+                        // }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "jingliuHPCounterSUm",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.hpLossCount,
+                            currentSumValue: ownerTurn.jingliuHPCounterSUm,
+                            currentAddedValue: 1
+                        });
                     }
 
 
@@ -25683,6 +25980,19 @@ const turnLogic = {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         
+                        if (pointsGained > 0) {
+                            ownerTurn.avenBlindBetSum ??= 0;
+                            ownerTurn.avenBlindBetSum += valuesRef.betStacks - oldValue;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "avenBlindBetSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.betStacks,
+                            currentSumValue: ownerTurn.avenBlindBetSum,
+                            currentAddedValue: valuesRef.betStacks - oldValue
+                        });
                     }
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
                 },
@@ -28698,7 +29008,7 @@ const turnLogic = {
                 let values = ATKObjects.sparxSkillInstanceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 
                 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+               
                 // poke("SkillStart",battleData,{sourceTurn});
 
                 const rngArray = sourceTurn.rngArray ??= [1,1,2,1,1];
@@ -28708,6 +29018,22 @@ const turnLogic = {
                 if (battleValues.rngCurrentIndex === 5) {battleValues.rngCurrentIndex = 0;}
                 else if (battleValues.rngCurrentIndex >= 3) {battleValues.rngCurrentIndex -= 2}
                 battleValues.skillCounter++;
+
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});
+                    // if (pointsGained > 0) {
+                        sourceTurn.sparxieEnhanceSum ??= 0;
+                        sourceTurn.sparxieEnhanceSum += 1;
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparxieEnhanceSum",
+                            AV: battleData.sumAV,
+                            currentValue: battleValues.skillCounter,
+                            currentSumValue: sourceTurn.sparxieEnhanceSum,
+                            currentAddedValue: 1
+                        });
+                    // }
+                }
 
                 
 
@@ -28757,6 +29083,18 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {
                     logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point02.icon,sourceName: sourceTurn.properName, source:"Sparxie Skill", bodyText: `Engagement Farming Continued: #${battleValues.skillCounter}`});
+                    // if (pointsGained > 0) {
+                        sourceTurn.sparxieEnhanceSum ??= 0;
+                        sourceTurn.sparxieEnhanceSum += 1;
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparxieEnhanceSum",
+                            AV: battleData.sumAV,
+                            currentValue: battleValues.skillCounter,
+                            currentSumValue: sourceTurn.sparxieEnhanceSum,
+                            currentAddedValue: 1
+                        });
+                    // }
                 }
 
                 if (rngIndex === 2 && battleValues.skillCounter < 15) {
@@ -29125,6 +29463,20 @@ const turnLogic = {
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Thrill (Sparxie): ${oldValue} --> ${valuesRef.thrill} [${sourceString}]`});
+                    
+                        if (pointsGained > 0) {
+                            ownerTurn.sparxieThrillSum ??= 0;
+                            ownerTurn.sparxieThrillSum += valuesRef.thrill - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparxieThrillSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.thrill,
+                            currentSumValue: ownerTurn.sparxieThrillSum,
+                            currentAddedValue: valuesRef.thrill - oldValue
+                        });
                     }
 
 

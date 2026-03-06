@@ -5175,6 +5175,200 @@ const graphs = {
         }
         actionCountDisplayString += "</details>";
 
+
+
+        // saberSumResonance
+        // const actionCountTotals = battleTotalsObject.Actions;
+
+        // customDisplayValuesLog
+        let actionCUSTOMDisplayString = ``;
+
+        for (let charEntry in actionCountTotals) {
+            const charActions = customDisplayValuesLog[charEntry];
+            if (!charActions || !charActions.length) {continue}
+            let foundSummaryTypes = false;
+
+            // logToBattle(battleData,{logType: "SUMMARY:SUM",function: "saberSumResonance",currentSumValue: valuesRef.coreResonance,currentAddedValue: pointsGained});
+
+            let entryLineStringer = "";
+            let totalCharacterActions = 1;
+
+            let valueFound = null;
+            // let nameToGive = 
+            for (let entrySummary of charActions) {
+                let currentTypeSummary = entrySummary.summaryType;
+                if (!currentTypeSummary) {continue;}
+                const compositeType = `SUMMARY:${currentTypeSummary}`;//saberSumResonance
+
+                // console.log(currentTypeSummary)
+                if (currentTypeSummary === "SUM") {
+                    for (let z=log.length-1;z>=0;z--) {
+                        const currentEntry = log[z];
+
+                        if (currentEntry.logType === compositeType && currentEntry.function === entrySummary.summaryValue) {
+                            valueFound = currentEntry.currentSumValue;
+                            // console.log("break",z,currentEntry.currentSumValue)
+                            break;
+                        }
+                    }
+                }
+                
+                if (valueFound == null) {break;}
+
+                // console.log(valueFound)
+                entryLineStringer += `
+                    <div class="actionDetailBodyRowSummaryDMGBoxHolderACTIONBAR">
+                        <div class="rowSummaryDMGBarDynamicACTIONBAR" style="width:${0}%;background-color: ${"grey"}"></div>
+                        <div class="rowSummaryDMGNameAndPercentACTIONBAR">${entrySummary.valueName}: ${valueFound.toLocaleString()} (${currentTypeSummary})</div>
+                    </div>
+                    `;
+            }
+
+            if (!entryLineStringer) {continue}
+            // console.log(entryLineStringer)
+            
+            // for (let dmgTypeEntry in charActions) {
+            //     totalCharacterActions += charActions[dmgTypeEntry];
+            // }
+
+            const characterIconPath = "/HonkaiSR/" + (characters[charEntry] ? characters[charEntry].preview : (graphs.summonCustomImages[charEntry] ? graphs.summonCustomImages[charEntry] : graphs.enemyCustomImages["default"]))
+
+            // for (let actionCountEntry in charActions) {
+            //     const currentActionCount = charActions[actionCountEntry];
+            //     const currentPercent = 100 * currentActionCount/totalCharacterActions
+
+            //     entryLineStringer += `
+            //     <div class="actionDetailBodyRowSummaryDMGBoxHolderACTIONBAR">
+            //         <div class="rowSummaryDMGBarDynamicACTIONBAR" style="width:${currentPercent}%;background-color: ${dmgTypeColors[actionCountEntry]}"></div>
+            //         <div class="rowSummaryDMGNameAndPercentACTIONBAR">${actionCountEntry}: ${currentActionCount.toLocaleString()} (${currentPercent.toLocaleString()}%)</div>
+            //     </div>
+            //     `;
+            // }
+
+            let currentCharacterString = `<details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">${charEntry}</summary>
+                <div class="summaryCharacterBreakdownPerCharBox">
+                <div class="summaryCharacterBreakdownInnerRowBox">
+                    <div class="summaryCharacterBreakdownInnerRowHeader">
+                        <div class="rotationsCharacterTargetPreviewBox">
+                            <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
+                        </div>
+                    </div>
+                    
+                    <div class="summaryCharacterBreakdownInnerBarBoxHolder">
+                        ${entryLineStringer}
+                    </div>
+                </div>
+            `;
+
+            currentCharacterString += "</div>";
+            currentCharacterString += "</details>";
+
+            actionCUSTOMDisplayString += currentCharacterString;
+
+            
+        }
+
+        // console.log(battleData.teamPunchlineSummer)
+        if (battleData.teamPunchlineSummer > 0) {
+            const charActions = customDisplayValuesLog.TEAM;
+            // if (!charActions || !charActions.length) {continue}
+            let foundSummaryTypes = false;
+
+            // logToBattle(battleData,{logType: "SUMMARY:SUM",function: "saberSumResonance",currentSumValue: valuesRef.coreResonance,currentAddedValue: pointsGained});
+
+            let entryLineStringer = "";
+            let totalCharacterActions = 1;
+
+            let valueFound = null;
+            // console.log(entryLineStringer)
+            // let nameToGive = 
+            for (let entrySummary of charActions) {
+                let currentTypeSummary = entrySummary.summaryType;
+                if (!currentTypeSummary) {continue;}
+                const compositeType = `SUMMARY:${currentTypeSummary}`;//saberSumResonance
+
+                // console.log(currentTypeSummary)
+                if (currentTypeSummary === "SUM") {
+                    for (let z=log.length-1;z>=0;z--) {
+                        const currentEntry = log[z];
+
+                        if (currentEntry.logType === compositeType && currentEntry.function === entrySummary.summaryValue) {
+                            valueFound = currentEntry.currentSumValue;
+                            // console.log("break",z,currentEntry.currentSumValue)
+                            break;
+                        }
+                    }
+                }
+                
+                if (valueFound == null) {break;}
+
+                // console.log(valueFound)
+                entryLineStringer += `
+                    <div class="actionDetailBodyRowSummaryDMGBoxHolderACTIONBAR">
+                        <div class="rowSummaryDMGBarDynamicACTIONBAR" style="width:${0}%;background-color: ${"grey"}"></div>
+                        <div class="rowSummaryDMGNameAndPercentACTIONBAR">${entrySummary.valueName}: ${valueFound.toLocaleString()} (${currentTypeSummary})</div>
+                    </div>
+                    `;
+            }
+            
+
+            // if (!entryLineStringer) {continue}
+            // console.log(entryLineStringer)
+            
+            // for (let dmgTypeEntry in charActions) {
+            //     totalCharacterActions += charActions[dmgTypeEntry];
+            // }
+
+            // for (let actionCountEntry in charActions) {
+            //     const currentActionCount = charActions[actionCountEntry];
+            //     const currentPercent = 100 * currentActionCount/totalCharacterActions
+
+            //     entryLineStringer += `
+            //     <div class="actionDetailBodyRowSummaryDMGBoxHolderACTIONBAR">
+            //         <div class="rowSummaryDMGBarDynamicACTIONBAR" style="width:${currentPercent}%;background-color: ${dmgTypeColors[actionCountEntry]}"></div>
+            //         <div class="rowSummaryDMGNameAndPercentACTIONBAR">${actionCountEntry}: ${currentActionCount.toLocaleString()} (${currentPercent.toLocaleString()}%)</div>
+            //     </div>
+            //     `;
+            // }
+
+            let currentCharacterString = `<details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Team Values</summary>
+                <div class="summaryCharacterBreakdownPerCharBox">
+                <div class="summaryCharacterBreakdownInnerRowBox">
+                    
+                    <div class="summaryCharacterBreakdownInnerBarBoxHolder">
+                        ${entryLineStringer}
+                    </div>
+                </div>
+            `;
+
+            currentCharacterString += "</div>";
+            currentCharacterString += "</details>";
+
+            actionCUSTOMDisplayString += currentCharacterString;
+        }
+
+
+        actionCUSTOMDisplayString += "";
+        // console.log(actionCUSTOMDisplayString)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // {
         //     "DMG": {
         //         "Dan Heng • Permansor Terrae": {
@@ -5357,7 +5551,8 @@ const graphs = {
                 overkillDisplayString +
                 actionCountDisplayString +
                 healDisplayString + overhealDisplayString +
-                shieldDisplayString + overshieldDisplayString}
+                shieldDisplayString + overshieldDisplayString +
+                actionCUSTOMDisplayString}
                 `;
 
         // ${bulletsArray.length<=1 ? "" : lineString}
@@ -5998,6 +6193,7 @@ const graphs = {
 
         const buffGraphs = globalUI.buffGraphs;
         const graphByElement = readSelection("buffUptimeGraphByStat");
+        const graphByStatTypeElement = readSelection("buffUptimeStatNameType");
         const buffEntityElement = readSelection("buffUptimeSourceFromStat");
         const entityNameElement = readSelection("buffUptimeSourceNameStat");
         const buffNameElement = readSelection("buffUptimeBuffNameStat");
@@ -6011,6 +6207,19 @@ const graphs = {
         }
         else {buffGraphs.graphBy = graphByElement.value;}
 
+
+        
+        if (graphByStatTypeElement.innerHTML === "") {
+            graphByStatTypeElement.innerHTML = `
+            <option value="Regular">Regular</option>
+            <option value="Special">Special</option>
+            <option value="Team">Team</option>
+            `;
+            buffGraphs.statNameTYPE = "Regular";
+        }
+        else {buffGraphs.statNameTYPE = graphByStatTypeElement.value;}
+
+
         if (buffEntityElement.innerHTML === "") {
             buffEntityElement.innerHTML = `
             <option value="Character">Character</option>
@@ -6019,7 +6228,10 @@ const graphs = {
             buffGraphs.buffEntity = "Character";
         }
         else {buffGraphs.buffEntity = buffEntityElement.value;}
-
+        if (buffGraphs.statNameTYPE != "Regular") {
+            buffGraphs.buffEntity = "Character";
+            buffEntityElement.value = "Character";
+        }
 
 
         const currentEntityType = buffEntityElement.value;
@@ -6048,9 +6260,6 @@ const graphs = {
         //     }
         // }
         const entityTypeSet = new Set (entityTypeArray);
-
-        
-
         //then check if the currently selected entity name is a valid name in the currently selected typ
         if (!entityTypeSet.has(entityNameElement.value)) {
             entityNameElement.innerHTML = "";
@@ -6066,57 +6275,294 @@ const graphs = {
         else {buffGraphs.entityName = entityNameElement.value;}
 
 
-        let optionsString = "";
-
-
-        // basicShorthand.reverseKeyMappings[buffNameElement.value]
-        const defaultStat = "CRIT Rate";
-        buffGraphs.statName ??= defaultStat
-        if (buffNameElement.value === "") {buffNameElement.value = defaultStat}
-        // console.log(buffGraphs.statName)
-
-        // console.log(basicShorthand.indexToSpecific["0"])
-        const refKeys = Object.keys(greatTableIndex);
-        for (let i=0;i<refKeys.length;i++) {
-            const specificName = basicShorthand.indexToSpecific[i];
-            if (specificName === "Empty" || specificName === "Level") {continue;}
-            // console.log(specificName)
-
-            optionsString += `<option value="${specificName}" ${specificName === buffNameElement.value ? "selected" : ""}>${specificName}</option>`
-        }
-
-        buffNameElement.innerHTML = optionsString;
-        buffGraphs.statName = buffNameElement.value;
-        const currentIndexStat = basicShorthand.reverseKeyMappings[buffNameElement.value];
-
-        // console.log(currentIndexStat)
-
 
         let pointsArray = [];
         let highestCurrentStat = null;
         let lowestCurrentStat = null;
         let actionCounter = 0;
         let cycleEndPoints = [];
-        for (let entry of log) {
-            if (entry.logType === "HitEnemy" && entry.source === buffGraphs.entityName) {
-                const hitData = entry.hitData;
-                const AV = hitData.AV;
-                const playerData = JSON.parse(hitData.playerData);
-                // const enemyData = JSON.parse(hitData.enemyData);
+        if (buffGraphs.statNameTYPE === "Special") {
+            let optionsString = "";
 
-                const currentStat = playerData.statTable[currentIndexStat];
-                if (highestCurrentStat === null || currentStat > highestCurrentStat) {highestCurrentStat = currentStat;}
-                if (lowestCurrentStat === null || currentStat < lowestCurrentStat) {lowestCurrentStat = currentStat;}
-                pointsArray.push([AV,currentStat,actionCounter]);
-                actionCounter++;
+
+            let usableSpecialOptions = [];
+
+            const currentSpecialValues = customDisplayValuesLog[buffGraphs.entityName];
+            if (currentSpecialValues && currentSpecialValues.length) {
+                for (let specialEntry of currentSpecialValues) {
+                    if (specialEntry.summaryType) {
+                        usableSpecialOptions.push(specialEntry)
+                    }
+                }
+
+                if (usableSpecialOptions.length) {
+                    // basicShorthand.reverseKeyMappings[buffNameElement.value]
+                    const defaultStat = usableSpecialOptions[0].valueName;
+                    buffGraphs.statName ??= defaultStat;
+                    if (buffNameElement.value === "") {buffNameElement.value = defaultStat;}
+
+                    let foundValue = false;
+                    for (let specialOption of usableSpecialOptions) {
+
+                        if (specialOption.valueName === buffNameElement.value || buffNameElement.value === "") {
+                            foundValue = true;
+                            break;
+                        }
+                    }
+                    if (!foundValue) {
+                        // console.log(defaultStat)
+                        buffGraphs.statName = defaultStat;
+                        buffNameElement.value = defaultStat;
+                    }
+
+                    
+                    // console.log(buffGraphs.statName)
+
+                    // console.log(basicShorthand.indexToSpecific["0"])
+                    // const refKeys = Object.keys(greatTableIndex);
+                    // for (let i=0;i<refKeys.length;i++) {
+                    //     const specificName = basicShorthand.indexToSpecific[i];
+                    //     if (specificName === "Empty" || specificName === "Level") {continue;}
+                    //     // console.log(specificName)
+
+                    //     optionsString += `<option value="${specificName}" ${specificName === buffNameElement.value ? "selected" : ""}>${specificName}</option>`
+                    // }
+
+                    if (buffNameElement.value) {
+                        buffGraphs.statName = buffNameElement.value;
+                    }
+                        
+
+                    let functionToFind = null;
+                    let summaryType = null;
+                    for (let specialOption of usableSpecialOptions) {
+                        optionsString += `<option value="${specialOption.valueName}" ${specialOption.valueName === buffGraphs.statName ? "selected" : ""}>${specialOption.valueName}</option>`;
+                        if (specialOption.valueName === buffGraphs.statName) {
+                            functionToFind = specialOption.summaryValue;
+                            summaryType = specialOption.summaryType;
+                        }
+                    }
+
+
+                    buffNameElement.innerHTML = optionsString;
+                    // buffGraphs.statName = buffNameElement.value;
+
+                    // const currentIndexStat = basicShorthand.reverseKeyMappings[buffNameElement.value];
+
+                    // console.log(currentIndexStat)
+
+                    const compositeType = `SUMMARY:${summaryType}`;
+                    
+                    for (let entry of log) {
+                        if (entry.logType === compositeType && entry.function === functionToFind) {
+                            const AV = entry.AV;
+                            // logToBattle(battleData,{
+                            //     logType: "SUMMARY:SUM",
+                            //     function: "saberSumResonance",
+                            //     AV: battleData.sumAV,
+                            //     currentValue: valuesRef.coreResonance,
+                            //     currentSumValue: ownerTurn.saberSumResonance,
+                            //     currentAddedValue: valuesRef.coreResonance - oldValue
+                            // });
+
+                            const currentStat = entry.currentValue;
+                            if (highestCurrentStat === null || currentStat > highestCurrentStat) {highestCurrentStat = currentStat;}
+                            if (lowestCurrentStat === null || currentStat < lowestCurrentStat) {lowestCurrentStat = currentStat;}
+                            pointsArray.push([AV,currentStat,actionCounter]);
+                            actionCounter++;
+                        }
+                        else if (entry.logType === "EndCycle") {
+                            cycleEndPoints.push([entry.AV,actionCounter + 0.5])
+                        }
+                    }
+                }
+                else {
+                    pointsArray.push(1,1)
+                    actionCounter = 1;
+                    lowestCurrentStat = 0;
+                    highestCurrentStat = 1;
+                }
             }
-            else if (entry.logType === "EndCycle") {
-                cycleEndPoints.push([entry.AV,actionCounter + 0.5])
+            else {
+                pointsArray.push(1,1)
+                actionCounter = 1;
+                lowestCurrentStat = 0;
+                highestCurrentStat = 1;
+            }
+
+            
+        }
+        else if (buffGraphs.statNameTYPE === "Team") {
+            let optionsString = "";
+
+
+            let usableSpecialOptions = [];
+            // {valueName: "Team Punchline", refName: "punchline",summaryValue: "teamPunchlineSummer",summaryType: "SUM"},
+
+            const currentSpecialValues = customDisplayValuesLog.TEAM;
+            if (currentSpecialValues && currentSpecialValues.length) {
+                for (let specialEntry of currentSpecialValues) {
+                    if (specialEntry.summaryType) {
+                        usableSpecialOptions.push(specialEntry)
+                    }
+                }
+
+                if (usableSpecialOptions.length) {
+                    // basicShorthand.reverseKeyMappings[buffNameElement.value]
+                    const defaultStat = usableSpecialOptions[0].valueName;
+                    buffGraphs.statName ??= defaultStat;
+                    if (buffNameElement.value === "") {buffNameElement.value = defaultStat;}
+
+                    let foundValue = false;
+                    for (let specialOption of usableSpecialOptions) {
+
+                        if (specialOption.valueName === buffNameElement.value || buffNameElement.value === "") {
+                            foundValue = true;
+                            break;
+                        }
+                    }
+                    if (!foundValue) {
+                        // console.log(defaultStat)
+                        buffGraphs.statName = defaultStat;
+                        buffNameElement.value = defaultStat;
+                    }
+
+                    
+                    // console.log(buffGraphs.statName)
+
+                    // console.log(basicShorthand.indexToSpecific["0"])
+                    // const refKeys = Object.keys(greatTableIndex);
+                    // for (let i=0;i<refKeys.length;i++) {
+                    //     const specificName = basicShorthand.indexToSpecific[i];
+                    //     if (specificName === "Empty" || specificName === "Level") {continue;}
+                    //     // console.log(specificName)
+
+                    //     optionsString += `<option value="${specificName}" ${specificName === buffNameElement.value ? "selected" : ""}>${specificName}</option>`
+                    // }
+
+                    if (buffNameElement.value) {
+                        buffGraphs.statName = buffNameElement.value;
+                    }
+                        
+
+                    let functionToFind = null;
+                    let summaryType = null;
+                    for (let specialOption of usableSpecialOptions) {
+                        optionsString += `<option value="${specialOption.valueName}" ${specialOption.valueName === buffGraphs.statName ? "selected" : ""}>${specialOption.valueName}</option>`;
+                        if (specialOption.valueName === buffGraphs.statName) {
+                            functionToFind = specialOption.summaryValue;
+                            summaryType = specialOption.summaryType;
+                        }
+                    }
+
+
+                    buffNameElement.innerHTML = optionsString;
+                    // buffGraphs.statName = buffNameElement.value;
+
+                    // const currentIndexStat = basicShorthand.reverseKeyMappings[buffNameElement.value];
+
+                    // console.log(currentIndexStat)
+
+                    const compositeType = `SUMMARY:${summaryType}`;
+                    
+                    for (let entry of log) {
+                        if (entry.logType === compositeType && entry.function === functionToFind) {
+                            const AV = entry.AV;
+                            // logToBattle(battleData,{
+                            //     logType: "SUMMARY:SUM",
+                            //     function: "saberSumResonance",
+                            //     AV: battleData.sumAV,
+                            //     currentValue: valuesRef.coreResonance,
+                            //     currentSumValue: ownerTurn.saberSumResonance,
+                            //     currentAddedValue: valuesRef.coreResonance - oldValue
+                            // });
+
+                            const currentStat = entry.currentValue;
+                            if (highestCurrentStat === null || currentStat > highestCurrentStat) {highestCurrentStat = currentStat;}
+                            if (lowestCurrentStat === null || currentStat < lowestCurrentStat) {lowestCurrentStat = currentStat;}
+                            pointsArray.push([AV,currentStat,actionCounter]);
+                            actionCounter++;
+                        }
+                        else if (entry.logType === "EndCycle") {
+                            cycleEndPoints.push([entry.AV,actionCounter + 0.5])
+                        }
+                    }
+                }
+                else {
+                    pointsArray.push(1,1)
+                    actionCounter = 1;
+                    lowestCurrentStat = 0;
+                    highestCurrentStat = 1;
+                }
+            }
+            else {
+                pointsArray.push(1,1)
+                actionCounter = 1;
+                lowestCurrentStat = 0;
+                highestCurrentStat = 1;
+            }
+
+            
+        }
+        else {
+            let optionsString = "";
+
+
+            // basicShorthand.reverseKeyMappings[buffNameElement.value]
+            const defaultStat = "CRIT Rate";
+            buffGraphs.statName ??= defaultStat
+            if (buffNameElement.value === "") {buffNameElement.value = defaultStat}
+            // console.log(buffGraphs.statName)
+
+            // console.log(basicShorthand.indexToSpecific["0"])
+            const refKeys = Object.keys(greatTableIndex);
+            for (let i=0;i<refKeys.length;i++) {
+                const specificName = basicShorthand.indexToSpecific[i];
+                if (specificName === "Empty" || specificName === "Level") {continue;}
+                // console.log(specificName)
+
+                optionsString += `<option value="${specificName}" ${specificName === buffNameElement.value ? "selected" : ""}>${specificName}</option>`
+            }
+
+            buffNameElement.innerHTML = optionsString;
+            buffGraphs.statName = buffNameElement.value;
+            const currentIndexStat = basicShorthand.reverseKeyMappings[buffNameElement.value];
+
+            // console.log(currentIndexStat)
+
+
+            
+            for (let entry of log) {
+                if (entry.logType === "HitEnemy" && entry.source === buffGraphs.entityName) {
+                    const hitData = entry.hitData;
+                    const AV = hitData.AV;
+                    const playerData = JSON.parse(hitData.playerData);
+                    // const enemyData = JSON.parse(hitData.enemyData);
+
+                    const currentStat = playerData.statTable[currentIndexStat];
+                    if (highestCurrentStat === null || currentStat > highestCurrentStat) {highestCurrentStat = currentStat;}
+                    if (lowestCurrentStat === null || currentStat < lowestCurrentStat) {lowestCurrentStat = currentStat;}
+                    pointsArray.push([AV,currentStat,actionCounter]);
+                    actionCounter++;
+                }
+                else if (entry.logType === "EndCycle") {
+                    cycleEndPoints.push([entry.AV,actionCounter + 0.5])
+                }
             }
         }
 
+        
+
         // logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})
         const totalActions = pointsArray.length;
+
+        // logToBattle(battleData,{
+        //     logType: "SUMMARY:SUM",
+        //     function: "sparxieThrillSum",
+        //     currentValue: valuesRef.thrill,
+        //     currentSumValue: ownerTurn.sparxieThrillSum,
+        //     currentAddedValue: valuesRef.thrill - oldValue
+        // });
 
         if (lowestCurrentStat > 0) {lowestCurrentStat = 0;}
 
