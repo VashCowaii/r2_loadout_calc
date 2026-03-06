@@ -82,13 +82,13 @@ const customDisplayValuesLog = {
         // {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
-    "Blade": [
+    "Blade": [//tracker done
         {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "bladeFUAStackSum",summaryType: "SUM"},
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false,summaryValue: "bladeHPTallySummer",summaryType: "SUM"},
     ],
-    "Archer": [
-        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true},
+    "Archer": [//tracker done
+        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
         {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
         {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
     ],

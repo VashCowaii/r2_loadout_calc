@@ -13697,8 +13697,24 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const valuesRef = sourceTurn.battleValues;
+                const oldValue = valuesRef.charge;
                 valuesRef.charge -= 1;
                 valuesRef.chargeDebt -= 1;
+                if (battleData.isLoggyLogger) {
+                    // if (newCharge > oldValue) {
+                    //     sourceTurn.archerFUAStackSum ??= 0;
+                    //     sourceTurn.archerFUAStackSum += newCharge - oldValue;
+                        
+                    // }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "archerFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: valuesRef.charge,
+                        currentSumValue: sourceTurn.archerFUAStackSum,
+                        currentAddedValue: valuesRef.charge - oldValue
+                    });
+                }
 
                 let skillRef = ATKObjects.archerFUAREF ??= ATKObjects.Talent["Mind's Eye (True)"].variant1;
 
@@ -13890,8 +13906,25 @@ const turnLogic = {
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 let chargeRef = sourceTurn.battleValues;
 
+                const oldValue = chargeRef.charge;
                 let newCharge = Math.min(4,chargeRef.charge + 2)
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});
+
+                    if (newCharge > oldValue) {
+                        sourceTurn.archerFUAStackSum ??= 0;
+                        sourceTurn.archerFUAStackSum += newCharge - oldValue;
+                        
+                    }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "archerFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: newCharge,
+                        currentSumValue: sourceTurn.archerFUAStackSum,
+                        currentAddedValue: newCharge - oldValue
+                    });
+                }
                 chargeRef.charge = newCharge;
                 // poke("SkillEnd",battleData,{source:"Archer"});
                 sourceTurn.ultyQueued = false;
@@ -13966,10 +13999,27 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    let chargeRef = ownerTurn.battleValues;
-                    let newCharge = Math.min(4,chargeRef.charge + 1)
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
-                    chargeRef.charge = newCharge;
+                    let valuesRef = ownerTurn.battleValues;
+                    const oldValue = valuesRef.charge
+                    let newCharge = Math.min(4,valuesRef.charge + 1);
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${valuesRef.charge} --> ${newCharge}/4`});
+
+                        if (newCharge > oldValue) {
+                            ownerTurn.archerFUAStackSum ??= 0;
+                            ownerTurn.archerFUAStackSum += newCharge - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "archerFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: newCharge,
+                            currentSumValue: ownerTurn.archerFUAStackSum,
+                            currentAddedValue: newCharge - oldValue
+                        });
+                    }
+                    valuesRef.charge = newCharge;
                 },
                 "target": "self",
                 "listenerName": "Archer - +Charge - Major Trace: Hero of Justice",
