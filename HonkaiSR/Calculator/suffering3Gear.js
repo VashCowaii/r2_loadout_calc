@@ -1011,6 +1011,91 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
+    "Night of Fright": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    // if (!ownerRank) {return;}//abort non-owners
+
+                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return;}
+
+                    const allyPositions = battleData.allyPositions;
+                    let lowestPercentAlly = null;
+                    for (let ally of allyPositions) {
+                        const hpRatio = ally.currentHP / ally.maxHP;
+                        if (hpRatio < lowestPercentAlly || lowestPercentAlly === null) {
+                            lowestPercentAlly = ally;
+                        }
+                    }
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlot];
+
+
+                        if (!currentOwner.lcNightOfFrightHealingHEALOBJECT) {
+                            let lcNameRef = "Night of Fright";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+                            
+                            currentOwner.lcNightOfFrightHealingHEALOBJECT ??= {
+                                multipliers: {
+                                    primary: rankParams[1],
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone"
+                            }
+
+                            currentOwner.lcNightOfFrightATKSHEET = {
+                                "stats": [ATKP],
+                                [ATKP]: rankParams[2],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 5,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        const healObject = currentOwner.lcNightOfFrightHealingHEALOBJECT;
+    
+                        battleActions.healAlly(battleData,healObject,lowestPercentAlly,currentOwner,"Lightcone",1,null);
+
+                        const buffSheet = currentOwner.lcNightOfFrightATKSHEET;
+                        buffSheet.duration = lowestPercentAlly.turnState ? 3 : 2;
+                        updateBuff(battleData,lowestPercentAlly,buffSheet)
+                    }
+                },
+                "target": "team",
+                "listenerName": "Night of Fright ult start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "atkBuff": "Night of Fright (LC)",
+        },
+    },
 
     //NIHILITY
     "Incessant Rain": {
