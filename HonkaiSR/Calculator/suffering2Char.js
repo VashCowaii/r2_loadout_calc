@@ -20539,7 +20539,20 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {
                     // logToBattle(battleData,{logType: "GenericAction", source:"HP tally handler", bodyText: `Tally (Blade) ${oldAmount.toLocaleString()} --> ${bladeTurn.bladeHPTally.toLocaleString()}`});
                     logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[bladeTurn.properName].traces.Point03.icon,sourceName: bladeTurn.properName, source:"HP Tally Handler", bodyText: `Tally (Blade): ${oldAmount} --> ${bladeTurn.bladeHPTally}`});
+                       
+                    if (amountToGain > 0) {
+                        bladeTurn.bladeHPTallySummer ??= 0;
+                        bladeTurn.bladeHPTallySummer += bladeTurn.bladeHPTally - oldAmount;
                         
+                    }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "bladeHPTallySummer",
+                        AV: battleData.sumAV,
+                        currentValue: bladeTurn.bladeHPTally,
+                        currentSumValue: bladeTurn.bladeHPTallySummer,
+                        currentAddedValue: bladeTurn.bladeHPTally - oldAmount
+                    });
                 }
             },
             bladeFUA(battleData,sourceTurn) {
@@ -20801,6 +20814,20 @@ const turnLogic = {
                     if (battleData.isLoggyLogger && oldValue != valuesRef.charge) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blade Charge ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Blade): ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
+                    
+                        // if (pointsGained > 0) {
+                            ownerTurn.bladeFUAStackSum ??= 0;
+                            ownerTurn.bladeFUAStackSum += valuesRef.charge - oldValue;
+                            
+                        // }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "bladeFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.charge,
+                            currentSumValue: ownerTurn.bladeFUAStackSum,
+                            currentAddedValue: valuesRef.charge - oldValue
+                        });
                     }
                     
                     if (valuesRef.charge === chargeCap && !ownerTurn.bladeFUAIsQueued) {

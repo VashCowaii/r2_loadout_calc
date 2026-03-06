@@ -83,9 +83,9 @@ const customDisplayValuesLog = {
         // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
     "Blade": [
-        {valueName: "Charge", refName: "charge", isBattleValue: true},
+        {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "bladeFUAStackSum",summaryType: "SUM"},
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+        {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false,summaryValue: "bladeHPTallySummer",summaryType: "SUM"},
     ],
     "Archer": [
         {valueName: "Charge Stacks", refName: "charge", isBattleValue: true},
@@ -196,23 +196,21 @@ const customDisplayValuesLog = {
     "Natasha": [],  
     "Lynx": [], 
     "Anaxa": [],
-    "Yao Guang": [
+    "Yao Guang": [//tracker done
         {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerYao Guang`,summaryType: "SUM"},
     ],
-    "Sparxie": [
+    "Sparxie": [//tracker done
         {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM"},
         {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSparxie`,summaryType: "SUM"},
         {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
-
-        
     ],
-    "Sparkle": [
+    "Sparkle": [//tracker done
         {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true,summaryValue: "sparkleReserveSum",summaryType: "SUM"},
         {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
         {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
-    "Jingliu": [
+    "Jingliu": [//tracker done
         {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
         {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
         {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
