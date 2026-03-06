@@ -99,7 +99,7 @@ const customDisplayValuesLog = {
         {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
     ],
     "Aventurine": [
-        {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true},
+        {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
         // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
     ],

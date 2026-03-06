@@ -25921,6 +25921,19 @@ const turnLogic = {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         
+                        if (pointsGained > 0) {
+                            ownerTurn.avenBlindBetSum ??= 0;
+                            ownerTurn.avenBlindBetSum += valuesRef.betStacks - oldValue;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "avenBlindBetSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.betStacks,
+                            currentSumValue: ownerTurn.avenBlindBetSum,
+                            currentAddedValue: valuesRef.betStacks - oldValue
+                        });
                     }
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
                 },
