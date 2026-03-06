@@ -17801,6 +17801,20 @@ const turnLogic = {
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
+                    
+                        if (pointsGained > 0) {
+                            ownerTurn.astaChargeSummer ??= 0;
+                            ownerTurn.astaChargeSummer += valuesRef.chargeStacks - oldValue;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "astaChargeSummer",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.chargeStacks,
+                            currentSumValue: ownerTurn.astaChargeSummer,
+                            currentAddedValue: valuesRef.chargeStacks - oldValue
+                        });
                     }
 
                     if (!ATKObjects.astaChargeATKSHEET) {

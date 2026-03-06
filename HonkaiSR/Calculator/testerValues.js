@@ -92,27 +92,27 @@ const customDisplayValuesLog = {
         {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
         {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
     ],
-    "Kafka": [
+    "Kafka": [//tracker done
         {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
     ],
-    "Hysilens": [
+    "Hysilens": [//no tracker needed?
         {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
     ],
-    "Aventurine": [
+    "Aventurine": [//tracker done
         {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
         // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
     ],
-    "Evernight": [
+    "Evernight": [//not on live
         {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Memoria", refName: "memoria", isBattleValue: true},
         {valueName: "Darkest Riddle", refName: "riddleStacks", isBattleValue: true},
     ],
-    "Castorice": [
+    "Castorice": [//not on live
         {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true},
     ],
-    "Hyacine": [
+    "Hyacine": [//not on live
         {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Healing Tally", refName: "hyacineBattleHealingTally", isBattleValue: false},
         {valueName: "After Rain", refName: "hyacineAfterRainActive", isBattleValue: true, isCharacterState: true},
@@ -131,7 +131,7 @@ const customDisplayValuesLog = {
         {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
-    "Argenti": [
+    "Argenti": [//no tracker needed
         {valueName: "Talent Stacks", refName: "apotheosisStacks", isBattleValue: true},
     ], 
     "Ruan Mei": [
@@ -190,7 +190,7 @@ const customDisplayValuesLog = {
         {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
     ],  
     "Asta": [
-        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true},
+        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM"},
         {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
     ],
     "Natasha": [],  
