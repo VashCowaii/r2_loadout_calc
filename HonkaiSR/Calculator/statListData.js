@@ -94,6 +94,8 @@ const greatTableKnowerOfAll = {
     "SPDFlatNull": 0,
     "ElationDMGAllNULL": 0,
     "MerryMakeAll": 0,
+
+    "HealingOutgoingNULL": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
@@ -177,6 +179,7 @@ const CrowdControlRES = greatTableIndex.CrowdControlRES;
 const EffectHitRate = greatTableIndex.EffectHitRate;
 const EnergyRegenRate = greatTableIndex.EnergyRegenRate;
 const HealingOutgoing = greatTableIndex.HealingOutgoing;
+const HealingOutgoingNULL = greatTableIndex.HealingOutgoingNULL;
 const HealingIncoming = greatTableIndex.HealingIncoming;
 
 const EnergyMax = greatTableIndex.EnergyMax;
@@ -1177,6 +1180,12 @@ const propertyImagePaths = {
             //     "specific": "Healing Outgoing UNUSED",
             //     "unit": "%"
             // },
+            // 
+            [greatTableIndex["HealingOutgoingNULL"]]: {
+                "display": "Healing Out (LOCKED)",
+                "specific": "Healing Outgoing (LOCKED)",
+                "unit": "%"
+            },
         }
     },
     "HealIN": {
