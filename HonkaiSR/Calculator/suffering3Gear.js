@@ -1785,6 +1785,182 @@ const turnLogicLightcones = {
             "dmgBuff": "The Unreachable Side [LC]"
         },
     },
+    "I Shall Be My Own Sword": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    // poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const wasAttack = generalInfo.wasAttack;
+                    if (wasAttack) {return;}
+                    //OR if the hp loss was from an attack, leave as well
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let allySlot in ownersSlots) {
+                        const currentOwner = allyTurns[allySlot];
+                        if (currentOwner.properName === sourceTurn.properName || currentOwner.shallBeMyOwnSwordStackingDONETEMP) {continue;}
+
+                        if (!currentOwner.shallBeMyOwnSwordDMGSHEET) {
+                            let lcNameRef = "I Shall Be My Own Sword";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+                            const logicRef = turnLogicLightcones[lcNameRef];
+    
+                            currentOwner.shallBeMyOwnSwordDMGSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: rankParams[2],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": logicRef.buffNames.dmgBuff,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 3,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Attack"],
+                            }
+                            currentOwner.shallBeMyOwnSwordSHREDSHEET = {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: rankParams[3],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": logicRef.buffNames.shredBuff,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Attack"],
+                            }
+                        }
+    
+                        const buffSheet = currentOwner.shallBeMyOwnSwordDMGSHEET;
+                        buffSheet.currentStacks = 1;
+                        battleActions.updateBuff(battleData,currentOwner,buffSheet);
+                        const buffCheck = currentOwner.buffsObject[buffSheet.buffName];
+
+                        if (buffCheck.currentStacks === buffCheck.maxStacks) {
+                            currentOwner.shallBeMyOwnSwordStackingDONETEMP = true;
+                            const buffSheet2 = currentOwner.shallBeMyOwnSwordSHREDSHEET;
+                            battleActions.updateBuff(battleData,currentOwner,buffSheet2);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "I Shall Be My Own Sword - hp lost listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    // poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const hitCount = Object.keys(targetsGotHit).length;
+
+                    for (let allySlot in ownersSlots) {
+                        let ownerCheck = targetsGotHit[allySlot];
+                        if (ownerCheck && hitCount === 1) {continue;}
+
+                        const currentOwner = allyTurns[allySlot];
+                        if (currentOwner.shallBeMyOwnSwordStackingDONETEMP) {continue;}
+
+                        if (!currentOwner.shallBeMyOwnSwordDMGSHEET) {
+                            let lcNameRef = "I Shall Be My Own Sword";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+                            const logicRef = turnLogicLightcones[lcNameRef];
+    
+                            currentOwner.shallBeMyOwnSwordDMGSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: rankParams[2],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": logicRef.buffNames.dmgBuff,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 3,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Attack"],
+                            }
+                            currentOwner.shallBeMyOwnSwordSHREDSHEET = {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: rankParams[3],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": logicRef.buffNames.shredBuff,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Attack"],
+                            }
+                        }
+    
+                        const buffSheet = currentOwner.shallBeMyOwnSwordDMGSHEET;
+                        buffSheet.currentStacks = hitCount - (targetsGotHit[allySlot] ? 1 : 0);
+                        battleActions.updateBuff(battleData,currentOwner,buffSheet);
+                        const buffCheck = currentOwner.buffsObject[buffSheet.buffName];
+
+                        if (buffCheck.currentStacks === buffCheck.maxStacks) {
+                            currentOwner.shallBeMyOwnSwordStackingDONETEMP = true;
+                            const buffSheet2 = currentOwner.shallBeMyOwnSwordSHREDSHEET;
+                            battleActions.updateBuff(battleData,currentOwner,buffSheet2);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "I Shall Be My Own Sword - received attack listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+            {
+                "trigger": "AttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const buffSheet = sourceTurn.shallBeMyOwnSwordDMGSHEET;
+                    if (!buffSheet || !sourceTurn.buffsObject[buffSheet.buffName]) {return;}
+                    //if the buff sheet hasn't been constructed on the owner yet, or if the owner doesn't even have the buff, then abort
+                    removeBuff(battleData,sourceTurn,buffSheet);
+
+                    const buffSheet2 = sourceTurn.shallBeMyOwnSwordSHREDSHEET;
+                    if (!buffSheet2 || !sourceTurn.buffsObject[buffSheet2.buffName]) {return;}
+                    removeBuff(battleData,sourceTurn,buffSheet2);
+                    sourceTurn.shallBeMyOwnSwordStackingDONETEMP = false;
+                },
+                "target": "self",
+                "listenerName": "I Shall Be My Own Sword - attack end listener buff removal",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "dmgBuff": "Eclipse (DMG) [LC]",
+            "shredBuff": "Eclipse (Shred) [LC]",
+        },
+    },
 
     //HARMONY
     "Earthly Escapade": {
