@@ -12,6 +12,7 @@ global.calcAllowedSet = new Set([
     //DESTRUCTION
     "Saber",
     "Blade",
+    "Jingliu",
 
     //HUNT
     "Topaz & Numby",
