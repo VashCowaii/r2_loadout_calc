@@ -213,8 +213,8 @@ const customDisplayValuesLog = {
         {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
     "Jingliu": [
-        {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true},
-        {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true},
+        {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
+        {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
         {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
         

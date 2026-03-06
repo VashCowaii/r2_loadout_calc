@@ -21446,6 +21446,19 @@ const turnLogic = {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Syzygy (Jingliu): ${oldValue} --> ${valuesRef.weirdStacks}/${maxValue} [${sourceString}]`});
                         
+                        if (pointsGained > 0) {
+                            ownerTurn.jingliuSyzygySum ??= 0;
+                            ownerTurn.jingliuSyzygySum += valuesRef.weirdStacks - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "jingliuSyzygySum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.weirdStacks,
+                            currentSumValue: ownerTurn.jingliuSyzygySum,
+                            currentAddedValue: valuesRef.weirdStacks - oldValue
+                        });
                     }
 
 
@@ -21545,12 +21558,31 @@ const turnLogic = {
                     // if (sourceTurn.isE) {return;}
 
                     const valuesRef = ownerTurn.battleValues;
+                    const oldValue = valuesRef.hpLossCount;
                     valuesRef.hpLossCount++;
+
+                    
 
                     if (valuesRef.hpLossCount >= 20) {
                         valuesRef.hpLossCount -= 20;
                         const sourceObject = this.sourceObject ??= {pointsGained: 1,sourceString:"HP Loss Counter >= 20"}
                         poke("jingliuWeirdStackGained",battleData,sourceObject);
+                    }
+
+                    if (battleData.isLoggyLogger) {
+                        // if (pointsGained > 0) {
+                            ownerTurn.jingliuHPCounterSUm ??= 0;
+                            ownerTurn.jingliuHPCounterSUm += 1;
+                            
+                        // }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "jingliuHPCounterSUm",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.hpLossCount,
+                            currentSumValue: ownerTurn.jingliuHPCounterSUm,
+                            currentAddedValue: 1
+                        });
                     }
 
 
