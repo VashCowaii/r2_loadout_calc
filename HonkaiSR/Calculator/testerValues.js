@@ -199,10 +199,12 @@ const customDisplayValuesLog = {
     "Yao Guang": [//tracker done
         {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerYao Guang`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerYao Guang`,summaryType: "SUM"},
     ],
     "Sparxie": [//tracker done
         {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM"},
         {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSparxie`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSparxie`,summaryType: "SUM"},
         {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
     ],
     "Sparkle": [//tracker done

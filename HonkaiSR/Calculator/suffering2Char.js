@@ -85,6 +85,28 @@ const battleActions = {
                 currentSumValue: battleData.teamPunchlineSummer ??= 0,
                 currentAddedValue: amount
             });
+
+            if (battleData.nameBasedTurns[sourceTurn?.name]) {
+
+                const nameSummer = `punchlineSummer${sourceTurn.properName}`
+                if (amount > 0) {
+                
+                    sourceTurn.punchlineGenerated ??= 0;
+                    sourceTurn.punchlineGenerated += amount;
+
+                    sourceTurn[nameSummer] ??= 0;
+                    sourceTurn[nameSummer] += amount;
+                    // console.log(ownerTurn.saberSumResonance)
+                }
+                logToBattle(battleData,{
+                    logType: "SUMMARY:SUM",
+                    function: nameSummer,
+                    AV: battleData.sumAV,
+                    currentValue: sourceTurn.punchlineGenerated,
+                    currentSumValue: sourceTurn[nameSummer],
+                    currentAddedValue: amount
+                });
+            }
         }
         // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
         poke("PunchlineChanged",battleData,{sourceTurn,newAmount,amount});
