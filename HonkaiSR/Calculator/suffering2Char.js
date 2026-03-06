@@ -19845,7 +19845,23 @@ const turnLogic = {
                 if (oldAmount) {
                     valuesRef.overflowEnergy = 0;
                     // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate use: Blessing of the Lake", bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> 0`});}
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: -oldAmount, oldEnergy:oldAmount, newEnergy:0, maximum:sourceTurn.rank>=6 ? 200 : 120, source:"Blessing of the Lake"});}
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: -oldAmount, oldEnergy:oldAmount, newEnergy:0, maximum:sourceTurn.rank>=6 ? 200 : 120, source:"Blessing of the Lake"});
+                    
+                        if (valuesRef.overflowEnergy > oldAmount) {
+                            sourceTurn.saberOverflowSummer ??= 0;
+                            sourceTurn.saberOverflowSummer += amountGained;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "saberOverflowSummer",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.overflowEnergy,
+                            currentSumValue: sourceTurn.saberOverflowSummer,
+                            currentAddedValue: -oldAmount
+                        });
+                    }
                     updateEnergy(battleData,oldAmount,sourceTurn,true,"Blessing of the Lake");
                 }
                 valuesRef.isEnhanced = true;
@@ -20145,7 +20161,23 @@ const turnLogic = {
                         // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
 
 
-                        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});}
+                        if (battleData.isLoggyLogger) {
+                            logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
+                        
+                            if (valuesRef.overflowEnergy > oldAmount) {
+                                ownerTurn.saberOverflowSummer ??= 0;
+                                ownerTurn.saberOverflowSummer += amountGained;
+                                // console.log(ownerTurn.saberSumResonance)
+                            }
+                            logToBattle(battleData,{
+                                logType: "SUMMARY:SUM",
+                                function: "saberOverflowSummer",
+                                AV: battleData.sumAV,
+                                currentValue: valuesRef.overflowEnergy,
+                                currentSumValue: ownerTurn.saberOverflowSummer,
+                                currentAddedValue: amountGained
+                            });
+                        }
                     }
 
                     poke("SaberGainCoreResonance",battleData,{pointsGained: 0,sourceString:null});//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener

@@ -127,7 +127,7 @@ const customDisplayValuesLog = {
     "Saber": [
         {valueName: "Basic is Enhanced", refName: "isEnhanced", isBattleValue: true, isCharacterState: true},
         {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true,logFunction: null,summaryValue: "saberSumResonance",summaryType: "SUM"},
-        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true},
+        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "saberOverflowSummer",summaryType: "SUM"},
         {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
@@ -159,15 +159,15 @@ const customDisplayValuesLog = {
         {valueName: "Bonanza Attacks", refName: "bonanzaStacks", isBattleValue: true},
         // {valueName: "E6 Ult Counter", refName: "e2AdvanceCooldown", isBattleValue: true, requiresEidolon: 6},
     ], 
-    "Tingyun": [
+    "Tingyun": [//def no tracker needed
         {valueName: "Ally with Benediction", refName: "charWithBenediction", isBattleValue: true, isCharacterSlot:true},
     ],
     "Silver Wolf": [],
     "Pela": [],
-    "Gallagher": [
+    "Gallagher": [//prob no tracker needed
         {valueName: "Basic Enhanced", refName: "nextBasicEnhanced", isBattleValue: true, isCharacterState: true},
     ],
-    "Huohuo": [
+    "Huohuo": [//prob no tracker needed
         {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
