@@ -27502,7 +27502,7 @@ const turnLogic = {
                             const characterName = ownerTurn.properName;
                             ATKObjects.anaxaSoloEruditionSHEET = {
                                 "stats": [CritDamageBase],
-                                [CritDamageBase]: 0.50,
+                                [CritDamageBase]: 1.40,
                                 "source": "Trace",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.soloErudition,
