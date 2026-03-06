@@ -568,7 +568,7 @@ let globalRecords = {
         },
         "char4": {
             "name": "Sparkle",
-            "rank": 2,
+            "rank": 0,
             "lineup": 1,
             "lcName": "Earthly Escapade",
             "lcRank": 1,
