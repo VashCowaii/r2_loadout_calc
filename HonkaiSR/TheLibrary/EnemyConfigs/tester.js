@@ -724,7 +724,7 @@ const customMenu = {
             <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Global Abilities/Data</summary>
 
             <div class="starAndSearchRow2">
-                <a class="exportIconBoxHolder clickable" id="characterSearchButton" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalAbilities/" target="_blank">
+                <a class="exportIconBoxHolder clickable" id="characterSearchButton" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalAbilities/" >
                     Global Abilities
                 </a>
             </div>
@@ -2693,7 +2693,7 @@ const customMenu = {
                     const trimmedCharacterName = customMenu.trimToFirstWordAndInitials(result.name);
 
                     let stringCustom = `
-                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank">
+                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" >
                             <div class="customMenuResultRowIcon">
                                 <img src="/HonkaiSR/${result.icon}" class="customMenuResultImgRounded" style="border: 2px solid ${customMenu.rarityColors[result.rarity]};"/>
                             </div>
@@ -2816,7 +2816,7 @@ const customMenu = {
                     const trimmedCharacterName = customMenu.trimToFirstWordAndInitials(result.name,true);
                     // <div class="customMenuResultRowBox clickable" onclick="${functionToCall}">
                     let stringCustom = `
-                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank">
+                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" >
                         
                             <div class="customMenuResultRowIcon">
                                 <img src="/HonkaiSR/${result.icon}" class="customMenuResultImgRounded" style="border: 2px solid ${customMenu.rarityColors[result.rarity]};"/>
@@ -2899,7 +2899,7 @@ const customMenu = {
 
                     // <div class="customMenuResultRowBox clickable" onclick="customMenu.closeMenu();userTriggers.updateSelectedRelicSet('${globalUI.currentSearchOpen}',\`${result.name}\`)">
                     let stringCustom = `
-                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank">
+                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" >
                         
                             <div class="customMenuResultRowIcon">
                                 <img src="/HonkaiSR/${result.icon}" class="customMenuResultImgRounded" style="border: 2px solid ${customMenu.rarityColors[5]};"/>
@@ -4739,7 +4739,7 @@ const userTriggers = {
 
 
 
-                summonsStringer += `<a class="enemyWaveEnemyDisplayBox clickable" href="/HonkaiSR/TheLibrary/EnemyConfigs/${summonEntry.base}/?${serialized}" target="_blank">
+                summonsStringer += `<a class="enemyWaveEnemyDisplayBox clickable" href="/HonkaiSR/TheLibrary/EnemyConfigs/${summonEntry.base}/?${serialized}" >
 
                     <img src="/HonkaiSR/${enemyImages[summonEntry.base]}" class="enemyWaveEnemyIcon">
 

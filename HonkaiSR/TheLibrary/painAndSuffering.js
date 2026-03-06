@@ -3678,7 +3678,7 @@ const megaParsingFuckeryPain = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Battle Event ID");
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.eventID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.eventID}</a>
         </div>`;
 
         // initialCounter++;
@@ -6673,7 +6673,7 @@ const megaParsingFuckeryPain = {
 
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
         </div>`;
 
         return `
@@ -6993,7 +6993,7 @@ const megaParsingFuckeryPain = {
         // }
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
         </div>`;
         
         return `<div class="actionDetailBody2">
@@ -8832,8 +8832,8 @@ const megaParsingFuckeryPain = {
             // const regexOperator = /\[\[([^}]+)\]\]/g;
             const regexOperator = /\[\[(.+?)\]\](-\d+)?/g;
             
-            resultingTarget = resultingTarget.replace(regexConfig, (match, replaceValue) => {return `<a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalTargetN/#id${encodeURIComponent(replaceValue)}">${replaceValue}</a>`;});
-            resultingTarget = resultingTarget.replace(regexOperator, (match, replaceValue) => {return `<a class="targetFunction" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalTargetO/#id${encodeURIComponent(replaceValue)}">${replaceValue}</a><span>()</span>`;});
+            resultingTarget = resultingTarget.replace(regexConfig, (match, replaceValue) => {return `<a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalTargetN/#id${encodeURIComponent(replaceValue)}">${replaceValue}</a>`;});
+            resultingTarget = resultingTarget.replace(regexOperator, (match, replaceValue) => {return `<a class="targetFunction" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalTargetO/#id${encodeURIComponent(replaceValue)}">${replaceValue}</a><span>()</span>`;});
         
             // resultingTarget = `
             // <div class="actionDetailBody2DetailTargetNaming">
@@ -9840,7 +9840,7 @@ const megaParsingFuckeryPain = {
 
             // encodeURIComponent(id)
             a.href = finalDepositPath;
-            a.target = "_blank";
+            // a.target = "_blank";
         });
     },
     "Modifier Construction"(parseRef,initialCounter) {
@@ -12151,7 +12151,7 @@ const megaParsingFuckeryPain = {
         }
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.ID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.ID}</a>
         </div>`;
 
         return `<div class="actionDetailBody2">
