@@ -128,7 +128,7 @@ const endgameModeDisplay = {
         if (buffObject?.abilitiesArray?.length) {
             for (let abilityArrayEntry of buffObject.abilitiesArray) {
                 buffCounter++;
-                arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" target="_blank">
+                arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" >
                     Buff ${buffCounter}&nbsp;
                     <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                 </a>`
@@ -139,7 +139,7 @@ const endgameModeDisplay = {
             
             for (let abilityArrayEntry of abilitiesArray) {
                 buffCounter++;
-                arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" target="_blank">
+                arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" >
                     Buff ${buffCounter}&nbsp;
                     <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                 </a>`
@@ -171,7 +171,7 @@ const endgameModeDisplay = {
 
             
             <div class="actionDetailBody">
-                ${buffObject.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${buffObject.BEKey}/#${encodeURIComponent(buffObject.realModifierNamne)}" target="_blank">
+                ${buffObject.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${buffObject.BEKey}/#${encodeURIComponent(buffObject.realModifierNamne)}" >
                     Go to Buff&nbsp;
                     <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                 </a>` : ""}
@@ -687,7 +687,7 @@ const endgameModeDisplay = {
 
 
                             // onclick="endgameModeDisplay.linkToEnemy()"
-                            wholeWaveString += `<a class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}" href="/HonkaiSR/TheLibrary/EnemyConfigs/${enemyEntry.image}/?${serialized}" target="_blank">
+                            wholeWaveString += `<a class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}" href="/HonkaiSR/TheLibrary/EnemyConfigs/${enemyEntry.image}/?${serialized}" >
     
                                 <img src="/HonkaiSR/${enemyImage}" class="enemyWaveEnemyIcon">
                                 <div class="enemyWaveEnemyLevel">${enemyLevel}</div>
@@ -1931,7 +1931,7 @@ const endgameModeDisplay = {
 
 
                     entryString += `<div class="actionDetailBody">
-                            ${currentTraceRef.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${currentTraceRef.BEKey}/#${encodeURIComponent(currentTraceRef.realModifierNamne)}" target="_blank">
+                            ${currentTraceRef.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${currentTraceRef.BEKey}/#${encodeURIComponent(currentTraceRef.realModifierNamne)}" >
                                 Go to Buff&nbsp;
                                 <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                             </a>` : ""}
@@ -2067,7 +2067,7 @@ const endgameModeDisplay = {
                             <div class="eidolonRowNameTriggerBEAbility">${displayName}
                             
                                 <div class="actionDetailBody" style="width: auto;">
-                                    <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${beEntry.BEKey}/#${encodeURIComponent(beEntry.realModifierNamne)}" target="_blank">
+                                    <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${beEntry.BEKey}/#${encodeURIComponent(beEntry.realModifierNamne)}" >
                                         Go to BE Ability&nbsp;
                                         <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                                     </a>
