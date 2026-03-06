@@ -93,7 +93,7 @@ const customDisplayValuesLog = {
         {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
     ],
     "Kafka": [
-        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true},
+        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
     ],
     "Hysilens": [
         {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},

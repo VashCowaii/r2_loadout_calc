@@ -10928,10 +10928,27 @@ const turnLogic = {
                 let skillRef = ATKObjects.kafkaFUAREF ??= ATKObjects.Talent["Gentle but Cruel"].variant1;
 
                 const valuesRef = sourceTurn.battleValues;
+                const oldValue = valuesRef.fuaStacks;
                 //stack debt is accrued when the FUA is queued, as such we not only need to reduce the stack count, but also clear associated stack debt so the correct amount of FUA's can be queued
                 valuesRef.fuaStacks -= 1;
                 valuesRef.fuaStackDebt -= 1;
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"FUA Launched", bodyText: `Kafka FUA Stacks ${valuesRef.fuaStacks + 1} --> ${valuesRef.fuaStacks}/2`});}
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericAction", source:"FUA Launched", bodyText: `Kafka FUA Stacks ${valuesRef.fuaStacks + 1} --> ${valuesRef.fuaStacks}/2`});
+
+                    // if (valuesRef.fuaStacks > oldValue) {
+                    //     sourceTurn.kafkaFUAStackSum ??= 0;
+                    //     sourceTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                        
+                    // }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "kafkaFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: valuesRef.fuaStacks,
+                        currentSumValue: sourceTurn.kafkaFUAStackSum,
+                        currentAddedValue: valuesRef.fuaStacks - oldValue
+                    });
+                }
 
                 if (!ATKObjects.kafkaFUAATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
@@ -11029,7 +11046,23 @@ const turnLogic = {
                 const valuesRef = sourceTurn.battleValues;
                 const oldValue = valuesRef.fuaStacks;
                 valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Thorns - Post ult stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});}
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericAction", source:"Thorns - Post ult stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
+
+                    if (valuesRef.fuaStacks > oldValue) {
+                        sourceTurn.kafkaFUAStackSum ??= 0;
+                        sourceTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                        
+                    }
+                    logToBattle(battleData,{
+                        logType: "SUMMARY:SUM",
+                        function: "kafkaFUAStackSum",
+                        AV: battleData.sumAV,
+                        currentValue: valuesRef.fuaStacks,
+                        currentSumValue: sourceTurn.kafkaFUAStackSum,
+                        currentAddedValue: valuesRef.fuaStacks - oldValue
+                    });
+                }
 
                 sourceTurn.ultyQueued = false;
             },
@@ -11251,7 +11284,23 @@ const turnLogic = {
                     const valuesRef = ownerTurn.battleValues;
                     const oldValue = valuesRef.fuaStacks;
                     valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Kafka Turn-start stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});}
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericAction", source:"Kafka Turn-start stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
+
+                        if (valuesRef.fuaStacks > oldValue) {
+                            ownerTurn.kafkaFUAStackSum ??= 0;
+                            ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "kafkaFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.fuaStacks,
+                            currentSumValue: ownerTurn.kafkaFUAStackSum,
+                            currentAddedValue: valuesRef.fuaStacks - oldValue
+                        });
+                    }
                 },
                 "target": "self",
                 "listenerName": "Kafka turnend stack gain",
