@@ -26,6 +26,7 @@ let globalUI = {
         buffEntity: "Character",
         entityName: "Hysilens",
         buffName: "",
+        statNameTYPE: "Regular",
 
         graphByStat: "AV",
         buffEntityStat: "Character",
@@ -567,7 +568,7 @@ let globalRecords = {
         },
         "char4": {
             "name": "Sparkle",
-            "rank": 0,
+            "rank": 2,
             "lineup": 1,
             "lcName": "Earthly Escapade",
             "lcRank": 1,
