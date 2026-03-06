@@ -70,6 +70,21 @@ const battleActions = {
         if (battleData.isLoggyLogger) {
             // logToBattle(battleData,{logType: "EnergyChange", target: sourceTurn.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:sourceTurn.currentEnergy, maximum, source:sourceName});
             logToBattle(battleData,{logType: "PunchlineChange", amount, oldEnergy, newEnergy:battleData.punchline, source:sourceName});
+
+            if (amount > 0) {
+                
+                battleData.teamPunchlineSummer ??= 0;
+                battleData.teamPunchlineSummer += amount;
+                // console.log(ownerTurn.saberSumResonance)
+            }
+            logToBattle(battleData,{
+                logType: "SUMMARY:SUM",
+                function: "teamPunchlineSummer",
+                AV: battleData.sumAV,
+                currentValue: battleData.punchline,
+                currentSumValue: battleData.teamPunchlineSummer ??= 0,
+                currentAddedValue: amount
+            });
         }
         // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
         poke("PunchlineChanged",battleData,{sourceTurn,newAmount,amount});
@@ -98,6 +113,22 @@ const battleActions = {
         if (battleData.isLoggyLogger) {
             // logToBattle(battleData,{logType: "EnergyChange", target: sourceTurn.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:sourceTurn.currentEnergy, maximum, source:sourceName});
             logToBattle(battleData,{logType: "CertifiedBangerChange", target: sourceTurn.properName, amount, oldEnergy, newEnergy:sourceTurn.certifiedBanger, source:sourceName});
+
+            const bangerNamer = `certifiedBangerSummer${sourceTurn.properName}`;
+            if (amount > 0) {
+                
+                sourceTurn[bangerNamer] ??= 0;
+                sourceTurn[bangerNamer] += amount;
+                // console.log(ownerTurn.saberSumResonance)
+            }
+            logToBattle(battleData,{
+                logType: "SUMMARY:SUM",
+                function: bangerNamer,
+                AV: battleData.sumAV,
+                currentValue: sourceTurn.certifiedBanger,
+                currentSumValue: sourceTurn[bangerNamer],
+                currentAddedValue: sourceTurn.certifiedBanger - oldEnergy
+            });
         }
         // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
         poke("CertifiedBangerChanged",battleData,{sourceTurn,newAmount,amount});
@@ -19160,6 +19191,19 @@ const turnLogic = {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Reserve SP (Sparkle): ${oldValue} --> ${valuesRef.reservePoints}/10 [${sourceString}]`});
                         
+                        if (pointsGained > 0) {
+                            ownerTurn.sparkleReserveSum ??= 0;
+                            ownerTurn.sparkleReserveSum += valuesRef.reservePoints - oldValue;
+                            // console.log(ownerTurn.sparkleReserveSum)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparkleReserveSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.reservePoints,
+                            currentSumValue: ownerTurn.sparkleReserveSum,
+                            currentAddedValue: valuesRef.reservePoints - oldValue
+                        });
                     }
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
                 },
@@ -19869,11 +19913,25 @@ const turnLogic = {
                     const oldValue = valuesRef.coreResonance;
                     valuesRef.coreResonance += pointsGained;
                     const resoRef = valuesRef.coreResonance;
-                    const sourceString = generalInfo.sourceString
+                    const sourceString = generalInfo.sourceString;
                     if (pointsGained && battleData.isLoggyLogger) {
                         // GenericActionWithImage
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Core Resonance: ${oldValue} --> ${resoRef} [${sourceString}]`});
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
+
+                        if (pointsGained > 0) {
+                            ownerTurn.saberSumResonance ??= 0;
+                            ownerTurn.saberSumResonance += valuesRef.coreResonance - oldValue;
+                            // console.log(ownerTurn.saberSumResonance)
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "saberSumResonance",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.coreResonance,
+                            currentSumValue: ownerTurn.saberSumResonance,
+                            currentAddedValue: valuesRef.coreResonance - oldValue
+                        });
                     }
                     if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
 
@@ -28698,7 +28756,7 @@ const turnLogic = {
                 let values = ATKObjects.sparxSkillInstanceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 
                 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+               
                 // poke("SkillStart",battleData,{sourceTurn});
 
                 const rngArray = sourceTurn.rngArray ??= [1,1,2,1,1];
@@ -28708,6 +28766,22 @@ const turnLogic = {
                 if (battleValues.rngCurrentIndex === 5) {battleValues.rngCurrentIndex = 0;}
                 else if (battleValues.rngCurrentIndex >= 3) {battleValues.rngCurrentIndex -= 2}
                 battleValues.skillCounter++;
+
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});
+                    // if (pointsGained > 0) {
+                        sourceTurn.sparxieEnhanceSum ??= 0;
+                        sourceTurn.sparxieEnhanceSum += 1;
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparxieEnhanceSum",
+                            AV: battleData.sumAV,
+                            currentValue: battleValues.skillCounter,
+                            currentSumValue: sourceTurn.sparxieEnhanceSum,
+                            currentAddedValue: 1
+                        });
+                    // }
+                }
 
                 
 
@@ -28757,6 +28831,18 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {
                     logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point02.icon,sourceName: sourceTurn.properName, source:"Sparxie Skill", bodyText: `Engagement Farming Continued: #${battleValues.skillCounter}`});
+                    // if (pointsGained > 0) {
+                        sourceTurn.sparxieEnhanceSum ??= 0;
+                        sourceTurn.sparxieEnhanceSum += 1;
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparxieEnhanceSum",
+                            AV: battleData.sumAV,
+                            currentValue: battleValues.skillCounter,
+                            currentSumValue: sourceTurn.sparxieEnhanceSum,
+                            currentAddedValue: 1
+                        });
+                    // }
                 }
 
                 if (rngIndex === 2 && battleValues.skillCounter < 15) {
@@ -29125,6 +29211,20 @@ const turnLogic = {
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
                         logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Thrill (Sparxie): ${oldValue} --> ${valuesRef.thrill} [${sourceString}]`});
+                    
+                        if (pointsGained > 0) {
+                            ownerTurn.sparxieThrillSum ??= 0;
+                            ownerTurn.sparxieThrillSum += valuesRef.thrill - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "sparxieThrillSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.thrill,
+                            currentSumValue: ownerTurn.sparxieThrillSum,
+                            currentAddedValue: valuesRef.thrill - oldValue
+                        });
                     }
 
 

@@ -75,6 +75,13 @@ const customEnergyBar = {
 
 
 const customDisplayValuesLog = {
+    "TEAM": [
+        // {valueName: "Team Punchline", refName: "punchline", isBattleValue: true, isCharacterState: true},
+        {valueName: "Team Punchline", refName: "punchline",summaryValue: "teamPunchlineSummer",summaryType: "SUM"},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true},
+        // {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
+        // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
+    ], 
     "Blade": [
         {valueName: "Charge", refName: "charge", isBattleValue: true},
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
@@ -119,7 +126,7 @@ const customDisplayValuesLog = {
     ], 
     "Saber": [
         {valueName: "Basic is Enhanced", refName: "isEnhanced", isBattleValue: true, isCharacterState: true},
-        {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true},
+        {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true,logFunction: null,summaryValue: "saberSumResonance",summaryType: "SUM"},
         {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true},
         {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
@@ -191,16 +198,17 @@ const customDisplayValuesLog = {
     "Anaxa": [],
     "Yao Guang": [
         {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger"},
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerYao Guang`,summaryType: "SUM"},
     ],
     "Sparxie": [
-        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger"},
-        {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true},
+        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM"},
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSparxie`,summaryType: "SUM"},
+        {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
+
         
     ],
     "Sparkle": [
-        {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true},
+        {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true,summaryValue: "sparkleReserveSum",summaryType: "SUM"},
         {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
         {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
