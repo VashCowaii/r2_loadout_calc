@@ -761,6 +761,256 @@ const turnLogicLightcones = {
             "echoesSPD": "Echoes of the Coffin SPD",
         },
     },
+    "Hey, Over Here": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "SkillStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+
+                    if (!sourceTurn.heyOverHereHEALBONUSUSHEET) {
+                        let lcNameRef = "Hey, Over Here";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.heyOverHereHEALBONUSUSHEET = {
+                            "stats": [HealingOutgoing],
+                            [HealingOutgoing]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+                    let buffSheet = sourceTurn.heyOverHereHEALBONUSUSHEET;
+                    buffSheet.duration = sourceTurn.turnState ? 3 : 2;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "team",
+                "listenerName": "Hey, Over Here skill start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "healBonus": "Hey, Over Here (LC)",
+        },
+    },
+    "Perfect Timing": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            statCheck(battleData,currentTurn,ownersSlots) {
+                let ownerRank = ownersSlots[currentTurn.name];
+
+                if (!currentTurn.lcPerfectTimingERToHealingSHEET) {
+                    let lcNameRef = "Perfect Timing";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+
+                    currentTurn.lcPerfectTimingERToHealingRATIO = rankParams[1];
+                    currentTurn.lcPerfectTimingERToHealingCAP = rankParams[2];
+
+                    currentTurn.lcPerfectTimingERToHealingSHEET = {
+                        "stats": [HealingOutgoing,HealingOutgoingNULL],
+                        [HealingOutgoing]: 0,
+                        [HealingOutgoingNULL]: -0,
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let buffSheet = currentTurn.lcPerfectTimingERToHealingSHEET;
+                const buffName = buffSheet.buffName;
+                const buffsRef = currentTurn.buffsObject;
+                const buffCheck = buffsRef[buffName];
+
+
+                const currentStats = currentTurn.statTable;
+                const currentEffectRes = currentStats[EffectRES];
+                const conversionRatio = currentTurn.lcPerfectTimingERToHealingRATIO;
+                const conversionCap = currentTurn.lcPerfectTimingERToHealingCAP;
+
+                const endTotal = Math.min(conversionCap,currentEffectRes * conversionRatio);
+
+                if (buffCheck) {
+                    const currentAmount = buffCheck[HealingOutgoing];
+
+                    if (currentAmount === endTotal) {return;}
+
+                    removeBuff(battleData,currentTurn,buffCheck,endTotal,null,false,endTotal);
+                }
+
+                buffSheet[HealingOutgoing] = endTotal;
+                buffSheet[HealingOutgoingNULL] = -endTotal;
+                battleActions.updateBuff(battleData,currentTurn,buffSheet)
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "UpdateStatEffectRES",//EffectRES stat family
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogicLightcones["Perfect Timing"].skillFunctions.statCheck;
+                    statCheck(battleData,sourceTurn,ownersSlots);
+                },
+                "target": "self",
+                "listenerName": "Perfect Timing EffectRES check",
+                "owners": []
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    if (ownerRef.length) {
+                        // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                        const statCheck = this.statCheck ??= turnLogicLightcones["Perfect Timing"].skillFunctions.statCheck;
+                        const namedTurns = battleData.nameBasedTurns;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+                            statCheck(battleData,currentTurn,ownersSlots);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Perfect Timing battle start stat check trigger",
+                "owners": []
+            },
+        ],
+        "buffNames": {
+            "buff1": "Perfect Timing (LC)",
+        },
+    },
+    "Post-Op Conversation": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+
+                    if (!sourceTurn.lcPostOpHEALBONUSUSHEET) {
+                        let lcNameRef = "Post-Op Conversation";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcPostOpHEALBONUSUSHEET = {
+                            "stats": [HealingOutgoing],
+                            [HealingOutgoing]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcPostOpHEALBONUSUSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "team",
+                "listenerName": "Post-Op Conversation ult start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "UltimateEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    let buffSheet = sourceTurn.lcPostOpHEALBONUSUSHEET;
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "team",
+                "listenerName": "Post-Op Conversation ult end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "healBonus": "Post-Op Conversation (LC)",
+        },
+    },
+    "What Is Real?": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "BasicATKEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    if (!sourceTurn.lcWhatIsRealHealingHEALOBJECT) {
+                        let lcNameRef = "What Is Real?";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcWhatIsRealHealingHEALOBJECT ??= {
+                            multipliers: {
+                                primary: rankParams[1],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: rankParams[2],
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: "HP",
+                            DMGTags: [],
+                            allToughness: false,
+                            slot: "Lightcone"
+                        }
+                    }
+                    const healObject = sourceTurn.lcWhatIsRealHealingHEALOBJECT;
+
+                    battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,null);
+                },
+                "target": "team",
+                "listenerName": "What Is Real? basic atk end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {},
+    },
 
     //NIHILITY
     "Incessant Rain": {
