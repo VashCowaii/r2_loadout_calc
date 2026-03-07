@@ -1011,6 +1011,234 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
+    "Night of Fright": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    // if (!ownerRank) {return;}//abort non-owners
+
+                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return;}
+
+                    const allyPositions = battleData.allyPositions;
+                    let lowestPercentAlly = null;
+                    for (let ally of allyPositions) {
+                        const hpRatio = ally.currentHP / ally.maxHP;
+                        if (hpRatio < lowestPercentAlly || lowestPercentAlly === null) {
+                            lowestPercentAlly = ally;
+                        }
+                    }
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlot];
+
+
+                        if (!currentOwner.lcNightOfFrightHealingHEALOBJECT) {
+                            let lcNameRef = "Night of Fright";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+                            
+                            currentOwner.lcNightOfFrightHealingHEALOBJECT ??= {
+                                multipliers: {
+                                    primary: rankParams[1],
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone"
+                            }
+
+                            currentOwner.lcNightOfFrightATKSHEET = {
+                                "stats": [ATKP],
+                                [ATKP]: rankParams[2],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 5,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        const healObject = currentOwner.lcNightOfFrightHealingHEALOBJECT;
+    
+                        battleActions.healAlly(battleData,healObject,lowestPercentAlly,currentOwner,"Lightcone",1,null);
+
+                        const buffSheet = currentOwner.lcNightOfFrightATKSHEET;
+                        buffSheet.duration = lowestPercentAlly.turnState ? 3 : 2;
+                        updateBuff(battleData,lowestPercentAlly,buffSheet)
+                    }
+                },
+                "target": "team",
+                "listenerName": "Night of Fright ult start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "atkBuff": "Night of Fright (LC)",
+        },
+    },
+    "Dream's Montage": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || sourceTurn.lcDreamsMontageREGENCOUNTER >= 2) {return;}//abort non-owners
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    let hitWBEnemy = false;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    for (let enemySlot in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemySlot];
+
+                        if (currentEnemy.isBroken) {
+                            hitWBEnemy = true;
+                            break;
+                        }
+                    }
+
+                    if (hitWBEnemy) {
+
+                        if (!sourceTurn.lcDreamsMontageREGENVALUE) {
+                            let lcNameRef = "Dream's Montage";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+                            let rankParams = lcPathing[ownerRank-1];
+
+                            sourceTurn.lcDreamsMontageREGENVALUE = rankParams[1]
+                        }
+
+                        const regenValue = sourceTurn.lcDreamsMontageREGENVALUE;
+
+                        battleActions.updateEnergy(battleData,regenValue,sourceTurn,false,"Dream's Montage (LC)");
+                        sourceTurn.lcDreamsMontageREGENCOUNTER ??= 0;
+                        sourceTurn.lcDreamsMontageREGENCOUNTER++;
+                    }
+                },
+                "target": "team",
+                "listenerName": "Dream's Montage ATK End listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    sourceTurn.lcDreamsMontageREGENCOUNTER = 0;
+                },
+                "target": "team",
+                "listenerName": "Dream's Montage turn start reset listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            // "atkBuff": "Night of Fright (LC)",
+        },
+    },
+    "Shared Feeling": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "SkillEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    if (!sourceTurn.lcSharedFeelingREGENVALUE) {
+                        let lcNameRef = "Shared Feeling";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcSharedFeelingREGENVALUE = rankParams[1];
+                    }
+                    const regen = sourceTurn.lcSharedFeelingREGENVALUE;
+
+                    const allyPositions = battleData.allyPositions;
+                    const updateEnergy = battleActions.updateEnergy;
+                    for (let ally of allyPositions) {
+                        if (ally.isUniqueEvent) {continue;}
+
+                        updateEnergy(battleData,regen,ally,false,"Shared Feeling (LC)");
+                    }
+
+                    
+                },
+                "target": "team",
+                "listenerName": "Shared Feeling Skill End listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            // "atkBuff": "Night of Fright (LC)",
+        },
+    },
+    "Multiplication": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "BasicATKStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    if (!sourceTurn.lc3starMultiVALUE) {
+                        let lcNameRef = "Multiplication";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lc3starMultiVALUE = rankParams[0];
+                    }
+                    const advValue = sourceTurn.lc3starMultiVALUE;
+                    battleActions.actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
+                },
+                "target": "team",
+                "listenerName": "Multiplication basic atk start advance listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            // "atkBuff": "Night of Fright (LC)",
+        },
+    },
 
     //NIHILITY
     "Incessant Rain": {
@@ -3108,6 +3336,86 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {},
+    },
+    "Poised to Bloom": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let lcNameRef = "Poised to Bloom";
+
+                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    let firstOwnerTurn = null;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+                        firstOwnerTurn = currentOwner;
+
+
+                        if (!currentOwner.lcPoisedToBloomCRITSHEET) {
+                            let lcNameRef = "Poised to Bloom";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+        
+                            currentOwner.lcPoisedToBloomCRITSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffName2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+
+                        break;
+                    }
+                    const updateBuff = battleActions.updateBuff;
+                    const buffSheet = firstOwnerTurn.lcPoisedToBloomCRITSHEET;
+
+                    let pathHolderObject = {};
+
+                    const allyPositions = battleData.allyPositions;
+                    for (let ally of allyPositions) {
+                        if (ally.isUniqueEvent) {continue;}
+
+                        const allyPath = ally.path;
+                        const allyPathArray = pathHolderObject[allyPath] ??= [];
+                        allyPathArray.push(ally);
+                    }
+
+                    for (let pathName in pathHolderObject) {
+                        const currentPathArray = pathHolderObject[pathName];
+                        if (currentPathArray.length >= 2) {
+                            for (let ally of currentPathArray) {
+        
+                                updateBuff(battleData,ally,buffSheet);
+                            }
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Poised to Bloom - battlestart pathcounts>=2 buff",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "buff2": "Poised to Bloom [LC]",
+        },
     },
 
 
