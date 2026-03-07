@@ -1096,6 +1096,74 @@ const turnLogicLightcones = {
             "atkBuff": "Night of Fright (LC)",
         },
     },
+    "Dream's Montage": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || sourceTurn.lcDreamsMontageREGENCOUNTER >= 2) {return;}//abort non-owners
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    let hitWBEnemy = false;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    for (let enemySlot in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemySlot];
+
+                        if (currentEnemy.isBroken) {
+                            hitWBEnemy = true;
+                            break;
+                        }
+                    }
+
+                    if (hitWBEnemy) {
+
+                        if (!sourceTurn.lcDreamsMontageREGENVALUE) {
+                            let lcNameRef = "Dream's Montage";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+                            let rankParams = lcPathing[ownerRank-1];
+
+                            sourceTurn.lcDreamsMontageREGENVALUE = rankParams[1]
+                        }
+
+                        const regenValue = sourceTurn.lcDreamsMontageREGENVALUE;
+
+                        battleActions.updateEnergy(battleData,regenValue,sourceTurn,false,"Dream's Montage (LC)");
+                        sourceTurn.lcDreamsMontageREGENCOUNTER ??= 0;
+                        sourceTurn.lcDreamsMontageREGENCOUNTER++;
+                    }
+                },
+                "target": "team",
+                "listenerName": "Dream's Montage ATK End listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    sourceTurn.lcDreamsMontageREGENCOUNTER = 0;
+                },
+                "target": "team",
+                "listenerName": "Dream's Montage turn start reset listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            // "atkBuff": "Night of Fright (LC)",
+        },
+    },
 
     //NIHILITY
     "Incessant Rain": {
