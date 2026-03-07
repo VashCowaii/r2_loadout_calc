@@ -1164,6 +1164,48 @@ const turnLogicLightcones = {
             // "atkBuff": "Night of Fright (LC)",
         },
     },
+    "Shared Feeling": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "SkillEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    if (!sourceTurn.lcSharedFeelingREGENVALUE) {
+                        let lcNameRef = "Shared Feeling";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcSharedFeelingREGENVALUE = rankParams[1];
+                    }
+                    const regen = sourceTurn.lcSharedFeelingREGENVALUE;
+
+                    const allyPositions = battleData.allyPositions;
+                    const updateEnergy = battleActions.updateEnergy;
+                    for (let ally of allyPositions) {
+                        if (ally.isUniqueEvent) {continue;}
+
+                        updateEnergy(battleData,regen,ally,false,"Shared Feeling (LC)");
+                    }
+
+                    
+                },
+                "target": "team",
+                "listenerName": "Shared Feeling Skill End listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            // "atkBuff": "Night of Fright (LC)",
+        },
+    },
 
     //NIHILITY
     "Incessant Rain": {
