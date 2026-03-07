@@ -3304,6 +3304,86 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
+    "Poised to Bloom": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let lcNameRef = "Poised to Bloom";
+
+                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    let firstOwnerTurn = null;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+                        firstOwnerTurn = currentOwner;
+
+
+                        if (!currentOwner.lcPoisedToBloomCRITSHEET) {
+                            let lcNameRef = "Poised to Bloom";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+        
+                            currentOwner.lcPoisedToBloomCRITSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffName2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+
+                        break;
+                    }
+                    const updateBuff = battleActions.updateBuff;
+                    const buffSheet = firstOwnerTurn.lcPoisedToBloomCRITSHEET;
+
+                    let pathHolderObject = {};
+
+                    const allyPositions = battleData.allyPositions;
+                    for (let ally of allyPositions) {
+                        if (ally.isUniqueEvent) {continue;}
+
+                        const allyPath = ally.path;
+                        const allyPathArray = pathHolderObject[allyPath] ??= [];
+                        allyPathArray.push(ally);
+                    }
+
+                    for (let pathName in pathHolderObject) {
+                        const currentPathArray = pathHolderObject[pathName];
+                        if (currentPathArray.length >= 2) {
+                            for (let ally of currentPathArray) {
+        
+                                updateBuff(battleData,ally,buffSheet);
+                            }
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Poised to Bloom - battlestart pathcounts>=2 buff",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "buff2": "Poised to Bloom [LC]",
+        },
+    },
 
 
     //REMEMBRANCE
