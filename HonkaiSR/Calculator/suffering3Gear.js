@@ -1206,6 +1206,39 @@ const turnLogicLightcones = {
             // "atkBuff": "Night of Fright (LC)",
         },
     },
+    "Multiplication": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "BasicATKStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    if (!sourceTurn.lc3starMultiVALUE) {
+                        let lcNameRef = "Multiplication";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lc3starMultiVALUE = rankParams[0];
+                    }
+                    const advValue = sourceTurn.lc3starMultiVALUE;
+                    battleActions.actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
+                },
+                "target": "team",
+                "listenerName": "Multiplication basic atk start advance listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            // "atkBuff": "Night of Fright (LC)",
+        },
+    },
 
     //NIHILITY
     "Incessant Rain": {
