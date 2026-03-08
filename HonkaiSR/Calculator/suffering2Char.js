@@ -13471,8 +13471,8 @@ const turnLogic = {
                                 "isDebuff": true,
                             }
                             ATKObjects.E1DebuffRESSHEETFire = {
-                                "stats": [ResistancePhysical],
-                                [ResistancePhysical]: -0.25,
+                                "stats": [ResistanceFire],
+                                [ResistanceFire]: -0.25,
                                 "source": "E1",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.E1RESFire,
@@ -13485,8 +13485,8 @@ const turnLogic = {
                                 "isDebuff": true,
                             }
                             ATKObjects.E1DebuffRESSHEETWind = {
-                                "stats": [ResistancePhysical],
-                                [ResistancePhysical]: -0.25,
+                                "stats": [ResistanceWind],
+                                [ResistanceWind]: -0.25,
                                 "source": "E1",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.E1RESWind,
