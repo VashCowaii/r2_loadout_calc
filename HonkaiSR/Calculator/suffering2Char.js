@@ -12966,9 +12966,17 @@ const turnLogic = {
                 }
 
                 // enemy.blackswanEpiphanyResetDelayReady = true;
+                const buffCheck2 = targetTurn.buffsObject[arcanaName];
                 if (!targetTurn.blackswanEpiphanyResetDelayReady) {
-                    buffCheck.currentStacks = Math.min(buffCheck.maxStacks,Math.max(1,Math.floor(buffCheck.currentStacks * 0.5)));
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Arcana turn-start handler", bodyText: `Arcana stacks halved to ${buffCheck.currentStacks}`});}
+                    buffCheck2.currentStacks = Math.min(buffCheck2.multiStackCap,Math.max(1,Math.floor(buffCheck2.currentStacks * 0.5)));
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Arcana turn-start handler", bodyText: `Arcana stacks halved to ${buffCheck2.currentStacks} on ${targetTurn.properName}`});}
+                }
+                else {
+                    if (buffCheck2.currentStacks > buffCheck2.multiStackCap) {
+                        buffCheck2.currentStacks = Math.min(buffCheck2.multiStackCap,buffCheck2.currentStacks);
+                        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Arcana turn-start handler", bodyText: `Epiphany Active, reset prevented, but stacks >${buffCheck2.multiStackCap} were reduced to ${buffCheck2.currentStacks} on ${targetTurn.properName}`});}
+                    }
+                    
                 }
             },
             blackswanSkill(battleData,target,sourceTurn) {
