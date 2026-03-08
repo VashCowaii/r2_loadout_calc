@@ -96,8 +96,8 @@ for (let maslowKey in maslowFrontFacingTags) {
 
 
 
-// const isGeneralSupport = ["HP","DEF","EffectRES"];
-const isGeneralSupport = ["HP","EffectRES"];
+const isGeneralSupport = ["HP","DEF","EffectRES"];
+// const isGeneralSupport = ["HP","EffectRES"];
 const isHealer = ["Healing"];
 const isShielder = ["Shield"];
 const isCritCharacter = ["CritDMG","CritRate"];
