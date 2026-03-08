@@ -1286,6 +1286,32 @@ const compare = {
         const compositeTeamNeedsPRE = new Set ([...char1NeedsTeam,...char2NeedsTeam,...char3NeedsTeam,...char4NeedsTeam]);
         const compositeAddedNeedsPRE = new Set ([...char1AddsTeamNeed,...char2AddsTeamNeed,...char3AddsTeamNeed,...char4AddsTeamNeed]);
 
+        // {want:"EHR",give:"ATK"}
+        for (let charAddedNeed of compositeAddedNeedsPRE) {
+
+            if (char1Needs.has(charAddedNeed.give)) {
+                char1Needs.add(charAddedNeed.want);
+                char1NeedsTeam.add(charAddedNeed.want);
+            }
+            if (char2Needs.has(charAddedNeed.give)) {
+                char2Needs.add(charAddedNeed.want);
+                char2NeedsTeam.add(charAddedNeed.want);
+            }
+            if (char3Needs.has(charAddedNeed.give)) {
+                char3Needs.add(charAddedNeed.want);
+                char3NeedsTeam.add(charAddedNeed.want);
+            }
+            if (char4Needs.has(charAddedNeed.give)) {
+                char4Needs.add(charAddedNeed.want);
+                char4GivesTeam.add(charAddedNeed.want);
+            }
+
+        }
+
+
+
+
+
 
         const getNeeds = compare.getCharacterNeedsWants;
         const getMainstats = compare.getCharacterMainstatIteration;
@@ -1769,6 +1795,14 @@ const compare = {
         countedProgressHolderBox.style.display = "flex";
         const combosCountedProgress = readSelection("combinationsCountedDisplayCount");
         const validCombosBox = readSelection("optimizerValidCombos");
+
+        // 5: {
+        //     gives: [],
+        //     givesTeam: ["DOTSource","Debuff","FUASource","ATK","Vuln","DOT"],
+        //     wants: [...DOTATKBased,"Lightning",...hasFUA,...characterHasEnergy,...characterDealsDamage,...generalCharacterWants],
+        //     wantsTeam: [...DOTATKBased,"Lightning",...hasFUA,...characterHasEnergy,...characterDealsDamage,...generalCharacterWants],
+        //     addTeamWant: ["EHR"],
+        // },
 
 
         let countedSkip = 0;
