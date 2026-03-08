@@ -2527,6 +2527,8 @@ const battleActions = {
                 const isDOT = battleActions.breakDOTisDOT[element];
                 if (isDOT) {
                     if (!sourceTurn.breakDOTSheet) {
+                        const elemIsWind = element === "Wind";
+                        const targetType = targetTurn.enemyType;
                         sourceTurn.breakDOTSheet = {
                             "stats": null,
                             "source": "Break",
@@ -2534,8 +2536,8 @@ const battleActions = {
                             "buffName": battleActions.breakDOTNames[element],
                             "duration": 1,
                             "AVApplied": 0,
-                            "maxStacks": element === "Wind" ? 5 : 1,
-                            "currentStacks": 1,
+                            "maxStacks": elemIsWind ? 5 : 1,
+                            "currentStacks": elemIsWind ? ((targetType === "boss" || targetType === "elite") ? 3 : 1) : 1,
                             "decay": false,
                             "expireType": "EndTurn",
                             "isDOT": isDOT,
@@ -2543,6 +2545,8 @@ const battleActions = {
                             "element": element,
                             isBreakDOT: true,
                             multiplier: battleActions.breakDOTElementMultipliers[element],
+                            ...(elemIsWind ? {stackedmulti: battleActions.breakDOTElementMultipliers[element]} : {}),
+                            ...(elemIsWind ? {multiStackCap: 5} : {}),
                             slot: "BreakDOT",
                             ownerIsAllied: true,
                             ownerSlot: sourceTurn.name,
@@ -3578,9 +3582,14 @@ const battleActions = {
         const targetCache = targetTurn.cacheTagValues;
 
         const turnMerge = {targetTurn,sourceTurn,element,isDetonated,sourceOverride,isBreakDOT};
+
+
+
+        const stackCount = currentBuff.currentStacks;
+        let currentMulti = multi;//the %multi from the description of the current attack
         poke("DOTDMGStart",battleData,turnMerge);
         poke("AllyDMGStart",battleData,turnMerge);
-        let currentMulti = multi;//the %multi from the description of the current attack
+        
         // let detonateMulti //passed through as a param, no need to define
 
 
@@ -3636,7 +3645,9 @@ const battleActions = {
             // multiplier: values[0],
             // multiPerStack: values[2],
             const stackedMulti = currentBuff.multiPerStack;
-            if (stackedMulti) {currentMulti += (currentBuff.currentStacks - 1) * stackedMulti;}
+            const stackedMultiCap = currentBuff.multiStackCap;
+            const stacksToUse = stackedMultiCap ? Math.min(stackedMultiCap,stackCount) : stackCount;
+            if (stackedMulti) {currentMulti += (stacksToUse) * stackedMulti;}
             //see black swan's arcana stacking later if I forget what this was for
             let prePreDMG = multiOf * currentMulti;
 
@@ -3728,8 +3739,10 @@ const battleActions = {
             // }
 
 
-            let prePreDMG = multiOf * multi;
-            currentMulti = multi * (element === "Wind" ? currentBuff.currentStacks : 1);
+            let prePreDMG = multiOf * multi * (element === "Wind" ? currentBuff.currentStacks : 1);
+            currentMulti = multi;
+
+
             if (element === "Physical") {
                 const HPMax = targetTurn.maxHP;
                 bleedMultiOf = HPMax;
@@ -4144,6 +4157,7 @@ const battleActions = {
 
         // const possibleDotMulti = ATKObject.detonateDotsByMulti;
         ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
+        poke("AttackDMGDetonateEnd",battleData,generalInfo);
 
         poke("TrueTriggerAttackEnd",battleData,generalInfo);
         // if (possibleDotMulti) {battleActions.dotDetonateWrapper(battleData,sourceTurn,possibleDotMulti,targetTurn);}
@@ -4369,6 +4383,7 @@ const battleActions = {
 
             // const possibleDotMulti = ATKObject.detonateDotsByMulti;
             ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
+            poke("AttackDMGDetonateEnd",battleData,generalInfo);
             poke("TrueTriggerAttackEnd",battleData,generalInfo);
 
 
@@ -10947,6 +10962,7 @@ const turnLogic = {
                 const detonate = battleActions.dotDetonateWrapper;
 
                 const primaryTarget = battleData.primaryTarget;
+                // primaryTarget.buffsObject["Arcana [Black Swan]"].currentStacks = 17;
                 if (!primaryTarget.isDead) {detonate(battleData,sourceTurn,primaryMulti,primaryTarget);}
                 const blastArray = battleData.blastTargets;
                 if (blastArray.length) {
@@ -11122,6 +11138,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     const actionTags = ["DOT"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.kafkaUltimateDOTSHEET = {
                         "stats": null,
@@ -11144,7 +11161,7 @@ const turnLogic = {
                         ownerSlot: sourceTurn.name,
                         avgChanceApplied: 1,
                         baseChance: values[1],
-                        tags,actionTags,
+                        tags,actionTags,compositeCacheTag,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     }
                 }
@@ -11822,6 +11839,10 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     const actionTags = ["DOT"];
 
+                    const compositeCacheTagL = tagsLightning + actionTags + sourceTurn.properName;
+                    const compositeCacheTagF = tagsFire + actionTags + sourceTurn.properName;
+                    const compositeCacheTagW = tagsWind + actionTags + sourceTurn.properName;
+                    const compositeCacheTagP = tagsPhysical + actionTags + sourceTurn.properName;
 
                     ATKObjects.hysilensTalentDOTSHEETLightning = {
                         "stats": null,
@@ -11845,6 +11866,7 @@ const turnLogic = {
                         avgChanceApplied: 1,
                         baseChance: values[0],
                         actionTags,tags: tagsLightning,
+                        compositeCacheTag: compositeCacheTagL,
                         realDMGKeys: keyShortcut(dmgKeys,tagsLightning),
                         realPENKeys: keyShortcut(resPENKeys,tagsLightning),
                         realShredKeys: keyShortcut(defShredKeys,tagsLightning),
@@ -11872,6 +11894,7 @@ const turnLogic = {
                         avgChanceApplied: 1,
                         baseChance: values[0],
                         actionTags,tags: tagsFire,
+                        compositeCacheTag: compositeCacheTagF,
                         realDMGKeys: keyShortcut(dmgKeys,tagsFire),
                         realPENKeys: keyShortcut(resPENKeys,tagsFire),
                         realShredKeys: keyShortcut(defShredKeys,tagsFire),
@@ -11899,6 +11922,7 @@ const turnLogic = {
                         avgChanceApplied: 1,
                         baseChance: values[0],
                         actionTags,tags: tagsWind,
+                        compositeCacheTag: compositeCacheTagW,
                         realDMGKeys: keyShortcut(dmgKeys,tagsWind),
                         realPENKeys: keyShortcut(resPENKeys,tagsWind),
                         realShredKeys: keyShortcut(defShredKeys,tagsWind),
@@ -11928,6 +11952,7 @@ const turnLogic = {
                         avgChanceApplied: 1,
                         baseChance: values[0],
                         actionTags,tags: tagsPhysical,
+                        compositeCacheTag: compositeCacheTagP,
                         realDMGKeys: keyShortcut(dmgKeys,tagsPhysical),
                         realPENKeys: keyShortcut(resPENKeys,tagsPhysical),
                         realShredKeys: keyShortcut(defShredKeys,tagsPhysical),
@@ -11958,6 +11983,7 @@ const turnLogic = {
                             avgChanceApplied: 1,
                             baseChance: values[0],
                             actionTags,tags: tagsLightning,
+                            compositeCacheTag: compositeCacheTagL,
                             realDMGKeys: keyShortcut(dmgKeys,tagsLightning),
                             realPENKeys: keyShortcut(resPENKeys,tagsLightning),
                             realShredKeys: keyShortcut(defShredKeys,tagsLightning),
@@ -11985,6 +12011,7 @@ const turnLogic = {
                             avgChanceApplied: 1,
                             baseChance: values[0],
                             actionTags,tags: tagsFire,
+                            compositeCacheTag: compositeCacheTagF,
                             realDMGKeys: keyShortcut(dmgKeys,tagsFire),
                             realPENKeys: keyShortcut(resPENKeys,tagsFire),
                             realShredKeys: keyShortcut(defShredKeys,tagsFire),
@@ -12012,6 +12039,7 @@ const turnLogic = {
                             avgChanceApplied: 1,
                             baseChance: values[0],
                             actionTags,tags: tagsWind,
+                            compositeCacheTag: compositeCacheTagW,
                             realDMGKeys: keyShortcut(dmgKeys,tagsWind),
                             realPENKeys: keyShortcut(resPENKeys,tagsWind),
                             realShredKeys: keyShortcut(defShredKeys,tagsWind),
@@ -12041,6 +12069,7 @@ const turnLogic = {
                             avgChanceApplied: 1,
                             baseChance: values[0],
                             actionTags,tags: tagsPhysical,
+                            compositeCacheTag: compositeCacheTagP,
                             realDMGKeys: keyShortcut(dmgKeys,tagsPhysical),
                             realPENKeys: keyShortcut(resPENKeys,tagsPhysical),
                             realShredKeys: keyShortcut(defShredKeys,tagsPhysical),
@@ -12210,6 +12239,57 @@ const turnLogic = {
             },
         },
         "listeners": [
+            // {
+            //     "trigger": "DOTDMGEnd",
+            //     condition(battleData,generalInfo) {
+            //         // poke("DOTDMGEnd",battleData,turnMerge)
+            //         // const turnMerge = {targetTurn,sourceTurn,element,isDetonated,sourceOverride};
+            //         // dotDMGWrapper(battleData,sourceTurn,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,currentBuff,sourceOverride)
+
+            //         const sourceOverride = generalInfo.sourceOverride;
+            //         if (sourceOverride) {return;}
+            //         //source override is how we deal this damage at all, by forcing an instance of dot unrelated to any actual dot applied, separate from detonations
+            //         //since the physical dot from ult can't trigger itself, we need to differentiate as such
+
+            //         // let skillRef = sourceTurn.fishladyUltimateREF ??= sourceTurn.Ultimate["Maelstrom Rhapsody"].variant1;
+            //         const ownerTurn = this.ownerTurn;
+
+            //         const logicRef = turnLogic[ownerTurn.properName];
+            //         const ATKObjects = logicRef.ATKObjects;
+
+            //         const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET;
+            //         const buffCheck = ownerTurn.buffsObject[countdownSheet.buffName];
+            //         if (!buffCheck) {return;}//we only deal the extra physical dot from the ult assuming the field is actually active
+
+            //         let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+            //         if (!this.ultyPhysicalRef) {
+            //             const keyShortcut = basicShorthand.makeKeysArray;
+            //             const tags = ["All","Physical","DOT"];
+            //             this.ultyPhysicalRef = {
+            //                 buffName: "Maelstrom Rhapsody",
+            //                 tags,
+            //                 actionTags: ["DOT"],
+            //                 realDMGKeys: keyShortcut(dmgKeys,tags),
+            //                 realPENKeys: keyShortcut(resPENKeys,tags),
+            //                 realShredKeys: keyShortcut(defShredKeys,tags),
+            //                 realVulnKeys: keyShortcut(vulnKeys,tags),
+            //             }
+            //         }
+            //         const ultyPhysicalRef = this.ultyPhysicalRef;
+
+            //         const targetTurn = generalInfo.targetTurn;
+            //         const procCheck = targetTurn.hysilensFieldProcCounter ??= 0;
+            //         const procLimit = ownerTurn.hysilensFieldProcLimit ??= ownerTurn.rank >= 6 ? 12 : 8;
+            //         const procValue = ownerTurn.hysilensFieldProcValue ??= values[3] + (ownerTurn.rank >= 6 ? 0.20 : 0);
+            //         if (procCheck >= procLimit) {return;}
+
+            //         battleActions.dotDMGWrapper(battleData,ownerTurn,targetTurn,"Physical",procValue,"ATK",1,1,true,ultyPhysicalRef,true);
+            //         targetTurn.hysilensFieldProcCounter += 1;
+            //     },
+            //     "target": "enemy",
+            //     "listenerName": "Zone - dot dmg listener",
+            //     "ownerTurn": {},
+            // },
             {
                 "trigger": "DOTDMGEnd",
                 condition(battleData,generalInfo) {
@@ -12232,14 +12312,42 @@ const turnLogic = {
                     const buffCheck = ownerTurn.buffsObject[countdownSheet.buffName];
                     if (!buffCheck) {return;}//we only deal the extra physical dot from the ult assuming the field is actually active
 
+                    const targetTurn = generalInfo.targetTurn;
+                    const procCheck = targetTurn.hysilensFieldProcCounter ??= 0;
+                    const procLimit = ownerTurn.hysilensFieldProcLimit ??= ownerTurn.rank >= 6 ? 12 : 8;
+                    if (procCheck >= procLimit) {return;}
+
+                    targetTurn.hysilensFieldProcCounter += 1;
+                },
+                "target": "enemy",
+                "listenerName": "Zone - dot dmg listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "TurnStartDotEnd",
+                condition(battleData,generalInfo) {
+                    // poke("TurnStartDotEnd", battleData, {sourceTurn});
+                    const ownerTurn = this.ownerTurn;
+                    const targetTurn = generalInfo.sourceTurn;
+                    if (!targetTurn.isEnemy) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET;
+                    const buffCheck = ownerTurn.buffsObject[countdownSheet.buffName];
+                    if (!buffCheck) {return;}//we only deal the extra physical dot from the ult assuming the field is actually active
+
                     let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     if (!this.ultyPhysicalRef) {
                         const keyShortcut = basicShorthand.makeKeysArray;
                         const tags = ["All","Physical","DOT"];
+                        const actionTags = ["DOT"];
+                        const compositeCacheTag = tags + actionTags + ownerTurn.properName;
                         this.ultyPhysicalRef = {
                             buffName: "Maelstrom Rhapsody",
-                            tags,
-                            actionTags: ["DOT"],
+                            tags, 
+                            actionTags,compositeCacheTag,
                             realDMGKeys: keyShortcut(dmgKeys,tags),
                             realPENKeys: keyShortcut(resPENKeys,tags),
                             realShredKeys: keyShortcut(defShredKeys,tags),
@@ -12248,14 +12356,81 @@ const turnLogic = {
                     }
                     const ultyPhysicalRef = this.ultyPhysicalRef;
 
-                    const targetTurn = generalInfo.targetTurn;
-                    const procCheck = targetTurn.hysilensFieldProcCounter ??= 0;
-                    const procLimit = ownerTurn.hysilensFieldProcLimit ??= ownerTurn.rank >= 6 ? 12 : 8;
+                    // const targetTurn = generalInfo.targetTurn;
+                    // const targetsGotHit = generalInfo.targetsGotHit;
+                    // const enemyTurns = battleData.enemyBasedTurns;
                     const procValue = ownerTurn.hysilensFieldProcValue ??= values[3] + (ownerTurn.rank >= 6 ? 0.20 : 0);
-                    if (procCheck >= procLimit) {return;}
 
-                    battleActions.dotDMGWrapper(battleData,ownerTurn,targetTurn,"Physical",procValue,"ATK",1,1,true,ultyPhysicalRef,true);
-                    targetTurn.hysilensFieldProcCounter += 1;
+                    const dotDMG = battleActions.dotDMGWrapper;
+
+                    // const targetTurn = generalInfo.sourceTurn;
+                    const procCount = targetTurn.hysilensFieldProcCounter;
+                    if (!procCount) {return;}
+                    targetTurn.hysilensFieldProcCounter = 0;
+
+                    for (let i=1;i<=procCount;i++) {
+                        dotDMG(battleData,ownerTurn,targetTurn,"Physical",procValue,"ATK",1,1,true,ultyPhysicalRef,true);
+                    }
+
+                },
+                "target": "enemy",
+                "listenerName": "Zone - dot dmg listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGDetonateEnd",
+                condition(battleData,generalInfo) {
+                    // poke("AttackDMGDetonateEnd",battleData,generalInfo);
+                    const ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET;
+                    const buffCheck = ownerTurn.buffsObject[countdownSheet.buffName];
+                    if (!buffCheck) {return;}//we only deal the extra physical dot from the ult assuming the field is actually active
+
+                    let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    if (!this.ultyPhysicalRef) {
+                        const keyShortcut = basicShorthand.makeKeysArray;
+                        const tags = ["All","Physical","DOT"];
+                        const actionTags = ["DOT"];
+                        const compositeCacheTag = tags + actionTags + ownerTurn.properName;
+                        this.ultyPhysicalRef = {
+                            buffName: "Maelstrom Rhapsody",
+                            tags, 
+                            actionTags,compositeCacheTag,
+                            realDMGKeys: keyShortcut(dmgKeys,tags),
+                            realPENKeys: keyShortcut(resPENKeys,tags),
+                            realShredKeys: keyShortcut(defShredKeys,tags),
+                            realVulnKeys: keyShortcut(vulnKeys,tags),
+                        }
+                    }
+                    const ultyPhysicalRef = this.ultyPhysicalRef;
+
+                    // const targetTurn = generalInfo.targetTurn;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    const procValue = ownerTurn.hysilensFieldProcValue ??= values[3] + (ownerTurn.rank >= 6 ? 0.20 : 0);
+
+                    const dotDMG = battleActions.dotDMGWrapper;
+
+                    // console.log(targetsGotHit)
+                    for (let enemySlot in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemySlot];
+                        // console.log(currentEnemy)
+                        if (currentEnemy.isDead) {continue;}
+
+                        const procCount = currentEnemy.hysilensFieldProcCounter;
+                        if (!procCount) {continue;}
+                        currentEnemy.hysilensFieldProcCounter = 0;
+
+                        for (let i=1;i<=procCount;i++) {
+                            dotDMG(battleData,ownerTurn,currentEnemy,"Physical",procValue,"ATK",1,1,true,ultyPhysicalRef,true);
+                        }
+                    }
                 },
                 "target": "enemy",
                 "listenerName": "Zone - dot dmg listener",
@@ -12495,6 +12670,992 @@ const turnLogic = {
             "talentShearE1": "Shear [Sirenic Serenade E1]",
             "talentBurnE1": "Burn [Sirenic Serenade E1]",
             "talentBleedE1": "Bleed [Sirenic Serenade E1]",
+        },
+        "characterValuesBattle": {},
+    },
+    "Black Swan": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let actionUsed = false;
+
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+
+
+            /*
+                65% base chance 
+                * 0.6 = 0.39
+                1 / .39 = 2.56 - 1 = 1.56
+
+                65% base chance 
+                * 0.7 = 0.455
+                1 / .39 = 2.19 - 1 = 1.19
+            */
+
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.blackswanSkill, target: "enemy", endTurn: true};
+                return returnSkillCall;
+            }
+
+            if (!actionUsed) {
+                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.blackswanBasic, target: "enemy", endTurn: true};
+            }
+        },
+        "skillFunctions": {
+            blackswanBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.blackswanBasicREF ??= ATKObjects["Basic ATK"]["Percipience, Silent Dawn"].variant1;
+
+                if (!ATKObjects.blackswanBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.blackswanBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Wind"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.blackswanBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.blackswanBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+
+                // dots: {
+                //     "Lightning": 0,
+                //     "Fire": 0,
+                //     "Wind": 0,
+                //     "Physical": 0
+                // },
+
+                // const primaryTarget = battleData.primaryTarget;
+                // const targetDots = primaryTarget.dots;
+                // let stacksToApply = 1;
+                // stacksToApply += (targetDots.Lightning ? 1 : 0) + (targetDots.Fire ? 1 : 0) + (targetDots.Wind ? 1 : 0) + (targetDots.Physical ? 1 : 0);
+
+                // const dotFunction = ATKObjects.blackswanArcanaDOTFunction ??= logicRef.skillFunctions.blackswanArcanaDOT;
+                // dotFunction(battleData,sourceTurn,primaryTarget,null,stacksToApply);
+
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.blackswanEHRtoDMGSHEET) {
+                    const characterName = currentTurn.properName;
+                    const buffName = turnLogic[characterName].buffNames.ehrToDMG;
+                    ATKObjects.blackswanEHRtoDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
+                        "source": characterName,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": buffName,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let buffSheet = ATKObjects.blackswanEHRtoDMGSHEET;
+                const buffName = buffSheet.buffName;
+                const buffCheck = currentTurn.buffsObject[buffName];
+
+                const EHRCheck = currentTurn.statTable[EffectHitRate];
+                const usableValue = Math.min(0.72,EHRCheck * 0.60);
+                const allyPositions = battleData.allyPositions;
+
+                if (buffCheck) {//if the buff exists
+                    const currentValue = buffCheck[DamageAll];
+                    if (currentValue === usableValue) {return;}//and we have enough, then get out
+                    //if we have a mismatch on the buff amount, then remove it
+                    //in BS's case, there will always be EHR to convert, so the removal here will always be silent in the log
+                    else {
+                        for (let ally of allyPositions) {
+                            if (ally.isUniqueEvent) {continue;}
+                            removeBuff(battleData,ally,buffCheck,true,null,false,true);
+                        }
+                        // removeBuff(battleData,currentTurn,buffCheck,true,null,false,true);
+                    }
+                    //right now we don't have anything that uses DMG% as a conversion, but in case we ever do in the future
+                    //lets make sure the ignoreFamilyPokes param is left on true
+                }
+
+                buffSheet[DamageAll] = usableValue;
+                for (let ally of allyPositions) {
+                    if (ally.isUniqueEvent) {continue;}
+                    battleActions.updateBuff(battleData,ally,buffSheet);
+                    // removeBuff(battleData,currentTurn,buffCheck,true,null,false,true);
+                }
+                
+            },
+            blackswanArcanaDOT(battleData,sourceTurn,targetTurn,generalInfo,stacksToPass) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const checkEnemyEpiphany = targetTurn.buffsObject[sourceTurn.epihpanyNameStorage];
+                if (checkEnemyEpiphany) {
+                    const oldStacks = stacksToPass;
+                    stacksToPass = Math.floor(stacksToPass * 1.5);
+
+                    const valuesRef = sourceTurn.battleValues;
+                    if (oldStacks === 1 && valuesRef.oneStackAlternator) {
+                        valuesRef.oneStackAlternator = false;
+                        stacksToPass++;
+                    }
+                    else if (oldStacks === 1 && !valuesRef.oneStackAlternator) {
+                        valuesRef.oneStackAlternator = true;
+                    }
+                }
+
+                // const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals};
+                const skillRef = ATKObjects.blackswanTalentREF;
+                const values = ATKObjects.blackswanTalentREFVALUES;
+                const rank = sourceTurn.rank;
+                let characterName = sourceTurn.properName;
+                
+                if (!ATKObjects.blackswanArcanaDOTSHEET) {
+                    const buffNames = logicRef.buffNames;
+
+                    const tags = ["All","Wind","DOT"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["DOT","BSArcana"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    
+                    ATKObjects.blackswanArcanaDOTSHEET = {
+                        "stats": null,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.talentShear,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 9999,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDOT": true,
+                        "isDebuff": true,
+                        "element": "Wind",
+                        isAllDOTTypes: true,
+                        multiplier: values[0],
+                        multiPerStack: values[2],
+                        multiStackCap: 50 + (rank>=6 ? 30 : 0),
+                        scalar: "ATK",
+                        slot: skillRef.slot,
+                        ownerIsAllied: true,
+                        ownerSlot: sourceTurn.name,
+                        avgChanceApplied: 1,
+                        baseChance: values[1],
+                        customTurnStartFunction: logicRef.skillFunctions.blackswanArcanaDOTTurnStart,
+                        isSpecialDOTLast: true,
+                        tags,actionTags,compositeCacheTag,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    }
+                }
+                const arcanaSheet = ATKObjects.blackswanArcanaDOTSHEET;
+                const baseChance = arcanaSheet.baseChance;
+                let addedE6Stack = 0;
+                if (rank>=6) {
+                    // const valuesRef = logicRef.characterValuesBattle;
+                    // if (valuesRef.e6Alternator) {
+                    //     addedE6Stack = 1;
+                    //     valuesRef.e6Alternator = false;
+                    // }
+                    // else {
+                    //     addedE6Stack = 0;
+                    //     valuesRef.e6Alternator = true;
+                    // }
+                    stacksToPass *= 2;//e6 modifies for every 1 stack added, and no longer at 50%, so it's literally just doubling the values.
+                }
+                arcanaSheet.currentStacks = (stacksToPass ?? 1);
+
+                const getChance = battleActions.getChanceToApply;
+                totalTimesHit = 1;//enemiesHit[enemySlot];
+
+                const resultingChance = getChance(battleData,sourceTurn,targetTurn,baseChance);
+                let finalAVG = resultingChance;
+                if (totalTimesHit && totalTimesHit>1 && resultingChance != 1) {
+                    const chanceToFail = 1 - resultingChance;
+                    const composite = chanceToFail ** totalTimesHit;
+                    finalAVG = 1 - composite;
+                }
+                arcanaSheet.avgChanceApplied = finalAVG;
+                battleActions.updateBuff(battleData,targetTurn,arcanaSheet);
+            },
+            blackswanArcanaDOTTurnStart(battleData,sourceTurn,targetTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const arcanaSheet = ATKObjects.blackswanArcanaDOTSHEET;
+                const arcanaName = arcanaSheet.buffName;
+
+                const buffCheck = targetTurn.buffsObject[arcanaName];
+                // buffCheck.currentStacks = 12;
+
+                const values = ATKObjects.blackswanTalentREFVALUES;
+
+                const dotDMG = battleActions.dotDMGWrapper;
+                const element = buffCheck.element;
+                const multi = buffCheck.multiplier;
+                const scalar = buffCheck.scalar;
+                const averaged = buffCheck.avgChanceApplied;
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"", bodyText: `Turnstart dot start`});}
+                dotDMG(battleData,sourceTurn,targetTurn,element,multi,scalar,averaged,1,false,buffCheck);
+                // console.log(buffCheck)
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"", bodyText: `Turnstart dot end`});}
+
+                const enemyPositions = battleData.enemyPositions;
+                const currentSlot = enemyPositions.indexOf(targetTurn);
+                const blast1 = currentSlot != 0 ? enemyPositions[currentSlot - 1] : null;
+                const blast2 = currentSlot != enemyPositions.length-1 ? enemyPositions[currentSlot + 1] : null;
+                const dotFunction = ATKObjects.blackswanArcanaDOTFunction ??= logicRef.skillFunctions.blackswanArcanaDOT;
+
+                if (!ATKObjects.talentBlastRef) {
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const tags = ["All","Wind","DOT"];
+                    ATKObjects.talentBlastRef = {
+                        buffName: "Arcana Blast (Stacks >= 3)",
+                        tags,
+                        actionTags: ["DOT"],
+                        realDMGKeys: keyShortcut(dmgKeys,tags),
+                        realPENKeys: keyShortcut(resPENKeys,tags),
+                        realShredKeys: keyShortcut(defShredKeys,tags),
+                        realVulnKeys: keyShortcut(vulnKeys,tags),
+                    }
+                }
+                const talentBlastRef = ATKObjects.talentBlastRef;
+
+                if (blast1) {
+                    dotFunction(battleData,sourceTurn,blast1,null,1);
+                    dotDMG(battleData,sourceTurn,blast1,"Wind",values[4],"ATK",1,1,false,talentBlastRef);
+                }
+                if (blast2) {
+                    dotFunction(battleData,sourceTurn,blast2,null,1);
+                    dotDMG(battleData,sourceTurn,blast2,"Wind",values[4],"ATK",1,1,false,talentBlastRef);
+                }
+
+                // enemy.blackswanEpiphanyResetDelayReady = true;
+                if (!targetTurn.blackswanEpiphanyResetDelayReady) {
+                    buffCheck.currentStacks = Math.max(1,Math.floor(buffCheck.currentStacks * 0.5));
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Arcana turn-start handler", bodyText: `Arcana stacks halved to ${buffCheck.currentStacks}`});}
+                }
+            },
+            blackswanSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.blackswanSkillREF;
+                let values = ATKObjects.blackswanSkillREFVALUES;
+
+                const characterName = sourceTurn.properName;
+                if (!ATKObjects.blackswanSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Wind"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.blackswanSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[0],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        dotDetonateFunction: null,//logicRef.skillFunctions.kafkaSkillDetonate
+                    }
+                }
+                let ATKObject = ATKObjects.blackswanSkillATKOBJECT;
+                const debuffSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
+
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                const updateBuff = battleActions.updateBuff;
+                const allBlastTargets = battleData.fullBlastTargets;
+                for (let enemy of allBlastTargets) {updateBuff(battleData,enemy,debuffSheet);}
+
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            blackswanUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.blackswanUltimateREF ??= ATKObjects.Ultimate["Bliss of Otherworld's Embrace"].variant1;
+                let values = ATKObjects.blackswanUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.blackswanUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    // const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Wind"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.blackswanUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
+                        // dotDetonateFunction: logicRef.skillFunctions.fishladyUltimateDetonate
+                    }
+
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.blackswanUltimateDEBUFFSHEET = {
+                        "stats": [VulnAll],
+                        // "statsOnTurn": [VulnAll],
+                        [VulnAll]: values[2] + (rank >= 4 ? 0.20 : 0),
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.ultVuln,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isDebuff": true,
+                        // "isAllDOTTypes": true,
+                    }
+                    sourceTurn.epihpanyNameStorage = ATKObjects.blackswanUltimateDEBUFFSHEET.buffName;
+                    // if (rank >=4) {
+                    //     ATKObjects.blackswanUltimateDEBUFFSHEETE4 = {
+                    //         "stats": [EffectRES],
+                    //         [EffectRES]: -0.10,
+                    //         "source": "E4",
+                    //         "sourceOwner": characterName,
+                    //         "buffName": buffNames.ultVulnE4,
+                    //         "duration": 3,
+                    //         "AVApplied": 0,
+                    //         "maxStacks": 1,
+                    //         "currentStacks": 1,
+                    //         "decay": false,
+                    //         "expireType": "EndTurn",
+                    //         "isDebuff": false,
+                    //     }
+                    // }
+                }
+                let ATKObject = ATKObjects.blackswanUltimateATKOBJECT;
+                const debuffSheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
+                
+                const enemyPositions = battleData.enemyPositions;
+                const updateBuff = battleActions.updateBuff;
+
+                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                // logicRef.skillFunctions.addHysilensField(battleData,sourceTurn);
+
+                // if (rank>=4) {
+                //     const e4Sheet = ATKObjects.blackswanUltimateDEBUFFSHEETE4;
+                //     for (let enemy of enemyPositions) {
+                //         const duration = enemy.turnState ? 3 : 2;
+                //         debuffSheet.duration = duration;
+                //         updateBuff(battleData,enemy,debuffSheet);
+                //         enemy.blackswanEpiphanyResetDelayReady = true;
+                //         e4Sheet.duration = duration;
+                //         updateBuff(battleData,enemy,e4Sheet);
+                //     }
+
+                // }
+                // else {
+                for (let enemy of enemyPositions) {
+                    debuffSheet.duration = enemy.turnState ? 3 : 2;
+                    updateBuff(battleData,enemy,debuffSheet);
+                    enemy.blackswanEpiphanyResetDelayReady = true;
+                }
+                // }
+                
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                sourceTurn.ultyQueued = false;
+            },
+            blackswanTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.blackswanTechREF ??= ATKObjects.Technique["From Façade to Vérité"].variant1;
+
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                const enemyTurns = battleData.enemyPositions;
+                const dotProc = ATKObjects.blackswanArcanaDOT ??= turnLogic[characterName].skillFunctions.blackswanArcanaDOT;
+                // blackswanArcanaDOT(battleData,sourceTurn,targetTurn,generalInfo,stacksToPass)
+
+                const getChance = battleActions.getChanceToApply;
+                for (let enemy of enemyTurns) {
+                    let baseChance = 1.5 * 0.5;
+                    // const resultingChance = getChance(battleData,sourceTurn,enemy,baseChance);
+                    let timesToApply = 1;
+                    let currentChance = getChance(battleData,sourceTurn,enemy,baseChance);
+                    while (currentChance > 0.50) {
+                        //for now we assume if the final chance to apply is ever greater than 50%, then we apply, otherwise we abort and move on to the next target
+                        //TODO: come back later and see if statistically this is an actual fair method
+                        baseChance *= 0.5;
+                        currentChance = getChance(battleData,sourceTurn,enemy,baseChance);
+                        timesToApply += 1;
+                    }
+                    dotProc(battleData,sourceTurn,enemy,null,timesToApply);
+                }
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "BattlePrep",
+                condition(battleData,generalInfo) {
+                    //this does need to be battleprep instead of prebattleenterscombat since now when enemies enter combat or get created
+                    //like arcana this will always apply
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.blackswanSkillREF ??= ATKObjects["Skill"]["Decadence, False Twilight"].variant1;
+                    let values = ATKObjects.blackswanSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.blackswanSkillDEBUFFSHEET = {
+                        "stats": [DEFP],
+                        [DEFP]: -values[3],
+                        "statsOnHit": null,
+                        "source": "Skill",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.skillShred,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isDebuff": true,
+                    }
+
+
+                    const skillRef2 = ATKObjects.blackswanTalentREF ??= ATKObjects.Talent["Loom of Fate's Caprice"].variant1;
+                    const values2 = ATKObjects.blackswanTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,ownerTurn);
+
+                    const buffSheet = ATKObjects.blackswanTalentArcanaSHREDSHEET ??= {
+                        "stats": [DEFShredAll],
+                        [DEFShredAll]: values2[6],
+                        "source": "Talent",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.talentShred,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["BSArcana"],
+                    }
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                },
+                "target": "self",
+                "listenerName": "battleprep create skill sheet/arcana shred sheet",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    const enemyPositions = battleData.enemyPositions;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    const debuffSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
+                    const updateBuff = battleActions.updateBuff;
+
+                    for (let enemy of enemyPositions) {
+                        if (!targetsGotHit[enemy.name]) {continue;}
+                        debuffSheet.duration = enemy.turnState ? 4 : 3;
+                        updateBuff(battleData,enemy,debuffSheet);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Goblet's Dredges - attack dmg end listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {//TODO: read note
+                    //right now I can't tell if this would ever at the start of an attack dmg or the end
+                    //technically it CANT matter yet bc BS has no detonate, and the only way it could actually impact anything is if
+                    //she had a detonate
+                    //it could technically matter for something like prisoner, but it's impossible to test bc arcana can't be removed so the stack will ALWAYS exist
+                    //so again, it could only ever matter if BS herself could ever be the provider of a detonate in that attack
+                    let ownerTurn = this.ownerTurn;
+                    const dmgSlot = generalInfo.dmgSlot;
+
+                    if (dmgSlot != "Ultimate" && dmgSlot != "Basic ATK") {return;}
+
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+
+                    const enemyPositions = battleData.enemyPositions;
+                    const stacks = 5;
+                    const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
+
+                    for (let enemy of enemyPositions) {
+                        if (!targetsGotHit[enemy.name]) {continue;}
+                        dotFunction(battleData,ownerTurn,enemy,generalInfo,stacks,false,true);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Viscera's Disquiet - attack dmg end listener",
+                "ownerTurn": {},
+            },
+
+
+
+            {
+                "trigger": "DOTDMGStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // poke("DOTDMGEnd",battleData,turnMerge)
+                    // const turnMerge = {targetTurn,sourceTurn,element,isDetonated,sourceOverride};
+                    // dotDMGWrapper(battleData,sourceTurn,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,currentBuff,sourceOverride)
+
+                    // const isDetonated = generalInfo.isDetonated;
+                    // if (isDetonated) {return;}
+                    // ownerTurn.BSAddCountTracker = 0;
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                    // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"", bodyText: `Detonated stack start`});}
+
+
+                    dotFunction(battleData,ownerTurn,targetTurn,null,1);
+
+
+                    // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"", bodyText: `Detonated stack End`});}
+                    //the talent makes it so at the start of any dot received from a turn start dot array, will have a chance to further stack arcana even more
+                },
+                "target": "enemy",
+                "listenerName": "Talent stacker - dot dmg start listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+                    const enemyTurn = generalInfo.slotRef;
+
+                    const stacks = 1;
+                    const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                    dotFunction(battleData,ownerTurn,enemyTurn,generalInfo,stacks);
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+                    const skillShredSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
+                    skillShredSheet.duration = enemyTurn.turnState ? 4 : 3;
+                    battleActions.updateBuff(battleData,enemyTurn,skillShredSheet);
+                },
+                "target": "self",
+                "listenerName": "Arcana - enemy added to field listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.properName != characterName) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "EHR to DMG EHR check",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "EHR to DMG battlestart check",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            isAttackUlt: true,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Black Swan - Ultimate queued",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const blackswanTechnique = this.blackswanTechnique ??= logicRef.skillFunctions.blackswanTechnique
+                        blackswanTechnique(battleData,"enemy",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Black Swan Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "DOTWasModified",
+                    condition(battleData,generalInfo) {
+                        // let ownerRef = this.owners;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        const ownerTurn = this.ownerTurn;
+
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        if (!ATKObjects.E1DebuffRESSHEETLightning) {
+                            // "E1RESLightning": "Seven Pillars of Wisdom [Lightning]",
+                            // "E1RESPhysical": "Seven Pillars of Wisdom [Physical]",
+                            // "E1RESFire": "Seven Pillars of Wisdom [Fire]",
+                            // "E1RESWind": "Seven Pillars of Wisdom [Wind]",
+                            const characterName = ownerTurn.properName;
+                            const buffNames = logicRef.buffNames;
+                            ATKObjects.E1DebuffRESSHEETLightning = {
+                                "stats": [ResistanceLightning],
+                                [ResistanceLightning]: -0.25,
+                                "source": "E1",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.E1RESLightning,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isDebuff": true,
+                            }
+                            ATKObjects.E1DebuffRESSHEETPhysical = {
+                                "stats": [ResistancePhysical],
+                                [ResistancePhysical]: -0.25,
+                                "source": "E1",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.E1RESPhysical,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isDebuff": true,
+                            }
+                            ATKObjects.E1DebuffRESSHEETFire = {
+                                "stats": [ResistancePhysical],
+                                [ResistancePhysical]: -0.25,
+                                "source": "E1",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.E1RESFire,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isDebuff": true,
+                            }
+                            ATKObjects.E1DebuffRESSHEETWind = {
+                                "stats": [ResistancePhysical],
+                                [ResistancePhysical]: -0.25,
+                                "source": "E1",
+                                "sourceOwner": characterName,
+                                "buffName": buffNames.E1RESWind,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isDebuff": true,
+                            }
+                        }
+
+                        // const enemyElementalRef = sourceTurn.dots;
+                        // enemyElementalRef.Wind -= 1;
+                        // enemyElementalRef.Fire -= 1;
+                        // enemyElementalRef.Lightning -= 1;
+                        // enemyElementalRef.Physical -= 1;
+                        const lightningSheet = ATKObjects.E1DebuffRESSHEETLightning;
+                        const physicalSheet = ATKObjects.E1DebuffRESSHEETPhysical;
+                        const fireSheet = ATKObjects.E1DebuffRESSHEETFire;
+                        const windSheet = ATKObjects.E1DebuffRESSHEETWind;
+                        // multiSheet.AVApplied = battleData.sumAV;
+                        const sourceDots = sourceTurn.dots;
+                        const sourceBuffs = sourceTurn.buffsObject;
+                        const updateBuff = battleActions.updateBuff;
+
+                        if (sourceDots.Lightning) {
+                            const buffCheck = sourceBuffs[lightningSheet.buffName];
+                            if (!buffCheck) {updateBuff(battleData,sourceTurn,lightningSheet);}
+                        }
+                        else {
+                            const buffCheck = sourceBuffs[lightningSheet.buffName];
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,lightningSheet);}
+                        }
+
+                        if (sourceDots.Physical) {
+                            const buffCheck = sourceBuffs[physicalSheet.buffName];
+                            if (!buffCheck) {updateBuff(battleData,sourceTurn,physicalSheet);}
+                        }
+                        else {
+                            const buffCheck = sourceBuffs[physicalSheet.buffName];
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,physicalSheet);}
+                        }
+
+                        if (sourceDots.Fire) {
+                            const buffCheck = sourceBuffs[fireSheet.buffName];
+                            if (!buffCheck) {updateBuff(battleData,sourceTurn,fireSheet);}
+                        }
+                        else {
+                            const buffCheck = sourceBuffs[fireSheet.buffName];
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,fireSheet);}
+                        }
+
+                        if (sourceDots.Wind) {
+                            const buffCheck = sourceBuffs[windSheet.buffName];
+                            if (!buffCheck) {updateBuff(battleData,sourceTurn,windSheet);}
+                        }
+                        else {
+                            const buffCheck = sourceBuffs[windSheet.buffName];
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,windSheet);}
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Seven Pillars of Wisdom - dot applied/removed listener",
+                    "owners": []
+                },
+            ],
+            2: [
+                {
+                    "trigger": "EnemyCreated",
+                    condition(battleData,generalInfo) {
+                        // poke("HealEnd",battleData,turnMerge);
+                        let ownerTurn = this.ownerTurn;
+                        const enemyTurn = generalInfo.slotRef;
+    
+                        const stacks = 30;
+                        const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                        dotFunction(battleData,ownerTurn,enemyTurn,generalInfo,stacks);
+                    },
+                    "target": "self",
+                    "listenerName": "E2 add 30 to enemies added to field",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [
+                {
+                    "trigger": "EnemyDied",
+                    condition(battleData,generalInfo) {
+                        // poke("HealEnd",battleData,turnMerge);
+                        let ownerTurn = this.ownerTurn;
+
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        const epiphanySheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
+                        if (!epiphanySheet) {return;}
+                        //if the epiphany sheet hasn't been constructed uncer black swan yet, then obv nobody would have epiphany anyways, and we can abort
+                        const targetTurn = generalInfo.enemyKilled;
+                        const epiphanyName = epiphanySheet.buffName;
+                        const buffCheck = targetTurn.buffsObject[epiphanyName];
+                        if (!buffCheck) {return;}
+                        //if the enemy died with no debuff, then we can abort
+
+                        battleActions.updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
+                        // ownerTurn.isReadyForE4Regen = false;
+                    },
+                    "target": "self",
+                    "listenerName": "Black Swan E2 enemy died listener",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "StartTurn",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        const epiphanySheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
+                        if (!sourceTurn.isEnemy || !epiphanySheet) {return;}
+                        //we're only looking for enemy turns that start, while we're ready for e4 regen, and the epiphany sheet has been constructed
+
+                        const epiphanyName = epiphanySheet.buffName;
+                        const buffCheck = sourceTurn.buffsObject[epiphanyName];
+                        if (!buffCheck) {return;}
+
+                        battleActions.updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
+                        // ownerTurn.isReadyForE4Regen = false;
+                    },
+                    "target": "self",
+                    "listenerName": "Black Swan E4 enemy turn start listener",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [
+                {
+                    "trigger": "AttackEnd",
+                    condition(battleData,generalInfo) {
+                        const ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.isEnemy) {return;}
+
+                        const targetsGotHit = generalInfo.targetsGotHit;
+                        const enemyTurns = battleData.enemyBasedTurns;
+                        const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                        for (let enemy in targetsGotHit) {
+                            const enemyTurn = enemyTurns[enemy];
+                            dotFunction(battleData,ownerTurn,enemyTurn,null,1);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Black Swan E6 ally attacked listener",
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "talentDOTCounter": 0,
+            "e6Alternator": true,
+            "oneStackAlternator": true,
+        },
+        "useTechnique": true,
+        "techniqueType": "Buff",
+        "buffNames": {
+            "ehrToDMG": "Candleflame's Portent",
+            "talentShear": "Arcana [Black Swan]",
+            "sevenStackShred": "Arcana DEF Shred (Stacks >= 7)",
+
+            
+            "skillShred": "Decadence, False Twilight",
+            "talentShred": "Arcana DEF Shred",
+
+
+            "ultVuln": "Epiphany [Bliss of Otherworld's Embrace]",
+            "ultVulnE4": "Epiphany [Bliss of Otherworld's Embrace: E4]",
+
+            "E1RESLightning": "Seven Pillars of Wisdom [Lightning]",
+            "E1RESPhysical": "Seven Pillars of Wisdom [Physical]",
+            "E1RESFire": "Seven Pillars of Wisdom [Fire]",
+            "E1RESWind": "Seven Pillars of Wisdom [Wind]",
         },
         "characterValuesBattle": {},
     },
@@ -22231,6 +23392,7 @@ const turnLogic = {
                 }
 
                 const memTurn = sourceTurn.rmcMemTURNEVENT;
+                if (!memTurn) {return;}
                 const statsRef = memTurn.statTable;
                 const critDamage = statsRef[CritDamageBase] + statsRef[CritDamageBaseNULL];
                 const conversion = (values[0] * critDamage) + values[1];
@@ -22889,7 +24051,7 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
                     const memTurn = ownerTurn.rmcMemTURNEVENT;
-                    if (sourceTurn.name != memTurn.name) {return;}
+                    if (memTurn && sourceTurn.name != memTurn.name) {return;}
 
                     const memTalentCritDMG = this.memTalentCritDMG ??= turnLogic[ownerTurn.properName].skillFunctions.memTalentCritDMG;
                     memTalentCritDMG(battleData,ownerTurn);

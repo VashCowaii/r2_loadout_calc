@@ -13233,6 +13233,833 @@ let characters = {
     ],
     "isBuffed": true
   },
+  "Black Swan": {
+    "internalID": 1307,
+    "name": "Black Swan",
+    "path": "Nihility",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 659.7360000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1086.624,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "1130701",
+        "name": "Seven Pillars of Wisdom",
+        "rank": 1,
+        "desc": "While Black Swan is active in combat, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by 25%.",
+        "icon": "icon/skill/1130_rank1.png",
+        "paramsEido": [
+          0.25
+        ],
+        "eidoAbility": "BlackSwan_Advanced_BlackSwan_Eidolon1"
+      },
+      {
+        "id": "1130702",
+        "name": "Weep Not For Me, My Lamb",
+        "rank": 2,
+        "desc": "When enemy targets enter combat, there is a 100% base chance to inflict 30 stack(s) of \"Arcana\" on them.",
+        "icon": "icon/skill/1130_rank2.png",
+        "paramsEido": [
+          1,
+          30
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        },
+        "eidoAbility": "BlackSwan_Advanced_BlackSwan_Eidolon2"
+      },
+      {
+        "id": "1130703",
+        "name": "As Above, So Below",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1130_skill.png"
+      },
+      {
+        "id": "1130704",
+        "name": "In Tears We Gift",
+        "rank": 4,
+        "desc": "While in the \"Epiphany\" state, enemy targets take 20% increased DMG. And at the start of every turn or when they get defeated, regenerates 8 Energy for Black Swan.",
+        "icon": "icon/skill/1130_rank4.png",
+        "paramsEido": [
+          0.2,
+          8
+        ]
+      },
+      {
+        "id": "1130705",
+        "name": "Linnutee Flyway",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1130_ultimate.png"
+      },
+      {
+        "id": "1130706",
+        "name": "Pantheon Merciful, Masses Pitiful",
+        "rank": 6,
+        "desc": "The upper limit of stackable \"Arcana\" increases by 30.\nWhen an enemy target gets attacked by Black Swan's teammates, Black Swan has a 65% base chance of inflicting 1 stack of \"Arcana\" on the target.\nFor every 1 stack of \"Arcana\" Black Swan inflicts on an enemy target, additionally increases the number of \"Arcana\" stacked this time by 1.",
+        "icon": "icon/skill/1130_rank6.png",
+        "paramsEido": [
+          1,
+          0.65,
+          1,
+          30
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          },
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          }
+        },
+        "eidoAbility": "BlackSwan_Advanced_BlackSwan_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Percipience, Silent Dawn": {
+          "variant1": {
+            "skillID": 1130701,
+            "trigger": "Skill01",
+            "name": "Percipience, Silent Dawn",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Decadence, False Twilight": {
+          "variant1": {
+            "skillID": 1130702,
+            "trigger": "Skill02",
+            "name": "Decadence, False Twilight",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy and adjacent targets. At the same time, there is a #3[i]% base chance of reducing the DEF of the enemy target and the adjacent targets by #4[f1]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.45,
+                3,
+                1,
+                0.148
+              ],
+              "2": [
+                0.495,
+                3,
+                1,
+                0.154
+              ],
+              "3": [
+                0.54,
+                3,
+                1,
+                0.16
+              ],
+              "4": [
+                0.585,
+                3,
+                1,
+                0.166
+              ],
+              "5": [
+                0.63,
+                3,
+                1,
+                0.172
+              ],
+              "6": [
+                0.675,
+                3,
+                1,
+                0.178
+              ],
+              "7": [
+                0.73125,
+                3,
+                1,
+                0.1855
+              ],
+              "8": [
+                0.7875,
+                3,
+                1,
+                0.193
+              ],
+              "9": [
+                0.84375,
+                3,
+                1,
+                0.2005
+              ],
+              "10": [
+                0.9,
+                3,
+                1,
+                0.208
+              ],
+              "11": [
+                0.945,
+                3,
+                1,
+                0.214
+              ],
+              "12": [
+                0.99,
+                3,
+                1,
+                0.22
+              ],
+              "13": [
+                1.035,
+                3,
+                1,
+                0.226
+              ],
+              "14": [
+                1.08,
+                3,
+                1,
+                0.232
+              ],
+              "15": [
+                1.125,
+                3,
+                1,
+                0.238
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              60,
+              0,
+              30
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Bliss of Otherworld's Embrace": {
+          "variant1": {
+            "skillID": 1130703,
+            "trigger": "Skill03",
+            "name": "Bliss of Otherworld's Embrace",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts \"Epiphany\" state on all enemies for #2[i] turn(s). Then deals Wind DMG to all enemies equal to #1[i]% of Black Swan's ATK.\\nWhile in the \"Epiphany\" state, enemy targets take #3[i]% increased DMG. For every 1 stack of \"Arcana inflicted,\" there is a #4[i]% fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1. And \"Arcana\" stacks won't be halved after dealing DMG at the start of the turn.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.72,
+                2,
+                0.15,
+                0.5
+              ],
+              "2": [
+                0.768,
+                2,
+                0.16,
+                0.5
+              ],
+              "3": [
+                0.816,
+                2,
+                0.17,
+                0.5
+              ],
+              "4": [
+                0.864,
+                2,
+                0.18,
+                0.5
+              ],
+              "5": [
+                0.912,
+                2,
+                0.19,
+                0.5
+              ],
+              "6": [
+                0.96,
+                2,
+                0.2,
+                0.5
+              ],
+              "7": [
+                1.02,
+                2,
+                0.2125,
+                0.5
+              ],
+              "8": [
+                1.08,
+                2,
+                0.225,
+                0.5
+              ],
+              "9": [
+                1.14,
+                2,
+                0.2375,
+                0.5
+              ],
+              "10": [
+                1.2,
+                2,
+                0.25,
+                0.5
+              ],
+              "11": [
+                1.248,
+                2,
+                0.26,
+                0.5
+              ],
+              "12": [
+                1.296,
+                2,
+                0.27,
+                0.5
+              ],
+              "13": [
+                1.344,
+                2,
+                0.28,
+                0.5
+              ],
+              "14": [
+                1.392,
+                2,
+                0.29,
+                0.5
+              ],
+              "15": [
+                1.44,
+                2,
+                0.3,
+                0.5
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              },
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Loom of Fate's Caprice": {
+          "variant1": {
+            "skillID": 1130704,
+            "trigger": "SkillP01",
+            "name": "Loom of Fate's Caprice",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "Every time an enemy target receives 1 instance of DoT, there is a #2[i]% base chance for it to be inflicted with 1 stack of \"Arcana\".\\nWhile an enemy target is in the \"Arcana\" state, they are also considered to be simultaneously afflicted with Wind Shear, Bleed, Burn, and Shock. The target receives Wind DoT equal to #1[i]% of Black Swan's ATK at the start of each turn, after which the number of stacks is halved. Each stack of \"Arcana\" increases this DMG multiplier by #3[f1]%. \"Arcana\" can stack #8[i] times, and can continue to stack beyond this limit, with the excess stacks removed after dealing DMG.\\nDMG from \"Arcana\" ignores #7[i]% of the target's DEF. Only when \"Arcana\" deals DMG at the start of the enemy target's turn, adjacent targets take 1 additional instance of Wind DoT equal to #5[i]% of Black Swan's ATK.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                0.5,
+                0.048,
+                0.048,
+                0.72,
+                0,
+                0.2,
+                50
+              ],
+              "2": [
+                1.1184,
+                0.515,
+                0.05592,
+                0.05592,
+                0.8388,
+                0,
+                0.2,
+                50
+              ],
+              "3": [
+                1.2768,
+                0.53,
+                0.06384,
+                0.06384,
+                0.9576,
+                0,
+                0.2,
+                50
+              ],
+              "4": [
+                1.4352,
+                0.545,
+                0.07176,
+                0.07176,
+                1.0764,
+                0,
+                0.2,
+                50
+              ],
+              "5": [
+                1.5936,
+                0.56,
+                0.07968,
+                0.07968,
+                1.1952,
+                0,
+                0.2,
+                50
+              ],
+              "6": [
+                1.752,
+                0.575,
+                0.0876,
+                0.0876,
+                1.314,
+                0,
+                0.2,
+                50
+              ],
+              "7": [
+                1.896,
+                0.59375,
+                0.0948,
+                0.0948,
+                1.422,
+                0,
+                0.2,
+                50
+              ],
+              "8": [
+                2.04,
+                0.6125,
+                0.102,
+                0.102,
+                1.53,
+                0,
+                0.2,
+                50
+              ],
+              "9": [
+                2.22,
+                0.63125,
+                0.111,
+                0.111,
+                1.665,
+                0,
+                0.2,
+                50
+              ],
+              "10": [
+                2.4,
+                0.65,
+                0.12,
+                0.12,
+                1.8,
+                0,
+                0.2,
+                50
+              ],
+              "11": [
+                2.52,
+                0.665,
+                0.126,
+                0.126,
+                1.89,
+                0,
+                0.2,
+                50
+              ],
+              "12": [
+                2.64,
+                0.68,
+                0.132,
+                0.132,
+                1.98,
+                0,
+                0.2,
+                50
+              ],
+              "13": [
+                2.76,
+                0.695,
+                0.138,
+                0.138,
+                2.07,
+                0,
+                0.2,
+                50
+              ],
+              "14": [
+                2.88,
+                0.71,
+                0.144,
+                0.144,
+                2.16,
+                0,
+                0.2,
+                50
+              ],
+              "15": [
+                3,
+                0.725,
+                0.15,
+                0.15,
+                2.25,
+                0,
+                0.2,
+                50
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "From Façade to Vérité": {
+          "variant1": {
+            "skillID": 1130707,
+            "trigger": "SkillMaze",
+            "name": "From Façade to Vérité",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After Technique is used, there is a #1[i]% base chance for each enemy to be inflicted with 1 stack of \"Arcana\" at the start of the next battle. For each successful application of \"Arcana\" on a target, inflicts another stack of \"Arcana\" on the same target. This process repeats until \"Arcana\" fails to be inflicted on this target. For each successive application of \"Arcana\" on a target, its base chance of success is equal to #2[i]% of the base chance of the previous successful infliction of \"Arcana\" on that target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1307_basic_atk.png",
+        "skillRef": {
+          "skillName": "Percipience, Silent Dawn",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1307_skill.png",
+        "skillRef": {
+          "skillName": "Decadence, False Twilight",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1307_ultimate.png",
+        "skillRef": {
+          "skillName": "Bliss of Otherworld's Embrace",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1307_talent.png",
+        "skillRef": {
+          "skillName": "Loom of Fate's Caprice",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1307_technique.png",
+        "skillRef": {
+          "skillName": "From Façade to Vérité",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Viscera's Disquiet",
+        "icon": "icon/skill/1307_skilltree1.png",
+        "desc": "When an enemy target gets attacked by Black Swan, there is a #1[i]% base chance of inflicting #2[i] stack(s) of \"Arcana\" on them.",
+        "params": [
+          0.65,
+          5
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace01",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Goblet's Dredges",
+        "icon": "icon/skill/1307_skilltree2.png",
+        "desc": "When an enemy targets enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of \"Arcana,\" and a #2[i]% base chance to be inflicted with the DEF reduction effect from the Skill, which lasts for #3[i] turn(s).\nAfter using Basic ATK or Ultimate, there is also a #2[i]% base chance to inflict the DEF reduction effect from the Skill on the hit enemy targets, which lasts for #3[i] turn(s).",
+        "params": [
+          0.65,
+          1,
+          3
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace02",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Candleflame's Portent",
+        "icon": "icon/skill/1307_skilltree3.png",
+        "desc": "Increases the DMG dealt by all allies by an amount equal to #1[i]% of Black Swan's Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
+        "params": [
+          0.6,
+          0.72
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace03"
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1307.png",
+    "preview": "image/character_preview/1307.png",
+    "portrait": "image/character_portrait/1307.png",
+    "bannerOffsets": [
+      -4,
+      -55,
+      0.69,
+      -4,
+      -55,
+      0.69,
+      -4,
+      -55,
+      0.69
+    ],
+    "isBuffed": true
+  },
   "Robin": {
     "internalID": 1309,
     "name": "Robin",
@@ -13939,6 +14766,1000 @@ let characters = {
       -4,
       -64,
       0.62
+    ],
+    "isBuffed": false
+  },
+  "Firefly": {
+    "internalID": 1310,
+    "name": "Firefly",
+    "path": "Destruction",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 240,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 776.1600000000001,
+      "HPBase": 814.968,
+      "SPDBase": 104,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "131001",
+        "name": "In Reddened Chrysalis, I Once Rest",
+        "rank": 1,
+        "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
+        "icon": "icon/skill/1310_rank1.png",
+        "paramsEido": [
+          0.15
+        ],
+        "eidoAbility": "Firefly_Sam_Eidolon1"
+      },
+      {
+        "id": "131002",
+        "name": "From Shattered Sky, I Free Fall",
+        "rank": 2,
+        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can trigger again after 1 turn(s).",
+        "icon": "icon/skill/1310_rank2.png",
+        "paramsEido": [
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        },
+        "eidoAbility": "Firefly_Sam_Eidolon2"
+      },
+      {
+        "id": "131003",
+        "name": "Amidst Silenced Stars, I Deep Sleep",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1310_skill.png"
+      },
+      {
+        "id": "131004",
+        "name": "Upon Lighted Fyrefly, I Soon Gaze",
+        "rank": 4,
+        "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
+        "icon": "icon/skill/1310_rank4.png",
+        "paramsEido": [
+          0.5
+        ],
+        "eidoAbility": "Firefly_Sam_Eidolon4"
+      },
+      {
+        "id": "131005",
+        "name": "From Undreamt Night, I Thence Shine",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1310_ultimate.png"
+      },
+      {
+        "id": "131006",
+        "name": "In Finalized Morrow, I Full Bloom",
+        "rank": 6,
+        "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
+        "icon": "icon/skill/1310_rank6.png",
+        "paramsEido": [
+          0.2,
+          0.5
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        },
+        "eidoAbility": "Firefly_Sam_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Order: Flare Propulsion": {
+          "variant1": {
+            "skillID": 131001,
+            "trigger": "Skill01",
+            "name": "Order: Flare Propulsion",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill01_Camera",
+              "Avatar_Sam_00_Skill01_Phase01",
+              "Avatar_Sam_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fyrefly Type-IV: Pyrogenic Decimation": {
+          "variant1": {
+            "skillID": 131008,
+            "trigger": "Skill11",
+            "name": "Fyrefly Type-IV: Pyrogenic Decimation",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 15,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                1,
+                0.2
+              ],
+              "2": [
+                1.2,
+                0.2
+              ],
+              "3": [
+                1.4,
+                0.2
+              ],
+              "4": [
+                1.6,
+                0.2
+              ],
+              "5": [
+                1.8,
+                0.2
+              ],
+              "6": [
+                2,
+                0.2
+              ],
+              "7": [
+                2.2,
+                0.2
+              ],
+              "8": [
+                2.4,
+                0.2
+              ],
+              "9": [
+                2.6,
+                0.2
+              ],
+              "10": [
+                2.8,
+                0.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill11_Camera",
+              "Avatar_Sam_00_Skill11_Phase01",
+              "Avatar_Sam_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              45,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Order: Aerial Bombardment": {
+          "variant1": {
+            "skillID": 131002,
+            "trigger": "Skill02",
+            "name": "Order: Aerial Bombardment",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.4,
+                0.5,
+                0.25
+              ],
+              "2": [
+                1.1,
+                0.4,
+                0.51,
+                0.25
+              ],
+              "3": [
+                1.2,
+                0.4,
+                0.52,
+                0.25
+              ],
+              "4": [
+                1.3,
+                0.4,
+                0.53,
+                0.25
+              ],
+              "5": [
+                1.4,
+                0.4,
+                0.54,
+                0.25
+              ],
+              "6": [
+                1.5,
+                0.4,
+                0.55,
+                0.25
+              ],
+              "7": [
+                1.625,
+                0.4,
+                0.5625,
+                0.25
+              ],
+              "8": [
+                1.75,
+                0.4,
+                0.575,
+                0.25
+              ],
+              "9": [
+                1.875,
+                0.4,
+                0.5875,
+                0.25
+              ],
+              "10": [
+                2,
+                0.4,
+                0.6,
+                0.25
+              ],
+              "11": [
+                2.1,
+                0.4,
+                0.61,
+                0.25
+              ],
+              "12": [
+                2.2,
+                0.4,
+                0.62,
+                0.25
+              ],
+              "13": [
+                2.3,
+                0.4,
+                0.63,
+                0.25
+              ],
+              "14": [
+                2.4,
+                0.4,
+                0.64,
+                0.25
+              ],
+              "15": [
+                2.5,
+                0.4,
+                0.65,
+                0.25
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill02_Camera",
+              "Avatar_Sam_00_Skill02_Phase01",
+              "Avatar_Sam_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        },
+        "Fyrefly Type-IV: Deathstar Overload": {
+          "variant1": {
+            "skillID": 131009,
+            "trigger": "Skill21",
+            "name": "Fyrefly Type-IV: Deathstar Overload",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy target, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "2": [
+                1.1,
+                0.55,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "3": [
+                1.2,
+                0.6,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "4": [
+                1.3,
+                0.65,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "5": [
+                1.4,
+                0.7,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "6": [
+                1.5,
+                0.75,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "7": [
+                1.625,
+                0.8125,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "8": [
+                1.75,
+                0.875,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "9": [
+                1.875,
+                0.9375,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "10": [
+                2,
+                1,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "11": [
+                2.1,
+                1.05,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "12": [
+                2.2,
+                1.1,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "13": [
+                2.3,
+                1.15,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "14": [
+                2.4,
+                1.2,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "15": [
+                2.5,
+                1.25,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill21_Camera",
+              "Avatar_Sam_00_Skill21_Phase01",
+              "Avatar_Sam_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              45
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Fyrefly Type-IV: Complete Combustion": {
+          "variant1": {
+            "skillID": 131003,
+            "trigger": "Skill03",
+            "name": "Fyrefly Type-IV: Complete Combustion",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enters the Complete Combustion state, advances this unit's Action by 100%, and gains Enhanced Basic ATK and Enhanced Skill. While in Complete Combustion, increases SPD by #3[i], and when using the Enhanced Basic ATK or Enhanced Skill, increases this unit's Weakness Break Efficiency by #2[i]% and increases the Break DMG dealt by SAM to the enemy targets by #1[f1]%, lasting until this current attack ends.\\nA countdown timer for the Complete Combustion state appears in the Action Order. When the countdown timer's turn starts, SAM exits the Complete Combustion state. The countdown timer has a fixed SPD of #4[i].\\nSAM cannot use Ultimate while in Complete Combustion.",
+            "energyCost": 240,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.5,
+                30,
+                70
+              ],
+              "2": [
+                0.11,
+                0.5,
+                33,
+                70
+              ],
+              "3": [
+                0.12,
+                0.5,
+                36,
+                70
+              ],
+              "4": [
+                0.13,
+                0.5,
+                39,
+                70
+              ],
+              "5": [
+                0.14,
+                0.5,
+                42,
+                70
+              ],
+              "6": [
+                0.15,
+                0.5,
+                45,
+                70
+              ],
+              "7": [
+                0.1625,
+                0.5,
+                48.75,
+                70
+              ],
+              "8": [
+                0.175,
+                0.5,
+                52.5,
+                70
+              ],
+              "9": [
+                0.1875,
+                0.5,
+                56.25,
+                70
+              ],
+              "10": [
+                0.2,
+                0.5,
+                60,
+                70
+              ],
+              "11": [
+                0.21,
+                0.5,
+                63,
+                70
+              ],
+              "12": [
+                0.22,
+                0.5,
+                66,
+                70
+              ],
+              "13": [
+                0.23,
+                0.5,
+                69,
+                70
+              ],
+              "14": [
+                0.24,
+                0.5,
+                72,
+                70
+              ],
+              "15": [
+                0.25,
+                0.5,
+                75,
+                70
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill03_Camera",
+              "Avatar_Sam_00_Skill03_EnterReady",
+              "Avatar_Sam_00_Skill03_Phase01",
+              "Avatar_Sam_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Chrysalid Pyronexus": {
+          "variant1": {
+            "skillID": 131004,
+            "trigger": "SkillP01",
+            "name": "Chrysalid Pyronexus",
+            "type": "Defense",
+            "slot": "Talent",
+            "desc": "The lower the HP, the less DMG received. When HP is #3[i]% or lower, the DMG Reduction reaches its maximum effect, reducing up to #1[i]%. During the Complete Combustion, the DMG Reduction remains at its maximum effect, and the Effect RES increases by #4[i]%.\\nIf Energy is lower than #2[i]% when the battle starts, regenerates Energy to #2[i]%. Once Energy is regenerated to its maximum, dispels all debuffs on this unit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                0.5,
+                0.2,
+                0.1
+              ],
+              "2": [
+                0.22,
+                0.5,
+                0.2,
+                0.12
+              ],
+              "3": [
+                0.24,
+                0.5,
+                0.2,
+                0.14
+              ],
+              "4": [
+                0.26,
+                0.5,
+                0.2,
+                0.16
+              ],
+              "5": [
+                0.28,
+                0.5,
+                0.2,
+                0.18
+              ],
+              "6": [
+                0.3,
+                0.5,
+                0.2,
+                0.2
+              ],
+              "7": [
+                0.325,
+                0.5,
+                0.2,
+                0.225
+              ],
+              "8": [
+                0.35,
+                0.5,
+                0.2,
+                0.25
+              ],
+              "9": [
+                0.375,
+                0.5,
+                0.2,
+                0.275
+              ],
+              "10": [
+                0.4,
+                0.5,
+                0.2,
+                0.3
+              ],
+              "11": [
+                0.42,
+                0.5,
+                0.2,
+                0.32
+              ],
+              "12": [
+                0.44,
+                0.5,
+                0.2,
+                0.34
+              ],
+              "13": [
+                0.46,
+                0.5,
+                0.2,
+                0.36
+              ],
+              "14": [
+                0.48,
+                0.5,
+                0.2,
+                0.38
+              ],
+              "15": [
+                0.5,
+                0.5,
+                0.2,
+                0.4
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_PassiveSkill01",
+              "Avatar_Sam_00_Rank02_Bonus",
+              "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Δ Order: Meteoric Incineration": {
+          "variant1": {
+            "skillID": 131007,
+            "trigger": "SkillMaze",
+            "name": "Δ Order: Meteoric Incineration",
+            "slot": "Technique",
+            "desc": "Leaps into the air and moves about freely for #1[i] seconds, which can be ended early by launching a plunging attack. When the duration ends, plunges and immediately attacks all enemies within a set area. At the start of each wave, applies a Fire Weakness to all enemies, lasting for #3[i] turn(s). Then, deals Fire DMG equal to #2[i]% of SAM's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5,
+                2,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sam_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1310_basic_atk.png",
+        "skillRef": {
+          "skillName": "Order: Flare Propulsion",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1310_skill.png",
+        "skillRef": {
+          "skillName": "Order: Aerial Bombardment",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1310_ultimate.png",
+        "skillRef": {
+          "skillName": "Fyrefly Type-IV: Complete Combustion",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1310_talent.png",
+        "skillRef": {
+          "skillName": "Chrysalid Pyronexus",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1310_technique.png",
+        "skillRef": {
+          "skillName": "Δ Order: Meteoric Incineration",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Module α: Antilag Outburst",
+        "icon": "icon/skill/1310_skilltree1.png",
+        "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
+        "params": [
+          0.55
+        ],
+        "traceAbility": "Firefly_Sam_Trace01"
+      },
+      "Point07": {
+        "name": "Module β: Autoreactive Armor",
+        "icon": "icon/skill/1310_skilltree2.png",
+        "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
+        "params": [
+          2,
+          3.6,
+          0.35,
+          0.5
+        ],
+        "traceAbility": "Firefly_Sam_Trace02",
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Module γ: Core Overload",
+        "icon": "icon/skill/1310_skilltree3.png",
+        "desc": "For every #2[i] point(s) of SAM's ATK that exceeds #1[i], increases this unit's Break Effect by #3[f1]%.",
+        "params": [
+          1800,
+          10,
+          0.007999999
+        ],
+        "traceAbility": "Firefly_Sam_Trace03"
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1310.png",
+    "preview": "image/character_preview/1310.png",
+    "portrait": "image/character_portrait/1310.png",
+    "bannerOffsets": [
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63
     ],
     "isBuffed": false
   },

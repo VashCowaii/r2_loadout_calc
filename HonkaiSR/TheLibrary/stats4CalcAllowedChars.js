@@ -4,6 +4,7 @@ global.calcAllowedSet = new Set([
     "Kafka",
     "Hysilens",
     "Pela",
+    "Black Swan",
 
     //ERUDITION
     "Argenti",
@@ -13,6 +14,7 @@ global.calcAllowedSet = new Set([
     "Saber",
     "Blade",
     "Jingliu",
+    "Firefly",
 
     //HUNT
     "Topaz & Numby",
