@@ -12967,7 +12967,7 @@ const turnLogic = {
 
                 // enemy.blackswanEpiphanyResetDelayReady = true;
                 if (!targetTurn.blackswanEpiphanyResetDelayReady) {
-                    buffCheck.currentStacks = Math.max(1,Math.floor(buffCheck.currentStacks * 0.5));
+                    buffCheck.currentStacks = Math.min(buffCheck.maxStacks,Math.max(1,Math.floor(buffCheck.currentStacks * 0.5)));
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Arcana turn-start handler", bodyText: `Arcana stacks halved to ${buffCheck.currentStacks}`});}
                 }
             },
