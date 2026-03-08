@@ -102,6 +102,13 @@ const compare = {
                         const pc4GivesTeam = new Set (maslow2pc2.givesTeam);
                         const pc4Wants = new Set (maslow2pc2.wants);
 
+                        if (is4pc) {
+                            for (let gives of pc4Gives) {
+                                let check = Needs.has(gives);
+                                if (check) {ValidSelf = true;break;}
+                            }
+                        }
+
                         const pc4 = {Item:current2pc2,Gives:pc4Gives,GivesTeam:pc4GivesTeam,Wants:pc4Wants,ValidSelf,is4pc};
                         yield {planar,pc2,pc4,lightcone}
                     }
