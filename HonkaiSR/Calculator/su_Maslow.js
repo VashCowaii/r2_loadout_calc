@@ -771,6 +771,147 @@ const maslowCategoryPlanars = {
     
 }
 
+const maslowLightconesHunt = {
+    //5star
+    "Baptism of Pure Thought": {
+        gives: ["CritDMG","FUA","Shred"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Cruising in the Stellar Sea": {
+        gives: ["CritRate","ATK"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "I Venture Forth to Hunt": {
+        gives: ["CritRate","Shred"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "In the Night": {
+        gives: ["CritRate","Basic","Skill","CritDMG"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Sailing Towards a Second Life": {
+        gives: ["Break","Shred","SPD"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Sleep Like the Dead": {
+        gives: ["CritDMG","CritRate"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "The Hell Where Ideals Burn": {
+        gives: ["CritRate","ATK"],//"EnergyRegen"
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Worrisome, Blissful": {
+        gives: ["CritRate","FUA"],
+        givesTeam: ["CritDMG"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+
+    //4star
+    "Final Victor": {
+        gives: ["ATK","CritDMG"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Only Silence Remains": {
+        gives: ["ATK","CritRate"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Return to Darkness": {
+        gives: ["CritRate"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "River Flows in Spring": {
+        gives: ["SPD","All"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "River Flows in Spring": {
+        gives: ["CritDMG","Skill","FUA"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Shadowed by Night": {
+        gives: ["Break","SPD"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Subscribe for More!": {
+        gives: ["Basic","Skill"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Swordplay": {
+        gives: ["All"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+
+
+    //3 start
+    "Adversarial": {
+        gives: ["SPD"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Arrows": {
+        gives: ["CritRate"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Darting Arrow": {
+        gives: ["ATK"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+}
 const maslowLightconesDestruction = {
     //DESTRUCTION
     //5star
@@ -1750,6 +1891,7 @@ const maslowLightconesElation = {
     },
 }
 const maslowCategoryLightcones = {
+    ...maslowLightconesHunt,
     ...maslowLightconesDestruction,
     ...maslowLightconesHarmony,
     ...maslowLightconesPreservation,
