@@ -351,6 +351,9 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Black Swan": defaultStandardAbilityDisplayWarnings,
+
+
+    "Z_Test": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -1582,6 +1585,11 @@ const defaultConditions = {
         }
     },
     "Sparxie": {
+        "hasEnhancedState": false,
+        "Skill": null,
+        "Ultimate": null
+    },
+    "Z_Test": {
         "hasEnhancedState": false,
         "Skill": null,
         "Ultimate": null

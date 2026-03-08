@@ -3734,6 +3734,61 @@ const maslowCharactersElation = {
             addTeamWant: [],
         },
     },
+    "Z_Test": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","DamageBreak"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","ATK%","EffectRES","HP%"],
+        0: {
+            gives: [],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+    },
 }
 
 
