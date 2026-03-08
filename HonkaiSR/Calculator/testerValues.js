@@ -220,6 +220,15 @@ const customDisplayValuesLog = {
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
+
+    "Black Swan": [//tracker done
+        // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
+        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
+        
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    ],
 }
 
 const permaConditionsTextLibrary = {
@@ -341,6 +350,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Black Swan": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -1083,6 +1093,11 @@ const defaultConditions = {
         }
     },
     "Hysilens": {
+        "hasEnhancedState": false,
+        "Skill": null,
+        "Ultimate": null
+    },
+    "Black Swan": {
         "hasEnhancedState": false,
         "Skill": null,
         "Ultimate": null
