@@ -29703,9 +29703,8 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
 
                     const buffSheet = this.yaoguangTraceCRITDMGSHEET ??= {
-                        "stats": [CritDamageBase,DEFShredAll],
+                        "stats": [CritDamageBase],
                         [CritDamageBase]: 0.60,
-                        [DEFShredAll]: 0.60,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritDMG,
