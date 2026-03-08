@@ -3533,6 +3533,14 @@ const battleActions = {
                 const averaged = dotRef.avgChanceApplied;
 
                 dotWrap(battleData,dotOwner,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,dotRef);
+
+                const checkSoftCapDetonate = dotRef.softCapDetonate;
+                if (checkSoftCapDetonate && dotRef.currentStacks > checkSoftCapDetonate) {
+                    // dotRef.currentStacks = checkSoftCapDetonate;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,
+                        {logType: "GenericAction", source:"Detonate Softcap Handler", bodyText: `Detonate completed, ${dotRef.buffName} stacks(${dotRef.currentStacks}) exceeded specified softcap of ${checkSoftCapDetonate}, reduced to ${checkSoftCapDetonate} on ${targetTurn.properName}`});}
+                    dotRef.currentStacks = checkSoftCapDetonate;       
+                }
                 // sourceTurn.kafkaUltimateDOTSHEET = {
                 //     "stats": null,
                 //     "source": characterName,
@@ -12871,6 +12879,7 @@ const turnLogic = {
                         multiplier: values[0],
                         multiPerStack: values[2],
                         multiStackCap: 50 + (rank>=6 ? 30 : 0),
+                        softCapDetonate: 50 + (rank>=6 ? 30 : 0),
                         scalar: "ATK",
                         slot: skillRef.slot,
                         ownerIsAllied: true,
