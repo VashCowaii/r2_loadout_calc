@@ -3823,6 +3823,7 @@ const graphs = {
     },
     enemyCustomImages: {
         "default": "misc/glorp.png",
+        "boss": "misc/Glorpard.png",
     },
     characterColors: [
         "",

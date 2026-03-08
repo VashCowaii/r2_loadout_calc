@@ -4329,6 +4329,43 @@ const userTriggers = {
             }
 
 
+            const isEnemySource = action.name?.toLowerCase().includes("enemy");
+            const isEnemySourceBossImage = isEnemySource && action.name?.toLowerCase().includes("boss");
+
+            const isEnemyHitSource = action.source?.toLowerCase().includes("enemy");
+            const isEnemyHitSourceBossImage = isEnemyHitSource && action.source?.toLowerCase().includes("boss");
+
+            const isEnemySourceOwner = action.sourceOwner?.toLowerCase().includes("enemy");
+            const isEnemySourceOwnerBossImage = isEnemySourceOwner && action.sourceOwner?.toLowerCase().includes("boss");
+            const isEnemyTarget = action.target?.toLowerCase().includes("enemy");
+            const isEnemyTargetBossImage = isEnemyTarget && action.target?.toLowerCase().includes("boss");
+            
+
+            let hitData = action.hitData;
+
+            let sourceTurnHitEnemy = isEnemySource && hitData?.playerData ? JSON.parse(hitData.playerData) : null;
+            const sourceIsEnemy = sourceTurnHitEnemy?.isEnemy;
+            let enemyNumberSource = sourceIsEnemy ? sourceTurnHitEnemy.enemyNumber : null;
+
+            let targetTurnHitEnemy = isEnemyTarget && hitData?.enemyData ? JSON.parse(hitData.enemyData) : null;
+            const targetIsEnemy = targetTurnHitEnemy?.isEnemy;
+            let enemyNumber = targetIsEnemy ? targetTurnHitEnemy.enemyNumber : null;
+
+
+            const nameNumber = action.name?.toLowerCase().includes("enemy ") ? action.name.match(/^\S+\s+(\d+)/)[1] : null;
+            // console.log(action.target,action.target?.toLowerCase().includes("enemy"))
+            const targetNumber = action.target?.toLowerCase().includes("enemy ") ? action.target.match(/^\S+\s+(\d+)/)[1] : null;
+            // console.log(targetNumber,targetNumber)
+            // if (action.target) {
+            //     console.log(targetNumber?.includes("enemy"))
+            //     console.log(targetNumber[1])
+            // }
+
+            
+            const sourceNumber = action.sourceOwner?.toLowerCase().includes("enemy ") ? action.sourceOwner.match(/^\S+\s+(\d+)/)[1] : null;
+            const hitSourceNumber = action.source?.toLowerCase().includes("enemy ") ? action.source.match(/^\S+\s+(\d+)/)[1] : null;
+
+            // console.log(nameNumber,targetNumber,sourceNumber)
 
 
             switch (currentType) {
@@ -4682,18 +4719,32 @@ const userTriggers = {
                     else if (applyType === "Stack") {actionVerb = "Stacked";}
                     else if (applyType === "Renew") {actionVerb = "Renewed";}
 
+
+                    // (isEnemySourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)
+                    //     (isEnemyTargetBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)
+                    //     ${isEnemySource ? `
+                    //         <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? (isEnemySourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                    //         <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumberSource}</div>` :
+                    //     `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                    //     ${isEnemyTarget ? `
+                    //         <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? (isEnemyTargetBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                    //         <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumber}</div>` :
+                    //     `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+
                     // graphs.enemyCustomImages[]
                     // enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,
                     // sourceOwner: buffSheet.sourceOwner
                     // console.log(action)
                     returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
                         ${action.sourceOwner != action.name ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                            <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                            <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? (isEnemySourceOwnerBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default))}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                            ${sourceNumber ? `<div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${sourceNumber}</div>` : ""}
                         </div>` : ""}
                         <img src="/HonkaiSR/misc/UpArrowBuffGain.png" class="characterDisplayLogStatIcon"/>
                         <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                             ${action.name.toLowerCase().includes("enemy") ? `
-                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? (isEnemySourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                ${nameNumber ? `<div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${nameNumber}</div>` : ""}` :
                             `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                         </div>
                         
@@ -4712,12 +4763,14 @@ const userTriggers = {
                     // console.log(action.buffName,action)
                     returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
                         ${action.sourceOwner != action.name ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                                <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                                <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? (isEnemySourceOwnerBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default))}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                            ${sourceNumber ? `<div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${sourceNumber}</div>` : ""}
                             </div>` : ""}
                         <img src="/HonkaiSR/misc/DownArrowBuffLoss.png" class="characterDisplayLogStatIcon"/>
                         <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                             ${action.name.toLowerCase().includes("enemy") ? `
-                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? (isEnemySourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                ${nameNumber ? `<div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${nameNumber}</div>` : ""}` :
                             `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                         </div>
                         
@@ -4756,7 +4809,6 @@ const userTriggers = {
                     break;
                 case "HitAlly":
                 case "HitEnemy":
-                    let hitData = action.hitData;
                     // let hitData = {
                     //     scalar: ATKObject.scalar,
                     //     currentSplit,currentMulti,multiOf,tags,
@@ -4768,13 +4820,7 @@ const userTriggers = {
                     // }
                     // logToBattle(battleData,{logType: "HitEnemy", hitType: superString, target: targetTurn.properName, source:charName, hitData:hitDataBreakSuper,enemyIsDead,sourceString:sourceName});
 
-                    let sourceTurnHitEnemy = JSON.parse(hitData.playerData);
-                    const sourceIsEnemy = sourceTurnHitEnemy.isEnemy;
-                    let enemyNumberSource = sourceIsEnemy ? sourceTurnHitEnemy.enemyNumber : null;
-
-                    let targetTurnHitEnemy = JSON.parse(hitData.enemyData);
-                    const targetIsEnemy = targetTurnHitEnemy.isEnemy;
-                    let enemyNumber = targetIsEnemy ? targetTurnHitEnemy.enemyNumber : null;
+                    
 
                     let classDMGColoring = null;
                     // const checkDMGTags = currentAction.tags ? new Set (currentAction.tags) : null;
@@ -4797,7 +4843,8 @@ const userTriggers = {
                     // DOT
                     const colorOpening = `<span style="${hitData.element ? `color:${dmgColorKeys[hitData.element]};` : ""}">`;
                     // console.log(hitData)
-                    const colorClose = `</span>`
+                    const colorClose = `</span>`;
+                    //TODO: circle back to this when we add firefly from the old code
                     if (action.hitType && action.hitType === "SuperBreak") {
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
                             <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
@@ -4810,18 +4857,16 @@ const userTriggers = {
                         //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
                         //     <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""}${action.source} ${action.enemyIsDead ? "[KILL] " : ""}[BREAK]- DMG: ${colorOpening}${hitData.DMGTotalEndBreak.toLocaleString()}${colorClose} --> ${action.target}</div>
                         // </div>`;
+                        
 
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
                             
-
-                            
-
                             <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
 
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                                 ${action.source.toLowerCase().includes("enemy") ? `
-                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
-                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumberSource}</div>` :
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? (isEnemyHitSourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${hitSourceNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
 
@@ -4829,7 +4874,7 @@ const userTriggers = {
 
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                                 ${action.target.toLowerCase().includes("enemy") ? `
-                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? (isEnemyTargetBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
                                     <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
@@ -4866,6 +4911,7 @@ const userTriggers = {
                         // </div>`;
 
 
+
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
                             
                             ${action.isBreakDOT ? `<img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIconPrefix"/>` : ""}
@@ -4874,14 +4920,14 @@ const userTriggers = {
                             <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                                 ${action.source.toLowerCase().includes("enemy") ? `
-                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
-                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumberSource}</div>` :
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? (isEnemyHitSourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${hitSourceNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
                             <img src="/HonkaiSR/misc/Icon_DoT.png" class="characterDisplayLogStatIconCenter"/>
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                                 ${action.target.toLowerCase().includes("enemy") ? `
-                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? (isEnemyTargetBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
                                     <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
@@ -4913,15 +4959,15 @@ const userTriggers = {
                         //     <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""}${action.source} ${action.enemyIsDead ? "[KILL] " : ""}${action.enemyIsBroken ? "[BREAK]" : ""}- ${hitData.currentSplit ? `${+(hitData.currentSplit*100).toFixed(2)}% `: ""}${action.hitType} DMG: ${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose}/${colorOpening}${hitData.DMGTotalCrit.toLocaleString()}${colorClose} (AVG ${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})--> ${action.target}</div>
                         // </div>`;
 
-
                         // enemyNumber
+                        // isEnemy//isEnemyBossImage
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
 
                         <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                                ${action.source.toLowerCase().includes("enemy") ? `
-                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
-                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumberSource}</div>` :
+                                ${isEnemyHitSource ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? (isEnemyHitSourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${hitSourceNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
                             
@@ -4929,8 +4975,8 @@ const userTriggers = {
                             <img src="${propertyImagePaths.ATK.icon}" class="characterDisplayLogStatIconCenter"/>
 
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                                ${action.target.toLowerCase().includes("enemy") ? `
-                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                ${isEnemyTarget ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? (isEnemyTargetBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
                                     <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
@@ -4979,13 +5025,13 @@ const userTriggers = {
 
                         
                             ${action.target != action.source ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                                <img src="/HonkaiSR/${characters[action.source] ? characters[action.source].icon : (graphs.summonCustomImages[action.source] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                                <img src="/HonkaiSR/${characters[action.source] ? characters[action.source].icon : (graphs.summonCustomImages[action.source] ?? (isEnemySourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default))}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
                             </div>` : ""}
                         
                         <img src="/HonkaiSR/misc/IconHealRatio.png" class="characterDisplayLogStatIcon"/>
                         <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                             ${action.target.toLowerCase().includes("enemy") ? `
-                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? (isEnemyTargetBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
                             `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                         </div>
                         
@@ -5022,13 +5068,13 @@ const userTriggers = {
 
                     returnString = `<div class="actionDetailBody">
                         ${action.name != action.target ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                            <img src="/HonkaiSR/${characters[action.name] ? characters[action.name].icon : (graphs.summonCustomImages[action.name] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                            <img src="/HonkaiSR/${characters[action.name] ? characters[action.name].icon : (graphs.summonCustomImages[action.name] ?? (isEnemySourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default))}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
                         </div>` : ""}
 
                         <img src="/HonkaiSR/misc/consume.png" class="characterDisplayLogStatIcon"/>
                         <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                             ${action.target.toLowerCase().includes("enemy") ? `
-                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? (isEnemyTargetBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
                             `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                         </div>
 

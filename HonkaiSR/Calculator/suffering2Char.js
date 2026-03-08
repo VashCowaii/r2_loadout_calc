@@ -7799,7 +7799,7 @@ const turnLogic = {
 
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
                 for (let ally of allyPositions) {
-                    if (ally.properName === characterName) {continue;}//huohuo doesn't give herself energy, rip
+                    if (ally.properName === characterName || ally.isMemosprite) {continue;}//huohuo doesn't give herself energy, rip
                     const energyToRegen = ally.maxEnergy * percentRegen;
                     updateEnergy(battleData,energyToRegen,ally,true,"Huohuo Ultimate");
                     buffSheet.duration = ally.turnState ? 3 : 2;
@@ -29806,6 +29806,7 @@ const turnLogic = {
                         for (let allySlot in allyTurns) {
                             batchTargetArray.push(allyTurns[allySlot]);
                         }
+                        //discord rando confirmed it does work like this, we just weren't sure but still coded it to target nontargetables
 
                         updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
                     },
