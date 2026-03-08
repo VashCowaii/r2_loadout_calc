@@ -3654,7 +3654,8 @@ const battleActions = {
             // multiPerStack: values[2],
             const stackedMulti = currentBuff.multiPerStack;
             const stackedMultiCap = currentBuff.multiStackCap;
-            const stacksToUse = stackedMultiCap ? Math.min(stackedMultiCap,stackCount) : stackCount;
+            // const stacksToUse = stackedMultiCap ? Math.min(stackedMultiCap,stackCount) : stackCount;
+            const stacksToUse = stackCount;
             if (stackedMulti) {currentMulti += (stacksToUse) * stackedMulti;}
             //see black swan's arcana stacking later if I forget what this was for
             let prePreDMG = multiOf * currentMulti;
@@ -12977,7 +12978,8 @@ const turnLogic = {
                 // enemy.blackswanEpiphanyResetDelayReady = true;
                 const buffCheck2 = targetTurn.buffsObject[arcanaName];
                 if (!targetTurn.blackswanEpiphanyResetDelayReady) {
-                    buffCheck2.currentStacks = Math.min(buffCheck2.multiStackCap,Math.max(1,Math.floor(buffCheck2.currentStacks * 0.5)));
+                    // buffCheck2.currentStacks = Math.min(buffCheck2.multiStackCap,Math.max(1,Math.floor(buffCheck2.currentStacks * 0.5)));
+                    buffCheck2.currentStacks = Math.min(1, Math.min(buffCheck2.multiStackCap,buffCheck2.currentStacks) * 0.5);
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Arcana turn-start handler", bodyText: `Arcana stacks halved to ${buffCheck2.currentStacks} on ${targetTurn.properName}`});}
                 }
                 else {
