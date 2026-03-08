@@ -31,6 +31,7 @@ const compare = {
                 let check = Needs.has(gives);
                 if (check) {ValidSelf = true;break;}
             }
+            if (lightconeSets.length === 1) {ValidSelf = true;}
             const lightcone = {Item:currentLightcone,Gives:lightconeGives,GivesTeam:lightconeGivesTeam,Wants:lightconeWants,ValidSelf}
 
             for (let iPlanar = 0;iPlanar<planarSets.length;iPlanar++) {
@@ -48,6 +49,7 @@ const compare = {
                     let check = Needs.has(gives);
                     if (check) {ValidSelf = true;break;}
                 }
+                if (planarSets.length === 1) {ValidSelf = true;}
                 const planar = {Item:currentPlanar,Gives:planarGives,GivesTeam:planarGivesTeam,Wants:planarWants,ValidSelf}
 
                 const pc2Lock = char2pcLock.length;
@@ -108,6 +110,7 @@ const compare = {
                                 if (check) {ValidSelf = true;break;}
                             }
                         }
+                        if (arrayToUse2pc.length === 1) {ValidSelf = true;}
 
                         const pc4 = {Item:current2pc2,Gives:pc4Gives,GivesTeam:pc4GivesTeam,Wants:pc4Wants,ValidSelf,is4pc};
                         yield {planar,pc2,pc4,lightcone}
@@ -128,6 +131,10 @@ const compare = {
         //     skipped += SKIPAMOUNT;
         //     continue;
         // }
+        const chestLengthUse = chestKeys.length === 1;
+        const bootLengthUse = bootKeys.length === 1;
+        const orbLengthUse = orbKeys.length === 1;
+        const ropeLengthUse = ropeKeys.length === 1;
 
         let mainstatSkipped = 0;
         let mainstatProcessed = 0;
@@ -135,7 +142,7 @@ const compare = {
             const chestName = chestMain.key;
             const chestMaslow = chestMain.value;
 
-            if (!charNeeds.has(chestMaslow)) {
+            if (!charNeeds.has(chestMaslow) && !chestLengthUse) {
                 mainstatSkipped++;
                 continue;
             }
@@ -144,7 +151,7 @@ const compare = {
                 const bootName = bootMain.key;
                 const bootMaslow = bootMain.value;
     
-                if (!charNeeds.has(bootMaslow)) {
+                if (!charNeeds.has(bootMaslow) && !bootLengthUse) {
                     mainstatSkipped++;
                     continue;
                 }
@@ -153,7 +160,7 @@ const compare = {
                     const orbName = orbMain.key;
                     const orbMaslow = orbMain.value;
         
-                    if (!charNeeds.has(orbMaslow)) {
+                    if (!charNeeds.has(orbMaslow) && !orbLengthUse) {
                         mainstatSkipped++;
                         continue;
                     }
@@ -163,7 +170,7 @@ const compare = {
                         const ropeMaslow = ropeMain.value;
             
             
-                        if (!charNeeds.has(ropeMaslow)) {
+                        if (!charNeeds.has(ropeMaslow) && !ropeLengthUse) {
                             mainstatSkipped++;
                             continue;
                         }
@@ -1279,6 +1286,32 @@ const compare = {
         const compositeTeamNeedsPRE = new Set ([...char1NeedsTeam,...char2NeedsTeam,...char3NeedsTeam,...char4NeedsTeam]);
         const compositeAddedNeedsPRE = new Set ([...char1AddsTeamNeed,...char2AddsTeamNeed,...char3AddsTeamNeed,...char4AddsTeamNeed]);
 
+        // {want:"EHR",give:"ATK"}
+        for (let charAddedNeed of compositeAddedNeedsPRE) {
+
+            if (char1Needs.has(charAddedNeed.give)) {
+                char1Needs.add(charAddedNeed.want);
+                char1NeedsTeam.add(charAddedNeed.want);
+            }
+            if (char2Needs.has(charAddedNeed.give)) {
+                char2Needs.add(charAddedNeed.want);
+                char2NeedsTeam.add(charAddedNeed.want);
+            }
+            if (char3Needs.has(charAddedNeed.give)) {
+                char3Needs.add(charAddedNeed.want);
+                char3NeedsTeam.add(charAddedNeed.want);
+            }
+            if (char4Needs.has(charAddedNeed.give)) {
+                char4Needs.add(charAddedNeed.want);
+                char4GivesTeam.add(charAddedNeed.want);
+            }
+
+        }
+
+
+
+
+
 
         const getNeeds = compare.getCharacterNeedsWants;
         const getMainstats = compare.getCharacterMainstatIteration;
@@ -1762,6 +1795,14 @@ const compare = {
         countedProgressHolderBox.style.display = "flex";
         const combosCountedProgress = readSelection("combinationsCountedDisplayCount");
         const validCombosBox = readSelection("optimizerValidCombos");
+
+        // 5: {
+        //     gives: [],
+        //     givesTeam: ["DOTSource","Debuff","FUASource","ATK","Vuln","DOT"],
+        //     wants: [...DOTATKBased,"Lightning",...hasFUA,...characterHasEnergy,...characterDealsDamage,...generalCharacterWants],
+        //     wantsTeam: [...DOTATKBased,"Lightning",...hasFUA,...characterHasEnergy,...characterDealsDamage,...generalCharacterWants],
+        //     addTeamWant: ["EHR"],
+        // },
 
 
         let countedSkip = 0;
