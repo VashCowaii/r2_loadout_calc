@@ -85,6 +85,11 @@ li {
     background-color: black;
 }
 
+li {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
 
 @media (max-width: 768px) {
     /* .changeLogMegaBox {
