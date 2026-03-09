@@ -64,6 +64,7 @@
         <li>Deprecated some super old and some unused on-hit energy gain methods.</li>
         <li>Updated handling for action advancements. This shouldn't actually change anything, all this does is make it so on a case-by-case basis I no longer need to specify that the advance shouldn't happen in the preaction phase anymore. Nothing was broken to warrant this change, but it'll make life easier going forward and probably prevent a few errors too.</li>
         <li>Updated how memosprites can be handled, making them easier to access with less references/looping in a zone-type buffs or targeting.</li>
+        <li>Given the above note, updated all LC's, Relics, and Characters to account for the new group handling. For the calculator this won't make much a different, but it should be slightly noticeable on the optimizer.</li>
         
 
         <!-- <h3>Optimizer</h3> -->

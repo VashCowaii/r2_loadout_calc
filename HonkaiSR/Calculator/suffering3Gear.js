@@ -3012,27 +3012,16 @@ const turnLogicLightcones = {
 
                 let buffSheet3 = currentTurn.updatePresageCRITSHEET;
 
-                // const allyTurns = battleData.allyPositions;
-                const allyTurns = battleData.nameBasedTurns;
-                for (let targetSlot in allyTurns) {
-                    const currentTurn = allyTurns[targetSlot];
-                    updateBuff(battleData,currentTurn,buffSheet3);
-                }
+                const allyArray = battleData.allAlliesArray;
+                updateBuffBatchTargets(battleData,allyArray,buffSheet3);
             },
             expireFunction(battleData,expireParam) {
-                // const ownerName = expireParam.sourceTurn;//passes a lot, not a name or a turn
+                const ownerName = expireParam.sourceTurn;
                 const uniqueBuffName = expireParam.uniqueName;
-                // "expireParam": {sourceTurn:currentTurn.name,uniqueName:currentTurn.maskCRITBONUSNAMEOWNER}
+                const ownerTurn = battleData.nameBasedTurns[ownerName];
 
-                // const updateBuff = battleActions.updateBuff;
-                // const allyTurns = battleData.allyPositions;
-
-                const allyTurns = battleData.nameBasedTurns;
-                for (let targetSlot in allyTurns) {
-                    const currentTurn = allyTurns[targetSlot];
-                    removeBuff(battleData,currentTurn,currentTurn.buffsObject[uniqueBuffName]);
-                }
-
+                const allyArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allyArray,ownerTurn.buffsObject[uniqueBuffName]);
             },
         },
         "listeners": [
@@ -4965,31 +4954,23 @@ const turnLogicLightcones = {
                 }
 
                 let buffSheet2 = currentTurn.updateFortuneCRITSHEETOwner;
+                const buffCheck = currentTurn.buffsObject[buffSheet2.buffName];
                 const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,currentTurn,buffSheet2);
 
                 let buffSheet3 = currentTurn.updateFortuneCRITSHEET;
-                const thisName = buffSheet3.buffName;
 
-                const allyTurns = battleData.nameBasedTurns;
-                for (let targetSlot in allyTurns) {
-                    const targetTurn = allyTurns[targetSlot];
-                    // if (targetTurn.name === ownerName) {continue;}//we don't apply crit bonuses to the owner, at least I don't think
-                    if (targetTurn.buffsObject[thisName]) {continue;}//if they already have, no need to renew it's perma anyways
-
-                    updateBuff(battleData,targetTurn,buffSheet3);
-                }
+                if (buffCheck) {return;}//if the owner already had the buff, these guys would have it too bc perma, no need to reapply after refreshing owner duration
+                const allyArray = battleData.allAlliesArray;
+                updateBuffBatchTargets(battleData,allyArray,buffSheet3);
             },
             expireFunction(battleData,expireParam) {
                 const ownerName = expireParam.sourceTurn;//not actually a turn object, rather this is a slot
+                const ownerTurn = battleData.nameBasedTurns[ownerName];
                 const uniqueBuffName = expireParam.uniqueName;
-                const allyTurns = battleData.nameBasedTurns;
-                
-                for (let targetSlot in allyTurns) {
-                    const targetTurn = allyTurns[targetSlot]
-                    // if (targetTurn.name === ownerName) {continue;}
-                    removeBuff(battleData,targetTurn,targetTurn.buffsObject[uniqueBuffName]);
-                }
+                const allyArray = battleData.allAlliesArray;
+
+                removeBuffFromBatch(battleData,allyArray,ownerTurn.buffsObject[uniqueBuffName]);
             },
         },
         "listeners": [
@@ -5129,12 +5110,8 @@ const turnLogicLightcones = {
                         const buffSheet2 = sourceTurn.floweryWorldTEAMSHEET;
 
                         if (!sourceTurn.buffsObject[buffSheet2.buffName]) {
-                            const allyTurns = battleData.nameBasedTurns;
-                            let batchTargetArray = [];
-                            for (let allySlot in allyTurns) {
-                                batchTargetArray.push(allyTurns[allySlot]);
-                            }
-                            updateBuffBatchTargets(battleData,batchTargetArray,buffSheet2);
+                            const allyArray = battleData.allAlliesArray;
+                            updateBuffBatchTargets(battleData,allyArray,buffSheet2);
                         }
 
                         
@@ -7229,12 +7206,8 @@ const turnLogicRelics = {
                         if (buffCheck) {return;}//if any ally on the field still has gentle rain, then the buff would persist across the team, we can abort early
                     }
 
-                    // const updateBuff = battleActions.updateBuff;
-                    const allyTurns = battleData.nameBasedTurns;
-                    for (let ally in allyTurns) {
-                        const currentTurn = allyTurns[ally];
-                        removeBuff(battleData,currentTurn,buffSheet);
-                    }
+                    const allyArray = battleData.allAlliesArray;
+                    removeBuffFromBatch(battleData,allyArray,buffSheet);
                 }
             },
             "listeners": [
@@ -7307,11 +7280,8 @@ const turnLogicRelics = {
 
                         //if the owner already had gentle rain before renewing it, that means all allies still have the crit dmg, and we don't need to reapply
                         if (!buffCheck) {
-                            const allyTurns = battleData.nameBasedTurns;
-                            for (let ally in allyTurns) {
-                                const currentTurn = allyTurns[ally];
-                                updateBuff(battleData,currentTurn,allySheet);
-                            }
+                            const allyArray = battleData.allAlliesArray;
+                            updateBuffBatchTargets(battleData,allyArray,allySheet);
                         }
                     },
                     "target": "self",
@@ -7842,14 +7812,8 @@ const turnLogicRelics = {
 
                         buffSheet1.sourceOwner = sourceTurn.properName;
 
-                        const namedTurns = battleData.nameBasedTurns;
-                        let targetBatchArray = [];
-                        for (let allySlot in namedTurns) {
-                            const currentAlly = namedTurns[allySlot];
-                            // battleActions.updateBuff(battleData,currentAlly,buffSheet1);
-                            targetBatchArray.push(currentAlly);
-                        };
-                        updateBuffBatchTargets(battleData,targetBatchArray,buffSheet1);
+                        const allyArray = battleData.allAlliesArray;
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet1);
 
                         battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
                     },
@@ -8352,14 +8316,15 @@ const turnLogicRelics = {
                         let buffSheet = this.buffSheet
 
                         const updateBuff = battleActions.updateBuff;
-                        const allyPositions = battleData.allyPositions;
+                        // const allyPositions = battleData.allyPositions;
                         const namedTurns = battleData.nameBasedTurns;
+                        const allyArray = battleData.allAlliesArray;//TODO: verify this can apply to memos, it looks like it should, but idk about demiurge
                         for (let owner of ownerRef) {
                             let currentTurn = namedTurns[owner.slot];
                             let ownerElement = currentTurn.element;
                             // element: charEntryTemp.element,
 
-                            for (let targetTurn of allyPositions) {
+                            for (let targetTurn of allyArray) {
                                 if (targetTurn.name === currentTurn.name) {continue}//penacony can't apply to the owner, only everyone BUT the owner, that matches
 
                                 let newElement = targetTurn.element;
@@ -8751,23 +8716,14 @@ const turnLogicRelics = {
                     let buffName = buffSheet.buffName;
 
                     const buffCheck = currentTurn.buffsObject[buffName];
-                    const applyBuff = battleActions.updateBuff;
-                    // const allyPositions = battleData.allyPositions;
-                    const allyTurns = battleData.nameBasedTurns;
+                    const allyArray = battleData.allAlliesArray;
                     if (currentTurn.SPD >= 120) {//if the target has enough, then we can apply it
                         if (buffCheck) {return;}//if they already have it, then abort
 
-                        for (let targetTurn in allyTurns) {
-                            const currentTurn = allyTurns[targetTurn];
-                            
-                            applyBuff(battleData,currentTurn,buffSheet);
-                        }
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet)
                     }
                     else if (buffCheck) {//but if they don't have enough, but have the buff, then remove it
-                        for (let targetTurn in allyTurns) {
-                            const currentTurn = allyTurns[targetTurn];
-                            removeBuff(battleData,currentTurn,buffCheck);
-                        }
+                        removeBuffFromBatch(battleData,allyArray,buffCheck)
                     }
                 }
             },
@@ -9976,31 +9932,19 @@ const turnLogicRelics = {
                         const buffName = buffSheet.buffName;
                         const buffCheck = summonAssignedTo.buffsObject[buffName];
 
-                        const namedTurns = battleData.nameBasedTurns;
                         const currentActiveMemosprites = summonAssignedTo.activeMemosprites;
 
-                        const updateBuff = battleActions.updateBuff;
                         if (currentActiveMemosprites) {
                             if (buffCheck) {return;}//if the buff already exists, abort
-                            // updateBuff(battleData,summonAssignedTo,buffSheet);
 
-                            for (let entitySlot in namedTurns) {
-                                const currentEntity = namedTurns[entitySlot];
-                                //this buff functions as zone based buff, applying to all allies that exist or not, so long as the condition is met.
-
-                                updateBuff(battleData,currentEntity,buffSheet);
-                            }
+                            const allyArray = battleData.allAlliesArray;
+                            updateBuffBatchTargets(battleData,allyArray,buffSheet);
 
                         }
                         else if (!currentActiveMemosprites && buffCheck) {//only remove the buff if it already existed
-                            // removeBuff(battleData,summonAssignedTo,buffSheet);
 
-                            for (let entitySlot in namedTurns) {
-                                const currentEntity = namedTurns[entitySlot];
-                                //this buff functions as zone based buff, applying to all allies that exist or not, so long as the condition is met.
-
-                                removeBuff(battleData,currentEntity,buffSheet);
-                            }
+                            const allyArray = battleData.allAlliesArray;
+                            removeBuffFromBatch(battleData,allyArray,buffSheet);
                         }
                     },
                     "target": "self",
