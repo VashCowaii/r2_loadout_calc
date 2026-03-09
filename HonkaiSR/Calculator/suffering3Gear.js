@@ -3091,21 +3091,14 @@ const turnLogicLightcones = {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             expireFunction(battleData,expireParam) {
-                // const ownerName = expireParam.sourceTurn;//passes a lot, not a name or a turn
+                const ownerName = expireParam.ownerName;
                 const uniqueBuffName = expireParam.uniqueBuffName;
-                // "expireParam": {sourceTurn:currentTurn.name,uniqueName:currentTurn.maskCRITBONUSNAMEOWNER}//owner, in this case
+                const ownerTurn = battleData.nameBasedTurns[ownerName];
 
-                // const updateBuff = battleActions.updateBuff;
-                // const allyTurns = battleData.nameBasedTurns;
+                const buffToRemove = ownerTurn.buffsObject[uniqueBuffName]
+
                 const allyArray = battleData.allAlliesArray;
-                removeBuffFromBatch(battleData,allyArray,allyArray[0].buffsObject[uniqueBuffName]);
-
-                // removeBuffFromBatch
-                // for (let targetSlot in allyTurns) {
-                //     const targetTurn = allyTurns[targetSlot]
-                //     // if (targetSlot === ownerName) {continue;}
-                //     removeBuff(battleData,targetTurn,targetTurn.buffsObject[uniqueBuffName]);
-                // }
+                removeBuffFromBatch(battleData,allyArray,buffToRemove);
             },
         },
         "listeners": [
