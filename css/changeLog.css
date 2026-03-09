@@ -83,6 +83,10 @@ li {
     font-size: 24px;
     padding: 5px;
     background-color: black;
+    cursor: pointer;
+}
+.changelogButton:hover {
+    opacity: 0.5;
 }
 
 li {
