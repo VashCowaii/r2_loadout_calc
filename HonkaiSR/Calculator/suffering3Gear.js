@@ -2846,8 +2846,6 @@ const turnLogicLightcones = {
                     
                     const actionAdvance = battleActions.actionAdvance;
                     for (let targetTurn of battleData.allyPositions) {
-                        if (targetTurn.turnState && !targetTurn.actionAssigned) {continue;}//can't advance someone within their own turn, skip them
-
                         actionAdvance(values,targetTurn,battleData,lcNameRef);
                     }
                     //quick note for myself in the future, just checked to be certain and tingyun doing double technique
@@ -5311,13 +5309,6 @@ const turnLogicLightcones = {
                             }
                         }
                     }
-                    
-                    // const enemyPositions = battleData.enemyPositions;
-                    // const updateBuff = battleActions.updateBuff;
-                    // for (let enemy of enemyPositions) {
-                    //     buffSheet3.duration = enemy.turnState ? 3 : 2;
-                    //     updateBuff(battleData,enemy,buffSheet3)
-                    // }
                 },
                 "target": "self",
                 "listenerName": "Today's Good Luck - elation skill listener",
@@ -5615,7 +5606,6 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
 
-                        if (!ownerRank || (sourceTurn.turnState && !sourceTurn.actionAssigned)) {return;}//advancing in your own turn = nothing
                         let relicNameRef = "Eagle of Twilight Line";
                         battleActions.actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
                     },
@@ -6784,8 +6774,6 @@ const turnLogicRelics = {
                         const buffCheck = sourceTurn.buffsObject[buffSheet.name];
                         //if we're in a super hit-spammy attack, and reached the 8 point already, then abort without bothering the buff handler
                         if (buffCheck && buffCheck.currentStacks === 8) {return;}
-                        
-                        buffSheet.duration = sourceTurn.turnState ? 4 : 3;
                         battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
