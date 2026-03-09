@@ -243,6 +243,99 @@ const turnLogicLightcones = {
             "buff2": "Disputation (LC)"
         },
     },
+    "I Venture Forth to Hunt": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "FUAStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    const ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+                    
+                    const buffName = this.buffName ??= turnLogicLightcones["I Venture Forth to Hunt"].buffNames.buff1;
+                    const buffCheck = sourceTurn.buffsObject[buffName];
+
+                    if (buffCheck) {//if the buff exists
+                        const currentStacks = buffCheck.currentStacks;
+                        if (currentStacks === 2) {return;}//if we have max stacks already, abort
+                        else if (currentStacks < 2) {//but if we have less than total, add the amount diff
+                            // const stackDiff = debuffsCount - currentStacks;
+                            const buffSheet = sourceTurn.ventureForthToHuntSHREDSHEET;
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            return;
+                        }
+                    }
+                    else if (!buffCheck) {//otherwise, if the buff isn't applied yet, then add it
+                        if (!sourceTurn.ventureForthToHuntSHREDSHEET) {
+                            const lcNameRef = "I Venture Forth to Hunt";
+                            const lcPathing = lightcones[lcNameRef].params;
+                            const rankParams = lcPathing[ownerRank-1];
+
+                            sourceTurn.ventureForthToHuntSHREDSHEET = {//TODO: long time ago I had set up decay functions for shit like this, go back and get it hooked up
+                                "statsOnHit": [DEFShredUltimate],
+                                [DEFShredUltimate]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": buffName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 2,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        
+                        const buffSheet = sourceTurn.ventureForthToHuntSHREDSHEET;
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "I Venture Forth to Hunt - FUA listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//the ult has to have attack targets
+
+                    const buffSheet = sourceTurn.ventureForthToHuntSHREDSHEET;
+                    if (!buffSheet) {return;}
+
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                    if (buffCheck) {
+                        const currentStacks = buffCheck.currentStacks;
+
+                        if (currentStacks === 1) {
+                            removeBuff(battleData,sourceTurn,buffCheck);
+                        }
+                        else {//if we're at 2 stacks, remove it and apply 1 stack
+                            removeBuff(battleData,sourceTurn,buffCheck);
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "I Venture Forth to Hunt - end turn listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Luminflux (LC)",
+        },
+    },
     "Worrisome, Blissful": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
