@@ -1194,6 +1194,8 @@ const battleActions = {
         return familySet;
     },
     actionAdvance(percent,targetTurn,battleData,source,delayLogEntry) {
+        if (targetTurn.turnState && !targetTurn.actionAssigned) {return}
+
         battleData.actionCounter += 1;
         targetTurn.actionCounter = battleData.actionCounter;
         let isEnemy = targetTurn.isEnemy;
@@ -4435,11 +4437,12 @@ const battleActions = {
 
         
 
-        if (enemiesThatBroke.length) {
-            for (let brokenEnemy of enemiesThatBroke) {
-                if (!brokenEnemy.isDead) {battleActions.actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
-            }
-        }
+        // if (enemiesThatBroke.length) {
+        //     const actionAdvance = battleActions.actionAdvance;
+        //     for (let brokenEnemy of enemiesThatBroke) {
+        //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+        //     }
+        // }
 
         battleData.attackIsActive = false;
         
@@ -4661,12 +4664,12 @@ const battleActions = {
 
         if (!isEnemy) {battleData.battleDamageSUM += totals.totalAVGDMG + totals2.totalAVGDMG;}
 
-        if (enemiesThatBroke.length) {
-            const actionAdvance = battleActions.actionAdvance;
-            for (let brokenEnemy of enemiesThatBroke) {
-                if (!brokenEnemy.isDead) {battleActions.actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
-            }
-        }
+        // if (enemiesThatBroke.length) {
+        //     const actionAdvance = battleActions.actionAdvance;
+        //     for (let brokenEnemy of enemiesThatBroke) {
+        //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+        //     }
+        // }
 
         battleData.attackIsActive = false;
         battleData.addedDMGTallyAttack = 0;
@@ -7208,7 +7211,7 @@ const turnLogic = {
                 logicRef.characterValuesBattle.nextBasicEnhanced = true;
                 // poke("BasicATKEnd",battleData,{source:"Gallagher"});
 
-                if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
+                battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");//will advance when ult is cast but not within his turn, obv does nothing then
                 sourceTurn.ultyQueued = false;
             },
             besotted(battleData,sourceTurn,targetTurn,e4,values2) {
@@ -18412,7 +18415,7 @@ const turnLogic = {
                 for (let i=nextAVDupe.length-1;i>=0;i--) {
                     const currentTurn = nextAVDupe[i];
 
-                    if (currentTurn.isEnemy || currentTurn.isUniqueEvent && !currentTurn.isMemosprite || (currentTurn.turnState && !currentTurn.actionAssigned)) {continue;}
+                    if (currentTurn.isEnemy || currentTurn.isUniqueEvent && !currentTurn.isMemosprite) {continue;}
                     actionAdvance(1,currentTurn,battleData,"Robin's Ultimate");
                 }
                 
@@ -18565,7 +18568,6 @@ const turnLogic = {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    // battleActions.actionAdvance(0.25,ownerTurn,battleData,"Coloratura Cadenza");
 
                     if (!this.skillRef) {
                         const characterName = ownerTurn.properName;
@@ -24424,11 +24426,10 @@ const turnLogic = {
                 }
                 else {
                     logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
-                    battleActions.actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea gained extra turn");
+                    battleActions.actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea advanced");
                 }
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                // if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             aggyBasicEnhanced(battleData,target,sourceTurn) {
