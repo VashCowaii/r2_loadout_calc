@@ -5141,11 +5141,11 @@ const turnLogicLightcones = {
 
                         if (!sourceTurn.buffsObject[buffSheet2.buffName]) {
                             const allyTurns = battleData.nameBasedTurns;
-                        let batchTargetArray = [];
-                        for (let allySlot in allyTurns) {
-                            batchTargetArray.push(allyTurns[allySlot]);
-                        }
-                        updateBuffBatchTargets(battleData,batchTargetArray,buffSheet2);
+                            let batchTargetArray = [];
+                            for (let allySlot in allyTurns) {
+                                batchTargetArray.push(allyTurns[allySlot]);
+                            }
+                            updateBuffBatchTargets(battleData,batchTargetArray,buffSheet2);
                         }
 
                         
@@ -7858,10 +7858,10 @@ const turnLogicRelics = {
                         let targetBatchArray = [];
                         for (let allySlot in namedTurns) {
                             const currentAlly = namedTurns[allySlot];
-                            battleActions.updateBuff(battleData,currentAlly,buffSheet1);
-                            // targetBatchArray.push(currentAlly);
+                            // battleActions.updateBuff(battleData,currentAlly,buffSheet1);
+                            targetBatchArray.push(currentAlly);
                         };
-                        // updateBuffBatchTargets(battleData,targetBatchArray,buffSheet1);
+                        updateBuffBatchTargets(battleData,targetBatchArray,buffSheet1);
 
                         battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
                     },

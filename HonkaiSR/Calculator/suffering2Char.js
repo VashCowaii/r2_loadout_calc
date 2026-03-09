@@ -20351,7 +20351,6 @@ const turnLogic = {
                         //since if we're already at max stacks, the only thing that changes is the duration getting refreshed,
                         //we're gonna skip the buff handler here entirely, and just handle duration with direct assignment
                         buffCheck.duration = sourceTurn.turnState ? 3 : 2;
-                        // updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
                     }
                 }
                 else {
@@ -25760,7 +25759,6 @@ const turnLogic = {
 
                 poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                 const shieldBuffObject = ATKObjects.dhptSkillShieldSHIELDSHEET;
-                shieldBuffObject.AVApplied = battleData.sumAV;
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,shieldBuffObject,false,sourceTurn);
             },
@@ -29494,7 +29492,7 @@ const turnLogic = {
                 const debuffSheet = ATKObjects.yaoElationSkillVULNSHEET;
 
                 const enemyPositions = battleData.enemyPositions;
-                updateBuffBatchTargets(battleData,enemy,debuffSheet);
+                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
 
                 // updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
