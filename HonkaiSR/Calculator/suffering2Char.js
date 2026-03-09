@@ -944,7 +944,6 @@ const battleActions = {
     //             if (currentReference.maxStacks > currentStacks && maxStacks > 1) {
     //                 changeStats = true;
     //                 currentReference.duration = buffSheet.duration;
-    //                 currentReference.AVApplied = sumAV;
     //                 currentReference.source = buffSheet.source;
 
     //                 const stackSumTemp = currentStacks + buffSheet.currentStacks;
@@ -959,7 +958,6 @@ const battleActions = {
     //             //example usecase: archer's guardian buff when anyone gets skill points, expires at the end of his turn. But if it's his turn that he gets a skill point in, then it's the end of his NEXT turn
     //             else if (maxStacks <= currentStacks) {//I did <= to be safe, in theory we should never be less than current stacks due to the min operation in the above section
     //                 currentReference.duration = buffSheet.duration;
-    //                 currentReference.AVApplied = sumAV;
     //                 currentReference.source = buffSheet.source;
 
     //                 if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield:currentReference.isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
@@ -8306,7 +8304,6 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.natashaTechniqueATKObject;
                 const debuffSheet = ATKObjects.natashaTechWEAKENSHEET;
-                debuffSheet.AVApplied = battleData.sumAV;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
@@ -13395,7 +13392,6 @@ const turnLogic = {
                         const physicalSheet = ATKObjects.E1DebuffRESSHEETPhysical;
                         const fireSheet = ATKObjects.E1DebuffRESSHEETFire;
                         const windSheet = ATKObjects.E1DebuffRESSHEETWind;
-                        // multiSheet.AVApplied = battleData.sumAV;
                         const sourceDots = sourceTurn.dots;
                         const sourceBuffs = sourceTurn.buffsObject;
                         const updateBuff = battleActions.updateBuff;
@@ -18210,7 +18206,6 @@ const turnLogic = {
                 }
                 
                 // const countdownSheet = sourceTurn.robinConcertoCountdownSHEET;
-                // countdownSheet.AVApplied = battleData.sumAV;
                 // const updateBuff = battleActions.updateBuff;
                 // updateBuff(battleData,sourceTurn,countdownSheet);
 
@@ -25827,7 +25822,6 @@ const turnLogic = {
                 }
 
                 const shieldBuffObject = ATKObjects.dhptTalentSHIELDSHEET;
-                shieldBuffObject.AVApplied = battleData.sumAV;
                 const allyPositions = battleData.allyPositions;
                 const updateBuff = battleActions.updateBuff;
                 poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRefTalent.slot});

@@ -3011,7 +3011,6 @@ const turnLogicLightcones = {
                 //if the buff already existed before we applied it to the owner, then we obv don't need to evaluate the allies since if the owner had it, the allies would have it too and theirs doesn't expire
 
                 let buffSheet3 = currentTurn.updatePresageCRITSHEET;
-                buffSheet3.AVApplied = battleData.sumAV;
 
                 // const allyTurns = battleData.allyPositions;
                 const allyTurns = battleData.nameBasedTurns;
@@ -3891,9 +3890,6 @@ const turnLogicLightcones = {
                     }
                     let buffSheet = ownerTurn.toEvernightsStarsNoctisOWNERSHEET;
                     let buffSheet3 = ownerTurn.toEvernightsStarsNoctisAllyMemoSHEET;
-                    
-                    buffSheet3.AVApplied = battleData.sumAV;
-
 
                     const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
@@ -7137,7 +7133,6 @@ const turnLogicRelics = {
                         const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                         if (buffCheck) {return;}
                         
-                        allySheet.AVApplied = battleData.sumAV;
                         updateBuff(battleData,sourceTurn,buffSheet);//owner
                         updateBuff(battleData,memoTurn,buffSheet);//memo
 
@@ -9386,7 +9381,6 @@ const turnLogicRelics = {
                     const buffCheck2 = buffsObject[buffName2];
                     if (currentTurn.SPD >= 160) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
-                            buffSheet2.AVApplied = battleData.sumAV;
                             updateBuff(battleData,currentTurn,buffSheet2);
                         }//if the target already has the buff, skip, no need to "renew" perma buffs like this
                     }

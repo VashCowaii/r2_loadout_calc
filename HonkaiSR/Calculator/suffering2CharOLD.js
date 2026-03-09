@@ -1317,7 +1317,6 @@ const turnLogic = {
                         const physicalSheet = ATKObjects.E1DebuffRESSHEETPhysical;
                         const fireSheet = ATKObjects.E1DebuffRESSHEETFire;
                         const windSheet = ATKObjects.E1DebuffRESSHEETWind;
-                        // multiSheet.AVApplied = battleData.sumAV;
                         const sourceDots = sourceTurn.dots;
                         const sourceBuffs = sourceTurn.buffsObject;
                         const updateBuff = battleActions.updateBuff;
