@@ -28497,6 +28497,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
+                //the target proc is in the zone function
 
                 const applySkillZone = ATKObjects.applySkillZone ??= turnLogic[sourceTurn.properName].skillFunctions.applySkillZone;
                 applySkillZone(battleData,sourceTurn);
@@ -28678,6 +28679,7 @@ const turnLogic = {
 
                 const energy = battleActions.updateEnergy;
                 energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
 
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"Yao Guang Ultimate");
 
