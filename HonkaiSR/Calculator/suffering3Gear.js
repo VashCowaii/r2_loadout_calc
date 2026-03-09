@@ -115,6 +115,131 @@ const turnLogicLightcones = {
             "hruntingStack": "Hrunting Stack"
         },
     },
+    "Baptism of Pure Thought": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    const ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const targetTurn = generalInfo.targetTurn;
+
+                    //TODO: sort of a weird scenario we have here is that multiple things monitor ally dmg start lol, so
+                    //depending on when this check fires, it might miss debuffs, but the game may actually work like this
+                    //since the listener doesn't actually have a priority level assigned
+                    
+                    const buffName = this.buffName ??= turnLogicLightcones["Baptism of Pure Thought"].buffNames.buff1;
+
+                    const debuffsCount = Math.min(3,targetTurn.debuffCounter);
+                    const buffCheck = sourceTurn.buffsObject[buffName];
+
+                    if (buffCheck) {//if the buff exists
+                        const currentStacks = buffCheck.currentStacks;
+                        if (currentStacks === debuffsCount) {return;}//if we have max stacks already, abort
+                        else if (!debuffsCount) {//and we have no debuffs, then remove and abort
+                            removeBuff(battleData,sourceTurn,buffCheck);
+                            return
+                        }
+                        else if (currentStacks < debuffsCount) {//but if we have less than total, add the amount diff
+                            const stackDiff = debuffsCount - currentStacks;
+                            const buffSheet = sourceTurn.baptismOfPureThoughCRITSHEET;
+                            buffSheet.currentStacks = stackDiff;
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            return;
+                        }
+                        else {//but if we have more than we should, remove without triggering so we can apply it later
+                            removeBuff(battleData,sourceTurn,buffCheck,true,null,false,true);
+                            const buffSheet = sourceTurn.baptismOfPureThoughCRITSHEET;
+                            buffSheet.currentStacks = debuffsCount;
+                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+
+                        
+                    }
+                    else if (!buffCheck) {//otherwise, if the buff isn't applied yet, then add it
+                        if (!sourceTurn.baptismOfPureThoughCRITSHEET) {
+                            const lcNameRef = "Baptism of Pure Thought";
+                            const lcPathing = lightcones[lcNameRef].params;
+                            const rankParams = lcPathing[ownerRank-1];
+
+                            sourceTurn.baptismOfPureThoughCRITSHEET = {
+                                "statsOnHit": [CritDamageBase],
+                                [CritDamageBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": buffName,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 3,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        
+                        const buffSheet = sourceTurn.baptismOfPureThoughCRITSHEET;
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Baptism of Pure Thought - debuff counter",
+                "owners": [],
+                "ownersSlots": {},
+            },
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const isAttackUlt = generalInfo.isAttackUlt;
+                    let charSlot = sourceTurn.name;
+                    let ownerRank = ownersSlots[charSlot];
+                    if (!ownerRank || !isAttackUlt) {return;}//the ult has to have attack targets
+
+                    if (!sourceTurn.baptismOfPureThoughDISPSHEET) {
+                        let lcNameRef = "Baptism of Pure Thought";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.baptismOfPureThoughDISPSHEET = {
+                            "stats": [DamageAll,DEFShredFUA],
+                            [DamageAll]: rankParams[3],
+                            [DEFShredFUA]: rankParams[4],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+                    let buffSheet = sourceTurn.baptismOfPureThoughDISPSHEET;
+                    buffSheet.duration = sourceTurn.turnState ? 3 : 2;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Baptism of Pure Thought - ult start listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Baptism of Pure Thought (Crit DMG)",
+            "buff2": "Disputation (LC)"
+        },
+    },
     "Worrisome, Blissful": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},

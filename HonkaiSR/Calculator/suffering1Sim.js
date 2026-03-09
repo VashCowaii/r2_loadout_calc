@@ -1187,8 +1187,10 @@ const sim = {
                 let sourceTurn = currentUltimate.sourceTurn;
                 let actionName = currentUltimate.name;
                 let target = currentUltimate.target;
-                let generalInfo = {sourceTurn,actionName,target};
+                const isAttackUlt = currentUltimate.isAttackUlt;
+                let generalInfo = {sourceTurn,actionName,target,isAttackUlt};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
+                
 
                 const isExtraTurn = currentUltimate.isExtraTurn;
 
