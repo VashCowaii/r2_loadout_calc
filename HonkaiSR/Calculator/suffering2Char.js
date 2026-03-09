@@ -10308,7 +10308,7 @@ const turnLogic = {
                         "stats": [ATKP],
                         [ATKP]: 1,
                         "source": "Trace",
-                        "sourceOwner": currentTurn.properName,
+                        "sourceOwner": ownerTurn.properName,
                         "buffName": buffName,
                         "durationInTurn": null,
                         "duration": 1,
