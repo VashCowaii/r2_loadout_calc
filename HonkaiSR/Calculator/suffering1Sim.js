@@ -456,6 +456,7 @@ const sim = {
             "nameBasedTurns": {},
             "fullCharacterArray": [],
             "allAlliesArray": [],
+            "allAllyTargetsArray": [],
             "eventBasedTurns": {},
             "allyPositions": [],//ally equivalent of enemyPositions
             "actionCounter": 0,
@@ -535,6 +536,7 @@ const sim = {
         const battleListeners = battleData.battleListeners;
         const fullCharacterArray = battleData.fullCharacterArray;
         const allAlliesArray = battleData.allAlliesArray;
+        const allAllyTargetsArray = battleData.allAllyTargetsArray;
 
         const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"]
 
@@ -673,8 +675,9 @@ const sim = {
             slotRef.statTableONHIT[LVL] = 0;
             nextTurn.push(slotRef);
             allyPositions.unshift(slotRef);
-            fullCharacterArray.push(slotRef)
-            allAlliesArray.push(slotRef)
+            fullCharacterArray.push(slotRef);
+            allAlliesArray.push(slotRef);
+            allAllyTargetsArray.push(slotRef);
             //we need AV to be able to be sortable via an array, but also called and modified via an object, hence what will look like duplication here
             //but it's not dupin, it's object referencing, even in the array, just remember that. Editing one edits both.
             //probably the first time I've ever been truly grateful for this functionality in JS, jesus christ

@@ -7135,7 +7135,6 @@ const turnLogic = {
                 // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
                 poke("TargetAlly",battleData,{targetType:"Blast", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
 
-                // let targetTurn = battleData.nameBasedTurns[target];
                 let healObject = ATKObjects.huohuoSkillHealHealHEALOBJECT;
                 battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
 
@@ -7256,7 +7255,6 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TalentStart",battleData,{sourceTurn});
 
-                // let targetTurn = battleData.nameBasedTurns[target];
                 let healObject = ATKObjects.provisionHealHEALOBJECT;
                 const healAlly = battleActions.healAlly;
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null);
@@ -7917,7 +7915,6 @@ const turnLogic = {
                             }
                         }
 
-                        // let targetTurn = battleData.nameBasedTurns[target];
                         let healObject = ATKObjects.natashaSkillHealHOTOBJECT;
                         battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
 
@@ -7947,7 +7944,6 @@ const turnLogic = {
                             }
                         }
 
-                        // let targetTurn = battleData.nameBasedTurns[target];
                         let healObject = ATKObjects.natashaUltHealHOTOBJECT;
                         battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
 
@@ -8083,7 +8079,6 @@ const turnLogic = {
                             }
                             // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
             
-                            // let targetTurn = battleData.nameBasedTurns[target];
                             let healObject = ATKObjects.natashaE1HEALOBJECT;
                             battleActions.healAlly(battleData,healObject,ownerTurn,ownerTurn,"E1",1,null);
 
@@ -8527,7 +8522,6 @@ const turnLogic = {
                             }
                         }
 
-                        // let targetTurn = battleData.nameBasedTurns[target];
                         let healObject = ATKObjects.lynxHOTHealHOTOBJECT;
                         battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
                     }
@@ -8834,9 +8828,6 @@ const turnLogic = {
                     }
                 }
 
-
-
-                // let targetTurn = battleData.nameBasedTurns[target];
                 let healObject = ATKObjects.luochaSkillHealHealHEALOBJECT;
                 battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null);
                 if (rank >= 2) {
@@ -9043,13 +9034,8 @@ const turnLogic = {
 
                 if (rank >= 1) {
                     const atkSheet = ATKObjects.luochaE1ATKSHEET;
-                    const allyTargets = [];
-                    const allyTurns = battleData.nameBasedTurns;
-                    for (let ally in allyTurns) {
-                        const currentAlly = allyTurns[ally];
-                        allyTargets.push(currentAlly);
-                    }
-                    updateBuffBatchTargets(battleData,allyTargets,atkSheet);
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,atkSheet);
 
                     if (rank >= 4) {
                         const debuffSheet = ATKObjects.luochaE4WEAKENSHEET;
@@ -9071,13 +9057,8 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const atkSheet = ATKObjects.luochaE1ATKSHEET;
-                    const allyTargets = [];
-                    const allyTurns = battleData.nameBasedTurns;
-                    for (let ally in allyTurns) {
-                        const currentAlly = allyTurns[ally];
-                        allyTargets.push(currentAlly);
-                    }
-                    removeBuffFromBatch(battleData,allyTargets,atkSheet);
+                    const allyArray = battleData.allAlliesArray;
+                    removeBuffFromBatch(battleData,allyArray,atkSheet);
 
 
                     if (rank >= 4) {
@@ -9232,7 +9213,6 @@ const turnLogic = {
                         }
                     }
 
-                    // let targetTurn = battleData.nameBasedTurns[target];
                     let healObject = ATKObjects.luochaSelfHealHEALOBJECT;
                     let healObject2 = ATKObjects.luochaTeamHealHEALOBJECT;
                     battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null);
@@ -16090,7 +16070,6 @@ const turnLogic = {
                 let values = ATKObjects.sundayAdvanceREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 // console.log(targetTurn)
-                // const targetTurn = battleData.nameBasedTurns.char1;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
@@ -16269,7 +16248,6 @@ const turnLogic = {
                 const targetTurn = allyTurns.char1;
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: true});
                 
-                // let targetTurn = battleData.nameBasedTurns[target];
                 const maxEnergy = targetTurn.maxEnergy;
                 if (maxEnergy) {
                     const proposedRegen = maxEnergy * 0.20;
@@ -16758,8 +16736,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.tribbieSkillREF ??= ATKObjects.Skill["Where'd the Gifts Go"].variant1;
 
-                // console.log(targetTurn)
-                // const targetTurn = battleData.nameBasedTurns.char1;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
@@ -16833,10 +16809,8 @@ const turnLogic = {
                 if (!buffCheck) {
                     //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
                     //since the allied buff doesn't expire unless the countdown does
-                    const allyPositions = battleData.allyPositions;
-                    for (let ally of allyPositions) {
-                        updateBuff(battleData,ally,buffSheet);
-                    }
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 }
             },
             numinosityExpired(battleData,tribbieSlot) {
@@ -16847,11 +16821,9 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.tribbieSkillBUFFSHEET;
-                const allyPositions = battleData.allyPositions;
-                // const updateBuff = battleActions.updateBuff;
-                for (let ally of allyPositions) {
-                    removeBuff(battleData,ally,buffSheet);
-                }
+                const allyArray = battleData.allAlliesArray;
+
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
             tribbieTechnique(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -16998,9 +16970,7 @@ const turnLogic = {
                     //and bc of that, along with the fact that the debuff never expires unless the zone does, we don't need reup the duration
                     const enemyPositions = battleData.enemyPositions;
                     const debuffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
-                    for (let enemy of enemyPositions) {
-                        updateBuff(battleData,enemy,debuffSheet);
-                    }
+                    updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
 
                     const statCheck = ATKObjects.tribbieHPStatcheck ??= logicRef.skillFunctions.statCheck;
                     statCheck(battleData,sourceTurn);
@@ -17021,12 +16991,8 @@ const turnLogic = {
 
                 const buffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
                 const enemyPositions = battleData.enemyPositions;
-                // const updateBuff = battleActions.updateBuff;
-                for (let enemy of enemyPositions) {
-                    removeBuff(battleData,enemy,buffSheet);
-                }
+                removeBuffFromBatch(battleData,enemyPositions,buffSheet);
 
-                // const buffSheetHP = tribbieTurn.tribbieZoneHPBuffSHEET;
                 const statCheck = ATKObjects.tribbieHPStatcheck ??= logicRef.skillFunctions.statCheck
                 statCheck(battleData,tribbieTurn);
             },
@@ -17547,8 +17513,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.robinSkillREF ??= ATKObjects.Skill["Pinion's Aria"].variant1;
                 let values = ATKObjects.robinSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                // console.log(targetTurn)
-                // const targetTurn = battleData.nameBasedTurns.char1;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
@@ -17608,13 +17572,7 @@ const turnLogic = {
                     //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
                     //since the allied buff doesn't expire unless the countdown does
 
-                    // const allyTurns = battleData.nameBasedTurns;
-                    // for (let ally in allyTurns) {
-                    //     const allyTurn = allyTurns[ally];
-                    //     updateBuff(battleData,allyTurn,buffSheet);
-                    // }
-
-                    const allyArray = battleData.fullCharacterArray;
+                    const allyArray = battleData.allAlliesArray;
                     updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 }
 
@@ -17633,15 +17591,8 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.robinSkillBUFFSHEET;
-                // const updateBuff = battleActions.updateBuff;
 
-                // const allyTurns = battleData.nameBasedTurns;
-                // for (let ally in allyTurns) {
-                //     const allyTurn = allyTurns[ally];
-                //     removeBuff(battleData,allyTurn,buffSheet);
-                // }
-
-                let allyArray = battleData.fullCharacterArray;
+                const allyArray = battleData.allAlliesArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
             robinUltimate(battleData,sourceTurn) {
@@ -17719,17 +17670,9 @@ const turnLogic = {
                 buffSheet[ATKFlat] = conversion;
                 buffSheet[ATKFlatNULL] = -conversion;
 
-
-                const allyArray = battleData.fullCharacterArray;
-                updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                updateBuffBatchTargets(battleData,allyArray,buffSheetFUA);
-                // const allyTurns = battleData.nameBasedTurns;
-                // for (let ally in allyTurns) {
-                //     const currentAlly = allyTurns[ally];
-                //     updateBuff(battleData,currentAlly,buffSheet);
-                //     updateBuff(battleData,currentAlly,buffSheetFUA);
-                // }
-
+                const allyTargets = battleData.allAllyTargetsArray;
+                updateBuffBatchTargets(battleData,allyTargets,buffSheet);
+                updateBuffBatchTargets(battleData,allyTargets,buffSheetFUA);
                 
                 const nextAV = battleData.nextTurnAV;
                 sourceTurn.notPresentInActionOrder = true;
@@ -17787,30 +17730,20 @@ const turnLogic = {
                 sourceTurn.ultyQueued = false;
             },
             concertoExpired(battleData,eventTurn) {
-                const allyTurns = battleData.nameBasedTurns;
-                const robinTurn = allyTurns[eventTurn.eventOwner];
+                const robinTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
                 const logicRef = turnLogic[robinTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 
                 robinTurn.battleValues.robinConcertoActive = false;
                 robinTurn.notPresentInActionOrder = false;
 
-
                 const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
                 const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
                 // const updateBuff = battleActions.updateBuff;
 
-                // removeBuffFromBatch
-                let allyArray = battleData.fullCharacterArray;
-                removeBuffFromBatch(battleData,allyArray,buffSheet);
-                removeBuffFromBatch(battleData,allyArray,buffSheetFUA);
-                // }
-                
-                // for (let ally in allyTurns) {
-                //     const currentAlly = allyTurns[ally];
-                //     removeBuff(battleData,currentAlly,buffSheet);
-                //     removeBuff(battleData,currentAlly,buffSheetFUA);
-                // }
+                const allyTargets = battleData.allAllyTargetsArray;
+                removeBuffFromBatch(battleData,allyTargets,buffSheet);
+                removeBuffFromBatch(battleData,allyTargets,buffSheetFUA);
 
                 const eventName = eventTurn.properName;
                 const nextAV = battleData.nextTurnAV;
@@ -17933,15 +17866,17 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    if (!this.skillRef) {
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!ATKObjects.skillRef) {
                         const characterName = ownerTurn.properName;
-                        const logicRef = turnLogic[characterName];
-                        let skillRef = this.skillRef ??= logicRef.ATKObjects["Talent"]["Tonal Resonance"].variant1;
-                        let values = this.values ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                        let skillRef = ATKObjects.skillRef ??= logicRef.ATKObjects["Talent"]["Tonal Resonance"].variant1;
+                        let values = ATKObjects.values ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
 
                         // greatTableIndex
                         // greatTableKeys
-                        this.buffSheet = {
+                        ATKObjects.buffSheet = {
                             "stats": [CritDamageBase],
                             [CritDamageBase]: values[0],
                             "source": "Talent",
@@ -17957,12 +17892,8 @@ const turnLogic = {
                         }
                     }
 
-                    const allyTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
-                    for (let ally in allyTurns) {
-                        const currentAlly = allyTurns[ally];
-                        updateBuff(battleData,currentAlly,this.buffSheet);
-                    }
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,ATKObjects.buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Talent: ally crit dmg application",
@@ -18477,12 +18408,10 @@ const turnLogic = {
                         
                     }
 
-
-
                     const ATKSheet = ATKObjects.astaChargeATKSHEET;
                     const DEFSheet = ATKObjects.astaChargeDEFSHEET;
 
-                    const allyTurns = battleData.nameBasedTurns;
+                    const allyArray = battleData.allAlliesArray;
 
                     const buffCheck = ownerTurn.buffsObject[atkName];
                     
@@ -18494,26 +18423,17 @@ const turnLogic = {
                             ATKSheet.currentStacks = stackDiff;
                             DEFSheet.currentStacks = stackDiff;
 
-                            for (let ally in allyTurns) {
-                                const currentAlly = allyTurns[ally];
-                                updateBuff(battleData,currentAlly,ATKSheet,false,null);
-                            }
+                            updateBuffBatchTargets(battleData,allyArray,ATKSheet,false,null);
                             updateBuff(battleData,ownerTurn,DEFSheet,false,null);
                             return;
                         }
                         else {
                             if (newValue) {
-                                for (let ally in allyTurns) {
-                                    const currentAlly = allyTurns[ally];
-                                    removeBuff(battleData,currentAlly,ATKSheet,true,null,false,true);
-                                }
+                                removeBuffFromBatch(battleData,allyArray,ATKSheet,true,null,false,true);
                                 removeBuff(battleData,ownerTurn,DEFSheet,true,null,false,true);
                             }
                             else {
-                                for (let ally in allyTurns) {
-                                    const currentAlly = allyTurns[ally];
-                                    removeBuff(battleData,currentAlly,ATKSheet,false,null);
-                                }
+                                removeBuffFromBatch(battleData,allyArray,ATKSheet,false,null);
                                 removeBuff(battleData,ownerTurn,DEFSheet,false,null);
                                 return;
                             }
@@ -18528,10 +18448,8 @@ const turnLogic = {
 
                     ATKSheet.currentStacks = newValue;
                     DEFSheet.currentStacks = newValue;
-                    for (let ally in allyTurns) {
-                        const currentAlly = allyTurns[ally];
-                        updateBuff(battleData,currentAlly,ATKSheet,false,null);
-                    }
+
+                    updateBuffBatchTargets(battleData,allyArray,ATKSheet,false,null);
                     updateBuff(battleData,ownerTurn,DEFSheet,false,null);
                 },
                 "target": "self",
@@ -18766,8 +18684,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.ruanmeiSkillREF ??= ATKObjects.Skill["String Sings Slow Swirls"].variant1;
                 let values = ATKObjects.ruanmeiSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                // console.log(targetTurn)
-                // const targetTurn = battleData.nameBasedTurns.char1;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
@@ -18824,12 +18740,8 @@ const turnLogic = {
                 buffSheet[DamageAll] = overtoneBEConversion(battleData,sourceTurn);
 
                 if (!buffCheck) {
-                    const allyTurns = battleData.nameBasedTurns;
-
-                    for (let allySlot in allyTurns) {
-                        const currentTurn = allyTurns[allySlot];
-                        updateBuff(battleData,currentTurn,buffSheet);
-                    }
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -18861,13 +18773,9 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
-                // const updateBuff = battleActions.updateBuff;
 
-                const allyTurns = battleData.nameBasedTurns;
-                for (let allySlot in allyTurns) {
-                    const currentTurn = allyTurns[allySlot];
-                    removeBuff(battleData,currentTurn,buffSheet);
-                }
+                const allyArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
             ruanmeiUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -18933,11 +18841,8 @@ const turnLogic = {
                     //and bc of that, along with the fact that the debuff never expires unless the zone does, we don't need reup the duration
 
                     const buffSheet = ATKObjects.ruanmeiUltimateZoneBuffSHEET;
-                    const allyTurns = battleData.nameBasedTurns;
-                    for (let allySlot in allyTurns) {
-                        const currentTurn = allyTurns[allySlot];
-                        updateBuff(battleData,currentTurn,buffSheet);
-                    }
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 }
 
                 getEnergy(battleData,skillRef.energyRegen,sourceTurn);
@@ -18951,12 +18856,8 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.ruanmeiUltimateZoneBuffSHEET;
-                const allyTurns = battleData.nameBasedTurns;
-
-                for (let allySlot in allyTurns) {
-                    const currentTurn = allyTurns[allySlot];
-                    removeBuff(battleData,currentTurn,buffSheet);
-                }
+                const allyArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
             ruanmeiTechnique(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -19013,14 +18914,10 @@ const turnLogic = {
                     if (currentBonus != accurateBonus) {
                         buffSheet[DamageAll] = accurateBonus;
 
-                        const allyTurns = battleData.nameBasedTurns;
+                        const allyArray = battleData.allAlliesArray;
 
-                        const updateBuff = battleActions.updateBuff;
-                        for (let allySlot in allyTurns) {
-                            const currentTurn = allyTurns[allySlot];
-                            removeBuff(battleData,currentTurn,buffSheet,true);
-                            updateBuff(battleData,currentTurn,buffSheet);
-                        }
+                        removeBuffFromBatch(battleData,allyArray,buffSheet,true);
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
                     }
                 },
                 "target": "self",
@@ -19050,12 +18947,8 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    const allyTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
-                    for (let allySlot in allyTurns) {
-                        const currentTurn = allyTurns[allySlot];
-                        updateBuff(battleData,currentTurn,buffSheet);
-                    }
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Inert Respiration trace battlestart break effect",
@@ -19091,12 +18984,11 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    const allyTurns = battleData.nameBasedTurns;
+                    const allyArray = battleData.allAlliesArray;
                     const updateBuff = battleActions.updateBuff;
-                    for (let allySlot in allyTurns) {
-                        const currentTurn = allyTurns[allySlot];
-                        if (currentTurn.properName === ownerTurn.properName) {continue;}
-                        updateBuff(battleData,currentTurn,buffSheet);
+                    for (let allySlot of allyArray) {
+                        if (allySlot.properName === ownerTurn.properName) {continue;}
+                        updateBuff(battleData,allySlot,buffSheet);
                     }
                 },
                 "target": "self",
@@ -19791,17 +19683,10 @@ const turnLogic = {
                 const fullCipherValue = values[1] + values2[2];
 
                 const countdown = ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown;
-                let batchTargetArray = [];
 
-                const allyTurns = battleData.nameBasedTurns;
-
-                const buffCheck = buffsObject[countdown.buffName];
+                const allyTargets = battleData.allAllyTargetsArray;
                 
-                for (let allySlot in allyTurns) {
-                    const currentAlly = allyTurns[allySlot];
-                    if (currentAlly.isUnselectable) {continue;}
-                    batchTargetArray.push(currentAlly);
-                }
+                const buffCheck = buffsObject[countdown.buffName];
 
                 if (buffCheck) {
                     const stackCheck = buffCheck.currentStacks === buffCheck.maxStacks;
@@ -19817,7 +19702,7 @@ const turnLogic = {
                             updateBuff(battleData,currentSlot,buffSheet);
                         }
                         else {
-                            for (let ally of batchTargetArray) {
+                            for (let ally of allyTargets) {
                                 removeBuff(battleData,ally,buffSheet,true,null,false,true);
                                 const hasCipherBuff = ally.buffsObject[cipherName];
                                 buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
@@ -19830,7 +19715,7 @@ const turnLogic = {
                     }
                     else if (!stackCheck) {
                         buffSheet.currentStacks = totalChange;
-                        for (let ally of batchTargetArray) {
+                        for (let ally of allyTargets) {
                             const hasCipherBuff = ally.buffsObject[cipherName];
                             buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
                             updateBuff(battleData,ally,buffSheet);
@@ -19849,7 +19734,7 @@ const turnLogic = {
                 }
                 else {
                     buffSheet.currentStacks = totalChange;
-                    for (let ally of batchTargetArray) {
+                    for (let ally of allyTargets) {
                         const hasCipherBuff = ally.buffsObject[cipherName];
                         buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
                         updateBuff(battleData,ally,buffSheet);
@@ -19872,17 +19757,11 @@ const turnLogic = {
             talentZoneExpired(battleData,expireParam) {
                 const sparkleTurn = battleData.nameBasedTurns[expireParam.slot];
                 const buffSheet = sparkleTurn.buffsObject[expireParam.buffName]
-                let batchTargetArray = [];
 
                 sparkleTurn.battleValues.talentZoneActive = false;
-                const allyTurns = battleData.nameBasedTurns;
-                
-                for (let allySlot in allyTurns) {
-                    const currentAlly = allyTurns[allySlot];
-                    if (currentAlly.isUnselectable) {continue;}
-                    batchTargetArray.push(currentAlly);
-                }
-                removeBuffFromBatch(battleData,batchTargetArray,buffSheet);
+                const allyTargets = battleData.allAllyTargetsArray;
+
+                removeBuffFromBatch(battleData,allyTargets,buffSheet);
 
                 
                 const fakeObject = expireParam.fakeName;
@@ -20126,16 +20005,8 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    let batchTargetArray = [];
-                    const allyTurns = battleData.nameBasedTurns;
-                    //TODO: adjust a few things for isUnselectable
-                    for (let allySlot in allyTurns) {
-                        const currentAlly = allyTurns[allySlot];
-                        if (!currentAlly.isUnselectable) {
-                            batchTargetArray.push(currentAlly);
-                        }
-                    }
-                    updateBuffBatchTargets(battleData,batchTargetArray,buffSheet2);
+                    const allyTargets = battleData.allAllyTargetsArray;
+                    updateBuffBatchTargets(battleData,allyTargets,buffSheet2);
                 },
                 "target": "self",
                 "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
@@ -22827,17 +22698,12 @@ const turnLogic = {
                 const critDamage = statsRef[CritDamageBase] + statsRef[CritDamageBaseNULL];
                 const conversion = (values[0] * critDamage) + values[1];
 
-                // const buffCheck = sourceTurn.buffsObject[ownerSheet.name];
-                const updateBuff = battleActions.updateBuff;
                 const allySheet = ATKObjects.memTalentCritDMGSHEET;
                 const buffCheck = sourceTurn.buffsObject[allySheet.buffName];
-                const allyTurns = battleData.nameBasedTurns;
+                const allyArray = battleData.allAlliesArray;
 
                 if (!memTurn.isActive) {//if mem is off the field, then remove the buffs
-                    for (let allySlot in allyTurns) {
-                        const currentTurn = allyTurns[allySlot];
-                        removeBuff(battleData,currentTurn,allySheet);
-                    }
+                    removeBuffFromBatch(battleData,allyArray,allySheet);
                     return;
                 }
 
@@ -22845,20 +22711,14 @@ const turnLogic = {
                     const statCheck = buffCheck[CritDamageBase];
                     if (statCheck === conversion) {return;}//but the amount converted is the same, then abort
                     else {//otherwise remove so we can apply the right amount
-                        for (let allySlot in allyTurns) {
-                            const currentTurn = allyTurns[allySlot];
-                            removeBuff(battleData,currentTurn,allySheet,true,false,true);
-                        }
+                        removeBuffFromBatch(battleData,allyArray,allySheet,true,false,true);
                     }
                 }
 
                 allySheet[CritDamageBase] = conversion;
                 allySheet[CritDamageBaseNULL] = -conversion;
 
-                for (let allySlot in allyTurns) {
-                    const currentTurn = allyTurns[allySlot];
-                    updateBuff(battleData,currentTurn,allySheet,false,null,false,true);
-                }
+                updateBuffBatchTargets(battleData,allyArray,allySheet,false,null,false,true);
             },
             memTurnAttack(battleData,memoTurn) {
                 // eventOwner: ownerTurn.name
@@ -23325,6 +23185,7 @@ const turnLogic = {
                     ownerTurn.rmcMemTURNEVENT = ActionEntry;
                     battleData.declaredMemosprites.push(ActionEntry);
                     battleData.allAlliesArray.push(ActionEntry);
+                    battleData.allAllyTargetsArray.push(ActionEntry);
                     battleData.battleTotal.Turns[ActionEntry.properName] = 0;
                     ownerTurn.summonEventRef = "rmcMemTURNEVENT";
                     ownerTurn.memospriteEventRef = "rmcMemTURNEVENT";
@@ -24615,6 +24476,7 @@ const turnLogic = {
                     ownerTurn.aggyGarmentTURNEVENT = ActionEntry;
                     battleData.declaredMemosprites.push(ActionEntry);
                     battleData.allAlliesArray.push(ActionEntry);
+                    battleData.allAllyTargetsArray.push(ActionEntry);
                     battleData.battleTotal.Turns[ActionEntry.properName] = 0;
                     ownerTurn.summonEventRef = "aggyGarmentTURNEVENT";
                     ownerTurn.memospriteEventRef = "aggyGarmentTURNEVENT";
@@ -28062,11 +27924,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    const allyTurns = battleData.nameBasedTurns;
+                    const charArray = battleData.fullCharacterArray;
                     let eruditionBoyos = -1;
-                    for (let allySlot in allyTurns) {
-                        const currentAlly = allyTurns[allySlot];
-                        if (currentAlly.isUniqueEvent || currentAlly.path != "Erudition") {continue;}
+                    for (let allySlot of charArray) {
+                        if (allySlot.path != "Erudition") {continue;}
                         eruditionBoyos++;
                     }
 
@@ -28096,13 +27957,8 @@ const turnLogic = {
                             }
                         }
                         const buffSheet = ATKObjects.anaxaMultiEruditionSHEET;
-                        const allyTurns = battleData.nameBasedTurns;
-                        let fullyAllyTurnArray = [];
-                        for (let allySlot in allyTurns) {
-                            const currentAlly = allyTurns[allySlot];
-                            fullyAllyTurnArray.push(currentAlly);
-                        }
-                        updateBuffBatchTargets(battleData,fullyAllyTurnArray,buffSheet);
+                        const allyArray = battleData.allAlliesArray;
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
                     }
                     if (!eruditionBoyos || isE6) {
                         if (!ATKObjects.anaxaSoloEruditionSHEET) {
@@ -28589,7 +28445,6 @@ const turnLogic = {
                 const buffsObject = currentTurn.buffsObject;
 
                 const buffCheck1 = buffsObject[dmgSheet.buffName];
-                // const namedTurns = battleData.nameBasedTurns;
                 if (buffCheck1) {//if the HP buff exists
                     if (!validSPD) {//but we have no valid spd, then remove
                         // removeBuff(battleData,currentTurn,buffCheck1);
@@ -28640,8 +28495,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.yaoSkillREF ??= ATKObjects.Skill["Decalight Unveils All"].variant1;
 
-                // console.log(targetTurn)
-                // const targetTurn = battleData.nameBasedTurns.char1;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
@@ -28735,48 +28588,31 @@ const turnLogic = {
                     }
                 }
 
-
                 const currentStats = currentTurn.statTable;
                 const usableElationDMG = currentStats[ElationDMGAll] + currentStats[ElationDMGAllNULL];
                 const endConversion = values[1] * usableElationDMG + (rank >= 2 ? 0.16 : 0);
 
                 const dmgSheet = ATKObjects.yaoSkillBUFFSHEET;
-                // const updateBuff = battleActions.updateBuff;
 
-                // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
                 const buffsObject = currentTurn.buffsObject;
-                let batchTargetArray = [];
-                const allyTurns = battleData.nameBasedTurns;
+                const allyArray = battleData.allAlliesArray;
 
                 const buffCheck2 = buffsObject[dmgSheet.buffName];
                 if (buffCheck2) {//if the outgoing healing buff exists
                     const currentValue = buffCheck2[ElationDMGAll];
                     if (currentValue === endConversion) {return;}//if the healing stacks is equal to what we already have, then abort
                     else {//otheriwse if we have too many stacks, remove it with a silent log tag, so we can apply the correct buff after
-
-                        for (let allySlot in allyTurns) {
-                            batchTargetArray.push(allyTurns[allySlot]);
-                        }
-
-
-                        removeBuffFromBatch(battleData,batchTargetArray,buffCheck2,true,null,false,true);
-                        // removeBuff(battleData,demiTurn,buffCheck2,true);
+                        removeBuffFromBatch(battleData,allyArray,buffCheck2,true,null,false,true);
                     }
                 }
                 // else if (!usableSPD) {return;}//if we have no whole number spd above 200, then abort at this point
+                //normally we'd have the conversion check and abort but we'll always have elation DMG to conver so... no need
                 
                 //the only reason we should reach this far, is if we should actually apply a buff
                 dmgSheet[ElationDMGAll] = endConversion;
                 dmgSheet[ElationDMGAllNULL] = -endConversion;
 
-                if (!batchTargetArray.length) {
-                    for (let allySlot in allyTurns) {
-                        batchTargetArray.push(allyTurns[allySlot]);
-                    }
-                }
-
-                updateBuffBatchTargets(battleData,batchTargetArray,dmgSheet);
-                // updateBuff(battleData,demiTurn,dmgExtraSheet);
+                updateBuffBatchTargets(battleData,allyArray,dmgSheet);
             },
             skillZoneExpired(battleData,yaoSlot) {
                 const yaoTurn = battleData.nameBasedTurns[yaoSlot];
@@ -28786,13 +28622,8 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.yaoSkillBUFFSHEET;
-                const allyTurns = battleData.nameBasedTurns;
-                const batchTargetArray = [];
-                for (let allySlot in allyTurns) {
-                    const currentAlly = allyTurns[allySlot];
-                    batchTargetArray.push(currentAlly);
-                }
-                removeBuffFromBatch(battleData,batchTargetArray,buffSheet);
+                const allyArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
             yaoUltimate(battleData,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -29238,14 +29069,10 @@ const turnLogic = {
                             "actionTags": ["Elation"]
                         };
 
-                        const allyTurns = battleData.nameBasedTurns;
-                        let batchTargetArray = [];
-                        for (let allySlot in allyTurns) {
-                            batchTargetArray.push(allyTurns[allySlot]);
-                        }
                         //discord rando confirmed it does work like this, we just weren't sure but still coded it to target nontargetables
+                        const allyArray = battleData.allAlliesArray;
 
-                        updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Poised and Sated battlestart critdmg bonus",
@@ -29294,13 +29121,9 @@ const turnLogic = {
                             "actionTags": ["Elation"]
                         };
 
-                        const allyTurns = battleData.nameBasedTurns;
-                        let batchTargetArray = [];
-                        for (let allySlot in allyTurns) {
-                            batchTargetArray.push(allyTurns[allySlot]);
-                        }
+                        const allyArray = battleData.allAlliesArray;
 
-                        updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Poised and Sated battlestart critdmg bonus",
@@ -30142,38 +29965,25 @@ const turnLogic = {
 
                     const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
 
-                    const allyTurns = battleData.nameBasedTurns;
-                    let batchTargetArray = [];
+                    const allyArray = battleData.allAlliesArray;
                     if (buffCheck) {
                         const currentValue = buffCheck.currentStacks;
                         if (currentValue === punchline) {return;}
                         
-                        for (let allySlot in allyTurns) {
-                            const currentAlly = allyTurns[allySlot];
-                            batchTargetArray.push(currentAlly)
-                        }
-                        
                         if (currentValue < punchline) {
                             const stackDiff = punchline - currentValue;
                             buffSheet.currentStacks = stackDiff;
-                            updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
+                            updateBuffBatchTargets(battleData,allyArray,buffSheet);
                             return;//at this point we would be finished so leave
                         }
                         else {//if we reach this point it's bc current != punchline, so no if is required on this part
-                            removeBuffFromBatch(battleData,batchTargetArray,buffCheck,punchline,null,false,punchline);
+                            removeBuffFromBatch(battleData,allyArray,buffCheck,punchline,null,false,punchline);
                         }
                     }
                     if (!punchline) {return;}
 
-
-                    if (!batchTargetArray.length) {
-                        for (let allySlot in allyTurns) {
-                            const currentAlly = allyTurns[allySlot];
-                            batchTargetArray.push(currentAlly)
-                        }
-                    }
                     buffSheet.currentStacks = punchline;
-                    updateBuffBatchTargets(battleData,batchTargetArray,buffSheet);
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Frenzy! Palette of Truth and Lies punchline crit dmg listener",
