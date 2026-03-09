@@ -336,6 +336,126 @@ const turnLogicLightcones = {
             "buff1": "Luminflux (LC)",
         },
     },
+    "In the Night": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            statCheck(battleData,currentTurn,ownersSlots) {
+                let ownerRank = ownersSlots[currentTurn.name];
+
+                if (!currentTurn.lcPerfectTimingERToHealingSHEET) {
+                    let lcNameRef = "In the Night";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+
+                    currentTurn.lcIntoTheNightSKILLBASICSHEET = {
+                        "stats": [DamageBasic,DamageSkill],
+                        [DamageBasic]: rankParams[2],
+                        [DamageSkill]: rankParams[2],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 6,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    currentTurn.lcIntoTheNightULTIMATESHEET = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: rankParams[3],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 6,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"]
+                    }
+                }
+                let buffSheet = currentTurn.lcIntoTheNightSKILLBASICSHEET;
+                let buffSheet2 = currentTurn.lcIntoTheNightULTIMATESHEET;
+                const buffName = buffSheet.buffName;
+                const buffsRef = currentTurn.buffsObject;
+                const buffCheck = buffsRef[buffName];
+
+                const SPDFinal = calcs.getSPDFinal(currentTurn.statTable).SPDFinal;
+                const updateBuff = battleActions.updateBuff;
+
+                const minSPD = 100;
+                const usableSPD = Math.max(0,SPDFinal - minSPD);
+                const validStacks = Math.floor(usableSPD/10);
+
+                if (buffCheck) {
+                    const currentAmount = buffCheck.currentStacks;
+                    if (currentAmount === validStacks) {return;}
+                    else if (currentAmount < validStacks) {
+                        const stackDiff = validStacks - currentAmount;
+                        buffSheet.currentStacks = stackDiff;
+                        buffSheet2.currentStacks = stackDiff;
+                        updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet2);
+                        return;
+                    }
+                    else {
+                        removeBuff(battleData,currentTurn,buffSheet,true,null,false,true);
+                        removeBuff(battleData,currentTurn,buffSheet2,true,null,false,true);
+                    }
+                }
+
+                buffSheet.currentStacks = validStacks;
+                buffSheet2.currentStacks = validStacks;
+                updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet2);
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "UpdateStatSPD",//SPD stat family
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogicLightcones["In the Night"].skillFunctions.statCheck;
+                    statCheck(battleData,sourceTurn,ownersSlots);
+                },
+                "target": "self",
+                "listenerName": "In the Night SPD check",
+                "owners": []
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    if (ownerRef.length) {
+                        const statCheck = this.statCheck ??= turnLogicLightcones["In the Night"].skillFunctions.statCheck;
+                        const namedTurns = battleData.nameBasedTurns;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+                            statCheck(battleData,currentTurn,ownersSlots);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "In the Night battle start stat check trigger",
+                "owners": []
+            },
+        ],
+        "buffNames": {
+            "buff1": "In the Night (LC)",
+            "buff2": "In the Night [ULT] (LC)",
+        },
+    },
     "Worrisome, Blissful": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
