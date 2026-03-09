@@ -5564,8 +5564,6 @@ const battleActions = {
             const resultingChance = getChanceToApply(battleData,sourceTurn,targetTurn,baseChance);
             let finalAVG = resultingChance;
             applicationSheet.avgChanceApplied = finalAVG;
-
-            applicationSheet.duration = targetTurn.turnState ? durationOnTurn : durationOffTurn;
             updateBuff(battleData,targetTurn,applicationSheet);
         }
         else if (!isPerHit && gotHitObject) {
@@ -5578,8 +5576,6 @@ const battleActions = {
                 let finalAVG = resultingChance;
     
                 applicationSheet.avgChanceApplied = finalAVG;
-    
-                applicationSheet.duration = currentEnemy.turnState ? durationOnTurn : durationOffTurn;
                 updateBuff(battleData,currentEnemy,applicationSheet);
             }
         }
@@ -5606,7 +5602,6 @@ const battleActions = {
             
             if (isFirstHit) {
                 applicationSheet.avgChanceApplied = finalAVG;
-                applicationSheet.duration = targetTurn.turnState ? durationOnTurn : durationOffTurn;
                 updateBuff(battleData,targetTurn,applicationSheet);
                 
             }
@@ -6005,7 +6000,9 @@ const turnLogic = {
                     buffSheet.currentStacks = usablePunchline;
                     
                     updateBangerValue(battleData,usablePunchline,entity,"Gained Certified Banger");
-                    buffSheet.duration = (turnExceptions[entity.properName] ?? 2) + (entity.turnState ? 1 : 0);
+                    const standardDuration = turnExceptions[entity.properName] ?? 2;
+                    buffSheet.duration = standardDuration;
+                    buffSheet.durationInTurn = standardDuration + 1;
                     buffSheet.expireParam = {sourceTurn: entity.name, stackCount: usablePunchline};
                     updateBuff(battleData,entity,buffSheet);
                 }
@@ -8173,18 +8170,9 @@ const turnLogic = {
 
                 battleActions.updateBuff(battleData,targetTurn,skillHOTSheet);
 
-                // let targetTurn = battleData.nameBasedTurns[target];
                 let healObject = ATKObjects.natashaSkillHealHEALOBJECT;
                 battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
 
-                // if (e2) {
-                //     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
-                //     buffSheet.duration = targetTurn.turnState ? 3 : 2;
-                //     battleActions.updateBuff(battleData,targetTurn,buffSheet);
-                //     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
-                // }
-
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("SkillEnd",battleData,{sourceTurn});
             },
@@ -8253,26 +8241,12 @@ const turnLogic = {
                     }
                 }
 
-                
-
-
-                // let e4 = rank >= 4;
-                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
-                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
-                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
-                // for (let enemySlot of battleData.enemyPositions) {
-                //     besotted(battleData,sourceTurn,enemySlot,e4,values2);
-                // }
-
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
                 // poke("BasicATKStart",battleData,{source:"Gallagher"});
                 battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
-                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
 
-                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
                 sourceTurn.ultyQueued = false;
             },
             natashaTechnique(battleData,target,sourceTurn) {
@@ -8482,11 +8456,6 @@ const turnLogic = {
                         battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
 
                     }
-
-                    // if (ownerTurn.turnState) {
-                    //     let amount = 5;
-                    //     battleActions.updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                    // }
                 },
                 "target": "self",
                 "listenerName": "Natasha - E2/Skill HoT turnstart listener",
@@ -8804,15 +8773,7 @@ const turnLogic = {
                 let healObject = ATKObjects.lynxSkillHealHEALOBJECT;
                 battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
 
-                // if (e2) {
-                //     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
-                //     buffSheet.duration = targetTurn.turnState ? 3 : 2;
-                //     battleActions.updateBuff(battleData,targetTurn,buffSheet);
-                //     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
-                // }
-
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
-                talentHealSheet.duration = targetTurn.turnState ? 4 : 3;
                 battleActions.updateBuff(battleData,targetTurn,talentHealSheet);
 
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -8948,9 +8909,7 @@ const turnLogic = {
                         allToughness: false,
                         slot: skillRef.slot
                     }
-
                 }
-                // let ATKObject = ATKObjects.gallagherUltimateATKOBJECT;
                 let healObject = ATKObjects.lynxUltimateHealHEALOBJECT;
                 const allyPositions = battleData.allyPositions;
 
@@ -8970,10 +8929,7 @@ const turnLogic = {
                 }
 
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
-                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
 
-                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
                 sourceTurn.ultyQueued = false;
             },
             lynxTechnique(battleData,target,sourceTurn) {
@@ -8991,12 +8947,9 @@ const turnLogic = {
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
 
-                const updateBuff = battleActions.updateBuff;
+                // const updateBuff = battleActions.updateBuff;
 
-                for (let ally of allyPositions) {
-                    talentHealSheet.duration = ally.turnState ? 4 : 3;
-                    updateBuff(battleData,ally,talentHealSheet);
-                }
+                updateBuffBatchTargets(battleData,allyPositions,talentHealSheet);
 
                 poke("TechniqueEnd",battleData,{sourceTurn});
             },
@@ -9501,17 +9454,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.luochaUltimateATKOBJECT;
 
-
-                // let e4 = rank >= 4;
-                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
-                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
-                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
-                // for (let enemySlot of battleData.enemyPositions) {
-                //     besotted(battleData,sourceTurn,enemySlot,e4,values2);
-                // }
-
-
-                // poke("BasicATKStart",battleData,{source:"Gallagher"});
                 battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 const updateBuff = battleActions.updateBuff;
 
@@ -9528,10 +9470,7 @@ const turnLogic = {
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                // logicRef.characterValuesBattle.nextBasicEnhanced = true;
-                // poke("BasicATKEnd",battleData,{source:"Gallagher"});
 
-                // if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
                 sourceTurn.ultyQueued = false;
             },
             luochaAddZone(battleData,targetTurn,sourceTurn) {
@@ -9599,8 +9538,7 @@ const turnLogic = {
                 }
 
                 const countdownSheet = ATKObjects.luochaAddZoneCountdownSHEET;
-                countdownSheet.duration = sourceTurn.turnState ? 3 : 2;
-                const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
+                // const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
                 const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 battleValues.zoneIsActive = true;
@@ -9625,24 +9563,6 @@ const turnLogic = {
                         }
                     }
                 }
-
-
-                
-
-                // if (!buffCheck) {
-                //     //only if the countdown owner, tribbie, does NOT already have the countdown active, then apply the debuffs to all enemies
-                //     //this is bc we have an enemyCreated listener that looks for enemies that are added while the field is active
-                //     //and bc of that, along with the fact that the debuff never expires unless the zone does, we don't need reup the duration
-                //     const enemyPositions = battleData.enemyPositions;
-                //     const debuffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
-                //     for (let enemy of enemyPositions) {
-                //         updateBuff(battleData,enemy,debuffSheet);
-                //     }
-
-                //     const statCheck = ATKObjects.tribbieHPStatcheck ??= logicRef.skillFunctions.statCheck;
-                //     statCheck(battleData,sourceTurn);
-                // }
-
             },
             luochaZoneExpired(battleData,luochaSlot) {
                 const luochaTurn = battleData.nameBasedTurns[luochaSlot];
@@ -11454,13 +11374,6 @@ const turnLogic = {
                         // const enemyTurns = battleData.enemyBasedTurns;
                         const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,targetTurn,buffSheet);//owner
-
-
-                        // for (let enemySlot in targetsGotHit) {
-                        //     const currentEnemy = enemyTurns[enemySlot];
-                        //     buffSheet.duration = currentEnemy.turnState ? 3 : 2;
-                        //     updateBuff(battleData,currentEnemy,buffSheet);//owner
-                        // }
                     },
                     "target": "self",
                     "listenerName": "Da Capo atk listener",
@@ -12147,42 +12060,14 @@ const turnLogic = {
                     }
                 }
 
-                
-                // const baseChance = currentDOTToApply.baseChance;
-
-                // // const enemiesHit = generalInfo.targetsGotHit;
-                // // const enemyTurns = battleData.enemyBasedTurns;
-                // const getChance = battleActions.getChanceToApply;
-                // // const updateBuff = battleActions.updateBuff;
-
-
-                // // targetTurn
-                // totalTimesHit = 1;//enemiesHit[enemySlot];
-                // currentDOTToApply.duration = targetTurn.turnState ? 3 : 2;
-                // const resultingChance = getChance(battleData,sourceTurn,targetTurn,baseChance);
-                // let finalAVG = resultingChance;
-                // if (totalTimesHit && totalTimesHit>1 && resultingChance != 1) {
-                //     const chanceToFail = 1 - resultingChance;
-                //     const composite = chanceToFail ** totalTimesHit;
-                //     finalAVG = 1 - composite;
-                // }
-                // currentDOTToApply.avgChanceApplied = finalAVG;
-                // battleActions.updateBuff(battleData,targetTurn,currentDOTToApply);
                 generalApplyDOT(battleData,sourceTurn,targetTurn,currentDOTToApply,null,null,3,2,false);
 
                 if (rank >= 1) {
                     const dotsArrayE1 = ATKObjects.hysilensTalentDOTArrayE1;
 
-                    // if (buffCheck) {
-                    //     if (counterCheck === 4) {actualCounter = currentCounter}
-                    //     else {actualCounter = counterCheck}
-                    // }
-                    // else {actualCounter = currentCounter}
                     const E1DotToApply = dotsArrayE1[actualCounter];
-                    // battleActions.updateBuff(battleData,targetTurn,E1DotToApply);
 
                     generalApplyDOT(battleData,sourceTurn,targetTurn,E1DotToApply,null,null,3,2,false);
-                    // actualCounter
                 }
             },
             fishladyUltimate(battleData,sourceTurn) {
@@ -13132,27 +13017,11 @@ const turnLogic = {
                 const updateBuff = battleActions.updateBuff;
 
                 battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                // logicRef.skillFunctions.addHysilensField(battleData,sourceTurn);
 
-                // if (rank>=4) {
-                //     const e4Sheet = ATKObjects.blackswanUltimateDEBUFFSHEETE4;
-                //     for (let enemy of enemyPositions) {
-                //         const duration = enemy.turnState ? 3 : 2;
-                //         debuffSheet.duration = duration;
-                //         updateBuff(battleData,enemy,debuffSheet);
-                //         enemy.blackswanEpiphanyResetDelayReady = true;
-                //         e4Sheet.duration = duration;
-                //         updateBuff(battleData,enemy,e4Sheet);
-                //     }
-
-                // }
-                // else {
                 for (let enemy of enemyPositions) {
-                    debuffSheet.duration = enemy.turnState ? 3 : 2;
                     updateBuff(battleData,enemy,debuffSheet);
                     enemy.blackswanEpiphanyResetDelayReady = true;
                 }
-                // }
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
