@@ -268,6 +268,7 @@ const sim = {
         battleData.cycleAV -= sourceTurn.AV;
         battleData.cycleAVPassed += sourceTurn.AV;
         for (let AVentry of battleData.nextTurnAV) {
+            if (AVentry.blockWaveAVReset) {continue;}
             if (AVentry.name != sourceTurn.name) {
                 AVentry.AV = Math.max(0,AVentry.AV - sourceTurn.AV);//prevent negative action value
             }

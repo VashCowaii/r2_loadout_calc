@@ -32,6 +32,7 @@
                 <li>While making these changes however, I did catch a few bugs I'll list in Fixes below.</li>
             </ul>
         </li>
+        <li>Added handling to prevent certain entites from having their AV reset when clearing a wave and resetting a cycle. In this case, namely Aha Instant elation battle event, but this feature will also be used later for people like Phainon.</li>
 
         <!-- <li>Added an elation character labeled Z_Test for the sake of testing effects that rely on elation character counts</li> -->
 
@@ -60,7 +61,7 @@
         <li>Fixed a visual issue where when Kafka applied the Torture trace bonus ATK%, it would display as if she weren't the one providing the bonus to others.</li>
         <li>Fixed an issue where Robin's Talent wouldn't update its values if you adjusted eidolons after loading her.</li>
         <li>Fixed an issue where Robin's skill wasn't reaching memosprites.</li>
-        <li>Added a missing target proc that allows Yao Guang's ultimate to count as a team-target effect, for the sake of something like Wavestrider.</li>
+        <li>Fixed a missing target proc that allows Yao Guang's ultimate to count as a team-target effect, for the sake of something like Wavestrider.</li>
 
         <h4>Optimization</h4>
         <li>Deprecated some super old and some unused on-hit energy gain methods.</li>
