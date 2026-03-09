@@ -27,7 +27,13 @@
                 <li>Baptism of Pure Thought</li>
             </ul>
         </li>
-        <li>Added new handling for how buff durations are applied in and outside of a targets turn when receiving a buff. This makes life a lot easier for me, but the change for this was pretty widespread so if you notice anything weird on durations let me know.</li>
+        <li>Added new handling for how buff durations are applied in and outside of a targets turn when receiving a buff. Functionally nothing should change, this just makes it easier to allow buffs that have certain durations when applied during a turn, vs outside of it.
+            <ul>
+                <li>While making these changes however, I did catch a few bugs I'll list in Fixes below.</li>
+            </ul>
+        </li>
+        <li>Updated handling for action advancements. This shouldn't actually change anything, all this does is make it so on a case-by-case basis I no longer need to specify that the advance shouldn't happen in the preaction phase anymore. Nothing was broken to warrant this change, but it'll make life easier going forward and probably prevent a few errors too.</li>
+
         <!-- <li>Added an elation character labeled Z_Test for the sake of testing effects that rely on elation character counts</li> -->
 
         <h4>Fixes</h4>
@@ -46,9 +52,11 @@
                 <li>Anaxa E4</li>
                 <li>Argenti E2</li>
                 <li>Lynx E4</li>
+                <li>Saber Talent anyone used ult Crit DMG</li>
                 <li>NOTE: that most of these are E4 is purely coincidental lol, but it is amusing that most of the issues were on E4 bonuses</li>
             </ul>
         </li>
+        <li>Fixed an issue where Black Swan's skill shred from the trace, was able to apply if any ally attacked not just her.</li>
 
         <!-- <h3>Optimizer</h3> -->
         <!-- <h4>Fixes</h4> -->

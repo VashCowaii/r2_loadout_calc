@@ -13257,10 +13257,16 @@ const turnLogic = {
                 "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
+                    
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const dmgSlot = generalInfo.dmgSlot;
+                    if (dmgSlot != "Ultimate" && dmgSlot != "Basic ATK") {return;}
+
                     const targetsGotHit = generalInfo.targetsGotHit;
-
                     const enemyPositions = battleData.enemyPositions;
-
+                    
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
                     const debuffSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
@@ -13268,7 +13274,6 @@ const turnLogic = {
 
                     for (let enemy of enemyPositions) {
                         if (!targetsGotHit[enemy.name]) {continue;}
-                        debuffSheet.duration = enemy.turnState ? 4 : 3;
                         updateBuff(battleData,enemy,debuffSheet);
                     }
                 },
@@ -13285,10 +13290,9 @@ const turnLogic = {
                     //it could technically matter for something like prisoner, but it's impossible to test bc arcana can't be removed so the stack will ALWAYS exist
                     //so again, it could only ever matter if BS herself could ever be the provider of a detonate in that attack
                     let ownerTurn = this.ownerTurn;
-                    const dmgSlot = generalInfo.dmgSlot;
 
-                    if (dmgSlot != "Ultimate" && dmgSlot != "Basic ATK") {return;}
-
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
 
                     const targetsGotHit = generalInfo.targetsGotHit;
 
@@ -13349,7 +13353,6 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
                     const skillShredSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
-                    skillShredSheet.duration = enemyTurn.turnState ? 4 : 3;
                     battleActions.updateBuff(battleData,enemyTurn,skillShredSheet);
                 },
                 "target": "self",
@@ -16760,7 +16763,6 @@ const turnLogic = {
                 const hasMemosprite = targetTurn.activeMemosprites;
                 const memospriteEventRef = targetTurn.memospriteEventRef;
                 const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
-                // buffSheet.duration = targetTurn.turnState
                 const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,targetTurn,buffSheet);
                 if (memoTurn) {
@@ -17068,7 +17070,6 @@ const turnLogic = {
                 const hasMemosprite = targetTurn.activeMemosprites;
                 const memospriteEventRef = targetTurn.memospriteEventRef;
                 const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
-                // buffSheet.duration = targetTurn.turnState
                 const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,targetTurn,buffSheet);
                 if (memoTurn) {updateBuff(battleData,memoTurn,buffSheet);}
@@ -20201,7 +20202,6 @@ const turnLogic = {
 
                 if (rank >= 1) {
                     const buffSheet = ATKObjects.sparkleE1SPDSheet;
-                    buffSheet.duration = sourceTurn.turnState ? 3 : 2;
                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
@@ -20493,7 +20493,6 @@ const turnLogic = {
                         updateBuff(battleData,ally,buffSheet);
                     }
                     
-                    countdown.duration = sourceTurn.turnState ? 3 : 2;
                     battleActions.updateBuff(battleData,sourceTurn,countdown);
 
                     sourceTurn.battleValues.talentZoneActive = true;
@@ -21446,21 +21445,20 @@ const turnLogic = {
                             "source": "Dragon Reactor Core",
                             "sourceOwner": characterName,
                             "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": 1,
+                            "durationInTurn": 3,
+                            "duration": 2,
                             "AVApplied": 0,
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null,
+                            "expireType": "EndTurn",
                         }
                     }
-
                     const buffSheet = ATKObjects.saberDragonCoreDMGSHEET;
-                    buffSheet.duration = ownerTurn.turnState ? 3 : 2;
                     battleActions.updateBuff(battleData,ownerTurn,buffSheet);
 
-                    poke("SaberGainCoreResonance",battleData,{pointsGained: 3,sourceString:"Dragon Reactor Core: Ally Ultimate"});
+                    const generalInfo2 = this.generalInfo2 ??= {pointsGained: 3,sourceString:"Dragon Reactor Core: Ally Ultimate"};
+                    poke("SaberGainCoreResonance",battleData,generalInfo2);
                 },
                 "target": "self",
                 "listenerName": "Dragon Reactor Core ult listener",
@@ -25477,7 +25475,6 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     if (ownerTurn.ultyQueued) {return;}
 
-                    // const notMyTurn = !ownerTurn.turnState;
                     let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
                     let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
                     
@@ -30625,20 +30622,10 @@ const turnLogic = {
                     bounceData.bounceCount = 20 + battleData.punchline;
                 }
                 
-                // const debuffSheet = ATKObjects.yaoElationSkillVULNSHEET;
-
-                // const enemyPositions = battleData.enemyPositions;
-                // const updateBuff = battleActions.updateBuff;
-                // for (let enemy of enemyPositions) {
-                //     debuffSheet.duration = enemy.turnState ? 4 : 3;
-                //     updateBuff(battleData,enemy,debuffSheet);
-                // }
                 poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Elation Skill"});
-                // updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-
-
+                
                 poke("ElationSkillEnd",battleData,{sourceTurn});
             },
             sparxTechnique(battleData,target,sourceTurn) {
