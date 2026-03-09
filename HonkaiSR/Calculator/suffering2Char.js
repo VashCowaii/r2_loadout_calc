@@ -5554,7 +5554,7 @@ const battleActions = {
         const resultingChance = Math.min(1,baseChance * (1 - targetRES) * (1 + ownerEHR));
         return resultingChance;
     },
-    generalApplyDOT(battleData,sourceTurn,targetTurn,applicationSheet,gotHitObject,targetRefObject,durationOnTurn,durationOffTurn,isPerHit) {
+    generalApplyDOT(battleData,sourceTurn,targetTurn,applicationSheet,gotHitObject,targetRefObject,isPerHit) {
 
         const baseChance = applicationSheet.baseChance;
         const updateBuff = battleActions.updateBuff;
@@ -11111,7 +11111,7 @@ const turnLogic = {
                 // const updateBuff = battleActions.updateBuff;
             
 
-                generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,3,2,false);
+                generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
             },
             kafkaUltimateDetonate(battleData,sourceTurn,generalInfo) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -12060,14 +12060,14 @@ const turnLogic = {
                     }
                 }
 
-                generalApplyDOT(battleData,sourceTurn,targetTurn,currentDOTToApply,null,null,3,2,false);
+                generalApplyDOT(battleData,sourceTurn,targetTurn,currentDOTToApply,null,null,false);
 
                 if (rank >= 1) {
                     const dotsArrayE1 = ATKObjects.hysilensTalentDOTArrayE1;
 
                     const E1DotToApply = dotsArrayE1[actualCounter];
 
-                    generalApplyDOT(battleData,sourceTurn,targetTurn,E1DotToApply,null,null,3,2,false);
+                    generalApplyDOT(battleData,sourceTurn,targetTurn,E1DotToApply,null,null,false);
                 }
             },
             fishladyUltimate(battleData,sourceTurn) {
@@ -18700,7 +18700,7 @@ const turnLogic = {
                 const enemyTurns = battleData.enemyBasedTurns;
             
 
-                generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,4,3,false);
+                generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
             },
             astaSkill(battleData,target,sourceTurn) {
                 const characterName = sourceTurn.properName;

@@ -1666,7 +1666,7 @@ const turnLogicLightcones = {
                     const targetTurn = generalInfo.targetTurn;
 
                     // console.log(enemiesHit);
-                    generalApplyDOT(battleData,sourceTurn,targetTurn,dotSheet,enemiesHit,enemyTurns,3,2,true);
+                    generalApplyDOT(battleData,sourceTurn,targetTurn,dotSheet,enemiesHit,enemyTurns,true);
                     
                 },
                 "target": "enemy",
