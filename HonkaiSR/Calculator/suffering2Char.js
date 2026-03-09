@@ -3974,19 +3974,6 @@ const battleActions = {
         if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:battleData.addedDMGTallyAttack, isEnemy});}
         battleData.addedDMGTallyAttack = 0;
 
-        if (isEnemy && battleData.onHitEnergyGain) {
-            const energyGain = battleActions.updateEnergy;
-            const hitEnergyGain = battleData.onHitEnergyAmount;
-            const namedTurns = battleData.nameBasedTurns;
-            for (let targetHit in targetsGotHit) {
-                // eventOwner: ownerTurn.name
-                let currentTurn = namedTurns[targetHit];
-                // console.log(currentTurn)
-                if (currentTurn.isMemosprite) {currentTurn = namedTurns[currentTurn.eventOwner];}
-                energyGain(battleData,hitEnergyGain,currentTurn,false,"Hit Received");
-            }
-        }
-
         return generalInfo
         // return {generalInfo.targetsGotHit}
     },
@@ -4217,20 +4204,6 @@ const battleActions = {
             _2sumSlotRef3[dmgSlot] = (_2sumSlotRef3[dmgSlot] ?? 0) + totals2.totalOverkill;
             
             logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:totals.totalAVGDMG + totals2.totalAVGDMG, isEnemy});
-        }
-
-        if (isEnemy && battleData.onHitEnergyGain) {
-            const energyGain = battleActions.updateEnergy;
-            const hitEnergyGain = battleData.onHitEnergyAmount;
-            const namedTurns = battleData.nameBasedTurns;
-            for (let targetHit in targetsGotHit) {
-                // eventOwner: ownerTurn.name
-
-                let currentTurn = namedTurns[targetHit];
-                // console.log(currentTurn)
-                if (currentTurn.isMemosprite) {currentTurn = namedTurns[currentTurn.eventOwner]}
-                energyGain(battleData,hitEnergyGain,namedTurns[targetHit],false,"Hit Received");
-            }
         }
 
         return {targetsGotHit}
@@ -17641,7 +17614,7 @@ const turnLogic = {
                     //     updateBuff(battleData,allyTurn,buffSheet);
                     // }
 
-                    const allyArray = battleData.allAlliesArray;
+                    const allyArray = battleData.fullCharacterArray;
                     updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 }
 
@@ -17668,7 +17641,7 @@ const turnLogic = {
                 //     removeBuff(battleData,allyTurn,buffSheet);
                 // }
 
-                let allyArray = battleData.allAlliesArray;
+                let allyArray = battleData.fullCharacterArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
             robinUltimate(battleData,sourceTurn) {
@@ -17747,7 +17720,7 @@ const turnLogic = {
                 buffSheet[ATKFlatNULL] = -conversion;
 
 
-                const allyArray = battleData.allAlliesArray;
+                const allyArray = battleData.fullCharacterArray;
                 updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 updateBuffBatchTargets(battleData,allyArray,buffSheetFUA);
                 // const allyTurns = battleData.nameBasedTurns;
@@ -17828,7 +17801,7 @@ const turnLogic = {
                 // const updateBuff = battleActions.updateBuff;
 
                 // removeBuffFromBatch
-                let allyArray = battleData.allAlliesArray;
+                let allyArray = battleData.fullCharacterArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
                 removeBuffFromBatch(battleData,allyArray,buffSheetFUA);
                 // }
@@ -23244,7 +23217,7 @@ const turnLogic = {
         },
         "listeners": [//rmcMemTURNEVENT
             {
-                "trigger": "BattlePrep",
+                "trigger": "EntityConstruction",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
@@ -23351,6 +23324,7 @@ const turnLogic = {
                     battleData.nameBasedTurns["rmcMemosprite"] = ActionEntry;
                     ownerTurn.rmcMemTURNEVENT = ActionEntry;
                     battleData.declaredMemosprites.push(ActionEntry);
+                    battleData.allAlliesArray.push(ActionEntry);
                     battleData.battleTotal.Turns[ActionEntry.properName] = 0;
                     ownerTurn.summonEventRef = "rmcMemTURNEVENT";
                     ownerTurn.memospriteEventRef = "rmcMemTURNEVENT";
@@ -24500,7 +24474,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "BattlePrep",
+                "trigger": "EntityConstruction",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
@@ -24640,6 +24614,7 @@ const turnLogic = {
                     battleData.nameBasedTurns["aggyMemosprite"] = ActionEntry;
                     ownerTurn.aggyGarmentTURNEVENT = ActionEntry;
                     battleData.declaredMemosprites.push(ActionEntry);
+                    battleData.allAlliesArray.push(ActionEntry);
                     battleData.battleTotal.Turns[ActionEntry.properName] = 0;
                     ownerTurn.summonEventRef = "aggyGarmentTURNEVENT";
                     ownerTurn.memospriteEventRef = "aggyGarmentTURNEVENT";

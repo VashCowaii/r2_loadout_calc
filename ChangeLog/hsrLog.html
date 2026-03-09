@@ -32,7 +32,6 @@
                 <li>While making these changes however, I did catch a few bugs I'll list in Fixes below.</li>
             </ul>
         </li>
-        <li>Updated handling for action advancements. This shouldn't actually change anything, all this does is make it so on a case-by-case basis I no longer need to specify that the advance shouldn't happen in the preaction phase anymore. Nothing was broken to warrant this change, but it'll make life easier going forward and probably prevent a few errors too.</li>
 
         <!-- <li>Added an elation character labeled Z_Test for the sake of testing effects that rely on elation character counts</li> -->
 
@@ -58,6 +57,14 @@
         </li>
         <li>Fixed an issue where Black Swan's skill shred from the trace, was able to apply if any ally attacked not just her.</li>
         <li>Fixed an issue on lc Flowing Nightglow where the DMG bonus from Cadenza wasn't reaching memosprites</li>
+        <li>Updated when in the battle-prep phase that memosprites are declared. Listed under fixes because this may have fixed some bugs I didn't even know about, if Elation caused some things to trigger before memos were declared.</li>
+        
+
+        <h4>Optimization</h4>
+        <li>Deprecated some super old and some unused on-hit energy gain methods.</li>
+        <li>Updated handling for action advancements. This shouldn't actually change anything, all this does is make it so on a case-by-case basis I no longer need to specify that the advance shouldn't happen in the preaction phase anymore. Nothing was broken to warrant this change, but it'll make life easier going forward and probably prevent a few errors too.</li>
+        <li>Updated how memosprites can be handled, making them easier to access with less references/looping in a zone-type buffs or targeting.</li>
+        
 
         <!-- <h3>Optimizer</h3> -->
         <!-- <h4>Fixes</h4> -->
