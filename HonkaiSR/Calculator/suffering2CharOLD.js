@@ -103,6 +103,7 @@ const turnLogic = {
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
+                        "durationInTurn": 2,
                         "duration": 1,
                         "AVApplied": 0,
                         "maxStacks": 1,
@@ -135,7 +136,6 @@ const turnLogic = {
                     }
                 }
 
-                buffSheet.duration = targetTurn.turnState ? 1 : 2;
                 buffSheet[CritDamageBase] = critDMGTotalBonus;
                 buffSheet[CritDamageBaseNULL] = -critDMGTotalBonus;
                 updateBuff(battleData,targetTurn,buffSheet);
@@ -204,7 +204,8 @@ const turnLogic = {
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
-                        "duration": 0,
+                        "durationInTurn": 3,
+                        "duration": 2,
                         "AVApplied": 0,
                         "maxStacks": 1,
                         "currentStacks": 1,
@@ -227,7 +228,6 @@ const turnLogic = {
                     let alreadyHasDiver = currentBuffs[buffName3];
                     if (alreadyHasDiver) {dreamDiverFound = true;}//for e6
                     
-                    buffSheet.duration = targetTurn.turnState ? 3 : 2;//procs that occur within their own turn, will last beyond that turn. I think. I hope. Archer's guardian works that way, at least.
                     buffSheet.expireParam = currentBuffs[buffName] ? null : {targetTurn:targetTurn.name,sourceTurn:sourceTurn.name};//no need to construct the expire param if they already have it
                     //ALSO, needs to be a slot that passes on the param, bc this is cyclic in the log otherwise
                     updateBuff(battleData,targetTurn,buffSheet);
@@ -306,7 +306,8 @@ const turnLogic = {
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
-                        "duration": 0,
+                        "durationInTurn": 3,
+                        "duration": 2,
                         "AVApplied": 0,
                         "maxStacks": 3,
                         "currentStacks": totalChange,
@@ -339,7 +340,6 @@ const turnLogic = {
                         removeBuff(battleData,targetTurn,currentHerringRef,silent);
                     }
                     else {
-                        buffSheet.duration = targetTurn.turnState ? 3 : 2;//procs that occur within their own turn, will last beyond that turn. I think. I hope. Archer's guardian works that way, at least.
                         buffSheet.currentStacks = totalChange;
                     }
                     updateBuff(battleData,targetTurn,buffSheet,silent);
@@ -418,6 +418,7 @@ const turnLogic = {
                             "source": "Trace",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": "Nocturne: Team ATK%",
+                            "durationInTurn": null,
                             "duration": null,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -461,6 +462,7 @@ const turnLogic = {
                         "source": characterName,
                         "sourceOwner": ownerTurn.properName,
                         "buffName": "Nocturne: Quantum Member Bonus ATK%",
+                        "durationInTurn": null,
                         "duration": null,
                         "AVApplied": 0,
                         "maxStacks": 1,
@@ -638,6 +640,7 @@ const turnLogic = {
                         "source": characterName,
                         "sourceOwner": currentTurn.properName,
                         "buffName": buffName,
+                        "durationInTurn": null,
                         "duration": 1,
                         "AVApplied": 0,
                         "maxStacks": 1,
@@ -692,6 +695,7 @@ const turnLogic = {
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffNames.talentShear,
+                        "durationInTurn": 3,
                         "duration": 2,
                         "AVApplied": 0,
                         "maxStacks": 50,
@@ -770,6 +774,7 @@ const turnLogic = {
                             "source": "Arcana Stacks",
                             "sourceOwner": characterName,
                             "buffName": buffName,
+                            "durationInTurn": null,
                             "duration": 1,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -883,6 +888,7 @@ const turnLogic = {
                         "source": "Skill",
                         "sourceOwner": characterName,
                         "buffName": buffNames.skillShred,
+                        "durationInTurn": 4,
                         "duration": 3,
                         "AVApplied": 0,
                         "maxStacks": 1,
@@ -970,7 +976,8 @@ const turnLogic = {
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultVuln,
-                        "duration": 3,
+                        "durationInTurn": 3,
+                        "duration": 2,
                         "AVApplied": 0,
                         "maxStacks": 1,
                         "currentStacks": 1,
@@ -986,7 +993,8 @@ const turnLogic = {
                             "source": "E4",
                             "sourceOwner": characterName,
                             "buffName": buffNames.ultVulnE4,
-                            "duration": 3,
+                            "durationInTurn": 3,
+                            "duration": 2,
                             "AVApplied": 0,
                             "maxStacks": 1,
                             "currentStacks": 1,
@@ -1008,8 +1016,6 @@ const turnLogic = {
                 if (rank>=4) {
                     const e4Sheet = ATKObjects.blackswanUltimateDEBUFFSHEETE4;
                     for (let enemy of enemyPositions) {
-                        const duration = enemy.turnState ? 3 : 2;
-                        debuffSheet.duration = duration;
                         updateBuff(battleData,enemy,debuffSheet);
                         enemy.blackswanEpiphanyResetDelayReady = true;
                         e4Sheet.duration = duration;
@@ -1019,7 +1025,6 @@ const turnLogic = {
                 }
                 else {
                     for (let enemy of enemyPositions) {
-                        debuffSheet.duration = enemy.turnState ? 3 : 2;
                         updateBuff(battleData,enemy,debuffSheet);
                         enemy.blackswanEpiphanyResetDelayReady = true;
                     }
@@ -1247,6 +1252,7 @@ const turnLogic = {
                                 "source": "E1",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.E1RESLightning,
+                                "durationInTurn": null,
                                 "duration": 1,
                                 "AVApplied": 0,
                                 "maxStacks": 1,
@@ -1261,6 +1267,7 @@ const turnLogic = {
                                 "source": "E1",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.E1RESPhysical,
+                                "durationInTurn": null,
                                 "duration": 1,
                                 "AVApplied": 0,
                                 "maxStacks": 1,
@@ -1275,6 +1282,7 @@ const turnLogic = {
                                 "source": "E1",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.E1RESFire,
+                                "durationInTurn": null,
                                 "duration": 1,
                                 "AVApplied": 0,
                                 "maxStacks": 1,
@@ -1289,6 +1297,7 @@ const turnLogic = {
                                 "source": "E1",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.E1RESWind,
+                                "durationInTurn": null,
                                 "duration": 1,
                                 "AVApplied": 0,
                                 "maxStacks": 1,
