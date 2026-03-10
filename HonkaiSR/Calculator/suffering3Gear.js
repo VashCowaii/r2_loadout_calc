@@ -1597,70 +1597,7 @@ const turnLogicLightcones = {
     },
 
     //ABUNDANCE
-    "Quid Pro Quo": {
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [  
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let charSlot = sourceTurn.name;
-
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[charSlot];
-                    if (!ownerRank) {return;}
-                    
-
-                    let availableToGive = [];
-                    const allyPositions = battleData.allyPositions;
-                    for (let targetTurn of allyPositions) {
-                        if (targetTurn.name === charSlot || targetTurn.maxEnergy === null) {continue;}//exclude self from energy considerations, exclude special energy characters like acheron
-                        else if (targetTurn.currentEnergy < (targetTurn.maxEnergy * 0.50)) {availableToGive.push(targetTurn.name);}
-                    }
-
-                    if (!availableToGive.length) {return;}
-
-                    let avPULL = battleData.sumAV;
-                    if (avPULL >= 1000) {avPULL -= 1000;}
-                    let avBingo = (avPULL % 100)/100;
-                    let bingoIncrements = 1/availableToGive.length;
-                    let chosenValue = null;
-                    for (let i=0;i<=availableToGive.length-1;i++) {
-                        let currentInc = i * bingoIncrements;
-                        let nextInc = (i + 1) * bingoIncrements;
-
-                        if (avBingo >= currentInc && avBingo <= nextInc) {chosenValue = i; break;}
-                    }
-                    //so this isn't really random, but I didn't want to avg the energy gains(very very bad idea holy fuck), but I also didn't want to do something
-                    //that was as simple as "evaluate from left to right" as there are obvious problems with that, SO INSTEAD, what I have chosen to do is thus
-                    //take everyone who COULD be given energy, and put them in an array, then get the remainder of action value from the present battle AV overall
-                    //then we take that remainder, divide it by 100 to get a percentage, then apply that % to the array length of available recipients
-                    //so if the % lands at .25 and there are 2 entries, .25 < half which means the buff lands on entry #1 of available chars.
-                    //If anyone can ever provide me a better way then lmk, bc this is the most fair but also the most reliable for calculations since we don't want fully random.
-                    if (!sourceTurn.quidProQuoEnergyAmount) {
-
-                    }
-                    // let lcNameRef = "Quid Pro Quo";
-                    // let lcPathing = lightcones[lcNameRef].params;
-                    // let rankParams = lcPathing[ownerRank-1];
-                    let values = sourceTurn.quidProQuoEnergyAmount ??= lightcones["Quid Pro Quo"].params[ownerRank-1][1];//energy slot
-
-                    let chosenCharacter = availableToGive[chosenValue];
-                    let luckyBastard = battleData.nameBasedTurns[chosenCharacter];
-                    battleActions.updateEnergy(battleData,values,luckyBastard,false,this.listenerName);
-                },
-                "target": "self",
-                "listenerName": "Quid Pro Quo - Energy buff controller",
-                "owners": []
-            },
-        ],
-        "buffNames": {
-            // "hruntingStart": "Hrunting",
-            // "hruntingStack": "Hrunting Stack"
-        },
-    },
+        //5star
     "Time Waits for No One": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
@@ -1877,6 +1814,92 @@ const turnLogicLightcones = {
             "echoesSPD": "Echoes of the Coffin SPD",
         },
     },
+    "Night of Fright": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    // if (!ownerRank) {return;}//abort non-owners
+
+                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return;}
+
+                    const allyPositions = battleData.allyPositions;
+                    let lowestPercentAlly = null;
+                    for (let ally of allyPositions) {
+                        const hpRatio = ally.currentHP / ally.maxHP;
+                        if (hpRatio < lowestPercentAlly || lowestPercentAlly === null) {
+                            lowestPercentAlly = ally;
+                        }
+                    }
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = allyTurns[ownerSlot];
+
+
+                        if (!currentOwner.lcNightOfFrightHealingHEALOBJECT) {
+                            let lcNameRef = "Night of Fright";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+                            
+                            currentOwner.lcNightOfFrightHealingHEALOBJECT ??= {
+                                multipliers: {
+                                    primary: rankParams[1],
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone"
+                            }
+
+                            currentOwner.lcNightOfFrightATKSHEET = {
+                                "stats": [ATKP],
+                                [ATKP]: rankParams[2],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
+                                "durationInTurn": 3,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 5,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                            }
+                        }
+                        const healObject = currentOwner.lcNightOfFrightHealingHEALOBJECT;
+    
+                        battleActions.healAlly(battleData,healObject,lowestPercentAlly,currentOwner,"Lightcone",1,null);
+
+                        const buffSheet = currentOwner.lcNightOfFrightATKSHEET;
+                        updateBuff(battleData,lowestPercentAlly,buffSheet)
+                    }
+                },
+                "target": "team",
+                "listenerName": "Night of Fright ult start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "atkBuff": "Night of Fright (LC)",
+        },
+    },
+        //4star
     "Hey, Over Here": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -2129,91 +2152,6 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
-    "Night of Fright": {
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [
-            {
-                "trigger": "UltimateStart",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    // let ownerRank = ownersSlots[sourceTurn.name];
-                    // if (!ownerRank) {return;}//abort non-owners
-
-                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return;}
-
-                    const allyPositions = battleData.allyPositions;
-                    let lowestPercentAlly = null;
-                    for (let ally of allyPositions) {
-                        const hpRatio = ally.currentHP / ally.maxHP;
-                        if (hpRatio < lowestPercentAlly || lowestPercentAlly === null) {
-                            lowestPercentAlly = ally;
-                        }
-                    }
-
-                    const allyTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
-                    for (let ownerSlot in ownersSlots) {
-                        const currentOwner = allyTurns[ownerSlot];
-
-
-                        if (!currentOwner.lcNightOfFrightHealingHEALOBJECT) {
-                            let lcNameRef = "Night of Fright";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let ownerRank = ownersSlots[currentOwner.name];
-                            let rankParams = lcPathing[ownerRank-1];
-                            
-                            currentOwner.lcNightOfFrightHealingHEALOBJECT ??= {
-                                multipliers: {
-                                    primary: rankParams[1],
-                                    blast: null,
-                                    all: null,
-                                },
-                                flatAmounts: {
-                                    primary: null,
-                                    blast: null,
-                                    all: null,
-                                },
-                                scalar: "HP",
-                                DMGTags: [],
-                                allToughness: false,
-                                slot: "Lightcone"
-                            }
-
-                            currentOwner.lcNightOfFrightATKSHEET = {
-                                "stats": [ATKP],
-                                [ATKP]: rankParams[2],
-                                "source": lcNameRef,
-                                "sourceOwner": currentOwner.properName,
-                                "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
-                                "durationInTurn": 3,
-                                "duration": 2,
-                                "AVApplied": 0,
-                                "maxStacks": 5,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
-                            }
-                        }
-                        const healObject = currentOwner.lcNightOfFrightHealingHEALOBJECT;
-    
-                        battleActions.healAlly(battleData,healObject,lowestPercentAlly,currentOwner,"Lightcone",1,null);
-
-                        const buffSheet = currentOwner.lcNightOfFrightATKSHEET;
-                        updateBuff(battleData,lowestPercentAlly,buffSheet)
-                    }
-                },
-                "target": "team",
-                "listenerName": "Night of Fright ult start listener",
-                "owners": [],
-                "ownersSlots": {}
-            },
-        ],
-        "buffNames": {
-            "atkBuff": "Night of Fright (LC)",
-        },
-    },
     "Dream's Montage": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -2322,6 +2260,70 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             // "atkBuff": "Night of Fright (LC)",
+        },
+    },
+    "Quid Pro Quo": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [  
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let charSlot = sourceTurn.name;
+
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[charSlot];
+                    if (!ownerRank) {return;}
+                    
+
+                    let availableToGive = [];
+                    const allyPositions = battleData.allyPositions;
+                    for (let targetTurn of allyPositions) {
+                        if (targetTurn.name === charSlot || targetTurn.maxEnergy === null) {continue;}//exclude self from energy considerations, exclude special energy characters like acheron
+                        else if (targetTurn.currentEnergy < (targetTurn.maxEnergy * 0.50)) {availableToGive.push(targetTurn.name);}
+                    }
+
+                    if (!availableToGive.length) {return;}
+
+                    let avPULL = battleData.sumAV;
+                    if (avPULL >= 1000) {avPULL -= 1000;}
+                    let avBingo = (avPULL % 100)/100;
+                    let bingoIncrements = 1/availableToGive.length;
+                    let chosenValue = null;
+                    for (let i=0;i<=availableToGive.length-1;i++) {
+                        let currentInc = i * bingoIncrements;
+                        let nextInc = (i + 1) * bingoIncrements;
+
+                        if (avBingo >= currentInc && avBingo <= nextInc) {chosenValue = i; break;}
+                    }
+                    //so this isn't really random, but I didn't want to avg the energy gains(very very bad idea holy fuck), but I also didn't want to do something
+                    //that was as simple as "evaluate from left to right" as there are obvious problems with that, SO INSTEAD, what I have chosen to do is thus
+                    //take everyone who COULD be given energy, and put them in an array, then get the remainder of action value from the present battle AV overall
+                    //then we take that remainder, divide it by 100 to get a percentage, then apply that % to the array length of available recipients
+                    //so if the % lands at .25 and there are 2 entries, .25 < half which means the buff lands on entry #1 of available chars.
+                    //If anyone can ever provide me a better way then lmk, bc this is the most fair but also the most reliable for calculations since we don't want fully random.
+                    if (!sourceTurn.quidProQuoEnergyAmount) {
+
+                    }
+                    // let lcNameRef = "Quid Pro Quo";
+                    // let lcPathing = lightcones[lcNameRef].params;
+                    // let rankParams = lcPathing[ownerRank-1];
+                    let values = sourceTurn.quidProQuoEnergyAmount ??= lightcones["Quid Pro Quo"].params[ownerRank-1][1];//energy slot
+
+                    let chosenCharacter = availableToGive[chosenValue];
+                    let luckyBastard = battleData.nameBasedTurns[chosenCharacter];
+                    battleActions.updateEnergy(battleData,values,luckyBastard,false,this.listenerName);
+                },
+                "target": "self",
+                "listenerName": "Quid Pro Quo - Energy buff controller",
+                "owners": []
+            },
+        ],
+        "buffNames": {
+            // "hruntingStart": "Hrunting",
+            // "hruntingStack": "Hrunting Stack"
         },
     },
         //3star
