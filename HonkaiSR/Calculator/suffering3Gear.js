@@ -4062,6 +4062,91 @@ const turnLogicLightcones = {
             "buff1": "Dragon's Call (LC)",
         },
     },
+    "Dance at Sunset": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Dance at Sunset";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let buffSheet = currentTurn.lcDanceAtSunsetAGGROSHEET ??= {
+                            "stats": [AggroP],
+                            [AggroP]: rankParams[3],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.taunt,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Dance at Sunset - battlestart taunt application",
+                "owners": [],
+            },
+            {
+                "trigger": "UltimateEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcThusBurnsDawnDMGSHEET) {
+                        let lcNameRef = "Dance at Sunset";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        sourceTurn.lcThusBurnsDawnDMGSHEET = {
+                            "stats": [DamageFUA],
+                            [DamageFUA]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcThusBurnsDawnDMGSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Dance at Sunset ult end listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "taunt": "Dance at Sunset (LC)",
+            "buff1": "Firedance (LC)",
+        },
+    },
         //4star
     "Under the Blue Sky": {
         logic(thisTurn,battleData) {},
