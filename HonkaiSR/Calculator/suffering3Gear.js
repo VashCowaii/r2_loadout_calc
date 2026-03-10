@@ -476,11 +476,10 @@ const turnLogicLightcones = {
                         "durationInTurn": null,
                         "duration": 1,
                         "AVApplied": 0,
-                        "maxStacks": 6,
+                        "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
-                        "actionTags": ["Ultimate"]
                     }
                 }
                 let buffSheet2 = currentTurn.lsSailingTowardsSecondSPDSHEET;
