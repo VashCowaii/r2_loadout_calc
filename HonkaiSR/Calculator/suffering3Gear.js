@@ -2374,11 +2374,7 @@ const turnLogicLightcones = {
                     const updateEnergy = battleActions.updateEnergy
                 
                     for (let owner of ownerRef) {
-                        let charSlot = owner.slot;
                         let rankParams = lcPathing[owner.rank-1];
-
-                        // let currentTurn = battleData.nameBasedTurns[charSlot];
-                        // let ownerName = currentTurn.properName;
 
                         for (let character of fullCharacterArray) {
                             updateEnergy(battleData,rankParams[0],character,false,"Fine Fruit (LC)")
@@ -2392,6 +2388,121 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "river": "Arrows (LC)",
+        },
+    },
+    "Cornucopia": {//so this one actually does ANY healing increased with a modifier, so while I hate it this one works exactly how it should
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+
+                    if (!sourceTurn.lcCornucopiaBONUSUSHEET) {
+                        let lcNameRef = "Cornucopia";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcCornucopiaBONUSUSHEET = {
+                            "stats": [HealingOutgoing],
+                            [HealingOutgoing]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "team",
+                "listenerName": "Cornucopia ult start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "SkillStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+
+                    if (!sourceTurn.lcCornucopiaBONUSUSHEET) {
+                        let lcNameRef = "Cornucopia";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcCornucopiaBONUSUSHEET = {
+                            "stats": [HealingOutgoing],
+                            [HealingOutgoing]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "team",
+                "listenerName": "Cornucopia skill start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "UltimateEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "team",
+                "listenerName": "Cornucopia ult end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "SkillEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "team",
+                "listenerName": "Cornucopia skill end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "healBonus": "Cornucopia (LC)",
         },
     },
 
