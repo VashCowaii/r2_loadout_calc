@@ -1217,6 +1217,53 @@ const turnLogicLightcones = {
             "river": "River Flows in Spring (LC)",
         },
     },
+    "See You at the End": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "See You at the End";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+                
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let buffSheet = currentTurn.lcRiverFlowsSpringBONUSSHEET ??= {
+                            "stats": [DamageSkill,DamageFUA],
+                            [DamageSkill]: rankParams[1],
+                            [DamageFUA]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "See You at the End - battlestart buff application",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "See You at the End (LC)",
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {
