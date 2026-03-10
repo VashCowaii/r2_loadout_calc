@@ -1444,6 +1444,59 @@ const turnLogicLightcones = {
             "river2": "Subscribe for More! [Full] (LC)",
         },
     },
+        //3star
+    "Adversarial": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+                    if (!sourceTurn.lcAdversarialSPDSHEET) {
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+
+                        let lcNameRef = "Adversarial";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        let ownerName = sourceTurn.properName;
+
+                        sourceTurn.lcAdversarialSPDSHEET = {
+                            "stats": [SPDP],
+                            [SPDP]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcAdversarialSPDSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Adversarial - kill listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "Adversarial (LC)",
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {

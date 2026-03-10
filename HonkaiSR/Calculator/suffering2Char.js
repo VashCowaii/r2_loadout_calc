@@ -4253,7 +4253,7 @@ const battleActions = {
                 logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName});
                 logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName});
             }
-            if (giveEnergy) {battleActions.updateEnergy(battleData,energyDeath,killer,false,"Enemy Killed");}
+            if (giveEnergy) {battleActions.updateEnergy(battleData,energyDeath,killer,false,"Killed Enemy");}
             battleData.enemiesRemaining -= 1;
             
         
