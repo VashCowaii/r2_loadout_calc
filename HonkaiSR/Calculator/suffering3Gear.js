@@ -4200,6 +4200,53 @@ const turnLogicLightcones = {
             "river": "Under the Blue Sky (LC)",
         },
     },
+    "A Trail of Bygone Blood": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "A Trail of Bygone Blood";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+                
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let buffSheet = currentTurn.lcTrailBygoneBloodBONUSSHEET ??= {
+                            "stats": [DamageSkill,DamageUltimate],
+                            [DamageSkill]: rankParams[1],
+                            [DamageUltimate]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "A Trail of Bygone Blood - battlestart buff application",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "A Trail of Bygone Blood (LC)",
+        },
+    },
         //3star
     "Collapsing Sky": {
         logic(thisTurn,battleData) {},
