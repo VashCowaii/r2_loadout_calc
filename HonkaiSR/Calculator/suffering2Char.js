@@ -5326,6 +5326,26 @@ const turnLogic = {
                 "listenerName": "Universal action end listener (Memo Skill)",
                 "ownerTurn": {},
             },
+
+
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    poke("EnemyCountAdjustment",battleData,generalInfo);
+                },
+                "target": "self",
+                "listenerName": "Universal enemy count listener (died)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    poke("EnemyCountAdjustment",battleData,generalInfo);
+                },
+                "target": "self",
+                "listenerName": "Universal enemy count listener (created)",
+                "ownerTurn": {},
+            },
         ],
         "characterValues": {},
         "characterValuesBattle": {},
