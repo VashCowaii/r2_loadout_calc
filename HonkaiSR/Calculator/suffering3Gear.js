@@ -1069,6 +1069,67 @@ const turnLogicLightcones = {
             "fortune": "Good Fortune (LC, FV)",
         },
     },
+    "Only Silence Remains": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyCountAdjustment",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Only Silence Remains";
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    const enemyCount = battleData.enemyPositions.length;
+                    const validCount = enemyCount <= 2;
+
+                    if (battleData.lcOnlySilenceRemainsValidCount && validCount) {return;}
+                    else if (!battleData.lcOnlySilenceRemainsValidCount && validCount) {
+                        const updateBuff = battleActions.updateBuff;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let rankParams = lcPathing[owner.rank-1];
+                            let currentTurn = battleData.nameBasedTurns[charSlot];
+                            let ownerName = currentTurn.properName;
+
+                            let buffSheet = currentTurn.buffSheet ??= {
+                                "stats": [CritRateBase],
+                                [CritRateBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": ownerName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.silenceCrit,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+                        battleData.lcOnlySilenceRemainsValidCount = true;
+                    }
+                    else if (battleData.lcOnlySilenceRemainsValidCount && !validCount) {
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                            let buffSheet = currentTurn.buffSheet;
+                            removeBuff(battleData,currentTurn,buffSheet);
+                        }
+                        battleData.lcOnlySilenceRemainsValidCount = false;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Only Silence Remains enemy count listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "silenceCrit": "Only Silence Remains (LC)",
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {
