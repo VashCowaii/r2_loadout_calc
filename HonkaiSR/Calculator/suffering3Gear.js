@@ -4062,6 +4062,107 @@ const turnLogicLightcones = {
             "buff1": "Dragon's Call (LC)",
         },
     },
+        //4star
+    "Under the Blue Sky": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+                    if (!sourceTurn.lcUnderBlueSkyCRITSHEET) {
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+
+                        let lcNameRef = "Under the Blue Sky";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        let ownerName = sourceTurn.properName;
+
+                        sourceTurn.lcUnderBlueSkyCRITSHEET = {
+                            "stats": [CritRateBase],
+                            [CritRateBase]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": 4,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcUnderBlueSkyCRITSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Under the Blue Sky - kill listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "Under the Blue Sky (LC)",
+        },
+    },
+        //3star
+    "Collapsing Sky": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Collapsing Sky";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+                    
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        const buffSheet = currentTurn.lcCollapsingSkyDMGSHEET ??= {
+                            "stats": [DamageBasic,DamageSkill],
+                            [DamageBasic]: rankParams[0],
+                            [DamageSkill]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Thus Burns the Dawn - battlestart shred application",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "buff1": "Collapsing Sky (LC)",
+        },
+    },
 
     //HARMONY
     "Earthly Escapade": {
