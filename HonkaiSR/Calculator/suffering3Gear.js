@@ -1342,6 +1342,108 @@ const turnLogicLightcones = {
             "river": "Shadowed by Night (LC)",
         },
     },
+    "Subscribe for More!": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Subscribe for More!";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+                
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let buffSheet = currentTurn.lcSubForMoreDMGSHEET ??= {
+                            "stats": [DamageSkill,DamageBasic],
+                            [DamageSkill]: rankParams[0],
+                            [DamageBasic]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Subscribe for More! - battlestart buff application",
+                "owners": [],
+            },
+            {
+                "trigger": "EnergyChanged",
+                condition(battleData,generalInfo) {
+                    // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+
+                    const isFull = sourceTurn.currentEnergy === sourceTurn.maxEnergy;
+                    if (!sourceTurn.lcSubForMoreDMGSHEET2) {
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+
+                        let lcNameRef = "Subscribe for More!";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        let ownerName = sourceTurn.properName;
+
+                        sourceTurn.lcSubForMoreDMGSHEET2 = {
+                            "stats": [DamageSkill,DamageBasic],
+                            [DamageSkill]: rankParams[0],
+                            [DamageBasic]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river2,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcSubForMoreDMGSHEET2;
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                    if (isFull) {
+                        if (buffCheck) {return;}
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                    else if (buffCheck) {
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Subscribe for More! - energy change listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "Subscribe for More! (LC)",
+            "river2": "Subscribe for More! [Full] (LC)",
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {
