@@ -3389,6 +3389,7 @@ const turnLogicLightcones = {
     },
 
     //DESTRUCTION
+        //5star
     "Whereabouts Should Dreams Rest": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -3922,6 +3923,95 @@ const turnLogicLightcones = {
         "buffNames": {
             "dmgBuff": "Eclipse (DMG) [LC]",
             "shredBuff": "Eclipse (Shred) [LC]",
+        },
+    },
+    "Thus Burns the Dawn": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Thus Burns the Dawn";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DEFShredAll],
+                        [DEFShredAll]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.shred,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let values = rankParams[1];
+
+                        buffSheet[DEFShredAll] = values;
+                        buffSheet.sourceOwner = ownerName;
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Thus Burns the Dawn - battlestart shred application",
+                "owners": [],
+            },
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcThusBurnsDawnDMGSHEET) {
+                        let lcNameRef = "Thus Burns the Dawn";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        sourceTurn.lcThusBurnsDawnDMGSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 1,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "StartTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcThusBurnsDawnDMGSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Thus Burns the Dawn ult start listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "shred": "Thus Burns the Dawn (LC)",
+            "buff1": "Blazing Sun (LC)",
         },
     },
 
