@@ -4111,13 +4111,13 @@ const turnLogicLightcones = {
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}
 
-                    if (!sourceTurn.lcThusBurnsDawnDMGSHEET) {
+                    if (!sourceTurn.lcDanceAtSunsetDMGSHEET) {
                         let lcNameRef = "Dance at Sunset";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
                         let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
 
-                        sourceTurn.lcThusBurnsDawnDMGSHEET = {
+                        sourceTurn.lcDanceAtSunsetDMGSHEET = {
                             "stats": [DamageFUA],
                             [DamageFUA]: rankParams[2],
                             "source": lcNameRef,
@@ -4133,7 +4133,7 @@ const turnLogicLightcones = {
                         }
                     }
 
-                    const buffSheet = sourceTurn.lcThusBurnsDawnDMGSHEET;
+                    const buffSheet = sourceTurn.lcDanceAtSunsetDMGSHEET;
                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
@@ -4245,6 +4245,53 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "river": "A Trail of Bygone Blood (LC)",
+        },
+    },
+    "Indelible Promise": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcIndeliblePromiseCRITSHEET) {
+                        let lcNameRef = "Indelible Promise";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        sourceTurn.lcIndeliblePromiseCRITSHEET = {
+                            "stats": [CritRateBase],
+                            [CritRateBase]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcIndeliblePromiseCRITSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Indelible Promise ult end listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Indelible Promise (LC)",
         },
     },
         //3star
