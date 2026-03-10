@@ -505,7 +505,7 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "UpdateStatSPD",//SPD stat family
+                "trigger": "UpdateStatBreak",//SPD stat family
                 condition(battleData,generalInfo) {
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownersSlots = this.ownersSlots;
@@ -568,6 +568,95 @@ const turnLogicLightcones = {
         "buffNames": {
             "buff1": "Sailing Towards a Second Life [SHRED] (LC)",
             "buff2": "Sailing Towards a Second Life [SPD] (LC)",
+        },
+    },
+    "Sleep Like the Dead": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            statCheck(battleData,currentTurn,ownersSlots) {
+                let ownerRank = ownersSlots[currentTurn.name];
+
+                if (!currentTurn.lcSleepLikeDeadCRITSHEET) {
+                    let lcNameRef = "Sleep Like the Dead";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+
+                    currentTurn.lcSleepLikeDeadCRITSHEET = {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: rankParams[1],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                        "durationInTurn": 2,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+                let buffSheet2 = currentTurn.lcSleepLikeDeadCRITSHEET;
+                battleActions.updateBuff(battleData,currentTurn,buffSheet2)
+
+                currentTurn.lcSleepLikeDeadCooldown = 3;
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "BasicATKEnd",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank) {return;}
+
+                    sourceTurn.lcSleepLikeDeadCooldown ??= 0;
+                    if (!sourceTurn.lcSleepLikeDeadCooldown) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogicLightcones["Sleep Like the Dead"].skillFunctions.statCheck;
+                    statCheck(battleData,sourceTurn,ownersSlots);
+                },
+                "target": "self",
+                "listenerName": "Sleep Like the Dead basic check",
+                "owners": []
+            },
+            {
+                "trigger": "SkillEnd",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank) {return;}
+
+                    sourceTurn.lcSleepLikeDeadCooldown ??= 0;
+                    if (!sourceTurn.lcSleepLikeDeadCooldown) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogicLightcones["Sleep Like the Dead"].skillFunctions.statCheck;
+                    statCheck(battleData,sourceTurn,ownersSlots);
+                },
+                "target": "self",
+                "listenerName": "Sleep Like the Dead skill check",
+                "owners": []
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank) {return;}
+
+                    sourceTurn.lcSleepLikeDeadCooldown ??= 0;
+                    sourceTurn.lcSleepLikeDeadCooldown--;
+                },
+                "target": "self",
+                "listenerName": "Sleep Like the Dead cooldown handler",
+                "owners": []
+            },
+        ],
+        "buffNames": {
+            "buff2": "Sleep Like the Dead (LC)",
         },
     },
     "Worrisome, Blissful": {
