@@ -4014,6 +4014,54 @@ const turnLogicLightcones = {
             "buff1": "Blazing Sun (LC)",
         },
     },
+    "Brighter Than the Sun": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "BasicATKStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcBrighterThanSunATKSHEET) {
+                        let lcNameRef = "Brighter Than the Sun";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        sourceTurn.lcBrighterThanSunATKSHEET = {
+                            "stats": [ATKP,EnergyRegenRate],
+                            [ATKP]: rankParams[3],
+                            [EnergyRegenRate]: rankParams[4],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcBrighterThanSunATKSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Brighter Than the Sun basic atk start listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Dragon's Call (LC)",
+        },
+    },
 
     //HARMONY
     "Earthly Escapade": {
