@@ -1264,6 +1264,84 @@ const turnLogicLightcones = {
             "river": "See You at the End (LC)",
         },
     },
+    "Shadowed by Night": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Shadowed by Night";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+                
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let buffSheet = currentTurn.lcShadowedByNightSPDSHEET ??= {
+                            "stats": [SPDP],
+                            [SPDP]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Shadowed by Night - battlestart buff application",
+                "owners": [],
+            },
+            {
+                "trigger": "BreakDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+
+                    if (!sourceTurn.lcShadowedByNightALREADYACTIVE) {
+                        battleActions.updateBuff(battleData,sourceTurn,sourceTurn.lcShadowedByNightSPDSHEET)
+                        sourceTurn.lcShadowedByNightALREADYACTIVE = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Shadowed by Night - break dmg end turn listener",
+                "owners": [],
+            },
+            {
+                "trigger": "TurnStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+                    sourceTurn.lcShadowedByNightALREADYACTIVE = false;
+                },
+                "target": "self",
+                "listenerName": "Shadowed by Night - start turn listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "Shadowed by Night (LC)",
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {
