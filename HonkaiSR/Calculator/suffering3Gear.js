@@ -2366,7 +2366,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
-                "listenerName": "The Hell Where Ideals Burn - ATK% - Hrunting",
+                "listenerName": "Warmth Shortens Cold Nights - battle start heal object creation",
                 "owners": [],
             },
             {
@@ -2407,6 +2407,136 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {},
+    },
+    "Unto Tomorrow's Morrow": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Unto Tomorrow's Morrow";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    // const updateBuff = battleActions.updateBuff;
+                    const allyTargets = battleData.allAllyTargetsArray;
+                    const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+                
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        const customName = `${buffNames.river} (${currentTurn.properName})`;
+                        if (!buffNames[customName]) {buffNames[customName] = customName;}
+
+                        let buffSheet = currentTurn.lcUntoTomorrowMorrowDMGSHEET ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": customName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        
+                        updateBuffBatchTargets(battleData,allyTargets,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Unto Tomorrow's Morrow - battlestart buff application",
+                "owners": [],
+            },
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    // poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn});
+                    // let ownersSlots = this.ownersSlots;
+                    let ownerRef = this.owners;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    const ratio = (sourceTurn.currentHP / sourceTurn.maxHP) >= 0.5;
+
+                    if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && !ratio) {return;}
+                    else if (sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {return;}
+                    else if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {
+                        const updateBuff = battleActions.updateBuff;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = battleData.nameBasedTurns[charSlot];
+                            let buffSheet = currentTurn.lcUntoTomorrowMorrowDMGSHEET;
+                            
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                        sourceTurn.lcUntoTomorrowMorrowWASACTIVE = true;
+                    }
+                    else if (sourceTurn.lcUntoTomorrowMorrowWASACTIVE && !ratio) {
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = battleData.nameBasedTurns[charSlot];
+                            let buffSheet = currentTurn.lcUntoTomorrowMorrowDMGSHEET;
+                            
+                            removeBuff(battleData,sourceTurn,buffSheet);
+                        }
+                        sourceTurn.lcUntoTomorrowMorrowWASACTIVE = false;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Unto Tomorrow's Morrow - lost hp listener",
+                "owners": [],
+            },
+            {
+                "trigger": "HealEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                    // let ownersSlots = this.ownersSlots;
+                    let ownerRef = this.owners;
+                    let sourceTurn = generalInfo.targetTurn;//sourceTurn;
+
+                    const ratio = (sourceTurn.currentHP / sourceTurn.maxHP) >= 0.5;
+
+                    if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && !ratio) {return;}
+                    else if (sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {return;}
+                    else if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {
+                        const updateBuff = battleActions.updateBuff;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = battleData.nameBasedTurns[charSlot];
+                            let buffSheet = currentTurn.lcUntoTomorrowMorrowDMGSHEET;
+                            
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                        sourceTurn.lcUntoTomorrowMorrowWASACTIVE = true;
+                    }
+                    else if (sourceTurn.lcUntoTomorrowMorrowWASACTIVE && !ratio) {
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = battleData.nameBasedTurns[charSlot];
+                            let buffSheet = currentTurn.lcUntoTomorrowMorrowDMGSHEET;
+                            
+                            removeBuff(battleData,sourceTurn,buffSheet);
+                        }
+                        sourceTurn.lcUntoTomorrowMorrowWASACTIVE = false;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Unto Tomorrow's Morrow - heal hp listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "Unto Tomorrow's Morrow (LC)",
+        },
+        "buffNamesPerCharacter": {
+            "river": "Unto Tomorrow's Morrow (LC)",
+        }
     },
         //3star
     "Multiplication": {
