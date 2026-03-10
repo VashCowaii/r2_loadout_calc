@@ -8,7 +8,7 @@ const turnLogicLightcones = {
 
 
     //HUNT HOONT HOONTER
-    //5star
+        //5star
     "The Hell Where Ideals Burn": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -873,7 +873,7 @@ const turnLogicLightcones = {
             "dmgStack": "Cruising in the Stellar Sea (ATK)"
         },
     },
-    //4star
+        //4star
     "Swordplay": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -1092,7 +1092,7 @@ const turnLogicLightcones = {
                             let currentTurn = battleData.nameBasedTurns[charSlot];
                             let ownerName = currentTurn.properName;
 
-                            let buffSheet = currentTurn.buffSheet ??= {
+                            let buffSheet = currentTurn.lcOnlySilenceReminsCRITSHEET ??= {
                                 "stats": [CritRateBase],
                                 [CritRateBase]: rankParams[1],
                                 "source": lcNameRef,
@@ -1115,7 +1115,7 @@ const turnLogicLightcones = {
                             let charSlot = owner.slot;
                             let currentTurn = battleData.nameBasedTurns[charSlot];
 
-                            let buffSheet = currentTurn.buffSheet;
+                            let buffSheet = currentTurn.lcOnlySilenceReminsCRITSHEET;
                             removeBuff(battleData,currentTurn,buffSheet);
                         }
                         battleData.lcOnlySilenceRemainsValidCount = false;
@@ -1128,6 +1128,93 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "silenceCrit": "Only Silence Remains (LC)",
+        },
+    },
+    "River Flows in Spring": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "River Flows in Spring";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+
+                
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let buffSheet = currentTurn.lcRiverFlowsSpringBONUSSHEET ??= {
+                            "stats": [SPDP,DamageAll],
+                            [SPDP]: rankParams[0],
+                            [DamageAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "River Flows in Spring - battlestart buff application",
+                "owners": [],
+            },
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    // poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const wasAttack = generalInfo.wasAttack;
+
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank || !wasAttack) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+
+                    if (sourceTurn.lcRiverFlowsSpringWASACTIVE) {
+                        removeBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
+                        sourceTurn.lcRiverFlowsSpringWASACTIVE = false;
+                    }
+                },
+                "target": "self",
+                "listenerName": "River Flows in Spring - lost hp listener",
+                "owners": [],
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+
+                    if (!sourceTurn.lcRiverFlowsSpringWASACTIVE) {
+                        battleActions.updateBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
+                        sourceTurn.lcRiverFlowsSpringWASACTIVE = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "River Flows in Spring - end turn listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "River Flows in Spring (LC)",
         },
     },
 
