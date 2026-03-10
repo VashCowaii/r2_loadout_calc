@@ -1543,6 +1543,58 @@ const turnLogicLightcones = {
             "river": "Arrows (LC)",
         },
     },
+    "Darting Arrow": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+
+                    if (!sourceTurn.lcDartingArrowATKSHEET) {
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+
+                        let lcNameRef = "Darting Arrow";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        let ownerName = sourceTurn.properName;
+
+                        sourceTurn.lcDartingArrowATKSHEET = {
+                            "stats": [ATKP],
+                            [ATKP]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcDartingArrowATKSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Darting Arrow - kill listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "Darting Arrow (LC)",
+        },
+    },
 
     //ABUNDANCE
     "Quid Pro Quo": {
