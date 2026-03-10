@@ -456,6 +456,121 @@ const turnLogicLightcones = {
             "buff2": "In the Night [ULT] (LC)",
         },
     },
+    "Sailing Towards a Second Life": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            statCheck(battleData,currentTurn,ownersSlots) {
+                let ownerRank = ownersSlots[currentTurn.name];
+
+                if (!currentTurn.lsSailingTowardsSecondSPDSHEET) {
+                    let lcNameRef = "Sailing Towards a Second Life";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+
+                    currentTurn.lsSailingTowardsSecondSPDSHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: rankParams[3],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 6,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"]
+                    }
+                }
+                let buffSheet2 = currentTurn.lsSailingTowardsSecondSPDSHEET;
+                const buffName = buffSheet2.buffName;
+                const buffsRef = currentTurn.buffsObject;
+                const buffCheck = buffsRef[buffName];
+
+                const breakFinal = currentTurn.statTable[DamageBreak];
+
+                const threshold = 1.5;
+                const hasEnough = breakFinal >= threshold;
+
+                if (buffCheck) {
+                    if (hasEnough) {return;}
+                    else {
+                        removeBuff(battleData,currentTurn,buffSheet2);
+                    }
+                }
+                else if (hasEnough) {
+                    battleActions.updateBuff(battleData,currentTurn,buffSheet2);
+                }
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "UpdateStatSPD",//SPD stat family
+                condition(battleData,generalInfo) {
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogicLightcones["Sailing Towards a Second Life"].skillFunctions.statCheck;
+                    statCheck(battleData,sourceTurn,ownersSlots);
+                },
+                "target": "self",
+                "listenerName": "Sailing Towards a Second Life break check",
+                "owners": []
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    if (ownerRef.length) {
+                        const statCheck = this.statCheck ??= turnLogicLightcones["Sailing Towards a Second Life"].skillFunctions.statCheck;
+                        const namedTurns = battleData.nameBasedTurns;
+                        const updateBuff = battleActions.updateBuff;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+                            statCheck(battleData,currentTurn,ownersSlots);
+
+                            if (!currentTurn.lsSailingTowardsSecondSHREDSHEET) {
+                                let lcNameRef = "Sailing Towards a Second Life";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                const ownerRank = ownersSlots[currentTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+            
+                                currentTurn.lsSailingTowardsSecondSHREDSHEET = {
+                                    "stats": [DEFShredBreak],
+                                    [DEFShredBreak]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": currentTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 6,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            const buffSheet = currentTurn.lsSailingTowardsSecondSHREDSHEET;
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sailing Towards a Second Life battle start stat check trigger",
+                "owners": []
+            },
+        ],
+        "buffNames": {
+            "buff1": "Sailing Towards a Second Life [SHRED] (LC)",
+            "buff2": "Sailing Towards a Second Life [SPD] (LC)",
+        },
+    },
     "Worrisome, Blissful": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
