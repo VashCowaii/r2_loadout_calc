@@ -2326,6 +2326,88 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
+    "Warmth Shortens Cold Nights": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerRank = ownersSlots[currentTurn.name];
+
+                        if (!currentTurn.lcWarmthShortensNightsHEALOBJECT) {
+                            let lcNameRef = "Warmth Shortens Cold Nights";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+                            
+                            currentTurn.lcWarmthShortensNightsHEALOBJECT ??= {
+                                multipliers: {
+                                    primary: rankParams[1],
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone"
+                            }
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Hell Where Ideals Burn - ATK% - Hrunting",
+                "owners": [],
+            },
+            {
+                "trigger": "BasicATKEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    const healObject = sourceTurn.lcWarmthShortensNightsHEALOBJECT;
+
+                    const allyTargets = battleData.allAllyTargetsArray;
+                    battleActions.healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
+                },
+                "target": "team",
+                "listenerName": "Warmth Shortens Cold Nights basic atk end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "SkillEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    const healObject = sourceTurn.lcWarmthShortensNightsHEALOBJECT;
+
+                    const allyTargets = battleData.allAllyTargetsArray;
+                    battleActions.healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
+                },
+                "target": "team",
+                "listenerName": "Warmth Shortens Cold Nights skill end listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {},
+    },
         //3star
     "Multiplication": {
         logic(thisTurn,battleData) {},
