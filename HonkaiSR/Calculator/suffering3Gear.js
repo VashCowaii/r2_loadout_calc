@@ -2324,6 +2324,7 @@ const turnLogicLightcones = {
             // "atkBuff": "Night of Fright (LC)",
         },
     },
+        //3star
     "Multiplication": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -2355,6 +2356,42 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             // "atkBuff": "Night of Fright (LC)",
+        },
+    },
+    "Fine Fruit": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Fine Fruit";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    // const updateBuff = battleActions.updateBuff;
+
+                    const fullCharacterArray = battleData.fullCharacterArray;
+                    const updateEnergy = battleActions.updateEnergy
+                
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        // let currentTurn = battleData.nameBasedTurns[charSlot];
+                        // let ownerName = currentTurn.properName;
+
+                        for (let character of fullCharacterArray) {
+                            updateEnergy(battleData,rankParams[0],character,false,"Fine Fruit (LC)")
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Fine Fruit - battlestart energy regen",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "river": "Arrows (LC)",
         },
     },
 
