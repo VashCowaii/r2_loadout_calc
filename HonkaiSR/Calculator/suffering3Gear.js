@@ -6400,6 +6400,129 @@ const turnLogicLightcones = {
             "buff1": "Victory In a Blink (LC)",
         },
     },
+        // 3star
+    "Shadowburn": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "SummonOnFieldAdjustment",
+                condition(battleData,generalInfo) {
+                    // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.assignedTo;
+
+                    if (sourceTurn.lcShadowburnFIRSTSUMMONDONE) {return;}
+
+                    const summonEvent = generalInfo.summonEvent;
+                    
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank || !summonEvent.isMemosprite) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
+                    //or if what was assigned, wasn't a memo
+
+                    const summonWas = generalInfo.summonWas;
+                    
+                    if (summonWas === "Apply") {
+
+                        let lcNameRef = "Shadowburn";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        battleActions.updateEnergy(battleData,rankParams[1],sourceTurn,false,"Shadowburn (LC)")
+                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Shadowburn (LC)"});
+
+                        sourceTurn.lcShadowburnFIRSTSUMMONDONE = true;
+                        battleData.lcShadowburnFIRSTSUMMONDONECOUNTER ??= 0;
+
+                        battleData.lcShadowburnFIRSTSUMMONDONECOUNTER++;
+
+                        if (battleData.lcShadowburnFIRSTSUMMONDONECOUNTER === this.owners.length) {
+                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Shadowburn - summon adjusted from field listener",
+                "owners": []
+            },
+        ],
+        "buffNames": {},
+    },
+    "Reminiscence": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "SummonOnFieldAdjustment",
+                condition(battleData,generalInfo) {
+                    // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.assignedTo;
+                    const summonEvent = generalInfo.summonEvent;
+                    
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank || !summonEvent.isMemosprite) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
+                    //or if what was assigned, wasn't a memo
+
+                    const summonWas = generalInfo.summonWas;
+                    
+                    if (summonWas === "Remove") {
+                        const buffSheet = sourceTurn.lcReminiscenceDMGSHEET;
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                        removeBuff(battleData,summonEvent,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Reminiscence - summon adjusted from field listener",
+                "owners": []
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isMemosprite) {return;}
+
+                    const ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                    let ownerRank = ownersSlots[ownerTurn.name];//setAmount
+                    if (!ownerRank) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
+
+                    if (!ownerTurn.lcReminiscenceDMGSHEET) {
+                        let lcNameRef = "Reminiscence";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        ownerTurn.lcReminiscenceDMGSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 1,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 4,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+
+                    const buffSheet = ownerTurn.lcReminiscenceDMGSHEET;
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Reminiscence turn start listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Reminiscence (LC)"
+        },
+    },
 
     //PRESERVATIONN
     "Inherently Unjust Destiny": {
