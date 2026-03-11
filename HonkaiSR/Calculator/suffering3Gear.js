@@ -6023,6 +6023,7 @@ const turnLogicLightcones = {
             "allyDMG": "Reception [LC]"
         },
     },
+        //4star
     "Fly Into a Pink Tomorrow": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -6113,6 +6114,59 @@ const turnLogicLightcones = {
         "buffNames": {
             "allyDMG": "Fly Into a Pink Tomorrow [LC]",
             "jointDMG": "Fly Into a Pink Tomorrow (Joint ATK DMG) [LC]"
+        },
+    },
+    "Geniuses' Greetings": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "UltimateEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcGeniusGreetingsBASICSHEET) {
+                        let lcNameRef = "Geniuses' Greetings";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        sourceTurn.lcGeniusGreetingsBASICSHEET = {
+                            "stats": [DamageBasic],
+                            [DamageBasic]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 4,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcGeniusGreetingsBASICSHEET;
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+
+                    const memoTurnRef = sourceTurn.memospriteEventRef;
+                    const memoTurn = sourceTurn[memoTurnRef];
+
+                    if (memoTurn?.isActive) {updateBuff(battleData,memoTurn,buffSheet);}
+                },
+                "target": "self",
+                "listenerName": "Geniuses' Greetings ult end listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Geniuses' Greetings (LC)",
         },
     },
 
