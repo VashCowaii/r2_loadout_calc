@@ -6289,6 +6289,59 @@ const turnLogicLightcones = {
             "buff2": "The Flower Remembers [LC]",
         },
     },
+    "The Story's Next Page": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isMemosprite) {return;}
+
+                    const sourceOwner = sourceTurn.eventOwner;
+                    const sourceOwnerTurn = battleData.nameBasedTurns[sourceOwner];
+                    let ownerRank = ownersSlots[sourceOwnerTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceOwnerTurn.lcStorysNextPageHEALINGSHEET) {
+                        let lcNameRef = "The Story's Next Page";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        sourceOwnerTurn.lcStorysNextPageHEALINGSHEET = {
+                            "stats": [HealingOutgoing],
+                            [HealingOutgoing]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceOwnerTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 2,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceOwnerTurn.lcStorysNextPageHEALINGSHEET;
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,sourceOwnerTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "The Story's Next Page atk end listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "The Story's Next Page (LC)",
+        },
+    },
 
     //PRESERVATIONN
     "Inherently Unjust Destiny": {
