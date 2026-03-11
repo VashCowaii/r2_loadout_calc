@@ -6342,6 +6342,64 @@ const turnLogicLightcones = {
             "buff1": "The Story's Next Page (LC)",
         },
     },
+    "Victory In a Blink": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "TargetAlly",
+                condition(battleData,generalInfo) {
+                    // let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+
+                    // let ownerSlot = sourceTurn.name;
+                    // const ownerRank = ownersSlots[ownerSlot];
+                    // if (!ownerRank) {return;}//abort non-owners
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isMemosprite) {return;}
+
+                    const sourceOwner = sourceTurn.eventOwner;
+                    const sourceOwnerTurn = battleData.nameBasedTurns[sourceOwner];
+                    let ownerRank = ownersSlots[sourceOwnerTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceOwnerTurn.lcVictoryInABlinkDMGSHEET) {
+                        let lcNameRef = "Victory In a Blink";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                        sourceOwnerTurn.lcVictoryInABlinkDMGSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceOwnerTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 4,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceOwnerTurn.lcVictoryInABlinkDMGSHEET;
+                    const allyPositions = battleData.allyPositions;
+                    updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Victory In a Blink target ally listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Victory In a Blink (LC)",
+        },
+    },
 
     //PRESERVATIONN
     "Inherently Unjust Destiny": {

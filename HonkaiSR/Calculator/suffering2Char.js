@@ -22884,7 +22884,7 @@ const turnLogic = {
                 poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"});
 
                 const char1 = battleData.nameBasedTurns.char1;
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:char1, targetSkill:skillRef.slot});
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot});
                 battleActions.actionAdvance(1,char1,battleData,"Mem's Support");
 
                 const buffSheet = ATKObjects.rmcMemsSupportSHEET;
