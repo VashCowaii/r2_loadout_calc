@@ -2719,23 +2719,29 @@ const customMenu = {
             return a.name.localeCompare(b.name);//then name
         }
         function regSort(a, b) {return a.name.localeCompare(b.name);}
-        function getPathDivider(pathName) {
+        function getPathDivider(pathName,lcPathCounter,lcPathCounterCompleted) {
             return `
                 <div class="characterDisplayPathAndNameBox">
                     <div class="characterDisplayPathImageBox">
                         <img src="${pathImagePaths[pathName].small}" class="characterDisplayPathImage"/>
                     </div>
-                    <div class="characterDisplayPathNameBox">${pathName}</div>
+                    <div class="characterDisplayPathNameBox">${pathName}${lcPathCounterCompleted ? ` (${lcPathCounterCompleted[pathName]}/${lcPathCounter[pathName]})` : ""}</div>
                 </div>
                 `;
         }
 
+        const lcPathCounter = {};
+        const lcPathCounterCompleted = {};
         if (globalUI.currentSearchOpen === "characters") {
             let pathsObject = {};
             // pathImagePaths
             for (let charEntry of volumeKeys) {
                 let currentCharacterEntry = characters[charEntry];
                 let currentPath = currentCharacterEntry.path;
+
+                // lcPathCounter[currentPath] = (lcPathCounter[currentPath] ?? 0) + 1;
+                // lcPathCounterCompleted[currentPath] = (lcPathCounterCompleted[currentPath] ?? 0) + (turnLogic[currentCharacterEntry.name] ? 1 : 0);
+
                 if (!pathsObject[currentPath]) {pathsObject[currentPath] = [];}//only make a new entry when it doesn't exist yet
                 //skip any char name, path, or element that does NOT contain our search, and forced lowercase just to avoid headaches
                 let fuzzy = currentCharacterEntry.name.toLowerCase().includes(currentInput) || currentCharacterEntry.path.toLowerCase().includes(currentInput) || currentCharacterEntry.element.toLowerCase().includes(currentInput);
@@ -2786,10 +2792,35 @@ const customMenu = {
             let otherResults = [];
 
             // lightconeOcclusions
+            let totalLightconesValue = 0;
+            let currentPathValue = 0;
 
+            let totalCompletedCount = 0;
+            let currentPathCompleted = 0;
+
+            // console.log(Object.keys(lightcones).length)
             
             for (let lcEntry of volumeKeys) {
+                totalLightconesValue++;
+                
                 let currentLightcone = lightcones[lcEntry];
+
+                const lcIsCompleted = turnLogicLightcones[currentLightcone.name];
+                const lcIsCurrentPath = currentLightcone.path === currentPathCharacter;
+
+                if (lcIsCurrentPath) {currentPathValue++;}
+                if (lcIsCompleted) {
+                    totalCompletedCount++;
+                    if (lcIsCurrentPath) {currentPathCompleted++;}
+                }
+
+                lcPathCounter[currentLightcone.path] = (lcPathCounter[currentLightcone.path] ?? 0) + 1;
+                lcPathCounterCompleted[currentLightcone.path] = (lcPathCounterCompleted[currentLightcone.path] ?? 0) + (lcIsCompleted ? 1 : 0);
+                
+
+
+                // turnLogicLightcones[lcName]
+
                 //skip any lc name or desc that does NOT contain our search, and forced lowercase just to avoid headaches
                 const lowercaseInput = currentInput.toLowerCase();
                 let fuzzy = currentLightcone.name.toLowerCase().includes(currentInput) 
@@ -2811,7 +2842,7 @@ const customMenu = {
                 if (isOcclusion && new Set(filterPath.lightconeOcclusions).has(currentLightcone.name)) {continue;}
                 if (isLock && new Set(filterPath.lightconeLocks).has(currentLightcone.name)) {continue;}
 
-                if (currentLightcone.path === currentPathCharacter) {currentPathResults.push(currentLightcone);}
+                if (lcIsCurrentPath) {currentPathResults.push(currentLightcone);}
                 else {otherResults.push(currentLightcone);}
             }
 
@@ -2882,12 +2913,20 @@ const customMenu = {
                 }
                 return returnString;
             }
+            
+            // totalLightconesValue = 0;
+            // currentPathValue = 0;
 
+            // totalCompletedCount = 0;
+            // currentPathCompleted = 0;
 
-            let currentPathDivider = getPathDivider(currentPathCharacter);
+            const totalOtherPaths = totalLightconesValue - currentPathValue;
+            const totalOtherPathsCompleted = totalCompletedCount - currentPathCompleted;
+
+            let currentPathDivider = getPathDivider(currentPathCharacter,lcPathCounter,lcPathCounterCompleted);
             let otherPathsDivider = `
                 <div class="characterDisplayPathAndNameBox">
-                    <div class="characterDisplayPathNameBox">Other Paths</div>
+                    <div class="characterDisplayPathNameBox">Other Paths (${totalOtherPathsCompleted}/${totalOtherPaths})</div>
                 </div>
                 `
             if (currentPathResults.length) {resultString += currentPathDivider + getResultStringForLightconeSet(currentPathResults);}

@@ -5,9 +5,8 @@
         <li>asdf</li>
     </ul>
 </div> -->
-
 <div>
-    <h1>Mar 8th, 2026</h1>
+    <h1>Mar 10th, 2026 - The "Part 2: My net died so I got a lot of stuff done offline" Update</h1>
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
@@ -16,30 +15,145 @@
                 <li>Black Swan</li>
             </ul>
         </li> -->
+        <!-- <li>Added updated image handling when dealing damage instances to enemies.
+            <ul>
+                <li>Before, when dealing dmg it would always show an enemy position indicator next to the image, but if it was the boss enemy it wouldn't adjust the image to be Glorpard and would show a regular glorp instead.</li>
+            </ul>
+        </li> -->
+        <!-- <li>Added the above image handling to buff application and removal, but also added enemy position numbers as well in case several enemies receive buffs at once, in order to help identify visually which one was which without inspecting them.</li> -->
+        <li>Added the following lightcones to the calculator:
+            <ul>
+                <h4>Destruction</h4>
+                <li>Dance at Sunset</li>
+                <li>A Trail of Bygone Blood</li>
+                <li>Indelible Promise</li>
+
+                <!-- <h4>Erudition</h4> -->
+            </ul>
+        </li>
+        <li>Added a counts display on lightcone search for the calc, so you can see how many lightcones of a given path have been coded so far versus how many remain.</li>
+
+        <!-- <h4>Fixes</h4>
+        <li>Fixed</li> -->
+
+        <!-- <h4>Optimization</h4>
+        <li>Deprecated some super old and some unused on-hit energy gain methods.</li> -->
+        
+
+        <!-- <h3>Optimizer</h3> -->
+        <!-- <h4>Fixes</h4> -->
+        <!-- <li>Fixed an issue where the optimizer could fail to consider 4pc bonuses that were relevant to the character in a search, an example being Kafka with Eagle doesn't care about the 2pc wind dmg, but does care about the 4pc advance.</li> -->
+        <!-- <li>Fixed an issue that prevented added team-needs like Kafka's EHR addition, from being considered on other characters who didn't initially already consider it in their needs.</li> -->
+        <!-- <li>Fixed an issue where Hunt lightcones would break the optimizer due to a missing connection to their maslow entries.</li> -->
+        <!-- <li>Fixed an issue where if you locked a clearly arbitrary stat onto a character or their gear, like say Wind DMG on a Kafka orb, it would skip all possible combinations bc wind dmg is clearly a bullshit stat on Kafka.
+            <ul>
+                <li>Now instead if you run a clearly contrary stat to a character's needs, if that is the only option you gave the optimizer, it will use it. However if other usable options are ever provided, it will use those instead.</li>
+            </ul>
+        </li> -->
+
+    </ul>
+</div>
+
+<div>
+    <h1>Mar 9th, 2026 - The "Part 1: My net died so I got a lot of stuff done offline" Update</h1>
+    <ul>
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added the following lightcones to the calculator:
+            <ul>
+                <h4>Hunt (Finished)</h4>
+                <li>Baptism of Pure Thought</li>
+                <li>I Venture Forth to Hunt</li>
+                <li>In the Night</li>
+                <li>Sailing Towards a Second Life</li>
+                <li>Sleep Like the Dead (why would you EVER use this)</li>
+                <li>Final Victor</li>
+                <li>Only Silence Remains</li>
+                <li>River Flows in Spring</li>
+                <li>See You at the End</li>
+                <li>Shadowed by Night</li>
+                <li>Subscribe for More!</li>
+                <li>Adversarial</li>
+                <li>Arrows</li>
+                <li>Darting Arrow</li>
+
+                <h4>Abundance (Finished)</h4>
+                <li>Warmth Shortens Cold Nights</li>
+                <li>Unto Tomorrow's Morrow</li>
+                <li>Fine Fruit</li>
+                <li>Cornucopia</li>
+
+                <h4>Destruction</h4>
+                <li>Thus Burns the Dawn</li>
+                <li>Brighter Than the Sun</li>
+                <li>Under the Blue Sky</li>
+                <li>Collapsing Sky</li>
+            </ul>
+        </li>
+        <li>Added new handling for how buff durations are applied in and outside of a targets turn when receiving a buff. Functionally nothing should change, this just makes it easier to allow buffs that have certain durations when applied during a turn, vs outside of it.
+            <ul>
+                <li>While making these changes however, I did catch a few bugs I'll list in Fixes below.</li>
+            </ul>
+        </li>
+        <li>Added handling to prevent certain entites from having their AV reset when clearing a wave and resetting a cycle. In this case, namely Aha Instant elation battle event, but this feature will also be used later for people like Phainon.</li>
+
+        <h4>Fixes</h4>
+        <li>Fixed an error where the following lightcones had effects that didn't expire when they should have:
+            <ul>
+                <li>Long May Rainbows Adorn the Sky</li>
+                <li>Memory's Curtain Never Falls</li>
+                <li>Make Farewells More Beautiful</li>
+                <li>If Time Were a Flower</li>
+                <li>Night of Fright</li>
+            </ul>
+        </li>
+        <li>Fixed an error where the following characters had effects that didn't expire when they should have:
+            <ul>
+                <li>Sparxie E4</li>
+                <li>Anaxa E4</li>
+                <li>Argenti E2</li>
+                <li>Lynx E4</li>
+                <li>Saber Talent: anyone used ult Crit DMG buff</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Black Swan's skill shred from the trace, was able to apply if any ally attacked not just her.</li>
+        <li>Fixed an issue on lc Flowing Nightglow where the DMG bonus from Cadenza wasn't reaching memosprites</li>
+        <li>Updated when in the battle-prep phase that memosprites are declared. Listed under fixes because this may have fixed some bugs I didn't even know about, if Elation caused some things to trigger before memos were declared.</li>
+        <li>Fixed a visual issue where when Kafka applied the Torture trace bonus ATK%, it would display as if she weren't the one providing the bonus to others.</li>
+        <li>Fixed an issue where Robin's Talent wouldn't update its values if you adjusted eidolons after loading her.</li>
+        <li>Fixed an issue where Robin's skill wasn't reaching memosprites.</li>
+        <li>Fixed a missing target proc that allows Yao Guang's ultimate to count as a team-target effect, for the sake of something like Wavestrider.</li>
+
+        <h4>Optimization</h4>
+        <li>Deprecated some super old and some unused on-hit energy gain methods.</li>
+        <li>Updated handling for action advancements. This shouldn't actually change anything, all this does is make it so on a case-by-case basis I no longer need to specify that the advance shouldn't happen in the preaction phase anymore. Nothing was broken to warrant this change, but it'll make life easier going forward and probably prevent a few errors too.</li>
+        <li>Updated how memosprites can be handled, making them easier to access with less references/looping in a zone-type buffs or targeting.</li>
+        <li>Given the above note, updated all LC's, Relics, and Characters to account for the new group handling. For the calculator this won't make much a different, but it should be slightly noticeable on the optimizer.</li>
+        <li>Similar to the memosprite groupings, also update groupings for ALL allies, as well as all allied TARGETS, for similar purposes.</li>
+
+        <h3>Changelog</h3>
+        <li>For this very page, updated the margin between list elements</li>
+    </ul>
+</div>
+
+<div>
+    <h1>Mar 8th, 2026</h1>
+    <ul>
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
         <li>Added updated image handling when dealing damage instances to enemies.
             <ul>
                 <li>Before, when dealing dmg it would always show an enemy position indicator next to the image, but if it was the boss enemy it wouldn't adjust the image to be Glorpard and would show a regular glorp instead.</li>
             </ul>
         </li>
         <li>Added the above image handling to buff application and removal, but also added enemy position numbers as well in case several enemies receive buffs at once, in order to help identify visually which one was which without inspecting them.</li>
-        <!-- <li>Added the following lightcones to the calculator:
-            <ul>
-                <li>Mushy Shroomy's Adventures</li>
-                <li>Today's Good Luck</li>
-                <li>Sneering</li>
-                <li>Lingering Tear</li>
-            </ul>
-        </li> -->
         <li>Added an elation character labeled Z_Test for the sake of testing effects that rely on elation character counts</li>
 
         <h4>Fixes</h4>
         <li>Fixed an issue where Huohuo's ult would attempt to try and target memosprites and break the UI if ever inspected.</li>
         <li>Fixed an issue where stacks over 50 weren't counting on BS Arcana stacks. I'd actually taken notes to show it worked like this, but admidst the 10 hours stream I think I just got it mixed up in my head.</li>
         <li>Fixed a coding typo on BS E1 that prevented certain elements from being recognized for the sake of the RES reduction.</li>
-        <!-- <li>Fixed an issue where Wind Shear applied from break, failed to stack 3 times on elite+ enemies.</li>
-        <li>Fixed an issue where RMC would break when used with Sparxie due to her applying a crit dmg buff as a zone that tried to reach mem before mem was constructed</li>
-        <li>Fixed an unintended error where Hysilens added dot proc were happening at the wrong time(though close to correct)</li>
-        <li>Fixed an issue where some dot instances weren't properly factoring for the cachetag system.</li> -->
+
         <h3>Optimizer</h3>
         <h4>Fixes</h4>
         <li>Fixed an issue where the optimizer could fail to consider 4pc bonuses that were relevant to the character in a search, an example being Kafka with Eagle doesn't care about the 2pc wind dmg, but does care about the 4pc advance.</li>

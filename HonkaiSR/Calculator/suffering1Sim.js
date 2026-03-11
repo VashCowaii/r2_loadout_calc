@@ -268,6 +268,7 @@ const sim = {
         battleData.cycleAV -= sourceTurn.AV;
         battleData.cycleAVPassed += sourceTurn.AV;
         for (let AVentry of battleData.nextTurnAV) {
+            if (AVentry.blockWaveAVReset) {continue;}
             if (AVentry.name != sourceTurn.name) {
                 AVentry.AV = Math.max(0,AVentry.AV - sourceTurn.AV);//prevent negative action value
             }
@@ -454,7 +455,9 @@ const sim = {
             "menuStats": {},
             "skillPointCurrent": 3,//starting points
             "nameBasedTurns": {},
+            "fullCharacterArray": [],
             "allAlliesArray": [],
+            "allAllyTargetsArray": [],
             "eventBasedTurns": {},
             "allyPositions": [],//ally equivalent of enemyPositions
             "actionCounter": 0,
@@ -532,7 +535,9 @@ const sim = {
         const nextTurn = battleData.nextTurnAV;
         const allyPositions = battleData.allyPositions;
         const battleListeners = battleData.battleListeners;
+        const fullCharacterArray = battleData.fullCharacterArray;
         const allAlliesArray = battleData.allAlliesArray;
+        const allAllyTargetsArray = battleData.allAllyTargetsArray;
 
         const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"]
 
@@ -671,7 +676,9 @@ const sim = {
             slotRef.statTableONHIT[LVL] = 0;
             nextTurn.push(slotRef);
             allyPositions.unshift(slotRef);
-            allAlliesArray.push(slotRef)
+            fullCharacterArray.push(slotRef);
+            allAlliesArray.push(slotRef);
+            allAllyTargetsArray.push(slotRef);
             //we need AV to be able to be sortable via an array, but also called and modified via an object, hence what will look like duplication here
             //but it's not dupin, it's object referencing, even in the array, just remember that. Editing one edits both.
             //probably the first time I've ever been truly grateful for this functionality in JS, jesus christ
@@ -870,10 +877,11 @@ const sim = {
         // battleSettings.totalWaves
 
         // battleSettings
-        battleData.onHitEnergyGain = true;
-        battleData.onHitEnergyAmount =  12;
         const summaryTurns = battleData.battleTotal.Turns;
         const enemiesToMake = battleSettings.waveArray1;
+
+        
+        poke("EntityConstruction",battleData);
         poke("BattlePrep",battleData);//this DOES need to go here before prebattle settings
         sim.createEnemyTargets(battleData,enemiesToMake);
 
@@ -1187,8 +1195,10 @@ const sim = {
                 let sourceTurn = currentUltimate.sourceTurn;
                 let actionName = currentUltimate.name;
                 let target = currentUltimate.target;
-                let generalInfo = {sourceTurn,actionName,target};
+                const isAttackUlt = currentUltimate.isAttackUlt;
+                let generalInfo = {sourceTurn,actionName,target,isAttackUlt};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
+                
 
                 const isExtraTurn = currentUltimate.isExtraTurn;
 
