@@ -6169,6 +6169,66 @@ const turnLogicLightcones = {
             "buff1": "Geniuses' Greetings (LC)",
         },
     },
+    "Sweat Now, Cry Less": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "SummonOnFieldAdjustment",
+                condition(battleData,generalInfo) {
+                    // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.assignedTo;
+                    const summonEvent = generalInfo.summonEvent;
+                    
+                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                    if (!ownerRank || !summonEvent.isMemosprite) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
+                    //or if what was assigned, wasn't a memo
+
+                    const summonWas = generalInfo.summonWas;
+                    
+                    if (summonWas === "Remove") {
+                        let buffSheet = sourceTurn.lcSweatNowCryLessDMGSHEET;
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                        removeBuff(battleData,summonEvent,buffSheet);
+                    }
+                    else if (summonWas === "Apply") {
+                        if (!sourceTurn.lcSweatNowCryLessDMGSHEET) {
+                            let lcNameRef = "Sweat Now, Cry Less";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+                            // let ownerName = sourceTurn.properName;
+    
+                            sourceTurn.lcSweatNowCryLessDMGSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.deathFlower,
+                                "durationInTurn": 1,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+                        let buffSheet = sourceTurn.lcSweatNowCryLessDMGSHEET;
+                        const updateBuff = battleActions.updateBuff;
+                        updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,summonEvent,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sweat Now, Cry Less - summon adjusted from field listener",
+                "owners": []
+            },
+        ],
+        "buffNames": {
+            "deathFlower": "Sweat Now, Cry Less [LC]",
+        },
+    },
 
     //PRESERVATIONN
     "Inherently Unjust Destiny": {
