@@ -6229,6 +6229,66 @@ const turnLogicLightcones = {
             "deathFlower": "Sweat Now, Cry Less [LC]",
         },
     },
+    "The Flower Remembers": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let lcNameRef = "Poised to Bloom";
+
+                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const namedTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        const memoTurnRef = currentOwner.memospriteEventRef;
+                        const memoTurn = currentOwner[memoTurnRef];
+
+                        if (!memoTurn) {continue;}
+
+                        if (!currentOwner.lcTheFlowerRemembersCRITSHEET) {
+                            let lcNameRef = "The Flower Remembers";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+        
+                            currentOwner.lcTheFlowerRemembersCRITSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffName2,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+                        const buffSheet = currentOwner.lcTheFlowerRemembersCRITSHEET;
+                        updateBuff(battleData,memoTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Flower Remembers - battlestart memo crit dmg buff",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "buff2": "The Flower Remembers [LC]",
+        },
+    },
 
     //PRESERVATIONN
     "Inherently Unjust Destiny": {
