@@ -1,43 +1,75 @@
 <!-- template -->
 <!-- <div>
-    <h1>March X, 2025</h1>
+    <h1>March X, 2026</h1>
     <ul>
         <li>asdf</li>
     </ul>
 </div> -->
+
 <div>
-    <h1>Mar 10th, 2026 - The "Part 2: My net died so I got a lot of stuff done offline" Update</h1>
+    <h1>Mar 12th, 2026</h1>
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
-        <!-- <li>Added the following characters to the calculator:
+        <li>Added the following characters to the calculator:
             <ul>
-                <li>Black Swan</li>
+                <li>Evernight</li>
             </ul>
-        </li> -->
-        <!-- <li>Added updated image handling when dealing damage instances to enemies.
-            <ul>
-                <li>Before, when dealing dmg it would always show an enemy position indicator next to the image, but if it was the boss enemy it wouldn't adjust the image to be Glorpard and would show a regular glorp instead.</li>
-            </ul>
-        </li> -->
-        <!-- <li>Added the above image handling to buff application and removal, but also added enemy position numbers as well in case several enemies receive buffs at once, in order to help identify visually which one was which without inspecting them.</li> -->
+        </li>
         <li>Added the following lightcones to the calculator:
             <ul>
-                <h4>Destruction</h4>
-                <li>Dance at Sunset</li>
-                <li>A Trail of Bygone Blood</li>
-                <li>Indelible Promise</li>
-
+                <h4>Remembrance</h4>
+                <!-- <li>This Love, Forever</li> -->
+                <li>Geniuses' Greetings</li>
+                <li>Sweat Now, Cry Less</li>
+                <li>The Flower Remembers</li>
+                <li>The Story's Next Page</li>
+                <li>Victory In a Blink</li>
+                <li>Shadowburn</li>
+                <li>Reminiscence</li>
                 <!-- <h4>Erudition</h4> -->
             </ul>
         </li>
-        <li>Added a counts display on lightcone search for the calc, so you can see how many lightcones of a given path have been coded so far versus how many remain.</li>
+        <li>Added the following conditions or values for use in character rotation conditions:
+            <ul>
+                <li>Comparison Operator: "!=" as Does Not Equal, on comparisons</li>
+                <li>Value: Character Name
+                    <ul>
+                        <li>This is a weird one for the current calculator, as there are kinda no scenarios you want to know what the name of a character is. HOWEVER, in a scenario with Target Logic later, you might want to know if a character's self name is equal to the character in slot 1, to determine who should be targeted.</li>
+                        <li>An easy example for the above note would be: Bronya wants to target char1 by default, what but if she IS char1? In such a case you'd want to swap.</li>
+                    </ul>
+                </li>
+                <li>Value Category: Enemy Team Values, and the following options
+                    <ul>
+                        <li>Enemies: Count</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        <!-- <li>Added a counts display on lightcone search for the calc, so you can see how many lightcones of a given path have been coded so far versus how many remain.</li> -->
 
-        <!-- <h4>Fixes</h4>
-        <li>Fixed</li> -->
+        <h4>Fixes</h4>
+        <li>Fixed an issue where RMC enhanced memo skill didn't count as Mem doing the targeting for ally targets, for the sake of things like Victory in a Blink (LC)
+            <ul>
+                <li>Might sound unimportant but if RMC isn't actually doing the targeting, then it would mistakenly trip flags for things like Sacerdos when they shouldn't apply.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Elation Skills weren't counting as abilities for checks that monitor ability usage.</li>
+        <li>Fixed an issue where Aglaea could still access the skill while in the Enhanced state</li>
+        <li>Fixed an issue where Bronya's Ultimate could throw an error when trying to apply the buff to allies</li>
+        <li>Fixed an issue where I was dumb and forgot to remove a console log from World Remaking Delivere. On the general calc this would have no impact, but if one were to use have used that set in the optimizer it would have made things go hella fucking slow.</li>
+        <li>Fixed an issue where some memosprite stats could break due to using old stat referencing from object-based system I used before, rather than the new array stat system that I use now.</li>
+        <li>Fixed an issue where if a memosprite was advanced inside of their own action, it prevented them from being advanced(but it should work)</li>
 
-        <!-- <h4>Optimization</h4>
-        <li>Deprecated some super old and some unused on-hit energy gain methods.</li> -->
+        <h4>Optimization</h4>
+        <li>Made some changes to how a character caches actions for the sake of enhanced versions of abilities, on the following characters:
+            <ul>
+                <li>Aglaea</li>
+                <li>RMC</li>
+            </ul>
+        </li>
+        <li>Made some huge changes to how characters overall will define baseline actions when entering logic trees. This wasn't done for optimization's sake, but it does make things microscopically faster for the optimizer.</li>
         
 
         <!-- <h3>Optimizer</h3> -->
@@ -50,6 +82,25 @@
                 <li>Now instead if you run a clearly contrary stat to a character's needs, if that is the only option you gave the optimizer, it will use it. However if other usable options are ever provided, it will use those instead.</li>
             </ul>
         </li> -->
+
+    </ul>
+</div>
+
+<div>
+    <h1>Mar 10th, 2026 - The "Part 2: My net died so I got a lot of stuff done offline" Update</h1>
+    Granted on day 2 my net came back so I had to catch up on other things, didn't get as much done as day 1
+    <ul>
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added the following lightcones to the calculator:
+            <ul>
+                <h4>Destruction</h4>
+                <li>Dance at Sunset</li>
+                <li>A Trail of Bygone Blood</li>
+                <li>Indelible Promise</li>
+            </ul>
+        </li>
+        <li>Added a counts display on lightcone search for the calc, so you can see how many lightcones of a given path have been coded so far versus how many remain.</li>
 
     </ul>
 </div>

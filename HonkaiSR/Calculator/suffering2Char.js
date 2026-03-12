@@ -3553,7 +3553,7 @@ const battleActions = {
 
         const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
         poke("AttackStart",battleData,generalInfo);
-        
+
         const allLength = allTargetArray.length;
         const blastLength = enemyBlastTargets.length;
         const blastAOELength = enemyBlastAOETargets.length;
@@ -5233,11 +5233,12 @@ const turnLogic = {
                 // "ownerTurn": {},
             },
         ],
-        "finalListeners": [
+        "finalListeners": [//AbilityTriggerOverride
             {
                 "trigger": "BasicATKStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Basic ATK)",
@@ -5247,6 +5248,7 @@ const turnLogic = {
                 "trigger": "SkillStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Skill)",
@@ -5256,6 +5258,7 @@ const turnLogic = {
                 "trigger": "UltimateStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Ultimate)",
@@ -5265,6 +5268,7 @@ const turnLogic = {
                 "trigger": "FUAStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (FUA)",
@@ -5274,9 +5278,20 @@ const turnLogic = {
                 "trigger": "MemoSkillStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Memo Skill)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ElationSkillStart",
+                condition(battleData,generalInfo) {
+                    poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
+                },
+                "target": "self",
+                "listenerName": "Universal action start listener (Elation Skill)",
                 "ownerTurn": {},
             },
 
@@ -5285,6 +5300,7 @@ const turnLogic = {
                 "trigger": "BasicATKEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Basic ATK)",
@@ -5294,6 +5310,7 @@ const turnLogic = {
                 "trigger": "SkillEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Skill)",
@@ -5303,6 +5320,7 @@ const turnLogic = {
                 "trigger": "UltimateEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Ultimate)",
@@ -5312,6 +5330,7 @@ const turnLogic = {
                 "trigger": "FUAEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (FUA)",
@@ -5321,6 +5340,17 @@ const turnLogic = {
                 "trigger": "MemoSkillEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
+                },
+                "target": "self",
+                "listenerName": "Universal action end listener (Memo Skill)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ElationSkillEnd",
+                condition(battleData,generalInfo) {
+                    poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Memo Skill)",
@@ -6443,20 +6473,43 @@ const turnLogic = {
         logic(thisTurn,battleData) {//TODO: circle back for target logic for the skill
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
-            // let enhancedCheck = battleValues.nextBasicEnhanced;
 
-            // shouldHeal
-            // !enhancedCheck
             if (minimum && checkSkill(battleData,thisTurn)) {
-                
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.gallagherSkillHeal, target: null, endTurn: true};
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasic, target: "enemy", endTurn: true}
-            const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
-            return thisTurn.battleValues.nextBasicEnhanced ? returnBasicEnhCall : returnBasicCall;
+            return thisTurn.battleValues.nextBasicEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.gallagherSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.gallagherBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.gallagherBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             gallagherBasic(battleData,target,sourceTurn) {
@@ -7066,13 +7119,32 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.huohuoSkillHeal, target: null, endTurn: true}
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData);
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.huohuoBasic, target: "enemy", endTurn: true}
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.huohuoSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.huohuoBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             huohuoBasic(battleData,target,sourceTurn) {
@@ -7567,20 +7639,34 @@ const turnLogic = {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
-            // let enhancedCheck = battleValues.nextBasicEnhanced;
 
-            // shouldHeal
-            // !enhancedCheck
             if (minimum && checkSkill(battleData,thisTurn)) {
-                
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.natashaSkillHeal, target: null, endTurn: true};
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.natashaBasic, target: "enemy", endTurn: true}
-            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.natashaSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.natashaBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             natashaBasic(battleData,target,sourceTurn) {
@@ -8192,14 +8278,32 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.lynxSkillHeal, target: null, endTurn: true};
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.lynxBasic, target: "enemy", endTurn: true}
-            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.lynxSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.lynxBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             lynxBasic(battleData,target,sourceTurn) {
@@ -8697,13 +8801,32 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.luochaSkillHeal, target: null, endTurn: true}
+                const returnSkillCall = this.returnSkillCall
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData);
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.luochaBasic, target: "enemy", endTurn: true}
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.luochaSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.luochaBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             luochaBasic(battleData,target,sourceTurn) {
@@ -9438,25 +9561,37 @@ const turnLogic = {
     //Nihility
     "Silver Wolf": {
         logic(thisTurn,battleData) {
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let characterName = "Silver Wolf";
-            // let logicShort = turnLogic[characterName]
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-            let couldImplant = true;//shortRef.skillFunctions.swCheckWeakness(battleData);
+            // let couldImplant = true;
+            //shortRef.skillFunctions.swCheckWeakness(battleData);
 
-            if (minimum && couldImplant && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.swSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.swBasic, target: "enemy", endTurn: true};
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.swSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.swBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "weaknessIndexConversion": {
             "Fire": WeaknessFire,
@@ -10239,19 +10374,33 @@ const turnLogic = {
     },
     "Kafka": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
-
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.kafkaSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.kafkaBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.kafkaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.kafkaBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -10961,18 +11110,33 @@ const turnLogic = {
     },
     "Hysilens": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
-
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.fishladySkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.fishladyBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.fishladySkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.fishladyBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -12087,12 +12251,8 @@ const turnLogic = {
     },
     "Black Swan": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
-
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
-
-
             /*
                 65% base chance 
                 * 0.6 = 0.39
@@ -12103,14 +12263,30 @@ const turnLogic = {
                 1 / .39 = 2.19 - 1 = 1.19
             */
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.blackswanSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.blackswanBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.blackswanSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.blackswanBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -13062,17 +13238,34 @@ const turnLogic = {
     },
     "Pela": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.pelaSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.pelaBasic, target: "enemy", endTurn: true};
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.pelaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.pelaBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             pelaBasic(battleData,target,sourceTurn) {
@@ -13630,17 +13823,33 @@ const turnLogic = {
     //Hunt
     "Topaz & Numby": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.topazSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.topazBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.topazSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.topazBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -14282,6 +14491,9 @@ const turnLogic = {
 
             //separated from below bc the turn controller will keep looping back into the action controller here while the turn is active
             //and this needs to be distinct as the start condition, rather than be involved in the continous casting
+
+            //TODO: forgot to make this note, but now that we know they're all just extra turns inside the bound of his turn, we need to change this later
+            //but it's not gonna matter until cerydra gets added so potentially put that off until then :)
             let skipSecondaryCheckSameSkill = false;
             if (currentSP >= minimumPointsToStart && !statCalls.skillStarted && checkSkill(battleData,thisTurn)) {
                 statCalls.skillStarted = true;
@@ -14292,17 +14504,43 @@ const turnLogic = {
                 actionUsed = true;
                 if (currentSP >= 2 && statCalls.skillCounter < maximumCasts && (skipSecondaryCheckSameSkill || checkSkill(battleData,thisTurn))) {
                     statCalls.skillCounter += 1;
-                    return this.returnSkillCall ??= {action: "Skill", points: -2, actionCall: this.skillFunctions.archerSkillInstance, target: "enemy", endTurn: false};
+                    return this.returnSkillCall;
                 }
                 else {
                     statCalls.skillCounter = 0;
                     statCalls.skillStarted = false;
-                    return {action: "EndTurn", endTurn: true};
+                    return this.returnSkillCallEnd;
                 }
             }
 
-            if (!actionUsed) {return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.archerBasic, target: "enemy", endTurn: true};}
+            if (!actionUsed) {return this.returnBasicCall;}
             //default to basic atk when all else fails
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -2, 
+                actionCall: this.skillFunctions.archerSkillInstance, 
+                target: "enemy", 
+                endTurn: false
+            }
+            this.returnSkillCallEnd ??= {
+                action: "EndTurn", 
+                endTurn: true,
+                isAttack: false,
+                isAbility: false,
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.archerBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             archerBasic(battleData,target,sourceTurn) {
@@ -14901,18 +15139,36 @@ const turnLogic = {
     //Harmony
     "Tingyun": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.tingyunSkill, target: "char1", endTurn: true};
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = "char1";
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.tingyunBasic, target: "enemy", endTurn: true};
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.tingyunSkill, 
+                target: "char1", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.tingyunBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             tingyunBasic(battleData,target,sourceTurn) {
@@ -15477,27 +15733,36 @@ const turnLogic = {
     },
     "Bronya": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
             let currentSP = battleData.skillPointCurrent;
-            // let actionUsed = false;
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,30);
             let minimum = currentSP >= 1;
-            // let skillPointsCheck = currentSP > 3;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.bronyaAdvance, target: null, endTurn: true};
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.bronyaBasic, target: "enemy", endTurn: true};
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.bronyaAdvance, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.bronyaBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             bronyaBasic(battleData,target,sourceTurn) {
@@ -15735,11 +16000,8 @@ const turnLogic = {
                 buffSheet[CritDamageBase] = critDMGTotalBonus;
                 buffSheet[CritDamageBaseNULL] = -critDMGTotalBonus;
 
-                for (let targetTurn of battleData.allyPositions) {
-
-                    buffSheet.duration = turnOverride;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
-                }
+                const allyPositions = battleData.allyPositions;
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -16012,27 +16274,36 @@ const turnLogic = {
     },
     "Sunday": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
-            
-            // let actionUsed = false;
-            // let statCalls = thisTurn.battleValues;
-            // let shortCalls = shortRef.skillFunctions;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,30);
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                let target = battleData.nameBasedTurns.char1;
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.sundayAdvance, target: null, endTurn: true}
-                returnSkillCall.target = target;
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.sundayBasic, target: "enemy", endTurn: true}
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.sundayAdvance, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.sundayBasic, 
+                target: "enemy", 
+                endTurn: true,
+            }
         },
         "skillFunctions": {
             sundayBasic(battleData,target,sourceTurn) {
@@ -16684,26 +16955,34 @@ const turnLogic = {
     },
     "Tribbie": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
             let currentSP = battleData.skillPointCurrent;
-            // let actionUsed = false;
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,30);
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.tribbieSkill, target: "team", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.tribbieBasic, target: "enemy", endTurn: true}
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.tribbieSkill, 
+                target: "team", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.tribbieBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             tribbieBasic(battleData,target,sourceTurn) {
@@ -17458,26 +17737,34 @@ const turnLogic = {
     },
     "Robin": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
             let currentSP = battleData.skillPointCurrent;
-            // let actionUsed = false;
-            // let statCalls = thisTurn.battleValues;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,35);
             let minimum = currentSP >= 1;
 
-
-            // checkSkill(battleData,thisTurn)
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.robinSkill, target: "self", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.robinBasic, target: "enemy", endTurn: true}
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.robinSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.robinBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             robinBasic(battleData,target,sourceTurn) {
@@ -18039,18 +18326,34 @@ const turnLogic = {
     },
     "Asta": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.astaSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.astaBasic, target: "enemy", endTurn: true};
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.astaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.astaBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             astaBasic(battleData,target,sourceTurn) {
@@ -18635,21 +18938,35 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Ruan Mei": {//ATKOBJECTS DONE
+    "Ruan Mei": {
         logic(thisTurn,battleData) {
-            let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.ruanmeiSkill, target: "self", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                // let skillRef = skillPathing["Basic ATK"].Monodrama.variant1;
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.ruanmeiBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.ruanmeiSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.ruanmeiBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -19321,26 +19638,40 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sparkle": {//ATKOBJECTS DONE
+    "Sparkle": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
-            let actionUsed = false;
             let minimum = currentSP >= 1;
 
             const skillIsFree = thisTurn.nextSkillFree;
 
             if ((minimum || skillIsFree) && checkSkill(battleData,thisTurn)) {
-                actionUsed = true;
-
-                const skillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.sparkleAdvance, target: null, endTurn: true};
+                const skillCall = this.returnSkillCall;
                 skillCall.target = battleData.nameBasedTurns.char1;
                 skillCall.points = skillIsFree ? 0 : -1;
                 return skillCall;
             }
 
-
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.sparkleBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.sparkleAdvance, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.sparkleBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -20128,14 +20459,39 @@ const turnLogic = {
             const isEnhanced = statCalls.isEnhanced;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.saberSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.saberBasicReg, target: "enemy", endTurn: true};
-            const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.saberBasicEnhanced, target: "enemy", endTurn: true};
-            return isEnhanced ? returnBasicEnhCall : returnBasicCall;
-            //default to basic atk when all else fails
+            return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.saberSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.saberBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.saberBasicReg, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             saberBasicReg(battleData,target,sourceTurn) {
@@ -21031,29 +21387,46 @@ const turnLogic = {
     },
     "Blade": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
-            // let E1 = true;
-            let actionUsed = false;
-            const shortRef = this;
-
-            // const statCalls = shortRef.characterValuesBattle;
-            const shortCalls = shortRef.skillFunctions;
-
             let currentSP = battleData.skillPointCurrent;
 
             const isEnhanced = thisTurn.battleValues.hellscapeActive;
             const minimum = currentSP >= 1;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.bladeSkillInstance, target: "enemy", endTurn: false};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                const basicToCall = isEnhanced ? shortCalls.bladeBasicEnhanced : shortCalls.bladeBasic;
-                return {action: "BasicATK", points: isEnhanced ? 0 : 1, actionCall: basicToCall, target: "enemy", endTurn: true};
+            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.bladeSkillInstance, 
+                target: "enemy", 
+                endTurn: false
             }
-            //default to basic atk when all else fails
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.bladeBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.bladeBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             bladeBasic(battleData,target,sourceTurn) {
@@ -21757,22 +22130,45 @@ const turnLogic = {
     },
     "Jingliu": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP >= 1;
             const isEnhanced = thisTurn.battleValues.enhancedActive;
 
             if (isEnhanced) {
-                const returnSkillCall2 = this.returnSkillCall2 ??= {action: "Skill", points: 0, actionCall: this.skillFunctions.jingliuSkillEnhanced, target: "enemy", endTurn: true};
-                return returnSkillCall2;
+                return this.returnSkillCall2;
             }
             else if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.jingliuSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return {action: "BasicATK", points: 1, actionCall: this.skillFunctions.jingliuBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.jingliuSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnSkillCall2 ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.jingliuSkillEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {action: "BasicATK", 
+                points: 1, 
+                isAttack: true,
+                isAbility: true,
+                actionCall: this.skillFunctions.jingliuBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -22434,40 +22830,49 @@ const turnLogic = {
     //Remembrance
     "Trailblazer - Remembrance": {
         logic(thisTurn,battleData) {
-            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
-            const shortRef = this;
-            let actionUsed = false;
-
             let statCalls = thisTurn.battleValues;
             const summonUp = statCalls.memIsActive;
-            let shortCalls = shortRef.skillFunctions;
 
             let currentSP = battleData.skillPointCurrent;
-            // let minimumPointsToStart = 4;
-            // let desiredCasts = 5;
-            // let maximumCasts = 5;
             const minimum = currentSP>0;
             const basicIsEnhanced = statCalls.epicStacks && summonUp;
-            // const skillIsUp = thisTurn.evernightSkillIsActive;
 
-
-
-            // if (minimum && !summonUp && statCalls.memCharge != 1) {//thisTurn.numinosityIsActive
-            //     return {action: "Skill", points: -1, actionCall: shortCalls.rmcSkill, target: "self", endTurn: true};
-            // }
-
-            if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: shortCalls.rmcSkill, target: "self", endTurn: true};
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall;
                 return returnSkillCall;
             }
 
-            if (!actionUsed) {
-                // const basicToCall = isEnhanced ? shortCalls.aggyBasicEnhanced : shortCalls.aggyBasicReg;
-                
-                const basicToCall = basicIsEnhanced ? shortCalls.rmcBasicEnhanced : shortCalls.rmcBasic;
-                return {action: "BasicATK", points: 1, actionCall: basicToCall, target: "enemy", endTurn: true};
+            const actionChosen = basicIsEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.rmcSkill, 
+                target: "self", 
+                endTurn: true
             }
-            //default to basic atk when all else fails
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.rmcBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.rmcBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {//rmcMemTURNEVENT
             rmcBasic(battleData,target,sourceTurn) {
@@ -22884,7 +23289,7 @@ const turnLogic = {
                 poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"});
 
                 const char1 = battleData.nameBasedTurns.char1;
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:char1, targetSkill:skillRef.slot});
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot});
                 battleActions.actionAdvance(1,char1,battleData,"Mem's Support");
 
                 const buffSheet = ATKObjects.rmcMemsSupportSHEET;
@@ -23119,16 +23524,16 @@ const turnLogic = {
                     const HPScalar = values[1];
                     const flatHP = values[3];
                     Object.assign(rmcMenuStats,{
-                        "SPDBase": SPDScalar,
-                        "SPDFlat": 0,
-                        "SPD%": 0,
+                        [SPDBase]: SPDScalar,
+                        [SPDFlat]: 0,
+                        [SPDP]: 0,
 
-                        "HPBase": rmcMenuStats.HPBase * HPScalar,
-                        "HPFlat": rmcMenuStats.HPFlat * HPScalar + flatHP,
-                        "HP%": rmcMenuStats["HP%"],
-                        "LVL": 80,
+                        [HPBase]: rmcMenuStats[HPBase] * HPScalar,
+                        [HPFlat]: rmcMenuStats[HPFlat] * HPScalar + flatHP,
+                        [HPP]: rmcMenuStats[HPP],
+                        [LVL]: 80,
 
-                        "CharacterAggroBase": characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+                        [CharacterAggroBase]: characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
                     });
 
 
@@ -23561,27 +23966,46 @@ const turnLogic = {
     },
     "Aglaea": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
-            const shortRef = this;
-            let actionUsed = false;
-
-            let statCalls = shortRef.characterValuesBattle;
-            let shortCalls = shortRef.skillFunctions;
-
+            let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
             const isEnhanced = statCalls.supremeStanceActive;
 
-            if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: shortCalls.aggySkill, target: "self", endTurn: true};
-                return returnSkillCall;
+            if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                const basicToCall = isEnhanced ? shortCalls.aggyBasicEnhanced : shortCalls.aggyBasicReg;
-                return {action: "BasicATK", points: isEnhanced ? 0 : 1, actionCall: basicToCall, target: "enemy", endTurn: true};
+            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.aggySkill, 
+                target: "self", 
+                endTurn: true
             }
-            //default to basic atk when all else fails
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.aggyBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.aggyBasicReg, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             aggyBasicReg(battleData,target,sourceTurn) {
@@ -24407,16 +24831,16 @@ const turnLogic = {
 
 
                     Object.assign(aggyMenuStats,{
-                        "SPDBase": aggyMenuStats.SPDBase * SPDScalar,
-                        "SPDFlat": aggyMenuStats.SPDFlat * SPDScalar,
-                        "SPD%": aggyMenuStats["SPD%"],
+                        [SPDBase]: aggyMenuStats[SPDBase] * SPDScalar,
+                        [SPDFlat]: aggyMenuStats[SPDFlat] * SPDScalar,
+                        [SPDP]: aggyMenuStats[SPDP],
 
-                        "HPBase": aggyMenuStats.HPBase * HPScalar,
-                        "HPFlat": aggyMenuStats.HPFlat * HPScalar + flatHP,
-                        "HP%": aggyMenuStats["HP%"],
-                        "LVL": 80,
+                        [HPBase]: aggyMenuStats[HPBase] * HPScalar,
+                        [HPFlat]: aggyMenuStats[HPFlat] * HPScalar + flatHP,
+                        [HPP]: aggyMenuStats[HPP],
+                        [LVL]: 80,
 
-                        "CharacterAggroBase": characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+                        [CharacterAggroBase]: characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
 
                         // "AggroBase": 0,"AggroBase%": 0,"Aggro%": 0,"AggroFlat": 0,
                     });
@@ -24915,26 +25339,1395 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Evernight": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            // const skillIsUp = thisTurn.evernightSkillIsActive;
+
+            if (checkSkill(battleData,thisTurn)) {
+                return this.returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.evernightSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.evernightBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
+        },
+        "skillFunctions": {
+            evernightBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.evernightBasicREF ??= ATKObjects["Basic ATK"]["Time Thence Blurs"].variant1;
+
+                if (!ATKObjects.evernightBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.evernightBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Ice"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.evernightBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                    }
+                }
+                let ATKObject = ATKObjects.evernightBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+                logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            evernightSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.evernightSkillREF ??= ATKObjects.Skill["Day Gently Slips"].variant1;
+                let values = ATKObjects.evernightSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:"Self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
+                battleActions.consumeHP(battleData,false,0.10,sourceTurn,sourceTurn,"Skill",false,true);
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot});
+                //this is batshit crazy, but using the skill does count as an ally single target, for the sake of something like sacerdos
+                
+                const eveyTurn = sourceTurn.everEveyTURNEVENT;
+                if (eveyTurn.isActive) {
+                    if (!ATKObjects.evernightSkillEveyHEALOBJECT) {
+                        // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                        ATKObjects.evernightSkillEveyHEALOBJECT = {
+                            multipliers: {
+                                primary: values[3],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: null,
+                            DMGTags: [],
+                            slot: skillRef.slot
+                        }
+                    }
+                    let healObject = ATKObjects.evernightSkillEveyHEALOBJECT;
+                    battleActions.healAlly(battleData,healObject,eveyTurn,sourceTurn,skillRef.slot,1);
+                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:healTarget, targetSkill:skillRef.slot});
+                }
+                else {
+                    logicRef.skillFunctions.addEveyToField(battleData,sourceTurn);
+                }
+
+                logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
+
+                poke("EvernightGainMemoria",battleData,{pointsGained: 2 + (sourceTurn.riddleIsActive ? 12 : 0),sourceString:"Evernight Skill"});
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            evernightSkillCritDMG(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.evernightSkillREF ??= ATKObjects.Skill["Day Gently Slips"].variant1;
+                let values = ATKObjects.evernightSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+
+                if (!ATKObjects.evernightSkillOWNERSHEET) {
+                    const rank = sourceTurn.rank;
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.evernightSkillOWNERSHEET = {
+                        "stats": null,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillOwnerCountdown,
+                        "durationInTurn": 2,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.evernightSkillExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.evernightSkillMemoBUFFSHEET = {
+                        "stats": [CritDamageBase,CritDamageBaseNULL],
+                        [CritDamageBase]: 0,
+                        [CritDamageBaseNULL]: -0,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillCritDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": false,
+                    }
+                }
+
+                const allyPositions = battleData.allyPositions;
+                let remembranceCharacters = 0;
+                const pathCountBonus = ATKObjects.remembrancePathBonusSkill ??= [0.05,0.15,0.50,0.65];
+                const ownerPath = sourceTurn.path;
+                for (let ally of allyPositions) {
+                    if (ally.path === ownerPath) {remembranceCharacters += 1;}
+                }
+                const baseBonus = pathCountBonus[remembranceCharacters-1];
+
+                const statsRef = sourceTurn.statTable;
+                const critDamage = statsRef[CritDamageBase] + statsRef[CritDamageBaseNULL];
+                const conversion = (values[0] * critDamage) + baseBonus;
+
+
+                const ownerSheet = ATKObjects.evernightSkillOWNERSHEET;
+
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,ownerSheet);
+                const allySheet = ATKObjects.evernightSkillMemoBUFFSHEET;
+                allySheet[CritDamageBase] = conversion;
+                allySheet[CritDamageBaseNULL] = -conversion;
+
+
+
+                const declaredMemosprites = battleData.declaredMemosprites;
+                for (let memo of declaredMemosprites) {
+                    updateBuff(battleData,memo,allySheet,false,null,false,true);
+                }
+
+                sourceTurn.evernightSkillIsActive = true;
+            },
+            evernightSkillExpired(battleData,evernightSlot) {
+                const evernightTurn = battleData.nameBasedTurns[evernightSlot];
+                evernightTurn.evernightSkillIsActive = false;
+
+                const logicRef = turnLogic[evernightTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.evernightSkillMemoBUFFSHEET;
+                // const updateBuff = battleActions.updateBuff;
+                const declaredMemosprites = battleData.declaredMemosprites;
+                for (let memo of declaredMemosprites) {
+                    removeBuff(battleData,memo,buffSheet);
+                }
+            },
+            addEveyToField(battleData,sourceTurn) {
+                const eveyTurn = sourceTurn.everEveyTURNEVENT;
+
+                eveyTurn.currentHP = eveyTurn.maxHP;//reset HP to full
+                eveyTurn.isDead = false;
+                eveyTurn.isActive = true;
+                eveyTurn.AV = eveyTurn.AVBase;//reset accumulated AV
+
+                //inserting into physical positions
+                const alliedSpots = battleData.allyPositions;
+                for (let i=0;i<alliedSpots.length;i++) {
+                    const currentTurn = alliedSpots[i];
+                    //look for aggy's position and put garment in AFTER her, slotwise, so if she's char1, garment is inserted between char1 and char2
+                    if (currentTurn.properName === sourceTurn.properName) {
+                        alliedSpots.splice(i+1,0,eveyTurn);
+                        break;
+                    }
+                }
+
+                const charValuesRef = sourceTurn.battleValues;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                // charValuesRef.netherRemainingTurns = 3;
+
+                sourceTurn.activeSummons += 1;
+                sourceTurn.activeMemosprites += 1;
+                charValuesRef.eveyIsActive = true;
+                sourceTurn.memoriaIsReadyForAdvance = true;
+
+                //inserting into the actual turn order
+                battleData.nextTurnAV.push(eveyTurn);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: eveyTurn.eventImage, AV: battleData.sumAV});}
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: eveyTurn});
+                poke("AllyCreated",battleData,{targetTurn:eveyTurn});
+                battleActions.assignAttackTargetsEnemy(battleData);
+
+
+                if (!ATKObjects.eveyWasSummonedDMGSHEET) {
+                    let skillRef = ATKObjects.evernightMemoTalentREF ??= ATKObjects["Memosprite Talent"]["Solitude, Drifting, In Murk"].variant1;
+                    let values = ATKObjects.evernightMemoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const buffNames = logicRef.buffNames;
+                    // const buffName = logicRef.buffNames.netherSummonDMG;
+                    ATKObjects.eveyWasSummonedDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: values[0],
+                        "statsOnHit": null,
+                        "source": eveyTurn.properName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.eveySummonDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                    }
+                }
+                let buffSheet = ATKObjects.eveyWasSummonedDMGSHEET;
+                // const allyPositions = battleData.allyPositions;
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,eveyTurn,buffSheet);
+
+                battleActions.actionAdvance(1,eveyTurn,battleData,"Evey summoned advance");
+            },
+            eveyTurnAttack(battleData,memoTurn) {
+                // eventOwner: ownerTurn.name
+                const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const logicRef = turnLogic[evernightTurn.properName];
+                const valuesRef = evernightTurn.battleValues
+                const skillFunctions = logicRef.skillFunctions;
+
+                const memoriaCheck = valuesRef.memoria;
+
+                if (memoriaCheck >= 16) {
+                    skillFunctions.eveyEnhancedAttack(battleData,memoTurn,evernightTurn);
+                }
+                else {
+                    skillFunctions.eveyBasicAttack(battleData,memoTurn,evernightTurn);
+                }
+            },
+            eveyBasicAttack(battleData,memoTurn,evernightTurn) {
+                const logicRef = turnLogic[evernightTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.eveyTurnAttackREF ??= ATKObjects["Memosprite Skill"]["Remembrance, Whirling, Like Rain"].variant1;
+                let values = ATKObjects.eveyTurnAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,evernightTurn);
+
+                if (!ATKObjects.eveyTurnAttackATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[evernightTurn.properName].memoSkill;
+                    const scalar = "HP";
+                    // const tags = ["All","Basic","Lightning"];
+                    const tags = ["All","Ice"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    // const actionTags = ["Basic","Attack"];
+                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const compositeCacheTag = tags + actionTags + evernightTurn.properName;
+                    ATKObjects.eveyTurnAttackATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        bonusMultiplier: 0,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.eveyTurnAttackATKOBJECT;
+
+                // console.log(memoTurn)
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
+                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+
+                //trace HP consume
+                logicRef.skillFunctions.traceHPConsume(battleData,evernightTurn,memoTurn);
+                const memoria = evernightTurn.battleValues.memoria;
+                const extraMulti = Math.floor(memoria/4);
+                ATKObject.bonusMultiplier = values[1] *  extraMulti;
+
+                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,evernightTurn);
+                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
+                poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Remembrance, Whirling, Like Rain"});
+            },
+            eveyEnhancedAttack(battleData,memoTurn,evernightTurn) {
+                const logicRef = turnLogic[evernightTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.eveyTurnAttackEnhancedREF ??= ATKObjects["Memosprite Skill"]["Dream, Dissolving, as Dew"].variant1;
+                let values = ATKObjects.eveyTurnAttackEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,evernightTurn);
+
+                if (!ATKObjects.eveyTurnAttackEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[evernightTurn.properName].memoSkill2;
+
+                    const scalar = "HP";
+                    // const tags = ["All","Basic","Lightning"];
+                    const tags = ["All","Ice"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    // const actionTags = ["Basic","Attack"];
+                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const compositeCacheTag = tags + actionTags + evernightTurn.properName;
+                    ATKObjects.eveyTurnAttackEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            blastAOE: values[1],//BLAST AOE HITS FIRST, NOT the primary target, for whatever fuckin reason
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag,
+                        // bonusMultiplier: 0,
+                    }
+                }
+                // blastAOETargets
+                let ATKObject = ATKObjects.eveyTurnAttackEnhancedATKOBJECT;
+                const multipliers = ATKObject.multipliers;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot,isEnhanced:true, eventOverrideImage: memoTurn.eventImage});}
+                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                evernightTurn.memoriaIsReadyForAdvance = true;
+
+                //trace HP consume
+                logicRef.skillFunctions.traceHPConsume(battleData,evernightTurn,memoTurn);
+                const valuesRef = evernightTurn.battleValues;
+                const memoria = valuesRef.memoria;
+                multipliers.primary = values[0] * memoria;
+                multipliers.blastAOE = values[1] * memoria;
+
+                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,evernightTurn);
+
+
+
+                battleActions.updateSkillPoints(1,battleData,{sourceTurn:evernightTurn,sourceName:"Evey enhanced skill"});
+                const finalMemoria = valuesRef.memoria;
+                poke("EvernightGainMemoria",battleData,{pointsGained: -finalMemoria,sourceString:"Consumed Memoria [Enhanced Skill]"});
+                logicRef.skillFunctions.eveyDeathFunction(battleData,memoTurn,null,finalMemoria);
+
+                if (evernightTurn.riddleIsActive) {
+                    const oldValue = valuesRef.riddleStacks;
+                    valuesRef.riddleStacks -= 1;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Evey Enhanced Skill", bodyText: `Darkest Riddle (Evernight): ${oldValue} --> ${valuesRef.riddleStacks}`});}
+                }
+
+                if (evernightTurn.rank >= 6) {
+                    const flooredRefund = Math.floor(memoria * 0.30);
+                    poke("EvernightGainMemoria",battleData,{pointsGained: flooredRefund,sourceString:"E6 Memoria Refund"});
+                }
+
+                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
+            },
+            eveyDeathFunction(battleData,deathTurn,deathParam,memoriaStacks) {
+                const ownerTurn = battleData.nameBasedTurns[deathTurn.eventOwner];
+
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                battleActions.consumeHP(battleData,false,1,deathTurn,ownerTurn,"Talent",false,true);
+                let skillRef = ATKObjects.eveyTalentREF ??= ATKObjects["Memosprite Talent"]["You, Parting, Beyond Reach"].variant1;
+                
+                deathTurn.currentHP = 0;
+                deathTurn.isDead = true;
+                deathTurn.isActive = false;
+                const valuesRef = ownerTurn.battleValues;
+
+                //remove nether from the turn order
+                const eventName = deathTurn.properName;
+                const nextAV = battleData.nextTurnAV;
+                for (let i=0;i<nextAV.length;i++) {
+                    let deathTurn = nextAV[i];
+                    if (deathTurn.properName === eventName) {
+                        nextAV.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+                //removal from actual lineup positions(for blast factors on enemy to ally attacks)
+                const positions = battleData.allyPositions;
+                for (let i=0;i<positions.length;i++) {
+                    let deathTurn = positions[i];
+                    if (deathTurn.properName === eventName) {
+                        positions.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+
+                
+                ownerTurn.activeSummons -= 1;
+                ownerTurn.activeMemosprites -= 1;
+                valuesRef.eveyIsActive = false;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Remove", assignedTo: ownerTurn.properName, summonedBy: ownerTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: deathTurn.eventImage, AV: battleData.sumAV});}
+                battleActions.assignAttackTargetsEnemy(battleData);
+
+                if (!ATKObjects.eveyDiedSPDSheet) {
+                    // let skillRef = sourceTurn.evernightMemoTalentREF ??= sourceTurn["Memosprite Talent"]["Solitude, Drifting, In Murk"].variant1;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    const buffNames = logicRef.buffNames;
+                    // const buffName = logicRef.buffNames.netherSummonDMG;
+                    ATKObjects.eveyDiedSPDSheet = {
+                        "stats": [SPDP],
+                        [SPDP]: 0.10,
+                        "statsOnHit": null,
+                        "source": "Evey Death",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.eveyDiedSPD,
+                        "durationInTurn": 1,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        "removeOnDeath": true,
+                    }
+                    // "eveyDiedSPD": "You, Parting, Beyond Reach",
+                }
+
+                const finalMemoria = memoriaStacks ?? valuesRef.memoria;
+                const SPDValue = 0.10 + Math.min(0.40,(finalMemoria ?? 0)/100);
+
+                const normalSPDSheet = ATKObjects.eveyDiedSPDSheet;
+                normalSPDSheet[SPDP] = SPDValue;
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,ownerTurn,normalSPDSheet);
+
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
+                poke("AllyDied",battleData,{targetTurn:deathTurn});
+            },
+            traceHPConsume(battleData,evernightTurn,consumeTarget) {
+
+                battleActions.consumeHP(battleData,false,0.05,consumeTarget,evernightTurn,"Trace",false,true);
+
+                const logicRef = turnLogic[evernightTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.traceHPConsumeCritDMGSHEET) {
+                    ATKObjects.traceHPConsumeCritDMGSHEET = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: 0.15,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": evernightTurn.properName,
+                        "buffName": logicRef.buffNames.traceCritConsume,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+                }
+                const memoTurn = evernightTurn.everEveyTURNEVENT;
+                const buffSheet = ATKObjects.traceHPConsumeCritDMGSHEET;
+                const updateBuff = battleActions.updateBuff;
+                
+                updateBuff(battleData,evernightTurn,buffSheet);
+                if (memoTurn.isActive) {
+                    updateBuff(battleData,memoTurn,buffSheet);
+                }
+                
+            },
+            evernightUltimate(battleData,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const valuesRef = sourceTurn.battleValues;
+                let skillRef = ATKObjects.evernightUltimateREF ??= ATKObjects.Ultimate["O Wakeful World, Goodnight"].variant1;
+                let values = ATKObjects.evernightUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                const energy = battleActions.updateEnergy;
+                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                
+                logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
+
+                // const logicRef = turnLogic[characterName];
+                const eveyTurn = sourceTurn.everEveyTURNEVENT;
+                if (!eveyTurn.isActive) {logicRef.skillFunctions.addEveyToField(battleData,sourceTurn);}
+                const oldValue = valuesRef.riddleStacks;
+                valuesRef.riddleStacks = 2 + (rank>=2 ? 2 : 0);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Evey Ultimate", bodyText: `Darkest Riddle (Evernight): ${oldValue} --> ${valuesRef.riddleStacks}`});}
+                sourceTurn.riddleIsActive = true;
+
+
+                if (!ATKObjects.evernightUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const scalar = "HP";
+                    // const tags = ["All","Basic","Lightning"];
+                    const tags = ["All","Ice","Ultimate"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    // const actionTags = ["Basic","Attack"];
+                    const actionTags = ["Attack","Ultimate","Summon","Memosprite"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.evernightUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+
+
+                    const buffNames = logicRef.buffNames;
+                    // const rank = sourceTurn.rank;
+                    ATKObjects.evernightUltimateVulnSHEET = {
+                        "stats": [VulnAll],
+                        [VulnAll]: values[3],
+                        "statsOnHit": null,
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.ultVuln,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": null
+                    }
+                    ATKObjects.evernightUltimateDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: values[2],
+                        "statsOnHit": null,
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.ultDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let ATKObject = ATKObjects.evernightUltimateATKOBJECT;
+                const dmgSheet = ATKObjects.evernightUltimateDMGSHEET;
+                const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
+
+                
+
+                
+                const updateBuff = battleActions.updateBuff;
+                
+                updateBuff(battleData,sourceTurn,dmgSheet);
+                updateBuff(battleData,eveyTurn,dmgSheet);
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,vulnSheet);
+
+                battleActions.attackWrapper(battleData,skillRef,eveyTurn,ATKObject);
+                energy(battleData,skillRef.energyRegen,sourceTurn);
+
+                sourceTurn.ultyQueued = false;
+            },
+            removeRiddleState(battleData,evernightTurn) {
+                evernightTurn.riddleIsActive = false;
+                const eveyTurn = evernightTurn.everEveyTURNEVENT;
+
+                const logicRef = turnLogic[evernightTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const dmgSheet = ATKObjects.evernightUltimateDMGSHEET;
+                const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
+                // const updateBuff = battleActions.updateBuff;
+
+                removeBuff(battleData,evernightTurn,dmgSheet);
+                removeBuff(battleData,eveyTurn,dmgSheet);
+
+                const enemyPositions = battleData.enemyPositions;
+                for (let enemy of enemyPositions) {removeBuff(battleData,enemy,vulnSheet);}
+            },
+            evernightTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.evernightTechREF ??= ATKObjects.Technique["Let it Rain Cold On Thee"].variant1;
+                // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Technique - Let it Rain Cold On Thee"});
+                logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+            evernightE1FinalMulti(battleData,ownerTurn) {
+                if (battleData.battleIsOver) {return;}
+                const enemyPositions = battleData.enemyPositions;
+                const currentEnemies = Math.min(4,enemyPositions?.length ?? 0);
+                const buffArray = [1,1.5,1.3,1.25,1.2];
+                const lastBuffGiven = ownerTurn.evernightE1LastMultiGiven ?? 0;
+
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.E1FinalMultiSHEET) {
+                    const characterName = ownerTurn.properName;
+                    const logicRef = turnLogic[characterName];
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.E1FinalMultiSHEET = {
+                        "stats": null,
+                        "multiplier": 1,
+                        "source": "E1",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.e1MemoMulti,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isFinalMulti": true,
+                        "actionTags": ["All"]
+                    }
+                }
+
+                if (lastBuffGiven === currentEnemies) {return;}
+                const buffSheet = ATKObjects.E1FinalMultiSHEET;
+                buffSheet.multiplier = buffArray[currentEnemies];
+                const updateBuff = battleActions.updateBuff;
+
+                const declaredMemosprites = battleData.declaredMemosprites;
+                for (let memo of declaredMemosprites) {
+                    removeBuff(battleData,memo,buffSheet,true);
+                    updateBuff(battleData,memo,buffSheet);
+                }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "EvernightGainMemoria",
+                condition(battleData,generalInfo) {
+                    // poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // memoria
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+
+                    const valuesRef = ownerTurn.battleValues;
+                    const oldValue = valuesRef.memoria;
+                    valuesRef.memoria += pointsGained + (ownerTurn.rank >= 2 ? 2 : 0);
+                    // valuesRef.memoria = Math.min(21,valuesRef.memoria + pointsGained);//this is just for hardcapping stack gains to line up in testing scenarios
+                    const resoRef = valuesRef.memoria;
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Memoria (Evernight): ${oldValue} --> ${resoRef} [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Memoria (Evernight): ${oldValue} --> ${resoRef} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.evernightMemoPointSum ??= 0;
+                            ownerTurn.evernightMemoPointSum += valuesRef.memoria - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "evernightMemoPointSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.memoria,
+                            currentSumValue: ownerTurn.evernightMemoPointSum,
+                            currentAddedValue: valuesRef.memoria - oldValue
+                        });
+                    }
+                    if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+
+                    
+                    const isReadyForAdvance = ownerTurn.memoriaIsReadyForAdvance;
+                    const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                    if (resoRef >= 16 && isReadyForAdvance && eveyTurn.isActive) {
+                        battleActions.actionAdvance(1,eveyTurn,battleData,"Memoria >= 16");
+                        ownerTurn.memoriaIsReadyForAdvance = false;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Memoria Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const charValuesRef = ownerTurn.battleValues;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+
+                    // battleData.nameIndex[properName] = characterEntry;
+                    const evernightMenuStats = [...battleData.menuStats[ownerTurn.name]];
+                    let skillRef = ATKObjects.evernightTalentREF ??= ATKObjects["Talent"]["With Me, This Night"].variant1;
+                    let values = ATKObjects.evernightTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    // const SPDScalar = values[3];
+                    const HPScalar = values[4];
+                    // const flatHP = values[5];
+                    Object.assign(evernightMenuStats,{
+                        [SPDBase]: values[3],
+                        [SPDFlat]: 0,
+                        [SPDP]: 0,
+
+                        [HPBase]: evernightMenuStats[HPBase] * HPScalar,
+                        [HPFlat]: evernightMenuStats[HPFlat] * HPScalar,
+                        [HPP]: evernightMenuStats[HPP],
+                        [LVL]: 80,
+
+                        [CharacterAggroBase]: characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+                    });
+
+
+                    let AggroStats = calcs.getAggroFinal(evernightMenuStats);
+                    let SPDStats = calcs.getSPDFinal(evernightMenuStats);
+                    let HPStats = calcs.getHPFinal(evernightMenuStats);
+                    const eveyTurnAttack = logicRef.skillFunctions.eveyTurnAttack;
+                    const ActionEntry = {
+                        AV:SPDStats.SPDActionValue,
+                        AVBase:SPDStats.SPDActionValue,
+                        SPD:SPDStats.SPDFinal,
+
+                        currentHP: HPStats.HPFinal,
+                        maxHP: HPStats.HPFinal,
+
+                        currentAggro: AggroStats.AggroFinal,
+                        baseAggro: AggroStats.AggroBaseFinal,
+
+                        maxEnergy: ownerTurn.maxEnergy,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        debuffCounter: 0,
+                        DOTCounter: 0,
+                        activeFinalMultipliers: {},
+                        finalMultiCounter: 0,
+                        shieldCounter: 0,
+                        shieldValueCurrent: 0,
+                        shieldValueMax: 0,
+                        activeShields: {},
+
+                        properName: "Evey",
+                        name: "evernightMemosprite",
+                        
+                        statTable: evernightMenuStats,
+                        statTableONHIT: new Array(greatTableSize).fill(0),
+                        buffsObject: {},
+                        teamDebuffs: {},
+                        buffsStartTurn: [],
+                        buffsEndTurn: [],
+                        tagSpecific: {},
+                        cacheTagValues: {
+                            "UpdateStatDamage": {
+                                //compositeCacheTag will define itself here when used, and the tag will be the key
+                            },
+                            "UpdateStatElation": {},
+                            "UpdateStatMerryMake": {},
+                            "UpdateStatDamageReduction": {},
+                            "UpdateStatDEFShred": {},
+                            "UpdateStatPEN": {},
+                            "UpdateStatVulnerable": {},
+                            "UpdateStatCritRate": {},
+                            "UpdateStatCritDamage": {},
+                        },
+                        isDead: false,
+                        rank: ownerTurn.rank,
+                        element: ownerTurn.element,
+                        path: null,
+                        cantBeTargeted: false,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isMemosprite: true,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: eveyTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Evey"],
+                        deathFunction: logicRef.skillFunctions.eveyDeathFunction,
+                        // deathParam: null,
+                    };
+                    battleData.nameIndex["Evey"] = "evernightMemosprite";
+
+                    // summaryTurns[properName] = 0;
+                    battleData.nameBasedTurns["evernightMemosprite"] = ActionEntry;
+                    ownerTurn.everEveyTURNEVENT = ActionEntry;
+                    battleData.declaredMemosprites.push(ActionEntry);
+                    battleData.allAlliesArray.push(ActionEntry);
+                    battleData.allAllyTargetsArray.push(ActionEntry);
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    ownerTurn.summonEventRef = "everEveyTURNEVENT";
+                    ownerTurn.memospriteEventRef = "everEveyTURNEVENT";
+                    
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Evey creation", bodyText: `Memosprite "${ActionEntry.properName}" entity constructed`});}
+                },
+                "target": "self",
+                "listenerName": "Everynight Evey construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                    const everName = ownerTurn.properName;
+                    const eveyName = eveyTurn.properName;
+                    if (sourceTurn.properName != eveyName && sourceTurn.properName != everName) {return;}
+                    //we only monitor hp loss from evey and evernight, not anyone else
+
+                    const wasAttack = generalInfo.wasAttack;
+                    const alreadyHappenedEvernight = ownerTurn.talentHPLossFromAttack;
+                    const alreadyHappenedEvey = eveyTurn.talentHPLossFromAttack;
+
+                    if (wasAttack) {
+                        if (sourceTurn.properName === everName) {
+                            if (alreadyHappenedEvernight) {return;}
+                            else {
+                                sourceTurn.talentHPLossFromAttack = true;
+                            }
+                        }
+                        if (sourceTurn.properName === eveyName) {
+                            if (alreadyHappenedEvey) {return;}
+                            else {
+                                sourceTurn.talentHPLossFromAttack = true;
+                            }
+                        }
+                    }
+                    poke("EvernightGainMemoria",battleData,{pointsGained: 2,sourceString:"Evernight or Evey lost HP"});
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!ATKObjects.talentHPLostCRITDMGSHEET) {
+                        let skillRef = ATKObjects.evernightTalentREF ??= ATKObjects["Talent"]["With Me, This Night"].variant1;
+                        let values = ATKObjects.evernightTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                        ATKObjects.talentHPLostCRITDMGSHEET = {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: values[1],
+                            "statsOnHit": null,
+                            "source": "Talent",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.talentHPLossCrit,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "removeOnDeath": true,
+                        }
+                    }
+                    const buffSheet = ATKObjects.talentHPLostCRITDMGSHEET;
+                    const updateBuff = battleActions.updateBuff;
+                    
+                    buffSheet.duration = ownerTurn.turnState ? 3 : 2;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    if (eveyTurn.isActive) {
+                        buffSheet.duration = eveyTurn.turnState ? 3 : 2;
+                        updateBuff(battleData,eveyTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Talent ally lost HP memoria gain + CRIT DMG Bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackStart",
+                condition(battleData,generalInfo) {
+                    // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (!sourceTurn.isEnemy) {return;}
+                    let ownerTurn = this.ownerTurn;
+                    const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                    ownerTurn.talentHPLossFromAttack = false;
+                    eveyTurn.talentHPLossFromAttack = false;
+
+                    //the talent has a restriction on attacks landed to evey or evernight, making it so they can only proc the 
+                    //crit dmg buff and memoria gain once each per attack received, this just resets the attack boolean so they can proc again
+                },
+                "target": "self",
+                "listenerName": "Talent enemy attack proc reset",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let targetTurn = generalInfo.slotRef;
+
+                    if (!ownerTurn.riddleIsActive) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
+                    battleActions.updateBuff(battleData,targetTurn,vulnSheet);
+                },
+                "target": "enemy",
+                "listenerName": "Enemy created while darkest riddle active debuff application",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (!ownerTurn.turnState) {return;}
+
+                    if (ownerTurn.riddleIsActive) {
+                        const valuesRef = ownerTurn.battleValues;
+                        if (valuesRef.riddleStacks === 0) {
+                            const removeRiddleState = this.removeRiddleState ??= turnLogic[ownerTurn.properName].skillFunctions.removeRiddleState;
+                            removeRiddleState(battleData,ownerTurn);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Evernight turnstart riddle expiration",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const energyToRegen = 70;
+
+                    battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                },
+                "target": "self",
+                "listenerName": "Rouse the Flame, Lull the Light: battlestart energy regen + memoria gain",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "MemoSkillStart",
+                condition(battleData,generalInfo) {
+                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                    let ownerTurn = this.ownerTurn;
+                    const energyToRegen = 5;
+                    
+
+                    battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                },
+                "target": "self",
+                "listenerName": "Rouse the Flame, Lull the Light: ally memosprite skill",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "SkillStart",
+                condition(battleData,generalInfo) {
+                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+                    const energyToRegen = 5;
+                    battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                },
+                "target": "self",
+                "listenerName": "Rouse the Flame, Lull the Light: everynight skill",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "BasicATKStart",
+                condition(battleData,generalInfo) {
+                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+                    const energyToRegen = 5;
+                    battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                },
+                "target": "self",
+                "listenerName": "Rouse the Flame, Lull the Light: everynight basic",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+                    const energyToRegen = 5;
+                    battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                },
+                "target": "self",
+                "listenerName": "Rouse the Flame, Lull the Light: everynight ult",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattleEnterCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const addEveyToField = this.addEveyToField ??= turnLogic[ownerTurn.properName].skillFunctions.addEveyToField;
+                    addEveyToField(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "battlestart evey summon",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                    
+                    // const rank = sourceTurn.rank;
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 0.35,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,eveyTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Dark the Night, Still the Moon: crit rate bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    // const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.evernightUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            isAttackUlt: true,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Evernight - Ultimate queued",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const evernightTechnique = this.evernightTechnique ??= logicRef.skillFunctions.evernightTechnique;
+                        evernightTechnique(battleData,"self",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Evernight Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "EnemyCreated",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        // let targetTurn = generalInfo.slotRef;
+                        const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
+                        evernightE1FinalMulti(battleData,ownerTurn);
+                    },
+                    "target": "team",
+                    "listenerName": "Enemy created E1 buff application",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "EnemyDied",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        //so I took Marr's E1 evernight into echo of war divine seed, and the two buds the lady summons can both be killed with evey enhanced skill
+                        //however the damage dealt to each of them VARIES, bc the left one dies first, the multiplier is adjusted, and the right one takes more dmg bc of it
+                        const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
+                        evernightE1FinalMulti(battleData,ownerTurn);
+                    },
+                    "target": "team",
+                    "listenerName": "Enemy killed E1 buff application",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+            ],
+            2: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const eveyTurn = ownerTurn.everEveyTURNEVENT;
+    
+                        // const rank = sourceTurn.rank;
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: 0.40,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2CritDMG,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        const updateBuff = battleActions.updateBuff;
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,eveyTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Listen Up, the Slumber Speaks Soft: crit DMG bonus",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                        
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [DamageBreakEfficiency],
+                            [DamageBreakEfficiency]: 0.25,
+                            "statsOnHit": null,
+                            "source": "E4",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4AllyBreakEff,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        const updateBuff = battleActions.updateBuff;
+                        updateBuff(battleData,eveyTurn,buffSheet);//evey gets the bonus twice, so we just cheat and say 2 stacks by applying once here and later when applying to all memos
+
+                        //then adjust to one stack before applying to others
+                        const declaredMemosprites = battleData.declaredMemosprites;
+                        for (let memo of declaredMemosprites) {
+                            updateBuff(battleData,memo,buffSheet);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Wake Up, the Tomorrow is Yours: memosprite break eff bonus",
+                    "ownerTurn": {},
+                },
+            ],
+            5: [],
+            6: [
+                {
+                    "trigger": "AllyCreated",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+
+                        if (!this.e6RESPENSHEET) {
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const buffName = logicRef.buffNames.e6AllyRESPEN;
+                            this.e6RESPENSHEET = {
+                                "stats": [ResistanceAllPEN],
+                                [ResistanceAllPEN]: 0.20,
+                                "source": "E6",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 2,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "removeOnDeath": true,
+                            }
+                        }
+    
+                        const buffSheet = this.e6RESPENSHEET;
+                        const targetTurn = generalInfo.targetTurn;
+                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    },
+                    "target": "team",
+                    "listenerName": "Like This, Always: ally res pen bonus",
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "eveyIsActive": false,
+            "memoria": 0,
+            "riddleStacks": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Enhance",
+        "buffNames": {
+            "traceCrit": "Dark the Night, Still the Moon",
+            "traceCritConsume": "Dark the Night, Still the Moon (Crit DMG)",
+            "eveySummonDMG": "Solitude, Drifting, In Murk",
+            "pathCritDMG": "Kindle the Morn, Drop the Rain",
+            "talentHPLossCrit": "With Me, This Night",
+            "eveyDiedSPD": "You, Parting, Beyond Reach",
+            "skillOwnerCountdown": "Day Gently Slips (Countdown)",
+            "skillCritDMG": "Day Gently Slips",
+            "ultVuln": "Darkest Riddle (Vuln)",
+            "ultDMG": "Darkest Riddle (DMG)",
+            "e1MemoMulti": "Sleep Tight, the Night Dreams Long",
+            "e2CritDMG": "Listen Up, the Slumber Speaks Soft",
+            "e4AllyBreakEff": "Wake Up, the Tomorrow is Yours",
+            "e6AllyRESPEN": "Like This, Always",
+        },
+        "characterValuesBattle": {},
+    },
     //Preservation
     "Dan Heng • Permansor Terrae": {
         logic(thisTurn,battleData) {
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // const shortRef = this;
-            // const battleValues = shortRef.characterValuesBattle;
-            // let actionUsed = false;
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.dhptSkill, target: "self", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.dhptBasic, target: "enemy", endTurn: true};
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.dhptSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.dhptBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             dhptBasic(battleData,target,sourceTurn) {
@@ -25907,21 +27700,33 @@ const turnLogic = {
     },
     "Aventurine": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            const shortRef = this;
-            let actionUsed = false;
-            let shortCalls = shortRef.skillFunctions;
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.aventurineSkill, target: "self", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: shortCalls.aventurineBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.aventurineSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.aventurineBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -26753,20 +28558,34 @@ const turnLogic = {
     //Erudition
     "Argenti": {
         logic(thisTurn,battleData) {
-            let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
-            // const isEnhanced = statCalls.isEnhanced;
 
             if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.argentiSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.argentiBasic, target: "enemy", endTurn: true};
-            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.saberBasicEnhanced, target: "enemy", endTurn: true};
-            return returnBasicCall;
-            //default to basic atk when all else fails
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.argentiSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK",
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.argentiBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             argentiBasic(battleData,target,sourceTurn) {
@@ -27302,18 +29121,34 @@ const turnLogic = {
     },
     "Anaxa": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.anaxaSkill, target: "enemy", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.anaxaBasic, target: "enemy", endTurn: true};
-            return returnBasicCall;
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.anaxaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.anaxaBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             anaxaBasic(battleData,target,sourceTurn) {
@@ -28280,17 +30115,34 @@ const turnLogic = {
     //Elation
     "Yao Guang": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
+            // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.yaoSkill, target: "self", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.yaoguangBasic, target: "enemy", endTurn: true};
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.yaoSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.yaoguangBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -29191,11 +31043,29 @@ const turnLogic = {
             const minimum = currentSP>0 || statCalls.thrill>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: 0, actionCall: this.skillFunctions.sparxSkillInstance, target: "self", endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
-
-            if (!actionUsed) {return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.sparxBasic, target: "enemy", endTurn: true};}
+            return this.returnBasicCall
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: false,
+                points: 0, 
+                actionCall: this.skillFunctions.sparxSkillInstance, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.sparxBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             sparxBasic(battleData,target,sourceTurn) {
@@ -30253,6 +32123,7 @@ const turnLogic = {
         logic(thisTurn,battleData) {
             return {action: "EndTurn", endTurn: true};
         },
+        preLogic(thisTurn,battleData) {},
         "skillFunctions": {
             elationSkill(battleData,target,sourceTurn) {},
         },

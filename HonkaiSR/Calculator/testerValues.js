@@ -105,7 +105,7 @@ const customDisplayValuesLog = {
     ],
     "Evernight": [//not on live
         {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Memoria", refName: "memoria", isBattleValue: true},
+        {valueName: "Memoria", refName: "memoria", isBattleValue: true,summaryValue: "evernightMemoPointSum",summaryType: "SUM"},
         {valueName: "Darkest Riddle", refName: "riddleStacks", isBattleValue: true},
     ],
     "Castorice": [//not on live
@@ -351,7 +351,13 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Black Swan": defaultStandardAbilityDisplayWarnings,
-
+    "Evernight": {
+        hasEnhancedState: false,
+        "Skill": "The skill does not use Skill Points, so no permanent condition applies here other than what you define.",
+        "Ultimate": "",
+        "SkillPermaConditions": [],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
 
     "Z_Test": defaultStandardAbilityDisplayWarnings,
 }
@@ -410,6 +416,8 @@ const conditionLibrary = {
                 return stat1Value >= stat2Value;
             case "=": 
                 return stat1Value === stat2Value;
+            case "!=": 
+                return stat1Value != stat2Value;
             case "<=": 
                 return stat1Value <= stat2Value;
             case "<": 
@@ -532,6 +540,14 @@ const conditionLibrary = {
     },
     "Skill Points: Max"(battleData,sourceTurn,condition) {
         return battleData.battleTable.SPMax
+    },
+
+    //ENEMY TEAM VALUES
+    "Enemy Team: Value"(battleData,sourceTurn,condition) {
+        return conditionLibrary[condition.teamValue](battleData,sourceTurn);
+    },
+    "Enemies: Count"(battleData,sourceTurn,condition) {
+        return battleData.enemyPositions.length;
     },
 
 
@@ -1042,6 +1058,32 @@ const defaultConditions = {
                             "inputValue": 20
                         }
                     ]
+                }
+            ]
+        }
+    },
+    "Evernight": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "phase": "Any Part",
+                    "state": false
+                },
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "eveyIsActive",
+                    "state": false,
+                    "isBattleValue": true
                 }
             ]
         }
