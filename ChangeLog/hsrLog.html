@@ -7,25 +7,19 @@
 </div> -->
 
 <div>
-    <h1>Mar 11th, 2026</h1>
+    <h1>Mar 12th, 2026</h1>
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
-        <!-- <li>Added the following characters to the calculator:
+        <li>Added the following characters to the calculator:
             <ul>
-                <li>Black Swan</li>
+                <li>Evernight</li>
             </ul>
-        </li> -->
-        <!-- <li>Added updated image handling when dealing damage instances to enemies.
-            <ul>
-                <li>Before, when dealing dmg it would always show an enemy position indicator next to the image, but if it was the boss enemy it wouldn't adjust the image to be Glorpard and would show a regular glorp instead.</li>
-            </ul>
-        </li> -->
-        <!-- <li>Added the above image handling to buff application and removal, but also added enemy position numbers as well in case several enemies receive buffs at once, in order to help identify visually which one was which without inspecting them.</li> -->
+        </li>
         <li>Added the following lightcones to the calculator:
             <ul>
-                <h4>Remembrance (Finished)</h4>
-                <li>This Love, Forever</li>
+                <h4>Remembrance</h4>
+                <!-- <li>This Love, Forever</li> -->
                 <li>Geniuses' Greetings</li>
                 <li>Sweat Now, Cry Less</li>
                 <li>The Flower Remembers</li>
@@ -64,6 +58,9 @@
         <li>Fixed an issue where Elation Skills weren't counting as abilities for checks that monitor ability usage.</li>
         <li>Fixed an issue where Aglaea could still access the skill while in the Enhanced state</li>
         <li>Fixed an issue where Bronya's Ultimate could throw an error when trying to apply the buff to allies</li>
+        <li>Fixed an issue where I was dumb and forgot to remove a console log from World Remaking Delivere. On the general calc this would have no impact, but if one were to use have used that set in the optimizer it would have made things go hella fucking slow.</li>
+        <li>Fixed an issue where some memosprite stats could break due to using old stat referencing from object-based system I used before, rather than the new array stat system that I use now.</li>
+        <li>Fixed an issue where if a memosprite was advanced inside of their own action, it prevented them from being advanced(but it should work)</li>
 
         <h4>Optimization</h4>
         <li>Made some changes to how a character caches actions for the sake of enhanced versions of abilities, on the following characters:

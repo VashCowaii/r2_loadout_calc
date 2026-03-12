@@ -4646,7 +4646,8 @@ const turnLogicLightcones = {
                     let targetTurn = generalInfo.targetTurn;
                     const skillType = generalInfo.targetSkill;
                     const skillCheck = skillType === "Ultimate" || skillType === "Skill";
-                    if (!targetTurn || !skillCheck) {return;}//target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
+                    const targetType = generalInfo.targetType;
+                    if (!targetTurn || !skillCheck || targetType != "Single") {return;}//target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
 
                     if (!sourceTurn.groundedAscentHymnSHEET) {
                         let lcNameRef = "A Grounded Ascent";
@@ -5294,6 +5295,7 @@ const turnLogicLightcones = {
 
 
     //REMEMBRANCE
+        //5star
     "Time Woven Into Gold": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -6023,6 +6025,327 @@ const turnLogicLightcones = {
             "allyDMG": "Reception [LC]"
         },
     },
+    // "This Love, Forever": {
+    //     logic(thisTurn,battleData) {},
+    //     "skillFunctions": {},
+    //     "listeners": [
+    //         {
+    //             "trigger": "TargetAlly",
+    //             condition(battleData,generalInfo) {
+    //                 let ownersSlots = this.ownersSlots;
+    //                 let sourceTurn = generalInfo.sourceTurn;
+    //                 if (!sourceTurn.isMemosprite || sourceTurn.lcThisLoveBlankActive) {return;}
+
+    //                 let targetTurn = generalInfo.targetTurn;
+    //                 const targetType = generalInfo.targetType;
+    //                 if (!targetTurn || targetType != "Single") {return;}
+    //                 //target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
+    //                 //UPDATE: to be safe we're doing an actual check for target type specified on the call
+
+    //                 const sourceOwner = sourceTurn.eventOwner;
+    //                 const sourceOwnerTurn = battleData.nameBasedTurns[sourceOwner];
+    //                 let ownerRank = ownersSlots[sourceOwnerTurn.name];
+    //                 if (!ownerRank) {return;}
+
+
+    //                 if (!sourceOwnerTurn.lcThisLoveForeverBLANKSHEET) {
+    //                     let lcNameRef = "This Love, Forever";
+    //                     let lcPathing = lightcones[lcNameRef].params;
+    //                     let rankParams = lcPathing[ownerRank-1];
+
+    //                     const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+    //                     let buffName1 = buffNames.buff1;
+    //                     let buffName2 = buffNames.buff11;
+    //                     let buffName3 = buffNames.buff111;
+
+    //                     const customName = `${buffName2} (${sourceTurn.properName})`;
+    //                     if (!buffNames[customName]) {buffNames[customName] = customName;}
+
+    //                     const customName2 = `${buffName3} (${sourceTurn.properName})`;
+    //                     if (!buffNames[customName2]) {buffNames[customName2] = customName2;}
+
+    //                     sourceOwnerTurn.lcThisLoveForeverBLANKSHEET = {
+    //                         "stats": null,
+    //                         "source": lcNameRef,
+    //                         "sourceOwner": sourceOwnerTurn.properName,
+    //                         "buffName": buffName1,
+    //                         "durationInTurn": null,
+    //                         "duration": 1,
+    //                         "AVApplied": 0,
+    //                         "maxStacks": 1,
+    //                         "currentStacks": 1,
+    //                         "decay": false,
+    //                         "expireType": null,
+    //                     }
+    //                     sourceOwnerTurn.lcThisLoveForeverBLANKSHEET2 = {
+    //                         "stats": [VulnAll],
+    //                         [VulnAll]: rankParams[2],
+    //                         "source": lcNameRef,
+    //                         "sourceOwner": sourceOwnerTurn.properName,
+    //                         "buffName": buffName2,
+    //                         "durationInTurn": null,
+    //                         "duration": 1,
+    //                         "AVApplied": 0,
+    //                         "maxStacks": 1,
+    //                         "currentStacks": 1,
+    //                         "decay": false,
+    //                         "expireType": null,
+    //                         "isDebuff": true,
+    //                     }
+    //                     sourceOwnerTurn.lcThisLoveForeverBLANKSHEET3 = {
+    //                         "stats": [VulnAll],
+    //                         [VulnAll]: rankParams[2] * (1 + rankParams[3]),
+    //                         "source": lcNameRef,
+    //                         "sourceOwner": sourceOwnerTurn.properName,
+    //                         "buffName": buffName3,
+    //                         "durationInTurn": null,
+    //                         "duration": 1,
+    //                         "AVApplied": 0,
+    //                         "maxStacks": 1,
+    //                         "currentStacks": 1,
+    //                         "decay": false,
+    //                         "expireType": null,
+    //                         "isDebuff": true,
+    //                     }
+    //                 }
+
+    //                 const buffSheet = sourceOwnerTurn.lcThisLoveForeverBLANKSHEET;
+    //                 // const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+    //                 // if (buffCheck) {return;}
+    //                 battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+    //                 sourceTurn.lcThisLoveBlankActive = true;
+                    
+    //                 const enemyPositions = battleData.enemyPositions;
+
+    //                 if (sourceTurn.lcThisLoveVerseActive) {//if verse is also active when reaching this point, use the enhanceds buff instead
+    //                     const buffSheet3 = sourceOwnerTurn.lcThisLoveForeverBLANKSHEET3;
+    //                     updateBuffBatchTargets(battleData,enemyPositions,buffSheet3);
+
+    //                     //remove old Verse and remake it to enhanced
+    //                     const buffSheet12 = sourceOwnerTurn.lcThisLoveForeverVERSESHEET2;
+    //                     const allyArray = battleData.allAlliesArray;
+    //                     removeBuffFromBatch(battleData,allyArray,buffSheet12,true,null,false,true);
+    //                     const buffSheet13 = sourceOwnerTurn.lcThisLoveForeverVERSESHEET3;
+    //                     updateBuffBatchTargets(battleData,allyArray,buffSheet13);
+    //                 }
+    //                 else {//otherwise use the standard vuln
+    //                     const buffSheet2 = sourceOwnerTurn.lcThisLoveForeverBLANKSHEET2;
+    //                     updateBuffBatchTargets(battleData,enemyPositions,buffSheet2);
+    //                 }
+                    
+    //             },
+    //             "target": "self",
+    //             "listenerName": "This Love, Forever target ally listener vuln application",
+    //             "owners": [],
+    //             "ownersSlots": {},
+    //         },
+    //         {
+    //             "trigger": "EnemyCreated",
+    //             condition(battleData,generalInfo) {
+    //                 // let ownerRef = this.owners;
+    //                 let ownersSlots = this.ownersSlots;
+    //                 // let lcNameRef = "Poised to Bloom";
+    //                 const targetTurn = generalInfo.targetTurn;
+
+    //                 // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+    //                 const namedTurns = battleData.nameBasedTurns;
+    //                 const updateBuff = battleActions.updateBuff;
+    //                 for (let ownerSlot in ownersSlots) {
+    //                     const currentOwner = namedTurns[ownerSlot];
+
+    //                     const memoTurnRef = currentOwner.memospriteEventRef;
+    //                     const memoTurn = currentOwner[memoTurnRef];
+    //                     if (!memoTurn) {continue;}
+
+    //                     const blankActive = memoTurn.lcThisLoveBlankActive;
+    //                     const verseActive = memoTurn.lcThisLoveVerseActive;
+    //                     const hasBoth = blankActive && verseActive;
+    //                     if (!blankActive) {continue;}
+
+    //                     const vulnSheet1 = currentOwner.lcThisLoveForeverBLANKSHEET2;
+    //                     const vulnSheet2 = currentOwner.lcThisLoveForeverBLANKSHEET3;
+
+    //                     if (hasBoth) {
+    //                         updateBuff(battleData,targetTurn,vulnSheet2);
+    //                     }
+    //                     else {
+    //                         updateBuff(battleData,targetTurn,vulnSheet1);
+    //                     }
+    //                 }
+    //             },
+    //             "target": "self",
+    //             "listenerName": "This Love, Forever - enemy added to field while vuln active",
+    //             "owners": [],
+    //             "ownersSlots": {}
+    //         },
+    //         {
+    //             "trigger": "AbilityAttackStart",
+    //             condition(battleData,generalInfo) {
+    //                 let ownersSlots = this.ownersSlots;
+    //                 let sourceTurn = generalInfo.sourceTurn;
+    //                 if (!sourceTurn.isMemosprite || sourceTurn.lcThisLoveVerseActive) {return;}
+
+    //                 const sourceOwner = sourceTurn.eventOwner;
+    //                 const sourceOwnerTurn = battleData.nameBasedTurns[sourceOwner];
+    //                 let ownerRank = ownersSlots[sourceOwnerTurn.name];
+    //                 if (!ownerRank) {return;}
+
+
+    //                 if (!sourceOwnerTurn.lcThisLoveForeverVERSESHEET) {
+    //                     let lcNameRef = "This Love, Forever";
+    //                     let lcPathing = lightcones[lcNameRef].params;
+    //                     let rankParams = lcPathing[ownerRank-1];
+
+    //                     const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+    //                     let buffName1 = buffNames.buff2;
+    //                     let buffName2 = buffNames.buff12;
+    //                     let buffName3 = buffNames.buff112;
+
+    //                     const customName = `${buffName2} (${sourceTurn.properName})`;
+    //                     if (!buffNames[customName]) {buffNames[customName] = customName;}
+
+    //                     const customName2 = `${buffName3} (${sourceTurn.properName})`;
+    //                     if (!buffNames[customName2]) {buffNames[customName2] = customName2;}
+
+    //                     sourceOwnerTurn.lcThisLoveForeverVERSESHEET = {
+    //                         "stats": null,
+    //                         "source": lcNameRef,
+    //                         "sourceOwner": sourceOwnerTurn.properName,
+    //                         "buffName": buffName1,
+    //                         "durationInTurn": null,
+    //                         "duration": 1,
+    //                         "AVApplied": 0,
+    //                         "maxStacks": 1,
+    //                         "currentStacks": 1,
+    //                         "decay": false,
+    //                         "expireType": null,
+    //                     }
+    //                     sourceOwnerTurn.lcThisLoveForeverVERSESHEET2 = {
+    //                         "stats": [CritDamageBase],
+    //                         [CritDamageBase]: rankParams[1],
+    //                         "source": lcNameRef,
+    //                         "sourceOwner": sourceOwnerTurn.properName,
+    //                         "buffName": buffName2,
+    //                         "durationInTurn": null,
+    //                         "duration": 1,
+    //                         "AVApplied": 0,
+    //                         "maxStacks": 1,
+    //                         "currentStacks": 1,
+    //                         "decay": false,
+    //                         "expireType": null,
+    //                     }
+    //                     sourceOwnerTurn.lcThisLoveForeverVERSESHEET3 = {
+    //                         "stats": [CritDamageBase],
+    //                         [CritDamageBase]: rankParams[1] * (1 + rankParams[3]),
+    //                         "source": lcNameRef,
+    //                         "sourceOwner": sourceOwnerTurn.properName,
+    //                         "buffName": buffName3,
+    //                         "durationInTurn": null,
+    //                         "duration": 1,
+    //                         "AVApplied": 0,
+    //                         "maxStacks": 1,
+    //                         "currentStacks": 1,
+    //                         "decay": false,
+    //                         "expireType": null,
+    //                     }
+    //                 }
+
+    //                 const buffSheet = sourceOwnerTurn.lcThisLoveForeverVERSESHEET;
+    //                 // const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+    //                 // if (buffCheck) {return;}
+    //                 battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+    //                 sourceTurn.lcThisLoveVerseActive = true;
+    //                 // lcThisLoveVerseActive
+    //                 // lcThisLoveBlankActive
+    //                 const enemyPositions = battleData.enemyPositions;
+    //                 const allyArray = battleData.allAlliesArray;
+
+    //                 if (sourceTurn.lcThisLoveBlankActive) {//if blank is also active when reaching this point, use the enhanceds buff instead
+    //                     const buffSheet3 = sourceOwnerTurn.lcThisLoveForeverVERSESHEET3;
+    //                     updateBuffBatchTargets(battleData,allyArray,buffSheet3);
+
+    //                     //remove old Verse and remake it to enhanced
+    //                     const buffSheet12 = sourceOwnerTurn.lcThisLoveForeverBLANKSHEET2;
+                        
+    //                     removeBuffFromBatch(battleData,enemyPositions,buffSheet12,true,null,false,true);
+    //                     const buffSheet13 = sourceOwnerTurn.lcThisLoveForeverBLANKSHEET3;
+    //                     updateBuffBatchTargets(battleData,enemyPositions,buffSheet13);
+    //                 }
+    //                 else {//otherwise use the standard vuln
+    //                     const buffSheet2 = sourceOwnerTurn.lcThisLoveForeverVERSESHEET2;
+    //                     updateBuffBatchTargets(battleData,allyArray,buffSheet2);
+    //                 }
+    //             },
+    //             "target": "self",
+    //             "listenerName": "This Love, Forever atk start listener",
+    //             "owners": [],
+    //             "ownersSlots": {},
+    //         },
+    //         {
+    //             "trigger": "SummonOnFieldAdjustment",
+    //             condition(battleData,generalInfo) {
+    //                 // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+    //                 let ownersSlots = this.ownersSlots;
+    //                 const sourceTurn = generalInfo.assignedTo;
+    //                 const summonEvent = generalInfo.summonEvent;
+                    
+    //                 let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+    //                 if (!ownerRank || !summonEvent.isMemosprite) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
+    //                 //or if what was assigned, wasn't a memo
+
+    //                 const summonWas = generalInfo.summonWas;
+                    
+    //                 if (summonWas === "Remove") {
+    //                     const blankActive = summonEvent.lcThisLoveBlankActive;
+    //                     const verseActive = summonEvent.lcThisLoveVerseActive;
+    //                     const hasBoth = blankActive && verseActive;
+
+    //                     summonEvent.lcThisLoveBlankActive = false;
+    //                     summonEvent.lcThisLoveVerseActive = false;
+
+    //                     const vulnSheet1 = sourceTurn.lcThisLoveForeverBLANKSHEET2;
+    //                     const vulnSheet2 = sourceTurn.lcThisLoveForeverBLANKSHEET3;
+
+    //                     const critSheet1 = sourceTurn.lcThisLoveForeverVERSESHEET2;
+    //                     const critSheet2 = sourceTurn.lcThisLoveForeverVERSESHEET3;
+
+    //                     if (hasBoth) {
+    //                         const enemyPositions = battleData.enemyPositions;
+    //                         removeBuffFromBatch(battleData,enemyPositions,vulnSheet2);
+
+    //                         const allyArray = battleData.allAlliesArray;
+    //                         removeBuffFromBatch(battleData,allyArray,critSheet2);
+    //                     }
+    //                     else if (blankActive) {
+    //                         const enemyPositions = battleData.enemyPositions;
+    //                         removeBuffFromBatch(battleData,enemyPositions,vulnSheet1);
+    //                     }
+    //                     else if (verseActive) {
+    //                         const allyArray = battleData.allAlliesArray;
+    //                         removeBuffFromBatch(battleData,allyArray,critSheet1);
+    //                     }
+    //                 }
+    //             },
+    //             "target": "self",
+    //             "listenerName": "This Love, Forever - summon adjusted from field listener",
+    //             "owners": []
+    //         },
+    //     ],
+    //     "buffNames": {
+    //         "buff1": "Blank (LC)",
+    //         "buff2": "Verse (LC)",
+    //         "buff11": "Blank Vuln (LC)",
+    //         "buff12": "Verse CRIT (LC)",
+    //         "buff111": "Blank Vuln [Enhanced] (LC)",
+    //         "buff112": "Verse CRIT [Enhanced] (LC)",
+    //     },
+    //     "buffNamesPerCharacter": {
+    //         "buff11": "Blank Vuln (LC)",
+    //         "buff12": "Verse CRIT (LC)",
+    //         "buff111": "Blank Vuln [Enhanced] (LC)",
+    //         "buff112": "Verse CRIT [Enhanced] (LC)",
+    //     }
+    // },
         //4star
     "Fly Into a Pink Tomorrow": {
         logic(thisTurn,battleData) {},
@@ -9232,7 +9555,6 @@ const turnLogicRelics = {
                         // let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                         let relicPathing = relicSets[relicNameRef].params[1];//0-2pc 1-4pc
 
-                        console.log(relicPathing)
                         // const logicRef = this.logicRef ??= turnLogicRelics[relicNameRef][pcRef];
                         const logicRef = turnLogicRelics[relicNameRef][pcRef];
                         const buffNames = logicRef.buffNames;

@@ -1258,6 +1258,101 @@ const hitSplitters = {
             }
         ],
     },
+    "Evernight": {
+        "basic": [
+            {
+              "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "ult": [
+            {
+              "all": {
+                "hitRatio": 1,
+                "toughness": 30
+              },
+              "isMemo": true,
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "memoSkill": [
+            {
+              "primary": {
+                "hitRatio": 0.1,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 0.1,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.1,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.1,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.1,
+                "energyRatio": 1,
+                "toughness": 10
+              }
+            },
+            {
+              "primary": {
+                "hitRatio": 0.5,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+        "memoSkill2": [
+            {
+              "blastAOE": {
+                "hitRatio": 1,
+                "toughness": 20
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true
+            },
+            {
+              "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 30
+              },
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            },
+        ],
+    },
 
     //PRESERVATION
     "Aventurine": {

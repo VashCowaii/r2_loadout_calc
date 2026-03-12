@@ -968,6 +968,7 @@ const sim = {
                 if (isActualTurn) {//things like firefly countdown or robin/aggy countdowns, don't function as actual turns, so we need to make sure they don't actually trigger turn-based events.
                     poke("StartTurn", battleData, {sourceTurn});
                     summaryTurns[turnName] += 1;
+                    sourceTurn.actionAssigned = true;
                 }
                 
                 sourceTurn.uniqueEventFunction(battleData,sourceTurn);
@@ -975,6 +976,7 @@ const sim = {
                 if (isActualTurn) {
                     poke("EndTurn", battleData, {sourceTurn});
                     // clearULT(battleData);
+                    sourceTurn.actionAssigned = false;
                 }
                 
                 sourceTurn.turnState = false;

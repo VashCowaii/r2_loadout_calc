@@ -45,6 +45,7 @@ global.calcAllowedSet = new Set([
     //REMEMBRANCE
     "Trailblazer - Remembrance",
     "Aglaea",
+    "Evernight",
 
     //ELATION
     "Yao Guang",
