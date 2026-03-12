@@ -6473,35 +6473,26 @@ const turnLogic = {
         logic(thisTurn,battleData) {//TODO: circle back for target logic for the skill
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
-            // let enhancedCheck = battleValues.nextBasicEnhanced;
 
-            // shouldHeal
-            // !enhancedCheck
             if (minimum && checkSkill(battleData,thisTurn)) {
-                
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.gallagherSkillHeal, 
-                    target: null, 
-                    endTurn: true
-                };
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
-                action: "BasicATK", 
-                isAttack: true,
+            return thisTurn.battleValues.nextBasicEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
                 isAbility: true,
-                points: 1, 
-                actionCall: this.skillFunctions.gallagherBasic, 
-                target: "enemy", 
+                points: -1, 
+                actionCall: this.skillFunctions.gallagherSkillHeal, 
+                target: null, 
                 endTurn: true
             }
-            const returnBasicEnhCall = this.returnBasicEnhCall ??= {
+            this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -6510,7 +6501,15 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
-            return thisTurn.battleValues.nextBasicEnhanced ? returnBasicEnhCall : returnBasicCall;
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.gallagherBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             gallagherBasic(battleData,target,sourceTurn) {
@@ -7120,20 +7119,24 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.huohuoSkillHeal, 
-                    target: null, 
-                    endTurn: true
-                }
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData);
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.huohuoSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -7142,7 +7145,6 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
-            return returnBasicCall;
         },
         "skillFunctions": {
             huohuoBasic(battleData,target,sourceTurn) {
@@ -7637,26 +7639,26 @@ const turnLogic = {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
-            // let enhancedCheck = battleValues.nextBasicEnhanced;
 
-            // shouldHeal
-            // !enhancedCheck
             if (minimum && checkSkill(battleData,thisTurn)) {
-                
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.natashaSkillHeal, 
-                    target: null, 
-                    endTurn: true
-                };
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.natashaSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -7665,8 +7667,6 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
-            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
-            return returnBasicCall;
         },
         "skillFunctions": {
             natashaBasic(battleData,target,sourceTurn) {
@@ -8278,20 +8278,24 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.lynxSkillHeal, 
-                    target: null, 
-                    endTurn: true
-                };
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.lynxSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -8300,8 +8304,6 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
-            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.gallagherBasicEnhanced, target: "enemy", endTurn: true}
-            return returnBasicCall;
         },
         "skillFunctions": {
             lynxBasic(battleData,target,sourceTurn) {
@@ -8799,20 +8801,24 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.luochaSkillHeal, 
-                    target: null, 
-                    endTurn: true
-                }
+                const returnSkillCall = this.returnSkillCall
                 returnSkillCall.target = battleActions.findLowestHPAlly(battleData);
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.luochaSkillHeal, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -8821,7 +8827,6 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
-            return returnBasicCall;
         },
         "skillFunctions": {
             luochaBasic(battleData,target,sourceTurn) {
@@ -9556,32 +9561,29 @@ const turnLogic = {
     //Nihility
     "Silver Wolf": {
         logic(thisTurn,battleData) {
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let characterName = "Silver Wolf";
-            // let logicShort = turnLogic[characterName]
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-            let couldImplant = true;//shortRef.skillFunctions.swCheckWeakness(battleData);
+            // let couldImplant = true;
+            //shortRef.skillFunctions.swCheckWeakness(battleData);
 
-            if (minimum && couldImplant && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.swSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.swSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -9589,8 +9591,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.swBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return returnBasicCall;
+            }
         },
         "weaknessIndexConversion": {
             "Fire": WeaknessFire,
@@ -10373,35 +10374,33 @@ const turnLogic = {
     },
     "Kafka": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
-
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.kafkaSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.kafkaBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.kafkaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.kafkaBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -11111,34 +11110,33 @@ const turnLogic = {
     },
     "Hysilens": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
-
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.fishladySkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.fishladyBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.fishladySkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.fishladyBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -12253,12 +12251,8 @@ const turnLogic = {
     },
     "Black Swan": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
-
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
-
-
             /*
                 65% base chance 
                 * 0.6 = 0.39
@@ -12269,30 +12263,30 @@ const turnLogic = {
                 1 / .39 = 2.19 - 1 = 1.19
             */
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.blackswanSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.blackswanBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.blackswanSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.blackswanBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -13244,24 +13238,26 @@ const turnLogic = {
     },
     "Pela": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.pelaSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.pelaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -13269,8 +13265,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.pelaBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return returnBasicCall;
+            }
         },
         "skillFunctions": {
             pelaBasic(battleData,target,sourceTurn) {
@@ -13828,33 +13823,33 @@ const turnLogic = {
     //Hunt
     "Topaz & Numby": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.topazSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.topazBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.topazSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.topazBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -14496,6 +14491,9 @@ const turnLogic = {
 
             //separated from below bc the turn controller will keep looping back into the action controller here while the turn is active
             //and this needs to be distinct as the start condition, rather than be involved in the continous casting
+
+            //TODO: forgot to make this note, but now that we know they're all just extra turns inside the bound of his turn, we need to change this later
+            //but it's not gonna matter until cerydra gets added so potentially put that off until then :)
             let skipSecondaryCheckSameSkill = false;
             if (currentSP >= minimumPointsToStart && !statCalls.skillStarted && checkSkill(battleData,thisTurn)) {
                 statCalls.skillStarted = true;
@@ -14506,29 +14504,35 @@ const turnLogic = {
                 actionUsed = true;
                 if (currentSP >= 2 && statCalls.skillCounter < maximumCasts && (skipSecondaryCheckSameSkill || checkSkill(battleData,thisTurn))) {
                     statCalls.skillCounter += 1;
-                    return this.returnSkillCall ??= {
-                        action: "Skill", 
-                        isAttack: true,
-                        isAbility: true,
-                        points: -2, 
-                        actionCall: this.skillFunctions.archerSkillInstance, 
-                        target: "enemy", 
-                        endTurn: false
-                    };
+                    return this.returnSkillCall;
                 }
                 else {
                     statCalls.skillCounter = 0;
                     statCalls.skillStarted = false;
-                    return {
-                        action: "EndTurn", 
-                        endTurn: true,
-                        isAttack: false,
-                        isAbility: false,
-                    };
+                    return this.returnSkillCallEnd;
                 }
             }
 
-            if (!actionUsed) {return this.returnBasicCall ??= {
+            if (!actionUsed) {return this.returnBasicCall;}
+            //default to basic atk when all else fails
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -2, 
+                actionCall: this.skillFunctions.archerSkillInstance, 
+                target: "enemy", 
+                endTurn: false
+            }
+            this.returnSkillCallEnd ??= {
+                action: "EndTurn", 
+                endTurn: true,
+                isAttack: false,
+                isAbility: false,
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -14536,8 +14540,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.archerBasic, 
                 target: "enemy", 
                 endTurn: true
-            };}
-            //default to basic atk when all else fails
+            }
         },
         "skillFunctions": {
             archerBasic(battleData,target,sourceTurn) {
@@ -15136,25 +15139,28 @@ const turnLogic = {
     //Harmony
     "Tingyun": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.tingyunSkill, 
-                    target: "char1", 
-                    endTurn: true
-                };
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = "char1";
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.tingyunSkill, 
+                target: "char1", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -15162,8 +15168,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.tingyunBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return returnBasicCall;
+            }
         },
         "skillFunctions": {
             tingyunBasic(battleData,target,sourceTurn) {
@@ -15728,34 +15733,28 @@ const turnLogic = {
     },
     "Bronya": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
             let currentSP = battleData.skillPointCurrent;
-            // let actionUsed = false;
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,30);
             let minimum = currentSP >= 1;
-            // let skillPointsCheck = currentSP > 3;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.bronyaAdvance, 
-                    target: null, 
-                    endTurn: true
-                };
+                const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.bronyaAdvance, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -15763,8 +15762,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.bronyaBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return returnBasicCall;
+            }
         },
         "skillFunctions": {
             bronyaBasic(battleData,target,sourceTurn) {
@@ -16002,11 +16000,8 @@ const turnLogic = {
                 buffSheet[CritDamageBase] = critDMGTotalBonus;
                 buffSheet[CritDamageBaseNULL] = -critDMGTotalBonus;
 
-                for (let targetTurn of battleData.allyPositions) {
-
-                    buffSheet.duration = turnOverride;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
-                }
+                const allyPositions = battleData.allyPositions;
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -16279,34 +16274,28 @@ const turnLogic = {
     },
     "Sunday": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
-            
-            // let actionUsed = false;
-            // let statCalls = thisTurn.battleValues;
-            // let shortCalls = shortRef.skillFunctions;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,30);
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                let target = battleData.nameBasedTurns.char1;
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.sundayAdvance, 
-                    target: null, 
-                    endTurn: true
-                }
-                returnSkillCall.target = target;
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.sundayAdvance, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -16315,7 +16304,6 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true,
             }
-            return returnBasicCall;
         },
         "skillFunctions": {
             sundayBasic(battleData,target,sourceTurn) {
@@ -16967,33 +16955,26 @@ const turnLogic = {
     },
     "Tribbie": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
             let currentSP = battleData.skillPointCurrent;
-            // let actionUsed = false;
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,30);
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.tribbieSkill, 
-                    target: "team", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.tribbieSkill, 
+                target: "team", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -17002,7 +16983,6 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
-            return returnBasicCall;
         },
         "skillFunctions": {
             tribbieBasic(battleData,target,sourceTurn) {
@@ -17757,33 +17737,26 @@ const turnLogic = {
     },
     "Robin": {
         logic(thisTurn,battleData) {
-            // const shortRef = this;
-            // let characterName = thisTurn.properName
             let currentSP = battleData.skillPointCurrent;
-            // let actionUsed = false;
-            // let statCalls = thisTurn.battleValues;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
-
-            // let ultySoon = battleActions.energyLookAhead(thisTurn,35);
             let minimum = currentSP >= 1;
 
-
-            // checkSkill(battleData,thisTurn)
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.robinSkill, 
-                    target: "self", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.robinSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -17792,7 +17765,6 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
-            return returnBasicCall;
         },
         "skillFunctions": {
             robinBasic(battleData,target,sourceTurn) {
@@ -18354,25 +18326,26 @@ const turnLogic = {
     },
     "Asta": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.astaSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.astaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -18380,8 +18353,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.astaBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return returnBasicCall;
+            }
         },
         "skillFunctions": {
             astaBasic(battleData,target,sourceTurn) {
@@ -18966,37 +18938,35 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Ruan Mei": {//ATKOBJECTS DONE
+    "Ruan Mei": {
         logic(thisTurn,battleData) {
-            let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.ruanmeiSkill, 
-                    target: "self", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                // let skillRef = skillPathing["Basic ATK"].Monodrama.variant1;
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.ruanmeiBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.ruanmeiSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.ruanmeiBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -19668,42 +19638,40 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sparkle": {//ATKOBJECTS DONE
+    "Sparkle": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
-            let actionUsed = false;
             let minimum = currentSP >= 1;
 
             const skillIsFree = thisTurn.nextSkillFree;
 
             if ((minimum || skillIsFree) && checkSkill(battleData,thisTurn)) {
-                actionUsed = true;
-
-                const skillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.sparkleAdvance, 
-                    target: null, 
-                    endTurn: true
-                };
+                const skillCall = this.returnSkillCall;
                 skillCall.target = battleData.nameBasedTurns.char1;
                 skillCall.points = skillIsFree ? 0 : -1;
                 return skillCall;
             }
 
-
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.sparkleBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.sparkleAdvance, 
+                target: null, 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.sparkleBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -20491,28 +20459,22 @@ const turnLogic = {
             const isEnhanced = statCalls.isEnhanced;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.saberSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
-                action: "BasicATK", 
+            return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
                 isAttack: true,
                 isAbility: true,
-                points: 1, 
-                actionCall: this.skillFunctions.saberBasicReg, 
+                points: -1, 
+                actionCall: this.skillFunctions.saberSkill, 
                 target: "enemy", 
                 endTurn: true
-            };
-            const returnBasicEnhCall = this.returnBasicEnhCall ??= {
+            }
+            this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -20520,9 +20482,16 @@ const turnLogic = {
                 actionCall: this.skillFunctions.saberBasicEnhanced, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return isEnhanced ? returnBasicEnhCall : returnBasicCall;
-            //default to basic atk when all else fails
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.saberBasicReg, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             saberBasicReg(battleData,target,sourceTurn) {
@@ -21418,49 +21387,46 @@ const turnLogic = {
     },
     "Blade": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
-            // let E1 = true;
-            let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
 
             const isEnhanced = thisTurn.battleValues.hellscapeActive;
             const minimum = currentSP >= 1;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.bladeSkillInstance, 
-                    target: "enemy", 
-                    endTurn: false
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                const actionChosen = isEnhanced ? this.returnBasicEnhCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: isEnhanced ? 0 : 1, 
-                    actionCall: this.skillFunctions.bladeBasicEnhanced, 
-                    target: "enemy", 
-                    endTurn: true
-                } 
-                : this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: isEnhanced ? 0 : 1, 
-                    actionCall: this.skillFunctions.bladeBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return actionChosen;
+            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.bladeSkillInstance, 
+                target: "enemy", 
+                endTurn: false
             }
-            //default to basic atk when all else fails
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.bladeBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.bladeBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             bladeBasic(battleData,target,sourceTurn) {
@@ -22164,45 +22130,45 @@ const turnLogic = {
     },
     "Jingliu": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP >= 1;
             const isEnhanced = thisTurn.battleValues.enhancedActive;
 
             if (isEnhanced) {
-                const returnSkillCall2 = this.returnSkillCall2 ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 0, 
-                    actionCall: this.skillFunctions.jingliuSkillEnhanced, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall2;
+                return this.returnSkillCall2;
             }
             else if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.jingliuSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", 
-                    points: 1, 
-                    isAttack: true,
-                    isAbility: true,
-                    actionCall: this.skillFunctions.jingliuBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.jingliuSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnSkillCall2 ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.jingliuSkillEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {action: "BasicATK", 
+                points: 1, 
+                isAttack: true,
+                isAbility: true,
+                actionCall: this.skillFunctions.jingliuBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -22864,7 +22830,6 @@ const turnLogic = {
     //Remembrance
     "Trailblazer - Remembrance": {
         logic(thisTurn,battleData) {
-            let actionUsed = false;
             let statCalls = thisTurn.battleValues;
             const summonUp = statCalls.memIsActive;
 
@@ -22873,42 +22838,41 @@ const turnLogic = {
             const basicIsEnhanced = statCalls.epicStacks && summonUp;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.rmcSkill, 
-                    target: "self", 
-                    endTurn: true
-                };
+                const returnSkillCall = this.returnSkillCall;
                 return returnSkillCall;
             }
 
-            if (!actionUsed) {
-
-                const actionChosen = basicIsEnhanced ? this.returnBasicEnhCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.rmcBasicEnhanced, 
-                    target: "enemy", 
-                    endTurn: true
-                } 
-                : this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.rmcBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-
-                return actionChosen;
+            const actionChosen = basicIsEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.rmcSkill, 
+                target: "self", 
+                endTurn: true
             }
-            //default to basic atk when all else fails
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.rmcBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.rmcBasic, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {//rmcMemTURNEVENT
             rmcBasic(battleData,target,sourceTurn) {
@@ -24002,52 +23966,46 @@ const turnLogic = {
     },
     "Aglaea": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
-            let actionUsed = false;
-
             let statCalls = thisTurn.battleValues;
-
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
             const isEnhanced = statCalls.supremeStanceActive;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.aggySkill, 
-                    target: "self", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                // return {action: "BasicATK", points: isEnhanced ? 0 : 1, actionCall: basicToCall, target: "enemy", endTurn: true};
-
-                const actionChosen = isEnhanced ? this.returnBasicEnhCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: isEnhanced ? 0 : 1, 
-                    actionCall: this.skillFunctions.aggyBasicEnhanced, 
-                    target: "enemy", 
-                    endTurn: true} 
-                : this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.aggyBasicReg, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-
-                return actionChosen;
+            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.aggySkill, 
+                target: "self", 
+                endTurn: true
             }
-            //default to basic atk when all else fails
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.aggyBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.aggyBasicReg, 
+                target: "enemy", 
+                endTurn: true
+            }
         },
         "skillFunctions": {
             aggyBasicReg(battleData,target,sourceTurn) {
@@ -25384,30 +25342,26 @@ const turnLogic = {
     //Preservation
     "Dan Heng • Permansor Terrae": {
         logic(thisTurn,battleData) {
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // const shortRef = this;
-            // const battleValues = shortRef.characterValuesBattle;
-            // let actionUsed = false;
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.dhptSkill, 
-                    target: "self", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.dhptSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -25415,8 +25369,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.dhptBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return returnBasicCall;
+            }
         },
         "skillFunctions": {
             dhptBasic(battleData,target,sourceTurn) {
@@ -26389,37 +26342,33 @@ const turnLogic = {
     },
     "Aventurine": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            const shortRef = this;
-            let actionUsed = false;
-            let shortCalls = shortRef.skillFunctions;
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.aventurineSkill, 
-                    target: "self", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: shortCalls.aventurineBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.aventurineSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.aventurineBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -27251,25 +27200,26 @@ const turnLogic = {
     //Erudition
     "Argenti": {
         logic(thisTurn,battleData) {
-            let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
-            // const isEnhanced = statCalls.isEnhanced;
 
             if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.argentiSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.argentiSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK",
                 isAttack: true,
                 isAbility: true,
@@ -27277,10 +27227,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.argentiBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            // const returnBasicEnhCall = this.returnBasicEnhCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.saberBasicEnhanced, target: "enemy", endTurn: true};
-            return returnBasicCall;
-            //default to basic atk when all else fails
+            }
         },
         "skillFunctions": {
             argentiBasic(battleData,target,sourceTurn) {
@@ -27816,25 +27763,26 @@ const turnLogic = {
     },
     "Anaxa": {
         logic(thisTurn,battleData) {
-
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.anaxaSkill, 
-                    target: "enemy", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            const returnBasicCall = this.returnBasicCall ??= {
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.anaxaSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -27842,8 +27790,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.anaxaBasic, 
                 target: "enemy", 
                 endTurn: true
-            };
-            return returnBasicCall;
+            }
         },
         "skillFunctions": {
             anaxaBasic(battleData,target,sourceTurn) {
@@ -28810,33 +28757,34 @@ const turnLogic = {
     //Elation
     "Yao Guang": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            let actionUsed = false;
+            // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: true,
-                    points: -1, 
-                    actionCall: this.skillFunctions.yaoSkill, 
-                    target: "self", 
-                    endTurn: true
-                };
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
 
-            if (!actionUsed) {
-                return this.returnBasicCall ??= {
-                    action: "BasicATK", 
-                    isAttack: true,
-                    isAbility: true,
-                    points: 1, 
-                    actionCall: this.skillFunctions.yaoguangBasic, 
-                    target: "enemy", 
-                    endTurn: true
-                };
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.yaoSkill, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.yaoguangBasic, 
+                target: "enemy", 
+                endTurn: true
             }
         },
         "skillFunctions": {
@@ -29737,18 +29685,21 @@ const turnLogic = {
             const minimum = currentSP>0 || statCalls.thrill>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "Skill", 
-                    isAttack: false,
-                    isAbility: false,
-                    points: 0, 
-                    actionCall: this.skillFunctions.sparxSkillInstance, 
-                    target: "self", 
-                    endTurn: true};
-                return returnSkillCall;
+                return this.returnSkillCall;
             }
-
-            if (!actionUsed) {return this.returnBasicCall ??= {
+            return this.returnBasicCall
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: false,
+                points: 0, 
+                actionCall: this.skillFunctions.sparxSkillInstance, 
+                target: "self", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -29756,7 +29707,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.sparxBasic, 
                 target: "enemy", 
                 endTurn: true
-            };}
+            }
         },
         "skillFunctions": {
             sparxBasic(battleData,target,sourceTurn) {
