@@ -35885,7 +35885,11 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill01_Camera",
+              "Avatar_Advanced_Sparkle_00_Skill01_Phase01",
+              "Avatar_Advanced_Sparkle_00_Skill01_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -36005,7 +36009,13 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Advanced_Sparkle_00_Skill02_Phase01",
+              "Avatar_Sparkle_00_Skill02_Self_Camera",
+              "Avatar_Advanced_Sparkle_00_Skill02_Self_Phase02",
+              "Avatar_Sparkle_00_Skill02_Others_Camera",
+              "Avatar_Advanced_Sparkle_00_Skill02_Others_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -36140,7 +36150,12 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill03_Camera",
+              "Avatar_Advanced_Sparkle_00_Skill03_EnterReady",
+              "Avatar_Advanced_Sparkle_00_Skill03_Phase01",
+              "Avatar_Advanced_Sparkle_00_Skill03_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -36259,7 +36274,10 @@ let characters = {
             },
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Advanced_Sparkle_00_PassiveSkill_1",
+              "Avatar_Advanced_Sparkle_00_Rank06_BP"
+            ],
             "toughnessList": [
               0,
               0,
@@ -36293,7 +36311,9 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Advanced_Sparkle_00_SkillMazeInLevel"
+            ],
             "toughnessList": [
               0,
               0,
@@ -36620,7 +36640,11 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill01_Camera",
+              "Avatar_Advanced_BlackSwan_00_Skill01_Phase01",
+              "Avatar_Advanced_BlackSwan_00_Skill01_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -36741,7 +36765,11 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "Blast",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill02_Camera",
+              "Avatar_Advanced_BlackSwan_00_Skill02_Phase01",
+              "Avatar_Advanced_BlackSwan_00_Skill02_Phase02"
+            ],
             "toughnessList": [
               60,
               0,
@@ -36867,7 +36895,12 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill03_Camera",
+              "Avatar_Advanced_BlackSwan_00_Skill03_Phase01",
+              "Avatar_Advanced_BlackSwan_00_Skill03_Phase02",
+              "Avatar_BlackSwan_00_Skill03_Cutin"
+            ],
             "toughnessList": [
               0,
               60,
@@ -37054,7 +37087,9 @@ let characters = {
             },
             "skillEffect": "Impair",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Advanced_BlackSwan_00_PassiveSkill01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -37096,7 +37131,10 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Advanced_BlackSwan_00_SkillMazeInLevel",
+              "Avatar_Advanced_BlackSwan_00_SkillMazeInLevel_Insert"
+            ],
             "toughnessList": [
               0,
               0,
@@ -60508,7 +60546,11 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_Skill01_Camera",
+              "Avatar_Sparxie_00_Skill01_Phase01",
+              "Avatar_Sparxie_00_Skill01_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -60577,7 +60619,12 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "Blast",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_Skill11_Camera",
+              "Avatar_Sparxie_00_Skill11_Camera_V1",
+              "Avatar_Sparxie_00_Skill11_Phase01",
+              "Avatar_Sparxie_00_Skill11_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -60644,7 +60691,9 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "Blast",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_Skill12_Phase01"
+            ],
             "toughnessList": [
               30,
               0,
@@ -60779,7 +60828,11 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_Skill02_Camera",
+              "Avatar_Sparxie_00_Skill02_Phase01",
+              "Avatar_Sparxie_00_Skill02_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -60912,7 +60965,11 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_Skill21_Camera",
+              "Avatar_Sparxie_00_Skill21_Phase01",
+              "Avatar_Sparxie_00_Skill21_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -61023,7 +61080,12 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_Skill03_Camera",
+              "Avatar_Sparxie_00_Skill03_EnterReady",
+              "Avatar_Sparxie_00_Skill03_Phase01",
+              "Avatar_Sparxie_00_Skill03_Phase02"
+            ],
             "toughnessList": [
               0,
               60,
@@ -61147,7 +61209,9 @@ let characters = {
             },
             "skillEffect": "Enhance",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_PassiveSkill01"
+            ],
             "toughnessList": [
               15,
               0,
@@ -61190,7 +61254,9 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_SkillMazeInLevel"
+            ],
             "toughnessList": [
               0,
               0,
@@ -61311,7 +61377,11 @@ let characters = {
             "attackType": "ElationDamage",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Sparxie_00_Skill04_Camera",
+              "Avatar_Sparxie_00_Skill04_Phase01",
+              "Avatar_Sparxie_00_Skill04_Phase02"
+            ],
             "toughnessList": [
               5,
               20,
@@ -61685,7 +61755,11 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "Blast",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_YaoGuang_00_Skill01_Camera",
+              "Avatar_YaoGuang_00_Skill01_Phase01",
+              "Avatar_YaoGuang_00_Skill01_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -61790,7 +61864,11 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_YaoGuang_00_Skill02_Camera",
+              "Avatar_YaoGuang_00_Skill02_Phase01",
+              "Avatar_YaoGuang_00_Skill02_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -61930,7 +62008,12 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_YaoGuang_00_Skill03_Camera",
+              "Avatar_YaoGuang_00_Skill03_EnterReady",
+              "Avatar_YaoGuang_00_Skill03_Phase01",
+              "Avatar_YaoGuang_00_Skill03_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -62018,7 +62101,9 @@ let characters = {
             },
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_YaoGuang_00_PassiveSkill"
+            ],
             "toughnessList": [
               0,
               0,
@@ -62059,7 +62144,9 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_YaoGuang_00_SkillMazeInLevel"
+            ],
             "toughnessList": [
               0,
               0,
@@ -62210,7 +62297,11 @@ let characters = {
             "attackType": "ElationDamage",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_YaoGuang_00_Skill04_Camera",
+              "Avatar_YaoGuang_00_Skill04_Phase01",
+              "Avatar_YaoGuang_00_Skill04_Phase02"
+            ],
             "toughnessList": [
               15,
               60,
