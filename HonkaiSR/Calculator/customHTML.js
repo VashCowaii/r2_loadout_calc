@@ -964,6 +964,7 @@ const conditionComparatorList = [
     ">",
     ">=",
     "=",
+    "!=",
     "<=",
     "<"
 ]
@@ -999,6 +1000,7 @@ const conditionComparatorCharValueConversions = {
     "AVBase": "Base AV/Turn",
 
     "ultsUsed": "Total Ultimates Used",
+    "properName": "Character Name",
 }
 
 let conditionCharacterStatList = Object.keys(greatTableKnowerOfAll);

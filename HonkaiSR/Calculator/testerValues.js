@@ -410,6 +410,8 @@ const conditionLibrary = {
                 return stat1Value >= stat2Value;
             case "=": 
                 return stat1Value === stat2Value;
+            case "!=": 
+                return stat1Value != stat2Value;
             case "<=": 
                 return stat1Value <= stat2Value;
             case "<": 
