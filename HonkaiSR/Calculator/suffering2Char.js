@@ -5233,11 +5233,12 @@ const turnLogic = {
                 // "ownerTurn": {},
             },
         ],
-        "finalListeners": [
+        "finalListeners": [//AbilityTriggerOverride
             {
                 "trigger": "BasicATKStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Basic ATK)",
@@ -5247,6 +5248,7 @@ const turnLogic = {
                 "trigger": "SkillStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Skill)",
@@ -5256,6 +5258,7 @@ const turnLogic = {
                 "trigger": "UltimateStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Ultimate)",
@@ -5265,6 +5268,7 @@ const turnLogic = {
                 "trigger": "FUAStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (FUA)",
@@ -5274,9 +5278,20 @@ const turnLogic = {
                 "trigger": "MemoSkillStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Memo Skill)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ElationSkillStart",
+                condition(battleData,generalInfo) {
+                    poke("ActionStart",battleData,generalInfo);
+                    poke("AbilityStart",battleData,generalInfo);
+                },
+                "target": "self",
+                "listenerName": "Universal action start listener (Elation Skill)",
                 "ownerTurn": {},
             },
 
@@ -5285,6 +5300,7 @@ const turnLogic = {
                 "trigger": "BasicATKEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Basic ATK)",
@@ -5294,6 +5310,7 @@ const turnLogic = {
                 "trigger": "SkillEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Skill)",
@@ -5303,6 +5320,7 @@ const turnLogic = {
                 "trigger": "UltimateEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Ultimate)",
@@ -5312,6 +5330,7 @@ const turnLogic = {
                 "trigger": "FUAEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (FUA)",
@@ -5321,6 +5340,17 @@ const turnLogic = {
                 "trigger": "MemoSkillEnd",
                 condition(battleData,generalInfo) {
                     poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
+                },
+                "target": "self",
+                "listenerName": "Universal action end listener (Memo Skill)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ElationSkillEnd",
+                condition(battleData,generalInfo) {
+                    poke("ActionEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action end listener (Memo Skill)",
