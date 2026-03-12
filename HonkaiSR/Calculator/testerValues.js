@@ -536,6 +536,14 @@ const conditionLibrary = {
         return battleData.battleTable.SPMax
     },
 
+    //ENEMY TEAM VALUES
+    "Enemy Team: Value"(battleData,sourceTurn,condition) {
+        return conditionLibrary[condition.teamValue](battleData,sourceTurn);
+    },
+    "Enemies: Count"(battleData,sourceTurn,condition) {
+        return battleData.enemyPositions.length;
+    },
+
 
     //BATTLE VALUES
     "Cycle: AV Passed"(battleData,sourceTurn,condition) {
