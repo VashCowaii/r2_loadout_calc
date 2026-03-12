@@ -9,6 +9,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031220",
       "realModifierNamne": "FantasticStory_BaseAbility_2200",
+      "BEKey": 1314726962,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -3881,6 +3882,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031353",
         "realModifierNamne": "FantasticStory_PlusAbility_2211",
+        "BEKey": 1314726962,
         "name": "Euphoria",
         "desc": "During \"Surging Grit,\" enemy targets take #1[i]% more Elation DMG, and additionally increases Aha Instant's SPD by #2[i].",
         "battleDesc": null,
@@ -3894,6 +3896,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031354",
         "realModifierNamne": "FantasticStory_PlusAbility_2212",
+        "BEKey": 1314726962,
         "name": "Delirium",
         "desc": "After an ally target uses their Basic ATK or Skill, gains #2[i] Punchline. During Surging Grit, the ally targets' DMG dealt increases by #1[i]%.",
         "battleDesc": null,
@@ -3907,6 +3910,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031355",
         "realModifierNamne": "FantasticStory_PlusAbility_2213",
+        "BEKey": 1314726962,
         "name": "Tirade",
         "desc": "When an ally target deals Break DMG with an attack, gains #2[i] Punchline. During Surging Grit, Break DMG dealt to enemy targets increases by #1[i]%.",
         "battleDesc": null,
@@ -3922,6 +3926,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031222",
         "realModifierNamne": "FantasticStory_BaseAbility_2210_BaseAddOn",
+        "BEKey": 1314726962,
         "name": "Punchline obtained",
         "desc": "Each time Punchline is gained, allies will additionally accumulate #1[i] Grit Value.",
         "battleDesc": null,
@@ -3933,6 +3938,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031223",
         "realModifierNamne": "FantasticStory_BaseAbility_2210_BeforeFever",
+        "BEKey": 1314726962,
         "name": "Concordant Truce",
         "desc": "This stage has a special Elation Skill. When entering Aha Instant, deals #1[i] instance(s) of Imaginary Elation DMG to a random enemy target. When an enemy target is defeated by any target, obtains #3[i] Punchline point(s).",
         "battleDesc": null,
@@ -3946,6 +3952,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031224",
         "realModifierNamne": "FantasticStory_BaseAbility_2210_EnterFever",
+        "BEKey": 1314726962,
         "name": "Surging Grit",
         "desc": "Upon entering \"Surging Grit,\" Aha immediately gains an extra turn where a fixed amount of #1[i] Punchline is taken into account. During this turn, Punchline is not consumed, and Elation Skill DMG dealt is #2[i]% of the original DMG. During \"Surging Grit,\" DMG taken by enemy targets increases by #3[i]%, and Aha Instant's SPD increases by #4[i].",
         "battleDesc": null,
@@ -3968,6 +3975,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031220",
       "realModifierNamne": "FantasticStory_BaseAbility_2200",
+      "BEKey": 1314726962,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -7840,6 +7848,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031353",
         "realModifierNamne": "FantasticStory_PlusAbility_2211",
+        "BEKey": 1314726962,
         "name": "Euphoria",
         "desc": "During \"Surging Grit,\" enemy targets take #1[i]% more Elation DMG, and additionally increases Aha Instant's SPD by #2[i].",
         "battleDesc": null,
@@ -7853,6 +7862,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031354",
         "realModifierNamne": "FantasticStory_PlusAbility_2212",
+        "BEKey": 1314726962,
         "name": "Delirium",
         "desc": "After an ally target uses their Basic ATK or Skill, gains #2[i] Punchline. During Surging Grit, the ally targets' DMG dealt increases by #1[i]%.",
         "battleDesc": null,
@@ -7866,6 +7876,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031355",
         "realModifierNamne": "FantasticStory_PlusAbility_2213",
+        "BEKey": 1314726962,
         "name": "Tirade",
         "desc": "When an ally target deals Break DMG with an attack, gains #2[i] Punchline. During Surging Grit, Break DMG dealt to enemy targets increases by #1[i]%.",
         "battleDesc": null,
@@ -7881,6 +7892,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031222",
         "realModifierNamne": "FantasticStory_BaseAbility_2210_BaseAddOn",
+        "BEKey": 1314726962,
         "name": "Punchline obtained",
         "desc": "Each time Punchline is gained, allies will additionally accumulate #1[i] Grit Value.",
         "battleDesc": null,
@@ -7892,6 +7904,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031223",
         "realModifierNamne": "FantasticStory_BaseAbility_2210_BeforeFever",
+        "BEKey": 1314726962,
         "name": "Concordant Truce",
         "desc": "This stage has a special Elation Skill. When entering Aha Instant, deals #1[i] instance(s) of Imaginary Elation DMG to a random enemy target. When an enemy target is defeated by any target, obtains #3[i] Punchline point(s).",
         "battleDesc": null,
@@ -7905,6 +7918,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031224",
         "realModifierNamne": "FantasticStory_BaseAbility_2210_EnterFever",
+        "BEKey": 1314726962,
         "name": "Surging Grit",
         "desc": "Upon entering \"Surging Grit,\" Aha immediately gains an extra turn where a fixed amount of #1[i] Punchline is taken into account. During this turn, Punchline is not consumed, and Elation Skill DMG dealt is #2[i]% of the original DMG. During \"Surging Grit,\" DMG taken by enemy targets increases by #3[i]%, and Aha Instant's SPD increases by #4[i].",
         "battleDesc": null,
