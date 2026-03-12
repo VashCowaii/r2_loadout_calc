@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Canvas Peacock",
   "image": 5013030,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "Elite",
   "stArray": [
     18,

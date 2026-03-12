@@ -2,6 +2,7 @@ let enemyData = {
   "name": "The Conquered",
   "image": 4012061,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "MinionLv2",
   "stArray": [
     18,

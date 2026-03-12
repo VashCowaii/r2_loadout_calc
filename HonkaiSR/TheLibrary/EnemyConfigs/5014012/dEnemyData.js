@@ -1,7 +1,8 @@
 let enemyData = {
   "name": "@SparxiConOfficial",
   "image": 5014012,
-  "bar": 1,
+  "bar": 3,
+  "bodyType": "LargeMonster",
   "rank": "LittleBoss",
   "stArray": [
     18,

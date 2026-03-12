@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Output Port 2",
   "image": 5012080,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "MinionLv2",
   "stArray": [
     18,

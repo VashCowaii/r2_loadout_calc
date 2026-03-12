@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Synwish Syndicate's Underboss, Caustide",
   "image": 5013011,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "Elite",
   "stArray": [
     15,

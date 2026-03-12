@@ -1,7 +1,9 @@
 let enemyData = {
   "name": "The Ravaged Unconquerable",
   "image": 4014013,
-  "bar": 1,
+  "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
   "rank": "LittleBoss",
   "stArray": [
     18,

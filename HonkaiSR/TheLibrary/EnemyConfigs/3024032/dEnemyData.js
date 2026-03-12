@@ -1,7 +1,9 @@
 let enemyData = {
   "name": "Harbinger of Death: Swarm Nightmare",
   "image": 3024032,
-  "bar": 1,
+  "bar": 3,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
   "rank": "LittleBoss",
   "stArray": [
     18,
