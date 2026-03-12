@@ -30765,6 +30765,7 @@ const turnLogic = {
         logic(thisTurn,battleData) {
             return {action: "EndTurn", endTurn: true};
         },
+        preLogic(thisTurn,battleData) {},
         "skillFunctions": {
             elationSkill(battleData,target,sourceTurn) {},
         },
