@@ -754,6 +754,11 @@ const sim = {
                 current2pc.push(push2pc);
                 extra2pc.push(push2pc);
             }
+
+            if (!logicRef.preLogicCompleted) {
+                logicRef.preLogic(slotRef,battleData);
+                logicRef.preLogicCompleted = true;
+            }
         }
 
 
