@@ -2698,7 +2698,7 @@ const compositeAbilityObject = {
                   },
                   "target": {
                     "name": "Target Name",
-                    "target": "Elation_BE"
+                    "target": "{{Aha Instant: Aha Battle Event}}"
                   },
                   "dynamicStringsArray": [
                     {
@@ -2714,7 +2714,7 @@ const compositeAbilityObject = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
-                        "target": "Elation_BE"
+                        "target": "{{Aha Instant: Aha Battle Event}}"
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
                       "valuePerStack": {
@@ -2788,7 +2788,7 @@ const compositeAbilityObject = {
                       },
                       "target": {
                         "name": "Target Name",
-                        "target": "Elation_BE"
+                        "target": "{{Aha Instant: Aha Battle Event}}"
                       },
                       "dynamicStringsArray": [
                         {
@@ -2801,7 +2801,7 @@ const compositeAbilityObject = {
                           "name": "Add Events/Bonuses",
                           "to": {
                             "name": "Target Name",
-                            "target": "Elation_BE"
+                            "target": "{{Aha Instant: Aha Battle Event}}"
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
                           "valuePerStack": {
