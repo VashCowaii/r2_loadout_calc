@@ -9230,6 +9230,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "phases": 2,
       "hasReader": false,
       "baseName": "Harbinger of Death: Swarm Nightmare"
     },
@@ -9241,6 +9242,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "phases": 3,
       "hasReader": false,
       "baseName": "Harbinger of Death: Swarm Nightmare"
     },
@@ -10199,6 +10201,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "phases": 2,
       "hasReader": false,
       "baseName": "The Ravaged Unconquerable"
     },
@@ -10287,6 +10290,7 @@ let basicEnemyList = {
       "401402102": {},
       "401402103": {},
       "401402104": {},
+      "phases": 2,
       "hasReader": false,
       "baseName": "The Giver, Master of Legions, Lance of Fury"
     },
@@ -11756,6 +11760,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "phases": 2,
       "hasReader": false
     },
     "5014012": {
@@ -11766,6 +11771,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "phases": 3,
       "hasReader": false,
       "baseName": "@SparxiConOfficial"
     },

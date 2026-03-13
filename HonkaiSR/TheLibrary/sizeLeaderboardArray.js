@@ -2641,6 +2641,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4034020,
+    "lineCount": 1245,
+    "sizeCount": 43707
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4032070,
     "lineCount": 1255,
     "sizeCount": 43352
@@ -5372,12 +5378,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1501.png",
     "lineCount": 7,
     "sizeCount": 134
-  },
-  {
-    "entryType": "enemy",
-    "enemyID": 4034020,
-    "lineCount": 6,
-    "sizeCount": 110
   },
   {
     "entryType": "enemy",
