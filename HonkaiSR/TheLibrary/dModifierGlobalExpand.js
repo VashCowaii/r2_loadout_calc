@@ -19904,7 +19904,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_BaseAddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1871573228\">Modifier_FantasticStory_BaseAbility_2210_BaseAddOn_ForShow</a>",
     "realName": "Grit Mechanics",
     "aim": "Buff",
     "desc": "Each time Punchline is gained, allies will additionally accumulate #1[i] Grit Value.",
@@ -19915,7 +19915,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_BeforeFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1855869842\">Modifier_FantasticStory_BaseAbility_2210_BeforeFever_ForShow</a>",
     "realName": "Concordant Truce",
     "aim": "Buff",
     "desc": "This stage has a special Elation Skill. When entering Aha Instant, deals #1[i] instance(s) of Elation DMG to a random enemy target. When an enemy target is defeated, obtains #3[i] Punchline point(s).",
@@ -19928,7 +19928,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_EnterFever_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1219408339\">Modifier_FantasticStory_BaseAbility_2210_EnterFever_sub</a>",
     "realName": "Surging Grit",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -19939,7 +19939,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1087815718\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow</a>",
     "realName": "Grit Mechanics_Euphoria",
     "aim": "Buff",
     "desc": "When consuming Skill Points, additionally accumulates #3[i] Grit Value for allies.",
@@ -19952,7 +19952,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_plus1_sub",
+    "name": "<a class=\"gModGreen\" id=\"-2084646258\">Modifier_FantasticStory_BaseAbility_2210_plus1_sub</a>",
     "realName": "Euphoria",
     "aim": "Debuff",
     "desc": "Elation DMG taken increases by #1[i]%",
@@ -19965,7 +19965,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-22819003\">Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn_Sub</a>",
     "realName": "Grit Mechanics_Delirium",
     "aim": "Buff",
     "desc": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates #3[i] Grit Value for allies.",
@@ -19978,7 +19978,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_plus2_sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1157326881\">Modifier_FantasticStory_BaseAbility_2210_plus2_sub2</a>",
     "realName": "Delirium",
     "aim": "Buff",
     "desc": "After using Basic ATK or Skill, gains #2[i] Punchline. During Surging Grit, DMG dealt increases by #1[i]%.",
@@ -19991,7 +19991,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_plus3_sub2",
+    "name": "<a class=\"gModGreen\" id=\"1476176126\">Modifier_FantasticStory_BaseAbility_2210_plus3_sub2</a>",
     "realName": "Tirade",
     "aim": "Buff",
     "desc": "After dealing Break DMG with an attack, gains #2[i] Punchline.",
@@ -20004,7 +20004,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_plus3_sub",
+    "name": "<a class=\"gModGreen\" id=\"-207238664\">Modifier_FantasticStory_BaseAbility_2210_plus3_sub</a>",
     "realName": "Tirade",
     "aim": "Debuff",
     "desc": "Increases Break DMG taken by #1[i]%.",
@@ -20017,7 +20017,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>",
     "realName": "Grit Mechanics_Tirade",
     "aim": "Debuff",
     "desc": "When a Weakness is Broken, additionally accumulates #1[i] Grit Value for allies.",
@@ -20961,7 +20961,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "MBattleEvent_Elation_ElationEchoPointBonus",
+    "name": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -20969,7 +20969,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "MLevel_ElationBE_ElationEchoPointBonus_OnEnterBattle",
+    "name": "<a class=\"gModGreen\" id=\"-1644535867\">MLevel_ElationBE_ElationEchoPointBonus_OnEnterBattle</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
