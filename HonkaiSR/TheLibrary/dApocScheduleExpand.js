@@ -65,7 +65,7 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
-                      "hpBars": 1,
+                      "hpBars": 2,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -92,8 +92,8 @@ let mocSchedule = [
                   "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
                   "_BindingMazeBuff": "3110015"
                 },
-                "highSTSUM": 343234.20348,
-                "aoeSUM": 343234.20348
+                "highSTSUM": 686468.40696,
+                "aoeSUM": 686468.40696
               }
             ]
           },
@@ -430,7 +430,7 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
-                      "hpBars": 1,
+                      "hpBars": 2,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -457,8 +457,8 @@ let mocSchedule = [
                   "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
                   "_BindingMazeBuff": "3110015"
                 },
-                "highSTSUM": 1236732.9534,
-                "aoeSUM": 1236732.9534
+                "highSTSUM": 2473465.9068,
+                "aoeSUM": 2473465.9068
               }
             ]
           },
@@ -795,7 +795,7 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
-                      "hpBars": 1,
+                      "hpBars": 2,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -822,8 +822,8 @@ let mocSchedule = [
                   "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
                   "_BindingMazeBuff": "3110015"
                 },
-                "highSTSUM": 2649767.28555,
-                "aoeSUM": 2649767.28555
+                "highSTSUM": 5299534.5711,
+                "aoeSUM": 5299534.5711
               }
             ]
           },
@@ -1160,7 +1160,7 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
-                      "hpBars": 1,
+                      "hpBars": 2,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -1187,8 +1187,8 @@ let mocSchedule = [
                   "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
                   "_BindingMazeBuff": "3110015"
                 },
-                "highSTSUM": 8084165.051025,
-                "aoeSUM": 8084165.051025
+                "highSTSUM": 16168330.10205,
+                "aoeSUM": 16168330.10205
               }
             ]
           },

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Assistant Graffiti: Demander",
   "image": 5012061,
   "bar": 1,
+  "bodyType": "LittleMonster",
   "rank": "MinionLv2",
   "stArray": [
     18,

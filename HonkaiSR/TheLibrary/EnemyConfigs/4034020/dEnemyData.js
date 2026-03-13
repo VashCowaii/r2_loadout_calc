@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Vessel of the Destruction, Khaslana",
   "image": 4034020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
   "rank": "LittleBoss",
   "stArray": [
     18,

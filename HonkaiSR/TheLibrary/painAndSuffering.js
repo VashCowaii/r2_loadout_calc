@@ -2689,6 +2689,7 @@ const megaParsingFuckeryPain = {
             "baseDelay",
             "delayInterval",
             "parallelCount",
+            "dynamicStringsArray",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Use Custom Character Function");
 
@@ -2700,7 +2701,7 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.paramSequence,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.damageSequence,initialCounter);}
 
-
+        const displayStrings = parseRef.dynamicStringsArray ? megaParsingFuckeryPain.getStringsArrayResult(parseRef.dynamicStringsArray) : "";
 
         // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
 
@@ -2744,6 +2745,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.baseDelay,"baseDelay")}
             ${getStandardNameDisplay(initialCounter,parseRef.delayInterval,"delayInterval")}
             ${getStandardNameDisplay(initialCounter,parseRef.parallelCount,"parallelCount")}
+            ${displayStrings}
         </div>
         <div class="modifierDetailsBox">
             ${addString}

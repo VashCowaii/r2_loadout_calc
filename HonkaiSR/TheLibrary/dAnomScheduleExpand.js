@@ -707,7 +707,7 @@ let mocSchedule = [
                         "delay": 0.5,
                         "toughnessBars": 1,
                         "toughnessElement": "Quantum",
-                        "hpBars": 1,
+                        "hpBars": 2,
                         "toughnessBase": 320,
                         "weaknessList": [
                           "Fire",
@@ -738,8 +738,8 @@ let mocSchedule = [
                   "_StageInfiniteGroup": "30504021",
                   "_CreateBattleEvent": "30503"
                 },
-                "highSTSUM": 15271833.493223999,
-                "aoeSUM": 19563092.49132
+                "highSTSUM": 25999980.988463998,
+                "aoeSUM": 30291239.98656
               }
             ]
           },
@@ -938,7 +938,7 @@ let mocSchedule = [
                         "delay": 0.5,
                         "toughnessBars": 1,
                         "toughnessElement": "Quantum",
-                        "hpBars": 1,
+                        "hpBars": 2,
                         "toughnessBase": 320,
                         "weaknessList": [
                           "Fire",
@@ -969,8 +969,8 @@ let mocSchedule = [
                   "_StageInfiniteGroup": "30504022",
                   "_CreateBattleEvent": "30504"
                 },
-                "highSTSUM": 73708697.5921797,
-                "aoeSUM": 90873733.2304197
+                "highSTSUM": 129242651.5673994,
+                "aoeSUM": 146407687.2056394
               }
             ]
           },

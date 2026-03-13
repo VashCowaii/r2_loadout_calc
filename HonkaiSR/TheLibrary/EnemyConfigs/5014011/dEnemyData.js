@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Live Stream Assistant",
   "image": 5014011,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "LittleBoss",
   "stArray": [
     18,
