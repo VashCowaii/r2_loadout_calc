@@ -2643,7 +2643,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4034020,
     "lineCount": 1245,
-    "sizeCount": 43707
+    "sizeCount": 43746
   },
   {
     "entryType": "enemy",
@@ -3088,6 +3088,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 23247
   },
   {
+    "entryType": "lc",
+    "entryName": "Dazzled by a Flowery World",
+    "trimCharacterName": "DazzledbyaFloweryWorld",
+    "entryIcon": "icon/light_cone/23053.png",
+    "lineCount": 570,
+    "sizeCount": 21751
+  },
+  {
     "entryType": "enemy",
     "enemyID": 3021030,
     "lineCount": 622,
@@ -3442,6 +3450,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 13352
   },
   {
+    "entryType": "lc",
+    "entryName": "When She Decided to See",
+    "trimCharacterName": "WhenSheDecidedtoSee",
+    "entryIcon": "icon/light_cone/23054.png",
+    "lineCount": 387,
+    "sizeCount": 13313
+  },
+  {
     "entryType": "enemy",
     "enemyID": 2002032,
     "lineCount": 390,
@@ -3538,6 +3554,14 @@ let sizeLeaderboardArray = [
     "enemyID": 3002040,
     "lineCount": 376,
     "sizeCount": 11661
+  },
+  {
+    "entryType": "relic",
+    "entryName": "Ever-Glorious Magical Girl",
+    "trimCharacterName": "EverGloriousMagicalGirl",
+    "entryIcon": "icon/relic/129.png",
+    "lineCount": 313,
+    "sizeCount": 11658
   },
   {
     "entryType": "relic",
@@ -3662,6 +3686,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23038.png",
     "lineCount": 325,
     "sizeCount": 10736
+  },
+  {
+    "entryType": "relic",
+    "entryName": "Diviner of Distant Reach",
+    "trimCharacterName": "DivinerofDistantReach",
+    "entryIcon": "icon/relic/130.png",
+    "lineCount": 289,
+    "sizeCount": 10730
   },
   {
     "entryType": "enemy",
@@ -4718,6 +4750,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 4745
   },
   {
+    "entryType": "lc",
+    "entryName": "Today's Good Luck",
+    "trimCharacterName": "TodaysGoodLuck",
+    "entryIcon": "icon/light_cone/21065.png",
+    "lineCount": 157,
+    "sizeCount": 4731
+  },
+  {
     "entryType": "relic",
     "entryName": "Watchmaker, Master of Dream Machinations",
     "trimCharacterName": "WatchmakerMasterofDreamMachinations",
@@ -4748,6 +4788,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/107.png",
     "lineCount": 144,
     "sizeCount": 4566
+  },
+  {
+    "entryType": "lc",
+    "entryName": "Mushy Shroomy's Adventures",
+    "trimCharacterName": "MushyShroomysAdventures",
+    "entryIcon": "icon/light_cone/21064.png",
+    "lineCount": 153,
+    "sizeCount": 4462
   },
   {
     "entryType": "relic",
@@ -4928,6 +4976,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 3771
   },
   {
+    "entryType": "lc",
+    "entryName": "Lingering Tear",
+    "trimCharacterName": "LingeringTear",
+    "entryIcon": "icon/light_cone/20024.png",
+    "lineCount": 123,
+    "sizeCount": 3755
+  },
+  {
     "entryType": "enemy",
     "enemyID": 2011010,
     "lineCount": 122,
@@ -5004,6 +5060,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/22004.png",
     "lineCount": 127,
     "sizeCount": 3507
+  },
+  {
+    "entryType": "lc",
+    "entryName": "Sneering",
+    "trimCharacterName": "Sneering",
+    "entryIcon": "icon/light_cone/20023.png",
+    "lineCount": 113,
+    "sizeCount": 3484
   },
   {
     "entryType": "enemy",

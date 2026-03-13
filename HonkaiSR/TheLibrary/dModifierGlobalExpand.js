@@ -19582,7 +19582,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_129_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-971304181\">Relic_129_Sub</a>",
     "realName": "Ever-Glorious Magical Girl",
     "aim": "Buff",
     "desc": "Elation DMG dealt ignores #1[i]% of the target's DEF.",
@@ -19593,7 +19593,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_130_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1373432449\">Relic_130_Sub</a>",
     "realName": "Diviner of Distant Reach",
     "aim": "Buff",
     "desc": "CRIT Rate increases by #1[i]%.",
@@ -20142,7 +20142,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20023_Sub",
+    "name": "<a class=\"gModGreen\" id=\"343139295\">LC_20023_Sub</a>",
     "realName": "Elation Boost",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -20153,7 +20153,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20024_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-72440750\">LC_20024_Sub</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -20164,7 +20164,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21064_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1545116875\">LC_21064_Sub</a>",
     "realName": "Elation DMG Vulnerability",
     "aim": "Debuff",
     "desc": "Elation DMG taken increases by #1[i]%.",
@@ -20175,7 +20175,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21065_Sub",
+    "name": "<a class=\"gModGreen\" id=\"287346796\">LC_21065_Sub</a>",
     "realName": "Elation Boost",
     "aim": "Buff",
     "desc": "Each stack increases Elation by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -20187,7 +20187,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23054_Sub_ToTeamMembers",
+    "name": "<a class=\"gModGreen\" id=\"-1530520902\">LC_23054_Sub_ToTeamMembers</a>",
     "realName": "Great Fortune",
     "aim": "Buff",
     "desc": "CRIT Rate increases by #1[i]% and CRIT DMG increases by #2[i]%.",
@@ -20562,7 +20562,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_130_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1849329719\">Relic_130_Sub2</a>",
     "realName": "Diviner of Distant Reach",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -20684,7 +20684,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23054_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1143895626\">LC_23054_Sub</a>",
     "realName": "Great Fortune",
     "aim": "Buff",
     "desc": "Increases CRIT Rate by #1[i]%, CRIT DMG by #2[i]%, and Energy Regeneration Rate by #3[i]%.",
@@ -20879,7 +20879,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23053_Sub02",
+    "name": "<a class=\"gModGreen\" id=\"-62126263\">LC_23053_Sub02</a>",
     "realName": "Center of Attention",
     "aim": "Buff",
     "desc": "Each stack enables the Elation DMG dealt to ignore #2[f1]% of the target's DEF.",
@@ -20942,7 +20942,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23053_Sub02_Halo",
+    "name": "<a class=\"gModGreen\" id=\"-1225919884\">LC_23053_Sub02_Halo</a>",
     "realName": "Stream Promo",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
