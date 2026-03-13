@@ -42,11 +42,11 @@ const configAbility = {
             "target": "{{Caster's Summoner}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] ([object Object]) || RETURN",
-            "displayLines": "[object Object]",
+            "operator": "Variables[0] (UnusedUnderThisBase_492) || RETURN",
+            "displayLines": "UnusedUnderThisBase_492",
             "constants": [],
             "variables": [
-              {}
+              "UnusedUnderThisBase_492"
             ]
           },
           "consumeFloor": 1,
