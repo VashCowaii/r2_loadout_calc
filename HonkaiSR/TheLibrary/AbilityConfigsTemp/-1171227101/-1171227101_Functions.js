@@ -2689,7 +2689,7 @@ const configAbility = {
               },
               "target": {
                 "name": "Target Name",
-                "target": "Elation_BE"
+                "target": "{{Aha Instant: Aha Battle Event}}"
               },
               "dynamicStringsArray": [
                 {
@@ -2705,7 +2705,7 @@ const configAbility = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "Elation_BE"
+                    "target": "{{Aha Instant: Aha Battle Event}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
                   "valuePerStack": {
@@ -2779,7 +2779,7 @@ const configAbility = {
                   },
                   "target": {
                     "name": "Target Name",
-                    "target": "Elation_BE"
+                    "target": "{{Aha Instant: Aha Battle Event}}"
                   },
                   "dynamicStringsArray": [
                     {
@@ -2792,7 +2792,7 @@ const configAbility = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
-                        "target": "Elation_BE"
+                        "target": "{{Aha Instant: Aha Battle Event}}"
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
                       "valuePerStack": {

@@ -14,7 +14,7 @@ const configAbility = {
           "name": "Mark Entity For Immediate Death",
           "target": {
             "name": "Target Name",
-            "target": "AllDarkTeamDyingCharacter"
+            "target": "{{Dying Enemies}}"
           },
           "dieNow": true
         },

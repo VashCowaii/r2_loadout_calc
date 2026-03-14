@@ -2497,7 +2497,7 @@ const compositeAbilityObject = {
               "name": "Mark Entity For Immediate Death",
               "target": {
                 "name": "Target Name",
-                "target": "AllDarkTeamDyingCharacter"
+                "target": "{{Dying Enemies}}"
               },
               "dieNow": true
             }
@@ -2631,7 +2631,7 @@ const compositeAbilityObject = {
               "name": "Mark Entity For Immediate Death",
               "target": {
                 "name": "Target Name",
-                "target": "AllDarkTeamDyingCharacter"
+                "target": "{{Dying Enemies}}"
               },
               "dieNow": true
             }
@@ -2760,7 +2760,7 @@ const compositeAbilityObject = {
               "name": "Mark Entity For Immediate Death",
               "target": {
                 "name": "Target Name",
-                "target": "AllDarkTeamDyingCharacter"
+                "target": "{{Dying Enemies}}"
               },
               "dieNow": true
             }
@@ -3203,7 +3203,7 @@ const compositeAbilityObject = {
               "name": "Mark Entity For Immediate Death",
               "target": {
                 "name": "Target Name",
-                "target": "AllDarkTeamDyingCharacter"
+                "target": "{{Dying Enemies}}"
               },
               "dieNow": true
             }
@@ -3465,7 +3465,7 @@ const compositeAbilityObject = {
               "name": "Mark Entity For Immediate Death",
               "target": {
                 "name": "Target Name",
-                "target": "AllDarkTeamDyingCharacter"
+                "target": "{{Dying Enemies}}"
               },
               "dieNow": true
             }
@@ -10905,7 +10905,7 @@ const compositeAbilityObject = {
               "name": "Mark Entity For Immediate Death",
               "target": {
                 "name": "Target Name",
-                "target": "AllDarkTeamDyingCharacter"
+                "target": "{{Dying Enemies}}"
               },
               "dieNow": true
             },

@@ -6150,7 +6150,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_YaoGuang_Ability03_AllDamageTypePenetrate",
+    "name": "<a class=\"gModGreen\" id=\"-2059745464\">G_YaoGuang_Ability03_AllDamageTypePenetrate</a>",
     "realName": "Hexagram of Feathered Fortune",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[f1]%.",
@@ -6161,7 +6161,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_YaoGuang_Ability04_AllDamageTypeTaken",
+    "name": "<a class=\"gModGreen\" id=\"179366080\">G_YaoGuang_Ability04_AllDamageTypeTaken</a>",
     "realName": "Woe's Whisper",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[f1]%.",
@@ -6172,7 +6172,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_YaoGuang_Ability02_ToMember",
+    "name": "<a class=\"gModGreen\" id=\"1266011188\">G_YaoGuang_Ability02_ToMember</a>",
     "realName": "Decalight Unveils All",
     "aim": "Buff",
     "desc": "Elation increases by #1[f1]%.",
@@ -6183,7 +6183,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_YaoGuang_Eidolon2_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"113477249\">G_YaoGuang_Eidolon2_Bonus</a>",
     "realName": "Blind Arrows Guided by Feathers",
     "aim": "Buff",
     "desc": "Elation increases by #2[i]% and SPD increases by #1[i]%.",
@@ -6195,7 +6195,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_YaoGuang_Eidolon1_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-848491430\">G_YaoGuang_Eidolon1_Bonus</a>",
     "realName": "Chuckle Chimes Where Jade Falls",
     "aim": "Buff",
     "desc": "Elation DMG dealt ignores #1[i]% of the target's DEF.",
@@ -6337,7 +6337,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparxie_Eidolon2_CriticalDamage",
+    "name": "<a class=\"gModGreen\" id=\"510555115\">Sparxie_Eidolon2_CriticalDamage</a>",
     "realName": "#AudienceKnows",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG by #1[i]%.",
@@ -6348,7 +6348,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparxie_Trace01_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"1914794720\">Sparxie_Trace01_Bonus</a>",
     "realName": "Sweet! Punchline Signing",
     "aim": "Buff",
     "desc": "Elation increases by #1[f1]%.",
@@ -6534,7 +6534,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "Advanced_BlackSwan_DOT",
+    "name": "<a class=\"gModGreen\" id=\"866598290\">Advanced_BlackSwan_DOT</a>",
     "realName": "Arcana",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn. While in the \"Arcana\" state, will also be considered as suffering from Wind Shear, Bleed, Burn, and Shock.",
@@ -6545,7 +6545,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_BlackSwan_DOT_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"803699563\">Advanced_BlackSwan_DOT_Enhance</a>",
     "realName": "Epiphany",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%. When enemy targets are inflicted with \"Arcana,\" there is a #2[i]% fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1. And the number of \"Arcana\" stacks will not be halved after dealing DMG at the start of the turn.",
@@ -6759,7 +6759,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sparkle_Ability03_PowerUp",
+    "name": "<a class=\"gModGreen\" id=\"-1966292851\">Advanced_Sparkle_Ability03_PowerUp</a>",
     "realName": "Cipher",
     "aim": "Buff",
     "desc": "Each stack of the Vulnerability effect provided by Sparkle's Talent additionally increases by #2[f2]%.",
@@ -6771,7 +6771,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sparkle_Ability02_CritDmgAddedRatio01",
+    "name": "<a class=\"gModGreen\" id=\"930084380\">Advanced_Sparkle_Ability02_CritDmgAddedRatio01</a>",
     "realName": "Dreamdiver",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -6783,7 +6783,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sparkle_PassiveAbility_AllDamageAddedRatio02",
+    "name": "<a class=\"gModGreen\" id=\"1471334562\">Advanced_Sparkle_PassiveAbility_AllDamageAddedRatio02</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[f1]%.",
@@ -6795,7 +6795,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sparkle_Tree03",
+    "name": "<a class=\"gModGreen\" id=\"-1118089721\">Advanced_Sparkle_Tree03</a>",
     "realName": "Nocturne",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -6817,7 +6817,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparxie_Trace03_Sub02",
+    "name": "<a class=\"gModGreen\" id=\"-1349114975\">Sparxie_Trace03_Sub02</a>",
     "realName": "Frenzy! Palette of Truth and Lies",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -6828,7 +6828,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparxie_Eidolon1_Sub02",
+    "name": "<a class=\"gModGreen\" id=\"366587908\">Sparxie_Eidolon1_Sub02</a>",
     "realName": "#GoingViral #WhoIsShe",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[f1]%.",
@@ -6839,7 +6839,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparxie_Eidolon4_Sub",
+    "name": "<a class=\"gModGreen\" id=\"2009365349\">Sparxie_Eidolon4_Sub</a>",
     "realName": "#LockedIn #FaceCard",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -6861,7 +6861,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sparkle_Ability03ExtraBP",
+    "name": "<a class=\"gModGreen\" id=\"1887140599\">Advanced_Sparkle_Ability03ExtraBP</a>",
     "realName": "The Hero with a Thousand Faces",
     "aim": "Buff",
     "desc": "After an ally's turn ends, if the current Skill Points are not at maximum, immediately recovers Skill Points for the team.",
@@ -6869,7 +6869,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "Sparxie_Eidolon6",
+    "name": "<a class=\"gModGreen\" id=\"-769743474\">Sparxie_Eidolon6</a>",
     "realName": "#BuiltDifferent #GoingExtinct",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[i]%.",
@@ -6902,7 +6902,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparxie_EnergyPoint",
+    "name": "<a class=\"gModGreen\" id=\"153929564\">Sparxie_EnergyPoint</a>",
     "realName": "Thrill",
     "aim": "Other",
     "desc": "Can be used to offset Sparxie's consumption of Skill Points. Consuming \"Thrill\" is considered as consuming Skill Points.",
@@ -6921,7 +6921,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_YaoGuang_Eidolon6_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-986503251\">G_YaoGuang_Eidolon6_Bonus</a>",
     "realName": "Ferried Along the Astral Arc",
     "aim": "Buff",
     "desc": "Elation DMG merrymakes by #1[i]%.",
@@ -6932,7 +6932,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sparkle_PassiveAbility_Halo",
+    "name": "<a class=\"gModGreen\" id=\"1755645655\">Advanced_Sparkle_PassiveAbility_Halo</a>",
     "realName": "Figment",
     "aim": "Buff",
     "desc": "The DMG taken by all enemies increases.",
@@ -6940,7 +6940,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "Advanced_Sparkle_PointB2_FreeAbility",
+    "name": "<a class=\"gModGreen\" id=\"1010036084\">Advanced_Sparkle_PointB2_FreeAbility</a>",
     "realName": "Artificial Flower",
     "aim": "Buff",
     "desc": "The next use of Skill does not consume any Skill Points.",
@@ -6948,7 +6948,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "G_YaoGuang_Ability02_ToSelf",
+    "name": "<a class=\"gModGreen\" id=\"1968939868\">G_YaoGuang_Ability02_ToSelf</a>",
     "realName": "Decalight Unveils All",
     "aim": "Buff",
     "desc": "Elation increases by #1[f1]%.",

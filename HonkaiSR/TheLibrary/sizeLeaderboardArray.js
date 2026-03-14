@@ -1201,6 +1201,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Black Swan",
+    "trimCharacterName": "BlackSwan",
+    "entryIcon": "icon/character/1307.png",
+    "lineCount": 3972,
+    "sizeCount": 153589
+  },
+  {
+    "entryType": "char",
     "entryName": "Jingliu_v0",
     "trimCharacterName": "Jingliuv0",
     "entryIcon": "icon/character/1212.png",
@@ -1382,6 +1390,14 @@ let sizeLeaderboardArray = [
     "enemyID": 4023020,
     "lineCount": 3367,
     "sizeCount": 130834
+  },
+  {
+    "entryType": "char",
+    "entryName": "Sparxie",
+    "trimCharacterName": "Sparxie",
+    "entryIcon": "icon/character/1501.png",
+    "lineCount": 3714,
+    "sizeCount": 130246
   },
   {
     "entryType": "char",
@@ -1720,10 +1736,26 @@ let sizeLeaderboardArray = [
     "sizeCount": 102315
   },
   {
+    "entryType": "char",
+    "entryName": "Sparkle",
+    "trimCharacterName": "Sparkle",
+    "entryIcon": "icon/character/1306.png",
+    "lineCount": 2771,
+    "sizeCount": 101570
+  },
+  {
     "entryType": "enemy",
     "enemyID": 8025010,
     "lineCount": 2780,
     "sizeCount": 100235
+  },
+  {
+    "entryType": "char",
+    "entryName": "Yao Guang",
+    "trimCharacterName": "YaoGuang",
+    "entryIcon": "icon/character/1502.png",
+    "lineCount": 2767,
+    "sizeCount": 98980
   },
   {
     "entryType": "enemy",
@@ -5410,38 +5442,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1930
-  },
-  {
-    "entryType": "char",
-    "entryName": "Black Swan",
-    "trimCharacterName": "BlackSwan",
-    "entryIcon": "icon/character/1307.png",
-    "lineCount": 7,
-    "sizeCount": 139
-  },
-  {
-    "entryType": "char",
-    "entryName": "Yao Guang",
-    "trimCharacterName": "YaoGuang",
-    "entryIcon": "icon/character/1502.png",
-    "lineCount": 7,
-    "sizeCount": 137
-  },
-  {
-    "entryType": "char",
-    "entryName": "Sparkle",
-    "trimCharacterName": "Sparkle",
-    "entryIcon": "icon/character/1306.png",
-    "lineCount": 7,
-    "sizeCount": 134
-  },
-  {
-    "entryType": "char",
-    "entryName": "Sparxie",
-    "trimCharacterName": "Sparxie",
-    "entryIcon": "icon/character/1501.png",
-    "lineCount": 7,
-    "sizeCount": 134
   },
   {
     "entryType": "enemy",
