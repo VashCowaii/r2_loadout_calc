@@ -41,6 +41,13 @@
     "Level_FinalDamageAddedRatio": "StageFinalDMG",
 
     "ElationDamageAddedRatioBase": "ElationDMGAll",
+    "ElationDamageAddedRatio": "ElationDMGSUM",
+    "ElationDamageAddedRatioConvert": "ElationDMGConverted",
+    "ElationPointNum": "Punchline",
+    "EnableElationPointMultiplier": "PunchlineToggle",
+
+    "ElationDamageExtraAddedRatio": "MerryMake",
+    "ElationEchoPoint": "CertifiedBanger",
 
     "SPHitRatio": "EnergyRegenHitRate",
     "SPRatioBase": "EnergyRegenRate",
