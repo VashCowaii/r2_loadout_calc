@@ -7263,6 +7263,7 @@ const megaParsingFuckeryPain = {
             "point",
             "mapTo",
             "reset",
+            "target",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Mapping Point");
 
@@ -7271,6 +7272,7 @@ const megaParsingFuckeryPain = {
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.point,"Point")}
             ${getStandardNameDisplay(initialCounter,parseRef.mapTo,"Map To")}
             ${getStandardNameDisplay(initialCounter,parseRef.reset,"Reset")}
