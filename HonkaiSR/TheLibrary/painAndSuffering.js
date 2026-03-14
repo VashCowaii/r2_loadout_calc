@@ -927,6 +927,24 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.scope,"Context")}
         </div>`;
     },
+    "Define Variable in Range"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "min",
+            "max",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Variable in Range");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define Variable in Range:</div>&nbsp;
+            ${parseRef.variableName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.min,"Minimum")}
+            ${getStandardNameDisplay(initialCounter,parseRef.max,"Maximum")}
+        </div>`;
+    },
     "Define Variable with Elation Skill Count"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",

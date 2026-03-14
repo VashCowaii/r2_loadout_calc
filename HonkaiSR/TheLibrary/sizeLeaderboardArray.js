@@ -1397,7 +1397,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sparxie",
     "entryIcon": "icon/character/1501.png",
     "lineCount": 3714,
-    "sizeCount": 130246
+    "sizeCount": 130241
   },
   {
     "entryType": "char",
@@ -1754,8 +1754,8 @@ let sizeLeaderboardArray = [
     "entryName": "Yao Guang",
     "trimCharacterName": "YaoGuang",
     "entryIcon": "icon/character/1502.png",
-    "lineCount": 2767,
-    "sizeCount": 98980
+    "lineCount": 2707,
+    "sizeCount": 97408
   },
   {
     "entryType": "enemy",

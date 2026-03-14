@@ -627,7 +627,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "variableName": "_CurrentElationDamage",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGMulti[?]</span>&nbsp;"
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
