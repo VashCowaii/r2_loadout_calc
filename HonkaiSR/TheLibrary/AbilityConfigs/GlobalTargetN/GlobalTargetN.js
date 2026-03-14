@@ -4822,6 +4822,337 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Dying Enemies",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Search",
+          "entityType": "Mask_TeamCharacters",
+          "teamType": "Enemy Team",
+          "livingState": "Bit_Dying"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aha Instant: Player Team with Unselectables and OffField",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Aha Instant: All Targets}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aha Instant: Currency Wars Full OffFieldList",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Aha Instant: All Targets}} - {{Player Team All(with Unselectable)V2}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aha Instant: Player Team with Unselectables",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Aha Instant: All Targets}} - {{Currency Wars Full OffFieldList}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aha Instant: All Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            "Add Target by Aha Instant's All Targets"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aha Instant: Aha Battle Event",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 70001,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Elation: OffField Sparxie",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Currency Wars Full OffFieldList}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 62378,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Elation: All Battle Events",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}} - {{Currency Wars Full OffFieldList}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Ability Has Tag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "tag": "ElationTime"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Elation: Currency Wars Full OffFieldList",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Currency Wars Full OffFieldList}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Elation: Player Team with Unselectables",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All(with Unselectable)V2}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Elation: Player Team",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Elation: Elation Entities",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Elation: Player Team with Unselectables}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Elation: Currency Wars Full OffFieldList}} + {{Elation: All Battle Events}} - {{Elation: OffField Sparxie}}"
+                }
+              ]
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Ability Has Tag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "tag": "ElationTime"
+                  },
+                  {
+                    "name": "Battle Event ID",
+                    "ID": 70001,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "invertCondition": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Chess: Enemy Base",
       "isTargetOperator": false,
       "execute": [
