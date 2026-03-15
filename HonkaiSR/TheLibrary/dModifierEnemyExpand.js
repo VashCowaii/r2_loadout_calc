@@ -5030,7 +5030,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W3_TV_03_PowerUnlockListener",
+    "name": "<a class=\"gModGreen\" id=\"1125178298\">Enemy_W3_TV_03_PowerUnlockListener</a>",
     "realName": "Happy Smiles",
     "aim": "Other",
     "desc": "When this unit is attacked for the first time, the target team gains Punchline, and this unit uses \"Happiness Charm.\"",
@@ -5038,7 +5038,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_TV_03_Shake",
+    "name": "<a class=\"gModGreen\" id=\"1044186345\">Enemy_W3_TV_03_Shake</a>",
     "realName": "Strong Reverberation",
     "aim": "Debuff",
     "desc": "Action delayed. Cannot take actions for a certain number of turns.",
@@ -5180,7 +5180,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_02_Ability05_Speed",
+    "name": "<a class=\"gModGreen\" id=\"135439563\">MModifier_Monster_W4_Claymore_02_Ability05_Speed</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -5283,7 +5283,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_VtuberPart01_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>",
     "realName": "Ally Popularity",
     "aim": "Other",
     "desc": "After being attacked, \"Ally Popularity\" increases and action advances. During the next action, grants \"Ally Gratuity\" to sub-field ally targets based on the increased \"Ally Popularity.\"",
@@ -5291,7 +5291,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_VtuberPart02_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>",
     "realName": "Enemy Popularity",
     "aim": "Other",
     "desc": "After being attacked, \"Enemy Popularity\" decreases and action advances. During the next action, removes \"Enemy Gratuity\" from sub-field enemy targets based on the amount of reduced \"Enemy Popularity.\"",
@@ -5299,7 +5299,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Vtuber_CriticalDamageAdd",
+    "name": "<a class=\"gModGreen\" id=\"2117470935\">Enemy_W5_Vtuber_CriticalDamageAdd</a>",
     "realName": "Ally Gratuity",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[i]%.",
@@ -5310,7 +5310,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Vtuber_DamageAdd",
+    "name": "<a class=\"gModGreen\" id=\"1702970664\">Enemy_W5_Vtuber_DamageAdd</a>",
     "realName": "Enemy Gratuity",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -5566,7 +5566,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Limao_ElationDamageUp",
+    "name": "<a class=\"gModGreen\" id=\"1492528010\">Enemy_W5_Limao_ElationDamageUp</a>",
     "realName": "Make Headlines, Please!",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -5604,7 +5604,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken",
+    "name": "<a class=\"gModGreen\" id=\"-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -5615,7 +5615,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_JK_Power",
+    "name": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>",
     "realName": "Book-Smart",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]% and decreases DMG taken by #2[i]%. After receiving Elation DMG or when the target team gains Punchline and reaches #3[i] points, the effect is dispelled.",
@@ -5721,7 +5721,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_02_Ability03_Aim",
+    "name": "<a class=\"gModGreen\" id=\"1076182583\">MModifier_Monster_W4_Claymore_02_Ability03_Aim</a>",
     "realName": "Charging",
     "aim": "Other",
     "desc": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken, dispels Charging, grants the target team Punchline, and increases the DMG taken by this unit.",
@@ -5729,7 +5729,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_02_Ability05_Status",
+    "name": "<a class=\"gModGreen\" id=\"604474914\">MModifier_Monster_W4_Claymore_02_Ability05_Status</a>",
     "realName": "Revelry",
     "aim": "Debuff",
     "desc": "Cannot take action. At the start of the turn, if \"%CasterName\" is not in Charging state, \"%CasterName\" will initiate a Sweep attack.",
@@ -5737,7 +5737,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_02_Elation",
+    "name": "<a class=\"gModGreen\" id=\"-1907385221\">MModifier_Monster_W4_Claymore_02_Elation</a>",
     "realName": "Frenzied Rendition",
     "aim": "Other",
     "desc": "Using \"Get Hyped!\" produces a more Elated effect.",
@@ -5745,7 +5745,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Claymore_02_NoElation",
+    "name": "<a class=\"gModGreen\" id=\"-844017062\">MModifier_Monster_W4_Claymore_02_NoElation</a>",
     "realName": "Music Madness",
     "aim": "Other",
     "desc": "When Aha Instant is activated, this unit gains the \"Frenzied Rendition\" state, making the effects of \"Get Hyped!\" more Elated.",
@@ -5753,7 +5753,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Beast01_05_Boss",
+    "name": "<a class=\"gModGreen\" id=\"-1253957657\">Enemy_W2_Beast01_05_Boss</a>",
     "realName": "Fealty",
     "aim": "Buff",
     "desc": "When a target with \"Fealty\" is attacked, the DMG from this attack will be transferred to the Security Doggo, and causes the target team to gain Punchline.",
