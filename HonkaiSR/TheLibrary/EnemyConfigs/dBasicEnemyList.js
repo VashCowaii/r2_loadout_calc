@@ -11733,7 +11733,7 @@ let basicEnemyList = {
       "501303002": {
         "name": "Sparxie's \"Gift\""
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Canvas Peacock"
   },
@@ -11761,7 +11761,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "5014012": {
       "5014012": {
@@ -11772,7 +11772,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "@SparxiConOfficial"
     },
     "groupName": "@SparxiConOfficial"
@@ -18133,7 +18133,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Live Stream Assistant"
     },
     "8002058": {

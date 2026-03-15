@@ -1,0 +1,93 @@
+const configAbility = {
+  "fileName": "5014011_Monster_W5_Vtuber_PassiveAbility_BGM",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [],
+  "whenAdded": [
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "OR",
+        "conditionList": [
+          {
+            "name": "Stage Type",
+            "stageType": "Challenge"
+          },
+          {
+            "name": "Stage Type",
+            "stageType": "VerseSimulation"
+          },
+          {
+            "name": "Stage Type",
+            "stageType": "StrongChallengeActivity"
+          },
+          {
+            "name": "Stage Type",
+            "stageType": "RogueRelic"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Level Entity}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"2105349163\">Enemy_W5_Vtuber_ResetStageBGM</a>"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2105349163\">Enemy_W5_Vtuber_ResetStageBGM</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Varying Data",
+              "target": null,
+              "variableName": "MDF_WaveIndex",
+              "value": "CurWaveIndex"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "New Enemy Wave",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Varying Data",
+              "target": null,
+              "variableName": "MDF_WaveIndex2",
+              "value": "CurWaveIndex"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "MDF_WaveIndex",
+                "compareType": "NOT=",
+                "value2": {
+                  "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                  "displayLines": "MDF_WaveIndex2",
+                  "constants": [],
+                  "variables": [
+                    "MDF_WaveIndex2"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ]
+}

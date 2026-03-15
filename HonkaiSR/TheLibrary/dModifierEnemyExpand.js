@@ -4934,7 +4934,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_FireResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>",
     "realName": "Fire Weakness",
     "aim": "Other",
     "desc": "As Pure Crimson is obtained, gains Fire Weakness after entering \"Color\" state, and Fire RES reduces by #1[i]%.",
@@ -4945,7 +4945,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_IceResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>",
     "realName": "Ice Weakness",
     "aim": "Other",
     "desc": "As Indigo is obtained, gains Ice Weakness after entering \"Color\" state, and Ice RES reduces by #1[i]%.",
@@ -4956,7 +4956,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>",
     "realName": "Imaginary Weakness",
     "aim": "Other",
     "desc": "As Pale Yellow is obtained, gains Imaginary Weakness after entering \"Color\" state, and Imaginary RES reduces by #1[i]%.",
@@ -4967,7 +4967,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>",
     "realName": "Physical Weakness",
     "aim": "Other",
     "desc": "As Unbleached Silk is obtained, gains Physical Weakness after entering \"Color\" state, and Physical RES reduces by #1[i]%.",
@@ -4978,7 +4978,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>",
     "realName": "Quantum Weakness",
     "aim": "Other",
     "desc": "As Ultramarine is obtained, gains Quantum Weakness after entering \"Color\" state, and Quantum RES reduces by #1[i]%.",
@@ -4989,7 +4989,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>",
     "realName": "Lightning Weakness",
     "aim": "Other",
     "desc": "As Wisteria Purple is obtained, gains Lightning Weakness after entering \"Color\" state, and Lightning RES reduces by #1[i]%.",
@@ -5000,7 +5000,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_WindResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>",
     "realName": "Wind Weakness",
     "aim": "Other",
     "desc": "As Jade Green is obtained, gains Wind Weakness after entering \"Color\" state, and Wind RES reduces by #1[i]%.",
@@ -5011,7 +5011,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_ElementResistance",
+    "name": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>",
     "realName": "All-Type RES Boost",
     "aim": "Other",
     "desc": "Increases All-Type RES by #1[i]%. Removed when Weakness is Broken. Regained when recovering from Weakness Broken state.",
@@ -5022,7 +5022,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_Ink",
+    "name": "<a class=\"gModGreen\" id=\"1931542016\">Enemy_W5_Peacock_Ink</a>",
     "realName": "Color Imbalance",
     "aim": "Debuff",
     "desc": "Unable to use Ultimate.",
@@ -5253,7 +5253,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Vtuber_Charge01",
+    "name": "<a class=\"gModGreen\" id=\"707844415\">Enemy_W5_Vtuber_Charge01</a>",
     "realName": "Live Showdown",
     "aim": "Other",
     "desc": "The current remaining HP percentage of the enemy on the sub-field is at #1[i]%. When Live Showdown ends, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field.",
@@ -5264,7 +5264,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Vtuber_Charge02",
+    "name": "<a class=\"gModGreen\" id=\"724622034\">Enemy_W5_Vtuber_Charge02</a>",
     "realName": "Live Showdown",
     "aim": "Other",
     "desc": "The current remaining HP percentage of the enemy on the sub-field is at #1[i]%. When Live Showdown ends, if all enemies in the sub-field are defeated, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field, or else uses \"Bullet Comments Ready!\" on all allies.",
@@ -5275,7 +5275,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Vtuber_InField",
+    "name": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>",
     "realName": "Epic showdown in progress!",
     "aim": "Other",
     "desc": "Located on the sub-field.",
@@ -5321,7 +5321,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Vtuber_Charge_AllDamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"888915891\">Enemy_W5_Vtuber_Charge_AllDamageReduce</a>",
     "realName": "Privacy Protection",
     "aim": "Buff",
     "desc": "Immune to Crowd Control debuffs and DMG taken decreases by #1[i]%.",
@@ -5332,7 +5332,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W5_Vtuber_AllDamageTypeTaken",
+    "name": "<a class=\"gModGreen\" id=\"1797863602\">Monster_W5_Vtuber_AllDamageTypeTaken</a>",
     "realName": "Tilted",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%. Action delayed.",
@@ -5354,7 +5354,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Vtuber_Ability04_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-1255636057\">Enemy_W5_Vtuber_Ability04_Bonus</a>",
     "realName": "Flooding Viewers",
     "aim": "Buff",
     "desc": "Increases action advances and CRIT Rate by #1[i]%.",
@@ -5593,7 +5593,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"404660666\">Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce</a>",
     "realName": "Privacy Protection",
     "aim": "Buff",
     "desc": "Decreases DMG taken by #1[i]%.",
@@ -5628,7 +5628,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Color_Red_Display",
+    "name": "<a class=\"gModGreen\" id=\"1174793913\">Enemy_W5_Peacock_AbilityP01_Color_Red_Display</a>",
     "realName": "Pure Crimson",
     "aim": "Other",
     "desc": "Gained #1[i] points of Pure Crimson. When using abilities, consumes points to deal Fire Additional DMG.",
@@ -5639,7 +5639,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Color_Blue_Display",
+    "name": "<a class=\"gModGreen\" id=\"-2087807700\">Enemy_W5_Peacock_AbilityP01_Color_Blue_Display</a>",
     "realName": "Indigo",
     "aim": "Other",
     "desc": "Gained #1[i] points of Indigo. When using abilities, consumes points to deal Ice Additional DMG.",
@@ -5650,7 +5650,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Color_Yellow_Display",
+    "name": "<a class=\"gModGreen\" id=\"2012268992\">Enemy_W5_Peacock_AbilityP01_Color_Yellow_Display</a>",
     "realName": "Pale Yellow",
     "aim": "Other",
     "desc": "Gained #1[i] points of Pale Yellow. When using abilities, consumes points to deal Imaginary Additional DMG.",
@@ -5661,7 +5661,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Color_White_Display",
+    "name": "<a class=\"gModGreen\" id=\"-1698271149\">Enemy_W5_Peacock_AbilityP01_Color_White_Display</a>",
     "realName": "Unbleached Silk",
     "aim": "Other",
     "desc": "Gained #1[i] points of Unbleached Silk. When using abilities, consumes points to deal Physical Additional DMG.",
@@ -5672,7 +5672,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Color_Cyan_Display",
+    "name": "<a class=\"gModGreen\" id=\"689948799\">Enemy_W5_Peacock_AbilityP01_Color_Cyan_Display</a>",
     "realName": "Ultramarine",
     "aim": "Other",
     "desc": "Gained #1[i] points of Ultramarine. When using abilities, consumes points to deal Quantum Additional DMG.",
@@ -5683,7 +5683,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Color_Purple_Display",
+    "name": "<a class=\"gModGreen\" id=\"1242269878\">Enemy_W5_Peacock_AbilityP01_Color_Purple_Display</a>",
     "realName": "Wisteria Purple",
     "aim": "Other",
     "desc": "Gained #1[i] points of Wisteria Purple. When using abilities, consumes points to deal Lightning Additional DMG.",
@@ -5694,7 +5694,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Color_Green_Display",
+    "name": "<a class=\"gModGreen\" id=\"-1611732375\">Enemy_W5_Peacock_AbilityP01_Color_Green_Display</a>",
     "realName": "Jade Green",
     "aim": "Other",
     "desc": "Gained #1[i] points of Jade Green. When using abilities, consumes points to deal Wind Additional DMG.",
@@ -5705,7 +5705,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Colorless",
+    "name": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>",
     "realName": "Colorless",
     "aim": "Other",
     "desc": "When attacked by ally targets, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, then additionally gains a certain amount of \"Paint.\" When reaching 6 points of \"Paint,\" enters the \"Color\" state. During this state, based on the Types of Paint already gained, gains corresponding Types of Weakness and decreases the Type RES of corresponding Type. When in the \"Colorless\" state, Toughness will not drop below 1.",
@@ -5713,7 +5713,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Peacock_AbilityP01_Colorful",
+    "name": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>",
     "realName": "Color",
     "aim": "Other",
     "desc": "When using abilities, \"Paint\" will be consumed to deal Additional DMG of the corresponding Type. At the end of the turn, if all \"Paint\" has been consumed, enters the \"Colorless\" state and removes Weakness and Type RES reduction caused by \"Paint.\" When Weakness is Broken, consumes all \"Paint\" to deal Additional DMG equal to a percentage of this unit's max HP to this unit.",
