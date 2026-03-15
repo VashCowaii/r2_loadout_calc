@@ -7188,7 +7188,7 @@ const importFuckery = {
 
         //CHARACTER
         const charID = characterParseObject.avatarId;
-        const charRank = characterParseObject.rank;
+        const charRank = characterParseObject.rank ?? 0;
         let charNameParse = "";
 
         const invalidCharID = [];
