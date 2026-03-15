@@ -126,7 +126,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable with Team Count",
           "target": {
             "name": "Target Name",
-            "target": "MMonster_W5_JK_00_PowerOut_Target"
+            "target": "{{Aggressive Reading: PowerOut Target}}"
           },
           "variableName": "PowerOutTargetNumber",
           "livingTargets": true,
