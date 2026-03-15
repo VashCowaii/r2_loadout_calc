@@ -1743,6 +1743,325 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "@Sparxiecon: Aha Instant Battle Event",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 70001,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "@Sparxiecon: Sub-Field Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Character"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Memosprite"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Battle Event"
+                      },
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70001,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Enemy"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "@Sparxiecon: Prime-Field Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Every Battle Entity}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Character"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Memosprite"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Battle Event"
+                      },
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70001,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Enemy"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "@Sparxiecon: Output Port 2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1182558090\">Enemy_W5_VtuberPart02_00</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "@Sparxiecon: Output Port 1",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1733040515\">Enemy_W5_VtuberPart01_00</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Furbo Journalist: Killer",
       "isTargetOperator": false,
       "execute": [

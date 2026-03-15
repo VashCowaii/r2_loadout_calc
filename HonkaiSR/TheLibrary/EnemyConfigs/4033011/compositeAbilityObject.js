@@ -272,11 +272,11 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonID05) || RETURN",
-                          "displayLines": "SummonID05",
+                          "operator": "Variables[0] (SummonID04) || RETURN",
+                          "displayLines": "SummonID04",
                           "constants": [],
                           "variables": [
-                            "SummonID05"
+                            "SummonID04"
                           ]
                         },
                         "target": {
@@ -307,11 +307,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID05) || RETURN",
-                        "displayLines": "SummonID05",
+                        "operator": "Variables[0] (SummonID04) || RETURN",
+                        "displayLines": "SummonID04",
                         "constants": [],
                         "variables": [
-                          "SummonID05"
+                          "SummonID04"
                         ]
                       },
                       "locationType": "AfterCaster"
@@ -343,11 +343,11 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (SummonID05) || RETURN",
-                          "displayLines": "SummonID05",
+                          "operator": "Variables[0] (SummonID04) || RETURN",
+                          "displayLines": "SummonID04",
                           "constants": [],
                           "variables": [
-                            "SummonID05"
+                            "SummonID04"
                           ]
                         },
                         "target": {
@@ -378,11 +378,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID05) || RETURN",
-                        "displayLines": "SummonID05",
+                        "operator": "Variables[0] (SummonID04) || RETURN",
+                        "displayLines": "SummonID04",
                         "constants": [],
                         "variables": [
-                          "SummonID05"
+                          "SummonID04"
                         ]
                       },
                       "locationType": "AroundCaster"
@@ -671,11 +671,11 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Enemy ID",
             "ID": {
-              "operator": "Variables[0] (SummonID05) || RETURN",
-              "displayLines": "SummonID05",
+              "operator": "Variables[0] (SummonID04) || RETURN",
+              "displayLines": "SummonID04",
               "constants": [],
               "variables": [
-                "SummonID05"
+                "SummonID04"
               ]
             },
             "target": {
@@ -1914,11 +1914,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID05) || RETURN",
-                    "displayLines": "SummonID05",
+                    "operator": "Variables[0] (SummonID04) || RETURN",
+                    "displayLines": "SummonID04",
                     "constants": [],
                     "variables": [
-                      "SummonID05"
+                      "SummonID04"
                     ]
                   },
                   "locationType": "AfterCaster"
