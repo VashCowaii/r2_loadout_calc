@@ -1274,7 +1274,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">SPD</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsSPD" value="${isEdit ? slotRef.stats[SPDBase] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsSPD" value="${isEdit ? slotRef.stats[SPDBase] : ""}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
                     </div>
                 </div>
             </div>
@@ -1283,7 +1283,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">Effect RES</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats[EffectRES] : "0.30 "}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats[EffectRES] : "0.30"}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
                     </div>
                 </div>
             </div>
@@ -6121,6 +6121,12 @@ const userTriggers = {
         readSelection("addEnemyHPBarsDisplay").innerHTML = +readSelection("addEnemyHPBars").value;
         readSelection("addEnemyToughnessBarsDisplay").innerHTML = +readSelection("addEnemyToughnessBars").value;
         readSelection("addEnemyEnergyGainDisplay").innerHTML = +readSelection("addEnemyEnergyGain").value;
+
+
+        if (+readSelection("addEnemyStatsSPD").value > 300) {readSelection("addEnemyStatsSPD").value = 300;}
+        if (+readSelection("addEnemyStatsEffectRES").value > 0.99) {
+            readSelection("addEnemyStatsEffectRES").value = +readSelection("addEnemyStatsEffectRES").value / 100;
+        }
 
 
         const weaknessToggleEntries = ["Fire","Ice","Imaginary","Physical","Quantum","Lightning","Wind"];
