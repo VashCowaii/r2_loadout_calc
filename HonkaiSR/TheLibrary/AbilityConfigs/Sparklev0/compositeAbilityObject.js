@@ -2342,7 +2342,6 @@ const compositeAbilityObject = {
             "MDF_PropertyValueBase2"
           ],
           "latentQueue": [
-            "MDF_PassiveLayer01",
             "MDF_PassiveLayer02"
           ],
           "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
@@ -2520,7 +2519,6 @@ const compositeAbilityObject = {
             "MDF_PropertyValue2"
           ],
           "latentQueue": [
-            "MDF_PassiveLayer01",
             "MDF_PassiveLayer02"
           ],
           "description": "Additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
