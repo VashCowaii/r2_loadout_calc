@@ -86,7 +86,7 @@ const dataListerObject = {
         "Long Road Leads Home": "Fugue",
         "Patience Is All You Need": "Kafka",
         "Reforged Remembrance": "Black Swan",
-        "Those Many Springs": "Jiaqui",
+        "Those Many Springs": "Jiaoqiu",
         "Why Does the Ocean Sing": "Hysilens",
         "Never Forget Her Flame": "The Dahlia",
 
