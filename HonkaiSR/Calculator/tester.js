@@ -1283,7 +1283,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">Effect RES</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats[EffectRES] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats[EffectRES] : "0.30 "}"/>
                     </div>
                 </div>
             </div>
@@ -3367,7 +3367,9 @@ const userTriggers = {
         //mainStatsDisplay
     },
     updateCharacterBreakdownClicked(elementID) {
-        let idRef = ["Overview","Lightcone","Traces","Relics","Eidolons","Rotation"];
+        let idRef = ["Overview","Lightcone","Traces","Relics","Eidolons","Rotation"
+            // ,"Targeting"
+        ];
         for (let entry in idRef) {
             let currentButton = readSelection(`characterDisplayClicker${idRef[entry]}`);
             currentButton.style.color = "white";//changes the left menu option names to be plain so we can highlight the selected one after
@@ -6151,6 +6153,7 @@ const userTriggers = {
             const enemyATK = +readSelection("addEnemyStatsATK").value;
             if (+readSelection("addEnemyStatsSPD").value > 300) {readSelection("addEnemyStatsSPD").value = 300;}
             const enemySPD = +readSelection("addEnemyStatsSPD").value;
+            if (+readSelection("addEnemyStatsEffectRES").value > 0.99) {readSelection("addEnemyStatsEffectRES").value = 0.99;}
             const enemyEffectRES = +readSelection("addEnemyStatsEffectRES").value;
             const enemyToughness = +readSelection("addEnemyStatsToughness").value;
             const enemyHP = +readSelection("addEnemyStatsHP").value;
