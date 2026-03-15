@@ -11455,7 +11455,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Autonomous Wand"
   },
@@ -11467,7 +11467,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Security Doggo"
   },
@@ -11503,7 +11503,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5012031": {
       "5012031": {
@@ -11557,7 +11557,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Aggressive Reading Material"
     },
     "groupName": "Aggressive Reading Material"
@@ -11576,7 +11576,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5012041": {
       "5012041": {
@@ -11592,7 +11592,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Assistant Graffiti: Slacker"
     },
     "groupName": "Assistant Graffiti: Slacker"
@@ -11611,7 +11611,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5012051": {
       "5012051": {
@@ -11627,7 +11627,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Assistant Graffiti: Rusher"
     },
     "groupName": "Assistant Graffiti: Rusher"
@@ -11646,7 +11646,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5012061": {
       "5012061": {
@@ -11655,7 +11655,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Assistant Graffiti: Demander"
     },
     "groupName": "Assistant Graffiti: Demander"
@@ -11684,7 +11684,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Furbo Journalist"
   },
@@ -11711,7 +11711,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5013011": {
       "5013011": {
@@ -11721,7 +11721,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Synwish Syndicate's Underboss, Caustide"
     },
     "groupName": "Rocking Rebel"
@@ -18097,7 +18097,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Output Port 1"
     },
     "5012080": {
@@ -18108,7 +18108,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Output Port 2"
     },
     "5014011": {

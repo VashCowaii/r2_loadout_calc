@@ -6549,6 +6549,28 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Has Unique Effect Name"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "uniqueName",
+            "allowUnReady",
+            "invertCondition",
+            
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Unique Effect Name");
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Has Unique Effect Name:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT" : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.uniqueName,"Unique Identifier")}
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.allowUnReady,"Allow Unready")}
+        </div>
+        `;
+    },
     "Toggle Field Targets"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -7263,6 +7285,7 @@ const megaParsingFuckeryPain = {
             "point",
             "mapTo",
             "reset",
+            "target",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Mapping Point");
 
@@ -7271,6 +7294,7 @@ const megaParsingFuckeryPain = {
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.point,"Point")}
             ${getStandardNameDisplay(initialCounter,parseRef.mapTo,"Map To")}
             ${getStandardNameDisplay(initialCounter,parseRef.reset,"Reset")}
@@ -8130,6 +8154,7 @@ const megaParsingFuckeryPain = {
             "failed",
             "resisted",
             "dynamicStringsArray",
+            "maxTargetCount",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Events/Bonuses");
 
@@ -8184,6 +8209,7 @@ const megaParsingFuckeryPain = {
 
                 ${getStandardNameDisplay(initialCounter,parseRef.referenceModifier,"Reference Modifier")}
                 ${getStandardNameDisplay(initialCounter,parseRef.counter,"Counter")}
+                ${getStandardNameDisplay(initialCounter,parseRef.maxTargetCount,"Max Target Count")}
                 ${getStandardNameDisplay(initialCounter,parseRef.duration,"Duration")}
                 ${getStandardNameDisplay(initialCounter,parseRef.stackLimit,"Stack Limit")}
                 ${getStandardNameDisplay(initialCounter,parseRef.stackFlag,"Stack FlagType")}
