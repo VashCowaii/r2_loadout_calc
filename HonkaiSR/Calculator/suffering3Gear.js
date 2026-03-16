@@ -3372,7 +3372,7 @@ const turnLogicLightcones = {
                         }
                         sourceTurn.lcThoseManySpringsVULNSHEET2 = {
                             "stats": [VulnAll],
-                            [VulnAll]: rankParams[2] + rankParams[6],
+                            [VulnAll]: rankParams[2] + rankParams[5],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.buff3,
