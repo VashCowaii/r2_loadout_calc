@@ -8072,6 +8072,8 @@ const turnLogicRelics = {
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
 
+                        if (!ownerRank) {return;}
+
                         let relicNameRef = "Eagle of Twilight Line";
                         battleActions.actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
                     },

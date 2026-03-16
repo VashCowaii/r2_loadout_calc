@@ -161,6 +161,7 @@ const sim = {
 
             for (let battleEntity of nextTurnAV) {
                 if (battleEntity.blockWaveAVReset) {continue;}
+                logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `${battleEntity.properName} remaining AV was reset from: ${+battleEntity.AV.toFixed(7)}<br>To: ${+battleEntity.AVBase.toFixed(7)}<br>`});
                 battleEntity.AV = battleEntity.AVBase;//reset everyone's AV to base(or whatever their current base is)
                 // AV:SPDStats.SPDActionValue,
                 // AVBase:SPDStats.SPDActionValue,
@@ -178,6 +179,10 @@ const sim = {
             sim.createEnemyTargets(battleData,enemiesToMake);
             poke("WaveStartFinished",battleData,{});
             sim.clearUltimateQueue(battleData)
+
+            const nextWaveTurn = sim.getNextQueuedTurn(battleData,false,battleSettings);
+            console.log(nextWaveTurn.properName)
+            return nextWaveTurn
         }
         else if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
             //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
