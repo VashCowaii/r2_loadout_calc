@@ -5,6 +5,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -16,6 +17,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1204Shadow.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -27,6 +29,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -38,6 +41,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -51,6 +55,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -64,6 +69,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -77,6 +83,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -90,6 +97,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -103,6 +111,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -118,6 +127,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -133,6 +143,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -148,6 +159,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -163,6 +175,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -178,6 +191,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -192,6 +206,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -206,6 +221,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -220,6 +236,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -234,6 +251,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -248,6 +266,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -268,6 +287,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -288,6 +308,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -308,6 +329,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -328,6 +350,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -348,6 +371,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -368,6 +392,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -388,6 +413,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -408,6 +434,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -428,6 +455,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -448,6 +476,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -459,6 +488,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -470,6 +500,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_000.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -481,6 +512,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -492,6 +524,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -503,6 +536,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -514,6 +548,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -525,6 +560,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -536,6 +572,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -547,6 +584,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_Flag.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -558,6 +596,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -569,6 +608,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -580,6 +620,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -591,6 +632,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -602,6 +644,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1204Shadow.png",
     "team": "Neutral Team",
     "type": "Summon",
@@ -613,6 +656,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -655,6 +699,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 1121604,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1.1
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "1112_BE.png",
@@ -701,6 +775,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 1122204,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1.1
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "1222_BE.png",
     "team": "Player Team",
     "type": "Summon",
@@ -712,6 +816,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_1309_A.png",
     "team": "Player Team",
     "type": "Assist",
@@ -723,6 +828,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_1312_02_A.png",
     "team": "Player Team",
     "type": "Assist",
@@ -734,6 +840,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_1402_A.png",
     "team": "Player Team",
     "type": "Assist",
@@ -745,6 +852,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1407.png",
     "team": "Player Team",
     "type": "Assist",
@@ -756,6 +864,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1408_02.png",
     "team": "Player Team",
     "type": "Assist",
@@ -834,6 +943,66 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill01": {
+        "skillID": 1141401,
+        "trigger": "Skill01",
+        "name": "",
+        "type": "Single Target",
+        "slot": "Basic ATK",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1.1
+          ]
+        },
+        "element": "Physical",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          60,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 1141404,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1.1
+          ]
+        },
+        "attackType": "Normal",
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "1414_BE.png",
     "team": "Player Team",
     "type": "Summon",
@@ -845,6 +1014,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_2022051.png",
     "team": "Player Team",
     "type": "Assist",
@@ -856,6 +1026,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_2012010.png",
     "team": "Player Team",
     "type": "Assist",
@@ -867,6 +1038,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1204Shadow.png",
     "team": "Player Team",
     "type": "Assist",
@@ -878,6 +1050,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_MultiMindControl.png",
     "team": "Player Team",
     "type": "Assist",
@@ -889,6 +1062,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_Flag.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -900,6 +1074,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_MultiMindControl.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -911,6 +1086,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_OutSource.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -922,6 +1098,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_Belobog.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -933,6 +1110,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_2035010.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -944,6 +1122,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_SummonLycan.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -955,6 +1134,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_Rage.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -966,6 +1146,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_3004020.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -977,6 +1158,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_Rage.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -988,6 +1170,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -999,6 +1182,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_Rage.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1010,6 +1194,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_SummonLycan.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1021,6 +1206,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_DawnsEye_Rognarok.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1094,6 +1280,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2001801,
+        "trigger": "Skill03",
+        "name": "Going Solo",
+        "type": "Support",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2001802,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_W2_LycanKing_PickUp.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
@@ -1105,6 +1346,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1116,6 +1358,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_W4_Manta_WormPassive.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1127,6 +1370,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_2035010.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1138,6 +1382,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_W4_Unicorn_Prepare.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1211,6 +1456,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2002301,
+        "trigger": "Skill03",
+        "name": "Soul-Shattering Malediction",
+        "type": "Support",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2002302,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_W2_Feixiao_PickUp.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
@@ -1222,6 +1522,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_W4_Theoroi_00_Phase1.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1233,6 +1534,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_3004023.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1244,6 +1546,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_W4_Theoroi_00_Phase2.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -1315,6 +1618,61 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2002901,
+        "trigger": "Skill03",
+        "name": "Beguiling Spores",
+        "type": "Support",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2002902,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_W3_Sam_01.png",
@@ -1390,6 +1748,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2003001,
+        "trigger": "Skill03",
+        "name": "Name the Culprit",
+        "type": "Impair",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2003002,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_W4_Serpent_MainTarget.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
@@ -1461,6 +1874,61 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2003401,
+        "trigger": "Skill03",
+        "name": "Desperate Deathmatch",
+        "type": "Support",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2003402,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_DoubleAreaActive.png",
@@ -1536,6 +2004,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2003501,
+        "trigger": "Skill03",
+        "name": "Psychedelic Elegy",
+        "type": "Support",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2003502,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_W2_Feixiao_PickUp.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
@@ -1547,6 +2070,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_NegativeHP.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -1560,6 +2084,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1633,6 +2158,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2003001,
+        "trigger": "Skill03",
+        "name": "Name the Culprit",
+        "type": "Impair",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2003002,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_W4_Serpent_MainTarget.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
@@ -1644,6 +2224,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_W5_Vtuber_00_CountDown.png",
     "team": "Player Team",
     "type": "Assist",
@@ -1717,6 +2298,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 2004001,
+        "trigger": "Skill03",
+        "name": "Live Showdown",
+        "type": "Impair",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2004002,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_W5_Vtuber_00_CountDown.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
@@ -1730,6 +2366,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1743,6 +2380,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1756,6 +2394,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1769,6 +2408,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1782,6 +2422,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1797,6 +2438,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1812,6 +2454,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1827,6 +2470,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1842,6 +2486,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1857,6 +2502,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1871,6 +2517,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1885,6 +2532,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1899,6 +2547,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1913,6 +2562,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1927,6 +2577,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1940,6 +2591,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1953,6 +2605,7 @@ let battleEvents = {
       0.35
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1967,6 +2620,7 @@ let battleEvents = {
       20
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1981,6 +2635,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -1994,6 +2649,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2007,6 +2663,7 @@ let battleEvents = {
       0.6
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2021,6 +2678,7 @@ let battleEvents = {
       1
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2037,6 +2695,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2050,6 +2709,7 @@ let battleEvents = {
       0.25
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2064,6 +2724,7 @@ let battleEvents = {
       0.75
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2080,6 +2741,7 @@ let battleEvents = {
       0.2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2095,6 +2757,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2108,6 +2771,7 @@ let battleEvents = {
       1.2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2122,6 +2786,7 @@ let battleEvents = {
       10
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2135,6 +2800,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2149,6 +2815,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2165,6 +2832,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2178,6 +2846,7 @@ let battleEvents = {
       0.35
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2192,6 +2861,7 @@ let battleEvents = {
       1
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2206,6 +2876,7 @@ let battleEvents = {
       0.8
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2219,6 +2890,7 @@ let battleEvents = {
       0.35
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2233,6 +2905,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2247,6 +2920,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2262,6 +2936,7 @@ let battleEvents = {
       1
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2277,6 +2952,7 @@ let battleEvents = {
       0.25
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2291,6 +2967,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2304,6 +2981,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2318,6 +2996,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2332,6 +3011,7 @@ let battleEvents = {
       1.1
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2348,6 +3028,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2363,6 +3044,7 @@ let battleEvents = {
       0.4
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2377,6 +3059,7 @@ let battleEvents = {
       0
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2392,6 +3075,7 @@ let battleEvents = {
       10
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2409,6 +3093,7 @@ let battleEvents = {
       0.35
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2423,6 +3108,7 @@ let battleEvents = {
       0.6
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2440,6 +3126,7 @@ let battleEvents = {
       0.3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2456,6 +3143,7 @@ let battleEvents = {
       0.2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2473,6 +3161,7 @@ let battleEvents = {
       0.3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2489,6 +3178,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2505,6 +3195,7 @@ let battleEvents = {
       0.15
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2520,6 +3211,7 @@ let battleEvents = {
       0.25
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2537,6 +3229,7 @@ let battleEvents = {
       0.15
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2554,6 +3247,7 @@ let battleEvents = {
       0.35
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2569,6 +3263,7 @@ let battleEvents = {
       0.12
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2590,6 +3285,7 @@ let battleEvents = {
       0.03
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2607,6 +3303,7 @@ let battleEvents = {
       0.015
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2620,6 +3317,7 @@ let battleEvents = {
       4.2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2633,6 +3331,7 @@ let battleEvents = {
       0.2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2654,6 +3353,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2670,6 +3370,7 @@ let battleEvents = {
       0.015
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2689,6 +3390,7 @@ let battleEvents = {
       0.01
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2702,6 +3404,7 @@ let battleEvents = {
       1.8
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2719,6 +3422,7 @@ let battleEvents = {
       0.015
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2735,6 +3439,7 @@ let battleEvents = {
       2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2753,6 +3458,7 @@ let battleEvents = {
       0.015
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2770,6 +3476,7 @@ let battleEvents = {
       0.015
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2786,6 +3493,7 @@ let battleEvents = {
       0.0036000002
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -2796,6 +3504,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
@@ -2807,6 +3516,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
@@ -2823,6 +3533,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "VS. Warning Event",
@@ -2839,6 +3550,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "VS. Warning Event",
@@ -2855,6 +3567,7 @@ let battleEvents = {
       0
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "VS. Warning Event",
@@ -2898,6 +3611,35 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill04": {
+        "skillID": 3050501,
+        "trigger": "Skill04",
+        "name": "Unboxing Surprise",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals multiple hits of Imaginary Elation DMG to a random enemy target.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Imaginary",
+        "skillEffect": "Bounce",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_007.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2911,6 +3653,7 @@ let battleEvents = {
       0.3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -2922,6 +3665,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_Shenyuan.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2933,6 +3677,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_Shenyuan.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2944,6 +3689,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2955,6 +3701,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_000.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2966,6 +3713,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2977,6 +3725,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2988,6 +3737,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -2999,6 +3749,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_003.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3010,6 +3761,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3021,6 +3773,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_003.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3089,6 +3842,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100101,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Preservation",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals Physical DMG to all enemies based on the max DMG that can be absorbed by Shields on all allies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_001.png",
@@ -3161,6 +3968,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100201,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Nihility",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "There is a chance to apply Burn, Shock, Bleed, and Wind Shear on all enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100202,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_004.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3229,6 +4090,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100301,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Abundance",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Restores all allies' HP and increases their respective Max HP.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100302,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_003.png",
@@ -3301,6 +4216,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100401,
+        "trigger": "Skill03",
+        "name": "Path Resonance: The Hunt",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals Wind DMG to all enemies based on the ATK of the character on the team with the highest ATK.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100402,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_005.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3369,6 +4338,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100501,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Destruction",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals Fire DMG to all enemies based on the HP difference between all allies' Max HP and their current HP",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100502,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_002.png",
@@ -3441,6 +4464,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100601,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Remembrance",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals Ice DMG to all enemies, with a high chance of Freezing them all.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100602,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_006.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3509,6 +4586,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100701,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Elation",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals DMG of a random Type to all enemies multiple times.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100702,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_007.png",
@@ -3581,6 +4712,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100801,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Propagation",
+        "type": "Support",
+        "slot": "Path Resonance",
+        "desc": "A target ally immediately takes action, recovering Skill Point and activating Metamorphosis.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100802,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_009.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3649,6 +4834,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100901,
+        "trigger": "Skill03",
+        "name": "Path Resonance: \"Erudition\"",
+        "type": "Support",
+        "slot": "Path Resonance",
+        "desc": "Inflicts Synapse Resonance on all enemies and deals Imaginary DMG to them.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100902,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_012.png",
@@ -3721,6 +4960,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110101,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Preservation",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "Provides a Shield for all allies. Based on the total Shield Effect of all allies, deals Physical DMG to all enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3789,6 +5082,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110201,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Nihility",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "Apply Burn, Shock, Bleed, and Wind Shear on all enemies. After receiving a character's attack, the inflicted DoTs can be triggered.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110202,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_004.png",
@@ -3861,6 +5208,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110301,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Abundance",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "Restores HP for all allies and dispels all debuffs while providing the \"Purgatorial Eradication\" state.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110302,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_003.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -3929,6 +5330,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110401,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: The Hunt",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "Deals Wind DMG to all enemies and Advances all allies' actions.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110402,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_005.png",
@@ -4001,6 +5456,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110501,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Destruction",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "Deals Fire DMG to all enemies. Whenever a character is attacked or loses HP, they will gain an additional hit of DMG next time.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110502,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_002.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4069,6 +5578,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110601,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Remembrance",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "Deals Ice DMG to all enemies, with a high chance of Freezing enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110602,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_006.png",
@@ -4141,6 +5704,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110701,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Elation",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "Deals Follow-Up ATK DMG of a random DMG Type to all enemies for a random number of times and causes all allies' Basic ATK/Skill/Ultimate DMG to be considered as Follow-Up ATK DMG.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110702,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_007.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4209,6 +5826,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110801,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Propagation",
+        "type": "Support",
+        "slot": "Boundary Equation",
+        "desc": "Causes one designated ally to immediately take action and recovers Skill Points while gaining the \"Levitation\" effect. When any enemy unit gets defeated by a character that has \"Levitation,\" Boundary Equation regenerates Energy.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110802,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_009.png",
@@ -4281,6 +5952,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4110901,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Erudition",
+        "type": "Support",
+        "slot": "Boundary Equation",
+        "desc": "Deals Imaginary DMG to all enemies and inflicts the Central Link effect on them, regenerating Energy for all allies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4110902,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4349,6 +6074,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4111001,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Harmony",
+        "type": "Support",
+        "slot": "Boundary Equation",
+        "desc": "Deals Quantum DMG to all enemy targets and Breaks their Weaknesses. When Weakness is Broken, triggers all Weakness Break effects from all Types.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4111002,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_008.png",
@@ -4421,6 +6200,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4111101,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Remembrance",
+        "type": "Support",
+        "slot": "Boundary Equation",
+        "desc": "Deals Ice DMG to all enemies with a high chance of Freezing them. After being attacked by a memosprite while in this Freeze state, they will additionally take True DMG based on Max HP.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4111102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_006.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4491,6 +6324,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4111201,
+        "trigger": "Skill03",
+        "name": "Boundary Equation: Destruction",
+        "type": "AoE",
+        "slot": "Boundary Equation",
+        "desc": "After triggering this Boundary Equation, deal Fire DMG to all enemy targets, consume all allies' HP and also increase Max HP and restore HP at the start of the turn.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4111202,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Boundary Equation",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_002.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4504,6 +6391,7 @@ let battleEvents = {
       0.3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEventRogueDlc.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -4515,6 +6403,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -4526,6 +6415,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -4537,6 +6427,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4577,6 +6468,34 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4300101,
+        "trigger": "Skill03",
+        "name": "Path Resonance: The Hunt",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_012.png",
@@ -4621,6 +6540,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4300201,
+        "trigger": "Skill03",
+        "name": "Path Resonance: The Hunt",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4661,6 +6608,34 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4300301,
+        "trigger": "Skill03",
+        "name": "Path Resonance: The Hunt",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_012.png",
@@ -4705,6 +6680,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4300401,
+        "trigger": "Skill03",
+        "name": "Path Resonance: The Hunt",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4716,6 +6719,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_RogueFormula01.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4727,6 +6731,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4738,6 +6743,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4749,6 +6755,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueFormula01.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4760,6 +6767,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueFormula02_CD.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4771,6 +6779,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueFormula03.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4782,6 +6791,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_FightFest.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -4792,6 +6802,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_FightFest.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -4802,6 +6813,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4813,6 +6825,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4824,6 +6837,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueFormula02_CD.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4835,6 +6849,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4846,6 +6861,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueMiracle1180.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4857,6 +6873,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_RogueMiracle1180.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4868,6 +6885,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113201.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4910,6 +6928,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4500101,
+        "trigger": "Skill03",
+        "name": "Tactical Codex: Feint Attack",
+        "type": "AoE",
+        "slot": "Tactics",
+        "desc": "After an ally uses their Ultimate, their action is immediately Advanced Forward, and Weakness Break Efficiency increases.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "FightFest_Coach_01.png",
@@ -4956,6 +7004,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4500201,
+        "trigger": "Skill03",
+        "name": "Tactical Codex: Hidden Agenda",
+        "type": "AoE",
+        "slot": "Tactics",
+        "desc": "Allies gain Early Reveal. In the effect duration, after every attack, launch 1 attack against all enemies that have been hit and inflict them with the Startled debuff.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "FightFest_Coach_02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -4998,6 +7076,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4500301,
+        "trigger": "Skill03",
+        "name": "Tactical Codex: Lie in Wait",
+        "type": "AoE",
+        "slot": "Tactics",
+        "desc": "Applies Burn, Shock, Bleed, and Wind Shear on all enemies, and causes all enemies to immediately take action, triggering the DoT effects.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "FightFest_Coach_03.png",
@@ -5044,6 +7152,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4500401,
+        "trigger": "Skill03",
+        "name": "Tactical Codex: Out of Thin Air",
+        "type": "AoE",
+        "slot": "Tactics",
+        "desc": "All allies immediately activate their Ultimates.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "FightFest_Coach_04.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5086,6 +7224,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4500501,
+        "trigger": "Skill03",
+        "name": "Tactical Codex: Arsonous Larceny",
+        "type": "AoE",
+        "slot": "Tactics",
+        "desc": "Causes allied character to immediately take another action after their next action and increases their DMG dealt.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "FightFest_Coach_05.png",
@@ -5132,6 +7300,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4500601,
+        "trigger": "Skill03",
+        "name": "Tactical Codex: Stealing Their Thunder",
+        "type": "AoE",
+        "slot": "Tactics",
+        "desc": "All allies immediately take action, receive 3 Skill Points, and increase Weakness Break Efficiency.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "FightFest_Coach_06.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5143,6 +7341,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Dot_05.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5154,6 +7353,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Follow_04.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5165,6 +7365,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Follow_05.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5176,6 +7377,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Ultimate_04.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5187,6 +7389,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Dot_06.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5198,6 +7401,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Ultimate_05.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5209,6 +7413,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Ultimate_06.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5220,6 +7425,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Follow_06.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5231,6 +7437,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Break_04.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5242,6 +7449,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Break_05.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5253,6 +7461,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Break_06.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5264,6 +7473,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Dot_04.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5275,6 +7485,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Dot_01.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5286,6 +7497,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Follow_01.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5297,6 +7509,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Ultimate_01.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5308,6 +7521,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Follow_02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5319,6 +7533,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Break_01.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5330,6 +7545,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Break_02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5341,6 +7557,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1086.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5352,6 +7569,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Dot_02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5363,6 +7581,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Ultimate_02.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5374,6 +7593,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Follow_03.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5385,6 +7605,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Ultimate_03.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5396,6 +7617,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Break_03.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5407,6 +7629,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "RogueMagicScepter_Dot_03.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5418,6 +7641,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -5429,6 +7653,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -5440,6 +7665,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -5451,6 +7677,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -5462,6 +7689,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -5473,6 +7701,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -5486,6 +7715,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Countdown Warning",
@@ -5499,6 +7729,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -5512,6 +7743,7 @@ let battleEvents = {
       0.2
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -5524,6 +7756,7 @@ let battleEvents = {
       0.4
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -5536,6 +7769,7 @@ let battleEvents = {
       0.4
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -5615,6 +7849,68 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6000101,
+        "trigger": "Skill03",
+        "name": "Preservation Creation's Wrath",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Fire DMG to all enemies.",
+        "energyCost": 140,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.075
+          ]
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6000102,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.3,
+            20,
+            60
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "Monster_9003020.png",
     "team": "Player Team",
     "type": "Assist",
@@ -5689,6 +7985,62 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 908003,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 908004,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -5761,6 +8113,62 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 909003,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 909004,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_001.png",
@@ -5843,6 +8251,68 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6000401,
+        "trigger": "Skill03",
+        "name": "Preservation Creation's Wrath",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Fire DMG to all enemies.",
+        "energyCost": 180,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.075
+          ]
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6000402,
+        "trigger": "SkillP01",
+        "name": "Preservation Creation's Wrath",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.3,
+            20,
+            40
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "Monster_9003020.png",
     "team": "Player Team",
     "type": "Assist",
@@ -5887,6 +8357,38 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill08": {
+        "skillID": 6000501,
+        "trigger": "Skill08",
+        "name": "",
+        "type": "Single Target",
+        "slot": "Basic ATK",
+        "desc": "Deals Fire DMG to all targets",
+        "energyCost": null,
+        "energyRegen": 10,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3
+          ]
+        },
+        "element": "Fire",
+        "attackType": "Normal",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "Monster_9003020.png",
@@ -5970,6 +8472,64 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6000601,
+        "trigger": "Skill03",
+        "name": "Cloudhymn Roar",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 120,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.5
+          ]
+        },
+        "element": "Imaginary",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          60,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6000602,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Imaginary",
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BE1213_Special.png",
     "team": "Player Team",
     "type": "Assist",
@@ -5981,6 +8541,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1213.png",
     "team": "Player Team",
     "type": "Assist",
@@ -6028,6 +8589,38 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill08": {
+        "skillID": 6000801,
+        "trigger": "Skill08",
+        "name": "",
+        "type": "Single Target",
+        "slot": "Basic ATK",
+        "desc": "Deals Fire DMG to all targets",
+        "energyCost": null,
+        "energyRegen": 10,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3
+          ]
+        },
+        "element": "Fire",
+        "attackType": "Normal",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BE1213_Special.png",
@@ -6120,6 +8713,70 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6001001,
+        "trigger": "Skill03",
+        "name": "Ethereal Cradle",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals Wind DMG to all enemy targets while inflicting 3 stacks of Arcana to all attacked enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1,
+            60,
+            50,
+            10,
+            3,
+            1,
+            3
+          ]
+        },
+        "element": "Wind",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6001002,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BE1307_Special.png",
     "team": "Player Team",
     "type": "Assist",
@@ -6167,6 +8824,38 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill08": {
+        "skillID": 6000801,
+        "trigger": "Skill08",
+        "name": "",
+        "type": "Single Target",
+        "slot": "Basic ATK",
+        "desc": "Deals Fire DMG to all targets",
+        "energyCost": null,
+        "energyRegen": 10,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3
+          ]
+        },
+        "element": "Fire",
+        "attackType": "Normal",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "1217.png",
@@ -6248,6 +8937,67 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6001201,
+        "trigger": "Skill03",
+        "name": "Horizon's Echo From Afar",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 160,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3.6
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6001202,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            20,
+            60
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
@@ -6327,6 +9077,67 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6001301,
+        "trigger": "Skill03",
+        "name": "Horizon's Echo From Afar",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 200,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3.6
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6001302,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            20,
+            60
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
@@ -6377,6 +9188,40 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6001401,
+        "trigger": "SkillP01",
+        "name": "Horizon's Echo From Afar",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            10,
+            5,
+            4
+          ]
+        },
+        "element": "Physical",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          90,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_1221Special.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -6388,6 +9233,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
@@ -6399,6 +9245,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
@@ -6410,6 +9257,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
@@ -6421,6 +9269,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
@@ -6498,6 +9347,67 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6001901,
+        "trigger": "Skill03",
+        "name": "Horizon's Echo From Afar",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Break enemy summons to Charge 1 Energy. Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 8,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            12,
+            480,
+            30
+          ]
+        },
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          120,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6001902,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            100
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_60012.png",
@@ -6579,6 +9489,67 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002001,
+        "trigger": "Skill03",
+        "name": "Mydei",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            6,
+            1,
+            0.2,
+            1
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6002002,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_20421076.png",
     "team": "Player Team",
     "type": "Assist",
@@ -6658,6 +9629,67 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002101,
+        "trigger": "Skill03",
+        "name": "Allow Changes?",
+        "type": "Restore",
+        "slot": "Ultimate",
+        "desc": "Restores all HP for all allies, recover all Skill Points, and cause Mem to receive 100% Charge.",
+        "energyCost": 160,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6002102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "AoE",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            80,
+            10,
+            40,
+            1
+          ]
+        },
+        "element": "Quantum",
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          60,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "1006.png",
     "team": "Player Team",
     "type": "Assist",
@@ -6732,6 +9764,34 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6002202,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_20421076.png",
@@ -6811,6 +9871,67 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002301,
+        "trigger": "Skill03",
+        "name": "Mydei",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals Wind DMG to all enemy targets while inflicting 3 stacks of Arcana to all attacked enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            2,
+            1,
+            0.2,
+            1
+          ]
+        },
+        "element": "Wind",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6002302,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_20421076.png",
@@ -6906,6 +10027,71 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002401,
+        "trigger": "Skill03",
+        "name": "Healing Rainbow",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            4,
+            1,
+            2,
+            0,
+            0,
+            1,
+            0.5,
+            0.5,
+            20
+          ]
+        },
+        "element": "Wind",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6002402,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60024.png",
     "team": "Player Team",
     "type": "Assist",
@@ -6947,6 +10133,35 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002501,
+        "trigger": "Skill03",
+        "name": null,
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "1408_02.png",
@@ -6992,6 +10207,35 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002601,
+        "trigger": "Skill03",
+        "name": null,
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "1408_02.png",
     "team": "Player Team",
     "type": "Assist",
@@ -7033,6 +10277,35 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002701,
+        "trigger": "Skill03",
+        "name": null,
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "1408_02.png",
@@ -7114,6 +10387,67 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002801,
+        "trigger": "Skill03",
+        "name": "Command Spell",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Regenerates 100% Energy for Saber and increases her DMG dealt.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            5,
+            1,
+            0.2,
+            1
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6002802,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_60028.png",
@@ -7208,6 +10542,70 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6002901,
+        "trigger": "Skill03",
+        "name": "Healing Rainbow",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            4,
+            1,
+            2,
+            0,
+            0,
+            1,
+            0.5,
+            10
+          ]
+        },
+        "element": "Wind",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6002902,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60024.png",
     "team": "Player Team",
     "type": "Assist",
@@ -7282,6 +10680,64 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003001,
+        "trigger": "Skill03",
+        "name": "Heroes, Ever Ablaze",
+        "type": "Single Target",
+        "slot": "Ultimate",
+        "desc": "Ally targets using Ultimate can regenerate 1 Energy, deal massive Ice DMG to one enemy, and greatly reduce \"Amphorean Hatred\"!",
+        "energyCost": 4,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.07,
+            0.3,
+            0.6
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          120,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6003002,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_60030.png",
@@ -7360,6 +10816,64 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003101,
+        "trigger": "Skill03",
+        "name": "Epics, as We've Written",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Ally targets using Ultimate can regenerate 1 Energy, deal massive True DMG to all enemies, and greatly reduce \"Amphorean Hatred\"!",
+        "energyCost": 4,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.025,
+            0.3,
+            0.3
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          120,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6003102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60031.png",
     "team": "Player Team",
     "type": "Assist",
@@ -7402,6 +10916,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003201,
+        "trigger": "Skill03",
+        "name": "Cyrene's Support ♪",
+        "type": "Support",
+        "slot": "Ultimate",
+        "desc": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60033.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
@@ -7413,6 +10955,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -7424,6 +10967,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -7501,6 +11045,67 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003601,
+        "trigger": "Skill03",
+        "name": "Mydei",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 40,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            6,
+            1,
+            0.2,
+            1
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6003602,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_20421076.png",
@@ -7594,6 +11199,70 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003701,
+        "trigger": "Skill03",
+        "name": "Healing Rainbow",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Removes the \"Tide-Corrosion\" state from all ally targets, adds \"Flame-Chase\" to all ally targets and restores HP.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            4,
+            1,
+            2,
+            0,
+            0,
+            1,
+            0.5,
+            10
+          ]
+        },
+        "element": "Wind",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6003702,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60024.png",
     "team": "Player Team",
     "type": "Assist",
@@ -7672,6 +11341,68 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003801,
+        "trigger": "Skill03",
+        "name": "Horizon's Echo From Afar",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 200,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3.6
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6003802,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            12.5,
+            50,
+            12.5
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_60012.png",
@@ -7753,6 +11484,67 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003901,
+        "trigger": "Skill03",
+        "name": "Horizon's Echo From Afar",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 160,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3.6
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6003902,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            20,
+            60
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
@@ -7832,6 +11624,67 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003901,
+        "trigger": "Skill03",
+        "name": "Horizon's Echo From Afar",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive Imaginary DMG to all enemies.",
+        "energyCost": 160,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            3.6
+          ]
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6003902,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            20,
+            60
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
@@ -7878,6 +11731,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100101,
+        "trigger": "Skill03",
+        "name": "Edict: Evil Cleanse",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Depletes all enemies' Toughness and inflicts Weakness Break equal to the effects of Quantum Break. Based on the highest ATK on the team, deals Quantum DMG equal to #2[i]% of ATK to all enemies and increases enemies' DMG received by #1[i]% for #3[i] turn(s).",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_Gourd.png",
@@ -7927,6 +11810,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100201,
+        "trigger": "Skill03",
+        "name": "Amulet: Fiend Seal",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Recover #1[i] Skill Points and apply Spiritual Command to all allies for 1 time. While in the Spiritual Command state, consuming Skill Points will increase the character's DMG by #2[i]% until the end of the attack.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.3
+          ]
+        },
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -7972,6 +11885,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100301,
+        "trigger": "Skill03",
+        "name": "Amulet: Coreflow Supreme",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "All allies regenerate Energy equal to #1[i]% of their respective Max Energy, and increase the next instance of Ultimate DMG by #2[i]%.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_Gourd.png",
@@ -8024,6 +11967,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100401,
+        "trigger": "Skill03",
+        "name": "Edict: Woe Exile",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals Physical DMG equal to #1[i]% of the ATK of the ally with the highest ATK on the team to a random enemy, repeating for #2[i] time(s). Each DMG application applies Bleed to the target, lasting for #4[i] turn(s) and stacking up to #5[i] stack(s).\\nWhile Bleeding, enemy targets receive Physical DoT equal to #3[i]% of their Max HP at the start of every turn.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "Bounce",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8070,6 +12043,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100501,
+        "trigger": "Skill03",
+        "name": "Suppression: Demon Shackle",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Apply Imprisonment to all enemies and delay their action by #1[i] as well as applying Paranoia to all enemies, lasting for #2[i] turn(s). While in the Paranoia state, every time enemy targets are attacked, they will receive Imaginary Additional DMG equal to #3[i]% of the attacker's ATK once. This DMG is not affected by additional multipliers.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_Gourd.png",
@@ -8122,6 +12125,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100601,
+        "trigger": "Skill03",
+        "name": "Edict: Quincunx Smite",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Apply 1 stack of Skyfire Curse to all enemies for a maximum of #1[i] stacks. This exorcismics only requires 1 charge. Skyfire Curse will detonate after the affected target is attacked. When Skyfire Curse detonates, deals Fire DMG equal to #2[i]% of the ATK of the ally with the highest ATK on the team to affected targets, and deals Fire DMG equal to #3[i]% of the ATK of the ally with the highest ATK to adjacent targets. The target's and adjacent enemies' subsequent Skyfire Curse DMG received are increased by #4[i]%, stacking up to #5[i] time(s).",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8168,6 +12201,36 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100701,
+        "trigger": "Skill03",
+        "name": "Amulet: Altar Aegis",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "All allies receive #1[i] stack(s) of Altar Aegis, lasting #2[i] turn(s). Every stack of Altar Aegis can block 1 incoming damage from attacks. Upon being hit, deals DMG equal to #3[i]% of the attacked ally's DEF to the attacker. This DMG cannot CRIT hit and cannot defeat the enemy.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "Defence",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "BattleEvent_Gourd.png",
@@ -8219,6 +12282,36 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6100801,
+        "trigger": "Skill03",
+        "name": "Suppression: Incarnate Morph",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Transforms #1[i] - #2[i] enemies into Trotters and dispels all their buffs. The transformation is removed after #3[i] turn(s). While the enemy target is a Trotter, every attack that lands on them are guaranteed CRIT hits with CRIT DMG increased by #4[i]%.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0
+          ]
+        },
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8261,6 +12354,34 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "",
@@ -8307,6 +12428,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8349,6 +12498,34 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "",
@@ -8395,6 +12572,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8437,6 +12642,34 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "",
@@ -8483,6 +12716,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -8525,6 +12786,34 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "",
@@ -8571,6 +12860,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -8615,6 +12932,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8626,6 +12971,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -8637,6 +12983,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -8651,6 +12998,7 @@ let battleEvents = {
       6
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -8664,6 +13012,7 @@ let battleEvents = {
       4
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Countdown Warning",
@@ -8677,6 +13026,7 @@ let battleEvents = {
       6
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -8690,6 +13040,7 @@ let battleEvents = {
       3
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Countdown Warning",
@@ -8705,6 +13056,7 @@ let battleEvents = {
       0.025
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -8716,6 +13068,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_TVSeason2.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8729,6 +13082,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -8739,6 +13093,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106002.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8750,6 +13105,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106008.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8761,6 +13117,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106009.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8772,6 +13129,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106010.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8783,6 +13141,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106011.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8794,6 +13153,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106013.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8807,6 +13167,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8818,6 +13179,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8829,6 +13191,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113002.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8840,6 +13203,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113003.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8851,6 +13215,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8862,6 +13227,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8873,6 +13239,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8884,6 +13251,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113010.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8895,6 +13263,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8906,6 +13275,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8917,6 +13287,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8928,6 +13299,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113903.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8939,6 +13311,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106009.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8950,6 +13323,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113004.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8961,6 +13335,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113005.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8972,6 +13347,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113006.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8983,6 +13359,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106008.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -8994,6 +13371,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113201.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -9005,6 +13383,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113301.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -9016,6 +13395,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113799.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -9027,6 +13407,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_ActivityElationBattle_Open.png",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -9065,7 +13446,11 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEventAbility_Elation_00_Skill04_01",
+              "BattleEventAbility_Elation_00_Skill04_02",
+              "BattleEventAbility_Elation_00_Skill04_02_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -9101,7 +13486,11 @@ let battleEvents = {
             "attackType": "ElationDamage",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEventAbility_Elation_00_Skill41_Phase1",
+              "BattleEventAbility_Elation_00_Skill41_Camera",
+              "BattleEventAbility_Elation_00_Skill41_Phase2"
+            ],
             "toughnessList": [
               0,
               0,
@@ -9138,7 +13527,10 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Activity_ElationBattle_BEStart_ForShowOnly",
+              "BattleEventAbility_Elation_00_Passive"
+            ],
             "toughnessList": [
               0,
               0,
@@ -9147,6 +13539,114 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill04": {
+        "skillID": 7000101,
+        "trigger": "Skill04",
+        "name": "Aha Instant",
+        "type": "Single Target",
+        "slot": "Ultimate",
+        "desc": "Causes units capable of using Elation Skills to use their Elation Skill once. Then, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": [
+          "BattleEventAbility_Elation_00_Skill04_01",
+          "BattleEventAbility_Elation_00_Skill04_02",
+          "BattleEventAbility_Elation_00_Skill04_02_Camera"
+        ],
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 7000102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Enhance",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            80,
+            0.2,
+            0.1,
+            0.05,
+            0.025,
+            0.025
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": [
+          "Activity_ElationBattle_BEStart_ForShowOnly",
+          "BattleEventAbility_Elation_00_Passive"
+        ],
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill41": {
+        "skillID": 7000103,
+        "trigger": "Skill41",
+        "name": "Let There Be Laughter",
+        "type": "Single Target",
+        "slot": "Ultimate",
+        "desc": "Randomly launches up to 10 hits against both sides, with each hit dealing Quantum Elation DMG. When allies are hit, they regenerate a minor amount of Energy each hit.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.02,
+            3,
+            0.5,
+            0.5,
+            2
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "ElationDamage",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": [
+          "BattleEventAbility_Elation_00_Skill41_Phase1",
+          "BattleEventAbility_Elation_00_Skill41_Camera",
+          "BattleEventAbility_Elation_00_Skill41_Phase2"
+        ],
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_007.png",
@@ -9160,6 +13660,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9171,6 +13672,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9182,6 +13684,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9193,6 +13696,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9204,6 +13708,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9215,6 +13720,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9226,6 +13732,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9237,6 +13744,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -9248,6 +13756,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -9259,6 +13768,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -9270,6 +13780,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -9281,6 +13792,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_8003010.png",
     "team": "Player Team",
     "type": "Assist",
@@ -9292,6 +13804,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_8003020.png",
     "team": "Player Team",
     "type": "Assist",
@@ -9303,6 +13816,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1204Shadow.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -9313,6 +13827,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -9479,6 +13994,156 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9600301,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0301": {
+        "skillID": 9600302,
+        "trigger": "Skill0301",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 25,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0302": {
+        "skillID": 9600303,
+        "trigger": "Skill0302",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 50,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            2
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0303": {
+        "skillID": 9600304,
+        "trigger": "Skill0303",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            5,
+            1
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9600305,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "AoE",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            30,
+            20
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "1006.png",
@@ -9649,6 +14314,156 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9600401,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0301": {
+        "skillID": 9600402,
+        "trigger": "Skill0301",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0302": {
+        "skillID": 9600403,
+        "trigger": "Skill0302",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            2
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0303": {
+        "skillID": 9600404,
+        "trigger": "Skill0303",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            5,
+            1
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9600405,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "AoE",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            40,
+            17
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "1006.png",
     "team": "Player Team",
     "type": "Assist",
@@ -9725,6 +14540,64 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9600501,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "Single Target",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9600305,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "AoE",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            30,
+            20
+          ]
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "1006.png",
     "team": "Player Team",
     "type": "Assist",
@@ -9797,6 +14670,62 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9600604,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9600605,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_000.png",
@@ -9873,6 +14802,62 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9600704,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9600705,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
@@ -9945,6 +14930,62 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9601004,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9601005,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_000.png",
@@ -10077,6 +15118,118 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9601104,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9601105,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0301": {
+        "skillID": 9601106,
+        "trigger": "Skill0301",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0302": {
+        "skillID": 9601107,
+        "trigger": "Skill0302",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10149,6 +15302,62 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill01": {
+        "skillID": 9601201,
+        "trigger": "Skill01",
+        "name": "",
+        "type": "Single Target",
+        "slot": "Basic ATK",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Normal",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          30,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9601205,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_000.png",
@@ -10281,6 +15490,118 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9601304,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9601305,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0301": {
+        "skillID": 9601306,
+        "trigger": "Skill0301",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0302": {
+        "skillID": 9601307,
+        "trigger": "Skill0302",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10355,6 +15676,62 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9601404,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9601405,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10366,6 +15743,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1204Shadow.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10377,6 +15755,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "8002.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10388,6 +15767,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEventSilverWolf.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10399,6 +15779,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -10527,6 +15908,118 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9601904,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9601905,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0301": {
+        "skillID": 9601906,
+        "trigger": "Skill0301",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0302": {
+        "skillID": 9601907,
+        "trigger": "Skill0302",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_000.png",
@@ -10659,6 +16152,118 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9602004,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9602005,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0301": {
+        "skillID": 9602006,
+        "trigger": "Skill0301",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill0302": {
+        "skillID": 9602007,
+        "trigger": "Skill0302",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Quantum",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10733,6 +16338,62 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9602104,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9602105,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
@@ -10744,6 +16405,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "8002.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -10815,6 +16477,61 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9602404,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Equilibrium Arc",
+        "type": "AoE",
+        "slot": "Ancient Relic",
+        "desc": "Deals a set amount of DMG to all enemies equal to 50% of their respective Max HP.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9602405,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "Treasure_Attack.png",
@@ -10889,6 +16606,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9602504,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Overclocking Turbine",
+        "type": "Support",
+        "slot": "Ancient Relic",
+        "desc": "Use on a single ally. Allows the target to immediately take action and greatly increases DMG and SPD.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9602505,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -10959,6 +16731,61 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9602604,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ancient Relic",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9602605,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_000.png",
@@ -11033,6 +16860,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9602704,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ancient Relic",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9602705,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -11105,6 +16987,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9602804,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Geomarrow Forge",
+        "type": "Support",
+        "slot": "Ancient Relic",
+        "desc": "Regenerates Energy for all allies and increases DMG dealt by Ultimate and Break efficiency.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9602805,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -11117,6 +17054,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -11191,6 +17129,62 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9603104,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Equilibrium Arc",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals a set amount of DMG to all enemies equal to 50% of their respective Max HP.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Physical",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9603105,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -11263,6 +17257,61 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9603204,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Energy Storage Brick",
+        "type": "Support",
+        "slot": "Ancient Relic",
+        "desc": "Increases DMG dealt by Skill for all allies. After an ally uses their Skill, their next action will be Advanced Forward.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9603205,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -11333,6 +17382,61 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9603304,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Attenuation Laser",
+        "type": "Impair",
+        "slot": "Ancient Relic",
+        "desc": "Adds a Weakness to an enemy target, and increases the Break DMG and Toughness Reduction received by the target.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "attackType": "Ultra",
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9603305,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "Treasure_Debuff.png",
@@ -11408,6 +17512,62 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9603404,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Overclocking Turbine",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Use on a single ally. Allows the target to immediately take action and greatly increases DMG and SPD.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Physical",
+        "attackType": "Ultra",
+        "skillEffect": "Support",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9603405,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -11481,6 +17641,62 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9603504,
+        "trigger": "Skill03",
+        "name": "Ancient Relic: Equilibrium Arc",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals a set amount of DMG to all enemies equal to 50% of their respective Max HP.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Physical",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9603505,
+        "trigger": "SkillP01",
+        "name": "",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "isBattleEvent": true
@@ -11491,6 +17707,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_Flag.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -11533,6 +17750,34 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9603801,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_005.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -11544,6 +17789,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -11555,6 +17801,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "isBattleEvent": true
@@ -11565,6 +17812,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -11578,6 +17826,7 @@ let battleEvents = {
       0.5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
@@ -11589,6 +17838,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1112_BE.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11600,6 +17850,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_FeverTimeLastPhase.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11611,6 +17862,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11622,6 +17874,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Treasure_Attack.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11633,6 +17886,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
@@ -11703,6 +17957,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100101,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Preservation",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals Physical DMG to all enemies based on the max DMG that can be absorbed by Shields on all allies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -11714,6 +18022,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106002.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -11784,6 +18093,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100101,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Preservation",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals Physical DMG to all enemies based on the max DMG that can be absorbed by Shields on all allies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -11795,6 +18158,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3106002.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -11806,6 +18170,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_TrashCan.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11817,6 +18182,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11828,6 +18194,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BattleEvent_FightFest.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11896,6 +18263,60 @@ let battleEvents = {
             "hitSplits": []
           }
         }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100101,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Preservation",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals Physical DMG to all enemies based on the max DMG that can be absorbed by Shields on all allies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100102,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
       }
     },
     "icon": "HoshinoKami_001.png",
@@ -11968,6 +18389,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 9615301,
+        "trigger": "Skill03",
+        "name": "",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9615302,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "BE_StarChallenge.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -11979,6 +18454,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_StarChallenge.png",
     "team": "Player Team",
     "type": "Assist",
@@ -11990,6 +18466,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
@@ -12001,6 +18478,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
     "type": "Assist",
@@ -12012,6 +18490,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "BE_StarChallenge.png",
     "team": "Player Team",
     "type": "Assist",
@@ -12023,6 +18502,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "Treasure_Debuff.png",
     "team": "Player Team",
     "type": "Assist",
@@ -12036,6 +18516,7 @@ let battleEvents = {
       5
     ],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -12047,6 +18528,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -12058,6 +18540,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
@@ -12069,6 +18552,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12141,6 +18625,60 @@ let battleEvents = {
         }
       }
     },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 10000101,
+        "trigger": "Skill03",
+        "name": "Gáe Bolg",
+        "type": "Single Target",
+        "slot": "Gáe Bolg",
+        "desc": "Using \"Gáe Bolg\" can instantly defeat non-Elite Enemies, and can deal massive DMG to Elite Enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9615302,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
     "icon": "FateHojuGaeBolg.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12152,6 +18690,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuKanshou.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12163,6 +18702,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuCaladbolg.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12174,6 +18714,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuAvalon.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12185,6 +18726,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuBloodfield.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12196,6 +18738,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuBloodfield.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12207,6 +18750,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuGaeBolg.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12218,6 +18762,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuCaladbolg.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12229,6 +18774,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "FateHojuHolyGaril.png",
     "team": "Neutral Team",
     "type": "Assist",
@@ -12240,6 +18786,7 @@ let battleEvents = {
     "energyMax": null,
     "params": [],
     "skills": {},
+    "baseTriggersObject": {},
     "icon": "1014.png",
     "team": "Neutral Team",
     "type": "Assist",
