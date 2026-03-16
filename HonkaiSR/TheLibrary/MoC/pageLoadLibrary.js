@@ -44,6 +44,7 @@ let currentFloor = null;
 let currentCycleIndex = null;
 let farmingPagePopSelectionsDone = false;
 let firstBoxGenDCompleted = false;
+let isInActiveChange = false;
 
 
 const endgameModeDisplay = {
@@ -183,6 +184,8 @@ const endgameModeDisplay = {
         </div>` : "";
     },
     setEndgameDisplay(adjustment,directEntry,floorNameNew,directIndex) {
+        if (isInActiveChange) {return}
+
         readSelection("PFDescriptionBox").innerHTML = "";
         if (adjustment != undefined) {firstBoxGenDCompleted = false;}
 
@@ -2130,6 +2133,7 @@ const endgameModeDisplay = {
 
         }
         else {
+            isInActiveChange = true;
             for (let i=0;i<mocSchedule.length;i++) {
                 const currentEntry = mocSchedule[i];
 
@@ -2141,6 +2145,7 @@ const endgameModeDisplay = {
                     currentActiveCycle = correctEntry.id;
                     currentCycleIndex = mocSchedule.indexOf(correctEntry);
 
+                    isInActiveChange = false
                     endgameModeDisplay.setEndgameDisplay(null,correctEntry);
 
                     break;
