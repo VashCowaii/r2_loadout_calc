@@ -3406,9 +3406,10 @@ const turnLogicLightcones = {
                             canApplyOne = true;
                         }
 
+                        let dotFound = false;
                         if (!check2 && currentEnemy.DOTCounter) {
                             const enemyDots = currentEnemy.currentDotsArray;
-                            let dotFound = false;
+                            
                             for (let dotEntry of enemyDots) {
                                 if (dotEntry.sourceOwner === sourceTurn.properName) {
 
