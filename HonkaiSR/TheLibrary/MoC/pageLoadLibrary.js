@@ -634,12 +634,23 @@ const endgameModeDisplay = {
                                 </div>`;
 
                                 let hpCounter = 0;
+                                let initialHPValue = null;
+                                let foundVaryingHP = false;
                                 for (let hpValue of enemyEntry.hpBase) {
                                     hpCounter++;
+                                    if (initialHPValue == null) {initialHPValue = Math.floor(hpValue)}
+                                    else if (initialHPValue != Math.floor(hpValue)) {foundVaryingHP = true;}
                                     finalHPRows += `<div class="imageRowStatisticBox3PhaseData">
                                         <span>${hpCounter}:</span>
                                         <div class="imageRowStatisticStatBox">${Math.floor(hpValue).toLocaleString()}</div>
                                     </div>`
+                                }
+
+                                if (!foundVaryingHP) {
+                                    const initialHP = enemyEntry.hpBase[0];
+                                    finalHPRows = `<div class="imageRowStatisticBox3">
+                                        <div class="imageRowStatisticStatBox">${Math.floor(initialHP).toLocaleString()}${enemyEntry.hpBars && enemyEntry.hpBars>1 ? ` x${enemyEntry.hpBars}` : ""}</div>
+                                    </div>`;
                                 }
 
 
