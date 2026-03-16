@@ -3354,11 +3354,10 @@ const turnLogicLightcones = {
                         let lcNameRef = "Those Many Springs";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
-                        let values = rankParams[2];//vuln
                         
                         sourceTurn.lcThoseManySpringsVULNSHEET = {
                             "stats": [VulnAll],
-                            [VulnAll]: values,
+                            [VulnAll]: rankParams[2],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
@@ -3373,7 +3372,7 @@ const turnLogicLightcones = {
                         }
                         sourceTurn.lcThoseManySpringsVULNSHEET2 = {
                             "stats": [VulnAll],
-                            [VulnAll]: values,
+                            [VulnAll]: rankParams[2] + rankParams[6],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.buff3,
@@ -3401,9 +3400,11 @@ const turnLogicLightcones = {
 
                         const check1 = enemyBuffs[buffName];
                         const check2 = enemyBuffs[buffName2];
-                        if ((check1 && check2) || (check1 && !currentEnemy.DOTCounter)) {continue;}
-
-                        if (!check1) {updateBuff(battleData,currentEnemy,buffSheet);}
+                        if (check2 || (check1 && !currentEnemy.DOTCounter)) {continue;}
+                        let canApplyOne = false;
+                        if (!check1) {
+                            canApplyOne = true;
+                        }
 
                         if (!check2 && currentEnemy.DOTCounter) {
                             const enemyDots = currentEnemy.currentDotsArray;
@@ -3412,7 +3413,6 @@ const turnLogicLightcones = {
                                 if (dotEntry.sourceOwner === sourceTurn.properName) {
 
                                     dotFound = true;
-                                    updateBuff(battleData,currentEnemy,buffSheet2);
                                     break;
                                 }
                             }
@@ -3421,12 +3421,18 @@ const turnLogicLightcones = {
                                 for (let dotEntry of specialDots) {
                                     if (dotEntry.sourceOwner === sourceTurn.properName) {
     
-                                        // dotFound = true;
-                                        updateBuff(battleData,currentEnemy,buffSheet2);
+                                        dotFound = true;
                                         break;
                                     }
                                 }
                             }
+                        }
+
+                        if ((check1 || canApplyOne) && dotFound) {
+                            updateBuff(battleData,currentEnemy,buffSheet2);
+                        }
+                        else if (canApplyOne) {
+                            updateBuff(battleData,currentEnemy,buffSheet);
                         }
                         
                     }  
