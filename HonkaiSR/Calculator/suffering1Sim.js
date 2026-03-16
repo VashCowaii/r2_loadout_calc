@@ -180,7 +180,7 @@ const sim = {
             poke("WaveStartFinished",battleData,{});
             sim.clearUltimateQueue(battleData)
 
-            const nextWaveTurn = sim.getNextQueuedTurn(battleData,false,battleSettings);
+            const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
             // console.log(nextWaveTurn.properName)
             return nextWaveTurn
         }
