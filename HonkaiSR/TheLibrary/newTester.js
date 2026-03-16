@@ -934,14 +934,6 @@ function checkHashForReader() {
             }
     
     
-            
-            //admittedly kinda dumb, but we run into a problem if we don't do this.
-            //the issue being that what if we click a link on a page we're already on, for a mod ref
-            //in a reader entry we don't have selected? The element won't exist yet so the link will
-            //just do nothing
-            const url = new URL(window.location.href);
-            url.searchParams.set("d", 1);
-            history.replaceState(null,"",url.toString());
         };
     }
     else if (location.hash) {
@@ -958,10 +950,15 @@ function checkHashForReader() {
             //the issue being that what if we click a link on a page we're already on, for a mod ref
             //in a reader entry we don't have selected? The element won't exist yet so the link will
             //just do nothing
-            const url = new URL(window.location.href);
-            url.searchParams.set("d", 1);
-            history.replaceState(null,"",url.toString());
+            
         };
     }
 }
 checkHashForReader()
+//admittedly kinda dumb, but we run into a problem if we don't do this.
+//the issue being that what if we click a link on a page we're already on, for a mod ref
+//in a reader entry we don't have selected? The element won't exist yet so the link will
+//just do nothing
+const url = new URL(window.location.href);
+url.searchParams.set("d", 1);
+history.replaceState(null,"",url.toString());
