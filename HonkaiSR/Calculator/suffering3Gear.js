@@ -3430,6 +3430,9 @@ const turnLogicLightcones = {
                         }
 
                         if ((check1 || canApplyOne) && dotFound) {
+                            if (check1) {
+                                removeBuff(battleData,currentEnemy,buffSheet);
+                            }
                             updateBuff(battleData,currentEnemy,buffSheet2);
                         }
                         else if (canApplyOne) {
