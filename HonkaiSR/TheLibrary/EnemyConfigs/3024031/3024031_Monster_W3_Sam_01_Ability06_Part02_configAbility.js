@@ -50,11 +50,11 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__126) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__126",
+              "operator": "Variables[0] (UnusedUnderThisBase_522) || RETURN",
+              "displayLines": "UnusedUnderThisBase_522",
               "constants": [],
               "variables": [
-                "ENEMIES_OBJECT_UNUSED__126"
+                "UnusedUnderThisBase_522"
               ]
             }
           }

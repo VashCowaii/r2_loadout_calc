@@ -81,11 +81,11 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__126) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__126",
+                  "operator": "Variables[0] (UnusedUnderThisBase_522) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_522",
                   "constants": [],
                   "variables": [
-                    "ENEMIES_OBJECT_UNUSED__126"
+                    "UnusedUnderThisBase_522"
                   ]
                 }
               }
@@ -3343,11 +3343,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__127) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__127",
+                        "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_521",
                         "constants": [],
                         "variables": [
-                          "ENEMIES_OBJECT_UNUSED__127"
+                          "UnusedUnderThisBase_521"
                         ]
                       }
                     }
@@ -3642,11 +3642,11 @@ const compositeAbilityObject = {
                           "scope": "TargetEntity",
                           "variableName": "PassiveSkill03_MaxCharge",
                           "value": {
-                            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__127) || RETURN",
-                            "displayLines": "ENEMIES_OBJECT_UNUSED__127",
+                            "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_521",
                             "constants": [],
                             "variables": [
-                              "ENEMIES_OBJECT_UNUSED__127"
+                              "UnusedUnderThisBase_521"
                             ]
                           }
                         }
