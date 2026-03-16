@@ -3749,7 +3749,7 @@ const megaParsingFuckeryPain = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Battle Event ID");
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.eventID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigs/${parseRef.ID}">${parseRef.eventID}</a>
         </div>`;
 
         // initialCounter++;
@@ -6839,7 +6839,7 @@ const megaParsingFuckeryPain = {
 
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigs/${parseRef.eventID}">${parseRef.eventID}</a>
         </div>`;
 
         return `
@@ -7159,7 +7159,7 @@ const megaParsingFuckeryPain = {
         // }
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.eventID}">${parseRef.eventID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigs/${parseRef.eventID}">${parseRef.eventID}</a>
         </div>`;
         
         return `<div class="actionDetailBody2">
@@ -12335,7 +12335,7 @@ const megaParsingFuckeryPain = {
         }
 
         let battleEventLinker = `<div class="actionDetailBody2DetailTargetNaming">
-            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${parseRef.ID}">${parseRef.ID}</a>
+            <a class="targetNaming" href="/HonkaiSR/TheLibrary/AbilityConfigs/${parseRef.ID}">${parseRef.ID}</a>
         </div>`;
 
         return `<div class="actionDetailBody2">

@@ -352,7 +352,7 @@ let isVaryingAbilityPage = false;
 let firstPageLoad = false;
 
 const isBattleEvent = compositeAbilityObject.isBattleEvent;
-const hasNoReader = isBattleEvent || (compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true);
+const hasNoReader = (compositeAbilityObject.noReader != undefined && compositeAbilityObject.noReader === true);
 const BEREF = battleEvents[compositeAbilityObject.fullCharacterName];
 
 const megaParsingFuckery = {
@@ -370,8 +370,13 @@ const megaParsingFuckery = {
         
 
         // console.log(loadFile)
+        // console.log(hasNoReader)
+        // console.log(configAbility)
+        // console.log(!!location.hash)
+        // console.log((!configAbility || !!location.hash) && !hasNoReader)
+        // throw new Error()
         
-        if ((!configAbility || location.hash) && !hasNoReader && !isBattleEvent) {
+        if ((!configAbility || location.hash) && !hasNoReader) {
             let foundValidFile = false;
             
             if (location.hash) {
@@ -423,12 +428,61 @@ const megaParsingFuckery = {
                 // console.log(loadFile)
                 configAbility = compositeAbilityObject.abilityObject[loadFile];
                 // compositeAbilityObject.trimSummonName
+
+
+                
             }
 
-            
-            
-
         }
+
+
+        if (isBattleEvent) {
+            const hasValidInstance = !!configAbility;
+
+            // let paramObject = hasValidInstance ? userTriggers.getEnemySkillsObject(true) : null;
+            let paramObject = compositeAbilityObject.enemyData;//userTriggers.getEnemySkillsObject(true);
+
+            // battleEvents
+
+
+            console.log(paramObject)
+            // throw new Error()
+
+            // console.log(paramObject)
+
+            let stringInstance = hasValidInstance ? JSON.stringify(configAbility).replace(
+                /\{\[([A-Za-z0-9_]+)\[(\d+)\]\]\}/g,
+                (_,skill,index) => {
+                    const currentSkillEntryList = paramObject[skill];
+
+                    
+
+                    let paramIndex = Number(index);
+
+                    const paramsCheck = currentSkillEntryList.params[1]?.[paramIndex];
+
+
+                    if (currentSkillEntryList == undefined || (paramsCheck == undefined)) {
+                        // console.log(skill,index,paramObject,currentSkillEntryList)
+                        return "UnusedUnderThisBase_" + skill + index
+                    }
+
+
+                    console.log(paramIndex,skill,index,currentSkillEntryList)
+                    
+                    let paramEntry = currentSkillEntryList.paramOverrides?.[paramIndex] && currentSkillEntryList.paramOverrides[paramIndex] != "-" ? currentSkillEntryList.paramOverrides[paramIndex] : paramsCheck;
+
+                    // paramOverrides
+                    return paramEntry;
+                }
+            ) : null;
+
+
+            configAbility = hasValidInstance ? JSON.parse(stringInstance) : configAbility;
+            stringInstance = null;
+            
+        }
+        
 
         let initialCounter = 1;
         console.log(loadFile)
@@ -864,6 +918,7 @@ if ((hasNoReader && entityPageType === "char") || isBattleEvent) {
 if (location.hash && isVaryingAbilityPage) {
     const elemIDAfter = decodeURIComponent(location.hash.slice(1));
     // const elemIDAfter = location.hash.slice(1);
+    if (isBattleEvent) {userTriggers.updateMainMenuDisplayed(1);}
 
     // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
     if (elemIDAfter) {
@@ -885,6 +940,8 @@ if (location.hash && isVaryingAbilityPage) {
     };
 }
 else if (location.hash) {
+    
+
     const elemIDAfter = decodeURIComponent(location.hash.slice(1));
     // const elemIDAfter = location.hash.slice(1);
 
