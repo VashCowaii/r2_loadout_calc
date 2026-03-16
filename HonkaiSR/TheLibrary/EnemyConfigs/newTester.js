@@ -956,24 +956,32 @@ userTriggers.updateCharacterUI();
 customHTML.establishMobileSideScrollerMenu();
 userTriggers.updateMainMenuDisplayed(2);
 
-if (location.hash) {
-    const elemIDAfter = decodeURIComponent(location.hash.slice(1));
-    // const elemIDAfter = location.hash.slice(1);
 
-    // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
-    if (elemIDAfter) {
-        console.log(elemIDAfter)
-        if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
-            userTriggers.updateMainMenuDisplayed(1);
-            readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
-        }
-        else {
-            readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
-        }
 
-        
-    };
+function checkHashForReader() {
+    if (location.hash) {
+        const elemIDAfter = decodeURIComponent(location.hash.slice(1));
+        // const elemIDAfter = location.hash.slice(1);
+    
+        // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
+        if (elemIDAfter) {
+            console.log(elemIDAfter)
+            if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
+                userTriggers.updateMainMenuDisplayed(1);
+                readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+            }
+            else {
+                readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+            }
+    
+            
+        };
+    }
+
+    //initially put this in a function to work how the reg readers do to fix the hashing problem we had(see reg reader newTester file notes)
+    //but since enemies already modify the url it will always count as new navigation, so nothing needs to be done here
 }
+checkHashForReader()
 
 
 

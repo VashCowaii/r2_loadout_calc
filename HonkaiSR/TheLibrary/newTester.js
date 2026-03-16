@@ -915,41 +915,53 @@ if ((hasNoReader && entityPageType === "char") || isBattleEvent) {
 // megaParsingFuckery.renewFileSelected()
 // fileSelectionSelector
 
-if (location.hash && isVaryingAbilityPage) {
-    const elemIDAfter = decodeURIComponent(location.hash.slice(1));
-    // const elemIDAfter = location.hash.slice(1);
-    if (isBattleEvent) {userTriggers.updateMainMenuDisplayed(1);}
-
-    // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
-    if (elemIDAfter) {
-        // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
-        console.log(elemIDAfter)
-        if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
-            readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
-        }
-        else {
-            readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
-            megaParsingFuckery.renewFileSelected()
-        }
-
-
+function checkHashForReader() {
+    if (location.hash && isVaryingAbilityPage) {
+        const elemIDAfter = decodeURIComponent(location.hash.slice(1));
+        // const elemIDAfter = location.hash.slice(1);
+        if (isBattleEvent) {userTriggers.updateMainMenuDisplayed(1);}
+    
+        // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
+        if (elemIDAfter) {
+            // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+            console.log(elemIDAfter)
+            if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
+                readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+            }
+            else {
+                readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
+                megaParsingFuckery.renewFileSelected()
+            }
+    
+    
+            
+            //admittedly kinda dumb, but we run into a problem if we don't do this.
+            //the issue being that what if we click a link on a page we're already on, for a mod ref
+            //in a reader entry we don't have selected? The element won't exist yet so the link will
+            //just do nothing
+            const url = new URL(window.location.href);
+            url.searchParams.set("d", 1);
+            history.replaceState(null,"",url.toString());
+        };
+    }
+    else if (location.hash) {
         
     
+        const elemIDAfter = decodeURIComponent(location.hash.slice(1));
+        // const elemIDAfter = location.hash.slice(1);
     
-    
-    };
+        // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
+        if (elemIDAfter) {
+            readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+            
+            //admittedly kinda dumb, but we run into a problem if we don't do this.
+            //the issue being that what if we click a link on a page we're already on, for a mod ref
+            //in a reader entry we don't have selected? The element won't exist yet so the link will
+            //just do nothing
+            const url = new URL(window.location.href);
+            url.searchParams.set("d", 1);
+            history.replaceState(null,"",url.toString());
+        };
+    }
 }
-else if (location.hash) {
-    
-
-    const elemIDAfter = decodeURIComponent(location.hash.slice(1));
-    // const elemIDAfter = location.hash.slice(1);
-
-    // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
-    if (elemIDAfter) {readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});};
-}
-
-
-
-
-
+checkHashForReader()
