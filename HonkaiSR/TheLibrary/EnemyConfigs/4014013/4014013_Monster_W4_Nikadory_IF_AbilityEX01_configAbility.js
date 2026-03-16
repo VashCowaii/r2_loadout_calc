@@ -1,0 +1,30 @@
+const configAbility = {
+  "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX01",
+  "skillTrigger": "SkillEX01",
+  "abilityType": "Talent",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [],
+  "whenAdded": [
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "HardLevel",
+        "compareType": ">=",
+        "value2": 1
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1228471775\">Enemy_W4_Nikadory_IF_AbilityEX01</a>"
+        }
+      ]
+    }
+  ],
+  "references": []
+}

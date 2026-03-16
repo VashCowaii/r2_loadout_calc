@@ -971,11 +971,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "PassiveSkill03_MaxCharge",
                   "value": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__127) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__127",
+                    "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_521",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__127"
+                      "UnusedUnderThisBase_521"
                     ]
                   }
                 }
@@ -1270,11 +1270,11 @@ const configAbility = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__127) || RETURN",
-                        "displayLines": "ENEMIES_OBJECT_UNUSED__127",
+                        "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_521",
                         "constants": [],
                         "variables": [
-                          "ENEMIES_OBJECT_UNUSED__127"
+                          "UnusedUnderThisBase_521"
                         ]
                       }
                     }
