@@ -562,7 +562,8 @@ const endgameModeDisplay = {
                         const potentialElite = waveEntry.scaleElite;
                         const potentialParams = waveEntry.params;
 
-                        
+                        const finalScalar = potentialElite ?? newScaleElite;
+                        const potentialEliteScale = scaleElite[finalScalar] ?? scaleInfinite[finalScalar];
 
                         const counterObjectPF = {};
 
@@ -798,10 +799,35 @@ const endgameModeDisplay = {
     
     
     
-    
+                        let scalarStringer = ``;
+                        // console.log(potentialEliteScale)
+                        if (potentialEliteScale) {
+                            const ATKParam = (potentialParams?.[0] ?? 0) + 1;
+                            const HPParam = (potentialParams?.[1] ?? 0) + 1;
+
+
+                            let innerStringer = "";
+                            innerStringer += potentialEliteScale.attackScalar != 1 || ATKParam != 1 ? `<div class="imageRowStatisticImageBoxROWDATA"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"></div>
+                                <div class="imageRowStatisticStatBoxROWDATA">${ATKParam && ATKParam != 1 ? `x(${potentialEliteScale.attackScalar} x ${ATKParam})` : `x${potentialEliteScale.attackScalar}`}</div>` : "";
+                            innerStringer += potentialEliteScale.defScalar != 1 ? `<div class="imageRowStatisticImageBoxROWDATA"><img src="/HonkaiSR/icon/property/IconDefence.png" class="imageRowStatisticImage"></div>
+                                <div class="imageRowStatisticStatBoxROWDATA">x${potentialEliteScale.defScalar}</div>` : ""
+                            innerStringer += potentialEliteScale.hpScalar != 1 || HPParam != 1 ? `<div class="imageRowStatisticImageBoxROWDATA"><img src="/HonkaiSR/icon/property/IconMaxHP.png" class="imageRowStatisticImage"></div>
+                                <div class="imageRowStatisticStatBoxROWDATA">${HPParam && HPParam != 1 ? `x(${potentialEliteScale.hpScalar} x ${HPParam})` : `x${potentialEliteScale.hpScalar}`}</div>` : ""
+                            innerStringer += potentialEliteScale.speedScalar != 1 ? `<div class="imageRowStatisticImageBoxROWDATA"><img src="/HonkaiSR/icon/property/IconSpeed.png" class="imageRowStatisticImage"></div>
+                                <div class="imageRowStatisticStatBoxROWDATA">x${potentialEliteScale.speedScalar}</div>` : ""
+                            innerStringer += potentialEliteScale.toughnessScalar != 1 ? `<div class="imageRowStatisticImageBoxROWDATA"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"></div>
+                                <div class="imageRowStatisticStatBoxROWDATA">x${potentialEliteScale.toughnessScalar}</div>` : ""
+
+                                console.log(innerStringer)
+                                scalarStringer = `<div class="imageRowStatisticBoxENDGAMEROWDATA">
+                                ${innerStringer != "" ? `<div class="imageRowStatisticStatBoxROWDATA">Used: </div>` : ""}
+                                ${innerStringer}
+                                </div>`
+                        }
     
     
                         allWavesString += `<div class="statFiltersRowHeader">Wave ${waveCounter}</div>
+                        ${scalarStringer}
                         ${isPF ? `<div class="statFiltersRowHeaderSides">Field Limit: ${waveEntry.fieldMax}</div>` : ""}
                         <div class="enemyWaveSummaryHolder">
                             ${wholeWaveString}
@@ -1738,19 +1764,6 @@ const endgameModeDisplay = {
                             }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                             skillListString += descStringer + `</div></div></div>`;
                         }
 
@@ -1918,10 +1931,7 @@ const endgameModeDisplay = {
                                 ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc ?? "")}
                             </div>
                         </div>
-                        
-                
-                
-            </div>
+                    </div>
                     `
     
                     if (currentTraceRef.params?.length) {

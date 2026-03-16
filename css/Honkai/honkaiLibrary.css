@@ -462,6 +462,40 @@ div {
     font-size: 25px;
 }
 
+
+
+.imageRowStatisticBoxENDGAMEROWDATA {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    height: auto;
+    /* padding-left: 10px; */
+    box-sizing: border-box;
+}
+.imageRowStatisticImageBoxROWDATA {
+    width: 20px;
+    max-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    opacity: 0.6;
+}
+.imageRowStatisticStatBoxROWDATA {
+    /* width: 30%; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2px;
+    font-size: 14px;
+    margin-left: 0px;
+    margin-right: 3px;
+    opacity: 0.6;
+}
+
 .statFiltersRowHeader {
     /* height: 20px; */
     width: 100%;
