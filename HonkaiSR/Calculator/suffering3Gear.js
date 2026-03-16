@@ -3331,6 +3331,117 @@ const turnLogicLightcones = {
             "prophet": "Prophet [Reforged Remembrance]"
         },
     },
+    "Those Many Springs": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    let sourceTurn = generalInfo.sourceTurn;
+                    // console.log(generalInfo.dmgSlot)
+                    let skillType = generalInfo.dmgSlot;
+                    if (skillType != "Skill" && skillType != "Ultimate" && skillType != "Basic ATK") {return;}//will only apply when these attack types happen
+
+                    let charSlot = sourceTurn.name;
+                    let ownerRank = ownersSlots[charSlot];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcThoseManySpringsVULNSHEET) {
+                        let lcNameRef = "Those Many Springs";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let values = rankParams[2];//vuln
+                        
+                        sourceTurn.lcThoseManySpringsVULNSHEET = {
+                            "stats": [VulnAll],
+                            [VulnAll]: values,
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "isDebuff": true,
+                        }
+                        sourceTurn.lcThoseManySpringsVULNSHEET2 = {
+                            "stats": [VulnAll],
+                            [VulnAll]: values,
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff3,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "isDebuff": true,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcThoseManySpringsVULNSHEET;
+                    let buffSheet2 = sourceTurn.lcThoseManySpringsVULNSHEET2;
+                    let buffName = buffSheet.buffName;
+                    let buffName2 = buffSheet2.buffName;
+                    const targetsAttacked = generalInfo.targetsGotHit;
+                    
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let targetHit in targetsAttacked) {
+                        const currentEnemy = enemyTurns[targetHit];
+                        const enemyBuffs = currentEnemy.buffsObject;
+
+                        const check1 = enemyBuffs[buffName];
+                        const check2 = enemyBuffs[buffName2];
+                        if ((check1 && check2) || (check1 && !currentEnemy.DOTCounter)) {continue;}
+
+                        if (!check1) {updateBuff(battleData,currentEnemy,buffSheet);}
+
+                        if (!check2 && currentEnemy.DOTCounter) {
+                            const enemyDots = currentEnemy.currentDotsArray;
+                            let dotFound = false;
+                            for (let dotEntry of enemyDots) {
+                                if (dotEntry.sourceOwner === sourceTurn.properName) {
+
+                                    dotFound = true;
+                                    updateBuff(battleData,currentEnemy,buffSheet2);
+                                    break;
+                                }
+                            }
+                            if (!dotFound) {
+                                const specialDots = currentEnemy.specialDotsArray;
+                                for (let dotEntry of specialDots) {
+                                    if (dotEntry.sourceOwner === sourceTurn.properName) {
+    
+                                        // dotFound = true;
+                                        updateBuff(battleData,currentEnemy,buffSheet2);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }  
+                },
+                "target": "enemy",
+                "listenerName": "Those Many Springs vuln controller",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff2": "Unarmored (LC)",
+            "buff3": "Cornered (LC)",
+        },
+    },
     "Resolution Shines As Pearls of Sweat": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
