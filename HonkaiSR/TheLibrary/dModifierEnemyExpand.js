@@ -5076,7 +5076,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Nikadory_IF_StoneShield",
+    "name": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>",
     "realName": "War Armor",
     "aim": "Other",
     "desc": "DMG taken decreases by #1[i]%. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
@@ -5087,7 +5087,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Nikadory_IF_EnhanceShield",
+    "name": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>",
     "realName": "War Armor",
     "aim": "Other",
     "desc": "DMG taken decreases by #1[i]%. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
@@ -5098,7 +5098,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Nikadory_IF_SuperShieldP2",
+    "name": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>",
     "realName": "Centirefined War Armor",
     "aim": "Other",
     "desc": "DMG taken decreases by #1[i]%. Loses stacks of \"Centirefined War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"Centirefined War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing a large amount of their Toughness, greatly delaying their action, restoring Skill Points to targets, and grants the attacker a certain number of stacks of \"Glory.\" After \"Centirefined War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. If \"Centirefined War Armor\" stack is 0 at the end of this unit's turn, it will be restored to maximum stacks.",
@@ -5109,7 +5109,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Nikadory_IF_Brave",
+    "name": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>",
     "realName": "Glory",
     "aim": "Other",
     "desc": "Each stack of \"Glory\" increases CRIT DMG by #1[i]%. Consuming 1 Skill Point adds 1 stack of \"Glory.\" When attacking, reduces stacks of \"War Armor\" or \"Centirefined War Armor\" equal to the current \"Glory\" stacks.",
@@ -5191,7 +5191,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Nikadory_IF_Ability06Charge",
+    "name": "<a class=\"gModGreen\" id=\"-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>",
     "realName": "Ready for Battle",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%. This state is removed when \"War Armor\" stacks are reduced to 0.",
@@ -5214,7 +5214,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Nikadory_IF_AbilityEX04_TGT",
+    "name": "<a class=\"gModGreen\" id=\"-311844030\">Enemy_W4_Nikadory_IF_AbilityEX04_TGT</a>",
     "realName": "Protective Formation",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]% and reduces DMG received by #2[i]%.",

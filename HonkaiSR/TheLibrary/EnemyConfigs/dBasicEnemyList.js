@@ -9231,7 +9231,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Harbinger of Death: Swarm Nightmare"
     },
     "3024032": {
@@ -9243,7 +9243,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Harbinger of Death: Swarm Nightmare"
     },
     "groupName": "Harbinger of Death: Swarm Nightmare"
@@ -9782,7 +9782,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Conquered"
     },
     "4012062": {
@@ -10202,7 +10202,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Ravaged Unconquerable"
     },
     "4014014": {
@@ -10291,7 +10291,7 @@ let basicEnemyList = {
       "401402103": {},
       "401402104": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Giver, Master of Legions, Lance of Fury"
     },
     "4014022": {
@@ -11429,7 +11429,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ichor Memosprite: Judge of Oblivion"
     },
     "groupName": "Ichor Memosprite: Judge of Oblivion"
@@ -15049,7 +15049,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Juvenile Sting"
     },
     "groupName": "Juvenile Sting"

@@ -4838,11 +4838,11 @@ const compositeAbilityObject = {
                             "target": "{{Nikador: Self}}"
                           },
                           "consumePercent": {
-                            "operator": "Variables[0] (ShieldBreakBonusFlag) || RETURN",
-                            "displayLines": "ShieldBreakBonusFlag",
+                            "operator": "Variables[0] (MDF_Part02LoseHPRatio) || RETURN",
+                            "displayLines": "MDF_Part02LoseHPRatio",
                             "constants": [],
                             "variables": [
-                              "ShieldBreakBonusFlag"
+                              "MDF_Part02LoseHPRatio"
                             ]
                           }
                         },
@@ -4878,11 +4878,11 @@ const compositeAbilityObject = {
                             "target": "{{Nikador: Self}}"
                           },
                           "consumePercent": {
-                            "operator": "Variables[0] (_KillByHearse) || RETURN",
-                            "displayLines": "_KillByHearse",
+                            "operator": "Variables[0] (MDF_Part01LoseHPRatio) || RETURN",
+                            "displayLines": "MDF_Part01LoseHPRatio",
                             "constants": [],
                             "variables": [
-                              "_KillByHearse"
+                              "MDF_Part01LoseHPRatio"
                             ]
                           }
                         },

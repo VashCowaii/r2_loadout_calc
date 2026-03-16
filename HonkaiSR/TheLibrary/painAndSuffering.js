@@ -1551,6 +1551,7 @@ const megaParsingFuckeryPain = {
 
         const functionAdjustments = {
             "Add": "+",
+            "Set": "=",
         }
         const finalAdjustment = parseRef.function ? functionAdjustments[parseRef.function] : "=";
         if (!finalAdjustment) {throw new Error(`Unknown function key in Change Skill Point Max: ${parseRef.function}`)}
