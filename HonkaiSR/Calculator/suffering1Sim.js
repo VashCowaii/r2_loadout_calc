@@ -160,7 +160,10 @@ const sim = {
             battleData.readyForNewWave = false;
 
             for (let battleEntity of nextTurnAV) {
+                if (battleEntity.blockWaveAVReset) {continue;}
                 battleEntity.AV = battleEntity.AVBase;//reset everyone's AV to base(or whatever their current base is)
+                // AV:SPDStats.SPDActionValue,
+                // AVBase:SPDStats.SPDActionValue,
             }
 
             const enemiesToMake = battleSettings["waveArray" + waveID];
@@ -268,7 +271,6 @@ const sim = {
         battleData.cycleAV -= sourceTurn.AV;
         battleData.cycleAVPassed += sourceTurn.AV;
         for (let AVentry of battleData.nextTurnAV) {
-            if (AVentry.blockWaveAVReset) {continue;}
             if (AVentry.name != sourceTurn.name) {
                 AVentry.AV = Math.max(0,AVentry.AV - sourceTurn.AV);//prevent negative action value
             }
