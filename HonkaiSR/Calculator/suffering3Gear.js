@@ -3452,6 +3452,7 @@ const turnLogicLightcones = {
             "buff3": "Cornered (LC)",
         },
     },
+        //4star
     "Resolution Shines As Pearls of Sweat": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -3506,6 +3507,56 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "resolutionDebuff": "Resolution Shines As Pearls of Sweat",
+        },
+    },
+    "Eyes of the Prey": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Eyes of the Prey";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageDOT],
+                        [DamageDOT]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.dotDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        let values = rankParams[1];
+
+                        buffSheet[DamageDOT] = values;
+                        buffSheet.sourceOwner = ownerName;
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Eyes of the Prey - DOT DMG",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "dotDMG": "Eyes of the Prey (LC)",
         },
     },
 
