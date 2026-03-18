@@ -319,7 +319,7 @@ const customHTML = {
                 If you're seeing this then it is for one of the following reasons:<br>
                 <ul>
                     <li>This character may not actually have any abilities that aren't AOE targeting, and as such needs no target logic.</li>
-                    <li>This character may actually need target logic, but would only need it for ENEMY targeting, which I don't have set up yet. This is in progress.</li>
+                    <li>This character may actually need target logic, but would only need it for ENEMY targeting, which I don't have set up yet. This is in progress. DO NOTE THOUGH that the calc automatically handles enemy targeting for you for now.</li>
                     <li>Or, Vash is dumb as hell and forgot to enable target logic on this character</li>
                 </ul>
                 If you believe target logic <i><b>should</b></i> be up and running on this character, join the discord and let Vash know.
