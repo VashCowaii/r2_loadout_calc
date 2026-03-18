@@ -15144,7 +15144,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = "char1";
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -15158,7 +15158,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.tingyunSkill, 
                 target: "char1", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -15167,8 +15168,14 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.tingyunBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             tingyunBasic(battleData,target,sourceTurn) {
@@ -15222,14 +15229,15 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
+                const targetTurn = target[0];
+
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.tingyunSkillREF ??= ATKObjects.Skill["Soothing Melody"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
-                let targetTurn = battleData.nameBasedTurns[target];
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
                 
                 let values = ATKObjects.tingyunSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -15243,7 +15251,7 @@ const turnLogic = {
                     ATKObjects.tingyunSkillBENEDICTIONSHEET = {
                         "stats": [ATKFlat],
                         [ATKFlat]: 0,
-                        "source": characterName,
+                        "source": "Skill",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
                         "durationInTurn": 4,
@@ -15262,7 +15270,7 @@ const turnLogic = {
                     ATKObjects.tingyunSkillBENEDICTIONSHEETSPD = {
                         "stats": [SPDP],
                         [SPDP]: 0.20,
-                        "source": characterName,
+                        "source": "Skill",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName2,
                         "durationInTurn": 2,
@@ -15409,7 +15417,7 @@ const turnLogic = {
                 //     ...addedHit.hit
                 // })
             },
-            tingyunUltimate(battleData,sourceTurn) {
+            tingyunUltimate(battleData,sourceTurn,target) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -15426,11 +15434,7 @@ const turnLogic = {
 
                 let charValuesRef = logicRef.characterValuesBattle;
                 //atm we look for the ally with benediction, if nobody has it then we assume char1 gets the energy, always
-                let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction ?? battleData.nameBasedTurns.char1.name];
-                //TODO:rn we just assume the first character is the one that should get the dmg buff which is reasonable
-                //however deciding that char1 should always get the energy is not always reasonable, sometimes
-                //there might be another character with a battle changing ultimate like say idk robin maybe(don't judge)
-                //and it might be best to get robin a little more energy to advance the whole team instead of int and give it to char1 before a cycle ends.
+                let targetTurn = target[0];
 
                 let values = ATKObjects.tingyunUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 let energyRegen = values[0] + (e6 ? 10 : 0);
@@ -15588,12 +15592,15 @@ const turnLogic = {
 
                         const queueObject = this.queueObject ??= {
                             attack: turnLogic[ownerTurn.properName].skillFunctions.tingyunUltimate,
-                            target: this.target,
+                            target: null,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
+                        
                         battleActions.queueUltimateUse(battleData,queueObject);
                     }
                 },
@@ -15738,7 +15745,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = battleData.nameBasedTurns.char1;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -15752,7 +15759,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.bronyaAdvance, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -15761,8 +15769,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.bronyaBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             bronyaBasic(battleData,target,sourceTurn) {
@@ -15876,9 +15889,11 @@ const turnLogic = {
                 battleActions.actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
                 poke("TalentEnd",battleData,{sourceTurn});
             },
-            bronyaAdvance(battleData,targetTurn,sourceTurn) {
+            bronyaAdvance(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
+
+                const targetTurn = target[0];
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.bronyaAdvanceREF ??= ATKObjects.Skill["Combat Redeployment"].variant1;
@@ -16279,7 +16294,8 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = battleData.nameBasedTurns.char1;
+                // returnSkillCall.target = battleData.nameBasedTurns.char1;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -16293,7 +16309,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.sundayAdvance, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -16303,7 +16320,13 @@ const turnLogic = {
                 actionCall: this.skillFunctions.sundayBasic, 
                 target: "enemy", 
                 endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Characters",
+            "Ultimate": "Characters",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             sundayBasic(battleData,target,sourceTurn) {
@@ -16353,13 +16376,15 @@ const turnLogic = {
 
                 // turnLogic[characterName].skillFunctions.bronyaTalent(battleData,sourceTurn);
             },
-            sundayAdvance(battleData,targetTurn,sourceTurn) {
+            sundayAdvance(battleData,target,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
                 
                 let skillRef = ATKObjects.sundayAdvanceREF ??= ATKObjects.Skill["Benison of Paper and Rites"].variant1;
                 let values = ATKObjects.sundayAdvanceREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const targetTurn = target[0];
 
                 // console.log(targetTurn)
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
@@ -16522,7 +16547,7 @@ const turnLogic = {
 
                 poke("SkillEnd",battleData,{sourceTurn});
             },
-            sundayUltimate(battleData,sourceTurn) {
+            sundayUltimate(battleData,sourceTurn,target) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -16537,7 +16562,7 @@ const turnLogic = {
                 getEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 const allyTurns = battleData.nameBasedTurns;
-                const targetTurn = allyTurns.char1;
+                const targetTurn = target[0];
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: true});
                 
                 const maxEnergy = targetTurn.maxEnergy;
@@ -16820,8 +16845,11 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn
+                            sourceTurn: ownerTurn,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
+
+                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
                     }
@@ -19647,7 +19675,8 @@ const turnLogic = {
 
             if ((minimum || skillIsFree) && checkSkill(battleData,thisTurn)) {
                 const skillCall = this.returnSkillCall;
-                skillCall.target = battleData.nameBasedTurns.char1;
+                // skillCall.target = battleData.nameBasedTurns.char1;
+                skillCall.target = checkAbilityTarget(battleData,thisTurn,skillCall.poolKey,"char1","SkillTarget");
                 skillCall.points = skillIsFree ? 0 : -1;
                 return skillCall;
             }
@@ -19662,7 +19691,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.sparkleAdvance, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -19671,8 +19701,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.sparkleBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             sparkleBasic(battleData,target,sourceTurn) {
@@ -19781,9 +19816,11 @@ const turnLogic = {
                 
                 updateBuff(battleData,targetTurn,buffSheet);
             },
-            sparkleAdvance(battleData,targetTurn,sourceTurn) {//no changes
+            sparkleAdvance(battleData,target,sourceTurn) {//no changes
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
+
+                const targetTurn = target[0];
 
                 if (sourceTurn.nextSkillFree) {
                     sourceTurn.nextSkillFree = false;
@@ -22853,7 +22890,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.rmcSkill, 
                 target: "self", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
@@ -22862,7 +22900,8 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.rmcBasicEnhanced, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATKEnh,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -22871,8 +22910,14 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.rmcBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            // "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+            "MemoSkillEnh": "Allies (On-Field)",
         },
         "skillFunctions": {//rmcMemTURNEVENT
             rmcBasic(battleData,target,sourceTurn) {
@@ -23283,12 +23328,15 @@ const turnLogic = {
                     }
                 }
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"char1", isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
+                const currentPool = ATKObjects.memAdvancePoolKey ??= logicRef.abilityTargetPools.MemoSkillEnh;
+
+                const char1 = checkAbilityTarget(battleData,sourceTurn,currentPool,"char1","MemoSkillEnhTarget")[0];
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:char1.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
                 poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
 
                 poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"});
 
-                const char1 = battleData.nameBasedTurns.char1;
+                
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot});
                 battleActions.actionAdvance(1,char1,battleData,"Mem's Support");
 
@@ -26704,7 +26752,9 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
+                return returnSkillCall;
             }
 
             return this.returnBasicCall;
@@ -26717,7 +26767,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.dhptSkill, 
                 target: "self", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -26726,8 +26777,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.dhptBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Characters",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             dhptBasic(battleData,target,sourceTurn) {
@@ -26781,7 +26837,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.dhptSkillShieldREF ??= ATKObjects.Skill["Terra Omnibus"].variant1;
     
-                const char1 = targetOverride ?? battleData.nameBasedTurns.char1;
+                const char1 = targetOverride ?? target[0];
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:char1.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
 
@@ -26803,8 +26859,6 @@ const turnLogic = {
                     skillFunctions.addDragonToOrder(battleData,sourceTurn,char1);
                     sourceTurn.battleValues.bondmateSlot = char1.name;
                 }
-                //TODO: come back later and add a hook in for user defined functions to determine who actually gets bondmate other than char1,
-                //and when I do, just add a benediction-type adjustment for the most recent application of the skill, bc that code already exists on tingyun it's just not used
                 
                 skillFunctions.bondmateATKConversion(battleData,sourceTurn,char1);
                 
