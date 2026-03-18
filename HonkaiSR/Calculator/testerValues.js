@@ -239,14 +239,21 @@ const permaConditionsTextLibrary = {
     "atLeast2SP": "Skill Points: Current >= 2",
     "archerSub5casts": "Skill Use Count < 5",
     "atLeast1SPORFree": "Skill Points: Current >= 1 OR Free Skill Cast",
+
+    //TARGET DEFAULT EXPLANATIONS
+    "supportDefaultChar1": "If user-defined targets fail, this ability will default to target Character 1.",
 }
 
 const defaultStandardAbilityDisplayWarnings = {
     hasEnhancedState: false,
     "Skill": "",
+    "SkillTarget": "",
     "Ultimate": "",
+    "UltimateTarget": "",
     "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-    "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    "SkillPermaConditionsTarget": [],
+    "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed],
+    "UltimatePermaConditionsTarget": [],
 };
 const conditionsCharacterDisplayWarning = {
     "defaultStandardWarnings": {
@@ -276,10 +283,14 @@ const conditionsCharacterDisplayWarning = {
     "Bronya": {
         hasEnhancedState: false,
         "Skill": "",
+        "SkillTarget": "",
         "Ultimate": "",
+        "UltimateTarget": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP],
+        "SkillPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
 
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed],
+        "UltimatePermaConditionsTarget": [],
     },
     "Trailblazer - Remembrance": {
         hasEnhancedState: true,
@@ -287,7 +298,11 @@ const conditionsCharacterDisplayWarning = {
         "Ultimate": "",
 
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed],
+
+        "MemoSkillEnhTarget": "",
+        "MemoSkillEnhPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
+        
     },
     "Cyrene": {
         hasEnhancedState: true,
@@ -339,8 +354,10 @@ const conditionsCharacterDisplayWarning = {
     "Sparkle": {
         hasEnhancedState: false,
         "Skill": "",
+        "SkillTarget": "",
         "Ultimate": "",
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SPORFree,],
+        "SkillPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Jingliu": {
@@ -425,6 +442,269 @@ const conditionLibrary = {
             default: return false;
         }
     },
+    "Target Priority"(battleData,sourceTurn,destination) {
+        const array = destination.array;
+        for (let condition of array) {
+            const currentCondition = condition.type;
+            const result = conditionLibrary[currentCondition](battleData,sourceTurn,condition);
+            if (result) {return result;}//if we ever find a condition that CAN be met, return true bc the rest don't matter
+        }
+        return false;//if all conditions failed, return false
+    },
+    "TARGET CHECK"(battleData,sourceTurn,destination) {
+        // const array = destination.array;
+
+        const statArray = destination.array;
+
+        const stat1Destination = statArray[0];//target selection
+        // const stat2Destination = statArray[1];//conditions to pass
+
+        const stat1Value = conditionLibrary[stat1Destination.type](battleData,sourceTurn,stat1Destination);
+        let isValidConditionSet = true;
+
+
+        for (let i=1;i<statArray.length;i++) {
+            const condition = statArray[i];
+            
+            const currentCondition = condition.type;
+            const result = conditionLibrary[currentCondition](battleData,sourceTurn,condition);
+            
+            if (!result) {
+                isValidConditionSet = false;
+                break;
+            }//if we ever find a condition that can't be met, then we abort bc the AND failed
+        }
+
+
+
+        // const stat2Value = conditionLibrary[stat2Destination.type](battleData,sourceTurn,stat2Destination);
+        // console.log(stat1Value,stat2Value,comparator)
+
+        // console.log(stat1Value)
+        if (isValidConditionSet && stat1Value?.length) {return stat1Value}
+        else {return false;}
+    },
+    "TARGET"(battleData,sourceTurn,destination) {
+        // const array = destination.array;
+
+        const statArray = destination.array;
+        
+        currentGlobalTargetPool = initialGlobalTargetPool;
+
+        if (currentGlobalTargetPool?.length) {
+            for (let filterFunction of statArray) {
+                // console.log(filterFunction.type)
+                currentGlobalTargetPool = conditionLibrary[filterFunction.type](battleData,sourceTurn,filterFunction);
+                if (!currentGlobalTargetPool.length) {break;}
+            }
+        }
+
+        return currentGlobalTargetPool.length ? currentGlobalTargetPool : false;
+    },
+    FILTER(battleData,sourceTurn,destination) {
+        const array = destination.array;
+        // console.log(array)
+        for (let condition of array) {
+            
+            const currentCondition = condition.type;
+            const result = conditionLibrary[currentCondition](battleData,sourceTurn,condition);
+            
+            if (!result) {return false;}//if we ever find a condition that can't be met, then we abort bc the AND failed
+        }
+        return true;//if all conditions passed, return true
+
+
+        //TODO: for filtering, I THINK what I'll do is allow it to contain various filter elements, and then from top to bottom it would filter as you go
+        //and then if anything remains by the end, that would be the valid target or targets returned
+        //we're probably going to have to make some retasked versions of existing conditions though, purely for the sake of filter type operations
+    },
+    // "Target Pool"(battleData,sourceTurn,condition) {
+    //     const targetType = globalPoolKey;
+    //     const targetPoolFunction = conditionLibrary[targetType](battleData,sourceTurn,condition);
+    //     return targetPoolFunction;
+    // },
+    "Filter Ally"(battleData,sourceTurn,condition) {
+        const allyTurns = battleData.nameBasedTurns;
+
+        let targetStated = condition.target;
+        let target = targetStated === "Self" ? sourceTurn : allyTurns[targetStated];
+        const targetType = condition.targetType;
+        if (targetType != "Character" && targetType === "Memosprite") {
+            //summonEventRef memospriteEventRef
+            const memoEventCheck = target.memospriteEventRef;
+            if (memoEventCheck) {target = target[memoEventCheck];}
+            else {return false;}//if the target has no memosprite, they can't pass these checks ever
+        }
+
+        return initialGlobalTargetPool.includes(target) ? [target] : [];
+    },
+    comparisonOperations: {
+        ">"(value1,value2) {
+            return value1 > value2;
+        },
+        ">="(value1,value2) {
+            return value1 >= value2;
+        },
+        "="(value1,value2) {
+            return value1 === value2;
+        },
+        "!="(value1,value2) {
+            return value1 != value2;
+        },
+        "<="(value1,value2) {
+            return value1 <= value2;
+        },
+        "<"(value1,value2) {
+            return value1 < value2;
+        },
+    },
+    "FILTER: Statistic"(battleData,sourceTurn,destination) {
+        // const array = destination.array;
+
+        // {
+        //     type: "COMPARE",
+        //     stat1: {type: "Stat", target: "Self", targetType: "Character", statName: "Any Part"},
+        //     comparison: ">",
+        //     stat2: {type: "Stat", target: "Self", targetType: "Character", statName: "Any Part"}
+        // },
+
+        const statArray = destination.array;
+
+        const stat1Destination = statArray[0];
+        const stat2Destination = statArray[1];
+
+        const statFunction1 = conditionLibrary[stat1Destination.type];
+        const statFunction2 = conditionLibrary[stat2Destination.type];
+
+
+
+        const comparator = destination.comparison;
+
+        const quickCompare = conditionLibrary.comparisonOperations;
+        const compare = quickCompare[comparator];
+
+        let newArray = [];
+        let currentTargets = currentGlobalTargetPool;
+
+        for (let entity of currentTargets) {
+            // currentTargets
+            const stat1Value = statFunction1(battleData,sourceTurn,stat1Destination,entity);
+            const stat2Value = statFunction2(battleData,sourceTurn,stat2Destination,entity);
+
+            const isValid = compare(stat1Value,stat2Value);
+            if (isValid) {newArray.push(entity);}
+        }
+
+        return newArray;
+    },
+    "SORT: Statistic"(battleData,sourceTurn,destination) {
+        // const array = destination.array;
+        // {
+        //     type: "COMPARE",
+        //     stat1: {type: "Stat", target: "Self", targetType: "Character", statName: "Any Part"},
+        //     comparison: ">",
+        // },
+
+        const statArray = destination.array;
+
+        const stat1Destination = statArray[0];
+
+        const statFunction1 = conditionLibrary[stat1Destination.type];
+
+        const comparator = destination.comparison;
+        let currentTargets = currentGlobalTargetPool;
+        let targetToReturn = null;
+        let lastTrackedValue = null;
+
+        if (comparator === "Maximum") {
+            lastTrackedValue = -Infinity;
+
+            for (let entity of currentTargets) {
+                
+                const stat1Value = statFunction1(battleData,sourceTurn,stat1Destination,entity);
+                
+                if (stat1Value > lastTrackedValue) {
+                    lastTrackedValue = stat1Value;
+                    targetToReturn = entity;
+                }
+            }
+        }
+        else {
+            lastTrackedValue = Infinity;
+
+            for (let entity of currentTargets) {
+                
+                const stat1Value = statFunction1(battleData,sourceTurn,stat1Destination,entity);
+                
+                if (stat1Value < lastTrackedValue) {
+                    lastTrackedValue = stat1Value;
+                    targetToReturn = entity;
+                }
+            }
+        }
+
+        return targetToReturn ? [targetToReturn] : [];
+    },
+    "Filter Stat"(battleData,sourceTurn,condition,entity) {
+        // {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"},
+        const statName = condition.statName;
+        const statValue = entity.statTable[greatTableIndex[statName]];
+
+        return statValue;
+    },
+    "Filter Character: Value"(battleData,sourceTurn,condition,entity) {
+        return entity[condition.characterValue];
+    },
+    "Filter User Value: Number"(battleData,sourceTurn,condition) {
+        return condition.inputValue;
+    },
+    // "Characters",
+    // "Memosprites",
+    // "Allies (All)",
+    // "Allies (On-Field)",
+    "Ally"(battleData,sourceTurn,condition) {
+
+        // const targetType = condition.targetType;
+        const entityType = condition.entityType;
+        const allyTurns = battleData.nameBasedTurns;
+        const conditionTarget = condition.target;
+
+        let target = conditionTarget === "Self" ? sourceTurn : allyTurns[conditionTarget];
+        if (entityType === "Memosprite") {
+            //summonEventRef memospriteEventRef
+            const memoEventCheck = target.memospriteEventRef;
+            const potentialMemoTurn = target[memoEventCheck];
+            if (memoEventCheck && !potentialMemoTurn.isDead) {target = target[memoEventCheck];}
+            //We can only return a valid memo target if it's alive, otherwise fail the check when selecting a memo
+            else {return false;}//if the target has no memosprite, they can't pass these checks ever
+        }
+
+        return target;
+    },
+
+
+    //POOL KEY REFERENCES
+    "char1"(battleData,sourceTurn,condition) {
+        return battleData.nameBasedTurns.char1;
+    },
+    "Characters"(battleData,sourceTurn,condition) {
+        return battleData.fullCharacterArray;
+    },
+    "Memosprites"(battleData,sourceTurn,condition) {
+        return battleData.declaredMemosprites;
+    },
+    "Allies (All)"(battleData,sourceTurn,condition) {
+        return battleData.allAlliesArray;
+    },
+    "Allies (On-Field)"(battleData,sourceTurn,condition) {
+        return battleData.allAllyTargetsArray;
+    },
+    "Enemies (On-Field)"(battleData,sourceTurn,condition) {
+        return battleData.allAllyTargetsArray;
+    },
+
+
+
     MATH(battleData,sourceTurn,destination) {
         // const array = destination.array;
 
@@ -774,7 +1054,9 @@ const conditionLibrary = {
 
 
 
-
+let globalPoolKey = null;
+let initialGlobalTargetPool = null;
+let currentGlobalTargetPool = null;
 const defaultConditions = {
     getUltimateCondition(battleData,sourceTurn) { 
         // characterObject
@@ -800,6 +1082,25 @@ const defaultConditions = {
         // if (sourceTurn.properName === "Saber") {console.log(result)}
         
         return result
+    },
+    getAbilityTargetCondition(battleData,sourceTurn,poolKey,fallbackTarget,refKey) { 
+        const conditionPath = battleData[sourceTurn.name]?.[refKey];
+        // const conditionPath = defaultConditions[sourceTurn.properName]?.Skill;
+        if (!conditionPath) {return [fallbackTarget];}//if someone doesn't have an ulty condition, then default to fallback targeting
+
+        const startType = conditionPath.type;
+        // console.log(startType)
+        //I don't really wanna bother with passing another parameter through all of these functions, so instead we're just making a quick global variable
+        //in the form of globalPoolKey that will allow target or filter functions within the conditions here, to call the correct grouping function.
+        globalPoolKey = poolKey;
+        initialGlobalTargetPool = conditionLibrary[poolKey](battleData,sourceTurn,conditionPath)
+        const result = conditionLibrary[startType](battleData,sourceTurn,conditionPath);
+        globalPoolKey = null;
+        initialGlobalTargetPool = null;
+
+        // console.log(result)
+        
+        return result?.length ? result : [conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath)];
     },
 
     //DESTRUCTION
@@ -872,7 +1173,67 @@ const defaultConditions = {
         "Ultimate": {
             type: "AND",
             array: []
-        }
+        },
+        "validTargetChecks": [
+            "MemoSkillEnh"
+        ],
+        "MemoSkillEnhTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
     },
     "Aglaea": {
         "hasEnhancedState": true,
@@ -1155,6 +1516,66 @@ const defaultConditions = {
             "type": "AND",
             "array": []
         },
+        "validTargetChecks": [
+            "Skill","Ultimate"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": {
             "type": "AND",
             "array": [
@@ -1177,14 +1598,134 @@ const defaultConditions = {
                     ]
                 }
             ]
-        }
+        },
+        "UltimateTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
     },
     "Bronya": {
-        hasEnhancedState: false,
-        "Skill": null,
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": {
-            type: "AND",
-            array: []
+            "type": "AND",
+            "array": []
         }
     },
     "Robin": {
@@ -1223,10 +1764,127 @@ const defaultConditions = {
     "Tingyun": {
         hasEnhancedState: false,
         "Skill": null,
+        "validTargetChecks": [
+            "Skill","Ultimate"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": {
             type: "AND",
             array: []
-        }
+        },
+        "UltimateTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
     },
     "Tribbie": {
         hasEnhancedState: false,
@@ -1277,6 +1935,66 @@ const defaultConditions = {
     "Sparkle": {
         "hasEnhancedState": false,
         "Skill": null,
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": null
     },
 
@@ -1464,6 +2182,66 @@ const defaultConditions = {
                 }
             ]
         },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": {
             "type": "AND",
             "array": []
@@ -1642,3 +2420,5 @@ const defaultConditions = {
 
 const checkUlty = defaultConditions.getUltimateCondition;
 const checkSkill = defaultConditions.getSkillCondition;
+
+const checkAbilityTarget = defaultConditions.getAbilityTargetCondition;
