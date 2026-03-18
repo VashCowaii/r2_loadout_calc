@@ -394,6 +394,111 @@ div {
 
 
 
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+summary::before {
+    content: "▶";
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 0;
+    color: rgb(153, 153, 153);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease;
+} 
+details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+/* rotationConditionOperatorHeaderAbilityTriggerConditionHeader */
+.calcUserTargetConditionHeader {
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+
+    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    /* border-top-left-radius: 10px; */
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) top 0 left / 15px 2px no-repeat,
+        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) bottom 0 left / 15px 2px no-repeat;
+
+    /* outline: 2px solid rgba(255, 255, 255, 0.527);
+    outline-offset: -10px; */
+
+    /* background-color: rgba(255, 255, 255, 0.082); */
+}
+/* rotationsPermaConditionsExpand */
+.rotationsPermaConditionsExpandTargetBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    /* margin-right: 10px; */
+    white-space: normal;
+    /* border: 1px solid green; */
+
+    /* linear-gradient(200deg, transparent,transparent, #0d393b3d) */
+    /* background: rgb(36, 2, 2); */
+    /* border-top-right-radius: 15px; */
+    /* background: #061c1d ; */
+    /* border-bottom: 2px solid #ffffff1A;
+    border-top: 2px solid #ffffff1A; */
+    /* border: 2px solid #ffffff1A; */
+
+}
+.rotationsPermaConditionsExpandTargetBoxInner,.rotationsPermaConditionsExpandTargetBoxInnerReqs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+    white-space: normal;
+    /* border: 1px solid green; */
+
+    /* linear-gradient(200deg, transparent,transparent, #0d393b3d) */
+    /* background: rgb(36, 2, 2); */
+    border-top-right-radius: 15px;
+    background: #061c1d ;
+    /* border-bottom: 2px solid #ffffff1A;
+    border-top: 2px solid #ffffff1A; */
+    border: 2px solid #ffffff1A;
+
+}
+.rotationsPermaConditionsExpandTargetBoxInnerReqs {
+    background: #061c1d;
+}
+
+
+
+
+
+
+
+
 
 
 

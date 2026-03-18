@@ -1226,17 +1226,17 @@ const sim = {
                         continue;
                     }
 
-                    if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
                     poke("UltimateStart",battleData,generalInfo);
 
                     sourceTurn.ultsUsed++;
-                    currentUltyFunction(battleData,sourceTurn);
+                    currentUltyFunction(battleData,sourceTurn,target);
                     //nonViolentWrapper gets called on buff-type ultimates within their own respective functions.
                     //later I might call it here and clarify attack-type or not in the ultyQueue object entries, just not sure if it's worth doing other than my own convenience (might be less performant on cycles, though it'd be barely)
                     poke("UltimateEnd",battleData,generalInfo);
                 }
                 else {
-                    if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
                     currentUltyFunction(battleData,target,sourceTurn);
 
                 }

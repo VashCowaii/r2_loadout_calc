@@ -28,7 +28,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Name",
-        "target": "{{Elation: Player Team with Unselectables}}"
+        "target": "{{Elation: Player Team with Unselectables with Elation Skills}}"
       },
       "conditions": {
         "name": "Living State",

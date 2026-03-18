@@ -6,6 +6,62 @@
     </ul>
 </div> -->
 <div>
+    <h1>Mar 17th, 2026 - THE TARGET LOGIC UPDATE</h1>
+    <ul>
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added Target Logic in specific cases, for which we'll elaborate below:
+            <ul>
+                <li>So with ability conditions as you know them, you can specify WHEN at any point, anyone should use ANY ability or ultimate. This is extremely handy for maintaining specific rotations, while also being flexible to allow you as the user to specify conditions that will react to the state of the battle instead of needing to manually define your rotations in every possible scenario bc fuck that.</li>
+                <li>A drawback to how we have done things is that while the standard conditions work as a glorified on/off switch for you, you couldn't ever actually dictate WHO got selected with certain abilities.</li>
+                <li>A scenario for why this sucks would be as follows:
+                    <ul>
+                        <li>Say you have Tingyun and Robin, and Robin is ALMOST ready to ult, but you have 5AV left before the battle ends, in the prior settings of the calculator even if Tingyun's ult was ready to go she would always try to target char1, meaning Robin wouldn't get enough energy, and would fail to ult before the battle ended.</li>
+                    </ul>
+                </li>
+                <li>NOW, however, there is a new tab under Rotations called Targeting, and in here you can how define a target priority list for each ability that warrants it.
+                    <ul>
+                        <li>Please note that target logic is a limited release, and for now ONLY the characters listed below will have access to it on abilities that target allies. 
+                            <ul>
+                                <li>Sparkle</li>
+                                <li>Bronya</li>
+                                <li>Trailblazer - Remembrance</li>
+                                <li>DHPT</li>
+                                <li>Sunday</li>
+                            </ul>
+                        </li>
+                        <li>Abilities that are AOE targeting obv don't need target logic</li>
+                        <li>Enemy targeting for damaging abilities is in the works but that is a little more complicated on the backend of things so that's not ready yet.</li>
+                    </ul>
+                </li>
+                <li>Target listings will each consist of 2 parts:
+                    <ul>
+                        <li>The Filter: This lets you filter the target pool available to that ability, and if no target can match your filters, that condition will fail, but if you DO find targets to return from the filters then you move on to the second part</li>
+                        <li>The Check: This is where if you found targets, you can set conditions for their use. So say you want Bronya to target character 1 UNLESS she IS character 1, then you can set conditions for that and if she were character 1 then target listing would fail and move down the list.</li>
+                    </ul>
+                </li>
+                <li>Target listings will always be evaluated from top to bottom, and every ability that HAS target logic will also have a fallback target in case you set some really fucking stupid conditions.
+                    <ul>
+                        <li>In most cases for ally targeting, the fallback target will be character 1.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+
+        <!-- <li>Added the following lightcones:
+            <ul>
+                <li>Those Many Springs</li>
+                <li>Eyes of the Prey</li>
+            </ul>
+        </li> -->
+        <!-- <h4>Fixes</h4> -->
+        <!-- <li>Fixed an issue where in some cases the Eagle set could benefit others in the team that weren't using it.</li> -->
+        <!-- <li>Fixed an issue where on wave resets, AV resets weren't being properly factored.</li> -->
+    </ul>
+</div>
+
+<div>
     <h1>Mar 16th, 2026</h1>
     <ul>
         <h3>Library</h3>

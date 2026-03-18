@@ -3368,7 +3368,7 @@ const userTriggers = {
     },
     updateCharacterBreakdownClicked(elementID) {
         let idRef = ["Overview","Lightcone","Traces","Relics","Eidolons","Rotation"
-            // ,"Targeting"
+            ,"Targeting"
         ];
         for (let entry in idRef) {
             let currentButton = readSelection(`characterDisplayClicker${idRef[entry]}`);
