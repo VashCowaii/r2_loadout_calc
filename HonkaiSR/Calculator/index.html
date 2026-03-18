@@ -123,6 +123,10 @@
                             <img src="/HonkaiSR/misc/SkillPointIcon.png" class="mainMenuRowIcon">
                             Rotation
                         </div>
+                        <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(7)" id="characterDisplayClickerTargeting">
+                            <img src="/HonkaiSR/misc/IconBuffTaunt.png" class="mainMenuRowIcon" style="scale: 1.4;">
+                            Targeting
+                        </div>
                         <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(1)" id="characterDisplayClickerOverview" style="color: #ffdb91;">
                             <img src="/HonkaiSR/misc/UI_Message_Group_Default.png" class="mainMenuRowIcon">
                             Character
@@ -239,6 +243,23 @@
                         </div> -->
                     </div>
                     
+                    <div class="centerDisplayHolderBox" id="characterMainCenterDisplayTargeting" style="display: none; border: none;flex-direction: column;">
+                        
+                        <div class="rotationBoxMainHolder">
+
+                            <div class="traceContentBodyBoxRotationsWarningMissing" id="mainConditionsTargetBoxHolderOverviewMissingWarning">
+                                If you're seeing this then conditions on this character can't be found for one of the following reasons:<br>
+                                <ul>
+                                    <li>This character hasn't been added to the calculator, at all, yet.</li>
+                                    <li>Or, Vash is dumb as hell and forgot to enable conditions on this character</li>
+                                </ul>
+                                If you believe conditions <i><b>should</b></i> be up and running on this character, join the discord and let Vash know.
+                            </div>
+
+                            <div class="rotationBoxInnerHolder" id="mainConditionsTargetBoxHolderOverview"></div>
+                        </div>
+
+                    </div>
                     
                 </div>
 
@@ -462,6 +483,26 @@
                             <br>- Want Saber to only Ult when Sunday's buffs are up?
                             <br><br>
                             These allow you to impose any restriction to achieve the aforementioned results. If a condition doesn't exist that you want, join the discord and let me know.
+                        </div>
+                    </div>
+
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayTargeting" style="display: none;">
+                        <!-- <div class="traceContentBodyBox" id="">test</div> -->
+                        <div class="traceTypeDisplayBox">
+                            <div class="traceTypeDisplay">Target Overview</div>
+                        </div>
+
+
+                        <div class="traceContentBodyBoxRotations">
+                            Target logic is meant to be used WITH Rotation conditions.
+                            <br>
+                            Your rotation will determine WHEN you an ability. Target logic will determine on WHOM you use an ability.
+                            <br><br>
+                            By using various targets with conditions for each, you can allow for dynamic targeting in scenarios your fav spreadsheet can only dream of.
+                            <br>- You could set your Firefly E2 to target low toughness enemies, only when they're low enough to break
+                            <br>- You could monitor enemy HP vs Cipher's true dmg tally, to know when that should target someone.
+                            <br><br>
+                            These will allow you to switch targets dynamically without killing your numbers. If a condition doesn't exist that you do want, join the discord and let me know.
                         </div>
                     </div>
 
