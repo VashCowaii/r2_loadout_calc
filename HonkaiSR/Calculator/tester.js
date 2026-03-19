@@ -3476,6 +3476,9 @@ const userTriggers = {
             return;
         }
 
+
+        const defaultData = defaultConditions[updated];
+
         if (currentCharObject.name != updated && updated && !duplicateCharacterExists || forceLoadOrder) {//if we're not loading a file, but the character actually changed, assume eidolons based on rarity
             //because the cache overwrite here will only ever be called when the name pass through is diff than the name stored, this will never conflict with imports
             //the reason being is imports forcibly change the name stored BEFORE this function is called
@@ -3494,7 +3497,9 @@ const userTriggers = {
 
                 if (!newCharObject.conditions) {//if the cached data somehow has NO conditions attached to it, then force the defaults
                     //do note though that this does not force conditions even when there are empty conditions bc empty conditions ARE conditions and won't be overwritten
-                    newCharObject.conditions = defaultConditions[updated] ? JSON.parse(JSON.stringify(defaultConditions[updated])) : null;
+                    
+
+                    newCharObject.conditions = defaultData ? JSON.parse(JSON.stringify(defaultData)) : null;
                 }
                 
                 // userTriggers.updateMainMenuDisplayed(1);
@@ -3506,11 +3511,23 @@ const userTriggers = {
                 //not sure if it's too much to feed to the URL or not, or if I should just do save files.
                 //cache can work but I dislike that people clear it on the regular, so would prefer not to
 
-                currentCharObject.conditions = defaultConditions[updated] ? JSON.parse(JSON.stringify(defaultConditions[updated])) : null;
+                
+
+                currentCharObject.conditions = defaultData ? JSON.parse(JSON.stringify(defaultData)) : null;
 
             }
             userTriggers.updateSelectedTraceDisplay(3);
             pagePopulation.forceCharacterDefaultSubFilters(charSlot);//default desired stat filters still need to be a thing, we do not cache search filters, people still need to export those.
+        }
+
+        if (defaultData) {
+            const currentConditionsObject = currentCharObject.conditions;
+            //since default conditions can now VARY from what people have cached or saved/exported, we need to account for keys that exist on default data
+            //that may not exist on the user's data, so this will loop through potentially missing keys
+
+            for (let defaultKey in defaultData) {
+                currentConditionsObject[defaultKey] ??= defaultData[defaultKey];
+            }
         }
 
         userTriggers.updateCharacterUI(updateFormulas(charSlot),currentSlot);
@@ -6006,8 +6023,8 @@ const userTriggers = {
             customMenu.createCharacterExportScreen();
         }
 
-        userTriggers.updateSelectedCharacter(globalRecords.character.char1.name,false,showcaseID ? true : false);
-        userTriggers.updateSelectedRelicStats();
+        // userTriggers.updateSelectedCharacter(globalRecords.character.char1.name,false,showcaseID ? true : false);
+        // userTriggers.updateSelectedRelicStats();
     },
     exportCharacterDataFilter(charSlot) {
         const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
