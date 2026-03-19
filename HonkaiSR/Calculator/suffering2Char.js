@@ -6476,7 +6476,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -6490,7 +6490,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.gallagherSkillHeal, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
@@ -6499,7 +6500,8 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.gallagherBasicEnhanced, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -6508,8 +6510,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.gallagherBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             gallagherBasic(battleData,target,sourceTurn) {
@@ -6554,7 +6561,7 @@ const turnLogic = {
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
-            gallagherSkillHeal(battleData,targetTurn,sourceTurn) {
+            gallagherSkillHeal(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -6562,6 +6569,7 @@ const turnLogic = {
                 let rank = sourceTurn.rank;
                 let e2 = rank >= 2;
                 
+                const targetTurn = target[0];
                 
                 if (!ATKObjects.gallagherSkillHealHEALOBJECT) {
                     let characterName = sourceTurn.properName;
@@ -7120,7 +7128,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = battleActions.findLowestHPAlly(battleData);
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -7134,7 +7142,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.huohuoSkillHeal, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -7143,8 +7152,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.huohuoBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             huohuoBasic(battleData,target,sourceTurn) {
@@ -7188,14 +7202,15 @@ const turnLogic = {
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
-            huohuoSkillHeal(battleData,targetTurn,sourceTurn) {
+            huohuoSkillHeal(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.huohuoSkillHealHealREF ??= ATKObjects.Skill["Talisman: Protection"].variant1;
                 let rank = sourceTurn.rank;
                 // let e2 = rank >= 2;
-                targetTurn = targetTurn ?? sourceTurn;
+                const targetTurn = target[0];
+                // console.log(targetTurn)
                 //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
                 
                 //Q: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider?
@@ -7642,7 +7657,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -7656,7 +7671,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.natashaSkillHeal, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -7665,8 +7681,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.natashaBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             natashaBasic(battleData,target,sourceTurn) {
@@ -7716,9 +7737,11 @@ const turnLogic = {
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
-            natashaSkillHeal(battleData,targetTurn,sourceTurn) {
+            natashaSkillHeal(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
+
+                const targetTurn = target[0];
 
                 let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
                 let rank = sourceTurn.rank;
@@ -8279,7 +8302,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -8293,7 +8316,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.lynxSkillHeal, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -8302,8 +8326,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.lynxBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             lynxBasic(battleData,target,sourceTurn) {
@@ -8349,9 +8378,11 @@ const turnLogic = {
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
-            lynxSkillHeal(battleData,targetTurn,sourceTurn) {
+            lynxSkillHeal(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
+
+                const targetTurn = target[0];
 
                 let skillRef = ATKObjects.lynxSkillHealREF ??= ATKObjects.Skill["Salted Camping Cans"].variant1;
                 let values = ATKObjects.lynxSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -8802,7 +8833,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall
-                returnSkillCall.target = battleActions.findLowestHPAlly(battleData);
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -8816,7 +8847,8 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.luochaSkillHeal, 
                 target: null, 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -8825,8 +8857,13 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.luochaBasic, 
                 target: "enemy", 
-                endTurn: true
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
             }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
             luochaBasic(battleData,target,sourceTurn) {
@@ -8870,14 +8907,14 @@ const turnLogic = {
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
-            luochaSkillHeal(battleData,targetTurn,sourceTurn) {
+            luochaSkillHeal(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.luochaSkillHealHealREF ??= ATKObjects.Skill["Prayer of Abyss Flower"].variant1;
                 let rank = sourceTurn.rank;
                 // let e2 = rank >= 2;
-                targetTurn = targetTurn ?? sourceTurn;
+                targetTurn = target[0];
                 //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
                 
                 //Q: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider?
@@ -8999,7 +9036,7 @@ const turnLogic = {
                 const targetCanSkillHeal = targetTurn.currentHP > 0 && hpRatioPrior <= hpThreshold;
 
                 if (targetCanSkillHeal) {
-                    healFunction(battleData,targetTurn,sourceTurn);
+                    healFunction(battleData,[targetTurn],sourceTurn);
                 }
                 else {
                     const isLoggyLogger = battleData.isLoggyLogger;
@@ -9019,7 +9056,7 @@ const turnLogic = {
                     }
 
                     if (newHPRatio <= hpThreshold) {
-                        healFunction(battleData,newTarget,sourceTurn);
+                        healFunction(battleData,[newTarget],sourceTurn);
                     }
                     else {
                         if (isLoggyLogger) {
