@@ -375,8 +375,10 @@ const customHTML = {
         const warningRef = conditionsCharacterDisplayWarning[characterName];
 
         const fullTargetName = `${refSkillString}Target`;
+        const validTargetChecks = conditionsRef?.validTargetChecks;
+        const newValidSet = new Set (validTargetChecks);
 
-        const hasValidSkillTarget = conditionsRef && conditionsRef[fullTargetName] != undefined;
+        const hasValidSkillTarget = conditionsRef && (conditionsRef[fullTargetName] != undefined || newValidSet.has(refSkillString));
         if (!hasValidSkillTarget) {return;}
 
         const skillRotations = readSelection(`rotationsConditionsBodyBox${refSkillString}Target`);
@@ -385,9 +387,9 @@ const customHTML = {
         readSelection(`rotationsConditionsWarningBox${refSkillString}Target`).innerHTML = warningRef ? warningRef[fullTargetName] : "";
         const permaConditionsBoxSkill = readSelection(`rotationsConditionsBox${refSkillString}PermaTarget`);
         permaConditionsBoxSkill.innerHTML = "";
-
         
         const skillCheckTarget = hasValidSkillTarget ? conditionsRef[fullTargetName] ??= rotationsUISuffering.getReturnStruct("Target Priority") : null;
+
         if (skillCheckTarget) {
 
             const poolKey = abilityTargetPools[refSkillString];
@@ -403,7 +405,7 @@ const customHTML = {
                 // rotationsConditionsWarningBoxSkill
 
                 const fullWarningRef = `${refSkillString}PermaConditionsTarget`;
-                console.log(fullWarningRef)
+                // console.log(fullWarningRef)
                 if (warningRef?.[fullWarningRef].length) {
                     
 
@@ -934,8 +936,13 @@ const filterBasicListArray = [
     // "FILTER: State",
     "SORT: Statistic",
     "Filter Ally",
+    "Healing Presets",
     // "Enemy",
     "Delete",
+]
+const filterHealingPresetMenuArray = [
+    "Lowest HP Ally (On-Field)",
+    "Maximize Blast Healing",
 ]
 const conditionListArray = [
     "AND",
@@ -1373,6 +1380,9 @@ const rotationsUISuffering = {
             case "Filter Stat": return {type: "Filter Stat", statName: "ATK%"}
             case "Filter User Value: Number": return {type: "Filter User Value: Number", inputValue: 0}
             case "Filter Ally": return {type: "Filter Ally", target: "Self", targetType: "Character"}
+
+            //FILTER HEALING PRESETS
+            case "Healing Presets": return {type: "Healing Presets", statName: "Lowest HP Ally (On-Field)"}
             
             
             //STANDARD CONDITIONS
@@ -3367,6 +3377,57 @@ const rotationsUISuffering = {
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
                             ${getConditionList(destination.target ?? "Self",conditionListChars)}
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>`;
+
+        return returnString
+    },
+    "Healing Presets"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
+
+        // {type: "Stat", statName: "ATK%"},
+        indexCounter++;
+        const newArray = [...arrayToPass];
+        newArray.push(indexCounter);
+        const arrayIDString = newArray.join("|");
+        const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
+
+
+        const valueNameElem = readSelection(`${baseIDString}StatValue`);
+
+        if (valueNameElem) {
+            destination.statName = valueNameElem.value;
+        }
+        const statName = destination.statName ??= "Lowest HP Ally (On-Field)";
+
+        // basicShorthand.reverseKeyMappings        //specific to index value  greatTableKeys
+        // console.log(statIndex)
+
+        
+        const getConditionList = rotationsUISuffering.getConditionList;
+
+
+        // "Healing Presets",
+        // "Lowest HP Ally (On-Field)",
+
+        let returnString = `<div class="rotationsConditionsRowHolder">
+            <div class="rotationsConditionsRowHolderInner">
+
+                <div class="rotationsConditionsImageAdjacentHolderBox">
+
+                    <div class="rotationsConditionsRowHeader">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                            ${getConditionList("Healing Presets",filterBasicListArray)}
+                        </select>
+                    </div>
+
+                    <div class="rotationsSectionConditionHolderBox">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}StatValue" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                            ${getConditionList(statName,filterHealingPresetMenuArray)}
                         </select>
                     </div>
 

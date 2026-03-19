@@ -658,10 +658,82 @@ const conditionLibrary = {
     "Filter User Value: Number"(battleData,sourceTurn,condition) {
         return condition.inputValue;
     },
-    // "Characters",
-    // "Memosprites",
-    // "Allies (All)",
-    // "Allies (On-Field)",
+
+    "Healing Presets"(battleData,sourceTurn,condition) {
+        // {type: "Stat", statName: "ATK%"},
+        const statFunction1 = conditionLibrary[condition.statName](battleData,sourceTurn,condition);
+
+        return statFunction1;
+    },
+    "Lowest HP Ally (On-Field)"(battleData,sourceTurn,condition) {
+        // return battleActions.findLowestHPAlly(battleData);
+        const currentGlobalTargetPoolInner = currentGlobalTargetPool;
+        let lastValue = 0;
+        let lastTarget = currentGlobalTargetPoolInner[0];
+        for (let entity of currentGlobalTargetPoolInner) {
+            const hpRatio = 1 - (entity.currentHP / entity.maxHP);
+            if (hpRatio > lastValue) {
+                lastValue = hpRatio;
+                lastTarget = entity;
+            }
+        }
+        return lastTarget ? [lastTarget] : [];
+    },
+    "Maximize Blast Healing"(battleData,sourceTurn,condition) {
+        // return battleActions.findLowestHPAlly(battleData);
+
+        const initialGlobalTargetPoolInner = initialGlobalTargetPool;
+
+        let sumWeight = 0;
+        let iCenter = 0;
+
+        const trackLoss = [];
+
+        for (let entity of initialGlobalTargetPoolInner) {
+            trackLoss.push(1 - (entity.currentHP / entity.maxHP));
+        }
+        const fullLength = trackLoss.length;
+        
+
+        if (fullLength === 1) {
+            return initialGlobalTargetPool;
+        }
+        else if (fullLength === 2) {
+            const loss1 = trackLoss[0];
+            const loss2 = trackLoss[1];
+            if (loss1 > loss2) {return [initialGlobalTargetPoolInner[0]]}
+            else {return [initialGlobalTargetPoolInner[1]]}
+        }
+        else {
+            /*
+                    1   2   3       4       5
+                    0   0   0.9     .2      .01
+
+                    0
+                        0.9
+                            1.19
+                                    1.13
+                                            .211
+                the concept here is to weight the current index for potential center targeting just slightly more heavily than normal
+                this way if there is an edgecase where some guy is missing some microscopic fraction of health, it won't skew the targeting distribution
+                off of a character who needs it way fuckin more.
+
+                so we make the proposed center as we loop pretend it is missing 10% more HP than it really is, and add the adjacent targets missing HP% as well
+                and then w/e has the highest composite missing HP at its proposed center, will be the returned center target.
+            */
+            for (let i=0;i<fullLength-1;i++) {
+                const currentIndexLoss = trackLoss[i] * 1.1 + (trackLoss[i+1] ?? 0) + (trackLoss[i-1] ?? 0);
+                if (currentIndexLoss > sumWeight) {
+                    sumWeight = currentIndexLoss;
+                    iCenter = i;
+                }
+            }
+
+        }
+
+        const finalTarget = initialGlobalTargetPoolInner[iCenter];
+        return finalTarget ? [finalTarget] : [];
+    },
     "Ally"(battleData,sourceTurn,condition) {
 
         // const targetType = condition.targetType;
@@ -685,8 +757,9 @@ const conditionLibrary = {
 
     //POOL KEY REFERENCES
     "char1"(battleData,sourceTurn,condition) {
-        return battleData.nameBasedTurns.char1;
+        return [battleData.nameBasedTurns.char1];
     },
+    
     "Characters"(battleData,sourceTurn,condition) {
         return battleData.fullCharacterArray;
     },
@@ -1086,7 +1159,7 @@ const defaultConditions = {
     getAbilityTargetCondition(battleData,sourceTurn,poolKey,fallbackTarget,refKey) { 
         const conditionPath = battleData[sourceTurn.name]?.[refKey];
         // const conditionPath = defaultConditions[sourceTurn.properName]?.Skill;
-        if (!conditionPath) {return [fallbackTarget];}//if someone doesn't have an ulty condition, then default to fallback targeting
+        if (!conditionPath) {return conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);}//if someone doesn't have an ulty condition, then default to fallback targeting
 
         const startType = conditionPath.type;
         // console.log(startType)
@@ -1098,9 +1171,9 @@ const defaultConditions = {
         globalPoolKey = null;
         initialGlobalTargetPool = null;
 
-        // console.log(result)
+        // console.log(result,"AAAAAAAAAAAAAAAAAAA")
         
-        return result?.length ? result : [conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath)];
+        return result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
     },
 
     //DESTRUCTION
@@ -2000,11 +2073,129 @@ const defaultConditions = {
 
     //ABUNDANCE
     "Huohuo": {
-        hasEnhancedState: false,
-        "Skill": null,
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "OR",
+            "array": [
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "talentProvisionIsActive",
+                    "state": false
+                },
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 50%"
+                }
+            ]
+        },
+        "validTargetChecks": [
+            "Skill"
+        ],
         "Ultimate": {
-            type: "AND",
-            array: []
+            "type": "AND",
+            "array": [
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "currentEnergy"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char2",
+                                    "targetType": "Character",
+                                    "characterValue": "currentEnergy"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char2",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char3",
+                                    "targetType": "Character",
+                                    "characterValue": "currentEnergy"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char3",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char4",
+                                    "targetType": "Character",
+                                    "characterValue": "currentEnergy"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char4",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Healing Presets",
+                                    "statName": "Maximize Blast Healing"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
         }
     },
     "Luocha": {
@@ -2037,6 +2228,32 @@ const defaultConditions = {
                 }
             ]
         },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Healing Presets",
+                                    "statName": "Lowest HP Ally (On-Field)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": {
             "type": "AND",
             "array": [
@@ -2060,14 +2277,40 @@ const defaultConditions = {
     "Gallagher": {
         "hasEnhancedState": true,
         "Skill": {
-            "type":"AND",
-            "array": [ 
+            "type": "AND",
+            "array": [
                 {
-                    "type":"Character: State",
-                    "target":"Self",
-                    "stateName":"nextBasicEnhanced",
-                    "state":false,
-                    "isBattleValue":true
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "nextBasicEnhanced",
+                    "state": false,
+                    "isBattleValue": true
+                }
+            ]
+        },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Healing Presets",
+                                    "statName": "Lowest HP Ally (On-Field)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
                 }
             ]
         },
@@ -2113,6 +2356,32 @@ const defaultConditions = {
                 }
             ]
         },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Healing Presets",
+                                    "statName": "Lowest HP Ally (On-Field)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
         "Ultimate": {
             "type": "AND",
             "array": [
@@ -2147,6 +2416,32 @@ const defaultConditions = {
                             "target": "Self",
                             "targetType": "Character",
                             "characterValue": "maxEnergy"
+                        }
+                    ]
+                }
+            ]
+        },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Healing Presets",
+                                    "statName": "Lowest HP Ally (On-Field)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
                         }
                     ]
                 }
