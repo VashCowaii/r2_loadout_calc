@@ -721,7 +721,7 @@ const conditionLibrary = {
                 so we make the proposed center as we loop pretend it is missing 10% more HP than it really is, and add the adjacent targets missing HP% as well
                 and then w/e has the highest composite missing HP at its proposed center, will be the returned center target.
             */
-            for (let i=0;i<fullLength-1;i++) {
+            for (let i=0;i<fullLength;i++) {
                 const currentIndexLoss = trackLoss[i] * 1.1 + (trackLoss[i+1] ?? 0) + (trackLoss[i-1] ?? 0);
                 if (currentIndexLoss > sumWeight) {
                     sumWeight = currentIndexLoss;
