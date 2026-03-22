@@ -3024,6 +3024,93 @@ const turnLogicLightcones = {
             "buff2": "In the Name of the World [Skill]"
         },
     },
+    "Lies Dance on the Breeze": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcLiesAlongBreezeSHREDSHEET1) {
+                        let lcNameRef = "Lies Dance on the Breeze";
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+                        let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+                    
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcLiesAlongBreezeSHREDSHEET1 = {
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "isDebuff": true,
+                        }
+                        sourceTurn.lcLiesAlongBreezeSHREDSHEET2 = {
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: rankParams[5],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName2,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "isDebuff": true,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcLiesAlongBreezeSHREDSHEET1;
+                    let buffSheet2 = sourceTurn.lcLiesAlongBreezeSHREDSHEET2;
+
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+
+                    const SPDNeeded = 170;
+                    const currentSPD = calcs.getSPDFinal(sourceTurn.statTable).SPDFinal;
+
+                    const hasValidSPD = currentSPD >= SPDNeeded;
+
+                    for (let targetHitSlot in targetsGotHit) {
+                        const currentEnemyHit = enemyTurns[targetHitSlot];
+
+                        if (currentEnemyHit.isDead) {continue;}
+
+                        updateBuff(battleData,currentEnemyHit,buffSheet);
+                        if (hasValidSPD) {
+                            updateBuff(battleData,currentEnemyHit,buffSheet2);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Lies Dance on the Breeze - attack DMG end listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Lies Dance on the Breeze [Bamboozle]",
+            "buff2": "Lies Dance on the Breeze [Theft]",
+        },
+    },
     "Before the Tutorial Mission Starts": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
