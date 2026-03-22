@@ -22823,7 +22823,8 @@ const turnLogic = {
                     "trigger": "SkillStart",
                     condition(battleData,generalInfo) {
                         let ownerTurn = this.ownerTurn;
-                        if (!ownerTurn.enhancedActive) {return;}//e1 proc for skill is only for enhanced
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (!ownerTurn.enhancedActive || sourceTurn.properName != ownerTurn.properName) {return;}//e1 proc for skill is only for enhanced
 
                         const buffSheet = this.buffSheet ??= {
                             "stats": [CritDamageBase],
@@ -22849,6 +22850,8 @@ const turnLogic = {
                     "trigger": "UltimateStart",
                     condition(battleData,generalInfo) {
                         let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}
 
                         const buffSheet = this.buffSheet ??= {
                             "stats": [CritDamageBase],
