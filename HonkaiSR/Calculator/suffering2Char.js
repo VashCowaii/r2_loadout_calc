@@ -2051,6 +2051,7 @@ const battleActions = {
                     rawReduction
                 }
                 // console.log(DMGTags)
+                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                 battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
                 generalInfo.enemiesThatBroke.push(targetTurn);
 
@@ -2437,6 +2438,7 @@ const battleActions = {
                     rawReduction
                 }
                 // console.log(DMGTags)
+                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                 battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
                 generalInfo.enemiesThatBroke.push(targetTurn);
 
@@ -2607,7 +2609,7 @@ const battleActions = {
             }
             breakerDMG = battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,isBroken,generalInfo);
             // generalInfo.enemiesThatBroke.push(targetTurn);
-
+            poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit:null,ATKObject,breakObject,tags,isBroken,generalInfo});
             const isDOT = battleActions.breakDOTisDOT[element];
             if (isDOT) {
                 if (!sourceTurn.breakDOTSheet) {

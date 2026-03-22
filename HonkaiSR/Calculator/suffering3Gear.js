@@ -3111,6 +3111,73 @@ const turnLogicLightcones = {
             "buff2": "Lies Dance on the Breeze [Theft]",
         },
     },
+    "Long Road Leads Home": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "BrokeEnemyWeaknessStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    // if (!ownerRank) {return;}
+                    const targetTurn = generalInfo.targetTurn;
+
+
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let slotOwner in ownersSlots) {
+                        const currentOwner = allyTurns[slotOwner];
+
+                        if (!currentOwner.lcLongRoadsLeadHomeSHEET) {
+                            let lcNameRef = "Long Road Leads Home";
+                            const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+                            let buffName = buffNames.buff1;
+                        
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+
+
+                            const customName = `${buffName} (${currentOwner.properName})`;
+                            if (!buffNames[customName]) {buffNames[customName] = customName;}
+    
+                            currentOwner.lcLongRoadsLeadHomeSHEET = {
+                                "stats": [VulnBreak],
+                                [VulnBreak]: rankParams[2],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": customName,
+                                "durationInTurn": 3,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 3,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                                "isDebuff": true,
+                            }
+                        }
+                        let buffSheet = currentOwner.lcLongRoadsLeadHomeSHEET;
+                        updateBuff(battleData,targetTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Long Road Leads Home - enemy break listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Long Road Leads Home [LC]",
+        },
+        "buffNamesPerCharacter": {
+            "buff1": "Long Road Leads Home [LC]",
+        }
+    },
     "Before the Tutorial Mission Starts": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
