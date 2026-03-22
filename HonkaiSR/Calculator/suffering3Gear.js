@@ -3178,6 +3178,98 @@ const turnLogicLightcones = {
             "buff1": "Long Road Leads Home [LC]",
         }
     },
+    "Solitary Healing": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let sourceTurn = generalInfo.sourceTurn;
+                    // let ownerRank = ownersSlots[sourceTurn.name];
+                    // if (!ownerRank) {return;}
+
+                    const targetTurn = generalInfo.enemyKilled;
+
+                    let dotsOwned = [];
+
+                    const currentDots = targetTurn.currentDotsArray;
+                    const currentDotsSpecial = targetTurn.specialDotsArray;
+
+                    for (let dotEntry of currentDots) {
+                        dotsOwned.push(dotEntry.sourceOwner);
+                    }
+                    for (let dotEntry of currentDotsSpecial) {
+                        dotsOwned.push(dotEntry.sourceOwner);
+                    }
+
+                    const finalSet = new Set (dotsOwned);
+
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let slotOwner in ownersSlots) {
+                        const currentOwner = allyTurns[slotOwner];
+                        const hadValidDOT = finalSet.has(currentOwner.properName);
+
+                        if (hadValidDOT) {
+
+                            const energyGain = currentOwner.lcSolitaryHealingRegenValue ??= lightcones["Solitary Healing"].params[ownersSlots[currentOwner.name]-1][3]
+                            //cursed to do it this way, but since we can't bind it to the event listener, and need superimposition value, we bind it to the turn object of each owner
+                            //instead of accessing it every fuckin time
+                            battleActions.updateEnergy(battleData,energyGain,currentOwner,false,"Solitary Healing - Death with DOT Owned")
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Solitary Healing - enemy died with owner's dot listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    //ik most debuffs apply as the attack starts, not after they land, but this one is an AFTER application and I did confirm that
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let charSlot = sourceTurn.name;
+                    let ownerRank = ownersSlots[charSlot];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcSolitaryHealingDOTSHEET) {
+                        let lcNameRef = "Solitary Healing";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcSolitaryHealingDOTSHEET = {
+                            "stats": [DamageDOT],
+                            [DamageDOT]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcSolitaryHealingDOTSHEET;
+                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Solitary Healing ult start listener",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Solitary Healing [Ult]",
+        },
+    },
     "Before the Tutorial Mission Starts": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
