@@ -2051,6 +2051,7 @@ const battleActions = {
                     rawReduction
                 }
                 // console.log(DMGTags)
+                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                 battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
                 generalInfo.enemiesThatBroke.push(targetTurn);
 
@@ -2437,6 +2438,7 @@ const battleActions = {
                     rawReduction
                 }
                 // console.log(DMGTags)
+                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                 battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
                 generalInfo.enemiesThatBroke.push(targetTurn);
 
@@ -2607,7 +2609,7 @@ const battleActions = {
             }
             breakerDMG = battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,isBroken,generalInfo);
             // generalInfo.enemiesThatBroke.push(targetTurn);
-
+            poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit:null,ATKObject,breakObject,tags,isBroken,generalInfo});
             const isDOT = battleActions.breakDOTisDOT[element];
             if (isDOT) {
                 if (!sourceTurn.breakDOTSheet) {
@@ -22823,7 +22825,8 @@ const turnLogic = {
                     "trigger": "SkillStart",
                     condition(battleData,generalInfo) {
                         let ownerTurn = this.ownerTurn;
-                        if (!ownerTurn.enhancedActive) {return;}//e1 proc for skill is only for enhanced
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (!ownerTurn.enhancedActive || sourceTurn.properName != ownerTurn.properName) {return;}//e1 proc for skill is only for enhanced
 
                         const buffSheet = this.buffSheet ??= {
                             "stats": [CritDamageBase],
@@ -22849,6 +22852,8 @@ const turnLogic = {
                     "trigger": "UltimateStart",
                     condition(battleData,generalInfo) {
                         let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}
 
                         const buffSheet = this.buffSheet ??= {
                             "stats": [CritDamageBase],
