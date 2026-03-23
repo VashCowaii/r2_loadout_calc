@@ -3710,6 +3710,8 @@ const battleActions = {
 
         poke("AttackEnd",battleData,generalInfo);
 
+        ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
+
 
         
         if (!isEnemy) {
@@ -3933,6 +3935,8 @@ const battleActions = {
 
 
             poke("AttackEnd",battleData,generalInfo);
+
+            ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
 
 
             
@@ -4172,6 +4176,7 @@ const battleActions = {
         }
 
         poke("AttackEnd",battleData,generalInfo);
+        ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
         // if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:(totals.totalAVGDMG + totals.totalBreakDMG + totals.totalBreakSuperDMG), isEnemy});}
 
 
@@ -18483,6 +18488,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     const actionTags = ["DOT"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.astaTraceDOTSHEET = {
                         "stats": null,
@@ -18506,7 +18512,7 @@ const turnLogic = {
                         ownerSlot: sourceTurn.name,
                         avgChanceApplied: 1,
                         baseChance: 0.80,
-                        tags,actionTags,
+                        tags,actionTags,compositeCacheTag,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     }
                 }
@@ -22902,6 +22908,710 @@ const turnLogic = {
             "enhancedState": "Spectral Transmigration",
             "moonlight": "Moonlight (Jingliu)",
             "e2DMG": "E2: Crescent Shadows Qixing Dipper",
+        },
+        "characterValuesBattle": {},
+    },
+    "Hook": {
+        logic(thisTurn,battleData) {
+            // let statCalls = thisTurn.battleValues;
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+            // const isEnhanced = statCalls.isEnhanced;
+            const isEnhanced = thisTurn.battleValues.isEnhanced;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                return isEnhanced ? this.returnSkillCallEnh : this.returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.hookSkill, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnSkillCallEnh ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.hookSkillEnh, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.hookBasicReg, 
+                target: "enemy", 
+                endTurn: true
+            }
+        },
+        "skillFunctions": {
+            hookBasicReg(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hookBasicRegREF ??= ATKObjects["Basic ATK"]["Hehe! Don't Get Burned!"].variant1;
+
+                
+                if (!ATKObjects.hookBasicRegATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.hookBasicRegATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.hookBasicRegATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            hookSkill(battleData,target,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hookSkillREF ??= ATKObjects["Skill"]["Hey! Remember Hook?"].variant1;
+                let values = ATKObjects.hookSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                
+                if (!ATKObjects.hookSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.hookSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,//values[1],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        dotApplyFunctionPost: logicRef.skillFunctions.hookSkillDOT,
+                    }
+                }
+                let ATKObject = ATKObjects.hookSkillATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            hookSkillEnh(battleData,target,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hookSkillREF2 ??= ATKObjects["Skill"]["Hey! Remember Hook?"].variant2;
+                let values = ATKObjects.hookSkillREFVALUES2 ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.hookSkillATKOBJECT2) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill2;
+
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["Skill","Attack","HookEnhSkill"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.hookSkillATKOBJECT2 = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[4],
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        dotApplyFunctionPost: logicRef.skillFunctions.hookSkillDOT,
+                    }
+
+                }
+                let ATKObject = ATKObjects.hookSkillATKOBJECT2;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+
+                sourceTurn.battleValues.isEnhanced = false;
+            },
+            hookSkillDOT(battleData,sourceTurn,generalInfo,directTarget) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                if (!ATKObjects.hookSkillDOTSHEET) {
+                    let characterName = sourceTurn.properName;
+                    let buffName = logicRef.buffNames.skillDOT;
+
+                    let skillRef = ATKObjects.hookSkillREF ??= ATKObjects["Skill"]["Hey! Remember Hook?"].variant1;
+                    let values = ATKObjects.hookSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const tags = ["All","Fire","DOT"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["DOT"];
+                    const rank = sourceTurn.rank;
+                    const isE2 = rank >= 2;
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    ATKObjects.hookSkillDOTSHEET = {
+                        "stats": null,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": 3 + (isE2 ? 1 : 0),
+                        "duration": 2 + (isE2 ? 1 : 0),
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isDOT": true,
+                        "isDebuff": true,
+                        "element": sourceTurn.element,
+                        multiplier: values[3],
+                        scalar: "ATK",
+                        slot: "Skill",
+                        ownerIsAllied: true,
+                        ownerSlot: sourceTurn.name,
+                        avgChanceApplied: 1,
+                        baseChance: values[1],
+                        tags,actionTags,compositeCacheTag,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    }
+                }
+                const dotSheet = ATKObjects.hookSkillDOTSHEET;
+
+                if (directTarget) {
+                    generalApplyDOT(battleData,sourceTurn,directTarget,dotSheet,null,null,false);
+                }
+                else {
+                    const enemiesHit = generalInfo.targetsGotHit;
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
+                }
+            },
+            hookUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.hookUltimateREF ??= ATKObjects.Ultimate["Boom! Here Comes the Fire!"].variant1;
+
+                if (!ATKObjects.hookUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.hookUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.hookUltimateATKOBJECT;
+
+                const updateEnergy = battleActions.updateEnergy;
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                const valuesRef = sourceTurn.battleValues;
+                valuesRef.isEnhanced = true;
+                battleActions.actionAdvance(0.20,sourceTurn,battleData,"Major Trace: Playing With Fire");//will advance when ult is cast but not within his turn, obv does nothing then
+                updateEnergy(battleData,5,sourceTurn,false,"Major Trace: Playing With Fire");
+
+                sourceTurn.ultyQueued = false;
+            },
+            hookTalentProc(battleData,generalInfo,allyTurn,allTargetsArray) {
+                const logicRef = turnLogic[allyTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.hookTalentDMGREF) {
+                    let skillRef = ATKObjects.hookTalentREF ??= ATKObjects["Talent"]["Ha! Oil to the Flames!"].variant1;
+                    let values = ATKObjects.hookTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,allyTurn);
+
+                    let energyRegen = ATKObjects.hookTalentRegenValue ??= values[1];
+                    //used outside of this IF, keep it
+
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["Additional"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + allyTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.hookTalentDMGREF = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            additional: values[0]
+                        },
+                        scalar,
+                        element: "Fire",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.hookTalentHealHEALOBJECT ??= {
+                        multipliers: {
+                            primary: 0.05,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: "Trace"
+                    }
+                }
+                let ATKObject = ATKObjects.hookTalentDMGREF;
+                const energyRegen = ATKObjects.hookTalentRegenValue;
+
+                const finalEnergy = energyRegen * allTargetsArray.length;
+
+                battleActions.updateEnergy(battleData,finalEnergy,allyTurn,false,"Hook Talent Regen - Burning Targets");
+
+                const healObject = ATKObjects.hookTalentHealHEALOBJECT;
+
+                const allyAssignedName = allyTurn.properName;
+                const addedWrapper = battleActions.additionalDMGWrapper;
+                const healCall = battleActions.healAlly;
+
+                for (let enemySlot of allTargetsArray) {
+                    healCall(battleData,healObject,allyTurn,allyTurn,"Innocence",1,null);
+                    addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,enemySlot,"Hook Talent AddProc - Burning Targets");
+                }
+            },
+            hookTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.hookTechniqueREF ??= ATKObjects.Technique["Ack! Look at This Mess!"].variant1;
+
+                if (!ATKObjects.hookTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.hookTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Fire"];
+                    const actionTags = ["Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.hookTechATKObject = {
+                        multipliers: {
+                            primary: values[3],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        // dotApplyFunctionPost: logicRef.skillFunctions.hookTechDOT,
+                    }
+                }
+                let ATKObject = ATKObjects.hookTechATKObject;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                const techDotFunction = logicRef.skillFunctions.hookTechDOT;
+                techDotFunction(battleData,sourceTurn,null)
+
+
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+            hookTechDOT(battleData,sourceTurn,generalInfo) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                if (!ATKObjects.hookTechDOTSHEET) {
+                    let characterName = sourceTurn.properName;
+                    let buffName = logicRef.buffNames.techDOT;
+
+                    let skillRef = ATKObjects.hookTechniqueREF;
+                    let values = ATKObjects.hookTechniqueREFVALUES;
+
+                    const tags = ["All","Fire","DOT"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["DOT"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    ATKObjects.hookTechDOTSHEET = {
+                        "stats": null,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": 4,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isDOT": true,
+                        "isDebuff": true,
+                        "element": sourceTurn.element,
+                        multiplier: values[1],
+                        scalar: "ATK",
+                        slot: "Technique",
+                        ownerIsAllied: true,
+                        ownerSlot: sourceTurn.name,
+                        avgChanceApplied: 1,
+                        baseChance: values[0],
+                        tags,actionTags,compositeCacheTag,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    }
+                }
+                const dotSheet = ATKObjects.hookTechDOTSHEET;
+
+                const enemyPositions = battleData.enemyPositions;
+                for (let enemy of enemyPositions) {
+                    generalApplyDOT(battleData,sourceTurn,enemy,dotSheet,null,null,false);
+                }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "AdditionalTriggerAttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
+                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+
+                    const enemyTurns = battleData.enemyBasedTurns;
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    const isE4 = ownerTurn.rank >= 4;
+
+                    let finalTargetArray = [];
+                    for (let targetSlot in targetsGotHit) {
+                        const currentTarget = enemyTurns[targetSlot];
+                        if (currentTarget.isDead) {continue;}
+                        finalTargetArray.push(currentTarget);
+                    }
+                    
+                    const finalLength = finalTargetArray.length;
+                    if (!finalLength) {return;}
+
+                    let regBurnArray = [];
+                    const enemyPositions = battleData.enemyPositions;
+                    const skillDotFunction = this.skillDotFunction ??= turnLogic[ownerTurn.properName].skillFunctions.hookSkillDOT;
+                    for (let i=0;i<finalLength;i++) {
+                        const currentTarget = finalTargetArray[i];
+
+                        if (currentTarget.dots.Fire) {
+                            /*
+                                so hook's E4 will actually propagate the burn on each target it evaluates that has burn already
+
+                                so say you hit target 3 with primary, and 2/4 with blast.
+                                The search is random, so if 3 has burn and is checked first, it will spread burn to 2/4
+                                then when 2 is checked, bc it now has burn, it will spread to 1/3, then 4 will spread to 3/5
+
+                                this will not actually increase the total amount of talent procs possible beyond 3, since talent procs
+                                will only ever check the targets that were hit not ALL targets with burn
+                                but this DOES mean that because the game does this, E4 basically will almost ALWAYS ensure you get closer to 3 total
+                                talent procs on an enhanced skill, than a reg skill, since you have a chance now to spread the burn to a hit target that
+                                has not yet been checked.
+
+                                yes this is fucking weird, but it's how the game works.
+                            */
+
+                            if (isE4) {
+                                const currentTargetIndex = enemyPositions.indexOf(currentTarget);
+                                const priorTarget = enemyPositions[currentTargetIndex-1];
+                                const nextTarget = enemyPositions[currentTargetIndex+1];
+
+                                
+                                if (priorTarget) {skillDotFunction(battleData,ownerTurn,generalInfo,priorTarget);}
+                                if (nextTarget) {skillDotFunction(battleData,ownerTurn,generalInfo,nextTarget);}
+                            }
+                            regBurnArray.push(currentTarget);
+                        }
+                    }
+
+                    if (!regBurnArray.length) {return;}
+
+                    const hookTalentProc = this.hookTalentProc ??= turnLogic[ownerTurn.properName].skillFunctions.hookTalentProc;
+                    hookTalentProc(battleData,generalInfo,sourceTurn,regBurnArray);
+                },
+                "target": "enemy",
+                "listenerName": "Hook talent additional DMG controller",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.35,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCCRES,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Hook Naivete cc res",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+                        const queueObject = this.queueObject ??= {
+                            attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.hookUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: ownerTurn,
+                            isAttackUlt: true,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hook - Ultimate queued",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const hookTechnique = this.hookTechnique ??= logicRef.skillFunctions.hookTechnique;
+                        hookTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hook Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+                        // greatTableIndex
+                        // greatTableKeys
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [DamageSkill],
+                            [DamageSkill]: 0.20,
+                            "source": "E1",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["HookEnhSkill"],
+                        }
+                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Hook E1 enh skill dmg buff",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [
+                {
+                    "trigger": "AllyDMGStart",
+                    condition(battleData,generalInfo) {
+                        const sourceTurn = generalInfo.sourceTurn;
+                        const ownerTurn = this.ownerTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}//only look at Hook's dmg to enemies
+    
+                        const targetTurn = generalInfo.targetTurn;
+                        const burnCount = targetTurn.dots.Fire;
+    
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6BurnDMG,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+
+                        const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+
+                        if (buffCheck) {
+                            if (burnCount) {return;}
+                            removeBuff(battleData,ownerTurn,buffSheet);
+                        }
+                        else {
+                            if (!burnCount) {return;}
+                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Hook E6 burn checker",
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "isEnhanced": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "skillDOT": "Burn (Hook)",
+            "techDOT": "Technique Burn (Hook)",
+            "e6BurnDMG": "E6: Always Ready to Punch and Kick",
+            "e1DMG": "E1: Early to Bed, Early to Rise",
+            "traceCCRES": "Naivete",
         },
         "characterValuesBattle": {},
     },

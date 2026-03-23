@@ -9,12 +9,15 @@ global.calcAllowedSet = new Set([
     //ERUDITION
     "Argenti",
     "Anaxa",
+    "Serval",
+    "Herta",
 
     //DESTRUCTION
     "Saber",
     "Blade",
     "Jingliu",
-    "Firefly",
+    "Firefly",//not yet
+    "Hook",
 
     //HUNT
     "Topaz & Numby",

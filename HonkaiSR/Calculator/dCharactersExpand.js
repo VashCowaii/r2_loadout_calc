@@ -2218,6 +2218,643 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Herta": {
+    "internalID": 1013,
+    "name": "Herta",
+    "path": "Erudition",
+    "element": "Ice",
+    "rarity": 4,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 952.56,
+      "SPDBase": 100,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "101301",
+        "name": "Kick You When You're Down",
+        "rank": 1,
+        "desc": "When using Basic ATK, if the designated enemy's HP percentage is at 50% or less, additionally deals Ice Additional DMG equal to 40% of Herta's ATK.",
+        "icon": "icon/skill/1013_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.4
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "101302",
+        "name": "Keep the Ball Rolling",
+        "rank": 2,
+        "desc": "Every time Talent is triggered, this character's CRIT Rate increases by 3%. This effect can stack up to 5 time(s).",
+        "icon": "icon/skill/1013_rank2.png",
+        "paramsEido": [
+          0.03,
+          5
+        ]
+      },
+      {
+        "id": "101303",
+        "name": "That's the Kind of Girl I Am",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1013_skill.png"
+      },
+      {
+        "id": "101304",
+        "name": "Hit Where It Hurts",
+        "rank": 4,
+        "desc": "When Talent is triggered, DMG increases by 10%.",
+        "icon": "icon/skill/1013_rank4.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "101305",
+        "name": "Cuss Big or Cuss Nothing",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1013_ultimate.png"
+      },
+      {
+        "id": "101306",
+        "name": "No One Can Betray Me",
+        "rank": 6,
+        "desc": "After using Ultimate, this character's ATK increases by 25% for 1 turn(s).",
+        "icon": "icon/skill/1013_rank6.png",
+        "paramsEido": [
+          0.25,
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "What Are You Looking At?": {
+          "variant1": {
+            "skillID": 101301,
+            "trigger": "Skill01",
+            "name": "What Are You Looking At?",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Herta_Skill01_Camera",
+              "Avatar_Herta_Skill01_Phase01",
+              "Avatar_Herta_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "One-Time Offer": {
+          "variant1": {
+            "skillID": 101302,
+            "trigger": "Skill02",
+            "name": "One-Time Offer",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to all enemies. If the enemy's HP percentage is #2[i]% or higher, DMG dealt to this target increases by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.5,
+                0.2
+              ],
+              "2": [
+                0.55,
+                0.5,
+                0.2
+              ],
+              "3": [
+                0.6,
+                0.5,
+                0.2
+              ],
+              "4": [
+                0.65,
+                0.5,
+                0.2
+              ],
+              "5": [
+                0.7,
+                0.5,
+                0.2
+              ],
+              "6": [
+                0.75,
+                0.5,
+                0.2
+              ],
+              "7": [
+                0.8125,
+                0.5,
+                0.2
+              ],
+              "8": [
+                0.875,
+                0.5,
+                0.2
+              ],
+              "9": [
+                0.9375,
+                0.5,
+                0.2
+              ],
+              "10": [
+                1,
+                0.5,
+                0.2
+              ],
+              "11": [
+                1.05,
+                0.5,
+                0.2
+              ],
+              "12": [
+                1.1,
+                0.5,
+                0.2
+              ],
+              "13": [
+                1.15,
+                0.5,
+                0.2
+              ],
+              "14": [
+                1.2,
+                0.5,
+                0.2
+              ],
+              "15": [
+                1.25,
+                0.5,
+                0.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Herta_Skill02_Camera",
+              "Avatar_Herta_Skill02_Phase01",
+              "Avatar_Herta_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "It's Magic, I Added Some Magic": {
+          "variant1": {
+            "skillID": 101303,
+            "trigger": "Skill03",
+            "name": "It's Magic, I Added Some Magic",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to all enemies.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.2
+              ],
+              "2": [
+                1.28
+              ],
+              "3": [
+                1.36
+              ],
+              "4": [
+                1.44
+              ],
+              "5": [
+                1.52
+              ],
+              "6": [
+                1.6
+              ],
+              "7": [
+                1.7
+              ],
+              "8": [
+                1.8
+              ],
+              "9": [
+                1.9
+              ],
+              "10": [
+                2
+              ],
+              "11": [
+                2.08
+              ],
+              "12": [
+                2.16
+              ],
+              "13": [
+                2.24
+              ],
+              "14": [
+                2.32
+              ],
+              "15": [
+                2.4
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Herta_00_Skill03_Camera",
+              "Avatar_Herta_Skill03_Phase01",
+              "Avatar_Herta_Skill03_Phase02",
+              "Avatar_Herta_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Fine, I'll Do It Myself": {
+          "variant1": {
+            "skillID": 101304,
+            "trigger": "SkillP01",
+            "name": "Fine, I'll Do It Myself",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When an ally target's attack causes an enemy target's HP percentage to fall to #1[i]% or lower, Herta will launch a Follow-Up ATK, dealing Ice DMG equal to #2[i]% of Herta's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.25
+              ],
+              "2": [
+                0.5,
+                0.265
+              ],
+              "3": [
+                0.5,
+                0.28
+              ],
+              "4": [
+                0.5,
+                0.295
+              ],
+              "5": [
+                0.5,
+                0.31
+              ],
+              "6": [
+                0.5,
+                0.325
+              ],
+              "7": [
+                0.5,
+                0.34375
+              ],
+              "8": [
+                0.5,
+                0.3625
+              ],
+              "9": [
+                0.5,
+                0.38125
+              ],
+              "10": [
+                0.5,
+                0.4
+              ],
+              "11": [
+                0.5,
+                0.415
+              ],
+              "12": [
+                0.5,
+                0.43
+              ],
+              "13": [
+                0.5,
+                0.445
+              ],
+              "14": [
+                0.5,
+                0.46
+              ],
+              "15": [
+                0.5,
+                0.475
+              ]
+            },
+            "element": "Ice",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Herta_PassiveSkill01",
+              "Avatar_Herta_Passive1Atk_Ability_Camera",
+              "Avatar_Herta_00_PassiveAtkReady_Ability"
+            ],
+            "toughnessList": [
+              0,
+              15,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "It Can Still Be Optimized": {
+          "variant1": {
+            "skillID": 101307,
+            "trigger": "SkillMaze",
+            "name": "It Can Still Be Optimized",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using her Technique, Herta's ATK increases by #1[i]% for #2[i] turn(s) at the beginning of the next battle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Herta_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1013_basic_atk.png",
+        "skillRef": {
+          "skillName": "What Are You Looking At?",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1013_skill.png",
+        "skillRef": {
+          "skillName": "One-Time Offer",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1013_ultimate.png",
+        "skillRef": {
+          "skillName": "It's Magic, I Added Some Magic",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1013_talent.png",
+        "skillRef": {
+          "skillName": "Fine, I'll Do It Myself",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1013_technique.png",
+        "skillRef": {
+          "skillName": "It Can Still Be Optimized",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Efficiency",
+        "icon": "icon/skill/1013_skilltree1.png",
+        "desc": "When Skill is used, the DMG Boost effect on target enemies increases by an extra #1[i]%.",
+        "params": [
+          0.25
+        ]
+      },
+      "Point07": {
+        "name": "Puppet",
+        "icon": "icon/skill/1013_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "traceAbility": "Herta_Herta_Trace02",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Icing",
+        "icon": "icon/skill/1013_skilltree3.png",
+        "desc": "When Ultimate is used, deals #1[i]% more DMG to Frozen enemies.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1013.png",
+    "preview": "image/character_preview/1013.png",
+    "portrait": "image/character_portrait/1013.png",
+    "bannerOffsets": [
+      21.9,
+      -66,
+      0.6,
+      21.9,
+      -66,
+      0.6,
+      21.9,
+      -66,
+      0.6
+    ],
+    "isBuffed": false
+  },
   "Bronya": {
     "internalID": 1101,
     "name": "Bronya",
@@ -2900,6 +3537,688 @@ let characters = {
       59,
       194,
       0.77
+    ],
+    "isBuffed": false
+  },
+  "Serval": {
+    "internalID": 1103,
+    "name": "Serval",
+    "path": "Erudition",
+    "element": "Lightning",
+    "rarity": 4,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 652.6800000000001,
+      "DEFBase": 374.85,
+      "HPBase": 917.28,
+      "SPDBase": 104,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "110301",
+        "name": "Echo Chamber",
+        "rank": 1,
+        "desc": "Basic ATK deals Lightning DMG equal to 60% of Basic ATK DMG to a random target adjacent to the target enemy.",
+        "icon": "icon/skill/1103_rank1.png",
+        "paramsEido": [
+          0.6
+        ]
+      },
+      {
+        "id": "110302",
+        "name": "Encore!",
+        "rank": 2,
+        "desc": "Every time Serval's Talent is triggered to deal Additional DMG, she regenerates 4 Energy.",
+        "icon": "icon/skill/1103_rank2.png",
+        "paramsEido": [
+          4
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "110303",
+        "name": "Listen, the Heartbeat of the Gears",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1103_skill.png"
+      },
+      {
+        "id": "110304",
+        "name": "Make Some Noise!",
+        "rank": 4,
+        "desc": "Ultimate has a 100% base chance to apply Shock to any enemies not currently Shocked. This Shock has the same effects as the one applied by Skill.",
+        "icon": "icon/skill/1103_rank4.png",
+        "paramsEido": [
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "110305",
+        "name": "Belobog's Loudest Roar!",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1103_ultimate.png"
+      },
+      {
+        "id": "110306",
+        "name": "This Song Rocks to Heaven!",
+        "rank": 6,
+        "desc": "Serval deals 30% more DMG to Shocked enemies.",
+        "icon": "icon/skill/1103_rank6.png",
+        "paramsEido": [
+          0.3
+        ],
+        "eidoAbility": "Serval_Serval_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Roaring Thunderclap": {
+          "variant1": {
+            "skillID": 110301,
+            "trigger": "Skill01",
+            "name": "Roaring Thunderclap",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Serval_00_Skill01_Camera",
+              "Avatar_Serval_Skill01_Phase01",
+              "Avatar_Serval_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Lightning Flash": {
+          "variant1": {
+            "skillID": 110302,
+            "trigger": "Skill02",
+            "name": "Lightning Flash",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to one designated enemy and Lightning DMG equal to #2[i]% of Serval's ATK to enemies adjacent to it, with a #3[i]% base chance for enemies hit to become Shocked for #4[i] turn(s).\\nWhile Shocked, enemies take Lightning DoT equal to #5[i]% of Serval's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.7,
+                0.3,
+                0.8,
+                2,
+                0.4
+              ],
+              "2": [
+                0.77,
+                0.33,
+                0.8,
+                2,
+                0.44
+              ],
+              "3": [
+                0.84,
+                0.36,
+                0.8,
+                2,
+                0.48
+              ],
+              "4": [
+                0.91,
+                0.39,
+                0.8,
+                2,
+                0.52
+              ],
+              "5": [
+                0.98,
+                0.42,
+                0.8,
+                2,
+                0.56
+              ],
+              "6": [
+                1.05,
+                0.45,
+                0.8,
+                2,
+                0.62
+              ],
+              "7": [
+                1.1375,
+                0.4875,
+                0.8,
+                2,
+                0.7
+              ],
+              "8": [
+                1.225,
+                0.525,
+                0.8,
+                2,
+                0.8
+              ],
+              "9": [
+                1.3125,
+                0.5625,
+                0.8,
+                2,
+                0.92
+              ],
+              "10": [
+                1.4,
+                0.6,
+                0.8,
+                2,
+                1.04
+              ],
+              "11": [
+                1.47,
+                0.63,
+                0.8,
+                2,
+                1.092
+              ],
+              "12": [
+                1.54,
+                0.66,
+                0.8,
+                2,
+                1.144
+              ],
+              "13": [
+                1.61,
+                0.69,
+                0.8,
+                2,
+                1.196
+              ],
+              "14": [
+                1.68,
+                0.72,
+                0.8,
+                2,
+                1.248
+              ],
+              "15": [
+                1.75,
+                0.75,
+                0.8,
+                2,
+                1.3
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Serval_00_Skill02_Camera",
+              "Avatar_Serval_Skill02_Phase01",
+              "Avatar_Serval_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              30
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Here Comes the Mechanical Fever": {
+          "variant1": {
+            "skillID": 110303,
+            "trigger": "Skill03",
+            "name": "Here Comes the Mechanical Fever",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to all enemies. Enemies already Shocked will extend the duration of their Shock state by #2[i] turn(s).",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.08,
+                2
+              ],
+              "2": [
+                1.152,
+                2
+              ],
+              "3": [
+                1.224,
+                2
+              ],
+              "4": [
+                1.296,
+                2
+              ],
+              "5": [
+                1.368,
+                2
+              ],
+              "6": [
+                1.44,
+                2
+              ],
+              "7": [
+                1.53,
+                2
+              ],
+              "8": [
+                1.62,
+                2
+              ],
+              "9": [
+                1.71,
+                2
+              ],
+              "10": [
+                1.8,
+                2
+              ],
+              "11": [
+                1.872,
+                2
+              ],
+              "12": [
+                1.944,
+                2
+              ],
+              "13": [
+                2.016,
+                2
+              ],
+              "14": [
+                2.088,
+                2
+              ],
+              "15": [
+                2.16,
+                2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Serval_00_Skill03_Camera",
+              "Avatar_Serval_Skill03_EnterReady",
+              "Avatar_Serval_Skill03_Phase01",
+              "Avatar_Serval_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Galvanic Chords": {
+          "variant1": {
+            "skillID": 110304,
+            "trigger": "SkillP01",
+            "name": "Galvanic Chords",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After Serval attacks, deals Lightning Additional DMG equal to #1[i]% of Serval's ATK to all Shocked enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36
+              ],
+              "2": [
+                0.396
+              ],
+              "3": [
+                0.432
+              ],
+              "4": [
+                0.468
+              ],
+              "5": [
+                0.504
+              ],
+              "6": [
+                0.54
+              ],
+              "7": [
+                0.585
+              ],
+              "8": [
+                0.63
+              ],
+              "9": [
+                0.675
+              ],
+              "10": [
+                0.72
+              ],
+              "11": [
+                0.756
+              ],
+              "12": [
+                0.792
+              ],
+              "13": [
+                0.828
+              ],
+              "14": [
+                0.864
+              ],
+              "15": [
+                0.9
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Serval_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Good Night, Belobog": {
+          "variant1": {
+            "skillID": 110307,
+            "trigger": "SkillMaze",
+            "name": "Good Night, Belobog",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals Lightning DMG equal to #4[i]% of Serval's ATK to a random enemy, with a #1[i]% base chance for all enemies to become Shocked for #3[i] turn(s).\\nWhile Shocked, enemies will take Lightning DoT equal to #2[i]% of Serval's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                3,
+                0.5
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Serval_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1103_basic_atk.png",
+        "skillRef": {
+          "skillName": "Roaring Thunderclap",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1103_skill.png",
+        "skillRef": {
+          "skillName": "Lightning Flash",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1103_ultimate.png",
+        "skillRef": {
+          "skillName": "Here Comes the Mechanical Fever",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1103_talent.png",
+        "skillRef": {
+          "skillName": "Galvanic Chords",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1103_technique.png",
+        "skillRef": {
+          "skillName": "Good Night, Belobog",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Rock 'n' Roll",
+        "icon": "icon/skill/1103_skilltree1.png",
+        "desc": "When using skill, increases the base chance for the attacked enemy target to become Shocked by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "String Vibration",
+        "icon": "icon/skill/1103_skilltree2.png",
+        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ],
+        "traceAbility": "Serval_Serval_Trace02"
+      },
+      "Point08": {
+        "name": "Mania",
+        "icon": "icon/skill/1103_skilltree3.png",
+        "desc": "Upon defeating an enemy, ATK is increased by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.2,
+          2
+        ],
+        "traceAbility": "Serval_Serval_Trace03"
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1103.png",
+    "preview": "image/character_preview/1103.png",
+    "portrait": "image/character_portrait/1103.png",
+    "bannerOffsets": [
+      -26,
+      33,
+      0.68,
+      -26,
+      33,
+      0.68,
+      -26,
+      33,
+      0.68
     ],
     "isBuffed": false
   },
@@ -4265,6 +5584,815 @@ let characters = {
       116,
       68,
       0.64
+    ],
+    "isBuffed": false
+  },
+  "Hook": {
+    "internalID": 1109,
+    "name": "Hook",
+    "path": "Destruction",
+    "element": "Fire",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 617.4000000000001,
+      "DEFBase": 352.79999999999995,
+      "HPBase": 1340.6399999999999,
+      "SPDBase": 94,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "110901",
+        "name": "Early to Bed, Early to Rise",
+        "rank": 1,
+        "desc": "Enhanced Skill deals 20% increased DMG.",
+        "icon": "icon/skill/1109_rank1.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "110902",
+        "name": "Happy Tummy, Happy Body",
+        "rank": 2,
+        "desc": "Extends the duration of Burn caused by Skill by 1 turn(s).",
+        "icon": "icon/skill/1109_rank2.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "110903",
+        "name": "Don't Be Picky, Nothing's Icky",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1109_skill.png"
+      },
+      {
+        "id": "110904",
+        "name": "It's Okay to Not Know",
+        "rank": 4,
+        "desc": "When Talent is triggered, there is a 100% base chance to Burn enemies adjacent to the designated enemy target, equivalent to that of Skill.",
+        "icon": "icon/skill/1109_rank4.png",
+        "paramsEido": [
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "110905",
+        "name": "Let the Moles' Deeds Be Known",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1109_ultimate.png"
+      },
+      {
+        "id": "110906",
+        "name": "Always Ready to Punch and Kick",
+        "rank": 6,
+        "desc": "Hook deals 20% more DMG to enemies afflicted with Burn.",
+        "icon": "icon/skill/1109_rank6.png",
+        "paramsEido": [
+          0.2
+        ],
+        "eidoAbility": "Hook_Hook_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Hehe! Don't Get Burned!": {
+          "variant1": {
+            "skillID": 110901,
+            "trigger": "Skill01",
+            "name": "Hehe! Don't Get Burned!",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Hook_00_Skill01_Camera",
+              "Avatar_Hook_00_Skill01_Phase01",
+              "Avatar_Hook_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Hey! Remember Hook?": {
+          "variant1": {
+            "skillID": 110902,
+            "trigger": "Skill02",
+            "name": "Hey! Remember Hook?",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to one designated enemy. In addition, there is a #2[i]% base chance to inflict Burn for #3[i] turn(s).\\nWhen afflicted with Burn, enemies will take Fire DoT equal to #4[i]% of Hook's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.2,
+                1,
+                2,
+                0.25
+              ],
+              "2": [
+                1.32,
+                1,
+                2,
+                0.275
+              ],
+              "3": [
+                1.44,
+                1,
+                2,
+                0.3
+              ],
+              "4": [
+                1.56,
+                1,
+                2,
+                0.325
+              ],
+              "5": [
+                1.68,
+                1,
+                2,
+                0.35
+              ],
+              "6": [
+                1.8,
+                1,
+                2,
+                0.3875
+              ],
+              "7": [
+                1.95,
+                1,
+                2,
+                0.4375
+              ],
+              "8": [
+                2.1,
+                1,
+                2,
+                0.5
+              ],
+              "9": [
+                2.25,
+                1,
+                2,
+                0.575
+              ],
+              "10": [
+                2.4,
+                1,
+                2,
+                0.65
+              ],
+              "11": [
+                2.52,
+                1,
+                2,
+                0.6825
+              ],
+              "12": [
+                2.64,
+                1,
+                2,
+                0.715
+              ],
+              "13": [
+                2.76,
+                1,
+                2,
+                0.7475
+              ],
+              "14": [
+                2.88,
+                1,
+                2,
+                0.78
+              ],
+              "15": [
+                3,
+                1,
+                2,
+                0.8125
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hook_00_Skill02_Camera",
+              "Avatar_Hook_00_Skill02_Phase01",
+              "Avatar_Hook_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 110909,
+            "trigger": "Skill21",
+            "name": "Hey! Remember Hook?",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to one designated enemy, with a #2[i]% base chance to Burn them for #3[i] turn(s). Additionally, deals Fire DMG equal to #5[i]% of Hook's ATK to enemies adjacent to it.\\nWhen afflicted with Burn, enemies will take Fire DoT equal to #4[i]% of Hook's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.4,
+                1,
+                2,
+                0.25,
+                0.4
+              ],
+              "2": [
+                1.54,
+                1,
+                2,
+                0.275,
+                0.44
+              ],
+              "3": [
+                1.68,
+                1,
+                2,
+                0.3,
+                0.48
+              ],
+              "4": [
+                1.82,
+                1,
+                2,
+                0.325,
+                0.52
+              ],
+              "5": [
+                1.96,
+                1,
+                2,
+                0.35,
+                0.56
+              ],
+              "6": [
+                2.1,
+                1,
+                2,
+                0.3875,
+                0.6
+              ],
+              "7": [
+                2.275,
+                1,
+                2,
+                0.4375,
+                0.65
+              ],
+              "8": [
+                2.45,
+                1,
+                2,
+                0.5,
+                0.7
+              ],
+              "9": [
+                2.625,
+                1,
+                2,
+                0.575,
+                0.75
+              ],
+              "10": [
+                2.8,
+                1,
+                2,
+                0.65,
+                0.8
+              ],
+              "11": [
+                2.94,
+                1,
+                2,
+                0.6825,
+                0.84
+              ],
+              "12": [
+                3.08,
+                1,
+                2,
+                0.715,
+                0.88
+              ],
+              "13": [
+                3.22,
+                1,
+                2,
+                0.7475,
+                0.92
+              ],
+              "14": [
+                3.36,
+                1,
+                2,
+                0.78,
+                0.96
+              ],
+              "15": [
+                3.5,
+                1,
+                2,
+                0.8125,
+                1
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hook_00_Skill21_Camera",
+              "Avatar_Hook_00_Skill21_Phase01",
+              "Avatar_Hook_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              30
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Boom! Here Comes the Fire!": {
+          "variant1": {
+            "skillID": 110903,
+            "trigger": "Skill03",
+            "name": "Boom! Here Comes the Fire!",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to one designated enemy.\\nAfter using Ultimate, the next Skill to be used is Enhanced, which deals DMG to one designated enemy and enemies adjacent to it.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.4
+              ],
+              "2": [
+                2.56
+              ],
+              "3": [
+                2.72
+              ],
+              "4": [
+                2.88
+              ],
+              "5": [
+                3.04
+              ],
+              "6": [
+                3.2
+              ],
+              "7": [
+                3.4
+              ],
+              "8": [
+                3.6
+              ],
+              "9": [
+                3.8
+              ],
+              "10": [
+                4
+              ],
+              "11": [
+                4.16
+              ],
+              "12": [
+                4.32
+              ],
+              "13": [
+                4.48
+              ],
+              "14": [
+                4.64
+              ],
+              "15": [
+                4.8
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hook_00_Skill03_Camera",
+              "Avatar_Hook_00_Skill03_EnterReady",
+              "Avatar_Hook_00_Skill03_Phase01",
+              "Avatar_Hook_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Ha! Oil to the Flames!": {
+          "variant1": {
+            "skillID": 110904,
+            "trigger": "SkillP01",
+            "name": "Ha! Oil to the Flames!",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When attacking a target afflicted with Burn, deals Fire Additional DMG equal to #1[i]% of Hook's ATK and regenerates #2[i] extra Energy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                5
+              ],
+              "2": [
+                0.55,
+                5
+              ],
+              "3": [
+                0.6,
+                5
+              ],
+              "4": [
+                0.65,
+                5
+              ],
+              "5": [
+                0.7,
+                5
+              ],
+              "6": [
+                0.75,
+                5
+              ],
+              "7": [
+                0.8125,
+                5
+              ],
+              "8": [
+                0.875,
+                5
+              ],
+              "9": [
+                0.9375,
+                5
+              ],
+              "10": [
+                1,
+                5
+              ],
+              "11": [
+                1.05,
+                5
+              ],
+              "12": [
+                1.1,
+                5
+              ],
+              "13": [
+                1.15,
+                5
+              ],
+              "14": [
+                1.2,
+                5
+              ],
+              "15": [
+                1.25,
+                5
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hook_00_PassiveSkill01",
+              "Avatar_Hook_00_PassiveSkill01_2"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Ack! Look at This Mess!": {
+          "variant1": {
+            "skillID": 110907,
+            "trigger": "SkillMaze",
+            "name": "Ack! Look at This Mess!",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. Upon entering battle, Hook deals Fire DMG equal to #4[i]% of her ATK to a random enemy. In addition, there is a #1[i]% base chance to inflict Burn on every enemy for #3[i] turn(s).\\nWhen afflicted with Burn, enemies will take Fire DoT equal to #2[i]% of Hook's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                3,
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Hook_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1109_basic_atk.png",
+        "skillRef": {
+          "skillName": "Hehe! Don't Get Burned!",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1109_skill.png",
+        "skillRef": {
+          "skillName": "Hey! Remember Hook?",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1109_ultimate.png",
+        "skillRef": {
+          "skillName": "Boom! Here Comes the Fire!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1109_talent.png",
+        "skillRef": {
+          "skillName": "Ha! Oil to the Flames!",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1109_technique.png",
+        "skillRef": {
+          "skillName": "Ack! Look at This Mess!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Innocence",
+        "icon": "icon/skill/1109_skilltree1.png",
+        "desc": "Hook restores HP equal to #1[i]% of her Max HP whenever her Talent is triggered.",
+        "params": [
+          0.05
+        ],
+        "traceAbility": "Hook_Hook_Trace01"
+      },
+      "Point07": {
+        "name": "Naivete",
+        "icon": "icon/skill/1109_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "traceAbility": "Hook_Hook_Trace02",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Playing With Fire",
+        "icon": "icon/skill/1109_skilltree3.png",
+        "desc": "After using her Ultimate, Hook has her action advanced by #2[i]% and additionally regenerates #1[i] Energy.",
+        "params": [
+          5,
+          0.2
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1109.png",
+    "preview": "image/character_preview/1109.png",
+    "portrait": "image/character_portrait/1109.png",
+    "bannerOffsets": [
+      47,
+      60.3,
+      0.68,
+      47,
+      60.3,
+      0.68,
+      47,
+      60.3,
+      0.68
     ],
     "isBuffed": false
   },

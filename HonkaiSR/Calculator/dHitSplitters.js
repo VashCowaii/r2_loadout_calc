@@ -934,6 +934,84 @@ const hitSplitters = {
             },
         ],
     },
+    "Hook": {//done
+        "basic": [
+          {
+            "primary": {
+              "hitRatio": 1,
+              "energyRatio": 1,
+              "toughness": 10
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+          }
+        ],
+        "skill": [
+          {
+            "primary": {
+              "hitRatio": 1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true,
+          },
+        ],
+        "skill2": [
+          {
+            "primary": {
+              "hitRatio": 1,
+              "energyRatio": 1,
+              "toughness": 20
+            },
+            "blast": {
+              "hitRatio": 1,
+              "toughness": 10
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true,
+          },
+        ],
+        "ult": [
+          {
+            "primary": {
+              "hitRatio": 0.3,
+              "energyRatio": 0.3,
+              "toughness": 30
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true
+          },
+          {
+            "primary": {
+              "hitRatio": 0.7,
+              "energyRatio": 0.7,
+              "toughness": 30
+            },
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+          },
+        ],
+        "tech": [
+          {
+            "primary": {
+              "hitRatio": 1,
+              "energyRatio": 0,
+              "toughness": 20
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+          }
+        ],
+    },
 
     //ERUDITION
     "Argenti": {//done

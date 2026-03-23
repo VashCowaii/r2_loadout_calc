@@ -131,6 +131,13 @@ const customDisplayValuesLog = {
         {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
+    "Hook": [
+        {valueName: "Skill is Enhanced", refName: "isEnhanced", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true,logFunction: null,summaryValue: "saberSumResonance",summaryType: "SUM"},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "saberOverflowSummer",summaryType: "SUM"},
+        // {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
+        // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
+    ],
     "Argenti": [//no tracker needed
         {valueName: "Talent Stacks", refName: "apotheosisStacks", isBattleValue: true},
     ], 
@@ -266,6 +273,14 @@ const conditionsCharacterDisplayWarning = {
     "Saber": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Saber's Basic ATK is enhanced.",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Hook": {
+        hasEnhancedState: true,
+        "Skill": "",
         "Ultimate": "",
 
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
@@ -1226,16 +1241,32 @@ const defaultConditions = {
         "Skill": null,
         "Ultimate": null
     },
-
-    //HUNT
-    // "Archer": {
-    //     hasEnhancedState: false,
-    //     "Skill": null,
-    //     "Ultimate": {
-    //         type: "AND",
-    //         array: []
-    //     }
-    // },
+    "Hook": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "phase": "Pre-Action",
+                    "state": false
+                },
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "isEnhanced",
+                    "state": false,
+                    "isBattleValue": true
+                }
+            ]
+        }
+    },
 
 
 
