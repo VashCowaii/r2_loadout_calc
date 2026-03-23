@@ -455,6 +455,7 @@ const battleActions = {
         const familyCacheRef = battleData.familyCacheRef[buffName] ??= battleActions.getBuffCacheFamilies(buffSheet);
         
         if (familyCacheRef.size) {
+            // superGlobal.createEntityCache()
             // cacheTagValues: {
             //     "UpdateStatDamage": {
             //         //compositeCacheTag will define itself here when used, and the tag will be the key
@@ -5411,20 +5412,7 @@ const turnLogic = {
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
                     tagSpecific: {},
-                    cacheTagValues: {
-                        "UpdateStatDamage": {
-                            //compositeCacheTag will define itself here when used, and the tag will be the key
-                        },
-                        "UpdateStatElation": {},
-                        "UpdateStatMerryMake": {},
-                        "UpdateStatDamageReduction": {},
-                        "UpdateStatDEFShred": {},
-                        "UpdateStatPEN": {},
-                        "UpdateStatVulnerable": {},
-                        "UpdateStatCritRate": {},
-                        "UpdateStatCritDamage": {},
-                    },
-
+                    cacheTagValues: superGlobal.createEntityCache(),
                     // buffsObject: {},
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
@@ -24376,19 +24364,7 @@ const turnLogic = {
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
-                        cacheTagValues: {
-                            "UpdateStatDamage": {
-                                //compositeCacheTag will define itself here when used, and the tag will be the key
-                            },
-                            "UpdateStatElation": {},
-                            "UpdateStatMerryMake": {},
-                            "UpdateStatDamageReduction": {},
-                            "UpdateStatDEFShred": {},
-                            "UpdateStatPEN": {},
-                            "UpdateStatVulnerable": {},
-                            "UpdateStatCritRate": {},
-                            "UpdateStatCritDamage": {},
-                        },
+                        cacheTagValues: superGlobal.createEntityCache(),
                         isDead: false,
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
@@ -25685,19 +25661,7 @@ const turnLogic = {
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
-                        cacheTagValues: {
-                            "UpdateStatDamage": {
-                                //compositeCacheTag will define itself here when used, and the tag will be the key
-                            },
-                            "UpdateStatElation": {},
-                            "UpdateStatMerryMake": {},
-                            "UpdateStatDamageReduction": {},
-                            "UpdateStatDEFShred": {},
-                            "UpdateStatPEN": {},
-                            "UpdateStatVulnerable": {},
-                            "UpdateStatCritRate": {},
-                            "UpdateStatCritDamage": {},
-                        },
+                        cacheTagValues: superGlobal.createEntityCache(),
                         isDead: false,
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
@@ -26998,19 +26962,7 @@ const turnLogic = {
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
-                        cacheTagValues: {
-                            "UpdateStatDamage": {
-                                //compositeCacheTag will define itself here when used, and the tag will be the key
-                            },
-                            "UpdateStatElation": {},
-                            "UpdateStatMerryMake": {},
-                            "UpdateStatDamageReduction": {},
-                            "UpdateStatDEFShred": {},
-                            "UpdateStatPEN": {},
-                            "UpdateStatVulnerable": {},
-                            "UpdateStatCritRate": {},
-                            "UpdateStatCritDamage": {},
-                        },
+                        cacheTagValues: superGlobal.createEntityCache(),
                         isDead: false,
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,

@@ -413,19 +413,7 @@ const sim = {
                 dots: {...dotsObject},
                 currentDotsArray: [],
                 specialDotsArray: [],
-                cacheTagValues: {
-                    "UpdateStatDamage": {
-                        //compositeCacheTag will define itself here when used, and the tag will be the key
-                    },
-                    "UpdateStatElation": {},
-                    "UpdateStatMerryMake": {},
-                    "UpdateStatDamageReduction": {},
-                    "UpdateStatDEFShred": {},
-                    "UpdateStatPEN": {},
-                    "UpdateStatVulnerable": {},
-                    "UpdateStatCritRate": {},
-                    "UpdateStatCritDamage": {},
-                },
+                cacheTagValues: superGlobal.createEntityCache(),
                 isEnemy: true,
                 enemyTypeAttack: attackTypes[currentEntry.enemyTypeAttack],//ref.enemyTypeAttack,
                 enemyType,
@@ -631,19 +619,7 @@ const sim = {
                 additionalDMGObject: {},
                 tagSpecific: {},
                 // tagSpecificArray: [],
-                cacheTagValues: {
-                    "UpdateStatDamage": {
-                        //compositeCacheTag will define itself here when used, and the tag will be the key
-                    },
-                    "UpdateStatElation": {},
-                    "UpdateStatMerryMake": {},
-                    "UpdateStatDamageReduction": {},
-                    "UpdateStatDEFShred": {},
-                    "UpdateStatPEN": {},
-                    "UpdateStatVulnerable": {},
-                    "UpdateStatCritRate": {},
-                    "UpdateStatCritDamage": {},
-                },
+                cacheTagValues: superGlobal.createEntityCache(),
                 isDead: false,
                 canBeTargeted: true,
                 slotNumber,
