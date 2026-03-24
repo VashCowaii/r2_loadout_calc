@@ -4172,6 +4172,53 @@ const turnLogicLightcones = {
             "vuln": "Holiday Thermae Escapade (LC)"
         },
     },
+        //3star
+    "Void": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Void";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+                    
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        const buffSheet = currentTurn.lcVoidEHRSHEET ??= {
+                            "stats": [EffectHitRate],
+                            [EffectHitRate]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                            "durationInTurn": 4,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Void - battlestart EHR application",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "buff1": "Void (LC)",
+        },
+    },
 
     //DESTRUCTION
         //5star
@@ -5119,7 +5166,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Thus Burns the Dawn - battlestart shred application",
+                "listenerName": "Collapsing Sky - battlestart dmg application",
                 "owners": [],
             },
         ],
