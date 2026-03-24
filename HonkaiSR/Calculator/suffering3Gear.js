@@ -4115,6 +4115,63 @@ const turnLogicLightcones = {
             "dmgStack": "Good Night and Sleep Well (LC)"
         },
     },
+    "Holiday Thermae Escapade": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd", 
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    
+                    if (!sourceTurn.lcHolidayThermaeVULNSHEET) {
+                        let lcNameRef = "Holiday Thermae Escapade";
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.vuln;
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcHolidayThermaeVULNSHEET = {
+                            "stats": [VulnAll],
+                            [VulnAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "isDebuff": true,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcHolidayThermaeVULNSHEET;
+                    const updateBuff = battleActions.updateBuff;
+
+                    const enemyTurns = battleData.enemyBasedTurns;
+
+                    for (let enemySlot in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemySlot];
+                        if (currentEnemy.isDead) {continue;}
+
+                        updateBuff(battleData,currentEnemy,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Holiday Thermae Escapade - attack dmg end listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "vuln": "Holiday Thermae Escapade (LC)"
+        },
+    },
 
     //DESTRUCTION
         //5star
