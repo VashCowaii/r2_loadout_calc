@@ -1,3 +1,10 @@
+const keyShortcut = basicShorthand.makeKeysArray;
+
+const globalTagCacheKeysDMG = {};
+const globalTagCacheKeysPEN = {};
+const globalTagCacheKeysSHRED = {};
+const globalTagCacheKeysVULN = {};
+
 const superGlobal = {
     "generalImplants": {
         "stats": [WeaknessWind],
@@ -71,5 +78,36 @@ const superGlobal = {
             "UpdateStatCritRate": {},
             "UpdateStatCritDamage": {},
         }
+    },
+    createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,atkSlot) {
+        const fullTag = tags + "";
+        const realDMGKeys = globalTagCacheKeysDMG[fullTag] ??= keyShortcut(dmgKeys,tags);
+        const realPENKeys = globalTagCacheKeysPEN[fullTag] ??= keyShortcut(resPENKeys,tags);
+        const realShredKeys = globalTagCacheKeysSHRED[fullTag] ??= keyShortcut(defShredKeys,tags);
+        const realVulnKeys = globalTagCacheKeysVULN[fullTag] ??= keyShortcut(vulnKeys,tags);
+
+        const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+        const returnObject = {
+            multipliers: {
+                primary: null,
+                blast: null,
+                all: null,
+            },
+            scalar,
+            DMGTags: tags,
+            slot: atkSlot,
+            realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+            actionTags,compositeCacheTag,
+
+            allToughness: false,
+            isFUA: false,
+        }
+        Object.assign(returnObject,overrideATKData);
+
+        return returnObject
+    },
+    generateAllATKObjects() {
+
     },
 }

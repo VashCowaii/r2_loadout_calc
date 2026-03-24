@@ -7086,6 +7086,7 @@ const importFuckery = {
     async getPlayerData() {
         const uidElement = readSelection("enkaUIDInput");
         uidElement.disabled = true;
+        if (+readSelection("enkaUIDInput").value === -1) {readSelection("enkaUIDInput").value = 615703019;}//test ID
         const uid = readSelection("enkaUIDInput").value;
 
 
