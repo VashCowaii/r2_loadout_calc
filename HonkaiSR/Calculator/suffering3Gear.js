@@ -4043,6 +4043,78 @@ const turnLogicLightcones = {
             "dmgBuff": "Fermata (LC)"
         },
     },
+    "Good Night and Sleep Well": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart", 
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    // const targetsGotHit = generalInfo.targetsGotHit;
+                    const targetTurn = generalInfo.targetTurn;
+                    const currentDebuffs = Math.min(targetTurn.debuffCounter,3);
+                    
+                    if (!sourceTurn.lcGoodNightSleepWellSTACKSHEET) {
+                        let lcNameRef = "Good Night and Sleep Well";
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcGoodNightSleepWellSTACKSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 3,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcGoodNightSleepWellSTACKSHEET;
+                    
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                    const updateBuff = battleActions.updateBuff;
+
+                    if (buffCheck) {
+                        const currentStacks = buffCheck.currentStacks;
+
+                        if (currentStacks === currentDebuffs) {return;}
+                        else if (currentStacks < currentDebuffs) {
+                            const stackDiff = currentDebuffs - currentStacks;
+                            buffSheet.currentStacks = stackDiff;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                            return;
+                        }
+                        else {
+                            removeBuff(battleData,sourceTurn,buffSheet,currentDebuffs,null,false,currentDebuffs);
+                            //only do silent removal and ignore pokes if we don't have any active debuffs on the target
+                        }
+                    }
+
+                    if (currentDebuffs) {
+                        buffSheet.currentStacks = currentDebuffs;
+                        updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Good Night and Sleep Well - dmg start debuff checker",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "dmgStack": "Good Night and Sleep Well (LC)"
+        },
+    },
 
     //DESTRUCTION
         //5star
