@@ -3984,6 +3984,65 @@ const turnLogicLightcones = {
             "dotDMG": "Eyes of the Prey (LC)",
         },
     },
+    "Fermata": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart", 
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcFermataDMGSHEET) {
+                        let lcNameRef = "Fermata";
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgBuff;
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcFermataDMGSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcFermataDMGSHEET;
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetDOTSCheck = targetTurn.dots;
+                    const hasValidDot = targetDOTSCheck.Wind || targetDOTSCheck.Lightning;
+
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                    if (buffCheck) {
+                        if (hasValidDot) {return;}
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+                    else {
+                        if (!hasValidDot) {return;}
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Fermata - dmg dealt listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "dmgBuff": "Fermata (LC)"
+        },
+    },
 
     //DESTRUCTION
         //5star
