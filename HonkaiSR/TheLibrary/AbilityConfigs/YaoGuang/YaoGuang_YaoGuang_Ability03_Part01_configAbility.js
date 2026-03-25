@@ -22,7 +22,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "ability": "YaoGuang_Ability03_Part02"
+      "ability": "YaoGuang_Ability03_Part02",
+      "isTrigger": true
     }
   ],
   "references": []
