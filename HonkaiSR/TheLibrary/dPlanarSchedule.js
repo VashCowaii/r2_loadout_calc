@@ -1,6 +1,96 @@
 const stageTypers = "planar"
 let mocSchedule = [
   {
+    "id": 1013,
+    "realName": "Gilded Recollection",
+    "worldLevel": 6,
+    "testWorldLevel": null,
+    "testMapID": null,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Gilded Recollection",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              80300155
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Ichor Memosprite: Judge of Oblivion (Complete)",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "RogueRelic",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Ichor Memosprite: Judge of Oblivion (Complete)",
+                      "id": 4064011,
+                      "image": 4064011,
+                      "rank": "LittleBoss",
+                      "attackBase": 649.5292138,
+                      "defBase": 1099.99995,
+                      "hpBase": 946672.225771,
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 4,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 3,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.75
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 43005,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1"
+                },
+                "highSTSUM": 2840016.677313,
+                "aoeSUM": 2840016.677313
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "71055.png",
+      "71054.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1012,
     "realName": "Within the West Wind",
     "worldLevel": 6,
