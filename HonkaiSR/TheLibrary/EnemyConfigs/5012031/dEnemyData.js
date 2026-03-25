@@ -41,8 +41,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2493,
-        2494
+        2517,
+        2518
       ]
     },
     "501203101": {
@@ -69,11 +69,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2493,
-        2494
+        2517,
+        2518
       ],
       "overrideParams": {
-        "2493": [
+        "2517": [
           [],
           null,
           null,
@@ -83,7 +83,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2494": [
+        "2518": [
           [
             -1,
             -1,
@@ -123,11 +123,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2493,
-        2494
+        2517,
+        2518
       ],
       "overrideParams": {
-        "2493": [
+        "2517": [
           [],
           null,
           null,
@@ -137,7 +137,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2494": [
+        "2518": [
           [
             0.5,
             0.5,
@@ -177,11 +177,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2493,
-        2494
+        2517,
+        2518
       ],
       "overrideParams": {
-        "2493": [
+        "2517": [
           [],
           null,
           null,
@@ -191,7 +191,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2494": [
+        "2518": [
           [
             0.5,
             0.5,
@@ -231,11 +231,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2493,
-        2494
+        2517,
+        2518
       ],
       "overrideParams": {
-        "2494": [
+        "2518": [
           [
             0.3,
             0.3,
@@ -275,11 +275,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2493,
-        2494
+        2517,
+        2518
       ],
       "overrideParams": {
-        "2494": [
+        "2518": [
           [
             0.3,
             0.3,
@@ -319,8 +319,64 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2493,
-        2494
+        2517,
+        2518
+      ]
+    },
+    "501203115": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Thunder"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2517,
+        2518
+      ]
+    },
+    "501203116": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Thunder"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2517,
+        2518
       ]
     }
   }

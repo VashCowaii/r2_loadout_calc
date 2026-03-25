@@ -42,9 +42,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2486,
-        2487,
-        2488
+        2510,
+        2511,
+        2512
       ],
       "enemyTag": [
         "W3_TV_03"
@@ -74,9 +74,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2486,
-        2487,
-        2488
+        2510,
+        2511,
+        2512
       ],
       "enemyTag": [
         "W3_TV_03"
@@ -106,9 +106,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2486,
-        2487,
-        2488
+        2510,
+        2511,
+        2512
       ],
       "enemyTag": [
         "W3_TV_03"
