@@ -1555,6 +1555,90 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1221123597\">Monster_RogueLightTeam_Rage</a>[<span class=\"descriptionNumberColor\">Bloody Fight</span>]",
+          "stackType": "Replace",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "ModifierLayers",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
+                    "displayLines": "(MDF_DamageUpRatio_PerLayer * ModifierLayers)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageUpRatio_PerLayer",
+                      "ModifierLayers"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldIncoming</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (1) || INVERT || Variables[0] (MDF_HealDownRatio_PerLayer) || MUL || Variables[1] (ModifierLayers) || MUL || RETURN",
+                    "displayLines": "((-1 * MDF_HealDownRatio_PerLayer) * ModifierLayers)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "MDF_HealDownRatio_PerLayer",
+                      "ModifierLayers"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (1) || INVERT || Variables[0] (MDF_HealDownRatio_PerLayer) || MUL || Variables[1] (ModifierLayers) || MUL || RETURN",
+                    "displayLines": "((-1 * MDF_HealDownRatio_PerLayer) * ModifierLayers)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "MDF_HealDownRatio_PerLayer",
+                      "ModifierLayers"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>, but HP restored and Shield Effect received decreases by <span class=\"descriptionNumberColor\">MDF_HealDownRatio_PerLayer</span>. This effect can stack.",
+          "type": "Other",
+          "statusName": "Bloody Fight",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          }
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2068031350\">Monster_RogueBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
           "stackType": "Replace",
           "execute": [
