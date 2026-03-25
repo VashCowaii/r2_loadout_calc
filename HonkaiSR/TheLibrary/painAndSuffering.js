@@ -565,6 +565,22 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Is Current Modifier Active"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "invertCondition"
+            // "action",
+            // "valueList",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Current Modifier Active");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>
+            ${parseRef.invertCondition ? "NOT": ""}${parseRef.target ? ` from ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""}
+        </div>
+        `;
+    },
     "Gender is"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2314,6 +2330,7 @@ const megaParsingFuckeryPain = {
             "context",
             // "value",
             "variableName",
+            "typeFilter"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Team Count");
         // initialCounter++;
@@ -2324,6 +2341,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target Pool",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
+            ${getStandardNameDisplay(initialCounter,parseRef.typeFilter,"Type Filter")}
         </div>`;
     },
     "Define Custom Variable with WorldLevel"(parseRef,initialCounter) {
@@ -2946,6 +2964,7 @@ const megaParsingFuckeryPain = {
             "name",
             "path",
             "target",
+            "typeFilter",
             "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Target is Pathstrider");
@@ -2954,6 +2973,9 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.invertCondition ? "NOT ": ""}${parseRef.path} ${parseRef.target ? `on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.typeFilter,"Type Filter")}
         </div>`;
     },
     "Is Entity a Battle Event/Summon"(parseRef,initialCounter) {
@@ -4050,6 +4072,21 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.invertCondition ? "NOT " : ""}${parseRef.team}
+        </div>`;
+    },
+    "Add Target by Ability Target Leader"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "readCached",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Target by Ability Target Leader");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.readCached,"Read Cached")}
         </div>`;
     },
     "Add Target by Enemy ID"(parseRef,initialCounter) {
