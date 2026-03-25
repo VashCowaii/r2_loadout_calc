@@ -18361,7 +18361,7 @@ let basicEnemyList = {
     "5013090": {
       "5013090": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daybreak Squadron"
     },
     "5014011": {
