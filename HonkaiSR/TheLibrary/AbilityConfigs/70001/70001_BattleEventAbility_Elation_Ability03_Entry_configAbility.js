@@ -89,7 +89,7 @@ const configAbility = {
               "conditions": {
                 "name": "AND",
                 "conditionList": [
-                  "Unknown EventType3 (Not always an error)[inverse: true]"
+                  "Unknown CONDITION3 (Not always an error)[1: true]"
                 ]
               },
               "flagFilter": [
