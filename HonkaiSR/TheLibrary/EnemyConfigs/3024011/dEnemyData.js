@@ -248,7 +248,21 @@ let enemyData = {
           "over": 3021041,
           "base": 3021041
         }
-      ]
+      ],
+      "overrideParams": {
+        "1446": [
+          [
+            0.08
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     },
     "302401104": {
       "name": "Argenti",

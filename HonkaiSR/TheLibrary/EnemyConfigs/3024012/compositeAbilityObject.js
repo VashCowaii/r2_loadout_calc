@@ -424,7 +424,7 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "AND",
+            "name": "OR",
             "conditionList": [
               {
                 "name": "Enemy ID",
@@ -956,7 +956,7 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "AND",
+            "name": "OR",
             "conditionList": [
               {
                 "name": "Enemy ID",
@@ -1094,7 +1094,7 @@ const compositeAbilityObject = {
             {
               "name": "IF",
               "conditions": {
-                "name": "AND",
+                "name": "OR",
                 "conditionList": [
                   {
                     "name": "Enemy ID",
@@ -1198,7 +1198,7 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "AND",
+                    "name": "OR",
                     "conditionList": [
                       {
                         "name": "Enemy ID",
