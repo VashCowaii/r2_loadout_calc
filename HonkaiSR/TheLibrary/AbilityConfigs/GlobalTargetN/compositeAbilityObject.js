@@ -5348,33 +5348,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Elation: OffField Sparxie",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Currency Wars Full OffFieldList}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 62378,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Elation: All Battle Events",
           "isTargetOperator": false,
           "execute": [
@@ -5394,6 +5367,33 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "tag": "ElationTime"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Elation: OffField Sparxie",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Currency Wars Full OffFieldList}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Battle Event ID",
+                    "ID": 62378,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   }
                 }
               ]
@@ -6062,7 +6062,7 @@ const compositeAbilityObject = {
               "Sequence": [
                 {
                   "name": "Target Name",
-                  "target": "{{Enemy Team All}}"
+                  "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
                 },
                 {
                   "name": "Sort by Physical Positioning",
@@ -6086,7 +6086,7 @@ const compositeAbilityObject = {
               "Sequence": [
                 {
                   "name": "Target Name",
-                  "target": "{{Enemy Team All}}"
+                  "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
                 },
                 {
                   "name": "Sort by Physical Positioning",
@@ -6705,6 +6705,35 @@ const compositeAbilityObject = {
                   "target": "{{Modifier Holder}}"
                 },
                 "Adjust Target by Summoner"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Ability Target: Leader",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Add Target by Ability Target Leader",
+                      "readCached": true
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Index",
+                  "indexType": "First"
+                }
               ]
             }
           ]
