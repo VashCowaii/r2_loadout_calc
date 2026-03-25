@@ -697,7 +697,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "characterName": "Swarm: True Sting (Complete)"
+                        "characterName": "Swarm: True Sting (Complete)",
+                        "isBaseCompare": true
                       },
                       {
                         "name": "Enemy ID",
@@ -706,7 +707,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "characterName": "Swarm: True Sting (Complete)"
+                        "characterName": "Swarm: True Sting (Complete)",
+                        "isBaseCompare": true
                       }
                     ]
                   },
@@ -771,7 +773,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Swarm: True Sting (Complete)"
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
                   },
                   {
                     "name": "Enemy ID",
@@ -780,7 +783,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Swarm: True Sting (Complete)"
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
                   }
                 ]
               },
@@ -3109,7 +3113,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "characterName": "Swarm: True Sting (Complete)"
+                        "characterName": "Swarm: True Sting (Complete)",
+                        "isBaseCompare": true
                       },
                       {
                         "name": "Enemy ID",
@@ -3118,7 +3123,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "characterName": "Swarm: True Sting (Complete)"
+                        "characterName": "Swarm: True Sting (Complete)",
+                        "isBaseCompare": true
                       }
                     ]
                   },
@@ -3206,7 +3212,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Swarm: True Sting (Complete)"
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
                   },
                   {
                     "name": "Enemy ID",
@@ -3215,7 +3222,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Swarm: True Sting (Complete)"
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
                   }
                 ]
               },

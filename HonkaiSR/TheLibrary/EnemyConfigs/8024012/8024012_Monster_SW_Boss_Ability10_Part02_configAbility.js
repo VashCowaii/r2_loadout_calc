@@ -286,7 +286,8 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Swarm: True Sting (Complete)"
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
                   },
                   {
                     "name": "Enemy ID",
@@ -295,7 +296,8 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Swarm: True Sting (Complete)"
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
                   }
                 ]
               },
@@ -360,7 +362,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "characterName": "Swarm: True Sting (Complete)"
+                "characterName": "Swarm: True Sting (Complete)",
+                "isBaseCompare": true
               },
               {
                 "name": "Enemy ID",
@@ -369,7 +372,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "characterName": "Swarm: True Sting (Complete)"
+                "characterName": "Swarm: True Sting (Complete)",
+                "isBaseCompare": true
               }
             ]
           },
