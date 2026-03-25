@@ -53,6 +53,20 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1051103648\">Relic_323_Sub3</a>[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
+              "onlyRemoveOwnersInstance": true
+            }
+          ]
+        },
+        {
           "eventTrigger": "When Losing Modifier [Anyone]",
           "execute": [
             {
