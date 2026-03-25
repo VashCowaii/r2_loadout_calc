@@ -41,8 +41,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2446,
-        2447
+        2456,
+        2457
       ]
     },
     "406201001": {
@@ -69,11 +69,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2446,
-        2447
+        2456,
+        2457
       ],
       "overrideParams": {
-        "2446": [
+        "2456": [
           [
             2,
             0.5
@@ -87,6 +87,118 @@ let enemyData = {
           "-"
         ]
       }
+    },
+    "406201002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4,
+        1,
+        null,
+        1,
+        30
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2456,
+        2457
+      ]
+    },
+    "406201003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4,
+        1,
+        null,
+        1,
+        30
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2456,
+        2457
+      ]
+    },
+    "406201004": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        5,
+        1,
+        null,
+        1,
+        60
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2456,
+        2457
+      ]
+    },
+    "406201005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        6,
+        1,
+        null,
+        1,
+        90
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2456,
+        2457
+      ]
     },
     "406201006": {
       "name": -1,
@@ -112,8 +224,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2446,
-        2447
+        2456,
+        2457
       ]
     }
   }

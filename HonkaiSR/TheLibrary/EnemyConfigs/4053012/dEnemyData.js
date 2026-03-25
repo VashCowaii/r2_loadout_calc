@@ -42,13 +42,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2421,
-        2422,
-        2423,
-        2424,
-        2425,
-        2426,
-        2427
+        2431,
+        2432,
+        2433,
+        2434,
+        2435,
+        2436,
+        2437
       ],
       "enemyTag": [
         "BattleScore_Manta"

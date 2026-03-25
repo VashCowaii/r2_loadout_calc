@@ -35,7 +35,7 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        2353
+        2363
       ],
       "summons": [
         {
@@ -67,7 +67,7 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        2353
+        2363
       ],
       "summons": [
         {

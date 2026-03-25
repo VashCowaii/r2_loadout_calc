@@ -42,8 +42,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2121,
-        2122
+        2131,
+        2132
       ]
     },
     "403205001": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2121,
-        2122
+        2131,
+        2132
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -101,8 +101,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2121,
-        2122
+        2131,
+        2132
       ]
     }
   }

@@ -42,8 +42,8 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2019,
-        2020
+        2029,
+        2030
       ]
     },
     "402201001": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2019,
-        2020
+        2029,
+        2030
       ]
     },
     "402201002": {
@@ -98,8 +98,8 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2019,
-        2020
+        2029,
+        2030
       ],
       "enemyTag": [
         "MGrid_4008"
