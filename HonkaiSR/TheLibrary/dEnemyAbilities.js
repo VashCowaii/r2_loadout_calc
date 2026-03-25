@@ -26366,6 +26366,211 @@ let enemyAbilityData = [
     "energyPerHit": 10
   },
   {
+    "id": 302403301,
+    "name": "Malignform Elytra",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      2,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403302,
+    "name": "Rapacious Appendages",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals minor Fire DMG to one designated target and any adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      2.4,
+      1.5,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403303,
+    "name": "Encroach, Mangle, Sate",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3,
+      0.4
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403304,
+    "name": "Rend, Putrefy, Engorge",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Enters \"Gene Duplication\" state, increasing this unit's SPD. Summons \"Juvenile Sting\" and apply \"Rapid Evolution\" state to it. A target character and their summoned target can immediately take action and enter the \"Nemesis\" state, increasing their Break Effect. When targets not in the \"Nemesis\" state attack friendly units in the \"Rapid Evolution\" state, they cannot deal CRIT Hit effects.",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.5,
+      0.5,
+      2,
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403305,
+    "name": "Primordial Tide, Swarm of Death",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals massive Fire DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3,
+      0.5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403306,
+    "name": "Primal Hunger",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Increases the SPD of \"Juvenile Sting\" summoned by this unit.",
+    "tag": "Support",
+    "phases": [
+      2,
+      3
+    ],
+    "params": [
+      30,
+      2,
+      60
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403307,
+    "name": "Whirling Carapace",
+    "type": "Ability",
+    "trigger": "PassiveSkill01",
+    "desc": "When \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of its reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" it will recover HP equal to the corrosion amount.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.005,
+      0.1,
+      0.15
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403308,
+    "name": "Symbiosis, Swarm, Gnaw",
+    "type": "Ability",
+    "trigger": "PassiveSkill02",
+    "desc": "After entering the \"Gene Duplication\" state, the field enters Combustion. \"Gene Duplication\" is dispelled when all summoned \"Juvenile Sting\" are eliminated. When \"Gene Duplication\" is dispelled, \"Harbinger of Death: Swarm Nightmare\" receives increased DMG, dispels the \"Corrosion\" state, and all ally Skill Points are restored.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403309,
+    "name": "Universal Blight, Howl of the Life Eater",
+    "type": "Ability",
+    "trigger": "PassiveSkill03",
+    "desc": "After entering the \"Gene Duplication\" state, whenever this unit uses an attack, it additionally deals minor Fire DMG based on the number of \"Juvenile Sting\" remaining. When any \"Juvenile Sting\" uses an attack, \"Harbinger of Death: Swarm Nightmare\" gains a stack of \"Mortal Instinct\" and additionally slightly increases the DMG dealt by this unit. When \"Mortal Instinct\" reaches a certain number of stacks, \"Harbinger of Death: Swarm Nightmare\" will immediately take action, uses \"Primordial Tide, Swarm of Death\" and clear all \"Mortal Instinct\" stacks. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      1,
+      5,
+      0.75,
+      0.25,
+      3,
+      0.03
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403310,
+    "type": "Ability",
+    "trigger": "Skill01Pre",
+    "tag": "Single Target",
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 302501001,
     "name": "Grazioso",
     "type": "Ability",
@@ -43784,6 +43989,117 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 406301101,
+    "name": "Hemotort Whip",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406301102,
+    "name": "Hemotort Spew",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Imaginary DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      3,
+      2.5
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406301103,
+    "name": "Menacing Warning",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the Charging state and gains \"Whirl.\" At the same time, gains \"DMG Boost\" equal to the number of \"Whirl\" stacks. The stack count of \"DMG Boost\" will remain consistent with \"Whirl.\" If \"Whirl\" still persists during the next action, uses \"Hemotort Vortex.\"",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      7,
+      0.1
+    ],
+    "delay": 1.5,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406301104,
+    "name": "Hemotort Vortex",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Imaginary DMG to all targets and converts a portion of the targets' reduced HP to \"Corrosion.\" The higher the \"Whirl\" stacks, the higher the DMG. Then, loses all \"Whirl\" stacks.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.5,
+      0.5,
+      0.2,
+      0.5,
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406301105,
+    "name": "Torque Counter",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals minor Imaginary DMG to all targets and converts a portion of the hit target's reduced HP to \"Corrosion.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5,
+      0.5,
+      0.2,
+      0.5
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 406301106,
+    "name": "Corkscrew Charge",
+    "type": "Talent",
+    "trigger": "PassiveSkillInitiate",
+    "desc": "After being hit by attacks from target units, if the \"Whirl\" stack is not 0, uses \"Torque Counter\" and loses 1 stack of \"Whirl.\" During any unit's turn, each target unit can only trigger this effect once. When the \"Whirl\" stack reaches 0, the Charging state is dispelled.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 406401001,
     "name": "Hemotort Teethgrind",
     "type": "Ability",
@@ -44311,6 +44627,168 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 406401401,
+    "name": "Hemotort Teethgrind",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals massive Imaginary DMG to one designated target. If the target has Shield, reduce this unit's Toughness instead. This Toughness Reduction effect will not reduce Toughness below 1.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4.5,
+      180,
+      0
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406401402,
+    "name": "Execution in Place",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Summons \"Ichor Memosprite: Pheasant.\" For every summon defeated, reduces this unit's Toughness.",
+    "tag": "Summon",
+    "params": [
+      0.1,
+      2,
+      180,
+      0.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401403,
+    "name": "Hemotort Glower",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Locks on to one designated character, increases this unit's SPD, and uses \"Hemotort Teethgrind\" and \"Hemotort Saw\" on the target within several turns. Take 1 extra action after using this ability.",
+    "tag": "Lock On",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      0,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401404,
+    "name": "Hemotort Saw",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to one designated target and converts a portion of the hit target's reduced HP into \"Corrosion.\" If the target has Shield, reduce this unit's Toughness instead. This Toughness Reduction effect will not reduce Toughness below 1.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      180
+    ],
+    "extraEffects": [
+      209
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 406401405,
+    "name": "Hemotort Clamps",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals massive Imaginary DMG to all targets and converts a portion of the targets' reduced HP to \"Corrosion.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      4,
+      0.5,
+      0.2,
+      0.5
+    ],
+    "extraEffects": [
+      209
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406401406,
+    "name": "Name the Culprit",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Enters the Charging state. In the next action, uses \"Hemotort Decapitation.\" Selects 1 target to receive the highest DMG of \"Hemotort Decapitation\" and \"Hemotort Corruption.\"",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "extraEffects": [
+      239
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401407,
+    "name": "Hemotort Decapitation",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "Deals Imaginary Type DMG to target characters not selected with \"Name the Culprit.\" Deals massive Imaginary Type DMG to target characters selected with \"Name the Culprit,\" and applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      14,
+      4.5,
+      0.5
+    ],
+    "extraEffects": [
+      239
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 406401408,
+    "name": "Expedite Verdict",
+    "type": "Ability",
+    "trigger": "PassiveSkillInitiate",
+    "desc": "Reduces DMG received when not Weakness Broken. When this unit is Weakness Broken, its action will be further delayed, and deals massive Imaginary DMG to this unit. While Weakness Broken, this unit receives increased DMG.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      2,
+      0.5,
+      0.2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501201001,
     "name": "Crackle Shot",
     "type": "Ability",
@@ -44683,6 +45161,64 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501209001,
+    "name": "Boosting Strength",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Enters the \"Strength Boost!\" state. Uses \"Windmill Defacer\" in the next turn.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501209002,
+    "name": "Windmill Defacer",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Physical DMG to one designated target and grants the target team Punchline, with a chance to cause the attacked target to enter the \"Strong Reverberation\" state.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.5,
+      0.5,
+      2,
+      0.2
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501209003,
+    "name": "IFF Systems Malfunction",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When in the \"Strength Boost!\" state, this unit immediately takes action after being attacked. Has a low chance to deal Physical DMG to a random friendly unit adjacent to this unit and grant the target team Punchline. Otherwise, uses \"Windmill Defacer\" on a random target. If the DMG taken in this attack is Elation DMG, this attack will always attack a friendly unit. This effect can only trigger a maximum of 1 time while the \"Strength Boost!\" state persists.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      5,
+      0.25
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501211001,
     "name": "Capture",
     "type": "Ability",
@@ -44725,6 +45261,64 @@ let enemyAbilityData = [
       259
     ],
     "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501212001,
+    "name": "Housecleaning",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501212002,
+    "name": "Dirt Water Slinging",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals minor Quantum DMG to one designated target and reduces the attacked target's DEF.",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      0.5,
+      2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501212003,
+    "name": "Circuit Malfunction",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When a target receives a killing blow, they gain Punchline.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      5
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "element": "Quantum",
     "atkType": "Basic ATK"
   },
   {
@@ -44962,6 +45556,125 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501301201,
+    "name": "Sweep the Left!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Starting from the leftmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501301202,
+    "name": "Sweep the Right!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Starting from the rightmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501301203,
+    "name": "Performance Rehearsal",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters Charging state. On its next action, uses \"Time to Rock!\" When Aha Instant triggers, immediately dispels the Charging state, gains Punchline, and increases DMG taken by this unit.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      10,
+      0.4,
+      2
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301204,
+    "name": "Time to Rock!",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 501301205,
+    "name": "Get Hyped!",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "If this unit is not in the \"Frenzied Rendition\" state, increases SPD of friendly units other than this unit and causes them to immediately take action, while also increasing DMG dealt. If this unit is in the \"Frenzied Rendition\" state, deals Imaginary DMG to friendly units other than this unit, with a chance to inflict the \"Revelry\" state to them, and gains Punchline.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      0.5,
+      2,
+      1,
+      1,
+      0.1,
+      120,
+      10,
+      0.5,
+      1
+    ],
+    "extraEffects": [
+      265,
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301206,
+    "name": "Music Madness",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When Aha Instant is activated, this unit gains the \"Frenzied Rendition\" state, making the effects of \"Get Hyped!\" more Elated.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501303001,
     "name": "The Stroke",
     "type": "Ability",
@@ -45101,6 +45814,733 @@ let enemyAbilityData = [
     ],
     "delay": 1,
     "atkType": "Basic ATK"
+  },
+  {
+    "id": 501303101,
+    "name": "The Stroke",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501303102,
+    "name": "Sweeping Hues",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Physical DMG to one designated target and consumes 1 \"Paint\" to deal Additional DMG of the corresponding Type.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501303103,
+    "name": "Dancing Splendor",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Physical DMG to all targets and consumes 1 \"Paint\" to deal Additional DMG of the corresponding Type.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501303104,
+    "name": "Palette Meltdown",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals Physical DMG to all targets and consumes all remaining \"Paint\" to deal Additional DMG of the corresponding Type.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "alert": true,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501303105,
+    "name": "Hue Overflow",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "After being attacked by ally targets while in the \"Colorless\" state, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, gains additional \"Paint\" points.\\nWhen \"Paint\" reaches 6 points, enters the \"Color\" state.\\nWhile in the \"Colorless\" state, Toughness will not drop below 1 point.\\nIncreases All-Type RES, this effect is removed when Weakness is Broken and is regained when recovering from Weakness Break.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.4,
+      0.1,
+      1,
+      0.03,
+      0.5,
+      1,
+      2,
+      5
+    ],
+    "extraEffects": [
+      261,
+      262,
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501303106,
+    "name": "Chromatic Threshold",
+    "type": "Talent",
+    "trigger": "SkillP02",
+    "desc": "When consuming \"Paint\" to deal Additional DMG to a target, if the target's Type differs from the Additional DMG Type, this Additional DMG is boosted.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501303107,
+    "name": "The Art of Color",
+    "type": "Talent",
+    "trigger": "SkillP03",
+    "desc": "Upon entering the \"Color\" state, targets gain a set number of Punchline points based on the highest amount of a single type of \"Paint\". Then, according to the Type of the already obtained \"Paint\", gains the corresponding Type Weakness, and reduces corresponding Type RES based on the number of \"Paint\" possessed.\\nAt the end of the turn while in the \"Color\" state, if all \"Paint\" has been consumed, enters the \"Colorless\" state.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      261,
+      262,
+      263,
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501304001,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501304002,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to one designated target and units adjacent to the target.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      3,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501304003,
+    "name": "Daybreak Will",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Applies \"Daybreak Forcefield\" to this unit. While in this state, Daybreak Squadron continuously uses \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When this unit is attacked by a Quantum-Type attack, it will immediately take action. When Daybreak Squadron is in the \"Daybreak Forcefield\" state, after being attacked a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      7,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501304004,
+    "name": "Shadow Dance of the Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      8
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501304005,
+    "name": "Daybreak Dispersal",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Dispels \"Daybreak Forcefield\" and applies \"Disheartened\" to this unit, increasing DMG taken and reducing this unit's Quantum RES.",
+    "tag": "Others",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.3,
+      0.4,
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501304101,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.4
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501304102,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to one designated target and units adjacent to the target.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.6,
+      1.5,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501304103,
+    "name": "Daybreak Will",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Increases this unit's SPD.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501305001,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501305002,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Fire DMG to one designated target and units adjacent to the target.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      3,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501305003,
+    "name": "Daybreak Will",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Applies \"Daybreak Forcefield\" to this unit. While in this state, Daybreak Squadron continuously uses \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When this unit is attacked by a Fire-Type attack, it will immediately take action. When Daybreak Squadron is in the \"Daybreak Forcefield\" state, after being attacked a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      7,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501305004,
+    "name": "Shadow Dance of the Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      8
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501305005,
+    "name": "Daybreak Dispersal",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Dispels \"Daybreak Forcefield\" and applies \"Disheartened\" to this unit, increasing DMG taken and reducing this unit's Fire RES.",
+    "tag": "Others",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.3,
+      0.4,
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501305101,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501305102,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Fire DMG to one designated target and units adjacent to the target.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      3,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501305103,
+    "name": "Daybreak Will",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Increases the DMG dealt by this unit.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.25
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501306001,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501306002,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Imaginary DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      3,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501306003,
+    "name": "Daybreak Will",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Applies \"Daybreak Forcefield\" to this unit. While in this state, Daybreak Squadron continuously uses \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When this unit is attacked by a Imaginary-Type attack, it will immediately take action. When Daybreak Squadron is in the \"Daybreak Forcefield\" state, after being attacked a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      7,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501306004,
+    "name": "Shadow Dance of the Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501306005,
+    "name": "Daybreak Dispersal",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Dispels \"Daybreak Forcefield\" and applies \"Disheartened\" to this unit, increasing DMG taken and reducing this unit's Imaginary RES.",
+    "tag": "Others",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.3,
+      0.4,
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501306101,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.4
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501306102,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Imaginary DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.6,
+      1.5,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501307001,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501307002,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Physical DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      3,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501307003,
+    "name": "Daybreak Will",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Applies \"Daybreak Forcefield\" to this unit. While in this state, Daybreak Squadron continuously uses \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When this unit is attacked by a Physical-Type attack, it will immediately take action. When Daybreak Squadron is in the \"Daybreak Forcefield\" state, after being attacked a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      7,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501307004,
+    "name": "Shadow Dance of the Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      8
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501307005,
+    "name": "Daybreak Dispersal",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Dispels \"Daybreak Forcefield\" and applies \"Disheartened\" to this unit, increasing DMG taken and reducing this unit's Physical RES.",
+    "tag": "Others",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.3,
+      0.4,
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501307101,
+    "name": "Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501307102,
+    "name": "Daybreak Flywheel",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Physical DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      3,
+      0.15,
+      60,
+      1
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501307104,
+    "name": "Shadow Dance of the Daybreak Blade",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      8
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
   },
   {
     "id": 501401001,
@@ -45560,6 +47000,397 @@ let enemyAbilityData = [
       266
     ],
     "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401501,
+    "name": "Net Battle!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401502,
+    "name": "Bring the Beat In!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401503,
+    "name": "Get On the Mic!",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.6,
+      0,
+      4,
+      0.3,
+      0.6,
+      0.3
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401504,
+    "name": "Stream Promo",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Apply the \"Flooding Viewers\" state to sub-field friendly units, advancing their actions and increasing their CRIT Rate.",
+    "tag": "Others",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.25,
+      0.25,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401506,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "If all sub-field friendly units are defeated when Live Showdown is dispelled, increases the DMG taken by all friendly units, delays their actions, recovers Skill Points, and enables Aha to immediately gain 1 extra turn where a fixed amount of Punchline is taken into account. This extra turn does not consume Punchline. If not all sub-field friendly units are defeated when Live Showdown is dispelled, then deals massive Quantum DMG to target characters going into the sub-field, and inflicts them with \"Entanglement.\"",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      2,
+      6,
+      1,
+      20,
+      6,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401507,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill062",
+    "desc": "If all sub-field friendly units have been defeated when Live Showdown is dispelled, increases DMG taken by all friendly units, delays their actions, restores Skill Points, and grants Aha 1 extra turn where a fixed amount of Punchline is taken into account. This turn does not consume Punchline.",
+    "tag": "Single Target",
+    "phases": [
+      2,
+      3
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401508,
+    "name": "Bullet Comments Ready!",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "When Live Showdown is dispelled, if the sub-field friendly units are still not defeated, it will deal Quantum DMG to all targets and has a chance to inflict random Bullet Comments penalties. The higher the remaining HP percentage of the sub-field friendly units, the higher the DMG dealt and the higher the probability of penalties.",
+    "tag": "AoE ATK",
+    "phases": [
+      2,
+      3
+    ],
+    "params": [
+      12,
+      2,
+      0.1,
+      2,
+      1.2,
+      1,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      269
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401509,
+    "name": "Friendship Level Adjustment",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "After Live Showdown is activated, attacking \"Output Port 1\" will increase \"Ally Popularity,\" while attacking \"Output Port 2\" will decrease \"Enemy Popularity.\" When \"Ally Popularity\" increases, \"Output Port 1\" action advances, and when \"Enemy Popularity\" decreases, \"Output Port 2\" action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      4,
+      0.2,
+      0.4
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401510,
+    "name": "Fan Frenzy",
+    "type": "Talent",
+    "trigger": "PassiveSkill02",
+    "desc": "After Live Showdown is activated, friendly targets on the prime-field receive reduced DMG and become immune to Crowd Control debuffs. When Live Showdown is dispelled, if all friendly targets on the sub-field are defeated, this effect will be removed. Otherwise, based on the remaining HP percentage of sub-field friendly targets, a portion of the DMG Reduction effect will be retained until the next Live Showdown is activated. If this unit's HP drops to a certain percentage without having activated Live Showdown, this unit's action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.75
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401511,
+    "name": "Fans' Cheers",
+    "type": "Talent",
+    "trigger": "PassiveSkill03",
+    "desc": "Whenever a friendly unit on the sub-field takes action, DMG dealt by this unit slightly increases.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.1
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402001,
+    "name": "Soulmend Shears",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      0
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402002,
+    "name": "Zero-Blind-Spot Cleanse",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets and grants the target team Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      3
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402003,
+    "name": "High-Temp Sterilization Mode",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Steam Wash\" state, increasing DMG dealt by this unit, and gains a set number of \"Lasting Antibac\" stacks, reduces the DMG this unit receives. When all stacks of \"Lasting Antibac\" are removed, exits the \"Steam Wash\" state and receives massive DMG.",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.3,
+      2,
+      0.3,
+      0.1,
+      2,
+      0.45
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402004,
+    "name": "Potent Foam Soap",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Quantum DMG to all targets and applies the \"Work Is Bliss!\" effect, while causing the target team to gain Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      1.5,
+      1,
+      0.02,
+      5,
+      2,
+      1
+    ],
+    "extraEffects": [
+      281,
+      259
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402005,
+    "name": "Duty Prep in Progress...",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the \"Raring to Go\" state and gains the \"Weakness Protected\" effect. Uses \"Saturation Cleaning!\" in the next action.",
+    "tag": "Charging",
+    "phases": [
+      2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402006,
+    "name": "Saturation Cleaning!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Quantum DMG to all targets and grants the target team Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      5,
+      8
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501402008,
+    "name": "Scrubber's Mutiny",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Adds \"Venue Protocol Enforcer\" to the Action Order. Each time \"Venue Protocol Enforcer\" takes action, summons an \"Alloy Pommy\" for both ally and enemy teams. Each time allies gain 1 Punchline, the ally \"Alloy Pommy\" accumulates 1 Charge. Upon reaching #1[i] Charge, it can use an Enhanced Basic ATK to remove 1 stack of \"Lasting Antibac\" from \"Alloy Mechatron: King Pom-Pom.\" A maximum of 1 ally \"Alloy Pommy\" can exist, and it cannot be targeted by either side.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      20,
+      0.55,
+      0,
+      10
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "element": "Quantum",
     "atkType": "Basic ATK"
   },
   {
