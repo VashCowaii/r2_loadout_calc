@@ -15,7 +15,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
-      "length": 26,
+      "length": 29,
       "parse": [
         {
           "name": "CharacterFunctions",
@@ -373,6 +373,21 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__702164698\">RangerGroupStartCamera</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              }
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
           "functionName": "<a class=\"gTempYellow\" id=\"fun__677302502\">4014030StartCamera</a>",
           "parse": [
             {
@@ -519,6 +534,81 @@ const compositeAbilityObject = {
         {
           "name": "CharacterFunctions",
           "functionName": "<a class=\"gTempYellow\" id=\"fun__595293168\">5014020StartCamera</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Stage ID",
+                        "ID": 205110800,
+                        "compareType": "="
+                      },
+                      {
+                        "name": "Stage ID",
+                        "ID": 205110800,
+                        "compareType": "="
+                      },
+                      {
+                        "name": "Stage ID",
+                        "ID": 205110800,
+                        "compareType": "="
+                      },
+                      {
+                        "name": "Stage ID",
+                        "ID": 205110800,
+                        "compareType": "="
+                      },
+                      {
+                        "name": "Stage ID",
+                        "ID": 205110800,
+                        "compareType": "="
+                      },
+                      {
+                        "name": "Stage ID",
+                        "ID": 205110800,
+                        "compareType": "="
+                      },
+                      {
+                        "name": "Stage ID",
+                        "ID": 205110800,
+                        "compareType": "="
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__144357502\">Monster5024010StartCamera</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              }
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-323885573\">Monster5014030StartCamera</a>",
           "parse": [
             {
               "name": "IF",
