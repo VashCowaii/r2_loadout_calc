@@ -104,6 +104,41 @@ let scaleInfinite = {
     "speedScalar": 1,
     "toughnessScalar": 1
   },
+  "360": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 6.5,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "361": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 6,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "362": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 5.5,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "363": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 5.6,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "364": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 6.5,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
   "398": {
     "attackScalar": 1,
     "defScalar": 1,
