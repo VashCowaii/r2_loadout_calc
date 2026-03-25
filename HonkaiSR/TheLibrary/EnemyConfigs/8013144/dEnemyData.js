@@ -39,13 +39,13 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        2850,
-        2851,
-        2852,
-        2853,
-        2854,
-        2855,
-        2856
+        2941,
+        2942,
+        2943,
+        2944,
+        2945,
+        2946,
+        2947
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"

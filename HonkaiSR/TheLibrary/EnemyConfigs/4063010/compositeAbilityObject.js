@@ -33,6 +33,28 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
         },
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__181"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "addStacksPerTrigger": -1
+            }
+          ]
+        },
+        {
           "name": "Update Displayed Energy Bar",
           "entityClass": "Enemy",
           "trigger": "SpEff_Trigger"
@@ -128,6 +150,27 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
         },
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__181"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+            }
+          ]
+        },
+        {
           "name": "Change Character Transformation",
           "target": {
             "name": "Target Name",
@@ -160,6 +203,28 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__181"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "addStacksPerTrigger": -1
+            }
+          ]
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -481,6 +546,27 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
         },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__181"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+            }
+          ]
+        },
         "Trigger: Ability End"
       ],
       "references": []
@@ -556,6 +642,45 @@ const compositeAbilityObject = {
               "{[Skill03[0]]}"
             ]
           }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__181"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_586) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_586",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_586"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                "displayLines": "{[Skill03[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill03[0]]}"
+                ]
+              }
+            }
+          ]
         },
         "Trigger: Ability End"
       ],
@@ -1361,7 +1486,28 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1769527179\">Enemy_W4_Serpent_Charge_EndBreak</a>"
                 },
-                "Modifier Deletes Itself"
+                "Modifier Deletes Itself",
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                    }
+                  ]
+                }
               ]
             },
             {

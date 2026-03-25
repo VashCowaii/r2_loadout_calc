@@ -41,8 +41,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2489,
-        2490
+        2513,
+        2514
       ],
       "enemyTag": [
         "W2_Beast01_05"

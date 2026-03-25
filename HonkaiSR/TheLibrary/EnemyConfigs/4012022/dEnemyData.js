@@ -41,9 +41,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1654,
-        1655,
-        1656
+        1664,
+        1665,
+        1666
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"

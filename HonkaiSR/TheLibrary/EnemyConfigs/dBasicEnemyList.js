@@ -9246,6 +9246,18 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Harbinger of Death: Swarm Nightmare"
     },
+    "3024033": {
+      "3024033": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "phases": 3,
+      "hasReader": false,
+      "baseName": "Harbinger of Death: Swarm Nightmare (Complete)"
+    },
     "groupName": "Harbinger of Death: Swarm Nightmare"
   },
   "3025010": {
@@ -11319,6 +11331,30 @@ let basicEnemyList = {
           "Fire"
         ]
       },
+      "406201002": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "406201003": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "406201004": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "406201005": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
       "406201006": {
         "weak": [
           "Physical",
@@ -11371,6 +11407,17 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true
+    },
+    "4063011": {
+      "4063011": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Ichor Memosprite: Winged Serpent (Bug)"
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
   },
@@ -11430,6 +11477,17 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true,
+      "baseName": "Ichor Memosprite: Judge of Oblivion"
+    },
+    "4064014": {
+      "4064014": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
       "baseName": "Ichor Memosprite: Judge of Oblivion"
     },
     "groupName": "Ichor Memosprite: Judge of Oblivion"
@@ -11557,6 +11615,20 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
+      "501203115": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203116": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
       "hasReader": true,
       "baseName": "Aggressive Reading Material"
     },
@@ -11660,6 +11732,19 @@ let basicEnemyList = {
     },
     "groupName": "Assistant Graffiti: Demander"
   },
+  "5012090": {
+    "5012090": {
+      "5012090": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "SD Civilian Mechatron"
+  },
   "5012110": {
     "5012110": {
       "5012110": {
@@ -11724,6 +11809,17 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Synwish Syndicate's Underboss, Caustide"
     },
+    "5013012": {
+      "5013012": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Rocking Rebel (Bug)"
+    },
     "groupName": "Rocking Rebel"
   },
   "5013030": {
@@ -11735,7 +11831,108 @@ let basicEnemyList = {
       },
       "hasReader": true
     },
+    "5013031": {
+      "5013031": {},
+      "hasReader": false,
+      "baseName": "Canvas Peacock (Bug)"
+    },
     "groupName": "Canvas Peacock"
+  },
+  "5013040": {
+    "5013040": {
+      "5013040": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "5013041": {
+      "5013041": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Daybreak Squadron: Azurewing"
+    },
+    "groupName": "Daybreak Squadron: Azurewing"
+  },
+  "5013050": {
+    "5013050": {
+      "5013050": {
+        "weak": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "5013051": {
+      "5013051": {
+        "weak": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Daybreak Squadron: Blazeweaver"
+    },
+    "groupName": "Daybreak Squadron: Blazeweaver"
+  },
+  "5013060": {
+    "5013060": {
+      "5013060": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "hasReader": false
+    },
+    "5013061": {
+      "5013061": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Daybreak Squadron: Dawnlance"
+    },
+    "groupName": "Daybreak Squadron: Dawnlance"
+  },
+  "5013070": {
+    "5013070": {
+      "5013070": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "5013071": {
+      "5013071": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Daybreak Squadron: Cinderborne"
+    },
+    "groupName": "Daybreak Squadron: Cinderborne"
   },
   "5014010": {
     "5014010": {
@@ -11775,7 +11972,40 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "@SparxiConOfficial"
     },
+    "5014015": {
+      "5014015": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "phases": 3,
+      "hasReader": false,
+      "baseName": "@SparxiConOfficial (Complete)"
+    },
     "groupName": "@SparxiConOfficial"
+  },
+  "5014020": {
+    "5014020": {
+      "5014020": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "501402001": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "phases": 2,
+      "hasReader": false
+    },
+    "groupName": "Alloy Mechatron: King Pom-Pom"
   },
   "8001010": {
     "8001010": {
@@ -15049,6 +15279,12 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "802201202": {
+        "weak": [
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "hasReader": true,
       "baseName": "Juvenile Sting"
     },
@@ -18111,6 +18347,23 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Output Port 2"
     },
+    "5012120": {
+      "5012120": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "\"Alloy Pommy\""
+    },
+    "5013090": {
+      "5013090": {},
+      "phases": 2,
+      "hasReader": false,
+      "baseName": "Daybreak Squadron"
+    },
     "5014011": {
       "5014011": {
         "weak": [
@@ -18127,6 +18380,20 @@ let basicEnemyList = {
         ]
       },
       "501401102": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401107": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401108": {
         "weak": [
           "Fire",
           "Quantum",

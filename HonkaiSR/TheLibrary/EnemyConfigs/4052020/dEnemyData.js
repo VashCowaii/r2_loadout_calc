@@ -42,10 +42,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2403,
-        2404,
-        2405,
-        2406
+        2413,
+        2414,
+        2415,
+        2416
       ],
       "enemyTag": [
         "SW_Minion01_03"
@@ -75,10 +75,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2403,
-        2404,
-        2405,
-        2406
+        2413,
+        2414,
+        2415,
+        2416
       ],
       "enemyTag": [
         "SW_Minion01_03"

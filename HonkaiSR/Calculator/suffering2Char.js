@@ -455,6 +455,7 @@ const battleActions = {
         const familyCacheRef = battleData.familyCacheRef[buffName] ??= battleActions.getBuffCacheFamilies(buffSheet);
         
         if (familyCacheRef.size) {
+            // superGlobal.createEntityCache()
             // cacheTagValues: {
             //     "UpdateStatDamage": {
             //         //compositeCacheTag will define itself here when used, and the tag will be the key
@@ -828,6 +829,24 @@ const battleActions = {
         }
 
         return skillPath.params[baseLevel];
+    },
+    getCurrentAbilityLevel(battleData,skillPath,currentTurn) {
+        //TODO: later go back through and this and make a way for the param array to be assigned to battle specific values for each battle, so that way we don't need to evaluate eidolon level every fuckin time
+        let atkSlot = skillPath.slot;
+        let baseLevel = battleActions.levelFloors[atkSlot];
+        
+        let name = currentTurn.properName;
+        let rank = currentTurn.rank
+
+        let bonusRef = characters[name].eidlonLevelBonuses;
+        if (rank >= 3) {
+            baseLevel += bonusRef[3][atkSlot] ?? 0;
+        }
+        if (rank >= 5) {
+            baseLevel += bonusRef[5][atkSlot] ?? 0;
+        }
+
+        return baseLevel;
     },
     pullDMGBonus(sourceCache,targetCache,compositeCacheTag,table,tableONHIT,targetStatsSourceBased,targetStatsOnTurn,tags,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
@@ -5411,20 +5430,7 @@ const turnLogic = {
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
                     tagSpecific: {},
-                    cacheTagValues: {
-                        "UpdateStatDamage": {
-                            //compositeCacheTag will define itself here when used, and the tag will be the key
-                        },
-                        "UpdateStatElation": {},
-                        "UpdateStatMerryMake": {},
-                        "UpdateStatDamageReduction": {},
-                        "UpdateStatDEFShred": {},
-                        "UpdateStatPEN": {},
-                        "UpdateStatVulnerable": {},
-                        "UpdateStatCritRate": {},
-                        "UpdateStatCritDamage": {},
-                    },
-
+                    cacheTagValues: superGlobal.createEntityCache(),
                     // buffsObject: {},
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
@@ -16388,27 +16394,39 @@ const turnLogic = {
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
                     const actionTags = ["Basic","Attack"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    // const keyShortcut = basicShorthand.makeKeysArray;
+                    // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    // const realPENKeys = keyShortcut(resPENKeys,tags);
+                    // const realShredKeys = keyShortcut(defShredKeys,tags);
+                    // const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    ATKObjects.sundayBasicATKOBJECT = {
+
+                    const overrideATKData = {
                         multipliers: {
                             primary: values[0],
                             blast: null,
                             all: null,
                         },
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,
-                        compositeCacheTag
+                        // allToughness: false,
+                        // isFUA: false,
                     }
+
+                    ATKObjects.sundayBasicATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot)
+                    // ATKObjects.sundayBasicATKOBJECT = {
+                    //     multipliers: {
+                    //         primary: values[0],
+                    //         blast: null,
+                    //         all: null,
+                    //     },
+                    //     scalar,
+                    //     DMGTags: tags,
+                    //     allToughness: false,
+                    //     slot: skillRef.slot,
+                    //     realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                    //     actionTags,
+                    //     compositeCacheTag
+                    // }
                 }
                 let ATKObject = ATKObjects.sundayBasicATKOBJECT;
 
@@ -16983,7 +17001,7 @@ const turnLogic = {
                         "buffName": turnLogic[ownerTurn.properName].buffNames.technique,
                         "durationInTurn": 3,
                         "duration": 2,
-                        "AVApplied": battleData.sumAV,
+                        "AVApplied": 0,
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
@@ -17852,27 +17870,39 @@ const turnLogic = {
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
                     const actionTags = ["Basic","Attack"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    // const keyShortcut = basicShorthand.makeKeysArray;
+                    // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    // const realPENKeys = keyShortcut(resPENKeys,tags);
+                    // const realShredKeys = keyShortcut(defShredKeys,tags);
+                    // const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    ATKObjects.robinBasicATKOBJECT = {
+
+                    const overrideATKData = {
                         multipliers: {
                             primary: values[0],
                             blast: null,
                             all: null,
                         },
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,
-                        compositeCacheTag
+                        // allToughness: false,
+                        // isFUA: false,
                     }
+
+                    ATKObjects.robinBasicATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot)
+                    // ATKObjects.robinBasicATKOBJECT = {
+                    //     multipliers: {
+                    //         primary: values[0],
+                    //         blast: null,
+                    //         all: null,
+                    //     },
+                    //     scalar,
+                    //     DMGTags: tags,
+                    //     allToughness: false,
+                    //     slot: skillRef.slot,
+                    //     realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                    //     actionTags,
+                    //     compositeCacheTag
+                    // }
                 }
                 let ATKObject = ATKObjects.robinBasicATKOBJECT;
 
@@ -18151,31 +18181,48 @@ const turnLogic = {
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
                     const actionTags = ["Additional"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    // const keyShortcut = basicShorthand.makeKeysArray;
+                    // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    // const realPENKeys = keyShortcut(resPENKeys,tags);
+                    // const realShredKeys = keyShortcut(defShredKeys,tags);
+                    // const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    ATKObjects.ultAddedDMG = {
+
+
+                    const overrideATKData = {
                         multipliers: {
                             primary: null,
                             blast: null,
                             all: null,
                             additional: values[3]
                         },
-                        scalar,
                         element: "Physical",//override for additional dmg, not used otherwise
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,
                         fixedCritRate: 1,
                         fixedCritDMG: 1.5,
-                        compositeCacheTag
+                        // allToughness: false,
+                        // isFUA: false,
                     }
+
+                    ATKObjects.ultAddedDMG = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot)
+                    // ATKObjects.ultAddedDMG = {
+                    //     multipliers: {
+                    //         primary: null,
+                    //         blast: null,
+                    //         all: null,
+                    //         additional: values[3]
+                    //     },
+                    //     scalar,
+                    //     element: "Physical",//override for additional dmg, not used otherwise
+                    //     DMGTags: tags,
+                    //     allToughness: false,
+                    //     slot: skillRef.slot,
+                    //     realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                    //     actionTags,
+                    //     fixedCritRate: 1,
+                    //     fixedCritDMG: 1.5,
+                    //     compositeCacheTag
+                    // }
                 }
                 let ATKObject = ATKObjects.ultAddedDMG;
                 // (rank>=6 ? 4.5 : 0)
@@ -24376,19 +24423,7 @@ const turnLogic = {
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
-                        cacheTagValues: {
-                            "UpdateStatDamage": {
-                                //compositeCacheTag will define itself here when used, and the tag will be the key
-                            },
-                            "UpdateStatElation": {},
-                            "UpdateStatMerryMake": {},
-                            "UpdateStatDamageReduction": {},
-                            "UpdateStatDEFShred": {},
-                            "UpdateStatPEN": {},
-                            "UpdateStatVulnerable": {},
-                            "UpdateStatCritRate": {},
-                            "UpdateStatCritDamage": {},
-                        },
+                        cacheTagValues: superGlobal.createEntityCache(),
                         isDead: false,
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
@@ -24779,6 +24814,9 @@ const turnLogic = {
             return actionChosen;
         },
         preLogic(thisTurn,battleData) {
+            //TODO: within prelogic we can probably do the same shit we just set up on aggy EBA, but for everything, and then potentially bind some pathing to the returnAbilityCall objects and pass that through on actual
+            //turn logic call, and if we do it properly we can probably trim out ATKObjects calls from within ability calls, idk about LogicRef though that might need to stay at a minimum
+            //and that would probably cut down on property access by a fuckload across the board, it'd just suck to make that change.
             this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
@@ -24819,31 +24857,43 @@ const turnLogic = {
                     let values = ATKObjects.aggyBasicRegREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Lightning"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    // const keyShortcut = basicShorthand.makeKeysArray;
+                    // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    // const realPENKeys = keyShortcut(resPENKeys,tags);
+                    // const realShredKeys = keyShortcut(defShredKeys,tags);
+                    // const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     const actionTags = ["Basic","Attack"];
-                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
-                    ATKObjects.aggyBasicRegATKOBJECT = {
+                    const overrideATKData = {
                         multipliers: {
                             primary: values[0],
                             blast: null,
                             all: null,
                         },
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,
-                        isFUA: false,
-                        compositeCacheTag
+                        // allToughness: false,
+                        // isFUA: false,
                     }
+
+                    ATKObjects.aggyBasicRegATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot)
+
+                    // ATKObjects.aggyBasicRegATKOBJECT = {
+                    //     multipliers: {
+                    //         primary: values[0],
+                    //         blast: null,
+                    //         all: null,
+                    //     },
+                    //     scalar,
+                    //     DMGTags: tags,
+                    //     allToughness: false,
+                    //     slot: skillRef.slot,
+                    //     realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                    //     actionTags,
+                    //     isFUA: false,
+                    //     compositeCacheTag
+                    // }
                 }
                 let ATKObject = ATKObjects.aggyBasicRegATKOBJECT;
 
@@ -24899,6 +24949,64 @@ const turnLogic = {
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 poke("SkillEnd",battleData,{sourceTurn});
             },
+            aggyGenerateEBAObjects(battleData,skillRef,sourceTurn) {
+                // let skillRef = ATKObjects.aggyBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant1;
+                skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+
+                const hitsRef = skillRef.hitSplits;
+                const hitsLength = hitsRef.length;
+                hitsRef[hitsLength-1].isSourceLastHit = true;
+                hitsRef[hitsLength-2].isSourceLastHit = true;
+
+                // let values = ATKObjects.aggyBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const generalObject = {};
+
+                const scalar = "ATK";
+                const tags = ["All","Basic","Lightning"];
+                
+                const actionTags = ["Basic","Attack","Joint"];
+                const actionTags2 = ["Basic","Attack","Joint","Summon","Memosprite"];
+
+                const allParams = skillRef.params;
+
+                for (let levelKey in allParams) {
+                    const currentKey = +levelKey;
+                    if (currentKey < 6) {continue;}
+
+                    const currentPlacement = generalObject[currentKey] ??= {
+                        1: null,
+                        2: null,
+                    }
+
+                    const currentParams = allParams[levelKey];
+
+                    const overrideATKData = {
+                        multipliers: {
+                            primary: currentParams[0],
+                            blast: currentParams[1],
+                            all: null,
+                        },
+                        // allToughness: false,
+                        // isFUA: false,
+                    }
+                    currentPlacement[1] = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot);
+
+                    const overrideATKData2 = {
+                        multipliers: {
+                            primary: currentParams[2],
+                            blast: currentParams[3],
+                            all: null,
+                        },
+                        // allToughness: false,
+                        // isFUA: false,
+                    }
+                    currentPlacement[2] = superGlobal.createStandardAttackObject(scalar,tags,actionTags2,sourceTurn,overrideATKData2,skillRef.slot);
+                    // generalObject[currentKey] = null;
+                }
+
+                return generalObject
+            },
             aggyBasicEnhanced(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -24906,69 +25014,25 @@ const turnLogic = {
                 let skillRef = ATKObjects.aggyBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant1;
 
                 if (!ATKObjects.aggyBasicEnhancedATKOBJECT) {
-                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
-                    let values = ATKObjects.aggyBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                    const scalar = "ATK";
-                    const tags = ["All","Basic","Lightning"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    
-                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    // console.log(values[0])
-                    const actionTags = ["Basic","Attack","Joint"];
-                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    const currentAbilityLevel = ATKObjects.aggyBasicEnhancedREFLEVEL ??= battleActions.getCurrentAbilityLevel(battleData,skillRef,sourceTurn);
+                    const generalATKObjects = logicRef.generalATKObjects ??= logicRef.skillFunctions.aggyGenerateEBAObjects(battleData,skillRef,sourceTurn);
 
-                    const actionTags2 = ["Basic","Attack","Joint","Summon","Memosprite"];
-                    const compositeCacheTag2 = tags + actionTags + sourceTurn.properName;
-                    ATKObjects.aggyBasicEnhancedATKOBJECT = {
-                        multipliers: {
-                            primary: values[0],
-                            blast: values[1],
-                            all: null,
-                        },
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        isFUA: false,
-                        actionTags,
-                        compositeCacheTag
-                    }
-                    ATKObjects.aggyBasicEnhancedGarmentATKOBJECT = {
-                        multipliers: {
-                            primary: values[2],
-                            blast: values[3],
-                            all: null,
-                        },
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        isFUA: false,
-                        actionTags: actionTags2,
-                        compositeCacheTag: compositeCacheTag2
-                        //yes, garmentmaker DOES inherit basic atk dmg on the joint attack, but ONLY the joint attack, jesus christ this game
-                    }
-
-                    const hitsRef = skillRef.hitSplits;
-                    hitsRef[hitsRef.length-1].isSourceLastHit = true;
-                    hitsRef[hitsRef.length-2].isSourceLastHit = true;
+                    const currentATKObjects = generalATKObjects[currentAbilityLevel];
+                    ATKObjects.aggyBasicEnhancedATKOBJECT = currentATKObjects[1];
+                    ATKObjects.aggyBasicEnhancedGarmentATKOBJECT = currentATKObjects[2];
                 }
                 let ATKObject = ATKObjects.aggyBasicEnhancedATKOBJECT;
                 let ATKObject2 = ATKObjects.aggyBasicEnhancedGarmentATKOBJECT;
                 const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
-                poke("BasicATKStart",battleData,{sourceTurn});
+                
+                const sourceTurnRef = {sourceTurn};
+                poke("BasicATKStart",battleData,sourceTurnRef);
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,garmentTurn,ATKObject,ATKObject2);
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                poke("BasicATKEnd",battleData,{sourceTurn});
+                poke("BasicATKEnd",battleData,sourceTurnRef);
             },
             addGarmentToField(battleData,sourceTurn) {
                 const garmentTurnObject = sourceTurn.aggyGarmentTURNEVENT;
@@ -25017,33 +25081,19 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[aggyTurn.properName].memoSkill;
                     let values = ATKObjects.garmentTurnAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,aggyTurn);
                     const scalar = "ATK";
-                    // const tags = ["All","Basic","Lightning"];
                     const tags = ["All","Lightning"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    // console.log(values[0])
-                    // const actionTags = ["Basic","Attack"];
                     const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
-                    const compositeCacheTag = tags + actionTags + aggyTurn.properName;
-                    ATKObjects.garmentTurnAttackATKOBJECT = {
+
+                    const overrideATKData = {
                         multipliers: {
                             primary: values[0],
                             blast: values[1],
                             all: null,
                         },
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,
-                        compositeCacheTag,
-                        isFUA: false,
+                        // allToughness: false,
+                        // isFUA: false,
                     }
+                    ATKObjects.garmentTurnAttackATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,aggyTurn,overrideATKData,skillRef.slot)
                 }
                 let ATKObject = ATKObjects.garmentTurnAttackATKOBJECT;
 
@@ -25685,19 +25735,7 @@ const turnLogic = {
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
-                        cacheTagValues: {
-                            "UpdateStatDamage": {
-                                //compositeCacheTag will define itself here when used, and the tag will be the key
-                            },
-                            "UpdateStatElation": {},
-                            "UpdateStatMerryMake": {},
-                            "UpdateStatDamageReduction": {},
-                            "UpdateStatDEFShred": {},
-                            "UpdateStatPEN": {},
-                            "UpdateStatVulnerable": {},
-                            "UpdateStatCritRate": {},
-                            "UpdateStatCritDamage": {},
-                        },
+                        cacheTagValues: superGlobal.createEntityCache(),
                         isDead: false,
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
@@ -26998,19 +27036,7 @@ const turnLogic = {
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
-                        cacheTagValues: {
-                            "UpdateStatDamage": {
-                                //compositeCacheTag will define itself here when used, and the tag will be the key
-                            },
-                            "UpdateStatElation": {},
-                            "UpdateStatMerryMake": {},
-                            "UpdateStatDamageReduction": {},
-                            "UpdateStatDEFShred": {},
-                            "UpdateStatPEN": {},
-                            "UpdateStatVulnerable": {},
-                            "UpdateStatCritRate": {},
-                            "UpdateStatCritDamage": {},
-                        },
+                        cacheTagValues: superGlobal.createEntityCache(),
                         isDead: false,
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
@@ -27549,28 +27575,40 @@ const turnLogic = {
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
                     const actionTags = ["Basic","Attack"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const logicRef = turnLogic[sourceTurn.properName];
-                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    // const keyShortcut = basicShorthand.makeKeysArray;
+                    // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    // const realPENKeys = keyShortcut(resPENKeys,tags);
+                    // const realShredKeys = keyShortcut(defShredKeys,tags);
+                    // const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    // const logicRef = turnLogic[sourceTurn.properName];
+                    // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    ATKObjects.dhptBasicATKOBJECT = {
+
+                    const overrideATKData = {
                         multipliers: {
                             primary: values[0],
                             blast: null,
                             all: null,
                         },
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,
-                        compositeCacheTag
+                        // allToughness: false,
+                        // isFUA: false,
                     }
+
+                    ATKObjects.dhptBasicATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot)
+                    // ATKObjects.dhptBasicATKOBJECT = {
+                    //     multipliers: {
+                    //         primary: values[0],
+                    //         blast: null,
+                    //         all: null,
+                    //     },
+                    //     scalar,
+                    //     DMGTags: tags,
+                    //     allToughness: false,
+                    //     slot: skillRef.slot,
+                    //     realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                    //     actionTags,
+                    //     compositeCacheTag
+                    // }
                 }
                 let ATKObject = ATKObjects.dhptBasicATKOBJECT;
 
@@ -27951,43 +27989,59 @@ const turnLogic = {
                         // if (skillRef.hitSplits.length > 4) {skillRef.hitSplits.length = 4;}
                         const scalar = "ATK";
                         const tags = ["All","FUA","Physical"];
-                        const keyShortcut = basicShorthand.makeKeysArray;
-                        const realDMGKeys = keyShortcut(dmgKeys,tags);
-                        const realPENKeys = keyShortcut(resPENKeys,tags);
-                        const realShredKeys = keyShortcut(defShredKeys,tags);
-                        const realVulnKeys = keyShortcut(vulnKeys,tags);
+                        // const keyShortcut = basicShorthand.makeKeysArray;
+                        // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                        // const realPENKeys = keyShortcut(resPENKeys,tags);
+                        // const realShredKeys = keyShortcut(defShredKeys,tags);
+                        // const realVulnKeys = keyShortcut(vulnKeys,tags);
                         //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                         // console.log(values[0])
                         const actionTags = ["Souldragon","FUA","Attack","Summon"];
-                        const compositeCacheTag = tags + actionTags + eventTurn.properName;
-                        ATKObjects.dhptSouldragonAutoATKOBJECT = {
+                        // const compositeCacheTag = tags + actionTags + eventTurn.properName;
+
+
+                        const overrideATKData = {
                             multipliers: {
                                 primary: null,
                                 blast: null,
                                 all: valuesUlt[1],
                             },
-                            scalar,
-                            DMGTags: tags,
-                            allToughness: false,
-                            slot: skillRef.slot,
-                            realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                            actionTags,
+                            // allToughness: false,
                             isFUA: true,
                             isSummon: true,
-                            compositeCacheTag,
-                            // bonusMultiplier: 0,
                         }
+    
+                        ATKObjects.dhptSouldragonAutoATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot)
+                        // ATKObjects.dhptSouldragonAutoATKOBJECT = {
+                        //     multipliers: {
+                        //         primary: null,
+                        //         blast: null,
+                        //         all: valuesUlt[1],
+                        //     },
+                        //     scalar,
+                        //     DMGTags: tags,
+                        //     allToughness: false,
+                        //     slot: skillRef.slot,
+                        //     realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        //     actionTags,
+                        //     isFUA: true,
+                        //     isSummon: true,
+                        //     compositeCacheTag,
+                        //     // bonusMultiplier: 0,
+                        // }
                     }
                     let ATKObject = ATKObjects.dhptSouldragonAutoATKOBJECT;
     
                     // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "FUAStart", name:eventTurn.properName, target: "enemy", AV: battleData.sumAV, fuaName: "souldragonTurnAttack", isEnhanced:true, eventOverrideImage: eventTurn.eventImage});}
                     // poke("BasicATKStart",battleData,{sourceTurn});
-                    poke("FUAStart",battleData,{sourceTurn});
+
+                    const sourceTurnRef = {sourceTurn};
+                    poke("FUAStart",battleData,sourceTurnRef);
                     battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                     // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                     
-                    poke("FUAEnd",battleData,{sourceTurn});
+                    poke("FUAEnd",battleData,sourceTurnRef);
                     // poke("BasicATKEnd",battleData,{sourceTurn});
                 }
             },
@@ -28117,6 +28171,21 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     // const compositeCacheTag = tags + actionTags;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+
+
+                    // const overrideATKData = {
+                    //     multipliers: {
+                    //         primary: values[0],
+                    //         blast: null,
+                    //         all: null,
+                    //     },
+                    //     // allToughness: false,
+                    //     // isFUA: false,
+                    // }
+
+                    // ATKObjects.dhptBasicATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot)
+
+
                     ATKObjects.bondmateAddedDMGATKOBJECT = {
                         multipliers: {
                             primary: null,

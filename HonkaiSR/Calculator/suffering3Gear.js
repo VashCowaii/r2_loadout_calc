@@ -3984,6 +3984,241 @@ const turnLogicLightcones = {
             "dotDMG": "Eyes of the Prey (LC)",
         },
     },
+    "Fermata": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart", 
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcFermataDMGSHEET) {
+                        let lcNameRef = "Fermata";
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgBuff;
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcFermataDMGSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcFermataDMGSHEET;
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetDOTSCheck = targetTurn.dots;
+                    const hasValidDot = targetDOTSCheck.Wind || targetDOTSCheck.Lightning;
+
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                    if (buffCheck) {
+                        if (hasValidDot) {return;}
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+                    else {
+                        if (!hasValidDot) {return;}
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Fermata - dmg dealt listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "dmgBuff": "Fermata (LC)"
+        },
+    },
+    "Good Night and Sleep Well": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AllyDMGStart", 
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    // const targetsGotHit = generalInfo.targetsGotHit;
+                    const targetTurn = generalInfo.targetTurn;
+                    const currentDebuffs = Math.min(targetTurn.debuffCounter,3);
+                    
+                    if (!sourceTurn.lcGoodNightSleepWellSTACKSHEET) {
+                        let lcNameRef = "Good Night and Sleep Well";
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcGoodNightSleepWellSTACKSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 3,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcGoodNightSleepWellSTACKSHEET;
+                    
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                    const updateBuff = battleActions.updateBuff;
+
+                    if (buffCheck) {
+                        const currentStacks = buffCheck.currentStacks;
+
+                        if (currentStacks === currentDebuffs) {return;}
+                        else if (currentStacks < currentDebuffs) {
+                            const stackDiff = currentDebuffs - currentStacks;
+                            buffSheet.currentStacks = stackDiff;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                            return;
+                        }
+                        else {
+                            removeBuff(battleData,sourceTurn,buffSheet,currentDebuffs,null,false,currentDebuffs);
+                            //only do silent removal and ignore pokes if we don't have any active debuffs on the target
+                        }
+                    }
+
+                    if (currentDebuffs) {
+                        buffSheet.currentStacks = currentDebuffs;
+                        updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Good Night and Sleep Well - dmg start debuff checker",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "dmgStack": "Good Night and Sleep Well (LC)"
+        },
+    },
+    "Holiday Thermae Escapade": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "AttackDMGEnd", 
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    const targetsGotHit = generalInfo.targetsGotHit;
+                    
+                    if (!sourceTurn.lcHolidayThermaeVULNSHEET) {
+                        let lcNameRef = "Holiday Thermae Escapade";
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.vuln;
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcHolidayThermaeVULNSHEET = {
+                            "stats": [VulnAll],
+                            [VulnAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "isDebuff": true,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcHolidayThermaeVULNSHEET;
+                    const updateBuff = battleActions.updateBuff;
+
+                    const enemyTurns = battleData.enemyBasedTurns;
+
+                    for (let enemySlot in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemySlot];
+                        if (currentEnemy.isDead) {continue;}
+
+                        updateBuff(battleData,currentEnemy,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Holiday Thermae Escapade - attack dmg end listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "vuln": "Holiday Thermae Escapade (LC)"
+        },
+    },
+        //3star
+    "Void": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Void";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    const updateBuff = battleActions.updateBuff;
+                    
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let ownerName = currentTurn.properName;
+
+                        const buffSheet = currentTurn.lcVoidEHRSHEET ??= {
+                            "stats": [EffectHitRate],
+                            [EffectHitRate]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                            "durationInTurn": 4,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                        
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Void - battlestart EHR application",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "buff1": "Void (LC)",
+        },
+    },
 
     //DESTRUCTION
         //5star
@@ -4931,7 +5166,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Thus Burns the Dawn - battlestart shred application",
+                "listenerName": "Collapsing Sky - battlestart dmg application",
                 "owners": [],
             },
         ],

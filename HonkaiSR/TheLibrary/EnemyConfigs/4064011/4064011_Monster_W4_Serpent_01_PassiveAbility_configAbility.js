@@ -110,15 +110,31 @@ const configAbility = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Enemy ID",
-            "ID": 4064013,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Ichor Memosprite: Judge of Oblivion",
-            "isBaseCompare": true,
-            "invertCondition": true
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 4064013,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Ichor Memosprite: Judge of Oblivion",
+                "isBaseCompare": true,
+                "invertCondition": true
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 4064014,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Ichor Memosprite: Judge of Oblivion",
+                "isBaseCompare": true,
+                "invertCondition": true
+              }
+            ]
           },
           "passed": [
             {

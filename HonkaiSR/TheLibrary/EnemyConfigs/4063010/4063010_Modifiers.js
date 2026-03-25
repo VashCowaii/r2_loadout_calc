@@ -541,7 +541,28 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1769527179\">Enemy_W4_Serpent_Charge_EndBreak</a>"
             },
-            "Modifier Deletes Itself"
+            "Modifier Deletes Itself",
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__181"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                }
+              ]
+            }
           ]
         },
         {

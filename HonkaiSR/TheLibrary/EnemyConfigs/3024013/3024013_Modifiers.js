@@ -976,7 +976,7 @@ const configAbility = {
                   "abilityName": "Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Insert",
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Parameter Target's Source Owner}}"
+                    "target": "{{Player Team All}}"
                   },
                   "priorityTag": "MonsterBuffOthers_Elation",
                   "ownerState": "Mask_AliveOrLimbo",

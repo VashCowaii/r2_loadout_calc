@@ -147,7 +147,8 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Swarm: True Sting (Complete)"
+            "characterName": "Swarm: True Sting (Complete)",
+            "isBaseCompare": true
           },
           {
             "name": "Enemy ID",
@@ -156,7 +157,8 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Swarm: True Sting (Complete)"
+            "characterName": "Swarm: True Sting (Complete)",
+            "isBaseCompare": true
           }
         ]
       },

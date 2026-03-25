@@ -1255,7 +1255,9 @@ const compositeAbilityObject = {
                 "AOE Toughness Value"
               ]
             },
-            "Tags": null,
+            "Tags": [
+              "Joint-Attack"
+            ],
             "EnergyGainPercent": "100%"
           }
         },
@@ -2980,7 +2982,9 @@ const compositeAbilityObject = {
                 "Skill11_Stance"
               ]
             },
-            "Tags": null,
+            "Tags": [
+              "Joint-Attack"
+            ],
             "attackType": "Basic ATK",
             "EnergyGainPercent": "100%"
           },

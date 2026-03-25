@@ -42,8 +42,8 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2061,
-        2062
+        2071,
+        2072
       ]
     },
     "403201001": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2061,
-        2062
+        2071,
+        2072
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -101,11 +101,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2061,
-        2062
+        2071,
+        2072
       ],
       "overrideParams": {
-        "2061": [
+        "2071": [
           [
             3.5,
             2.4

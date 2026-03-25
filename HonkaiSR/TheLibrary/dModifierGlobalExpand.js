@@ -19801,6 +19801,86 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "RogueBonusModifier_AntiHalo_S7",
+    "realName": "Reverse Critical Boost",
+    "aim": "Debuff",
+    "desc": "Before an enemy target is attacked, for each stack of \"Reverse Critical Boost\" they possess, they take Wind Additional DMG equal to #1[i]% of the attacker's ATK after being hit. At the start of the enemy target's turn, \"Reverse Critical Boost\" stacks are cleared. Up to a maximum of #2[i] stacks can be held at any time.",
+    "type": "Reverse Critical Boost",
+    "perma": false,
+    "params": [
+      "AntiHalo_AttackPercentage",
+      "AntiHalo_MaxLayer"
+    ]
+  },
+  {
+    "name": "StageAbility_617432_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617442_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[f1]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "StageAbility_617443_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617444_Modifier_Effect",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": false,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617454_Modifier_Effect",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "Increases ATK by #1[i]%, stacking up to #2[i] time(s).",
+    "type": "ATK Boost",
+    "perma": false,
+    "params": [
+      "ADF_1",
+      "ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617457_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "Increases SPD by #1[i]%. Can stack up to #2[i] time(s).",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "ADF_1",
+      "ADF_2"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>",
     "realName": "Unending Refinement",
     "aim": "Other",
@@ -19871,6 +19951,107 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "Modifier_StageAbility_617910_Resonance_S7_Enemy",
+    "realName": "Harmonize",
+    "aim": "Debuff",
+    "desc": "When entering or dispelling the Weakness Broken state, deals Break DMG equal to #1[i]% of base DMG per stack of \"Harmonize,\" up to a max of #2[i] stacks. All \"Harmonize\" stacks are removed when the Weakness Broken state is dispelled.",
+    "type": "Harmonize",
+    "perma": false,
+    "params": [
+      "StageAbility_617910_BreakDamageRatio",
+      "MDF_MaxLayer"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_617953_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_617954_Effect",
+    "realName": "Break Effect Boost",
+    "aim": "Buff",
+    "desc": "Break Effect increases by #1[i]%.",
+    "type": "Break Effect Boost",
+    "perma": true,
+    "params": [
+      "ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_617956_Enemy_Effect",
+    "realName": "DEF Reduction",
+    "aim": "Debuff",
+    "desc": "DEF decreases by #1[i]%.",
+    "type": "DEF Reduction",
+    "perma": true,
+    "params": [
+      "ADF_1"
+    ]
+  },
+  {
+    "name": "RogueBonusModifier_RuinBlood_S7",
+    "realName": "Blazar",
+    "aim": "Buff",
+    "desc": "Current Charge is #1[i].",
+    "type": "Blazar",
+    "perma": true,
+    "params": [
+      "_BloodValue"
+    ]
+  },
+  {
+    "name": "StageAbility_617546_Modifier_Sub2",
+    "realName": "DMG Mitigation",
+    "aim": "Buff",
+    "desc": "Decreases DMG taken by #1[i]% and increases HP restored by #2[i]%.",
+    "type": "DMG Reduction",
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617540_Modifier_Sub2",
+    "realName": "Compact Blaze",
+    "aim": "Buff",
+    "desc": "DMG multiplier of \"Blazar\" increases by #1[i]% of the original multiplier.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DamageIncreaseTotal"
+    ]
+  },
+  {
+    "name": "StageAbility_617555_Modifier_Effect",
+    "realName": "Max HP Boost",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": "Max HP Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617556_Modifier_Effect",
+    "realName": "Effect RES Boost",
+    "aim": "Buff",
+    "desc": "Effect RES increases by #1[i]%.",
+    "type": "Effect RES Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
     "name": "StageAbility_633229_Modifier_Effect",
     "realName": "Encouragement for You",
     "aim": "Buff",
@@ -19879,6 +20060,19 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "Remain_Count"
+    ]
+  },
+  {
+    "name": "StageAbility_676170_Modifier_Enemy",
+    "realName": "Encocoon",
+    "aim": "Other",
+    "desc": "Accumulates #1[i] DMG taken from \"Butterfly Soul.\" After taking #3[i] hits/when the target is defeated/when exiting \"Butterfly Soul,\" deals DMG equal to #2[i]% of the accumulated value to all enemy targets and clears the recorded value.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "SumBreedingDamage",
+      "ADF_1",
+      "ADF_2"
     ]
   },
   {
@@ -19901,6 +20095,41 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_SpeedAddedRatio"
+    ]
+  },
+  {
+    "name": "StageAbility_676920_Modifier_Resonance_S7_WindThunderPhysical",
+    "realName": "Stormheave",
+    "aim": "Debuff",
+    "desc": "\"Harmonize\" gains an additional effect: After an enemy target is attacked when Weakness Broken, all DoT debuffs currently applied to the enemy will immediately produce DMG equal to #1[i]% of the original DMG.",
+    "type": "Harmonize Additional Effect",
+    "perma": false,
+    "params": [
+      "ExtraDOTDamage_676920"
+    ]
+  },
+  {
+    "name": "StageAbility_676920_Modifier_Resonance_S7_Fire",
+    "realName": "Moltflare",
+    "aim": "Debuff",
+    "desc": "\"Harmonize\" gains an additional effect: Super Break DMG dealt to enemy targets in the Weakness Broken state increases by #1[i]%.",
+    "type": "Harmonize Additional Effect",
+    "perma": false,
+    "params": [
+      "ExtraSuperBreakDamage_676920"
+    ]
+  },
+  {
+    "name": "StageAbility_676920_Modifier_Resonance_S7_QuantumImaginaryIce",
+    "realName": "Intimidation",
+    "aim": "Debuff",
+    "desc": "\"Harmonize\" gains an additional effect: After an enemy target is attacked when Weakness Broken, triggers #2[i] instances of \"Harmonize\" DMG in a #1[i]% ratio.",
+    "type": "Harmonize Additional Effect",
+    "perma": false,
+    "params": [
+      "ADF_1",
+      "ADF_2",
+      "ExtraDelay_676920"
     ]
   },
   {
@@ -20028,6 +20257,17 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "StageAbility_617000_Modifier_Effect",
+    "realName": "Highlight",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DamageUp_Value"
+    ]
+  },
+  {
     "name": "MBattleEvent_GridFight_Argenti_Passive_Charge",
     "realName": "Apotheosis",
     "aim": "Buff",
@@ -20049,6 +20289,17 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_617000_20_Modifier_Effect",
+    "realName": "Highlight",
+    "aim": "Buff",
+    "desc": "After attacking, each stack deals True DMG equal to #1[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Spotlight_ExtraTrueDamage_Value"
     ]
   },
   {
@@ -20184,6 +20435,85 @@ let modifiersGlobal = [
     "params": [
       "#SkillEquip_P2_ElationDamageAddedRatio",
       "#SkillEquip_P3_MaxLayer"
+    ]
+  },
+  {
+    "name": "StageAbility_617631_Modifier_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "CriticalDamageUp"
+    ]
+  },
+  {
+    "name": "StageAbility_617632_Modifier_Effect",
+    "realName": "DMG Mitigation",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": "DMG Reduction",
+    "perma": true,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617641_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "Each stack increases DMG taken by #1[i]%, lasting until the start of \"Dealer's\" next action.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617644_Modifier_Effect",
+    "realName": "Weaken",
+    "aim": "Debuff",
+    "desc": "Each stack decreases DMG dealt by #1[i]%, up to #2[i] stacks.",
+    "type": "Weaken",
+    "perma": false,
+    "params": [
+      "#ADF_1",
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617645_Modifier_Effect",
+    "realName": "Ignore Defense",
+    "aim": "Buff",
+    "desc": "DMG dealt ignores #1[i]% of the enemy target's DEF. If this is Elation DMG, ignores an additional #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617643_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_676470_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "While in the \"Butterfly Soul\" state, DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
     ]
   },
   {
@@ -20518,6 +20848,221 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "RogueBonusModifier_Enhance_S7",
+    "realName": "Obsession",
+    "aim": "Buff",
+    "desc": "When the current team's total stacks are at #1[i], increases ATK by #2[f1]% and increases Max HP by #3[f1]%. Every target can stack up to #4[i] stacks, and loses #5[i] stack(s) at the end of the turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "EnhanceSum",
+      "AttackValue",
+      "HPValue",
+      "_MaxLayer",
+      "_LoseLayer"
+    ]
+  },
+  {
+    "name": "StageAbility_617145_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "Each stack increases DMG taken by #1[i]%. Stacks will be cleared at the end of the turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617146_Modifier_Effect",
+    "realName": "Weaken",
+    "aim": "Debuff",
+    "desc": "Each stack reduces DMG dealt by #1[i]%. Stacks will be cleared at the end of the turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617156_Modifier_Effect",
+    "realName": "CRIT Rate Boost",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617157_Modifier_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "RogueBonusModifier_Curse_S7",
+    "realName": "Murmur",
+    "aim": "Debuff",
+    "desc": "Takes Wind DoT equal to Charge value at the start of the turn. Current Charge is #1[i], currently at #2[i]% of the clear threshold.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "RecordValue",
+      "RecordPercent"
+    ]
+  },
+  {
+    "name": "StageAbility_617246_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "Each stack increases DMG taken by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617254_Modifier_Effect",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617255_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "Increases DMG taken by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617256_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "MLevel_Rogue_Breeding_Cocoon_S7",
+    "realName": "Soul Chrysalis",
+    "aim": "Other",
+    "desc": "Current Charge is #1[i]%. When Charge reaches #2[i]%, this effect is converted to \"Butterfly Soul.\"",
+    "type": "Soul Chrysalis",
+    "perma": true,
+    "params": [
+      "_CocoonEnergy2",
+      "_MaxLayer"
+    ]
+  },
+  {
+    "name": "MLevel_Rogue_Breeding_Butterfly_S7",
+    "realName": "Butterfly Soul",
+    "aim": "Other",
+    "desc": "Attacking with Basic ATK/Skill will deal additional True DMG. This can take effect #1[i] time(s).",
+    "type": "Butterfly Soul",
+    "perma": true,
+    "params": [
+      "MDF_CurrentLayer"
+    ]
+  },
+  {
+    "name": "StageAbility_617732_Modifier_Sub2",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Total"
+    ]
+  },
+  {
+    "name": "StageAbility_617840_Modifier_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617842_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_AllDamageTypeAddedRatio"
+    ]
+  },
+  {
+    "name": "StageAbility_617844_Modifier_Effect",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617854_Modifier_Effect",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617855_Modifier_Effect",
+    "realName": "Max HP Boost",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_617831_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
     "name": "StageAbility_673890_Damage_Modifier",
     "realName": "Selfless Giant Turtle",
     "aim": "Debuff",
@@ -20529,6 +21074,156 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "MStageAbility_676940_WeakType_Fire",
+    "realName": "Additional Fire Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Fire Weakness.",
+    "type": "Implant Fire Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_676940_WeakType_Ice",
+    "realName": "Additional Ice Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Ice Weakness.",
+    "type": "Implant Ice Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_676940_WeakType_Wind",
+    "realName": "Additional Wind Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Wind Weakness.",
+    "type": "Implant Wind Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_676940_WeakType_Physical",
+    "realName": "Additional Physical Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Physical Weakness.",
+    "type": "Implant Physical Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_676940_WeakType_Thunder",
+    "realName": "Additional Lightning Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Lightning Weakness.",
+    "type": "Implant Lightning Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_676940_WeakType_Quantum",
+    "realName": "Additional Quantum Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Quantum Weakness.",
+    "type": "Implant Quantum Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_676940_WeakType_Imaginary",
+    "realName": "Additional Imaginary Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Imaginary Weakness.",
+    "type": "Implant Imaginary Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_676940_Modifier_Enemy",
+    "realName": "Weakness Record",
+    "aim": "Other",
+    "desc": "Weakness Record: Physical #1[i] time(s), Fire #2[i] time(s), Ice #3[i] time(s), Lightning #4[i] time(s), Wind #5[i] time(s), Quantum #6[i] time(s), Imaginary #7[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ExtraPhysicalCount",
+      "ExtraFireCount",
+      "ExtraIceCount",
+      "ExtraThunderCount",
+      "ExtraWindCount",
+      "ExtraQuantumCount",
+      "ExtraImaginaryCount"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_676280_Character",
+    "realName": "Soul Returner",
+    "aim": "Other",
+    "desc": "Still need to use Ultimate #1[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Layer"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_676280_Enemy",
+    "realName": "Soul Returner",
+    "aim": "Debuff",
+    "desc": "When \"Murmur\" DMG is triggered, deals DMG equal to #1[i]% of \"Murmur\" original DMG to adjacent enemy targets. DMG dealt increases by \"Murmur\" by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_2",
+      "UltraBoost"
+    ]
+  },
+  {
+    "name": "StageAbility_676890_Damage_Modifier",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_6"
+    ]
+  },
+  {
+    "name": "StageAbility_676720_Modifier_Effect",
+    "realName": "Serpent Slithering",
+    "aim": "Debuff",
+    "desc": "While in the \"Butterfly Soul\" state, DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DamageTaken_Up"
+    ]
+  },
+  {
+    "name": "StageAbility_617610_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "Increases SPD by #1[i].",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "SpeedUp_Desc"
+    ]
+  },
+  {
     "name": "MGridFight_Origin_1003_Front_DamageReduce",
     "realName": "DMG Mitigation",
     "aim": "Buff",
@@ -20537,6 +21232,120 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_676650_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%, stacking up to #2[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DamageUp",
+      "ADF_7"
+    ]
+  },
+  {
+    "name": "StageAbility_676760_Modifier_Mark",
+    "realName": "Galactic Grand Lotto",
+    "aim": "Other",
+    "desc": "#1[i] prize draw(s) currently available.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_PassiveValue"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_676860_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "CriticalDamage_Up"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_676860_OverCharge",
+    "realName": "Overclock",
+    "aim": "Buff",
+    "desc": "Exits the \"Overclock\" state after using Ultimate #1[i] more time(s).",
+    "type": "Overclock",
+    "perma": true,
+    "params": [
+      "_Count"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_677170_Effect",
+    "realName": "History Agent",
+    "aim": "Buff",
+    "desc": "For each stack of \"Obsession\" in possession, Basic ATK and Skill DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DamageIncrease"
+    ]
+  },
+  {
+    "name": "StageAbility_677510_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "DamageIncrease"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_677820_Character",
+    "realName": "IQ Tax Collector",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%. When launching an attack and dealing Ultimate DMG, causes \"Murmur\" to deal DMG equal to #2[i]% of the original DMG.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "_AttackAddedRatio",
+      "_CurseDamage"
+    ]
+  },
+  {
+    "name": "StageAbility_677810_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "_DamageIncrease"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_677190_Effect2",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "For every stack of \"Obsession\" on all allies, SPD increases by #1[f1]%. Currently, all allies have a total of #2[i] stack(s) of \"Obsession.\"",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "#ADF_3",
+      "Value"
+    ]
+  },
+  {
+    "name": "StageAbility_677460_Modifier_Effect",
+    "realName": "CRIT Rate Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT Rate by #1[i]%, up to #2[i] stacks.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_2",
+      "#ADF_3"
     ]
   },
   {
@@ -20559,6 +21368,18 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_677720_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s). This effect lasts until exiting \"Butterfly Soul.\"",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "#ADF_2",
+      "#ADF_3"
     ]
   },
   {
@@ -20684,6 +21505,50 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "StageAbility_677260_Modifier_Enemy",
+    "realName": "DoT Boost",
+    "aim": "Buff",
+    "desc": "DoT taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_678180_Effect",
+    "realName": "Ultimate DMG Boost",
+    "aim": "Buff",
+    "desc": "Ultimate DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_678180_Effect2",
+    "realName": "Memosprite DMG Boost",
+    "aim": "Buff",
+    "desc": "Memosprite DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_678190_Effect",
+    "realName": "RES PEN Boost",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1143895626\">LC_23054_Sub</a>",
     "realName": "Great Fortune",
     "aim": "Buff",
@@ -20694,6 +21559,100 @@ let modifiersGlobal = [
       "#SkillEquip_P2_Value",
       "#SkillEquip_P3_Value",
       "#SkillEquip_P5_AddSPRatio"
+    ]
+  },
+  {
+    "name": "StageAbility_678240_Modifier_Enemy",
+    "realName": "DoT Boost",
+    "aim": "Buff",
+    "desc": "DoT taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_678250_Tear",
+    "realName": "Bleed",
+    "aim": "Debuff",
+    "desc": "Takes Physical DMG at the start of each turn.",
+    "type": "Bleed",
+    "perma": true
+  },
+  {
+    "name": "Modifier_StageAbility_678510_MaxHP",
+    "realName": "Max HP Boost",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": "Max HP Boost",
+    "perma": true,
+    "params": [
+      "_HPAddedRatio"
+    ]
+  },
+  {
+    "name": "StageAbility_678580_Modifier_Effect",
+    "realName": "Breach",
+    "aim": "Buff",
+    "desc": "Ultimate DMG dealt in this combat ignores #1[i]% of target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_678590_Shield",
+    "realName": "Shield",
+    "aim": "Buff",
+    "desc": "Gains a Shield that offsets DMG. Before the Shield gets depleted or the effect disappears, enemy attacks will not reduce the HP of the ally character with the Shield.",
+    "type": "Shield",
+    "perma": true
+  },
+  {
+    "name": "StageAbility_678850_Modifier_Sub",
+    "realName": "Bizarre Spell",
+    "aim": "Buff",
+    "desc": "\"Blazar\" DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_678870_Character",
+    "realName": "Ultimate DMG Boost",
+    "aim": "Buff",
+    "desc": "Ultimate DMG increases by #1[i]%, lasting until after the Ultimate is cast.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value"
+    ]
+  },
+  {
+    "name": "StageAbility_678170_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]%, up to a maximum of #2[i]%.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "#ADF_1",
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_678260_Modifier_Burn",
+    "realName": "Burn",
+    "aim": "Debuff",
+    "desc": "Takes Fire DoT equal to #1[i]% of base DMG at the start of each turn.",
+    "type": "Burn",
+    "perma": false,
+    "params": [
+      "ADF_1"
     ]
   },
   {
@@ -20716,6 +21675,29 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_678410_Modifier_Effect",
+    "realName": "CRIT Rate Boost",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_678480_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]% and Ultimate DMG dealt by #2[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "#ADF_2"
     ]
   },
   {
@@ -20771,6 +21753,28 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "StageAbility_678640_Modifier_Effect",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation stat increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "_Value"
+    ]
+  },
+  {
+    "name": "StageAbility_678670_Modifier_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1706325911\">Modifier_ChallengePeakBattle_ExtremeAbility_0014_02</a>",
     "realName": "Confinement++",
     "aim": "Other",
@@ -20780,6 +21784,25 @@ let modifiersGlobal = [
     "params": [
       "ChallengePeakBattle_0014_ADF_1",
       "ChallengePeakBattle_0014_ADF_2"
+    ]
+  },
+  {
+    "name": "Standard_DOT_Burn_633403",
+    "realName": "Necrosis",
+    "aim": "Debuff",
+    "desc": "Within a certain number of turns, takes Fire DMG at the beginning of each turn and causes the Burn state other than \"Necrosis\" to immediately produce a certain percentage of DMG.",
+    "type": "Necrosis",
+    "perma": false
+  },
+  {
+    "name": "Modifier_StageAbility_633407_Enemy_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "Each stack increases DMG taken by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_2"
     ]
   },
   {
@@ -20891,6 +21914,27 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "Modifier_StageAbility_633409_Effect",
+    "realName": "Shield",
+    "aim": "Buff",
+    "desc": "Gains a Shield that offsets DMG. Before the Shield gets depleted or the effect disappears, enemy attacks will not reduce the HP of the ally character with the Shield.",
+    "type": "Shield",
+    "perma": true
+  },
+  {
+    "name": "Modifier_StageAbility_633417_Character",
+    "realName": "The Story Presently",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]%, CRIT DMG increases by #2[i]%. After using an attack, deals Additional DMG equal to #3[i]% the sum of this unit's Max HP, DEF, and ATK to the attack target(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_CriticalChanceTotal",
+      "_CriticalDamageTotal",
+      "_DamageTotal"
+    ]
+  },
+  {
     "name": "Lingsha_GridFight_RabbitCountBonus",
     "realName": "Fuyuan Fulgurating Strike",
     "aim": "Buff",
@@ -20942,6 +21986,88 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "StageAbility_617000_Modifier_Effect2",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "#ADF_9"
+    ]
+  },
+  {
+    "name": "StageAbility_617000_Modifier_Effect3",
+    "realName": "DMG Mitigation",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": "DMG Reduction",
+    "perma": true,
+    "params": [
+      "#ADF_10"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633406_Effect",
+    "realName": "Excitation",
+    "aim": "Buff",
+    "desc": "After using Basic ATK or Skill to attack, consumes #1[i] stack(s) of \"Excitation\" from all allies to deal Quantum Additional DMG equal to #2[i]% of their ATK to the attack targets, with a #3[i]% base chance to inflict Entanglement for #4[i] turn(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_2",
+      "ADF_3",
+      "ADF_4",
+      "ADF_5"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633414_ReduceDamage",
+    "realName": "Weaken",
+    "aim": "Debuff",
+    "desc": "Decreases DMG dealt by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633415_Modifier_Effect",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation stat increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633411_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "#ADF_2",
+      "#ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633412_SuperBurn",
+    "realName": "Deflagration",
+    "aim": "Debuff",
+    "desc": "At the start of each turn, takes Fire DoT equal to #1[i]% of base DMG, and causes Burn states other than \"Deflagration\" to immediately produce #2[i]% DMG.",
+    "type": "Burn",
+    "perma": false,
+    "params": [
+      "ADF_5",
+      "BurnTriggerRatio_Copy"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1225919884\">LC_23053_Sub02_Halo</a>",
     "realName": "Stream Promo",
     "aim": "Buff",
@@ -20977,6 +22103,518 @@ let modifiersGlobal = [
     "perma": true
   },
   {
+    "name": "Modifier_StageAbility_676860_Count",
+    "realName": "Overclock",
+    "aim": "Other",
+    "desc": "When not in the \"Overclock\" state, the \"Dealer\" allows the first character to enter the \"Overclock\" state after taking action #1[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "LeftCount"
+    ]
+  },
+  {
+    "name": "StageAbility_633501_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633502_Modifier_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633503_Modifier_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_CriticalDamage"
+    ]
+  },
+  {
+    "name": "StageAbility_633504_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633505_Modifier_Effect",
+    "realName": "Tawot Cards",
+    "aim": "Buff",
+    "desc": "After receiving an attack, restores HP equal to #1[i]% of Max HP.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633508_Modifier_Effect",
+    "realName": "The Doctor's Robe",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633509_Modifier_Sub",
+    "realName": "Record from Beyond the Sky",
+    "aim": "Buff",
+    "desc": "Nullifies all DMG received except DoTs. This state is dispelled after being attacked.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "StageAbility_633509_Modifier_Sub2",
+    "realName": "Record from Beyond the Sky",
+    "aim": "Buff",
+    "desc": "Immune to debuffs.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "StageAbility_633510_Modifier_Sub",
+    "realName": "Parasitized",
+    "aim": "Other",
+    "desc": "ATK increases by #1[i]%. At the start of the turn, consumes HP equal to #2[i]% of their current HP. When this character is knocked down, this state will be transferred to another random ally target.",
+    "type": "Parasitized",
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1",
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "MLevel_StageAbility_633511_Modifier_Sub2",
+    "realName": "Thalan Toxi-Flame",
+    "aim": "Debuff",
+    "desc": "At the start of the turn, consume HP equal to #1[i]% of Max HP.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "MLevel_StageAbility_633511_Modifier_Sub3",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases SPD by #1[i]%. This effect can stack up to #2[i] time(s).",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "MazeBuffParam_2",
+      "MazeBuffParam_3"
+    ]
+  },
+  {
+    "name": "StageAbility_633512_Modifier_Effect",
+    "realName": "Break Effect Boost",
+    "aim": "Buff",
+    "desc": "Break Effect increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633513_Modifier_Effect",
+    "realName": "Self-Consciousness Relaxation",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]% and Max HP increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1",
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633514_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633526_Modifier_Effect",
+    "realName": "Shatterbone Blade",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": "DMG Reduction",
+    "perma": true,
+    "params": [
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633515_Modifier_Sub",
+    "realName": "Punklorde Mentality",
+    "aim": "Debuff",
+    "desc": "Implanted new Weakness.",
+    "type": "Weakness Implant",
+    "perma": true
+  },
+  {
+    "name": "StageAbility_633517_Modifier_Bonus",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_633517_Modifier_Debuff_Wait",
+    "realName": "Dreams — 0110",
+    "aim": "Other",
+    "desc": "After #1[i] turn(s), DMG taken increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_CountDown",
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_633517_Modifier_Debuff",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_633518_Bonus",
+    "realName": "Break Effect Boost",
+    "aim": "Buff",
+    "desc": "Break Effect increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_633521_Modifier_Effect",
+    "realName": "Illusory Automaton",
+    "aim": "Buff",
+    "desc": "At the start of the turn, restore HP equal to #1[i]% of Max HP.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633522_Modifier_Sub",
+    "realName": "Rotting Fruit of the Alien Tree",
+    "aim": "Buff",
+    "desc": "Resists Crowd Control debuffs. Every time a debuff is resisted, consume HP equal to #1[i]% of Max HP.",
+    "type": "Resists Crowd Control debuffs",
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633524_Modifier_Sub",
+    "realName": "Max HP Boost",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633524_Modifier_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633525_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633529_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633530_Modifier_Sub",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633531_Modifier_Sub",
+    "realName": "Obliteration Wick Trimmer",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633532_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633523_Modifier_Sub",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633523_Modifier_Sub2",
+    "realName": "SPD Reduction",
+    "aim": "Debuff",
+    "desc": "Decreases SPD by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633519_Modifier_Sub",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value"
+    ]
+  },
+  {
+    "name": "StageAbility_633533_Modifier_Sub",
+    "realName": "Rubert Empire Difference Machine",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]% and CRIT DMG increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1",
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633534_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633535_Modifier_Bonus",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633537_Modifier_Sub",
+    "realName": "Black Forest Cuckoo Clock",
+    "aim": "Debuff",
+    "desc": "Significantly increases the chance of being attacked by enemies.",
+    "type": "Aggro Chance Boost",
+    "perma": true
+  },
+  {
+    "name": "StageAbility_633539_Modifier_Sub",
+    "realName": "ATK Reduction",
+    "aim": "Debuff",
+    "desc": "Decreases ATK by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633540_Modifier_Sub",
+    "realName": "ATK Reduction",
+    "aim": "Debuff",
+    "desc": "Decreases ATK by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633541_Modifier_Sub",
+    "realName": "ATK Reduction",
+    "aim": "Debuff",
+    "desc": "Decreases ATK by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633542_Modifier_Sub",
+    "realName": "ATK Reduction",
+    "aim": "Debuff",
+    "desc": "Decreases ATK by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633544_Modifier_Sub",
+    "realName": "Talot Doll",
+    "aim": "Debuff",
+    "desc": "There is a chance to select the wrong target when using abilities against enemy targets.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Modifier_StageAbility_633547_Tear",
+    "realName": "Absolute Failure Prescription",
+    "aim": "Debuff",
+    "desc": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+    "type": "Bleed",
+    "perma": false
+  },
+  {
+    "name": "StageAbility_633548_Modifier_Sub",
+    "realName": "Absolute Failure Prescription",
+    "aim": "Debuff",
+    "desc": "After the next attack received, additionally lose #1[i]% of current HP",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633550_Modifier_Sub",
+    "realName": "Weaken",
+    "aim": "Debuff",
+    "desc": "Decreases DMG dealt by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633551_Modifier_Sub",
+    "realName": "Absolute Failure Prescription",
+    "aim": "Debuff",
+    "desc": "Decreases Weakness Break Efficiency by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "Standard_CTRL_Stun_S7",
+    "realName": "Stunned",
+    "aim": "Debuff",
+    "desc": "Becomes Stunned and unable to take action.",
+    "type": "Stunned",
+    "perma": true
+  },
+  {
+    "name": "StageAbility_633562_Modifier_Sub",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
     "name": "Topaz_GridFight_Eidolon1",
     "realName": "Debtor",
     "aim": "Debuff",
@@ -20986,6 +22624,1161 @@ let modifiersGlobal = [
     "params": [
       "#SkillRank_Rank01_P1_CriticalValue",
       "#SkillRank_Rank01_P2_CriticalMaxLayer"
+    ]
+  },
+  {
+    "name": "StageAbility_633554_Modifier_Sub",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Value"
+    ]
+  },
+  {
+    "name": "StageAbility_633555_Modifier_Sub",
+    "realName": "Max HP Boost",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": "Max HP Boost",
+    "perma": true,
+    "params": [
+      "MDF_Value"
+    ]
+  },
+  {
+    "name": "StageAbility_633556_Modifier_Sub",
+    "realName": "Elegant Code",
+    "aim": "Buff",
+    "desc": "Increase DEF, ATK, and Max HP by #1[i]%. After attacking, deals Additional DMG equal to #2[i]% of ATK to a random attack target.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Value1",
+      "MDF_Value2"
+    ]
+  },
+  {
+    "name": "StageAbility_617651_Modifier_Sub",
+    "realName": "DMG Mitigation",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": "DMG Reduction",
+    "perma": true,
+    "params": [
+      "MDF_Value"
+    ]
+  },
+  {
+    "name": "StageAbility_617657_Modifier_Sub",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Value"
+    ]
+  },
+  {
+    "name": "StageAbility_633553_Modifier_Sub",
+    "realName": "DEF Boost",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Value"
+    ]
+  },
+  {
+    "name": "StageAbility_617656_Modifier_Sub",
+    "realName": "DEF Boost",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Value"
+    ]
+  },
+  {
+    "name": "StageAbility_633564_Modifier_Sub",
+    "realName": "CRIT Rate Reduction",
+    "aim": "Debuff",
+    "desc": "Decreases CRIT Rate by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633565_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "Each stack increases DMG taken by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633568_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633569_Modifier_Sub",
+    "realName": "Special Absolute Failure Prescription",
+    "aim": "Buff",
+    "desc": "DMG dealt to ally targets with Shields increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633570_Modifier_Effect",
+    "realName": "Special Absolute Failure Prescription",
+    "aim": "Buff",
+    "desc": "Ultimate DMG taken is reduced by #1[i]%. Resets at the start of the turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "UltraDamageReduce"
+    ]
+  },
+  {
+    "name": "StageAbility_633571_Modifier_Sub",
+    "realName": "Special Absolute Failure Prescription",
+    "aim": "Buff",
+    "desc": "Effect RES increases by #1[i]%. When HP drops to #2[i]%/#3[i]%/#4[i]%, dispels all debuffs from this unit.",
+    "type": "Effect RES Boost",
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1",
+      "MazeBuffParam_2",
+      "MazeBuffParam_3",
+      "MazeBuffParam_4"
+    ]
+  },
+  {
+    "name": "StageAbility_633574_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633575_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "Relic_325_Sub",
+    "realName": "Punklorde Stage Zero",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Relic_326_Sub",
+    "realName": "City of Converging Stars",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": false,
+    "params": [
+      "#SkillRelic_326_2_P1_AttackAddedRatio"
+    ]
+  },
+  {
+    "name": "Relic_326_Sub4",
+    "realName": "City of Converging Stars",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "#SkillRelic_326_2_P3_CriticalDamage"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1319097683\">Modifier_FantasticStory_BaseAbility_2060_Plus9_Sub</a>",
+    "realName": "Streets Abuzz",
+    "aim": "Buff",
+    "desc": "Follow-Up ATK DMG increases by #1[i]%. After using a Follow-Up ATK, applies #2[i] stack(s) of \"Resound\" to all allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2069_ADF_1",
+      "DV_FantasticStory_PlusAbility_2069_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>",
+    "realName": "Grit Mechanics_Streets Abuzz",
+    "aim": "Buff",
+    "desc": "After using a Follow-Up ATK to attack, additionally accumulates #1[i] Grit Value for allies with every enemy target hit.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2069_ADF_3"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1779059478\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0013_02</a>",
+    "realName": "Beaming with Joy",
+    "aim": "Other",
+    "desc": "Elation stat increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0013_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-2102222782\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0014_03</a>",
+    "realName": "Add Insult to Injury",
+    "aim": "Other",
+    "desc": "Each stack increases DMG taken by #1[i]%. This effect can stack up to #2[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0014_ADF_1",
+      "ChallengePeakBattle_Plugins_0014_ADF_3"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1413137720\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0015_02</a>",
+    "realName": "Logistics Boost",
+    "aim": "Other",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0015_ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633590_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-337102689\">Modifier_FantasticStory_BaseAbility_2060_Plus10_Sub</a>",
+    "realName": "Commotion",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2070_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>",
+    "realName": "Grit Mechanics_Commotion",
+    "aim": "Buff",
+    "desc": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2070_ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617132_Modifier_ExtraTurn_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_617143_Modifier_Effect",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value"
+    ]
+  },
+  {
+    "name": "LC_23056_Main_Sub1",
+    "realName": "Umbra Devourer",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]% and DMG taken by all enemies' increases by #2[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "MDF_AttackUp",
+      "MDF_DamageTakenUpTemp2"
+    ]
+  },
+  {
+    "name": "LC_23056_Main_Sub2",
+    "realName": "Umbra Devourer",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "MDF_DamageTakenUp"
+    ]
+  },
+  {
+    "name": "StageAbility_633578_Modifier_Sub",
+    "realName": "Benediction Shard: Strife",
+    "aim": "Buff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases DMG dealt to Elite Enemies by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633580_Modifier_Sub",
+    "realName": "Benediction Shard: Death",
+    "aim": "Debuff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases DoT received by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633582_Modifier_Sub",
+    "realName": "Benediction Shard: Reason",
+    "aim": "Buff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases Ultimate DMG dealt by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633583_Modifier_Sub1",
+    "realName": "Benediction Shard: Time",
+    "aim": "Buff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases DMG dealt by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633583_Modifier_Sub2",
+    "realName": "Benediction Shard: Time",
+    "aim": "Buff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases DMG dealt by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value"
+    ]
+  },
+  {
+    "name": "StageAbility_633584_Modifier_Sub",
+    "realName": "Benediction Shard: Passage",
+    "aim": "Debuff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases Break DMG received by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633586_Modifier_Sub",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633588_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_678190_Effect2",
+    "realName": "Break Effect Boost",
+    "aim": "Buff",
+    "desc": "Break Effect increases by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "BreakValue"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_677170_EnhanceLimit",
+    "realName": "History Agent",
+    "aim": "Buff",
+    "desc": "The max number of \"Obsession\" stacks increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_676590_Character",
+    "realName": "Eternal Supplicant",
+    "aim": "Other",
+    "desc": "Lost #1[i]% Max HP in total.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "CurrentLoseRatio"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_676590_Character_Revive",
+    "realName": "Eternal Supplicant",
+    "aim": "Other",
+    "desc": "Consumes #1[i]% of Max HP at the start of turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_676590_Character_Revive2",
+    "realName": "Eternal Supplicant",
+    "aim": "Other",
+    "desc": "When struck by a killing blow, instead of being knocked down, immediately restores a certain amount of HP.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "StageAbility_633596_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_661002_Modifier_Sub2",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_661004_Modifier_Sub2",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661009_Modifier_Sub2",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Speed"
+    ]
+  },
+  {
+    "name": "StageAbility_661103_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DamageAdd"
+    ]
+  },
+  {
+    "name": "StageAbility_661105_Modifier_Sub2",
+    "realName": "DMG Reduction",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661106_Modifier_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Attack"
+    ]
+  },
+  {
+    "name": "StageAbility_661110_Modifier_Sub2",
+    "realName": "DMG Reduction",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661112_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases final DMG dealt by #1[i]%. Stacks are removed when HP is reduced.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661202_Modifier_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Attack"
+    ]
+  },
+  {
+    "name": "StageAbility_661205_Modifier_Sub2",
+    "realName": "HP Restoration, DMG Boost",
+    "aim": "Buff",
+    "desc": "HP restored increases by #1[i]% and final DMG dealt increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4",
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661206_Modifier_Sub",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases SPD by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661207_Modifier_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Attack"
+    ]
+  },
+  {
+    "name": "StageAbility_661209_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases final DMG dealt by #1[i]%. Stacks are removed when HP is reduced.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661212_Modifier_Sub2",
+    "realName": "HP Restoration, DMG Boost",
+    "aim": "Buff",
+    "desc": "HP restored increases by #1[i]% and final DMG dealt increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4",
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661215_Modifier_Sub2",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Speed"
+    ]
+  },
+  {
+    "name": "StageAbility_661217_Modifier_Sub2",
+    "realName": "DMG Reduction",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661220_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases final DMG dealt by #1[i]%. Stacks are removed when HP is reduced.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661222_Modifier_Sub2",
+    "realName": "DMG Reduction",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661223_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases final DMG dealt by #1[i]%. Stacks are removed when HP is reduced.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661224_Modifier_Sub2",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_661301_Modifier_Sub2",
+    "realName": "DMG Reduction",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661302_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DamageAdd"
+    ]
+  },
+  {
+    "name": "StageAbility_661305_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases final DMG dealt by #1[i]%. Stacks are removed when HP is reduced.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661309_Modifier_Sub2",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Speed"
+    ]
+  },
+  {
+    "name": "StageAbility_661314_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases final DMG dealt by #1[i]%. Stacks are removed when HP is reduced.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661315_Modifier_Sub",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases SPD by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661401_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DamageAdd"
+    ]
+  },
+  {
+    "name": "StageAbility_661403_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases the final DMG dealt by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661404_Modifier_Sub2",
+    "realName": "HP Restoration, DMG Boost",
+    "aim": "Buff",
+    "desc": "HP restored increases by #1[i]% and final DMG dealt increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4",
+      "#ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_661405_Modifier_Sub",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases SPD by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_661501_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DamageAdd"
+    ]
+  },
+  {
+    "name": "StageAbility_661502_Modifier_Sub2",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Speed"
+    ]
+  },
+  {
+    "name": "StageAbility_661014_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases the final DMG dealt by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_677680_Modifier_Effect",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_661408_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DamageAdd"
+    ]
+  },
+  {
+    "name": "StageAbility_676410_Modifier_Effect",
+    "realName": "Street Rider Officer",
+    "aim": "Buff",
+    "desc": "After using an attack, deals Additional DMG equal to #3[i]% of Max HP plus #1[i]% of ATK to the attack target. For each stack of \"Obsession\" on allies, increases this DMG by #2[i]%.",
+    "type": "Extra Turn",
+    "perma": true,
+    "params": [
+      "ADF_3",
+      "ADF_4",
+      "ADF_5"
+    ]
+  },
+  {
+    "name": "StageAbility_676410_Modifier_Sub",
+    "realName": "Street Rider Officer",
+    "aim": "Other",
+    "desc": "After cumulatively launching #1[i] attacks, the first character in the current team gains an extra turn. The attack count taken into account by Follow-Up ATKs is doubled.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "LeftCount"
+    ]
+  },
+  {
+    "name": "LC_24006_Sub",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation stat increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": false,
+    "params": [
+      "#SkillEquip_P2_ElationAddedRatio"
+    ]
+  },
+  {
+    "name": "StageAbility_633597_Modifier_Sub",
+    "realName": "Max HP Boost",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": "Max HP Boost",
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633598_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1221123597\">Monster_RogueLightTeam_Rage</a>",
+    "realName": "Bloody Fight",
+    "aim": "Other",
+    "desc": "DMG dealt increases by #1[i]%, but HP restored and Shield Effect received decreases by #2[i]%. This effect can stack.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_DamageUpRatio_PerLayer",
+      "MDF_HealDownRatio_PerLayer"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1429915339\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0015_03</a>",
+    "realName": "Logistics Boost",
+    "aim": "Other",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0015_ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_677690_Modifier_Effect",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "StageAbility_633567_Modifier_Effect",
+    "realName": "Max HP Reduction",
+    "aim": "Debuff",
+    "desc": "Maximum Restorable HP decreases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "_Ratio"
+    ]
+  },
+  {
+    "name": "StageAbility_633591_Modifier_Sub2",
+    "realName": "DMG Reduction",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633591_Modifier_Sub1",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "MLevel_Rogue_Knowledge_S7",
+    "realName": "Brain in a Vat",
+    "aim": "Buff",
+    "desc": "Current Enlightenment Charge ratio: #1[i]%. If the Enlightenment Charge of \"Brain in a Vat\" reaches 100% when a character uses their Ultimate through a method other than \"Brain in a Vat,\" the Ultimate will be activated again, consuming 100% of the Enlightenment Charge.",
+    "type": "Brain in a Vat",
+    "perma": true,
+    "params": [
+      "MDF_EnergyBase"
+    ]
+  },
+  {
+    "name": "StageAbility_676890_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i], stacking up to #2[i] times.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "Value1",
+      "Value2"
+    ]
+  },
+  {
+    "name": "StageAbility_676940_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "StageAbility_633600_Modifier_Sub2",
+    "realName": "DMG Reduction",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_633600_Modifier_Sub1",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633416_Modifier_Sub",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_617632_Effect1",
+    "realName": "RES PEN Boost",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_617632_Effect2",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation stat increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "StageAbility_617530_Modifier_Sub",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "\"Blazar\" DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "StageAbility_633531_Modifier_Sub2",
+    "realName": "Max HP Boost",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": "Max HP Boost",
+    "perma": true,
+    "params": [
+      "MazeBuffParam_2"
+    ]
+  },
+  {
+    "name": "StageAbility_678690_Modifier_Effect",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "Value1"
+    ]
+  },
+  {
+    "name": "StageAbility_633579_Modifier_Sub",
+    "realName": "Benediction Shard: Sky",
+    "aim": "Buff",
+    "desc": "On the basis of every currently possessed Blessings and Equations, increases DMG dealt by next attack after HP changes by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633581_Modifier_Sub",
+    "realName": "Benediction Shard: Trickery",
+    "aim": "Buff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases Follow-Up ATK DMG and Additional DMG dealt by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633585_Modifier_Sub",
+    "realName": "Benediction Shard: Romance",
+    "aim": "Buff",
+    "desc": "Based on the total number of stars of all currently possessed Blessings and Equations, increases Basic ATK DMG and Skill DMG dealt by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
     ]
   }
 ]

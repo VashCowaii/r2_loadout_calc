@@ -289,8 +289,13 @@ const compositeAbilityObject = {
           }
         },
         {
-          "name": "Define Variable with Elation Skill Count",
-          "variableName": "ElationTime_SkillCount"
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
         },
         {
           "name": "IF",
@@ -395,7 +400,19 @@ const compositeAbilityObject = {
           "name": "Lock Battle Actions",
           "isLock": false
         },
-        "Unknown EventType (Not always an error)",
+        {
+          "name": "Define Variable with Elation Skill Count",
+          "variableName": "ElationTime_SkillCount"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
@@ -406,7 +423,25 @@ const compositeAbilityObject = {
           "ability": "BattleEventAbility_Elation_Ability04_02",
           "isTrigger": true
         },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
         "Unknown EventType2 (Not always an error)",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
         {
           "name": "IF",
           "conditions": {
@@ -520,7 +555,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
-                      "Unknown EventType3 (Not always an error)[inverse: true]"
+                      "Unknown CONDITION3 (Not always an error)[1: true]"
                     ]
                   },
                   "flagFilter": [
@@ -712,6 +747,11 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier",
               "execute": [
                 {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_IsInserting",
+                  "value": 0
+                },
+                {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1447027795\">Elation_InsertRetarget</a>",
                   "variables": {
@@ -730,8 +770,7 @@ const compositeAbilityObject = {
                       "variables": [
                         "MDF_ElationTimeIsNoConsume"
                       ]
-                    },
-                    "TP_OnCreating": 1
+                    }
                   },
                   "dynamicStringsArray": [
                     {
@@ -938,35 +977,35 @@ const compositeAbilityObject = {
               ],
               "parse": [
                 {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
+                  "name": "IF",
                   "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "living": true
+                    "name": "Compare: Variable",
+                    "value1": "MDF_IsInserting",
+                    "compareType": "=",
+                    "value2": 0
                   },
-                  "ifTargetFound": [
+                  "passed": [
                     {
-                      "name": "IF",
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "maxTargets": 1,
                       "conditions": {
-                        "name": "Compare: Variable",
+                        "name": "Target Exists",
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
+                          "target": "{{Parameter Target}}"
                         },
-                        "value1": "TP_OnCreating",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "ContextTaskTemplate"
+                        "living": true
                       },
-                      "passed": [
+                      "ifTargetFound": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_IsInserting",
+                          "value": 1
+                        },
                         {
                           "name": "Inject Extra-Turn",
                           "actionTag": null,
@@ -1003,85 +1042,23 @@ const compositeAbilityObject = {
                           ],
                           "afterInjection": [
                             {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Aha Instant: Aha Battle Event}}"
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Is Current Modifier Active"
                               },
-                              "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
-                              "valuePerStack": {
-                                "MDF_OverrideElationPoint": {
-                                  "operator": "Variables[0] (TP_OverrideElationPoint) || RETURN",
-                                  "displayLines": "TP_OverrideElationPoint",
-                                  "constants": [],
-                                  "variables": [
-                                    "TP_OverrideElationPoint"
-                                  ]
-                                },
-                                "MDF_ElationTimeIsNoConsume": {
-                                  "operator": "Variables[0] (TP_ElationTimeIsNoConsume) || RETURN",
-                                  "displayLines": "TP_ElationTimeIsNoConsume",
-                                  "constants": [],
-                                  "variables": [
-                                    "TP_ElationTimeIsNoConsume"
-                                  ]
-                                }
-                              },
-                              "dynamicStringsArray": [
+                              "passed": [
                                 {
-                                  "name": "MDF_CustomTag",
-                                  "value": {
-                                    "Custom": true,
-                                    "Key": "TP_CustomTag"
-                                  }
+                                  "name": "Define Custom Variable",
+                                  "variableName": "MDF_IsInserting",
+                                  "value": 0
                                 }
                               ]
                             }
                           ],
-                          "copyAbortFlags": true
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Inject Extra-Turn",
-                          "actionTag": null,
-                          "valuePerStack": {
-                            "ElationTime_OverrideElationPointTemp": {
-                              "operator": "Variables[0] (MDF_OverrideElationPoint) || RETURN",
-                              "displayLines": "MDF_OverrideElationPoint",
-                              "constants": [],
-                              "variables": [
-                                "MDF_OverrideElationPoint"
-                              ]
-                            },
-                            "ElationTime_IsNoConsumeTemp": {
-                              "operator": "Variables[0] (MDF_ElationTimeIsNoConsume) || RETURN",
-                              "displayLines": "MDF_ElationTimeIsNoConsume",
-                              "constants": [],
-                              "variables": [
-                                "MDF_ElationTimeIsNoConsume"
-                              ]
-                            }
-                          },
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Aha Instant: Aha Battle Event}}"
-                          },
-                          "dynamicStringsArray": [
-                            {
-                              "name": "ElationTime_CustomTagTemp",
-                              "value": {
-                                "Custom": true,
-                                "Key": "MDF_CustomTag"
-                              }
-                            }
-                          ],
-                          "afterInjection": [],
                           "copyAbortFlags": true
                         }
                       ]
-                    },
-                    "Modifier Deletes Itself"
+                    }
                   ]
                 }
               ]
@@ -2126,6 +2103,9 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
+            },
+            {
+              "eventTrigger": "Leave Battle"
             },
             {
               "eventTrigger": "New Enemy Wave",

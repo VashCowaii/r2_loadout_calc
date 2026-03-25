@@ -20,7 +20,7 @@ const configAbility = {
       "failed": [
         {
           "name": "UI Display Event",
-          "popUpText": "A Fool's Defiance"
+          "popUpText": "Eternal Recurrence"
         }
       ]
     },

@@ -19,6 +19,20 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-465998500\">Advanced_BlackSwan_Trace03_SubListener</a>",
       "execute": [
         {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "CasterStatusProbability",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
+            }
+          ]
+        },
+        {
           "eventTrigger": "Entity Created [Anyone]",
           "execute": [
             {

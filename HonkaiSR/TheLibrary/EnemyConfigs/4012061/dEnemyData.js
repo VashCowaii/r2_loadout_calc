@@ -45,8 +45,8 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1690,
-        1691
+        1700,
+        1701
       ]
     },
     "401206101": {
@@ -76,8 +76,8 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1690,
-        1691
+        1700,
+        1701
       ]
     },
     "401206102": {
@@ -107,8 +107,8 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1690,
-        1691
+        1700,
+        1701
       ]
     },
     "401206103": {
@@ -138,8 +138,8 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1690,
-        1691
+        1700,
+        1701
       ]
     },
     "401206104": {
@@ -169,8 +169,8 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1690,
-        1691
+        1700,
+        1701
       ]
     }
   }

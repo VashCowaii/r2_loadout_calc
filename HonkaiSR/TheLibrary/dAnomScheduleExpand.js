@@ -1,6 +1,1119 @@
 const stageTypers = "anom";
 let mocSchedule = [
   {
+    "id": 5,
+    "image": "activityBG/ChallengePeakPanelBanner_4005.png",
+    "realName": "Don't Mess With Pom-Pom",
+    "buffData": null,
+    "floorData": {
+      "1": {
+        "floorName": "Knight (I)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30505011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Daybreak Squadron: Azurewing",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 360,
+                    "enemies": [
+                      {
+                        "name": "Autonomous Wand",
+                        "id": 5012010,
+                        "image": 5012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 567381.433125,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 5013040,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3404288.59875,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      0,
+                      {
+                        "name": "Aggressive Reading Material",
+                        "id": 5012030,
+                        "image": 5012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 567381.433125,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Rocking Rebel",
+                        "id": 5013010,
+                        "image": 5013010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 4085146.3185,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 0.25,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      4,
+                      4,
+                      0,
+                      1,
+                      0,
+                      0,
+                      4,
+                      5,
+                      4,
+                      4
+                    ],
+                    "totalMax": 16,
+                    "fieldMax": 4,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30505011",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 4085146.3185,
+                "aoeSUM": 21787447.032000005
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Confinement",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.1
+            ]
+          }
+        ]
+      },
+      "2": {
+        "floorName": "Knight (II)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30505012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Pollux, Netherwing Husk, Ferry of Souls",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 361,
+                    "enemies": [
+                      {
+                        "name": "Dark Sun Gryphon",
+                        "id": 4033030,
+                        "image": 4033030,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3142420.245,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Wind",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Black Tide's Champion",
+                        "id": 4033020,
+                        "image": 4033020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3770904.294,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 361,
+                    "enemies": [
+                      {
+                        "name": "Pollux, Netherwing Husk, Ferry of Souls",
+                        "id": 4014030,
+                        "image": 4014030,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 6808577.1975,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Wind",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30505012",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 17388058.689,
+                "aoeSUM": 20530478.934
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Depowered",
+            "desc": "When entering combat, reduces ally target's Energy by #1[i]% and decreases their Energy Regeneration Rate by #2[i]% outside of their turn for #3[i] turn(s).",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0013",
+            "BEKey": 1912336050,
+            "params": [
+              0.5,
+              0.5,
+              2
+            ]
+          },
+          {
+            "name": "Taunting+",
+            "desc": "Enemy target takes immediate action after being attacked #1[i] time(s). This tally resets at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0008",
+            "BEKey": 1912336050,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      "3": {
+        "floorName": "Knight (III)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30505013
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "First Genius, Entelechy, Zandar",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 354,
+                    "enemies": [
+                      {
+                        "name": "Furiae Warrior",
+                        "id": 4012010,
+                        "image": 4012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 363124.1172,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Black Tide's Corroded Axe",
+                        "id": 4032030,
+                        "image": 4032030,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 474854.6148,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furiae Archer",
+                        "id": 4012030,
+                        "image": 4012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 363124.1172,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      {
+                        "name": "Mirage Fizzle Kid",
+                        "id": 4052020,
+                        "image": 4052020,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 453905.1465,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      4,
+                      4,
+                      0,
+                      1,
+                      2,
+                      1,
+                      4
+                    ],
+                    "totalMax": 12,
+                    "fieldMax": 4,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 362,
+                    "enemies": [
+                      {
+                        "name": "First Genius, Entelechy, Zandar",
+                        "id": 4044010,
+                        "image": 4044010,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 23044415.13,
+                        "speedBase": 211.2,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 200,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30505013",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 23519269.744799998,
+                "aoeSUM": 28211950.643999998
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Interference",
+            "desc": "After the enemy target uses an attack, randomly causes #1[i]% or #2[i]% action delay to the attacked target.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0009",
+            "BEKey": 1912336050,
+            "params": [
+              0.05,
+              0.1
+            ]
+          }
+        ]
+      },
+      "4": {
+        "floorName": "King in Check",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30505021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Alloy Mechatron: King Pom-Pom",
+                "enemyLevel": 100,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 363,
+                    "enemies": [
+                      {
+                        "name": "SD Civilian Mechatron",
+                        "id": 5012090,
+                        "image": 5012090,
+                        "rank": "MinionLv2",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 1135921.499496,
+                        "speedBase": 105.6,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.4,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Lady of Crashing Waves",
+                        "id": 4053010,
+                        "image": 4053010,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 3786404.99832,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Ice",
+                        "hpBars": 1,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      0,
+                      0
+                    ],
+                    "totalMax": 5,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 363,
+                    "enemies": [
+                      {
+                        "name": "Alloy Mechatron: King Pom-Pom",
+                        "id": 5014020,
+                        "image": 5014020,
+                        "rank": "LittleBoss",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 9466012.4958,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.4,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30505021",
+                  "_CreateBattleEvent": "30503"
+                },
+                "highSTSUM": 22718429.989919998,
+                "aoeSUM": 27262115.987903997
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Sunder",
+            "desc": "When ally targets are being attacked by enemies, the \"Sunder\" effect will be inflicted on them. Each stack additionally causes the holder to lose HP equal to #1[f1]% of their Max HP. This effect can be stacked indefinitely and cannot be dissipated. After targets with \"Sunder\" received a Shield from an ally target other than themselves or healing, all \"Sunder\" effects are dispelled on both targets.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0007",
+            "BEKey": 1912336050,
+            "params": [
+              0.007999999
+            ]
+          },
+          {
+            "name": "Interference",
+            "desc": "After the enemy target uses an attack, randomly causes #1[i]% or #2[i]% action delay to the attacked target.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0009",
+            "BEKey": 1912336050,
+            "params": [
+              0.05,
+              0.1
+            ]
+          },
+          {
+            "name": "Confinement",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.1
+            ]
+          }
+        ]
+      },
+      "5": {
+        "floorName": "King in Check: Plight",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30505022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Alloy Mechatron: King Pom-Pom",
+                "enemyLevel": 120,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 364,
+                    "enemies": [
+                      {
+                        "name": "SD Civilian Mechatron",
+                        "id": 5012090,
+                        "image": 5012090,
+                        "rank": "MinionLv2",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 5273921.13885,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.5,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Lady of Crashing Waves",
+                        "id": 4053010,
+                        "image": 4053010,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 17579737.1295,
+                        "speedBase": 216,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Ice",
+                        "hpBars": 1,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      0,
+                      0
+                    ],
+                    "totalMax": 5,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 364,
+                    "enemies": [
+                      {
+                        "name": "Alloy Mechatron: King Pom-Pom",
+                        "id": 5014020,
+                        "image": 5014020,
+                        "rank": "LittleBoss",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 43949342.82375,
+                        "speedBase": 180,
+                        "critDMG": 0.2,
+                        "effectRES": 0.5,
+                        "ehr": 0.5,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30505022",
+                  "_CreateBattleEvent": "30504"
+                },
+                "highSTSUM": 105478422.777,
+                "aoeSUM": 126574107.3324
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Sunder+",
+            "desc": "When ally targets are being attacked by enemies, the \"Sunder+\" effect will be inflicted on them. Each stack additionally causes the holder to lose HP equal to #1[f1]% of their Max HP. This effect can be stacked indefinitely and cannot be dissipated. After targets with \"Sunder+\" received a Shield from an ally target other than themselves or healing, all \"Sunder+\" effects are dispelled on both targets.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0007",
+            "BEKey": 1912336050,
+            "params": [
+              0.012
+            ]
+          },
+          {
+            "name": "Interference+",
+            "desc": "After the enemy target uses an attack, randomly causes #1[i]% or #2[i]% action delay to the attacked target.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0009",
+            "BEKey": 1912336050,
+            "params": [
+              0.05,
+              0.2
+            ]
+          },
+          {
+            "name": "Confinement++",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.3
+            ]
+          }
+        ]
+      }
+    },
+    "kingBuffList": [
+      {
+        "modifierName": "ADV_StageAbility_3033048",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0013",
+        "BEKey": 1912336050,
+        "name": "Beaming with Joy",
+        "desc": "Increases Elation for all allies by #1[i]%. When an Aha Instant ends, all ally characters regenerate #2[i]% Energy.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.4,
+          0.1
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033049",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0014",
+        "BEKey": 1912336050,
+        "name": "Add Insult to Injury",
+        "desc": "After an enemy target is hit by an ally's Follow-Up ATK, DMG taken by them increases by #1[i]% for #2[i] turn(s). This effect can stack up to #3[i] time(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.15,
+          2,
+          4
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033050",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0015",
+        "BEKey": 1912336050,
+        "name": "Logistics Boost",
+        "desc": "Increases all ally targets' DMG dealt by #1[i]% and increases ally's Alloy Pommy's SPD by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.4,
+          0.5
+        ]
+      }
+    ],
+    "patchName": "4.1"
+  },
+  {
     "id": 4,
     "image": "activityBG/ChallengePeakPanelBanner_4004.png",
     "realName": "Cyber Crisis",

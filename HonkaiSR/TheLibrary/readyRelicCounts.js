@@ -1,4 +1,4 @@
 let readyRelicCounts = {
-  "totalRelicCount": 54,
-  "readyRelicCount": 54
+  "totalRelicCount": 56,
+  "readyRelicCount": 56
 }

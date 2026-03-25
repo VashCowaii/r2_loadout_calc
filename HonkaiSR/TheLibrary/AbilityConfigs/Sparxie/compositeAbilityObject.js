@@ -2631,7 +2631,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",

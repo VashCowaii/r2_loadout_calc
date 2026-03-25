@@ -45,8 +45,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2536,
-        2537
+        2610,
+        2611
       ]
     },
     "501401101": {
@@ -76,11 +76,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2536,
-        2537
+        2610,
+        2611
       ],
       "overrideParams": {
-        "2536": [
+        "2610": [
           [
             2.5
           ],
@@ -121,8 +121,70 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2536,
-        2537
+        2610,
+        2611
+      ]
+    },
+    "501401107": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2610,
+        2611
+      ]
+    },
+    "501401108": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2610,
+        2611
       ]
     }
   }

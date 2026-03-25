@@ -3373,23 +3373,58 @@ const configAbility = {
                       "caseValueIs": 1,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3398,23 +3433,58 @@ const configAbility = {
                       "caseValueIs": 2,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3423,23 +3493,58 @@ const configAbility = {
                       "caseValueIs": 3,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3448,23 +3553,58 @@ const configAbility = {
                       "caseValueIs": 4,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3473,23 +3613,58 @@ const configAbility = {
                       "caseValueIs": 5,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3498,23 +3673,58 @@ const configAbility = {
                       "caseValueIs": 6,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3523,23 +3733,58 @@ const configAbility = {
                       "caseValueIs": 7,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3568,23 +3813,58 @@ const configAbility = {
                       "caseValueIs": 1,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3593,23 +3873,58 @@ const configAbility = {
                       "caseValueIs": 2,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3618,23 +3933,58 @@ const configAbility = {
                       "caseValueIs": 3,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3643,23 +3993,58 @@ const configAbility = {
                       "caseValueIs": 4,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3668,23 +4053,58 @@ const configAbility = {
                       "caseValueIs": 5,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3693,23 +4113,58 @@ const configAbility = {
                       "caseValueIs": 6,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3718,23 +4173,58 @@ const configAbility = {
                       "caseValueIs": 7,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3763,23 +4253,58 @@ const configAbility = {
                       "caseValueIs": 1,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3788,23 +4313,58 @@ const configAbility = {
                       "caseValueIs": 2,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3813,23 +4373,58 @@ const configAbility = {
                       "caseValueIs": 3,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3838,23 +4433,58 @@ const configAbility = {
                       "caseValueIs": 4,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3863,23 +4493,58 @@ const configAbility = {
                       "caseValueIs": 5,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3888,23 +4553,58 @@ const configAbility = {
                       "caseValueIs": 6,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3913,23 +4613,58 @@ const configAbility = {
                       "caseValueIs": 7,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3958,23 +4693,58 @@ const configAbility = {
                       "caseValueIs": 1,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3983,23 +4753,58 @@ const configAbility = {
                       "caseValueIs": 2,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4008,23 +4813,58 @@ const configAbility = {
                       "caseValueIs": 3,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4033,23 +4873,58 @@ const configAbility = {
                       "caseValueIs": 4,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4058,23 +4933,58 @@ const configAbility = {
                       "caseValueIs": 5,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4083,23 +4993,58 @@ const configAbility = {
                       "caseValueIs": 6,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4108,23 +5053,58 @@ const configAbility = {
                       "caseValueIs": 7,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     }
@@ -4153,23 +5133,58 @@ const configAbility = {
                       "caseValueIs": 1,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4178,23 +5193,58 @@ const configAbility = {
                       "caseValueIs": 2,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4203,23 +5253,58 @@ const configAbility = {
                       "caseValueIs": 3,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4228,23 +5313,58 @@ const configAbility = {
                       "caseValueIs": 4,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4253,23 +5373,58 @@ const configAbility = {
                       "caseValueIs": 5,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4278,23 +5433,58 @@ const configAbility = {
                       "caseValueIs": 6,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4303,23 +5493,58 @@ const configAbility = {
                       "caseValueIs": 7,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     }
@@ -4348,23 +5573,58 @@ const configAbility = {
                       "caseValueIs": 1,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4373,23 +5633,58 @@ const configAbility = {
                       "caseValueIs": 2,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4398,23 +5693,58 @@ const configAbility = {
                       "caseValueIs": 3,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4423,23 +5753,58 @@ const configAbility = {
                       "caseValueIs": 4,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4448,23 +5813,58 @@ const configAbility = {
                       "caseValueIs": 5,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4473,23 +5873,58 @@ const configAbility = {
                       "caseValueIs": 6,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4498,23 +5933,58 @@ const configAbility = {
                       "caseValueIs": 7,
                       "execute": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "ENEMIES_OBJECT_UNUSED__181"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                              "displayLines": "{[SkillP01[1]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[SkillP01[1]]}"
-                              ]
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "stackLimit": 10,
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
                             }
-                          },
-                          "addStacksPerTrigger": 1
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                                  "displayLines": "{[SkillP01[1]]}",
+                                  "constants": [],
+                                  "variables": [
+                                    "{[SkillP01[1]]}"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
                         }
                       ]
                     }
@@ -4548,23 +6018,58 @@ const configAbility = {
               "caseValueIs": 1,
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                      "stackLimit": 10,
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
                     }
-                  },
-                  "addStacksPerTrigger": 1
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
                 }
               ]
             },
@@ -4573,23 +6078,58 @@ const configAbility = {
               "caseValueIs": 2,
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                      "stackLimit": 10,
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
                     }
-                  },
-                  "addStacksPerTrigger": 1
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
                 }
               ]
             },
@@ -4598,23 +6138,58 @@ const configAbility = {
               "caseValueIs": 3,
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                      "stackLimit": 10,
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
                     }
-                  },
-                  "addStacksPerTrigger": 1
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
                 }
               ]
             },
@@ -4623,23 +6198,58 @@ const configAbility = {
               "caseValueIs": 4,
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                      "stackLimit": 10,
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
                     }
-                  },
-                  "addStacksPerTrigger": 1
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
                 }
               ]
             },
@@ -4648,23 +6258,58 @@ const configAbility = {
               "caseValueIs": 5,
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                      "stackLimit": 10,
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
                     }
-                  },
-                  "addStacksPerTrigger": 1
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
                 }
               ]
             },
@@ -4673,23 +6318,58 @@ const configAbility = {
               "caseValueIs": 6,
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                      "stackLimit": 10,
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
                     }
-                  },
-                  "addStacksPerTrigger": 1
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
                 }
               ]
             },
@@ -4698,23 +6378,58 @@ const configAbility = {
               "caseValueIs": 7,
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__181"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                      "displayLines": "{[SkillP01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP01[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                      "stackLimit": 10,
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
                     }
-                  },
-                  "addStacksPerTrigger": 1
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                          "displayLines": "{[SkillP01[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
                 }
               ]
             }

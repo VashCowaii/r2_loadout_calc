@@ -87,7 +87,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "SameTypeCount"
+                  "variableName": "SameTypeCount",
+                  "typeFilter": "All"
                 },
                 {
                   "name": "IF",

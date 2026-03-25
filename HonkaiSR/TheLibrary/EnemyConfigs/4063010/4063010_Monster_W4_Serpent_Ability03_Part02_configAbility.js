@@ -36,6 +36,45 @@ const configAbility = {
         ]
       }
     },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "ENEMIES_OBJECT_UNUSED__181"
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "valuePerStack": {
+            "MDF_DamageUpRatio_PerLayer": {
+              "operator": "Variables[0] (UnusedUnderThisBase_586) || RETURN",
+              "displayLines": "UnusedUnderThisBase_586",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_586"
+              ]
+            }
+          },
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+            "displayLines": "{[Skill03[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[0]]}"
+            ]
+          }
+        }
+      ]
+    },
     "Trigger: Ability End"
   ],
   "references": []

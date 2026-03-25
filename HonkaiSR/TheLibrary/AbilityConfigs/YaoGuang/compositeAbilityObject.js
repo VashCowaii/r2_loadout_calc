@@ -1308,7 +1308,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "YaoGuang_Ability03_Part02"
+          "ability": "YaoGuang_Ability03_Part02",
+          "isTrigger": true
         }
       ],
       "references": []
@@ -1489,28 +1490,23 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Elation DMG"
-                    ]
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
                   },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">MerryMake</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">MerryMake</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
                 }
               ]
             }

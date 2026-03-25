@@ -40,7 +40,7 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2867
+        2958
       ],
       "enemyTag": [
         "Week"

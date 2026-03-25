@@ -1808,6 +1808,234 @@ let battleEvents = {
     "type": "Entity Selection",
     "isBattleEvent": true
   },
+  "20032": {
+    "internalID": 20032,
+    "name": 20032,
+    "energyMax": null,
+    "params": [
+      20
+    ],
+    "skills": {
+      "Basic ATK": {
+        "Housecleaning": {
+          "variant1": {
+            "skillID": 2003201,
+            "trigger": "Skill01",
+            "name": "Housecleaning",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG to one designated enemy and gains Punchline.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                4,
+                5,
+                30
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Dirt Water Slinging": {
+          "variant1": {
+            "skillID": 2003202,
+            "trigger": "Skill11",
+            "name": "Dirt Water Slinging",
+            "type": "Impair",
+            "slot": "Skill",
+            "desc": "Consumes #2[i] point(s) of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.015,
+                20,
+                3,
+                60
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Extremeflash Charge": {
+          "variant1": {
+            "skillID": 2003203,
+            "trigger": "SkillP01",
+            "name": "Extremeflash Charge",
+            "type": "Talent",
+            "slot": "Talent",
+            "desc": "Each time ally targets gain 1 Punchline, this unit accumulates 1 Charge Value point. Upon reaching #1[i] Charge Value points, immediately gains an extra turn and gains access to Enhanced Basic ATK.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill01": {
+        "skillID": 2003201,
+        "trigger": "Skill01",
+        "name": "Housecleaning",
+        "type": "Single Target",
+        "slot": "Basic ATK",
+        "desc": "Deals Quantum DMG to one designated enemy and gains Punchline.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": 10,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            4,
+            5,
+            30
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Normal",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          30,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill11": {
+        "skillID": 2003202,
+        "trigger": "Skill11",
+        "name": "Dirt Water Slinging",
+        "type": "Impair",
+        "slot": "Skill",
+        "desc": "Consumes #2[i] point(s) of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": 20,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.015,
+            20,
+            3,
+            60
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "BPSkill",
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2003203,
+        "trigger": "SkillP01",
+        "name": "Extremeflash Charge",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "Each time ally targets gain 1 Punchline, this unit accumulates 1 Charge Value point. Upon reaching #1[i] Charge Value points, immediately gains an extra turn and gains access to Enhanced Basic ATK.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            20
+          ]
+        },
+        "element": "Quantum",
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "Monster_5012120.png",
+    "team": "Neutral Team",
+    "type": "Summon",
+    "isBattleEvent": true
+  },
+  "20033": {
+    "internalID": 20033,
+    "name": 20033,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_W5_Pam_00_Summon.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "20034": {
     "internalID": 20034,
     "name": 20034,
@@ -3491,6 +3719,23 @@ let battleEvents = {
       0.036,
       0.0059999996,
       0.0036000002
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "999.png",
+    "team": "Neutral Team",
+    "isBattleEvent": true
+  },
+  "30144": {
+    "internalID": 30144,
+    "name": 30144,
+    "energyMax": null,
+    "params": [
+      1,
+      20,
+      0.024,
+      0.012,
+      0.0072
     ],
     "skills": {},
     "baseTriggersObject": {},
@@ -6383,6 +6628,130 @@ let battleEvents = {
     "type": "Assist",
     "isBattleEvent": true
   },
+  "41113": {
+    "internalID": 41113,
+    "name": 41113,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Path Resonance": {
+        "Path Resonance: Elation": {
+          "variant1": {
+            "skillID": 4100701,
+            "trigger": "Skill03",
+            "name": "Path Resonance: Elation",
+            "type": "AoE",
+            "slot": "Path Resonance",
+            "desc": "Deals DMG of a random Type to all enemies multiple times.",
+            "energyCost": 100,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "null": {
+          "variant1": {
+            "skillID": 4100702,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Path Resonance",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 4100701,
+        "trigger": "Skill03",
+        "name": "Path Resonance: Elation",
+        "type": "AoE",
+        "slot": "Path Resonance",
+        "desc": "Deals DMG of a random Type to all enemies multiple times.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 4100702,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "HoshinoKami_007.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "42001": {
     "internalID": 42001,
     "name": 42001,
@@ -6887,6 +7256,90 @@ let battleEvents = {
     "skills": {},
     "baseTriggersObject": {},
     "icon": "BattleEvent_EvoLveBuild_3113201.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "44016": {
+    "internalID": 44016,
+    "name": 44016,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BE_RogueFormula_ShowTime.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "44017": {
+    "internalID": 44017,
+    "name": 44017,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BE_RogueFormula_676650.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "44018": {
+    "internalID": 44018,
+    "name": 44018,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BE_RogueFormula_617610.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "44019": {
+    "internalID": 44019,
+    "name": 44019,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BE_RogueFormula_676180.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "44020": {
+    "internalID": 44020,
+    "name": 44020,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_EvoLveBuild_3113201.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "44021": {
+    "internalID": 44021,
+    "name": 44021,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BE_RogueFormula02.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "44022": {
+    "internalID": 44022,
+    "name": 44022,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BE_RogueMiracle1180.png",
     "team": "Neutral Team",
     "type": "Assist",
     "isBattleEvent": true
@@ -7767,6 +8220,21 @@ let battleEvents = {
     "energyMax": null,
     "params": [
       0.4
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "999.png",
+    "team": "Neutral Team",
+    "isBattleEvent": true
+  },
+  "49003": {
+    "internalID": 49003,
+    "name": 49003,
+    "energyMax": null,
+    "params": [
+      0.4,
+      0.15,
+      0.3
     ],
     "skills": {},
     "baseTriggersObject": {},

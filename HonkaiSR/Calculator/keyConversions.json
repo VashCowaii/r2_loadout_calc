@@ -87,6 +87,7 @@
 
     "Shield": "ShieldValue",
     "ShieldAddedRatio": "Shield%",
+    "ShieldTakenRatio": "ShieldIncoming",
 
     "PhysicalAddedRatio": "DamagePhysical",
     "FireAddedRatio": "DamageFire",

@@ -1,3 +1,10 @@
+const keyShortcut = basicShorthand.makeKeysArray;
+
+const globalTagCacheKeysDMG = {};
+const globalTagCacheKeysPEN = {};
+const globalTagCacheKeysSHRED = {};
+const globalTagCacheKeysVULN = {};
+
 const superGlobal = {
     "generalImplants": {
         "stats": [WeaknessWind],
@@ -56,5 +63,51 @@ const superGlobal = {
         }
 
         return targetOverride ?? battleData.nameBasedTurns.char1;
+    },
+    createEntityCache() {//got tired of needing to ctrl f on this stuff, just making it a uniform function and idk why I didn't do this sooner lmao
+        return {
+            "UpdateStatDamage": {
+                //compositeCacheTag will define itself here when used, and the tag will be the key
+            },
+            "UpdateStatElation": {},
+            "UpdateStatMerryMake": {},
+            "UpdateStatDamageReduction": {},
+            "UpdateStatDEFShred": {},
+            "UpdateStatPEN": {},
+            "UpdateStatVulnerable": {},
+            "UpdateStatCritRate": {},
+            "UpdateStatCritDamage": {},
+        }
+    },
+    createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,atkSlot) {
+        const fullTag = tags + "";
+        const realDMGKeys = globalTagCacheKeysDMG[fullTag] ??= keyShortcut(dmgKeys,tags);
+        const realPENKeys = globalTagCacheKeysPEN[fullTag] ??= keyShortcut(resPENKeys,tags);
+        const realShredKeys = globalTagCacheKeysSHRED[fullTag] ??= keyShortcut(defShredKeys,tags);
+        const realVulnKeys = globalTagCacheKeysVULN[fullTag] ??= keyShortcut(vulnKeys,tags);
+
+        const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+        const returnObject = {
+            multipliers: {
+                primary: null,
+                blast: null,
+                all: null,
+            },
+            scalar,
+            DMGTags: tags,
+            slot: atkSlot,
+            realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+            actionTags,compositeCacheTag,
+
+            allToughness: false,
+            isFUA: false,
+        }
+        Object.assign(returnObject,overrideATKData);
+
+        return returnObject
+    },
+    generateAllATKObjects() {
+
     },
 }

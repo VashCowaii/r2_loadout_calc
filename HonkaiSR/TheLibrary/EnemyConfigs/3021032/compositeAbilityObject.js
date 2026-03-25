@@ -610,7 +610,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Parameter Target's Source Owner}}"
+                    "target": "{{Player Team All}}"
                   },
                   "priorityTag": "MonsterDeathRattle",
                   "ownerState": "Mask_AliveOrLimbo",
@@ -1602,7 +1602,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Parameter Target's Source Owner}}"
+                    "target": "{{Player Team All}}"
                   },
                   "priorityTag": "MonsterDeathRattle",
                   "ownerState": "Mask_AliveOrLimbo",

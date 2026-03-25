@@ -167,14 +167,27 @@ const configAbility = {
         "name": "AND",
         "conditionList": [
           {
-            "name": "Enemy ID",
-            "ID": 5014012,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "@SparxiConOfficial",
-            "isBaseCompare": true
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 5014012,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "@SparxiConOfficial",
+                "isBaseCompare": true
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value": "RLBoss"
+              }
+            ]
           },
           {
             "name": "Compare: Variable",
@@ -323,14 +336,27 @@ const configAbility = {
         "name": "AND",
         "conditionList": [
           {
-            "name": "Enemy ID",
-            "ID": 5014012,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "@SparxiConOfficial",
-            "isBaseCompare": true
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 5014012,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "@SparxiConOfficial",
+                "isBaseCompare": true
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value": "RLBoss"
+              }
+            ]
           },
           {
             "name": "Compare: Variable",
