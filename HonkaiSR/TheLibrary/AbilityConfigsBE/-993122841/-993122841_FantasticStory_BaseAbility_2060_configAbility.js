@@ -231,6 +231,24 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "scope": "ContextCaster",
+      "variableName": "DV_FantasticStory_PlusAbility_2069"
+    },
+    {
+      "name": "Declare Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "scope": "ContextCaster",
+      "variableName": "DV_FantasticStory_PlusAbility_2070"
+    },
+    {
+      "name": "Declare Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "scope": "ContextCaster",
       "variableName": "BattleEvent_BaseHP"
     },
     {
@@ -394,6 +412,44 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1135541973\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn</a>"
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "DV_FantasticStory_PlusAbility_2069",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-905270004\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn</a>"
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "DV_FantasticStory_PlusAbility_2070",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"508816016\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn</a>"
                 }
               ]
             }
@@ -1226,6 +1282,8 @@ const configAbility = {
         "DV_FantasticStory_PlusAbility_2066",
         "DV_FantasticStory_PlusAbility_2067",
         "DV_FantasticStory_PlusAbility_2068",
+        "DV_FantasticStory_PlusAbility_2069",
+        "DV_FantasticStory_PlusAbility_2070",
         "DV_FantasticStory_BaseAbility_TriggerFlag"
       ]
     },
@@ -1293,6 +1351,8 @@ const configAbility = {
       "stackData": [],
       "latentQueue": [
         "DV_FantasticStory_BaseAbility_TriggerFlag",
+        "DV_FantasticStory_PlusAbility_2070",
+        "DV_FantasticStory_PlusAbility_2069",
         "DV_FantasticStory_PlusAbility_2068",
         "DV_FantasticStory_PlusAbility_2067",
         "DV_FantasticStory_PlusAbility_2066",

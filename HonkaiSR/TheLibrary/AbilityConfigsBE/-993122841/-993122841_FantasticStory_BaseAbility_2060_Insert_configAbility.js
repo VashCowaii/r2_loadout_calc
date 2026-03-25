@@ -316,6 +316,35 @@ const configAbility = {
           }
         }
       ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "AND",
+        "conditionList": [
+          {
+            "name": "Compare: Variable",
+            "value1": "DV_FantasticStory_PlusAbility_2070",
+            "compareType": "=",
+            "value2": 1
+          },
+          {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
+          }
+        ]
+      },
+      "passed": [
+        {
+          "name": "Skill Points Modification",
+          "adjustmentValue": 1,
+          "adjustmentType": "+"
+        }
+      ]
     }
   ],
   "references": []

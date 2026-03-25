@@ -10,6 +10,401 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Commotion</span>]",
+      "stackType": "ReplaceByCaster",
+      "description": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2070_ADF_2</span> Grit Value for allies.",
+      "type": "Buff",
+      "statusName": "Grit Mechanics_Commotion"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__508816016\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn</a>",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "Attack DMG End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Attack Targets",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "DV_TargetCount"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+                  "value": {
+                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2070_ADF_2) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2070_ADF_2 * DV_TargetCount))",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_BaseAbility_CountSum",
+                      "DV_FantasticStory_PlusAbility_2070_ADF_2",
+                      "DV_TargetCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DV_FantasticStory_BaseAbility_CountSum",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                      "displayLines": "DV_EnterFeverValue",
+                      "constants": [],
+                      "variables": [
+                        "DV_EnterFeverValue"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": 100,
+                      "max": 100,
+                      "delta": {
+                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2070_ADF_2) || MUL || RETURN",
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2070_ADF_2)",
+                        "constants": [],
+                        "variables": [
+                          "DV_TargetCount",
+                          "DV_FantasticStory_PlusAbility_2070_ADF_2"
+                        ]
+                      },
+                      "type": "Special",
+                      "phaseType": "P1"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": {
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_BaseAbility_CountSum"
+                        ]
+                      },
+                      "max": {
+                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                        "displayLines": "DV_EnterFeverValue",
+                        "constants": [],
+                        "variables": [
+                          "DV_EnterFeverValue"
+                        ]
+                      },
+                      "delta": {
+                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2070_ADF_2) || MUL || RETURN",
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2070_ADF_2)",
+                        "constants": [],
+                        "variables": [
+                          "DV_TargetCount",
+                          "DV_FantasticStory_PlusAbility_2070_ADF_2"
+                        ]
+                      },
+                      "type": "Special"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_TargetCount",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2067",
+        "DV_FantasticStory_PlusAbility_2068",
+        "DV_FantasticStory_PlusAbility_2069",
+        "DV_FantasticStory_PlusAbility_2070"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Commotion</span>]",
+          "haloStatus": true
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Streets Abuzz</span>]",
+      "stackType": "ReplaceByCaster",
+      "description": "After using a Follow-Up ATK to attack, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_3</span> Grit Value for allies with every enemy target hit.",
+      "type": "Buff",
+      "statusName": "Grit Mechanics_Streets Abuzz"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-905270004\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn</a>",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Anyone]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_InsertMark",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack Start [Anyone]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_InsertMark",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack DMG End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_InsertMark",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Attack Targets",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "DV_TargetCount"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+                  "value": {
+                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2069_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2069_ADF_3 * DV_TargetCount))",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_BaseAbility_CountSum",
+                      "DV_FantasticStory_PlusAbility_2069_ADF_3",
+                      "DV_TargetCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DV_FantasticStory_BaseAbility_CountSum",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                      "displayLines": "DV_EnterFeverValue",
+                      "constants": [],
+                      "variables": [
+                        "DV_EnterFeverValue"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": 100,
+                      "max": 100,
+                      "delta": {
+                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2069_ADF_3) || MUL || RETURN",
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2069_ADF_3)",
+                        "constants": [],
+                        "variables": [
+                          "DV_TargetCount",
+                          "DV_FantasticStory_PlusAbility_2069_ADF_3"
+                        ]
+                      },
+                      "type": "Special",
+                      "phaseType": "P1"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": {
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_BaseAbility_CountSum"
+                        ]
+                      },
+                      "max": {
+                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                        "displayLines": "DV_EnterFeverValue",
+                        "constants": [],
+                        "variables": [
+                          "DV_EnterFeverValue"
+                        ]
+                      },
+                      "delta": {
+                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2069_ADF_3) || MUL || RETURN",
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2069_ADF_3)",
+                        "constants": [],
+                        "variables": [
+                          "DV_TargetCount",
+                          "DV_FantasticStory_PlusAbility_2069_ADF_3"
+                        ]
+                      },
+                      "type": "Special"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_TargetCount",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_InsertMark",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2067",
+        "DV_FantasticStory_PlusAbility_2068",
+        "DV_FantasticStory_PlusAbility_2069"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Streets Abuzz</span>]",
+          "haloStatus": true
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
       "stackType": "ReplaceByCaster",
       "description": "After using a Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2068_ADF_3</span> Grit Value for allies.",
@@ -1229,6 +1624,160 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-337102689\">Modifier_FantasticStory_BaseAbility_2060_Plus10_Sub</a>[<span class=\"descriptionNumberColor\">Commotion</span>]",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2070_ADF_1) || RETURN",
+                "displayLines": "DV_FantasticStory_PlusAbility_2070_ADF_1",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_PlusAbility_2070_ADF_1"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2070_ADF_1</span>. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
+      "type": "Buff",
+      "statusName": "Commotion"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1319097683\">Modifier_FantasticStory_BaseAbility_2060_Plus9_Sub</a>[<span class=\"descriptionNumberColor\">Streets Abuzz</span>]",
+      "stackType": "Replace",
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Attack Type",
+                "attackTypes": [
+                  "Follow-up"
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "DV_FantasticStory_PlusAbility_2069_ADF_1"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_InsertMark",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack Start [Owner]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_InsertMark",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack DMG End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_InsertMark",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DV_FantasticStory_BaseAbility_BirdAttackCount",
+                      "value": {
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_BirdAttackCount) || Variables[1] (DV_FantasticStory_PlusAbility_2069_ADF_2) || ADD || RETURN",
+                        "displayLines": "(DV_FantasticStory_BaseAbility_BirdAttackCount + DV_FantasticStory_PlusAbility_2069_ADF_2)",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_BaseAbility_BirdAttackCount",
+                          "DV_FantasticStory_PlusAbility_2069_ADF_2"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2069_ADF_2) || RETURN",
+                        "displayLines": "DV_FantasticStory_PlusAbility_2069_ADF_2",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_PlusAbility_2069_ADF_2"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_InsertMark",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "description": "Follow-Up ATK DMG increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_1</span>. After using a Follow-Up ATK, applies <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_2</span> stack(s) of \"Resound\" to all allies.",
+      "type": "Buff",
+      "statusName": "Streets Abuzz"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1428129204\">Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
       "stackType": "Replace",
       "execute": [
@@ -2437,6 +2986,36 @@ const configAbility = {
           "conditions": {
             "name": "Compare: Variable",
             "value1": "DV_FantasticStory_PlusAbility_2068",
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1319097683\">Modifier_FantasticStory_BaseAbility_2060_Plus9_Sub</a>[<span class=\"descriptionNumberColor\">Streets Abuzz</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DV_FantasticStory_PlusAbility_2069",
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-337102689\">Modifier_FantasticStory_BaseAbility_2060_Plus10_Sub</a>[<span class=\"descriptionNumberColor\">Commotion</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DV_FantasticStory_PlusAbility_2070",
             "compareType": "=",
             "value2": 1
           }
