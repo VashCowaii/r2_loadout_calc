@@ -564,7 +564,8 @@ const configAbility = {
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "typeFilter": "All"
               },
               "ifTargetFound": [
                 {
@@ -1921,7 +1922,8 @@ const configAbility = {
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "typeFilter": "All"
               },
               "ifTargetFound": [
                 {
@@ -2326,7 +2328,8 @@ const configAbility = {
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
-                }
+                },
+                "typeFilter": "All"
               },
               "passed": [
                 {

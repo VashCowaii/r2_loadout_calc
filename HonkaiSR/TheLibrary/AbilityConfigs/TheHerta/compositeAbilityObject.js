@@ -815,7 +815,8 @@ const compositeAbilityObject = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "typeFilter": "All"
                   },
                   "ifTargetFound": [
                     {
@@ -2172,7 +2173,8 @@ const compositeAbilityObject = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "typeFilter": "All"
                   },
                   "ifTargetFound": [
                     {
@@ -2577,7 +2579,8 @@ const compositeAbilityObject = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
-                    }
+                    },
+                    "typeFilter": "All"
                   },
                   "passed": [
                     {
@@ -7628,7 +7631,8 @@ const compositeAbilityObject = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "typeFilter": "All"
                         }
                       }
                     ]
@@ -7671,7 +7675,8 @@ const compositeAbilityObject = {
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "typeFilter": "All"
                       },
                       "passed": [
                         {
@@ -7722,7 +7727,8 @@ const compositeAbilityObject = {
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "typeFilter": "All"
                       },
                       "passed": [
                         {

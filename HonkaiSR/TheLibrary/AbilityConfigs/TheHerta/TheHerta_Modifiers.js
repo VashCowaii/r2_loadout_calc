@@ -2760,7 +2760,8 @@ const configAbility = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "typeFilter": "All"
                     }
                   }
                 ]
@@ -2803,7 +2804,8 @@ const configAbility = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "typeFilter": "All"
                   },
                   "passed": [
                     {
@@ -2854,7 +2856,8 @@ const configAbility = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "typeFilter": "All"
                   },
                   "passed": [
                     {
