@@ -161,6 +161,14 @@ const configAbility = {
                 },
                 "characterName": "Harbinger of Death: Swarm Nightmare",
                 "isBaseCompare": true
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "RLBoss"
               }
             ]
           }

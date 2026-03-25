@@ -930,6 +930,14 @@ const compositeAbilityObject = {
                     },
                     "characterName": "Harbinger of Death: Swarm Nightmare",
                     "isBaseCompare": true
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "RLBoss"
                   }
                 ]
               }
@@ -2008,8 +2016,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1888375507\">Enemy_W3_Sam_01_PickUpMessage</a>"
-            },
-            "Show BattleEvent Button"
+            }
           ]
         },
         {
@@ -3667,6 +3674,37 @@ const compositeAbilityObject = {
                             "variables": [
                               "{[PassiveSkill03[1]]}"
                             ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "RLBoss"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "valuePerStack": {
+                            "MDF_DamageUpRatio_PerLayer": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_582) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_582",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_582"
+                              ]
+                            }
                           }
                         }
                       ]

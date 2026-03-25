@@ -91,8 +91,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1888375507\">Enemy_W3_Sam_01_PickUpMessage</a>"
-        },
-        "Show BattleEvent Button"
+        }
       ]
     },
     {
