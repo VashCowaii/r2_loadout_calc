@@ -27,13 +27,31 @@ const configAbility = {
               },
               "maxTargets": 1,
               "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1076182583\">MModifier_Monster_W4_Claymore_02_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
-                "invertCondition": true
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1076182583\">MModifier_Monster_W4_Claymore_02_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": [
+                      "Break",
+                      "DisableAction",
+                      "STAT_CTRL"
+                    ],
+                    "invertCondition": true
+                  }
+                ]
               },
               "ifTargetFound": [
                 {
@@ -583,7 +601,7 @@ const configAbility = {
       ],
       "stackData": [],
       "latentQueue": [],
-      "description": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken, dispels Charging, grants the target team Punchline, and increases the DMG taken by this unit.",
+      "description": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken and dispels Charging. After Aha Instant is triggered, grants the target team Punchline, and increases the DMG taken by this unit.",
       "type": "Other",
       "effectName": "Charging",
       "statusName": "Charging"

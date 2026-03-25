@@ -288,6 +288,54 @@ const compositeAbilityObject = {
             }
           }
         },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__181"
+          },
+          "passed": [
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "set": 0
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] (UnusedUnderThisBase_584) || RETURN",
+                "displayLines": "UnusedUnderThisBase_584",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_584"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_585) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_585",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_585"
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "Trigger: Ability End"
       ],
       "references": []
@@ -1107,13 +1155,31 @@ const compositeAbilityObject = {
                   },
                   "maxTargets": 1,
                   "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1076182583\">MModifier_Monster_W4_Claymore_02_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
-                    "invertCondition": true
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1076182583\">MModifier_Monster_W4_Claymore_02_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": [
+                          "Break",
+                          "DisableAction",
+                          "STAT_CTRL"
+                        ],
+                        "invertCondition": true
+                      }
+                    ]
                   },
                   "ifTargetFound": [
                     {
@@ -1663,7 +1729,7 @@ const compositeAbilityObject = {
           ],
           "stackData": [],
           "latentQueue": [],
-          "description": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken, dispels Charging, grants the target team Punchline, and increases the DMG taken by this unit.",
+          "description": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken and dispels Charging. After Aha Instant is triggered, grants the target team Punchline, and increases the DMG taken by this unit.",
           "type": "Other",
           "effectName": "Charging",
           "statusName": "Charging"
