@@ -22796,7 +22796,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_325_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>",
     "realName": "Punklorde Stage Zero",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -22807,7 +22807,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_326_Sub",
+    "name": "<a class=\"gModGreen\" id=\"47200936\">Relic_326_Sub</a>",
     "realName": "City of Converging Stars",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -22818,7 +22818,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_326_Sub4",
+    "name": "<a class=\"gModGreen\" id=\"164381588\">Relic_326_Sub4</a>",
     "realName": "City of Converging Stars",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -22941,7 +22941,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23056_Main_Sub1",
+    "name": "<a class=\"gModGreen\" id=\"1424440973\">LC_23056_Main_Sub1</a>",
     "realName": "Umbra Devourer",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]% and DMG taken by all enemies' increases by #2[i]%.",
@@ -22953,7 +22953,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23056_Main_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"1374108116\">LC_23056_Main_Sub2</a>",
     "realName": "Umbra Devourer",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -23527,7 +23527,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24006_Sub",
+    "name": "<a class=\"gModGreen\" id=\"887329270\">LC_24006_Sub</a>",
     "realName": "Elation Boost",
     "aim": "Buff",
     "desc": "Elation stat increases by #1[i]%.",
