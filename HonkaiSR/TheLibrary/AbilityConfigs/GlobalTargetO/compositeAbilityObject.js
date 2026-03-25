@@ -806,6 +806,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Get Entity Part Owner",
+          "isTargetOperator": true,
+          "execute": [
+            "Override Part Map to Part Owner"
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "getBattleEvents",
           "isTargetOperator": true,
           "execute": [
@@ -976,10 +984,9 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target List}}"
                 },
-                "Adjust Target by Hostile Team Entity",
                 {
-                  "name": "Adjust Relative to Target, Get Team",
-                  "removeUnselectable": false
+                  "name": "Adjust Relative to First Target, Get Team",
+                  "getHostileTeamInstead": true
                 }
               ]
             }
