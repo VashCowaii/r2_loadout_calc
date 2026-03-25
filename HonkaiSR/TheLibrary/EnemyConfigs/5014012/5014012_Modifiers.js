@@ -1055,6 +1055,11 @@ const configAbility = {
                         "value2": "StageSpecialAbility_20501090_Ability03End"
                       },
                       {
+                        "name": "Compare: Parameter String",
+                        "compareType": "=",
+                        "value2": "Monster_W5_Vtuber_IF_AbilityP01_Insert02_Part01"
+                      },
+                      {
                         "name": "Has Modifier",
                         "target": {
                           "name": "Target Name",
@@ -1109,12 +1114,22 @@ const configAbility = {
                 "name": "AND",
                 "conditionList": [
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Parameter String",
+                        "compareType": "=",
+                        "value2": "Monster_W5_Vtuber_IF_AbilityP01_Insert01_Part01"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>"
+                      }
+                    ]
                   },
                   {
                     "name": "Compare: Parameter String",

@@ -264,15 +264,48 @@ const configAbility = {
                     "name": "OR",
                     "conditionList": [
                       {
-                        "name": "Enemy ID",
-                        "ID": 5014012,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "@SparxiConOfficial",
-                        "isBaseCompare": true,
-                        "invertCondition": true
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Enemy ID",
+                            "ID": 5014012,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "characterName": "@SparxiConOfficial",
+                            "isBaseCompare": true,
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "value": "RLBoss",
+                            "invertCondition": true
+                          }
+                        ]
+                      },
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "value": "RLBoss"
+                          },
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "HP_Bars_Remaining",
+                            "compareType": "=",
+                            "value2": 3
+                          }
+                        ]
                       },
                       {
                         "name": "AND",

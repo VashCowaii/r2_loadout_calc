@@ -440,15 +440,48 @@ const compositeAbilityObject = {
                         "name": "OR",
                         "conditionList": [
                           {
-                            "name": "Enemy ID",
-                            "ID": 5014012,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "characterName": "@SparxiConOfficial",
-                            "isBaseCompare": true,
-                            "invertCondition": true
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Enemy ID",
+                                "ID": 5014012,
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "characterName": "@SparxiConOfficial",
+                                "isBaseCompare": true,
+                                "invertCondition": true
+                              },
+                              {
+                                "name": "Check Boolean Value",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "value": "RLBoss",
+                                "invertCondition": true
+                              }
+                            ]
+                          },
+                          {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Check Boolean Value",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "value": "RLBoss"
+                              },
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "HP_Bars_Remaining",
+                                "compareType": "=",
+                                "value2": 3
+                              }
+                            ]
                           },
                           {
                             "name": "AND",
@@ -2028,14 +2061,27 @@ const compositeAbilityObject = {
             "name": "AND",
             "conditionList": [
               {
-                "name": "Enemy ID",
-                "ID": 5014012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "@SparxiConOfficial",
-                "isBaseCompare": true
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 5014012,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "@SparxiConOfficial",
+                    "isBaseCompare": true
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "RLBoss"
+                  }
+                ]
               },
               {
                 "name": "Compare: Variable",
@@ -2184,14 +2230,27 @@ const compositeAbilityObject = {
             "name": "AND",
             "conditionList": [
               {
-                "name": "Enemy ID",
-                "ID": 5014012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "@SparxiConOfficial",
-                "isBaseCompare": true
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 5014012,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "@SparxiConOfficial",
+                    "isBaseCompare": true
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "RLBoss"
+                  }
+                ]
               },
               {
                 "name": "Compare: Variable",
@@ -4604,6 +4663,11 @@ const compositeAbilityObject = {
                             "value2": "StageSpecialAbility_20501090_Ability03End"
                           },
                           {
+                            "name": "Compare: Parameter String",
+                            "compareType": "=",
+                            "value2": "Monster_W5_Vtuber_IF_AbilityP01_Insert02_Part01"
+                          },
+                          {
                             "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
@@ -4658,12 +4722,22 @@ const compositeAbilityObject = {
                     "name": "AND",
                     "conditionList": [
                       {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>"
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Parameter String",
+                            "compareType": "=",
+                            "value2": "Monster_W5_Vtuber_IF_AbilityP01_Insert01_Part01"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>"
+                          }
+                        ]
                       },
                       {
                         "name": "Compare: Parameter String",
