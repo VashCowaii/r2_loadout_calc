@@ -25766,7 +25766,7 @@ let characters = {
             "name": "Hexagram of Feathered Fortune",
             "type": "Support",
             "slot": "Ultimate",
-            "desc": "Gains #1[i] Punchline. Aha immediately gains 1 extra turn where a fixed amount of #4[i] Punchline is taken into account. This turn, does not consume Punchline, and increases all allies' All-Type RES PEN by #2[f1]% for #3[i] turn(s).",
+            "desc": "Gains #1[i] Punchline. Aha immediately gains 1 extra turn where a fixed amount of #4[i] Punchline is taken into account. This turn does not consume Punchline, and increases all allies' All-Type RES PEN by #2[f1]% for #3[i] turn(s).",
             "energyCost": 180,
             "energyRegen": 5,
             "energyRate": 0.5,
