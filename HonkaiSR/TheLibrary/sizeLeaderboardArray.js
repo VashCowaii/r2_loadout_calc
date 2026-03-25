@@ -37,6 +37,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5013031,
+    "lineCount": 14071,
+    "sizeCount": 629970
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4034018,
     "lineCount": 17213,
     "sizeCount": 626206
@@ -826,8 +832,8 @@ let sizeLeaderboardArray = [
     "entryName": "Aglaea",
     "trimCharacterName": "Aglaea",
     "entryIcon": "icon/character/1402.png",
-    "lineCount": 5600,
-    "sizeCount": 200183
+    "lineCount": 5602,
+    "sizeCount": 200177
   },
   {
     "entryType": "char",
@@ -1135,6 +1141,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5013051,
+    "lineCount": 4441,
+    "sizeCount": 165976
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5013041,
+    "lineCount": 4441,
+    "sizeCount": 165970
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 3014020,
     "lineCount": 4668,
     "sizeCount": 165790
@@ -1147,9 +1165,21 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5013061,
+    "lineCount": 4435,
+    "sizeCount": 165749
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4023021,
     "lineCount": 4308,
     "sizeCount": 165579
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5013071,
+    "lineCount": 4441,
+    "sizeCount": 165501
   },
   {
     "entryType": "enemy",
@@ -1506,6 +1536,30 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1305.png",
     "lineCount": 3487,
     "sizeCount": 123491
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5013040,
+    "lineCount": 3161,
+    "sizeCount": 122631
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5013050,
+    "lineCount": 3161,
+    "sizeCount": 122631
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5013060,
+    "lineCount": 3161,
+    "sizeCount": 122631
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5013070,
+    "lineCount": 3161,
+    "sizeCount": 122631
   },
   {
     "entryType": "enemy",
@@ -2275,6 +2329,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5013012,
+    "lineCount": 1900,
+    "sizeCount": 66253
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8012146,
     "lineCount": 1797,
     "sizeCount": 66182
@@ -2751,6 +2811,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5013090,
+    "lineCount": 1315,
+    "sizeCount": 43886
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4034020,
     "lineCount": 1245,
     "sizeCount": 43746
@@ -2974,6 +3040,12 @@ let sizeLeaderboardArray = [
     "enemyID": 1023010,
     "lineCount": 1055,
     "sizeCount": 35526
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5012090,
+    "lineCount": 1043,
+    "sizeCount": 35523
   },
   {
     "entryType": "char",
@@ -3406,6 +3478,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 15693
   },
   {
+    "entryType": "enemy",
+    "enemyID": 5012120,
+    "lineCount": 501,
+    "sizeCount": 15659
+  },
+  {
     "entryType": "lc",
     "entryName": "Why Does the Ocean Sing",
     "trimCharacterName": "WhyDoestheOceanSing",
@@ -3438,6 +3516,14 @@ let sizeLeaderboardArray = [
     "enemyID": 1002064,
     "lineCount": 473,
     "sizeCount": 14975
+  },
+  {
+    "entryType": "lc",
+    "entryName": "The Finale of a Lie",
+    "trimCharacterName": "TheFinaleofaLie",
+    "entryIcon": "icon/light_cone/23056.png",
+    "lineCount": 418,
+    "sizeCount": 14931
   },
   {
     "entryType": "relic",
@@ -3642,6 +3728,14 @@ let sizeLeaderboardArray = [
     "enemyID": 2022050,
     "lineCount": 390,
     "sizeCount": 12812
+  },
+  {
+    "entryType": "relic",
+    "entryName": "Punklorde Stage Zero",
+    "trimCharacterName": "PunklordeStageZero",
+    "entryIcon": "icon/relic/325.png",
+    "lineCount": 321,
+    "sizeCount": 12168
   },
   {
     "entryType": "enemy",
@@ -4478,6 +4572,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 6835
   },
   {
+    "entryType": "relic",
+    "entryName": "City of Converging Stars",
+    "trimCharacterName": "CityofConvergingStars",
+    "entryIcon": "icon/relic/326.png",
+    "lineCount": 196,
+    "sizeCount": 6811
+  },
+  {
     "entryType": "lc",
     "entryName": "Solitary Healing",
     "trimCharacterName": "SolitaryHealing",
@@ -4500,6 +4602,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23031.png",
     "lineCount": 208,
     "sizeCount": 6586
+  },
+  {
+    "entryType": "lc",
+    "entryName": "Elation Brimming With Blessings",
+    "trimCharacterName": "ElationBrimmingWithBlessings",
+    "entryIcon": "icon/light_cone/24006.png",
+    "lineCount": 207,
+    "sizeCount": 6581
   },
   {
     "entryType": "enemy",
@@ -5598,6 +5708,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1930
+  },
+  {
+    "entryType": "char",
+    "entryName": "Ashveil",
+    "trimCharacterName": "Ashveil",
+    "entryIcon": "icon/character/1504.png",
+    "lineCount": 7,
+    "sizeCount": 134
   },
   {
     "entryType": "enemy",
