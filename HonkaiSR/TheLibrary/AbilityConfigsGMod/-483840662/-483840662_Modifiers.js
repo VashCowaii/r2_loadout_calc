@@ -792,51 +792,60 @@ const configAbility = {
                         {
                           "name": "IF",
                           "conditions": {
-                            "name": "Enemies Still Alive",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "invertCondition": true
+                            "name": "Living/Death State",
+                            "state": "Mask_AliveOrLimbo"
                           },
                           "passed": [
                             {
-                              "name": "Define Custom Variable",
-                              "variableName": "_OnWaveMonster_SkillType",
-                              "value": {
-                                "operator": "Variables[0] (_CurrnetSkillIndex) || RETURN",
-                                "displayLines": "_CurrnetSkillIndex",
-                                "constants": [],
-                                "variables": [
-                                  "_CurrnetSkillIndex"
-                                ]
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "Windfury_Flag",
-                              "value": 0
-                            },
-                            {
                               "name": "IF",
                               "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_WindfuryCount",
-                                "compareType": "<",
-                                "value2": 1
+                                "name": "Enemies Still Alive",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "invertCondition": true
                               },
                               "passed": [
-                                "Modifier Deletes Itself"
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "_OnWaveMonster_SkillType",
+                                  "value": {
+                                    "operator": "Variables[0] (_CurrnetSkillIndex) || RETURN",
+                                    "displayLines": "_CurrnetSkillIndex",
+                                    "constants": [],
+                                    "variables": [
+                                      "_CurrnetSkillIndex"
+                                    ]
+                                  }
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Remove Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                },
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "Windfury_Flag",
+                                  "value": 0
+                                },
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Compare: Variable",
+                                    "value1": "MDF_WindfuryCount",
+                                    "compareType": "<",
+                                    "value2": 1
+                                  },
+                                  "passed": [
+                                    "Modifier Deletes Itself"
+                                  ]
+                                }
                               ]
                             }
                           ]
@@ -887,44 +896,53 @@ const configAbility = {
                             {
                               "name": "IF",
                               "conditions": {
-                                "name": "Enemies Still Alive",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "invertCondition": true
+                                "name": "Living/Death State",
+                                "state": "Mask_AliveOrLimbo"
                               },
                               "passed": [
                                 {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "_OnWaveMonster_SkillType",
-                                  "value": 1
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Remove Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
-                                },
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "Windfury_Flag",
-                                  "value": 0
-                                },
-                                {
                                   "name": "IF",
                                   "conditions": {
-                                    "name": "Compare: Variable",
-                                    "value1": "MDF_WindfuryCount",
-                                    "compareType": "<",
-                                    "value2": 1
+                                    "name": "Enemies Still Alive",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
+                                    "invertCondition": true
                                   },
                                   "passed": [
-                                    "Modifier Deletes Itself"
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "_OnWaveMonster_SkillType",
+                                      "value": 1
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Remove Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "Windfury_Flag",
+                                      "value": 0
+                                    },
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Compare: Variable",
+                                        "value1": "MDF_WindfuryCount",
+                                        "compareType": "<",
+                                        "value2": 1
+                                      },
+                                      "passed": [
+                                        "Modifier Deletes Itself"
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -976,44 +994,53 @@ const configAbility = {
                             {
                               "name": "IF",
                               "conditions": {
-                                "name": "Enemies Still Alive",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "invertCondition": true
+                                "name": "Living/Death State",
+                                "state": "Mask_AliveOrLimbo"
                               },
                               "passed": [
                                 {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "_OnWaveMonster_SkillType",
-                                  "value": 2
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Remove Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
-                                },
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "Windfury_Flag",
-                                  "value": 0
-                                },
-                                {
                                   "name": "IF",
                                   "conditions": {
-                                    "name": "Compare: Variable",
-                                    "value1": "MDF_WindfuryCount",
-                                    "compareType": "<",
-                                    "value2": 1
+                                    "name": "Enemies Still Alive",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
+                                    "invertCondition": true
                                   },
                                   "passed": [
-                                    "Modifier Deletes Itself"
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "_OnWaveMonster_SkillType",
+                                      "value": 2
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Remove Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "Windfury_Flag",
+                                      "value": 0
+                                    },
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Compare: Variable",
+                                        "value1": "MDF_WindfuryCount",
+                                        "compareType": "<",
+                                        "value2": 1
+                                      },
+                                      "passed": [
+                                        "Modifier Deletes Itself"
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -1236,57 +1263,66 @@ const configAbility = {
                         {
                           "name": "IF",
                           "conditions": {
-                            "name": "Enemies Still Alive",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "invertCondition": true
+                            "name": "Living/Death State",
+                            "state": "Mask_AliveOrLimbo"
                           },
                           "passed": [
                             {
-                              "name": "Define Custom Variable",
-                              "variableName": "_OnWaveMonster_SkillType",
-                              "value": {
-                                "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
-                                "displayLines": "_OnWaveMonster_SkillType",
-                                "constants": [],
-                                "variables": [
-                                  "_OnWaveMonster_SkillType"
-                                ]
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "Windfury_Flag",
-                              "value": 0
-                            },
-                            {
                               "name": "IF",
                               "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_WindfuryCount",
-                                "compareType": "<",
-                                "value2": 1
+                                "name": "Enemies Still Alive",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "invertCondition": true
                               },
                               "passed": [
-                                "Modifier Deletes Itself"
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "_OnWaveMonster_SkillType",
+                                  "value": {
+                                    "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                                    "displayLines": "_OnWaveMonster_SkillType",
+                                    "constants": [],
+                                    "variables": [
+                                      "_OnWaveMonster_SkillType"
+                                    ]
+                                  }
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Remove Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                },
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "Windfury_Flag",
+                                  "value": 0
+                                },
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Compare: Variable",
+                                    "value1": "MDF_WindfuryCount",
+                                    "compareType": "<",
+                                    "value2": 1
+                                  },
+                                  "passed": [
+                                    "Modifier Deletes Itself"
+                                  ]
+                                },
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "_OnWaveMonster_SkillType",
+                                  "value": -1
+                                }
                               ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_OnWaveMonster_SkillType",
-                              "value": -1
                             }
                           ]
                         }
@@ -1340,50 +1376,59 @@ const configAbility = {
                                 {
                                   "name": "IF",
                                   "conditions": {
-                                    "name": "Enemies Still Alive",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Modifier Holder}}"
-                                    },
-                                    "invertCondition": true
+                                    "name": "Living/Death State",
+                                    "state": "Mask_AliveOrLimbo"
                                   },
                                   "passed": [
                                     {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "_OnWaveMonster_SkillType",
-                                      "value": 1
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "Remove Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Modifier Holder}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
-                                    },
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "Windfury_Flag",
-                                      "value": 0
-                                    },
-                                    {
                                       "name": "IF",
                                       "conditions": {
-                                        "name": "Compare: Variable",
-                                        "value1": "MDF_WindfuryCount",
-                                        "compareType": "<",
-                                        "value2": 1
+                                        "name": "Enemies Still Alive",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Modifier Holder}}"
+                                        },
+                                        "invertCondition": true
                                       },
                                       "passed": [
-                                        "Modifier Deletes Itself"
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "_OnWaveMonster_SkillType",
+                                          "value": 1
+                                        }
+                                      ],
+                                      "failed": [
+                                        {
+                                          "name": "Remove Events/Bonuses",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Modifier Holder}}"
+                                          },
+                                          "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                        },
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "Windfury_Flag",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Compare: Variable",
+                                            "value1": "MDF_WindfuryCount",
+                                            "compareType": "<",
+                                            "value2": 1
+                                          },
+                                          "passed": [
+                                            "Modifier Deletes Itself"
+                                          ]
+                                        },
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "_OnWaveMonster_SkillType",
+                                          "value": -1
+                                        }
                                       ]
-                                    },
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "_OnWaveMonster_SkillType",
-                                      "value": -1
                                     }
                                   ]
                                 }
@@ -1427,50 +1472,59 @@ const configAbility = {
                                 {
                                   "name": "IF",
                                   "conditions": {
-                                    "name": "Enemies Still Alive",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Modifier Holder}}"
-                                    },
-                                    "invertCondition": true
+                                    "name": "Living/Death State",
+                                    "state": "Mask_AliveOrLimbo"
                                   },
                                   "passed": [
                                     {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "_OnWaveMonster_SkillType",
-                                      "value": 2
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "Remove Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Modifier Holder}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
-                                    },
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "Windfury_Flag",
-                                      "value": 0
-                                    },
-                                    {
                                       "name": "IF",
                                       "conditions": {
-                                        "name": "Compare: Variable",
-                                        "value1": "MDF_WindfuryCount",
-                                        "compareType": "<",
-                                        "value2": 1
+                                        "name": "Enemies Still Alive",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Modifier Holder}}"
+                                        },
+                                        "invertCondition": true
                                       },
                                       "passed": [
-                                        "Modifier Deletes Itself"
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "_OnWaveMonster_SkillType",
+                                          "value": 2
+                                        }
+                                      ],
+                                      "failed": [
+                                        {
+                                          "name": "Remove Events/Bonuses",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Modifier Holder}}"
+                                          },
+                                          "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
+                                        },
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "Windfury_Flag",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Compare: Variable",
+                                            "value1": "MDF_WindfuryCount",
+                                            "compareType": "<",
+                                            "value2": 1
+                                          },
+                                          "passed": [
+                                            "Modifier Deletes Itself"
+                                          ]
+                                        },
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "_OnWaveMonster_SkillType",
+                                          "value": -1
+                                        }
                                       ]
-                                    },
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "_OnWaveMonster_SkillType",
-                                      "value": -1
                                     }
                                   ]
                                 }
