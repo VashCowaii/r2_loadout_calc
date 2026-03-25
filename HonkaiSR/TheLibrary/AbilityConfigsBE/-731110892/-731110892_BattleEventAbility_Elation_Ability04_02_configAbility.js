@@ -17,8 +17,13 @@ const configAbility = {
       }
     },
     {
-      "name": "Define Variable with Elation Skill Count",
-      "variableName": "ElationTime_SkillCount"
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "ElationTime_SkillCount",
+        "compareType": ">",
+        "value2": 4
+      }
     },
     {
       "name": "IF",
