@@ -6274,6 +6274,26 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "Ashveil_Ability02_Debuff",
+    "realName": "Bait",
+    "aim": "Other",
+    "desc": "This target is the \"Bait.\"",
+    "type": "Bait",
+    "perma": true
+  },
+  {
+    "name": "Ashveil_Passive_ListenEnhanceInsertBonusStackForShow",
+    "realName": "Gluttony",
+    "aim": "Other",
+    "desc": "The current stack count of \"Gluttony\" is #2[i]. The next enhanced Talent's Follow-Up ATK will additionally deal up to a maximum of #1[i] instance(s) of DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ExtraInsertCountForShow",
+      "MDF_LayerForShow"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>",
     "realName": "You, Parting, Beyond Reach",
     "aim": "Buff",
@@ -6932,6 +6952,18 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "Ashveil_PointB3_CriticalDamageAdd",
+    "realName": "First Fang",
+    "aim": "Buff",
+    "desc": "CRIT DMG dealt increases by #1[i]%. CRIT DMG dealt by Follow-Up ATK additionally increases by #2[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_CriticalDamage",
+      "MDF_InsertCriticalDamageAdd"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"1755645655\">Advanced_Sparkle_PassiveAbility_Halo</a>",
     "realName": "Figment",
     "aim": "Buff",
@@ -6948,6 +6980,50 @@ let modifiersCharacter = [
     "perma": false
   },
   {
+    "name": "Ashveil_Eidolon1_DamageTakenAdd",
+    "realName": "Beware: Venture Not at Full Moon",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "MDF_DamageTakenForShow"
+    ]
+  },
+  {
+    "name": "Ashveil_Eidolon6_AllDamageTypeResistenceDown",
+    "realName": "Finale: And Then There Were None",
+    "aim": "Debuff",
+    "desc": "All-Type RES decreases by #1[i]%.",
+    "type": "All-Type RES Reduction",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeResistenceDown"
+    ]
+  },
+  {
+    "name": "Ashveil_Eidolon4_AttackUp",
+    "realName": "Heed: Swallow Truth Whole",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": false,
+    "params": [
+      "MDF_AttackUp"
+    ]
+  },
+  {
+    "name": "Ashveil_Ability02_Debuff_DefenceDown",
+    "realName": "Flog: Smite Evil",
+    "aim": "Debuff",
+    "desc": "While \"Bait\" is on the field, DEF decreases by #1[i]%.",
+    "type": "DEF Reduction",
+    "perma": true,
+    "params": [
+      "MDF_DefenceDown"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"1968939868\">G_YaoGuang_Ability02_ToSelf</a>",
     "realName": "Decalight Unveils All",
     "aim": "Buff",
@@ -6959,6 +7035,17 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "Ashveil_Eidolon6_DamageUp",
+    "realName": "Finale: And Then There Were None",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[f1]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_TotalRatio"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>",
     "realName": "Blessing of the Lake",
     "aim": "Other",
@@ -6967,39 +7054,6 @@ let modifiersCharacter = [
     "perma": true,
     "params": [
       "Saber_00_EntityStockSPForShow"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>",
-    "realName": "Core Resonance",
-    "aim": "Other",
-    "desc": "Currently possesses #1[i] point(s) of \"Core Resonance.\"",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_Layer"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>",
-    "realName": "Crown of the Star",
-    "aim": "Buff",
-    "desc": "Each stack increases CRIT DMG by #1[f1]%.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-914489393\">Saber_Eidolon4</a>",
-    "realName": "The Saga of Sixteen Winter Days",
-    "aim": "Buff",
-    "desc": "Wind RES PEN increases by #1[i]%.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "#SkillRank_Rank04_P1_Ratio"
     ]
   },
   {
@@ -7066,6 +7120,17 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "<a class=\"gModGreen\" id=\"-1473893661\">Archer_Eidolon2_AddWeak</a>",
+    "realName": "The Unfulfilled Happiness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Quantum Weakness. Quantum RES decreases by #1[i]%.",
+    "type": "Implanted Quantum Weakness",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-269544975\">Saber_Eidolon4_Bonus</a>",
     "realName": "The Saga of Sixteen Winter Days",
     "aim": "Buff",
@@ -7086,6 +7151,39 @@ let modifiersCharacter = [
     "params": [
       "MDF_Count",
       "#SkillRank_Rank06_P3_Amount"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>",
+    "realName": "Core Resonance",
+    "aim": "Other",
+    "desc": "Currently possesses #1[i] point(s) of \"Core Resonance.\"",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Layer"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>",
+    "realName": "Crown of the Star",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT DMG by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-914489393\">Saber_Eidolon4</a>",
+    "realName": "The Saga of Sixteen Winter Days",
+    "aim": "Buff",
+    "desc": "Wind RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#SkillRank_Rank04_P1_Ratio"
     ]
   },
   {
@@ -7133,17 +7231,6 @@ let modifiersCharacter = [
     "desc": "DMG dealt ignores #1[i]% of the target's DEF.",
     "type": null,
     "perma": true,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-1473893661\">Archer_Eidolon2_AddWeak</a>",
-    "realName": "The Unfulfilled Happiness",
-    "aim": "Debuff",
-    "desc": "Additionally implanted Quantum Weakness. Quantum RES decreases by #1[i]%.",
-    "type": "Implanted Quantum Weakness",
-    "perma": false,
     "params": [
       "MDF_PropertyValue"
     ]

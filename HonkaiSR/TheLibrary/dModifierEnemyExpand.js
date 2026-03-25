@@ -2326,18 +2326,6 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Argenti_IF_EX_PowerUpAllDark",
-    "realName": "undefined",
-    "aim": "Buff",
-    "desc": "undefined",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_ShowValue1",
-      "MDF_ShowValue2"
-    ]
-  },
-  {
     "name": "<a class=\"gModGreen\" id=\"-396148290\">Enemy_W3_Sunday_P3Ability10Bonus</a>",
     "realName": "Im Anfang war der Sinn",
     "aim": "Other",
@@ -5043,7 +5031,7 @@ let modifiersEnemy = [
     "aim": "Debuff",
     "desc": "Action delayed. Cannot take actions for a certain number of turns.",
     "type": "Strong Reverberation",
-    "perma": true
+    "perma": false
   },
   {
     "name": "<a class=\"gModGreen\" id=\"-1922828191\">Enemy_W4_Serpent_01_Passive_Sub2</a>",
@@ -5724,7 +5712,7 @@ let modifiersEnemy = [
     "name": "<a class=\"gModGreen\" id=\"1076182583\">MModifier_Monster_W4_Claymore_02_Ability03_Aim</a>",
     "realName": "Charging",
     "aim": "Other",
-    "desc": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken, dispels Charging, grants the target team Punchline, and increases the DMG taken by this unit.",
+    "desc": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken and dispels Charging. After Aha Instant is triggered, grants the target team Punchline, and increases the DMG taken by this unit.",
     "type": "Charging",
     "perma": true
   },
@@ -5761,6 +5749,61 @@ let modifiersEnemy = [
     "perma": true
   },
   {
+    "name": "Modifier_Monster_W5_Pam_DefenceUp",
+    "realName": "Lasting Antibac",
+    "aim": "Buff",
+    "desc": "Each stack decreases DMG taken by #1[i]%. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
+    "type": "DMG Received Reduction",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Standard_Pam_ElationControl",
+    "realName": "Work Is Bliss!",
+    "aim": "Other",
+    "desc": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG equal to #2[i]% of the target's Max HP, and gains #3[i] Punchline(s). After using Skill, triggers the \"Pristine\" effect and recovers #4[i] Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active.",
+    "type": "Deep Clean",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue01",
+      "MDF_PropertyValue02",
+      "MDF_PropertyValue03",
+      "MDF_PropertyValue04"
+    ]
+  },
+  {
+    "name": "Modifier_Monster_W5_Pam_Rage",
+    "realName": "Steam Wash",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Modifier_Monster_W5_PamPart_DefenceDown",
+    "realName": "Sloppy",
+    "aim": "Debuff",
+    "desc": "DEF decreases by #1[i]%.",
+    "type": "DEF Reduction",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Monster_W3_Clock_03_Charge",
+    "realName": "Strength Boost!",
+    "aim": "Other",
+    "desc": "Uses \"Windmill Defacer\" in the next action.",
+    "type": "Charging",
+    "perma": true
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>",
     "realName": "Duel",
     "aim": "Other",
@@ -5771,6 +5814,184 @@ let modifiersEnemy = [
       "MDF_SpeedAddedRatio",
       "MDF_DamageReduce",
       "DeadLock_HP_CurrentValue"
+    ]
+  },
+  {
+    "name": "Modifier_Monster_W5_Pam_Charge",
+    "realName": "Raring to Go",
+    "aim": "Other",
+    "desc": "Uses \"Saturation Cleaning!\" in the next action.",
+    "type": "Charging",
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_Pam_Protect_Weakness",
+    "realName": "Weakness Protected",
+    "aim": "Other",
+    "desc": "When \"Alloy Mechatron: King Pom-Pom\" is in the \"Raring to Go\" state, this unit's Toughness cannot be reduced.",
+    "type": "Weakness Protected",
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_Pam_SummonedMinions_DamageUp",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_DamageAddedRatio",
+      "MDF_BuffMaxLayer"
+    ]
+  },
+  {
+    "name": "Enemy_W2_Argenti_IF_EX_PowerUpAllDark",
+    "realName": "undefined",
+    "aim": "Buff",
+    "desc": "undefined",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ShowValue1",
+      "MDF_ShowValue2"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Ranger_Main_SpeedUp",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_SpeedUp"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Ranger_Main_DamageUp",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_DamageUp"
+    ]
+  },
+  {
+    "name": "AvatarChange_W5_Ranger_Status",
+    "realName": "Daybreak Will",
+    "aim": "Other",
+    "desc": "Upon reaching 4 stacks, immediately launches \"Daybreak Rondo's\" Follow-Up ATK.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "AvatarChange_W5_Ranger_Shield",
+    "realName": "Daybreak Temperance",
+    "aim": "Other",
+    "desc": "DMG taken decreases. After enemy target takes action, this unit gains 1 stack of \"Daybreak Will.\"",
+    "type": "Daybreak Temperance",
+    "perma": false
+  },
+  {
+    "name": "Enemy_W5_Ranger_Main_Ultra",
+    "realName": "Ultimate Daybreak",
+    "aim": "Buff",
+    "desc": "Cannot be knocked down. Ultimate DMG greatly increases.",
+    "type": "Ultimate Daybreak",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Ranger_Shield_Quantum",
+    "realName": "Daybreak Forcefield",
+    "aim": "Buff",
+    "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Quantum attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "type": "Daybreak Forcefield",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Ranger_Shield_Fire",
+    "realName": "Daybreak Forcefield",
+    "aim": "Buff",
+    "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Fire-Type attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "type": "Daybreak Forcefield",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Ranger_Shield_Imaginary",
+    "realName": "Daybreak Forcefield",
+    "aim": "Buff",
+    "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Imaginary-Type attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "type": "Daybreak Forcefield",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Ranger_Shield_Physical",
+    "realName": "Daybreak Forcefield",
+    "aim": "Buff",
+    "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Physical-Type attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
+    "type": "Daybreak Forcefield",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Ranger_Debuff_Quantum",
+    "realName": "Disheartened",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]% and Quantum RES decreases by #2[i]%.",
+    "type": "Disheartened",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio",
+      "MDF_ResistanceDelta"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Ranger_Debuff_Fire",
+    "realName": "Disheartened",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]% and Fire RES decreases by #2[i]%.",
+    "type": "Disheartened",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio",
+      "MDF_ResistanceDelta"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Ranger_Debuff_Imaginary",
+    "realName": "Disheartened",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]% and Imaginary RES decreases by #2[i]%.",
+    "type": "Disheartened",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio",
+      "MDF_ResistanceDelta"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Ranger_Debuff_Physical",
+    "realName": "Disheartened",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]% and Physical RES decreases by #2[i]%.",
+    "type": "Disheartened",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio",
+      "MDF_ResistanceDelta"
+    ]
+  },
+  {
+    "name": "W5_PamPart_EnergyBarLayer_ForShow",
+    "realName": "Extremeflash Charge",
+    "aim": "Other",
+    "desc": "The current Charge Value is at #1[i] points. When Charge Value reaches #2[i] points, immediately gains 1 extra turn and gains access to Enhanced Basic ATK.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_EnergyBarLayer",
+      "MDF_EnergyBarLayer_Max"
     ]
   }
 ]
