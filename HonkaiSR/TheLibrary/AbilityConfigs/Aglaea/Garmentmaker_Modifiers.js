@@ -510,7 +510,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
       "stackData": [],
-      "latentQueue": []
+      "latentQueue": [
+        "BattleEventCount"
+      ]
     }
   ],
   "references": []
