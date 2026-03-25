@@ -7366,6 +7366,7 @@ const megaParsingFuckeryPain = {
             "isRemove",
             "resolveToSubGroups",
             "canKillSubGroups",
+            "team",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Shared HP Group");
 
@@ -7379,6 +7380,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.removeShields,"Remove Shields")}
             ${getStandardNameDisplay(initialCounter,parseRef.resolveToSubGroups,"Resolve to Sub-Groups")}
             ${getStandardNameDisplay(initialCounter,parseRef.canKillSubGroups,"Can Kill Sub-Groups")}
+            ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
 
         </div>`;
     },
@@ -10098,6 +10100,7 @@ const megaParsingFuckeryPain = {
 
             "modifierFunctions",
             "subModList",
+            "copySubModifiers",
             "dynamicStringsArray",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modifier Construction");
@@ -10190,6 +10193,8 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.addStacksPerTrigger,"Stacks/Trigger")}
                 ${getStandardNameDisplay(initialCounter,parseRef.type,"Type")}
                 ${getStandardNameDisplay(initialCounter,parseRef.functionalTurn,"Functional Turn")}
+                ${getStandardNameDisplay(initialCounter,parseRef.copySubModifiers,"Copy Sub-Mods")}
+                
                 
                 ${getStandardNameDisplay(initialCounter,parseRef.effectName && parseRef.effectName != parseRef.statusName ? parseRef.effectName : undefined,"Effect")}
 

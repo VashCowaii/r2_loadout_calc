@@ -11741,7 +11741,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "SD Civilian Mechatron"
   },
@@ -11817,7 +11817,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Rocking Rebel (Bug)"
     },
     "groupName": "Rocking Rebel"
@@ -11833,7 +11833,7 @@ let basicEnemyList = {
     },
     "5013031": {
       "5013031": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Canvas Peacock (Bug)"
     },
     "groupName": "Canvas Peacock"
@@ -11847,7 +11847,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5013041": {
       "5013041": {
@@ -11857,7 +11857,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daybreak Squadron: Azurewing"
     },
     "groupName": "Daybreak Squadron: Azurewing"
@@ -11871,7 +11871,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5013051": {
       "5013051": {
@@ -11881,7 +11881,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daybreak Squadron: Blazeweaver"
     },
     "groupName": "Daybreak Squadron: Blazeweaver"
@@ -11895,7 +11895,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5013061": {
       "5013061": {
@@ -11905,7 +11905,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daybreak Squadron: Dawnlance"
     },
     "groupName": "Daybreak Squadron: Dawnlance"
@@ -11919,7 +11919,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5013071": {
       "5013071": {
@@ -11929,7 +11929,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daybreak Squadron: Cinderborne"
     },
     "groupName": "Daybreak Squadron: Cinderborne"
@@ -18355,13 +18355,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Alloy Pommy\""
     },
     "5013090": {
       "5013090": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daybreak Squadron"
     },
     "5014011": {

@@ -1481,5 +1481,57 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Punklorde Stage Zero": {
+    "name": "Punklorde Stage Zero",
+    "setID": 325,
+    "desc": [
+      "Increases the wearer's Elation by 8%. When Elation reaches 40%/80% for the first time in combat, increases the wearer's CRIT DMG by 20%/32%."
+    ],
+    "icon": "icon/relic/325.png",
+    "fixedStats": {
+      "2": {
+        "ElationDMGAll": 0.08
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.08,
+        0.4,
+        0.8,
+        0.2,
+        0.32
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "City of Converging Stars": {
+    "name": "City of Converging Stars",
+    "setID": 326,
+    "desc": [
+      "When the wearer uses Follow-Up ATK, increases ATK by 24% for 2 turn(s). When an enemy target gets defeated, increases CRIT DMG for all allies by 12% in the current battle. This effect cannot stack."
+    ],
+    "icon": "icon/relic/326.png",
+    "fixedStats": {
+      "2": {},
+      "4": {}
+    },
+    "params": [
+      [
+        0.24,
+        2,
+        0.12
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }

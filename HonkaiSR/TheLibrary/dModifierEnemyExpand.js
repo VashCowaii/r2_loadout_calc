@@ -5785,7 +5785,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W5_PamPart_DefenceDown",
+    "name": "<a class=\"gModGreen\" id=\"-615106680\">Modifier_Monster_W5_PamPart_DefenceDown</a>",
     "realName": "Sloppy",
     "aim": "Debuff",
     "desc": "DEF decreases by #1[i]%.",
@@ -5796,7 +5796,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Clock_03_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1466426252\">Monster_W3_Clock_03_Charge</a>",
     "realName": "Strength Boost!",
     "aim": "Other",
     "desc": "Uses \"Windmill Defacer\" in the next action.",
@@ -5857,7 +5857,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Ranger_Main_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -5868,7 +5868,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Ranger_Main_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-1643569913\">Enemy_W5_Ranger_Main_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -5895,7 +5895,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W5_Ranger_Main_Ultra",
+    "name": "<a class=\"gModGreen\" id=\"-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>",
     "realName": "Ultimate Daybreak",
     "aim": "Buff",
     "desc": "Cannot be knocked down. Ultimate DMG greatly increases.",
@@ -5903,7 +5903,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Ranger_Shield_Quantum",
+    "name": "<a class=\"gModGreen\" id=\"743513856\">Enemy_W5_Ranger_Shield_Quantum</a>",
     "realName": "Daybreak Forcefield",
     "aim": "Buff",
     "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Quantum attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
@@ -5911,7 +5911,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Ranger_Shield_Fire",
+    "name": "<a class=\"gModGreen\" id=\"-1260475625\">Enemy_W5_Ranger_Shield_Fire</a>",
     "realName": "Daybreak Forcefield",
     "aim": "Buff",
     "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Fire-Type attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
@@ -5919,7 +5919,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Ranger_Shield_Imaginary",
+    "name": "<a class=\"gModGreen\" id=\"304872220\">Enemy_W5_Ranger_Shield_Imaginary</a>",
     "realName": "Daybreak Forcefield",
     "aim": "Buff",
     "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Imaginary-Type attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
@@ -5927,7 +5927,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Ranger_Shield_Physical",
+    "name": "<a class=\"gModGreen\" id=\"-832135330\">Enemy_W5_Ranger_Shield_Physical</a>",
     "realName": "Daybreak Forcefield",
     "aim": "Buff",
     "desc": "In this state, Daybreak Squadron will continuously release \"Shadow Dance of the Daybreak Blade,\" and is immune to Crowd Control debuffs. This unit's Toughness cannot be reduced. When hit by Physical-Type attacks, it will immediately take action. After being hit a certain number of times, it will use \"Daybreak Dispersal.\"",
@@ -5935,7 +5935,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Ranger_Debuff_Quantum",
+    "name": "<a class=\"gModGreen\" id=\"-370236757\">Enemy_W5_Ranger_Debuff_Quantum</a>",
     "realName": "Disheartened",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]% and Quantum RES decreases by #2[i]%.",
@@ -5947,7 +5947,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Ranger_Debuff_Fire",
+    "name": "<a class=\"gModGreen\" id=\"-1680582294\">Enemy_W5_Ranger_Debuff_Fire</a>",
     "realName": "Disheartened",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]% and Fire RES decreases by #2[i]%.",
@@ -5959,7 +5959,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Ranger_Debuff_Imaginary",
+    "name": "<a class=\"gModGreen\" id=\"-443896273\">Enemy_W5_Ranger_Debuff_Imaginary</a>",
     "realName": "Disheartened",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]% and Imaginary RES decreases by #2[i]%.",
@@ -5971,7 +5971,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Ranger_Debuff_Physical",
+    "name": "<a class=\"gModGreen\" id=\"-415333397\">Enemy_W5_Ranger_Debuff_Physical</a>",
     "realName": "Disheartened",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]% and Physical RES decreases by #2[i]%.",

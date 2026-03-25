@@ -9956,5 +9956,153 @@ let lightcones = {
       -30,
       1
     ]
+  },
+  "The Finale of a Lie": {
+    "lightconeID": 23056,
+    "name": "The Finale of a Lie",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 529.2,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.18
+      },
+      "2": {
+        "CritRateBase": 0.21
+      },
+      "3": {
+        "CritRateBase": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.27
+      },
+      "5": {
+        "CritRateBase": 0.3
+      }
+    },
+    "skillName": "Subsume",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. At the start of battle or for every #2[i] instance(s) of Follow-Up ATK the wearer uses, the wearer gains \"Umbra Devourer,\" lasting for #3[i] turn(s). While the wearer holds \"Umbra Devourer,\" increases ATK by #4[i]% and increases the DMG taken by all enemies by #5[i]%. Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.18,
+        4,
+        3,
+        0.4,
+        0.2
+      ],
+      [
+        0.21,
+        4,
+        3,
+        0.5,
+        0.225
+      ],
+      [
+        0.24,
+        4,
+        3,
+        0.6,
+        0.25
+      ],
+      [
+        0.27,
+        4,
+        3,
+        0.7,
+        0.275
+      ],
+      [
+        0.3,
+        4,
+        3,
+        0.8,
+        0.3
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23056.png",
+    "preview": "image/light_cone_preview/23056.png",
+    "portrait": "image/light_cone_portrait/23056.png",
+    "imageOffset": [
+      0,
+      -16,
+      1
+    ]
+  },
+  "Elation Brimming With Blessings": {
+    "lightconeID": 24006,
+    "name": "Elation Brimming With Blessings",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.2
+      },
+      "2": {
+        "ATK%": 0.25
+      },
+      "3": {
+        "ATK%": 0.3
+      },
+      "4": {
+        "ATK%": 0.35
+      },
+      "5": {
+        "ATK%": 0.4
+      }
+    },
+    "skillName": "Opening",
+    "desc": "Increases the wearer's ATK by #1[i]%. After the wearer uses Skill or Ultimate on one ally character, increases the target's Elation stat by #2[i]% for #3[i] turn(s).",
+    "params": [
+      [
+        0.2,
+        0.12,
+        2
+      ],
+      [
+        0.25,
+        0.15,
+        2
+      ],
+      [
+        0.3,
+        0.18,
+        2
+      ],
+      [
+        0.35,
+        0.21,
+        2
+      ],
+      [
+        0.4,
+        0.24,
+        2
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24006.png",
+    "preview": "image/light_cone_preview/24006.png",
+    "portrait": "image/light_cone_portrait/24006.png",
+    "imageOffset": [
+      0,
+      69,
+      1.05
+    ]
   }
 }

@@ -2978,11 +2978,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
-                    "operator": "Variables[0] (BattleEventCount) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                    "displayLines": "(BattleEventCount * MDF_Count2)",
+                    "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
+                    "displayLines": "(MDF_AttackUp * MDF_Count2)",
                     "constants": [],
                     "variables": [
-                      "BattleEventCount",
+                      "MDF_AttackUp",
                       "MDF_Count2"
                     ]
                   }
@@ -3034,11 +3034,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (BattleEventCount) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                        "displayLines": "(BattleEventCount * MDF_Count2)",
+                        "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
+                        "displayLines": "(MDF_AttackUp * MDF_Count2)",
                         "constants": [],
                         "variables": [
-                          "BattleEventCount",
+                          "MDF_AttackUp",
                           "MDF_Count2"
                         ]
                       }
@@ -3092,11 +3092,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (BattleEventCount) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                        "displayLines": "(BattleEventCount * MDF_Count2)",
+                        "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
+                        "displayLines": "(MDF_AttackUp * MDF_Count2)",
                         "constants": [],
                         "variables": [
-                          "BattleEventCount",
+                          "MDF_AttackUp",
                           "MDF_Count2"
                         ]
                       }
@@ -3150,11 +3150,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (BattleEventCount) || Variables[1] (MDF_Count2) || MUL || RETURN",
-                        "displayLines": "(BattleEventCount * MDF_Count2)",
+                        "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
+                        "displayLines": "(MDF_AttackUp * MDF_Count2)",
                         "constants": [],
                         "variables": [
-                          "BattleEventCount",
+                          "MDF_AttackUp",
                           "MDF_Count2"
                         ]
                       }
@@ -5592,7 +5592,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
           "stackData": [],
-          "latentQueue": []
+          "latentQueue": [
+            "BattleEventCount"
+          ]
         }
       ],
       "references": []

@@ -6966,7 +6966,7 @@ let characters = {
         "id": "110206",
         "name": "Shattering Shambles",
         "rank": 6,
-        "desc": "After Seele uses Ultimate, inflict the attacked enemy with \"Butterfly Flurry\" for 1 turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum Additional DMG equal to 15% of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's Additional DMG triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
+        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the attacked enemy target for 1 turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum Additional DMG equal to 15% of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's Additional DMG triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
         "icon": "icon/skill/1102_rank6.png",
         "paramsEido": [
           0.15,
@@ -62486,6 +62486,823 @@ let characters = {
       43,
       28,
       0.66
+    ],
+    "isBuffed": false
+  },
+  "Ashveil": {
+    "internalID": 1504,
+    "name": "Ashveil",
+    "path": "The Hunt",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 150,
+    "baseStats": {
+      "ATKBase": 776.1600000000001,
+      "DEFBase": 388.08000000000004,
+      "HPBase": 853.7760000000001,
+      "SPDBase": 106,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "150401",
+        "name": "Beware: Venture Not at Full Moon",
+        "rank": 1,
+        "desc": "While Ashveil is on the field, increases DMG taken by all enemies by 24%. When an enemy target's current HP percentage is 50% or lower, the DMG they take increases to 36%.",
+        "icon": "icon/skill/1504_rank1.png",
+        "paramsEido": [
+          0.24,
+          0.5,
+          0.36
+        ]
+      },
+      {
+        "id": "150402",
+        "name": "Knock: Where Snickers Echo",
+        "rank": 2,
+        "desc": "The max stack limit of \"Gluttony\" increases to 18. After each time Ashveil launches the enhanced Talent's Follow-Up ATK, refunds 35% of the removed \"Gluttony\" stacks.",
+        "icon": "icon/skill/1504_rank2.png",
+        "paramsEido": [
+          18,
+          0.35
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "150403",
+        "name": "Hush: Unsaid Between Friends",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1504_ultimate.png"
+      },
+      {
+        "id": "150404",
+        "name": "Heed: Swallow Truth Whole",
+        "rank": 4,
+        "desc": "When Ashveil uses Ultimate, increases ATK by 40% for 3 turn(s).",
+        "icon": "icon/skill/1504_rank4.png",
+        "paramsEido": [
+          0.4,
+          3
+        ]
+      },
+      {
+        "id": "150405",
+        "name": "Caution: Sleuth Turns Slayer",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1504_skill.png"
+      },
+      {
+        "id": "150406",
+        "name": "Finale: And Then There Were None",
+        "rank": 6,
+        "desc": "When the \"Bait\" exists on the field, reduces all enemies' All-Type RES by 20%. For every 1 stack of \"Gluttony\" Ashveil has gained, the DMG dealt increases by 4%. This effect can stack up to 30 time(s).",
+        "icon": "icon/skill/1504_rank6.png",
+        "paramsEido": [
+          0.2,
+          0.04,
+          30
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Talons: Inculcate Decorum": {
+          "variant1": {
+            "skillID": 150401,
+            "trigger": "Skill01",
+            "name": "Talons: Inculcate Decorum",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Ashveil's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Ashveil_00_Skill01_Camera",
+              "Avatar_Ashveil_00_Skill01_Phase01",
+              "Avatar_Ashveil_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Flog: Smite Evil": {
+          "variant1": {
+            "skillID": 150402,
+            "trigger": "Skill02",
+            "name": "Flog: Smite Evil",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Makes one designated enemy become the \"Bait,\" dealing it Lightning DMG equal to #1[i]% of Ashveil's ATK. If the target is already the \"Bait,\" additionally deals it Lightning DMG equal to #3[i]% of Ashveil's ATK, and recovers #5[i] Skill Point(s). When the \"Bait\" exists on the field, all enemies' DEF gets reduced by #4[i]%.\\nWhen there is no \"Bait\" on the field, Ashveil immediately makes the enemy target with the lowest HP on the field become the \"Bait.\" The \"Bait\" state only takes effect on the most recently applied target.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1,
+                0.5,
+                0.2,
+                1
+              ],
+              "2": [
+                1.1,
+                1,
+                0.55,
+                0.22,
+                1
+              ],
+              "3": [
+                1.2,
+                1,
+                0.6,
+                0.24,
+                1
+              ],
+              "4": [
+                1.3,
+                1,
+                0.65,
+                0.26,
+                1
+              ],
+              "5": [
+                1.4,
+                1,
+                0.7,
+                0.28,
+                1
+              ],
+              "6": [
+                1.5,
+                1,
+                0.75,
+                0.3,
+                1
+              ],
+              "7": [
+                1.625,
+                1,
+                0.8125,
+                0.325,
+                1
+              ],
+              "8": [
+                1.75,
+                1,
+                0.875,
+                0.35,
+                1
+              ],
+              "9": [
+                1.875,
+                1,
+                0.9375,
+                0.375,
+                1
+              ],
+              "10": [
+                2,
+                1,
+                1,
+                0.4,
+                1
+              ],
+              "11": [
+                2.1,
+                1,
+                1.05,
+                0.42,
+                1
+              ],
+              "12": [
+                2.2,
+                1,
+                1.1,
+                0.44,
+                1
+              ],
+              "13": [
+                2.3,
+                1,
+                1.15,
+                0.46,
+                1
+              ],
+              "14": [
+                2.4,
+                1,
+                1.2,
+                0.48,
+                1
+              ],
+              "15": [
+                2.5,
+                1,
+                1.25,
+                0.5,
+                1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ashveil_00_Skill02_Camera",
+              "Avatar_Ashveil_00_Skill02_Phase01",
+              "Avatar_Ashveil_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Banquet: Insatiable Appetite": {
+          "variant1": {
+            "skillID": 150403,
+            "trigger": "Skill03",
+            "name": "Banquet: Insatiable Appetite",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Makes one designated enemy become the \"Bait,\" dealing it Lightning DMG equal to #1[i]% of Ashveil's ATK. Then, immediately launches 1 instance of enhanced Talent's Follow-Up ATK against the \"Bait.\" And Ashveil gains #2[i] Charge.\\nThis enhanced Talent's Follow-Up ATK does not consume Charge. Whenever \"Gluttony\" reaches #3[i] stack(s) or more, consumes #3[i] stack(s) of \"Gluttony\" to additionally deal 1 instance of Lightning DMG equal to #4[i]% of Ashveil's ATK. And when this instance of Follow-Up ATK deals a killing blow to the target, it will continue to deal DMG to a new \"Bait.\" This triggers until \"Gluttony\" becomes lower than #3[i] stack(s). If all enemy targets currently on the field have been dealt killing blows, the enhanced Talent's Follow-Up ATK will immediately end.",
+            "energyCost": 150,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                3,
+                4,
+                1
+              ],
+              "2": [
+                2.2,
+                3,
+                4,
+                1.1
+              ],
+              "3": [
+                2.4,
+                3,
+                4,
+                1.2
+              ],
+              "4": [
+                2.6,
+                3,
+                4,
+                1.3
+              ],
+              "5": [
+                2.8,
+                3,
+                4,
+                1.4
+              ],
+              "6": [
+                3,
+                3,
+                4,
+                1.5
+              ],
+              "7": [
+                3.25,
+                3,
+                4,
+                1.625
+              ],
+              "8": [
+                3.5,
+                3,
+                4,
+                1.75
+              ],
+              "9": [
+                3.75,
+                3,
+                4,
+                1.875
+              ],
+              "10": [
+                4,
+                3,
+                4,
+                2
+              ],
+              "11": [
+                4.2,
+                3,
+                4,
+                2.1
+              ],
+              "12": [
+                4.4,
+                3,
+                4,
+                2.2
+              ],
+              "13": [
+                4.6,
+                3,
+                4,
+                2.3
+              ],
+              "14": [
+                4.8,
+                3,
+                4,
+                2.4
+              ],
+              "15": [
+                5,
+                3,
+                4,
+                2.5
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ashveil_00_Skill03_Camera",
+              "Avatar_Ashveil_00_Skill03_Phase01",
+              "Avatar_Ashveil_00_Skill03_Phase02",
+              "Avatar_Ashveil_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Rancor: Enmity Reprisal": {
+          "variant1": {
+            "skillID": 150404,
+            "trigger": "SkillP01",
+            "name": "Rancor: Enmity Reprisal",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "Ashveil has an initial Charge of #1[i] and can hold up to a max of #2[i]. After the \"Bait\" gets attacked by other ally targets, Ashveil regenerates a fixed amount of #7[i] Energy, then consumes #3[i] Charge to launch Follow-Up ATK against the \"Bait,\" dealing Lightning DMG equal to #4[i]% of Ashveil's ATK. Afterwards, gains #5[i] stack(s) of \"Gluttony,\" which can stack up to #6[i].",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                3,
+                1,
+                1,
+                2,
+                12,
+                8
+              ],
+              "2": [
+                2,
+                3,
+                1,
+                1.1,
+                2,
+                12,
+                8
+              ],
+              "3": [
+                2,
+                3,
+                1,
+                1.2,
+                2,
+                12,
+                8
+              ],
+              "4": [
+                2,
+                3,
+                1,
+                1.3,
+                2,
+                12,
+                8
+              ],
+              "5": [
+                2,
+                3,
+                1,
+                1.4,
+                2,
+                12,
+                8
+              ],
+              "6": [
+                2,
+                3,
+                1,
+                1.5,
+                2,
+                12,
+                8
+              ],
+              "7": [
+                2,
+                3,
+                1,
+                1.625,
+                2,
+                12,
+                8
+              ],
+              "8": [
+                2,
+                3,
+                1,
+                1.75,
+                2,
+                12,
+                8
+              ],
+              "9": [
+                2,
+                3,
+                1,
+                1.875,
+                2,
+                12,
+                8
+              ],
+              "10": [
+                2,
+                3,
+                1,
+                2,
+                2,
+                12,
+                8
+              ],
+              "11": [
+                2,
+                3,
+                1,
+                2.1,
+                2,
+                12,
+                8
+              ],
+              "12": [
+                2,
+                3,
+                1,
+                2.2,
+                2,
+                12,
+                8
+              ],
+              "13": [
+                2,
+                3,
+                1,
+                2.3,
+                2,
+                12,
+                8
+              ],
+              "14": [
+                2,
+                3,
+                1,
+                2.4,
+                2,
+                12,
+                8
+              ],
+              "15": [
+                2,
+                3,
+                1,
+                2.5,
+                2,
+                12,
+                8
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ashveil_00_PassiveSkill01",
+              "Avatar_Ashveil_00_PassiveSkill_Camera",
+              "Avatar_Ashveil_00_Passive_FirstInsert_Camera",
+              "Avatar_Ashveil_00_Passive_EnhanceContinueInsert_Camera",
+              "Avatar_Ashveil_00_Insert_SelectTargetSelf",
+              "Avatar_Ashveil_00_Insert_SelectTargetSelf_Enhance",
+              "Avatar_Ashveil_00_Insert",
+              "Avatar_Ashveil_00_Insert_Enhance",
+              "Avatar_Ashveil_00_Passive_FirstInsert_ForTest1"
+            ],
+            "toughnessList": [
+              15,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Devour: O Loathsome Hand": {
+          "variant1": {
+            "skillID": 150407,
+            "trigger": "SkillMaze",
+            "name": "Devour: O Loathsome Hand",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, inflicts Daze on enemies within a set area for #1[i] second(s). Dazed enemies will not actively attack ally targets.\\nWhen entering combat via actively attacking a Dazed enemy, deals Lightning DMG to all enemies equal to #2[i]% of Ashveil's ATK, and grants Ashveil #3[i] Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                1,
+                1
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Ashveil_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1504_basic_atk.png",
+        "skillRef": {
+          "skillName": "Talons: Inculcate Decorum",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1504_skill.png",
+        "skillRef": {
+          "skillName": "Flog: Smite Evil",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1504_ultimate.png",
+        "skillRef": {
+          "skillName": "Banquet: Insatiable Appetite",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1504_talent.png",
+        "skillRef": {
+          "skillName": "Rancor: Enmity Reprisal",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1504_technique.png",
+        "skillRef": {
+          "skillName": "Devour: O Loathsome Hand",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Damnation Trail",
+        "icon": "icon/skill/1504_skilltree1.png",
+        "desc": "When Ashveil uses Skill/Ultimate, gains #1[i]/#2[i] stacks of \"Gluttony.\" During Ashveil's Follow-Up ATK, for every #3[i] enemy(ies) suffer a killing blow, Ashveil gains #4[i] stack(s) of \"Gluttony.\"",
+        "params": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Phantom Limb",
+        "icon": "icon/skill/1504_skilltree2.png",
+        "desc": "DMG dealt by Ashveil's Follow-Up ATK increases by #1[i]%. And for every #2[i] stack(s) of \"Gluttony\" in possession, DMG dealt by Follow-Up ATK additionally increases by #3[i]%.",
+        "params": [
+          0.8,
+          1,
+          0.1
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point08": {
+        "name": "First Fang",
+        "icon": "icon/skill/1504_skilltree3.png",
+        "desc": "While Ashveil is on the field, CRIT DMG dealt by ally targets increases by #1[i]%, and CRIT DMG dealt by ally target's Follow-Up ATK additionally increases by #2[i]%.",
+        "params": [
+          0.4,
+          0.8
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.032
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.048
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.064
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1504.png",
+    "preview": "image/character_preview/1504.png",
+    "portrait": "image/character_portrait/1504.png",
+    "bannerOffsets": [
+      -26.43,
+      -2.4,
+      0.5,
+      -26.43,
+      -2.4,
+      0.5,
+      -26.43,
+      -2.4,
+      0.5
     ],
     "isBuffed": false
   },
