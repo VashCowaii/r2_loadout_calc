@@ -52,7 +52,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -62,16 +62,6 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "variableName": "_BPCount_Sum",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Turn [Action-End Phase]",
-          "execute": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_PhaseFlag",
               "value": 0
             }
           ]
