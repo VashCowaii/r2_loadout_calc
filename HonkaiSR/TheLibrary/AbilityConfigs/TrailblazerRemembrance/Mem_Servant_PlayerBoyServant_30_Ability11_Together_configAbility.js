@@ -29,7 +29,9 @@ const configAbility = {
             "Skill11_Stance"
           ]
         },
-        "Tags": null,
+        "Tags": [
+          "Joint-Attack"
+        ],
         "attackType": "Basic ATK",
         "EnergyGainPercent": "100%"
       },

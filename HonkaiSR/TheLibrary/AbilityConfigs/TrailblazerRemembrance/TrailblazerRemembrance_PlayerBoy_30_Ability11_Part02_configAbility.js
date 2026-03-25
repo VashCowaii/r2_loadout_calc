@@ -51,7 +51,9 @@ const configAbility = {
             "AOE Toughness Value"
           ]
         },
-        "Tags": null,
+        "Tags": [
+          "Joint-Attack"
+        ],
         "EnergyGainPercent": "100%"
       }
     },
