@@ -840,7 +840,7 @@ let modifiersExtraEffects = [
   },
   {
     "name": "Obsession — Trait",
-    "desc": "When ally targets enter combat or when a memosprite is summoned, gain #1[i] stack(s) of \"Obsession.\" After taking action, there is a #2[i]% fixed chance to gain 1 stack of \"Obsession.\" For each Blessing of Remembrance in possession, the fixed chance additionally increases by #3[i]%. A max of #4[i] Blessings of Remembrance can be taken into account.",
+    "desc": "When ally targets enter combat or when a memosprite is summoned, gain #1[i] stack(s) of \"Obsession.\" When taking action, there is a #2[i]% fixed chance to gain 1 stack of \"Obsession.\" For each Blessing of Remembrance in possession, the fixed chance additionally increases by #3[i]%. A max of #4[i] Blessings of Remembrance can be taken into account.",
     "params": [
       8,
       0.26,
@@ -1292,11 +1292,87 @@ let modifiersExtraEffects = [
     "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
   },
   {
+    "name": "Reverse Critical Boost",
+    "desc": "Before an enemy target is attacked, for each stack of \"Reverse Critical Boost\" they possess, they take Wind Additional DMG equal to #1[i]% of the attacker's ATK after being hit. At the start of the enemy target's turn, \"Reverse Critical Boost\" stacks are cleared. Up to a maximum of #2[i] stacks can be held at any time.",
+    "params": [
+      0.4,
+      20
+    ]
+  },
+  {
+    "name": "Harmonize",
+    "desc": "Increases the holder's Break DMG taken by #1[i]%. When entering or exiting the Weakness Broken state, take Quantum Break DMG equal to #2[i]% base DMG for each stack of \"Harmonize.\" This effect stacks up to #3[i] times and is cleared when recovering from Weakness Break.",
+    "params": [
+      0.25,
+      0.6,
+      40
+    ]
+  },
+  {
+    "name": "Dealer",
+    "desc": "A \"Dealer\" with #1[i] SPD appears on the Action Order. For every 1 Charge, increases the SPD of Neutral Combat Events, all ally targets, and their summons by #2[i]. When the \"Dealer\" takes action, it deals DMG of a random Type equal to #4[i]% of base DMG to a random enemy #3[i] time(s). After Aha takes action, immediately triggers an additional \"Dealer\" action.",
+    "params": [
+      100,
+      2,
+      6,
+      2.5
+    ]
+  },
+  {
+    "name": "Reverse Critical Boost — Trait",
+    "desc": "After an ally target uses an attack, inflicts #1[i] stack(s) of \"Reverse Critical Boost\" on the attack target. If only 1 enemy target is attacked, inflicts #2[i] stack(s) instead. For every Blessing of The Hunt owned, increases the CRIT DMG of all ally targets by #3[i]%, up to a maximum of #4[i] Blessing(s) of The Hunt.",
+    "params": [
+      1,
+      2,
+      0.06,
+      8
+    ]
+  },
+  {
+    "name": "Harmonize — Trait",
+    "desc": "Increases ally target's Weakness Break Efficiency by #1[i]%. Every Blessing of Harmony in possession additionally increases Weakness Break Efficiency by #2[i]%. A max of #3[i] Blessings of Harmony can be taken into account. When Breaking enemy target's Weakness, inflicts #4[i] stack(s) of \"Harmonize\" to them.",
+    "params": [
+      0.24,
+      0.02,
+      8,
+      5
+    ]
+  },
+  {
+    "name": "Dealer — Trait",
+    "desc": "The \"Dealer\" gains 1 Charge permanently every time they take action. For every 1 Blessing of Elation owned, the \"Dealer's\" DMG multiplier increases by #1[i]% of its original value. Up to a max of #2[i] Blessing(s) of Elation will be taken into account for this effect.",
+    "params": [
+      0.3,
+      8
+    ]
+  },
+  {
+    "name": "Blazar",
+    "desc": "Changes to HP/Shield are converted into \"Blazar\" Charge, which can be used to deal DMG and other effects. The Charge is cleared at the end of each turn and cannot exceed #1[i]% of the sum of Max HP and Shield.",
+    "params": [
+      5
+    ]
+  },
+  {
+    "name": "Blazar — Trait",
+    "desc": "After being hit, deals Additional DMG equal to #1[i]% of \"Blazar\" to the attacker. This DMG cannot defeat enemy targets. The Base Value of \"Blazar\" is no less than #2[i]% of the sum of Max HP and Shield. For every Destruction Blessing owned, increases by an additional #3[i]%, up to #4[i] Blessing(s) of Destruction.",
+    "params": [
+      0.8,
+      0.3,
+      0.06,
+      8
+    ]
+  },
+  {
     "name": "Participant ID",
     "desc": "The Participant ID determines the order in which Elation Skills are used during the Aha Instant. The lower the Participant ID, the earlier the Elation Skill will be used."
   },
   {
     "name": "Merrymake",
     "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
+  },
+  {
+    "name": "Work Is Bliss!",
+    "desc": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG to the attack target and gains Punchline(s). After using Skill, triggers the \"Pristine\" effect, restoring Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active."
   }
 ]
