@@ -5749,7 +5749,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W5_Pam_DefenceUp",
+    "name": "<a class=\"gModGreen\" id=\"-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>",
     "realName": "Lasting Antibac",
     "aim": "Buff",
     "desc": "Each stack decreases DMG taken by #1[i]%. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
@@ -5760,7 +5760,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_Pam_ElationControl",
+    "name": "<a class=\"gModGreen\" id=\"-624604894\">Standard_Pam_ElationControl</a>",
     "realName": "Work Is Bliss!",
     "aim": "Other",
     "desc": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG equal to #2[i]% of the target's Max HP, and gains #3[i] Punchline(s). After using Skill, triggers the \"Pristine\" effect and recovers #4[i] Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active.",
@@ -5774,7 +5774,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W5_Pam_Rage",
+    "name": "<a class=\"gModGreen\" id=\"1556520356\">Modifier_Monster_W5_Pam_Rage</a>",
     "realName": "Steam Wash",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -5817,7 +5817,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W5_Pam_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-1493708935\">Modifier_Monster_W5_Pam_Charge</a>",
     "realName": "Raring to Go",
     "aim": "Other",
     "desc": "Uses \"Saturation Cleaning!\" in the next action.",
@@ -5825,7 +5825,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W5_Pam_Protect_Weakness",
+    "name": "<a class=\"gModGreen\" id=\"-3818542\">Monster_W5_Pam_Protect_Weakness</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "When \"Alloy Mechatron: King Pom-Pom\" is in the \"Raring to Go\" state, this unit's Toughness cannot be reduced.",
@@ -5833,7 +5833,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W5_Pam_SummonedMinions_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-299555653\">Monster_W5_Pam_SummonedMinions_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",

@@ -435,6 +435,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5014015,
+    "lineCount": 7613,
+    "sizeCount": 283786
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 2034012,
     "lineCount": 7835,
     "sizeCount": 282134
@@ -836,6 +842,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 200177
   },
   {
+    "entryType": "enemy",
+    "enemyID": 5014020,
+    "lineCount": 5495,
+    "sizeCount": 198035
+  },
+  {
     "entryType": "char",
     "entryName": "Hysilens",
     "trimCharacterName": "Hysilens",
@@ -1215,6 +1227,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4064014,
+    "lineCount": 4438,
+    "sizeCount": 162568
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4064011,
     "lineCount": 4438,
     "sizeCount": 162475
@@ -1272,6 +1290,12 @@ let sizeLeaderboardArray = [
     "enemyID": 3024032,
     "lineCount": 4361,
     "sizeCount": 160679
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3024033,
+    "lineCount": 4361,
+    "sizeCount": 160673
   },
   {
     "entryType": "char",
@@ -2548,6 +2572,12 @@ let sizeLeaderboardArray = [
     "enemyID": 4063010,
     "lineCount": 1558,
     "sizeCount": 55050
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4063011,
+    "lineCount": 1558,
+    "sizeCount": 55023
   },
   {
     "entryType": "enemy",

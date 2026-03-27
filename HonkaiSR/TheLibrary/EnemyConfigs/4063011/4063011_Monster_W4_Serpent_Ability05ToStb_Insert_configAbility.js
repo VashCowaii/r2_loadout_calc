@@ -1,0 +1,165 @@
+const configAbility = {
+  "fileName": "4063011_Monster_W4_Serpent_Ability05ToStb_Insert",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    "Deleted bullshit",
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "ENEMIES_OBJECT_UNUSED__181"
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "addStacksPerTrigger": -1
+        }
+      ]
+    },
+    {
+      "name": "Update Displayed Energy Bar",
+      "entityClass": "Enemy",
+      "trigger": "SpEff_Trigger"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+      "valuePerStack": {
+        "MDF_RallyTransferRatio": {
+          "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+          "displayLines": "{[Skill05[1]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill05[1]]}"
+          ]
+        },
+        "MDF_Rally_HealPercentage": {
+          "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
+          "displayLines": "{[Skill05[2]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill05[2]]}"
+          ]
+        },
+        "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+          "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+          "displayLines": "{[Skill05[3]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill05[3]]}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-969691416\">Enemy_W4_Serpent_Charge_TriggerEff</a>"
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Imaginary",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+          "displayLines": "{[Skill05[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill05[0]]}"
+          ]
+        },
+        "Toughness": null,
+        "Tags": null,
+        "EnergyGainPercent": "100%"
+      }
+    },
+    "Trigger: Attack End",
+    {
+      "name": "Define Modifier-Specific Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifierName": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]",
+      "variableName": "MDF_Trigger",
+      "value": 0
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Level Entity}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1224800253\">W4_Serpent_BattleScore1</a>"
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "ENEMIES_OBJECT_UNUSED__181"
+      },
+      "passed": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+        }
+      ]
+    },
+    {
+      "name": "Change Character Transformation",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "phase": "Phase0",
+      "revertDefault": true
+    }
+  ],
+  "references": []
+}
