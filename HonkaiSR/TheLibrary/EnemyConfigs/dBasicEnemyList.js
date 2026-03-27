@@ -9255,7 +9255,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Harbinger of Death: Swarm Nightmare (Complete)"
     },
     "groupName": "Harbinger of Death: Swarm Nightmare"
@@ -11416,7 +11416,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ichor Memosprite: Winged Serpent (Bug)"
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
@@ -11487,7 +11487,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ichor Memosprite: Judge of Oblivion"
     },
     "groupName": "Ichor Memosprite: Judge of Oblivion"
@@ -11981,7 +11981,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "@SparxiConOfficial (Complete)"
     },
     "groupName": "@SparxiConOfficial"
@@ -12003,7 +12003,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Alloy Mechatron: King Pom-Pom"
   },
