@@ -16,5 +16,8 @@ const configAbility = {
       "isLock": false
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

@@ -127,5 +127,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-892037211\">Memosprite_Aglaea_Ability11_Mark</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

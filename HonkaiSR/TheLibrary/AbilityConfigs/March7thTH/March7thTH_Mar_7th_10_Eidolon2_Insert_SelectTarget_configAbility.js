@@ -104,5 +104,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"126431759\">M_Mar_7th_10_InsertCheck</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

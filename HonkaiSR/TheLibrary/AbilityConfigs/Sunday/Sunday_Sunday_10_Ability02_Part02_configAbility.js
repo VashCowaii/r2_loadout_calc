@@ -644,5 +644,8 @@ const configAbility = {
       "effectName": "DMG Boost",
       "statusName": "Benison of Paper and Rites"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

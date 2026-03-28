@@ -378,5 +378,8 @@ const configAbility = {
         "EnterBattlePlayTimes"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

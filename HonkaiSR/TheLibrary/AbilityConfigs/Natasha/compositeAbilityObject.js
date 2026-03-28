@@ -59,7 +59,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1397815058\">Natasha_Eidolon1_Check</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_Eidolon1_InsertAbility_Part01": {
       "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
@@ -78,7 +81,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_Eidolon1": {
       "fileName": "Natasha_Natasha_Eidolon1",
@@ -151,7 +157,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_Eidolon4": {
       "fileName": "Natasha_Natasha_Eidolon4",
@@ -198,7 +207,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_Trace02": {
       "fileName": "Natasha_Natasha_Trace02",
@@ -225,7 +237,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_TechniqueInLevel": {
       "fileName": "Natasha_Natasha_TechniqueInLevel",
@@ -353,7 +368,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_PassiveAbility01": {
       "fileName": "Natasha_Natasha_PassiveAbility01",
@@ -499,7 +517,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_Ability03_Part02": {
       "fileName": "Natasha_Natasha_Ability03_Part02",
@@ -698,7 +719,10 @@ const compositeAbilityObject = {
           "effectName": "Healing Over Time",
           "statusName": "Healing Over Time"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Natasha_Natasha_Ability03_Part01": {
       "fileName": "Natasha_Natasha_Ability03_Part01",
@@ -728,7 +752,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Natasha_Natasha_Ability03_EnterReady": {
       "fileName": "Natasha_Natasha_Ability03_EnterReady",
@@ -736,7 +763,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Natasha_Natasha_Ability02_Part02": {
       "fileName": "Natasha_Natasha_Ability02_Part02",
@@ -889,7 +919,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Natasha_Natasha_Ability02_Part01": {
       "fileName": "Natasha_Natasha_Ability02_Part01",
@@ -934,7 +967,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Natasha_Natasha_Ability01_Part02": {
       "fileName": "Natasha_Natasha_Ability01_Part02",
@@ -1011,7 +1047,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Natasha_Natasha_Ability01_Part01": {
       "fileName": "Natasha_Natasha_Ability01_Part01",
@@ -1039,7 +1078,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Natasha_Modifiers": {
       "fileName": "Natasha_Modifiers",

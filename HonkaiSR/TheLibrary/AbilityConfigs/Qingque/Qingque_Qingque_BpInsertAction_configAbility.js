@@ -16,5 +16,8 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

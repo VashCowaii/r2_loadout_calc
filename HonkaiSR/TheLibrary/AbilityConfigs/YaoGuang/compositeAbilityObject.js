@@ -69,7 +69,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Eidolon4": {
       "fileName": "YaoGuang_YaoGuang_Eidolon4",
@@ -77,7 +80,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Eidolon2": {
       "fileName": "YaoGuang_YaoGuang_Eidolon2",
@@ -85,7 +91,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Eidolon1": {
       "fileName": "YaoGuang_YaoGuang_Eidolon1",
@@ -144,7 +153,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Trace03": {
       "fileName": "YaoGuang_YaoGuang_Trace03",
@@ -198,7 +210,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Trace02": {
       "fileName": "YaoGuang_YaoGuang_Trace02",
@@ -272,7 +287,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Trace01": {
       "fileName": "YaoGuang_YaoGuang_Trace01",
@@ -568,7 +586,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_TechniqueInLevel": {
       "fileName": "YaoGuang_YaoGuang_TechniqueInLevel",
@@ -626,7 +647,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_PassiveAbility": {
       "fileName": "YaoGuang_YaoGuang_PassiveAbility",
@@ -768,7 +792,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability04_Part02": {
       "fileName": "YaoGuang_YaoGuang_Ability04_Part02",
@@ -987,7 +1014,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability04_Part01": {
       "fileName": "YaoGuang_YaoGuang_Ability04_Part01",
@@ -1017,7 +1047,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability03_Part02": {
       "fileName": "YaoGuang_YaoGuang_Ability03_Part02",
@@ -1282,7 +1315,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability03_Part01": {
       "fileName": "YaoGuang_YaoGuang_Ability03_Part01",
@@ -1312,7 +1348,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability03_EnterReady": {
       "fileName": "YaoGuang_YaoGuang_Ability03_EnterReady",
@@ -1320,7 +1359,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability02_Part02": {
       "fileName": "YaoGuang_YaoGuang_Ability02_Part02",
@@ -1387,7 +1429,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability02_Part01": {
       "fileName": "YaoGuang_YaoGuang_Ability02_Part01",
@@ -1416,7 +1461,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability01_Part02": {
       "fileName": "YaoGuang_YaoGuang_Ability01_Part02",
@@ -1443,7 +1491,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "YaoGuang_YaoGuang_Ability01_Part01": {
       "fileName": "YaoGuang_YaoGuang_Ability01_Part01",
@@ -1472,7 +1523,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "YaoGuang_Modifiers": {
       "fileName": "YaoGuang_Modifiers",

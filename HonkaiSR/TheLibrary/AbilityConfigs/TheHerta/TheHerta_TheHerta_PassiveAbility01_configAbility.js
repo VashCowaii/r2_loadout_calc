@@ -3168,5 +3168,8 @@ const configAbility = {
         "Skill21_Layer_Max"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

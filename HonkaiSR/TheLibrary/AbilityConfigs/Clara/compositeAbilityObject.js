@@ -193,7 +193,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_Eidolon4": {
       "fileName": "Clara_Klara_Eidolon4",
@@ -276,7 +279,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_Trace02": {
       "fileName": "Clara_Klara_Trace02",
@@ -301,7 +307,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_Trace01": {
       "fileName": "Clara_Klara_Trace01",
@@ -369,7 +378,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_TechniqueInLevel": {
       "fileName": "Clara_Klara_TechniqueInLevel",
@@ -454,7 +466,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_PassiveAbility01_InsertAbility": {
       "fileName": "Clara_Klara_PassiveAbility01_InsertAbility",
@@ -729,7 +744,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Clara_Klara_PassiveAbility01": {
       "fileName": "Clara_Klara_PassiveAbility01",
@@ -896,7 +914,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_Ability03_Part02": {
       "fileName": "Clara_Klara_Ability03_Part02",
@@ -1391,7 +1412,10 @@ const compositeAbilityObject = {
           "effectName": "DMG Mitigation",
           "statusName": "Promise, Not Command"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_Ability03_Part01": {
       "fileName": "Clara_Klara_Ability03_Part01",
@@ -1421,7 +1445,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Clara_Klara_Ability03_EnterReady": {
       "fileName": "Clara_Klara_Ability03_EnterReady",
@@ -1429,7 +1456,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Clara_Klara_Ability02_Part02": {
       "fileName": "Clara_Klara_Ability02_Part02",
@@ -1542,7 +1572,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Clara_Klara_Ability02_Part01": {
       "fileName": "Clara_Klara_Ability02_Part01",
@@ -1571,7 +1604,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Clara_Klara_Ability01_Part02": {
       "fileName": "Clara_Klara_Ability01_Part02",
@@ -1611,7 +1647,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Clara_Klara_Ability01_Part01": {
       "fileName": "Clara_Klara_Ability01_Part01",
@@ -1641,7 +1680,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Clara_Modifiers": {
       "fileName": "Clara_Modifiers",

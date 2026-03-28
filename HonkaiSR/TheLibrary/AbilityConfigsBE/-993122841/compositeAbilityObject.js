@@ -661,7 +661,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-993122841_FantasticStory_BaseAbility_AllDarkTeam_Insert_Camera": {
       "fileName": "-993122841_FantasticStory_BaseAbility_AllDarkTeam_Insert_Camera",
@@ -669,7 +672,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-993122841_FantasticStory_BaseAbility_2060_Insert": {
       "fileName": "-993122841_FantasticStory_BaseAbility_2060_Insert",
@@ -1020,7 +1026,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-993122841_FantasticStory_BaseAbility_2060_EnterFever": {
       "fileName": "-993122841_FantasticStory_BaseAbility_2060_EnterFever",

@@ -103,5 +103,8 @@ const configAbility = {
       "stackData": [],
       "latentQueue": []
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

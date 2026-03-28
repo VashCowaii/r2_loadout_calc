@@ -43,7 +43,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_Trace02": {
       "fileName": "Aglaea_Aglaea_Trace02",
@@ -51,7 +54,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_TechniqueInLevel": {
       "fileName": "Aglaea_Aglaea_TechniqueInLevel",
@@ -260,7 +266,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_PassiveAbility01": {
       "fileName": "Aglaea_Aglaea_PassiveAbility01",
@@ -495,7 +504,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_PassiveAbility01_BattleEvent": {
       "fileName": "Aglaea_Aglaea_PassiveAbility01_BattleEvent",
@@ -660,7 +672,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_Ability03_Part02": {
       "fileName": "Aglaea_Aglaea_Ability03_Part02",
@@ -911,7 +926,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1349068502\">March7th_UltraTarget</a>"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_Ability03_Part01": {
       "fileName": "Aglaea_Aglaea_Ability03_Part01",
@@ -941,7 +959,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aglaea_Aglaea_Ability03_EnterReady": {
       "fileName": "Aglaea_Aglaea_Ability03_EnterReady",
@@ -949,7 +970,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Aglaea_Aglaea_Bonus_Camera": {
       "fileName": "Aglaea_Aglaea_Bonus_Camera",
@@ -957,7 +981,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_Bonus": {
       "fileName": "Aglaea_Aglaea_Bonus",
@@ -967,7 +994,10 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_Ability11_Part02": {
       "fileName": "Aglaea_Aglaea_Ability11_Part02",
@@ -1395,7 +1425,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Aglaea_Aglaea_Ability11_Part01": {
       "fileName": "Aglaea_Aglaea_Ability11_Part01",
@@ -1448,7 +1481,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Aglaea_Aglaea_Ability21_Part02": {
       "fileName": "Aglaea_Aglaea_Ability21_Part02",
@@ -1509,7 +1545,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_Ability21_Part01": {
       "fileName": "Aglaea_Aglaea_Ability21_Part01",
@@ -1539,7 +1578,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aglaea_Aglaea_Ability02_Part02": {
       "fileName": "Aglaea_Aglaea_Ability02_Part02",
@@ -1642,7 +1684,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aglaea_Aglaea_Ability02_Part01": {
       "fileName": "Aglaea_Aglaea_Ability02_Part01",
@@ -1673,7 +1718,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aglaea_Aglaea_Ability01_Part02": {
       "fileName": "Aglaea_Aglaea_Ability01_Part02",
@@ -1829,7 +1877,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aglaea_Aglaea_Ability01_Part01": {
       "fileName": "Aglaea_Aglaea_Ability01_Part01",
@@ -1988,7 +2039,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aglaea_Modifiers": {
       "fileName": "Aglaea_Modifiers",
@@ -3987,7 +4041,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Garmentmaker_Servant_AglaeaServant_BattleCry": {
       "fileName": "Garmentmaker_Servant_AglaeaServant_BattleCry",
@@ -4036,7 +4093,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Garmentmaker_Servant_Aglaea_PassiveAbility01_ForceKill_Insert": {
       "fileName": "Garmentmaker_Servant_Aglaea_PassiveAbility01_ForceKill_Insert",
@@ -4093,7 +4153,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Garmentmaker_Servant_AglaeaServant_Passive": {
       "fileName": "Garmentmaker_Servant_AglaeaServant_Passive",
@@ -4685,7 +4748,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Garmentmaker_Servant_AglaeaServant_Ability11_Part02": {
       "fileName": "Garmentmaker_Servant_AglaeaServant_Ability11_Part02",
@@ -4888,7 +4954,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Garmentmaker_Servant_AglaeaServant_Ability11_Part01": {
       "fileName": "Garmentmaker_Servant_AglaeaServant_Ability11_Part01",
@@ -4939,7 +5008,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Garmentmaker_Servant_AglaeaServant_Ability11_Together_Part02": {
       "fileName": "Garmentmaker_Servant_AglaeaServant_Ability11_Together_Part02",
@@ -4947,7 +5019,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Garmentmaker_Servant_AglaeaServant_Ability11_Together_Part01": {
       "fileName": "Garmentmaker_Servant_AglaeaServant_Ability11_Together_Part01",
@@ -5078,7 +5153,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-892037211\">Memosprite_Aglaea_Ability11_Mark</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Garmentmaker_Modifiers": {
       "fileName": "Garmentmaker_Modifiers",

@@ -70,5 +70,8 @@ const configAbility = {
       }
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

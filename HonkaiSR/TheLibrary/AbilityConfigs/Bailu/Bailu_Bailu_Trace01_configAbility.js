@@ -13,5 +13,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"283019978\">Bailu_PointB1</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

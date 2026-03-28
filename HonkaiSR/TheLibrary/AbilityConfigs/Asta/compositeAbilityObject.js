@@ -121,7 +121,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Asta_Asta_TechniqueInLevel": {
       "fileName": "Asta_Asta_TechniqueInLevel",
@@ -204,7 +207,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Asta_Asta_PassiveAbility_1": {
       "fileName": "Asta_Asta_PassiveAbility_1",
@@ -733,7 +739,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Asta_Asta_Ability03_Part02": {
       "fileName": "Asta_Asta_Ability03_Part02",
@@ -836,7 +845,10 @@ const compositeAbilityObject = {
           "effectName": "SPD Boost",
           "statusName": "SPD Boost"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Asta_Asta_Ability03_Part01": {
       "fileName": "Asta_Asta_Ability03_Part01",
@@ -865,7 +877,10 @@ const compositeAbilityObject = {
           "ability": "Asta_Ability03_Part02"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Asta_Asta_Ability03_EnterReady": {
       "fileName": "Asta_Asta_Ability03_EnterReady",
@@ -873,7 +888,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Asta_Asta_Ability02_Part02": {
       "fileName": "Asta_Asta_Ability02_Part02",
@@ -998,7 +1016,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Asta_Asta_Ability02_Part01": {
       "fileName": "Asta_Asta_Ability02_Part01",
@@ -1027,7 +1048,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Asta_Asta_Ability01_Part02": {
       "fileName": "Asta_Asta_Ability01_Part02",
@@ -1112,7 +1136,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Asta_Asta_Ability01_Part01": {
       "fileName": "Asta_Asta_Ability01_Part01",
@@ -1141,7 +1168,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Asta_Modifiers": {
       "fileName": "Asta_Modifiers",

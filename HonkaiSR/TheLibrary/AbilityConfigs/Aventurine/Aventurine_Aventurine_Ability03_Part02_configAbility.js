@@ -252,5 +252,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-626881481\">Aventurine_Heal_Mark</a>"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

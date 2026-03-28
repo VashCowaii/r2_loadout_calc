@@ -194,7 +194,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Huohuo_Huohuo_Trace02": {
       "fileName": "Huohuo_Huohuo_Trace02",
@@ -253,7 +256,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Huohuo_Huohuo_TechniqueInLevel": {
       "fileName": "Huohuo_Huohuo_TechniqueInLevel",
@@ -377,7 +383,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Huohuo_Huohuo_PassiveAbility01": {
       "fileName": "Huohuo_Huohuo_PassiveAbility01",
@@ -795,7 +804,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Huohuo_Huohuo_Ability03_Part02": {
       "fileName": "Huohuo_Huohuo_Ability03_Part02",
@@ -858,7 +870,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Huohuo_Huohuo_Ability03_Part01": {
       "fileName": "Huohuo_Huohuo_Ability03_Part01",
@@ -888,7 +903,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Huohuo_Huohuo_Ability03_EnterReady": {
       "fileName": "Huohuo_Huohuo_Ability03_EnterReady",
@@ -896,7 +914,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Huohuo_Huohuo_Ability02_Part02": {
       "fileName": "Huohuo_Huohuo_Ability02_Part02",
@@ -1017,7 +1038,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Huohuo_Huohuo_Ability02_Part01": {
       "fileName": "Huohuo_Huohuo_Ability02_Part01",
@@ -1046,7 +1070,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Huohuo_Huohuo_Ability01_Part02": {
       "fileName": "Huohuo_Huohuo_Ability01_Part02",
@@ -1178,7 +1205,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Huohuo_Huohuo_Ability01_Part01": {
       "fileName": "Huohuo_Huohuo_Ability01_Part01",
@@ -1207,7 +1237,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Huohuo_Modifiers": {
       "fileName": "Huohuo_Modifiers",

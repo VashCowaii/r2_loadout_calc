@@ -193,5 +193,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

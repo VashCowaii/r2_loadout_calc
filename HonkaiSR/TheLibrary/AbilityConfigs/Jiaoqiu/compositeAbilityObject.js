@@ -159,7 +159,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jiaoqiu_Jiaoqiu_PassiveAbility01": {
       "fileName": "Jiaoqiu_Jiaoqiu_PassiveAbility01",
@@ -484,7 +487,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jiaoqiu_Jiaoqiu_Ability03_Part02": {
       "fileName": "Jiaoqiu_Jiaoqiu_Ability03_Part02",
@@ -914,7 +920,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jiaoqiu_Jiaoqiu_Ability03_Part01": {
       "fileName": "Jiaoqiu_Jiaoqiu_Ability03_Part01",
@@ -944,7 +953,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jiaoqiu_Jiaoqiu_Ability03_EnterReady": {
       "fileName": "Jiaoqiu_Jiaoqiu_Ability03_EnterReady",
@@ -952,7 +964,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Jiaoqiu_Jiaoqiu_Ability02_Part02": {
       "fileName": "Jiaoqiu_Jiaoqiu_Ability02_Part02",
@@ -1214,7 +1229,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jiaoqiu_Jiaoqiu_Ability02_Part01": {
       "fileName": "Jiaoqiu_Jiaoqiu_Ability02_Part01",
@@ -1243,7 +1261,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jiaoqiu_Jiaoqiu_Ability01_Part02": {
       "fileName": "Jiaoqiu_Jiaoqiu_Ability01_Part02",
@@ -1402,7 +1423,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jiaoqiu_Jiaoqiu_Ability01_Part01": {
       "fileName": "Jiaoqiu_Jiaoqiu_Ability01_Part01",
@@ -1431,7 +1455,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jiaoqiu_Modifiers": {
       "fileName": "Jiaoqiu_Modifiers",

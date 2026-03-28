@@ -60,7 +60,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Tingyun_TingYun_PassiveAbility01": {
       "fileName": "Tingyun_TingYun_PassiveAbility01",
@@ -143,7 +146,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Tingyun_TingYun_Ability03_Part02": {
       "fileName": "Tingyun_TingYun_Ability03_Part02",
@@ -281,7 +287,10 @@ const compositeAbilityObject = {
           "effectName": "DMG Boost",
           "statusName": "Amidst the Rejoicing Clouds"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tingyun_TingYun_Ability03_Part01": {
       "fileName": "Tingyun_TingYun_Ability03_Part01",
@@ -311,7 +320,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tingyun_TingYun_Ability03_EnterReady": {
       "fileName": "Tingyun_TingYun_Ability03_EnterReady",
@@ -322,7 +334,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Tingyun_TingYun_Ability02_Part02": {
       "fileName": "Tingyun_TingYun_Ability02_Part02",
@@ -865,7 +880,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tingyun_TingYun_Ability02_Part01": {
       "fileName": "Tingyun_TingYun_Ability02_Part01",
@@ -910,7 +928,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tingyun_TingYun_Ability01_Part02": {
       "fileName": "Tingyun_TingYun_Ability01_Part02",
@@ -1030,7 +1051,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tingyun_TingYun_Ability01_Part01": {
       "fileName": "Tingyun_TingYun_Ability01_Part01",
@@ -1060,7 +1084,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tingyun_Modifiers": {
       "fileName": "Tingyun_Modifiers",

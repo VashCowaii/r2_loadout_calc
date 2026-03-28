@@ -29,5 +29,8 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"132499687\">Sparxie_Ability21_Effect</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

@@ -12,5 +12,8 @@ const configAbility = {
     0
   ],
   "parse": [],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

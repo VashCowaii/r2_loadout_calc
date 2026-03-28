@@ -832,5 +832,8 @@ const configAbility = {
         }
       }
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

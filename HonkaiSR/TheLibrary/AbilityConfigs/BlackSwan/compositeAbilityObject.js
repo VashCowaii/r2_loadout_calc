@@ -175,7 +175,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Eidolon2": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Eidolon2",
@@ -292,7 +295,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Eidolon1": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Eidolon1",
@@ -1285,7 +1291,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Trace03": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Trace03",
@@ -1465,7 +1474,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Trace02": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Trace02",
@@ -1690,7 +1702,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Trace01": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Trace01",
@@ -1779,7 +1794,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_TechniqueInLevel_Insert": {
       "fileName": "BlackSwan_Advanced_BlackSwan_TechniqueInLevel_Insert",
@@ -2119,7 +2137,10 @@ const compositeAbilityObject = {
             "_can_continue"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_TechniqueInLevel": {
       "fileName": "BlackSwan_Advanced_BlackSwan_TechniqueInLevel",
@@ -2207,7 +2228,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_PassiveAbility01": {
       "fileName": "BlackSwan_Advanced_BlackSwan_PassiveAbility01",
@@ -2473,7 +2497,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Ability03_Part02": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Ability03_Part02",
@@ -2557,7 +2584,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Ability03_Part01": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Ability03_Part01",
@@ -2587,7 +2617,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Ability02_Part02": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Ability02_Part02",
@@ -2690,7 +2723,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Ability02_Part01": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Ability02_Part01",
@@ -2719,7 +2755,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Ability01_Part02": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Ability01_Part02",
@@ -2762,7 +2801,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "BlackSwan_Advanced_BlackSwan_Ability01_Part01": {
       "fileName": "BlackSwan_Advanced_BlackSwan_Ability01_Part01",
@@ -2791,7 +2833,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "BlackSwan_Modifiers": {
       "fileName": "BlackSwan_Modifiers",

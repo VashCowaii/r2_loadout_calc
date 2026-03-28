@@ -38,7 +38,10 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_BossInfoBar": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_BossInfoBar",
@@ -70,7 +73,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_PassiveAbility_RemoveOneMorePerturn": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_PassiveAbility_RemoveOneMorePerturn",
@@ -138,7 +144,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Aventurine_GamblingStart": {
       "fileName": "GlobalAbilitiesE_Monster_Aventurine_GamblingStart",
@@ -180,7 +189,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_XP_Minion04_Huge": {
       "fileName": "GlobalAbilitiesE_Monster_XP_Minion04_Huge",
@@ -210,7 +222,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Junk_Special_ChangeWidth": {
       "fileName": "GlobalAbilitiesE_Monster_Junk_Special_ChangeWidth",
@@ -240,7 +255,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_WMonster_Standard_HitAddStun": {
       "fileName": "GlobalAbilitiesE_WMonster_Standard_HitAddStun",
@@ -282,7 +300,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_PassiveAbility_Formation2_Back": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_PassiveAbility_Formation2_Back",
@@ -323,7 +344,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_SpecialDieEffect2": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_SpecialDieEffect2",
@@ -366,7 +390,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_SpecialDieEffect": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_SpecialDieEffect",
@@ -423,7 +450,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_AutoCenter": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_AutoCenter",
@@ -432,7 +462,10 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_MuteHitFly": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_MuteHitFly",
@@ -459,7 +492,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Blood_Link_Group1_Insert": {
       "fileName": "GlobalAbilitiesE_Monster_Blood_Link_Group1_Insert",
@@ -475,7 +511,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_AIControlAndHPLock": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_AIControlAndHPLock",
@@ -596,7 +635,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_PassiveAbility_DeadTimeSlow": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_PassiveAbility_DeadTimeSlow",
@@ -625,7 +667,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_Fever_Action": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_Fever_Action",
@@ -633,7 +678,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilitiesE_Monster_Standard_PassiveAbility_StanceBreak_Action": {
       "fileName": "GlobalAbilitiesE_Monster_Standard_PassiveAbility_StanceBreak_Action",
@@ -741,7 +789,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   }
 }

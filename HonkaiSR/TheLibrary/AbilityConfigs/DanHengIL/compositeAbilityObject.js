@@ -77,7 +77,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHengIL_DanHengIL_Trace02": {
       "fileName": "DanHengIL_DanHengIL_Trace02",
@@ -136,7 +139,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHengIL_DanHengIL_TechniqueInLevel": {
       "fileName": "DanHengIL_DanHengIL_TechniqueInLevel",
@@ -366,7 +372,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHengIL_DanHengIL_PassiveAbility01": {
       "fileName": "DanHengIL_DanHengIL_PassiveAbility01",
@@ -879,7 +888,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability03_Part02": {
       "fileName": "DanHengIL_DanHengIL_Ability03_Part02",
@@ -1450,7 +1462,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability03_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability03_Part01",
@@ -1480,7 +1495,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability03_EnterReady": {
       "fileName": "DanHengIL_DanHengIL_Ability03_EnterReady",
@@ -1488,7 +1506,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DanHengIL_DanHengIL_Ability21_Part02": {
       "fileName": "DanHengIL_DanHengIL_Ability21_Part02",
@@ -1543,7 +1564,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability21_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability21_Part01",
@@ -1570,7 +1594,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability02_Part02": {
       "fileName": "DanHengIL_DanHengIL_Ability02_Part02",
@@ -1997,7 +2024,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability02_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability02_Part01",
@@ -2067,7 +2097,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability13_Part02": {
       "fileName": "DanHengIL_DanHengIL_Ability13_Part02",
@@ -2814,7 +2847,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability13_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability13_Part01",
@@ -2843,7 +2879,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability12_Part02": {
       "fileName": "DanHengIL_DanHengIL_Ability12_Part02",
@@ -3494,7 +3533,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability12_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability12_Part01",
@@ -3523,7 +3565,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability11_Part02": {
       "fileName": "DanHengIL_DanHengIL_Ability11_Part02",
@@ -3791,7 +3836,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability11_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability11_Part01",
@@ -3820,7 +3868,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability01_Part02": {
       "fileName": "DanHengIL_DanHengIL_Ability01_Part02",
@@ -3928,7 +3979,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_DanHengIL_Ability01_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability01_Part01",
@@ -3957,7 +4011,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengIL_Modifiers": {
       "fileName": "DanHengIL_Modifiers",

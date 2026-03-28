@@ -1508,5 +1508,8 @@ const configAbility = {
         "MaxSP"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

@@ -156,5 +156,8 @@ const configAbility = {
       "effectName": "SPD Boost",
       "statusName": "SPD Boost"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

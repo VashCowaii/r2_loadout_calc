@@ -22,5 +22,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"112407337\">MBattleEvent_Elation_Passive</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

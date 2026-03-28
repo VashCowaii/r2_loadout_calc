@@ -227,7 +227,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafkav0_Kafka_Eidolon2": {
       "fileName": "Kafkav0_Kafka_Eidolon2",
@@ -321,7 +324,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafkav0_Kafka_Trace01": {
       "fileName": "Kafkav0_Kafka_Trace01",
@@ -329,7 +335,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafkav0_Kafka_Trace02": {
       "fileName": "Kafkav0_Kafka_Trace02",
@@ -425,7 +434,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafkav0_Kafka_PassiveAtk_Ability": {
       "fileName": "Kafkav0_Kafka_PassiveAtk_Ability",
@@ -868,7 +880,10 @@ const compositeAbilityObject = {
           "effectName": "DoT Vulnerability",
           "statusName": "DoT Vulnerability"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Kafkav0_Kafka_PassiveAbility01": {
       "fileName": "Kafkav0_Kafka_PassiveAbility01",
@@ -1764,7 +1779,10 @@ const compositeAbilityObject = {
             "Kafka_Listen_Rank6"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafkav0_Kafka_Ability03_Part02": {
       "fileName": "Kafkav0_Kafka_Ability03_Part02",
@@ -1982,7 +2000,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Kafkav0_Kafka_Ability03_Part01": {
       "fileName": "Kafkav0_Kafka_Ability03_Part01",
@@ -2012,7 +2033,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Kafkav0_Kafka_Ability03_EnterReady": {
       "fileName": "Kafkav0_Kafka_Ability03_EnterReady",
@@ -2020,7 +2044,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Kafkav0_Kafka_Ability02_Part02": {
       "fileName": "Kafkav0_Kafka_Ability02_Part02",
@@ -2180,7 +2207,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafkav0_Kafka_Ability02_Part01": {
       "fileName": "Kafkav0_Kafka_Ability02_Part01",
@@ -2221,7 +2251,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafkav0_Kafka_Ability01_Part02": {
       "fileName": "Kafkav0_Kafka_Ability01_Part02",
@@ -2297,7 +2330,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafkav0_Kafka_Ability01_Part01": {
       "fileName": "Kafkav0_Kafka_Ability01_Part01",
@@ -2327,7 +2363,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafkav0_Modifiers": {
       "fileName": "Kafkav0_Modifiers",

@@ -14,5 +14,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

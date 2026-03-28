@@ -29,5 +29,8 @@ const configAbility = {
       "conditions": "Under Control Effect"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

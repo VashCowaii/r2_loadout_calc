@@ -6,5 +6,8 @@ const configAbility = {
   "parse": [
     "Deleted bullshit"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

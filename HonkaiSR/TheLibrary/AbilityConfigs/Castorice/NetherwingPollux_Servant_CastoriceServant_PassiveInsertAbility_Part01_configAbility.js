@@ -47,5 +47,8 @@ const configAbility = {
       "priorityTag": "Character"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

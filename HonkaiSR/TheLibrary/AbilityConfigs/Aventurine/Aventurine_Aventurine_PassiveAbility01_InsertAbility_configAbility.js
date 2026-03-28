@@ -33,5 +33,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1927939151\">Aventurine_Trace03_Trigger</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

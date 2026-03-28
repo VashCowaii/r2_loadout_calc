@@ -39,5 +39,8 @@ const configAbility = {
       "enable": false
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

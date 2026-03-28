@@ -45,7 +45,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_Eidolon1": {
       "fileName": "Boothill_Boothill_Eidolon1",
@@ -195,7 +198,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_Trace02": {
       "fileName": "Boothill_Boothill_Trace02",
@@ -276,7 +282,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_Trace01": {
       "fileName": "Boothill_Boothill_Trace01",
@@ -484,7 +493,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_TechniqueInLevel_GainEnhance": {
       "fileName": "Boothill_Boothill_TechniqueInLevel_GainEnhance",
@@ -605,7 +617,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_TechniqueInLevel": {
       "fileName": "Boothill_Boothill_TechniqueInLevel",
@@ -689,7 +704,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_PassiveAbility01": {
       "fileName": "Boothill_Boothill_PassiveAbility01",
@@ -1087,7 +1105,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_Ability03_Part02": {
       "fileName": "Boothill_Boothill_Ability03_Part02",
@@ -1228,7 +1249,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Boothill_Ability03_Part01": {
       "fileName": "Boothill_Boothill_Ability03_Part01",
@@ -1268,7 +1292,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Boothill_Ability03_EnterReady": {
       "fileName": "Boothill_Boothill_Ability03_EnterReady",
@@ -1276,7 +1303,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Boothill_Boothill_Bonus": {
       "fileName": "Boothill_Boothill_Bonus",
@@ -1297,7 +1327,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Boothill_Boothill_Ability02_Part02": {
       "fileName": "Boothill_Boothill_Ability02_Part02",
@@ -1604,7 +1637,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Boothill_Ability02_Part01": {
       "fileName": "Boothill_Boothill_Ability02_Part01",
@@ -1636,7 +1672,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Boothill_Ability11_Part02": {
       "fileName": "Boothill_Boothill_Ability11_Part02",
@@ -2260,7 +2299,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Boothill_Ability11_Part01": {
       "fileName": "Boothill_Boothill_Ability11_Part01",
@@ -2346,7 +2388,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Boothill_Ability01_Part02": {
       "fileName": "Boothill_Boothill_Ability01_Part02",
@@ -2421,7 +2466,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Boothill_Ability01_Part01": {
       "fileName": "Boothill_Boothill_Ability01_Part01",
@@ -2451,7 +2499,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Boothill_Modifiers": {
       "fileName": "Boothill_Modifiers",

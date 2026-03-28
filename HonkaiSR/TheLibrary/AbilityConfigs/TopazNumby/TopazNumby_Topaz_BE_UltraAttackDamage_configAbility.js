@@ -319,5 +319,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

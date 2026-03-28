@@ -271,5 +271,8 @@ const configAbility = {
       ],
       "latentQueue": []
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

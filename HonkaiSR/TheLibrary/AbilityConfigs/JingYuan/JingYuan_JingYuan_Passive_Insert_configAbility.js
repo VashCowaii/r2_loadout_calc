@@ -19,5 +19,8 @@ const configAbility = {
       "isTrigger": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

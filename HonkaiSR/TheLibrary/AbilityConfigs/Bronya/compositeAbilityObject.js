@@ -126,7 +126,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bronya_Bronya_Trace02": {
       "fileName": "Bronya_Bronya_Trace02",
@@ -226,7 +229,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bronya_Bronya_Eidolon4_ATK": {
       "fileName": "Bronya_Bronya_Eidolon4_ATK",
@@ -294,7 +300,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Bronya_Bronya_Eidolon4": {
       "fileName": "Bronya_Bronya_Eidolon4",
@@ -522,7 +531,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bronya_Bronya_Eidolon1": {
       "fileName": "Bronya_Bronya_Eidolon1",
@@ -530,7 +542,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bronya_Bronya_TechniqueInLevel": {
       "fileName": "Bronya_Bronya_TechniqueInLevel",
@@ -639,7 +654,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bronya_Bronya_PassiveAbility_1": {
       "fileName": "Bronya_Bronya_PassiveAbility_1",
@@ -755,7 +773,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bronya_Bronya_Ability03_Part02": {
       "fileName": "Bronya_Bronya_Ability03_Part02",
@@ -857,7 +878,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Bronya_Bronya_Ability03_Part01": {
       "fileName": "Bronya_Bronya_Ability03_Part01",
@@ -886,7 +910,10 @@ const compositeAbilityObject = {
           "ability": "Bronya_Ability03_Part02"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Bronya_Bronya_Ability03_EnterReady": {
       "fileName": "Bronya_Bronya_Ability03_EnterReady",
@@ -894,7 +921,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bronya_Bronya_Ability02_Self_Part02": {
       "fileName": "Bronya_Bronya_Ability02_Self_Part02",
@@ -1083,7 +1113,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bronya_Bronya_Ability02_Others_Part02": {
       "fileName": "Bronya_Bronya_Ability02_Others_Part02",
@@ -1281,7 +1314,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bronya_Bronya_Ability02_Part01": {
       "fileName": "Bronya_Bronya_Ability02_Part01",
@@ -1336,7 +1372,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bronya_Bronya_Ability01_Part02": {
       "fileName": "Bronya_Bronya_Ability01_Part02",
@@ -1468,7 +1507,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bronya_Bronya_Ability01_Part01": {
       "fileName": "Bronya_Bronya_Ability01_Part01",
@@ -1497,7 +1539,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bronya_Modifiers": {
       "fileName": "Bronya_Modifiers",

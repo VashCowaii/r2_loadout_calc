@@ -51,5 +51,8 @@ const configAbility = {
       "casterAssign": "TargetSelf"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

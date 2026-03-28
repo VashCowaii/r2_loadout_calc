@@ -246,7 +246,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafka_Advanced_Kafka_Eidolon2": {
       "fileName": "Kafka_Advanced_Kafka_Eidolon2",
@@ -340,7 +343,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafka_Advanced_Kafka_Trace01": {
       "fileName": "Kafka_Advanced_Kafka_Trace01",
@@ -569,7 +575,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafka_Advanced_Kafka_Trace02": {
       "fileName": "Kafka_Advanced_Kafka_Trace02",
@@ -665,7 +674,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafka_Advanced_Kafka_PassiveAtk_Ability": {
       "fileName": "Kafka_Advanced_Kafka_PassiveAtk_Ability",
@@ -1121,7 +1133,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Kafka_Advanced_Kafka_PassiveAbility01": {
       "fileName": "Kafka_Advanced_Kafka_PassiveAbility01",
@@ -2074,7 +2089,10 @@ const compositeAbilityObject = {
             "Kafka_Listen_Rank6"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Kafka_Advanced_Kafka_Ability03_Part02": {
       "fileName": "Kafka_Advanced_Kafka_Ability03_Part02",
@@ -2331,7 +2349,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Kafka_Advanced_Kafka_Ability03_Part01": {
       "fileName": "Kafka_Advanced_Kafka_Ability03_Part01",
@@ -2361,7 +2382,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Kafka_Advanced_Kafka_Ability03_EnterReady": {
       "fileName": "Kafka_Advanced_Kafka_Ability03_EnterReady",
@@ -2369,7 +2393,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Kafka_Advanced_Kafka_Ability02_Part02": {
       "fileName": "Kafka_Advanced_Kafka_Ability02_Part02",
@@ -2666,7 +2693,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafka_Advanced_Kafka_Ability02_Part01": {
       "fileName": "Kafka_Advanced_Kafka_Ability02_Part01",
@@ -2712,7 +2742,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafka_Advanced_Kafka_Ability01_Part02": {
       "fileName": "Kafka_Advanced_Kafka_Ability01_Part02",
@@ -2831,7 +2864,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafka_Advanced_Kafka_Ability01_Part01": {
       "fileName": "Kafka_Advanced_Kafka_Ability01_Part01",
@@ -2861,7 +2897,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Kafka_Modifiers": {
       "fileName": "Kafka_Modifiers",

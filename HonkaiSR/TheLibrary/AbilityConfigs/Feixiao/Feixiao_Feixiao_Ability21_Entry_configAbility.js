@@ -342,5 +342,8 @@ const configAbility = {
       "value": 2
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

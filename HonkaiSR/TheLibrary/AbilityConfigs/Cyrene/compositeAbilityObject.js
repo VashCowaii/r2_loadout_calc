@@ -79,7 +79,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cyrene_Cyrene_MaleMaster": {
       "fileName": "Cyrene_Cyrene_MaleMaster",
@@ -104,7 +107,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cyrene_Cyrene_TechniqueInLevel": {
       "fileName": "Cyrene_Cyrene_TechniqueInLevel",
@@ -181,7 +187,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cyrene_Cyrene_Eidolon1": {
       "fileName": "Cyrene_Cyrene_Eidolon1",
@@ -190,7 +199,10 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cyrene_Cyrene_PassiveAbility_1": {
       "fileName": "Cyrene_Cyrene_PassiveAbility_1",
@@ -1160,7 +1172,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cyrene_Cyrene_Ability31_Part02": {
       "fileName": "Cyrene_Cyrene_Ability31_Part02",
@@ -1218,7 +1233,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Cyrene_Cyrene_Ability31_Part01": {
       "fileName": "Cyrene_Cyrene_Ability31_Part01",
@@ -1259,7 +1277,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Cyrene_Cyrene_Ability31_EnterReady": {
       "fileName": "Cyrene_Cyrene_Ability31_EnterReady",
@@ -1267,7 +1288,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cyrene_Cyrene_Ability03_Part02": {
       "fileName": "Cyrene_Cyrene_Ability03_Part02",
@@ -1425,7 +1449,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Cyrene_Cyrene_Ability03_Part01": {
       "fileName": "Cyrene_Cyrene_Ability03_Part01",
@@ -1501,7 +1528,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Cyrene_Cyrene_Ability03_EnterReady": {
       "fileName": "Cyrene_Cyrene_Ability03_EnterReady",
@@ -1509,7 +1539,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cyrene_Cyrene_Ability02_Part02": {
       "fileName": "Cyrene_Cyrene_Ability02_Part02",
@@ -1559,7 +1592,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cyrene_Cyrene_Ability02_Part01": {
       "fileName": "Cyrene_Cyrene_Ability02_Part01",
@@ -1588,7 +1624,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cyrene_Cyrene_Ability11_Part02": {
       "fileName": "Cyrene_Cyrene_Ability11_Part02",
@@ -1764,7 +1803,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cyrene_Cyrene_Ability11_Part01": {
       "fileName": "Cyrene_Cyrene_Ability11_Part01",
@@ -1811,7 +1853,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cyrene_Cyrene_Ability01_Part02": {
       "fileName": "Cyrene_Cyrene_Ability01_Part02",
@@ -1871,7 +1916,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cyrene_Cyrene_Ability01_Part01": {
       "fileName": "Cyrene_Cyrene_Ability01_Part01",
@@ -1900,7 +1948,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cyrene_Modifiers": {
       "fileName": "Cyrene_Modifiers",
@@ -3356,7 +3407,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"344221092\">Servant_CyreneServant_AbilityReady_LightTeamMirrorChosenEffect</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability01_VisualPrepare": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability01_VisualPrepare",
@@ -3384,7 +3438,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-668366939\">Servant_CyreneServant_AbilityReady_MirrorSetup</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_FormationReset": {
       "fileName": "Demiurge_Servant_CyreneServant_FormationReset",
@@ -3392,7 +3449,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_EnterBattle": {
       "fileName": "Demiurge_Servant_CyreneServant_EnterBattle",
@@ -3400,7 +3460,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_BattleCry": {
       "fileName": "Demiurge_Servant_CyreneServant_BattleCry",
@@ -3450,7 +3513,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_PassiveAbility01": {
       "fileName": "Demiurge_Servant_CyreneServant_PassiveAbility01",
@@ -4073,7 +4139,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY14": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY14",
@@ -4089,7 +4158,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY13": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY13",
@@ -4105,7 +4177,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY12": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY12",
@@ -4121,7 +4196,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY11": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY11",
@@ -4137,7 +4215,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY10": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY10",
@@ -4153,7 +4234,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY09": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY09",
@@ -4169,7 +4253,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY08": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY08",
@@ -4185,7 +4272,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY07": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY07",
@@ -4201,7 +4291,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY06": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY06",
@@ -4217,7 +4310,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY05": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY05",
@@ -4233,7 +4329,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY04": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY04",
@@ -4249,7 +4348,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY03": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY03",
@@ -4265,7 +4367,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY02": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY02",
@@ -4281,7 +4386,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_AbilityCY01": {
       "fileName": "Demiurge_Servant_CyreneServant_AbilityCY01",
@@ -4297,7 +4405,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability11_Part02": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability11_Part02",
@@ -4307,7 +4418,10 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability11_Part01": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability11_Part01",
@@ -4325,7 +4439,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability02_Part02": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability02_Part02",
@@ -5506,7 +5623,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability02_Part01": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability02_Part01",
@@ -5554,7 +5674,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability02_Ready": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability02_Ready",
@@ -5608,7 +5731,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability01_Part02": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability01_Part02",
@@ -6066,7 +6192,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability01_Part01": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability01_Part01",
@@ -6114,7 +6243,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Servant_CyreneServant_Ability01_Ready": {
       "fileName": "Demiurge_Servant_CyreneServant_Ability01_Ready",
@@ -6150,7 +6282,10 @@ const compositeAbilityObject = {
           "priorityTag": "Character_HighPriorityAction"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Demiurge_Modifiers": {
       "fileName": "Demiurge_Modifiers",

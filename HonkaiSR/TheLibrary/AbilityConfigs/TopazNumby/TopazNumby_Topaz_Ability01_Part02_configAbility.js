@@ -109,5 +109,8 @@ const configAbility = {
       "latentQueue": [],
       "duration": 1
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

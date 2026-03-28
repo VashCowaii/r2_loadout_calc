@@ -69,7 +69,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Welt_Welt_Trace02": {
       "fileName": "Welt_Welt_Trace02",
@@ -96,7 +99,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Welt_Welt_TechniqueInLevel": {
       "fileName": "Welt_Welt_TechniqueInLevel",
@@ -185,7 +191,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Welt_Welt_PassiveAbility01": {
       "fileName": "Welt_Welt_PassiveAbility01",
@@ -413,7 +422,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Welt_Welt_Ability03_Part02": {
       "fileName": "Welt_Welt_Ability03_Part02",
@@ -592,7 +604,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Welt_Welt_Ability03_Part01": {
       "fileName": "Welt_Welt_Ability03_Part01",
@@ -622,7 +637,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Welt_Welt_Ability03_EnterReady": {
       "fileName": "Welt_Welt_Ability03_EnterReady",
@@ -630,7 +648,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Welt_Welt_Ability02_Part02": {
       "fileName": "Welt_Welt_Ability02_Part02",
@@ -954,7 +975,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Welt_Welt_Ability02_Part01": {
       "fileName": "Welt_Welt_Ability02_Part01",
@@ -983,7 +1007,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Welt_Welt_Ability01_Part02": {
       "fileName": "Welt_Welt_Ability01_Part02",
@@ -1067,7 +1094,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Welt_Welt_Ability01_Part01": {
       "fileName": "Welt_Welt_Ability01_Part01",
@@ -1096,7 +1126,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Welt_Modifiers": {
       "fileName": "Welt_Modifiers",

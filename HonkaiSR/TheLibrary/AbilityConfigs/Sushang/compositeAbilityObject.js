@@ -96,7 +96,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sushang_Sushang_PassiveAbility01": {
       "fileName": "Sushang_Sushang_PassiveAbility01",
@@ -499,7 +502,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sushang_Sushang_Ability03_Part02": {
       "fileName": "Sushang_Sushang_Ability03_Part02",
@@ -599,7 +605,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sushang_Sushang_Ability03_Part01": {
       "fileName": "Sushang_Sushang_Ability03_Part01",
@@ -629,7 +638,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sushang_Sushang_Ability03_EnterReady": {
       "fileName": "Sushang_Sushang_Ability03_EnterReady",
@@ -637,7 +649,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Sushang_Sushang_Ability02_Part02": {
       "fileName": "Sushang_Sushang_Ability02_Part02",
@@ -1679,7 +1694,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sushang_Sushang_Ability02_Part01": {
       "fileName": "Sushang_Sushang_Ability02_Part01",
@@ -1709,7 +1727,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sushang_Sushang_Ability01_Part02": {
       "fileName": "Sushang_Sushang_Ability01_Part02",
@@ -1815,7 +1836,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sushang_Sushang_Ability01_Part01": {
       "fileName": "Sushang_Sushang_Ability01_Part01",
@@ -1845,7 +1869,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sushang_Modifiers": {
       "fileName": "Sushang_Modifiers",

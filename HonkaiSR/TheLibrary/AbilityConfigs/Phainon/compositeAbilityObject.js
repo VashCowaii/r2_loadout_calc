@@ -236,7 +236,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Eidolon2": {
       "fileName": "Phainon_Phainon_Eidolon2",
@@ -244,7 +247,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Eidolon1": {
       "fileName": "Phainon_Phainon_Eidolon1",
@@ -460,7 +466,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Trace03": {
       "fileName": "Phainon_Phainon_Trace03",
@@ -530,7 +539,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Trace02": {
       "fileName": "Phainon_Phainon_Trace02",
@@ -861,7 +873,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Trace01": {
       "fileName": "Phainon_Phainon_Trace01",
@@ -918,7 +933,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_TechniqueInLevel": {
       "fileName": "Phainon_Phainon_TechniqueInLevel",
@@ -1118,7 +1136,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_PassiveAbility02": {
       "fileName": "Phainon_Phainon_PassiveAbility02",
@@ -1543,7 +1564,10 @@ const compositeAbilityObject = {
             "multiplier": 0.25
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_PassiveAbility01": {
       "fileName": "Phainon_Phainon_PassiveAbility01",
@@ -2071,7 +2095,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability31_Part2": {
       "fileName": "Phainon_Phainon_Ability31_Part2",
@@ -2444,7 +2471,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Phainon_Phainon_Ability31_Part1": {
       "fileName": "Phainon_Phainon_Ability31_Part1",
@@ -2509,7 +2539,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Phainon_Phainon_Ability31_SelectTarget": {
       "fileName": "Phainon_Phainon_Ability31_SelectTarget",
@@ -2546,7 +2579,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Phainon_Phainon_Ability31_SelectTarget_OnLimbo": {
       "fileName": "Phainon_Phainon_Ability31_SelectTarget_OnLimbo",
@@ -2625,7 +2661,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability03_BattleEvent": {
       "fileName": "Phainon_Phainon_Ability03_BattleEvent",
@@ -3079,7 +3118,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability03_Part02": {
       "fileName": "Phainon_Phainon_Ability03_Part02",
@@ -3190,7 +3232,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability03_Part01": {
       "fileName": "Phainon_Phainon_Ability03_Part01",
@@ -3245,7 +3290,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability03_EnterReady": {
       "fileName": "Phainon_Phainon_Ability03_EnterReady",
@@ -3263,7 +3311,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Phainon_Phainon_Ability22_v2_Part02": {
       "fileName": "Phainon_Phainon_Ability22_v2_Part02",
@@ -3634,7 +3685,10 @@ const compositeAbilityObject = {
             "_prev_energy"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability22_v2_Part01": {
       "fileName": "Phainon_Phainon_Ability22_v2_Part01",
@@ -3667,7 +3721,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability22_Part02": {
       "fileName": "Phainon_Phainon_Ability22_Part02",
@@ -3888,7 +3945,10 @@ const compositeAbilityObject = {
             "_prev_energy"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability22_Part01": {
       "fileName": "Phainon_Phainon_Ability22_Part01",
@@ -3907,7 +3967,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability22_Entry": {
       "fileName": "Phainon_Phainon_Ability22_Entry",
@@ -3968,7 +4031,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability21_Insert_Part02": {
       "fileName": "Phainon_Phainon_Ability21_Insert_Part02",
@@ -4172,7 +4238,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Phainon_Phainon_Ability21_Insert_Part01": {
       "fileName": "Phainon_Phainon_Ability21_Insert_Part01",
@@ -4209,7 +4278,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Phainon_Phainon_Ability21_Part02": {
       "fileName": "Phainon_Phainon_Ability21_Part02",
@@ -5045,7 +5117,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability21_Part01": {
       "fileName": "Phainon_Phainon_Ability21_Part01",
@@ -5077,7 +5152,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability11_Part02": {
       "fileName": "Phainon_Phainon_Ability11_Part02",
@@ -5260,7 +5338,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability11_Part01": {
       "fileName": "Phainon_Phainon_Ability11_Part01",
@@ -5317,7 +5398,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability11_EnterReady": {
       "fileName": "Phainon_Phainon_Ability11_EnterReady",
@@ -5362,7 +5446,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Phainon_Phainon_Ability02_Part02": {
       "fileName": "Phainon_Phainon_Ability02_Part02",
@@ -5470,7 +5557,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability02_Part01": {
       "fileName": "Phainon_Phainon_Ability02_Part01",
@@ -5499,7 +5589,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability01_Part02": {
       "fileName": "Phainon_Phainon_Ability01_Part02",
@@ -5539,7 +5632,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Phainon_Ability01_Part01": {
       "fileName": "Phainon_Phainon_Ability01_Part01",
@@ -5569,7 +5665,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Phainon_Modifiers": {
       "fileName": "Phainon_Modifiers",

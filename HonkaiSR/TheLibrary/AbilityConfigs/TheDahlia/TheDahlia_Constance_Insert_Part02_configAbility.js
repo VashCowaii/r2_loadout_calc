@@ -455,5 +455,8 @@ const configAbility = {
       "effectName": "Vulnerability",
       "statusName": "Pity Its Heart Gnawed by Worms"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

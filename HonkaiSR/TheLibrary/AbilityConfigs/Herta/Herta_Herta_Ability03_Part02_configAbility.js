@@ -194,5 +194,8 @@ const configAbility = {
       ],
       "latentQueue": []
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
 }

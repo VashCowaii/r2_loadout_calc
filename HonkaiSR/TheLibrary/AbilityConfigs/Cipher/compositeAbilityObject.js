@@ -64,7 +64,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Cipher_Cipher_TechniqueInLevel": {
       "fileName": "Cipher_Cipher_TechniqueInLevel",
@@ -287,7 +290,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cipher_Cipher_PassiveAbility01": {
       "fileName": "Cipher_Cipher_PassiveAbility01",
@@ -1861,7 +1867,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cipher_Cipher_PassiveAbility01_Insert_Part02": {
       "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Part02",
@@ -2054,7 +2063,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Skip Death Handling"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Cipher_Cipher_PassiveAbility01_Insert_Part01": {
       "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Part01",
@@ -2081,7 +2093,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Cipher_Cipher_PassiveAbility01_Insert_Bonuser": {
       "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Bonuser",
@@ -2297,7 +2312,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Cipher_Cipher_Ability03_Part02": {
       "fileName": "Cipher_Cipher_Ability03_Part02",
@@ -2748,7 +2766,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cipher_Cipher_Ability03_Part01": {
       "fileName": "Cipher_Cipher_Ability03_Part01",
@@ -2778,7 +2799,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cipher_Cipher_Ability03_EnterReady": {
       "fileName": "Cipher_Cipher_Ability03_EnterReady",
@@ -2786,7 +2810,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Cipher_Cipher_Ability02_Part02": {
       "fileName": "Cipher_Cipher_Ability02_Part02",
@@ -3245,7 +3272,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cipher_Cipher_Ability02_Part01": {
       "fileName": "Cipher_Cipher_Ability02_Part01",
@@ -3274,7 +3304,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cipher_Cipher_Ability01_Part02": {
       "fileName": "Cipher_Cipher_Ability01_Part02",
@@ -3314,7 +3347,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cipher_Cipher_Ability01_Part01": {
       "fileName": "Cipher_Cipher_Ability01_Part01",
@@ -3344,7 +3380,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cipher_Modifiers": {
       "fileName": "Cipher_Modifiers",

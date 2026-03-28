@@ -289,7 +289,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gallagher_Gallagher_PassiveAbility01": {
       "fileName": "Gallagher_Gallagher_PassiveAbility01",
@@ -584,7 +587,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gallagher_Gallagher_Ability03_Part02": {
       "fileName": "Gallagher_Gallagher_Ability03_Part02",
@@ -713,7 +719,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Gallagher_Gallagher_Ability03_Part01": {
       "fileName": "Gallagher_Gallagher_Ability03_Part01",
@@ -743,7 +752,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Gallagher_Gallagher_Ability03_EnterReady": {
       "fileName": "Gallagher_Gallagher_Ability03_EnterReady",
@@ -751,7 +763,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Gallagher_Gallagher_Ability02_Part02": {
       "fileName": "Gallagher_Gallagher_Ability02_Part02",
@@ -838,7 +853,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Gallagher_Gallagher_Ability02_Part01": {
       "fileName": "Gallagher_Gallagher_Ability02_Part01",
@@ -873,7 +891,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Gallagher_Gallagher_Ability11_Part02": {
       "fileName": "Gallagher_Gallagher_Ability11_Part02",
@@ -997,7 +1018,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Gallagher_Gallagher_Ability11_Part01": {
       "fileName": "Gallagher_Gallagher_Ability11_Part01",
@@ -1027,7 +1051,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Gallagher_Gallagher_Ability01_Part02": {
       "fileName": "Gallagher_Gallagher_Ability01_Part02",
@@ -1098,7 +1125,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Gallagher_Gallagher_Ability01_Part01": {
       "fileName": "Gallagher_Gallagher_Ability01_Part01",
@@ -1128,7 +1158,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Gallagher_Modifiers": {
       "fileName": "Gallagher_Modifiers",

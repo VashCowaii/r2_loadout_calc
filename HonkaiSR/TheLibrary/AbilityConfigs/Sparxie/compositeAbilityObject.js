@@ -103,7 +103,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_TechniqueInLevel": {
       "fileName": "Sparxie_Sparxie_TechniqueInLevel",
@@ -206,7 +209,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparxie_Sparxie_PassiveAbility01": {
       "fileName": "Sparxie_Sparxie_PassiveAbility01",
@@ -374,7 +380,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparxie_Sparxie_Ability04_Part02": {
       "fileName": "Sparxie_Sparxie_Ability04_Part02",
@@ -506,7 +515,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability04_Part01": {
       "fileName": "Sparxie_Sparxie_Ability04_Part01",
@@ -535,7 +547,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability03_Part02": {
       "fileName": "Sparxie_Sparxie_Ability03_Part02",
@@ -701,7 +716,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability03_Part01": {
       "fileName": "Sparxie_Sparxie_Ability03_Part01",
@@ -731,7 +749,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability03_EnterReady": {
       "fileName": "Sparxie_Sparxie_Ability03_EnterReady",
@@ -739,7 +760,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Sparxie_Sparxie_Ability11_Part02": {
       "fileName": "Sparxie_Sparxie_Ability11_Part02",
@@ -1066,7 +1090,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability11_Part01": {
       "fileName": "Sparxie_Sparxie_Ability11_Part01",
@@ -1137,7 +1164,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability21_Part02": {
       "fileName": "Sparxie_Sparxie_Ability21_Part02",
@@ -1326,7 +1356,10 @@ const compositeAbilityObject = {
           "skipAttackSettle": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability21_Part01": {
       "fileName": "Sparxie_Sparxie_Ability21_Part01",
@@ -1359,7 +1392,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"132499687\">Sparxie_Ability21_Effect</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability02_Part02": {
       "fileName": "Sparxie_Sparxie_Ability02_Part02",
@@ -1574,7 +1610,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability02_Part01": {
       "fileName": "Sparxie_Sparxie_Ability02_Part01",
@@ -1657,7 +1696,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability01_Part02": {
       "fileName": "Sparxie_Sparxie_Ability01_Part02",
@@ -1698,7 +1740,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Sparxie_Ability01_Part01": {
       "fileName": "Sparxie_Sparxie_Ability01_Part01",
@@ -1727,7 +1772,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparxie_Modifiers": {
       "fileName": "Sparxie_Modifiers",

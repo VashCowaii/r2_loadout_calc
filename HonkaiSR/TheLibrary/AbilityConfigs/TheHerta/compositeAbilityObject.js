@@ -138,7 +138,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TheHerta_TheHerta_TechniqueInLevel": {
       "fileName": "TheHerta_TheHerta_TechniqueInLevel",
@@ -247,7 +250,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TheHerta_TheHerta_PassiveAbility01": {
       "fileName": "TheHerta_TheHerta_PassiveAbility01",
@@ -3419,7 +3425,10 @@ const compositeAbilityObject = {
             "Skill21_Layer_Max"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TheHerta_TheHerta_Ability03_Part02": {
       "fileName": "TheHerta_TheHerta_Ability03_Part02",
@@ -3963,7 +3972,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TheHerta_TheHerta_Ability03_Part01": {
       "fileName": "TheHerta_TheHerta_Ability03_Part01",
@@ -3993,7 +4005,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TheHerta_TheHerta_Ability03_EnterReady": {
       "fileName": "TheHerta_TheHerta_Ability03_EnterReady",
@@ -4001,7 +4016,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TheHerta_TheHerta_Ability21_Part02": {
       "fileName": "TheHerta_TheHerta_Ability21_Part02",
@@ -4642,7 +4660,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheHerta_TheHerta_Ability21_Part01": {
       "fileName": "TheHerta_TheHerta_Ability21_Part01",
@@ -4672,7 +4693,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheHerta_TheHerta_Ability02_Part02": {
       "fileName": "TheHerta_TheHerta_Ability02_Part02",
@@ -4769,7 +4793,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheHerta_TheHerta_Ability02_Part01": {
       "fileName": "TheHerta_TheHerta_Ability02_Part01",
@@ -4798,7 +4825,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheHerta_TheHerta_Ability01_Part02": {
       "fileName": "TheHerta_TheHerta_Ability01_Part02",
@@ -4838,7 +4868,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheHerta_TheHerta_Ability01_Part01": {
       "fileName": "TheHerta_TheHerta_Ability01_Part01",
@@ -4867,7 +4900,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheHerta_Modifiers": {
       "fileName": "TheHerta_Modifiers",

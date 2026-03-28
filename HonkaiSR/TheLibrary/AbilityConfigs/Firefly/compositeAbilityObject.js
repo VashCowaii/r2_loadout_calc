@@ -49,7 +49,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Eidolon4": {
       "fileName": "Firefly_Sam_Eidolon4",
@@ -57,7 +60,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Eidolon2_Bonus": {
       "fileName": "Firefly_Sam_Eidolon2_Bonus",
@@ -65,7 +71,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Eidolon2": {
       "fileName": "Firefly_Sam_Eidolon2",
@@ -81,7 +90,10 @@ const compositeAbilityObject = {
           "cooldown": 0
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Eidolon1": {
       "fileName": "Firefly_Sam_Eidolon1",
@@ -201,7 +213,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Trace03": {
       "fileName": "Firefly_Sam_Trace03",
@@ -463,7 +478,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Trace02": {
       "fileName": "Firefly_Sam_Trace02",
@@ -471,7 +489,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Trace01": {
       "fileName": "Firefly_Sam_Trace01",
@@ -479,7 +500,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_TechniqueInLevel": {
       "fileName": "Firefly_Sam_TechniqueInLevel",
@@ -628,7 +652,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_PassiveAbility01_BattleEvent_Insert": {
       "fileName": "Firefly_Sam_PassiveAbility01_BattleEvent_Insert",
@@ -727,7 +754,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Firefly_Sam_PassiveAbility01_BattleEvent": {
       "fileName": "Firefly_Sam_PassiveAbility01_BattleEvent",
@@ -827,7 +857,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_PassiveAbility01": {
       "fileName": "Firefly_Sam_PassiveAbility01",
@@ -1978,7 +2011,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Ability03_Part02": {
       "fileName": "Firefly_Sam_Ability03_Part02",
@@ -2057,7 +2093,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability03_Part01": {
       "fileName": "Firefly_Sam_Ability03_Part01",
@@ -2087,7 +2126,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Firefly_Sam_Ability03_EnterReady": {
       "fileName": "Firefly_Sam_Ability03_EnterReady",
@@ -2095,7 +2137,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Firefly_Sam_Ability21_Part02": {
       "fileName": "Firefly_Sam_Ability21_Part02",
@@ -2482,7 +2527,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability21_Part01": {
       "fileName": "Firefly_Sam_Ability21_Part01",
@@ -2511,7 +2559,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability02_Part02": {
       "fileName": "Firefly_Sam_Ability02_Part02",
@@ -2622,7 +2673,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability02_Part01": {
       "fileName": "Firefly_Sam_Ability02_Part01",
@@ -2652,7 +2706,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability11_Part02": {
       "fileName": "Firefly_Sam_Ability11_Part02",
@@ -3067,7 +3124,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability11_Part01": {
       "fileName": "Firefly_Sam_Ability11_Part01",
@@ -3097,7 +3157,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability01_Part02": {
       "fileName": "Firefly_Sam_Ability01_Part02",
@@ -3142,7 +3205,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Sam_Ability01_Part01": {
       "fileName": "Firefly_Sam_Ability01_Part01",
@@ -3172,7 +3238,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Firefly_Modifiers": {
       "fileName": "Firefly_Modifiers",

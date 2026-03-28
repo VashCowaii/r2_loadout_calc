@@ -247,7 +247,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Acheron_Acheron_PassiveAbility_1": {
       "fileName": "Acheron_Acheron_PassiveAbility_1",
@@ -1759,7 +1762,10 @@ const compositeAbilityObject = {
             "MaxSP"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Acheron_Acheron_Ability34_Part02": {
       "fileName": "Acheron_Acheron_Ability34_Part02",
@@ -2069,7 +2075,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability34_Part01": {
       "fileName": "Acheron_Acheron_Ability34_Part01",
@@ -2109,7 +2118,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Acheron_Acheron_Ability33_Part02": {
       "fileName": "Acheron_Acheron_Ability33_Part02",
@@ -2249,7 +2261,10 @@ const compositeAbilityObject = {
           "skipAttackSettle": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability33_Part01": {
       "fileName": "Acheron_Acheron_Ability33_Part01",
@@ -2279,7 +2294,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability32_Part02": {
       "fileName": "Acheron_Acheron_Ability32_Part02",
@@ -2634,7 +2652,10 @@ const compositeAbilityObject = {
           "skipAttackSettle": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability32_Part01": {
       "fileName": "Acheron_Acheron_Ability32_Part01",
@@ -2663,7 +2684,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability31_Part02": {
       "fileName": "Acheron_Acheron_Ability31_Part02",
@@ -2948,7 +2972,10 @@ const compositeAbilityObject = {
           "skipAttackSettle": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability31_Part01": {
       "fileName": "Acheron_Acheron_Ability31_Part01",
@@ -2977,7 +3004,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability03_Part02": {
       "fileName": "Acheron_Acheron_Ability03_Part02",
@@ -3108,7 +3138,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability03_Part01": {
       "fileName": "Acheron_Acheron_Ability03_Part01",
@@ -3151,7 +3184,10 @@ const compositeAbilityObject = {
           "enable": false
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability03_EnterReady": {
       "fileName": "Acheron_Acheron_Ability03_EnterReady",
@@ -3169,7 +3205,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Acheron_Acheron_Ability02_Part02": {
       "fileName": "Acheron_Acheron_Ability02_Part02",
@@ -3886,7 +3925,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability02_Part01": {
       "fileName": "Acheron_Acheron_Ability02_Part01",
@@ -3916,7 +3958,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability01_Part02": {
       "fileName": "Acheron_Acheron_Ability01_Part02",
@@ -4031,7 +4076,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Acheron_Ability01_Part01": {
       "fileName": "Acheron_Acheron_Ability01_Part01",
@@ -4061,7 +4109,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Acheron_Modifiers": {
       "fileName": "Acheron_Modifiers",

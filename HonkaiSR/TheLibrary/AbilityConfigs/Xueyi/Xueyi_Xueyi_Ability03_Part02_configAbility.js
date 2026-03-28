@@ -178,5 +178,8 @@ const configAbility = {
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

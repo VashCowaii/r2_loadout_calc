@@ -228,7 +228,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Tribbie_Tribbie_TechniqueInLevel": {
       "fileName": "Tribbie_Tribbie_TechniqueInLevel",
@@ -329,7 +332,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Tribbie_Tribbie_PassiveAbility01": {
       "fileName": "Tribbie_Tribbie_PassiveAbility01",
@@ -1093,7 +1099,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Tribbie_Tribbie_Ability03_Part02": {
       "fileName": "Tribbie_Tribbie_Ability03_Part02",
@@ -1185,7 +1194,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Tribbie_Tribbie_Ability03_Part01": {
       "fileName": "Tribbie_Tribbie_Ability03_Part01",
@@ -1215,7 +1227,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tribbie_Tribbie_Ability03_EnterReady": {
       "fileName": "Tribbie_Tribbie_Ability03_EnterReady",
@@ -1223,7 +1238,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Tribbie_Tribbie_Ability02_Part02": {
       "fileName": "Tribbie_Tribbie_Ability02_Part02",
@@ -1382,7 +1400,10 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tribbie_Tribbie_Ability02_Part01": {
       "fileName": "Tribbie_Tribbie_Ability02_Part01",
@@ -1411,7 +1432,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tribbie_Tribbie_Ability01_Part02": {
       "fileName": "Tribbie_Tribbie_Ability01_Part02",
@@ -1486,7 +1510,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tribbie_Tribbie_Ability01_Part01": {
       "fileName": "Tribbie_Tribbie_Ability01_Part01",
@@ -1515,7 +1542,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Tribbie_Modifiers": {
       "fileName": "Tribbie_Modifiers",

@@ -131,5 +131,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-908005903\">Advanced_Jingliu_Passive</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

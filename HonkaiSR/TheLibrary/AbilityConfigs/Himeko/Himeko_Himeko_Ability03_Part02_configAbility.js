@@ -153,5 +153,8 @@ const configAbility = {
       "stackData": [],
       "latentQueue": []
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
 }

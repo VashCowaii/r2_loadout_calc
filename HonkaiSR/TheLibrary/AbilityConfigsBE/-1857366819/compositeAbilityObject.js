@@ -85,7 +85,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1101208_FuXuan_Ability": {
       "fileName": "-1857366819_TrialPlayer_1101208_FuXuan_Ability",
@@ -125,7 +128,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_Final": {
       "fileName": "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_Final",
@@ -193,7 +199,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_Round2": {
       "fileName": "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_Round2",
@@ -409,7 +418,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_Round1": {
       "fileName": "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_Round1",
@@ -496,7 +508,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_AfterAttack": {
       "fileName": "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_AfterAttack",
@@ -504,7 +519,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle0": {
       "fileName": "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle0",
@@ -521,7 +539,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"575702222\">TrialPlayer_101111_Luka_Talk_Modifier_ForMonster_Sub2</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021111_Luka_Ability": {
       "fileName": "-1857366819_TrialPlayer_1021111_Luka_Ability",
@@ -948,7 +969,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1111204_JingYuan_Ability": {
       "fileName": "-1857366819_TrialPlayer_1111204_JingYuan_Ability",
@@ -1130,7 +1154,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1101213_DanHengIL_Ability_BattleEnd": {
       "fileName": "-1857366819_TrialPlayer_1101213_DanHengIL_Ability_BattleEnd",
@@ -1138,7 +1165,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1101213_DanHengIL_Ability": {
       "fileName": "-1857366819_TrialPlayer_1101213_DanHengIL_Ability",
@@ -1268,7 +1298,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021213_DanHengIL_Ability": {
       "fileName": "-1857366819_TrialPlayer_1021213_DanHengIL_Ability",
@@ -1285,7 +1318,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-934258987\">TrialPlayer_DanHengIL_20231052_Modifier</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1031213_DanHengIL_Ability": {
       "fileName": "-1857366819_TrialPlayer_1031213_DanHengIL_Ability",
@@ -1293,7 +1329,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021212_Jingliu_Ability": {
       "fileName": "-1857366819_TrialPlayer_1021212_Jingliu_Ability",
@@ -1585,7 +1624,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_1021209_Yanqing_Ability": {
       "fileName": "-1857366819_TrialPlayer_1021209_Yanqing_Ability",
@@ -1812,7 +1854,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_AutoWithoutUltra_Ability": {
       "fileName": "-1857366819_TrialPlayer_AutoWithoutUltra_Ability",
@@ -1849,7 +1894,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_AutoWithUltra_Ability": {
       "fileName": "-1857366819_TrialPlayer_AutoWithUltra_Ability",
@@ -1869,7 +1917,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_AggroUP_Ability": {
       "fileName": "-1857366819_TrialPlayer_AggroUP_Ability",
@@ -1990,7 +2041,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_NoBP_Ability": {
       "fileName": "-1857366819_TrialPlayer_NoBP_Ability",
@@ -2037,7 +2091,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_CTRLResist": {
       "fileName": "-1857366819_TrialPlayer_CTRLResist",
@@ -2078,7 +2135,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_TrialPlayer_SpeedUp_Ability": {
       "fileName": "-1857366819_TrialPlayer_SpeedUp_Ability",
@@ -2119,7 +2179,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1857366819_Modifiers": {
       "fileName": "-1857366819_Modifiers",

@@ -75,7 +75,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Luocha_Luocha_TechniqueInLevel": {
       "fileName": "Luocha_Luocha_TechniqueInLevel",
@@ -145,7 +148,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Luocha_Luocha_Passive01_InsertAbility": {
       "fileName": "Luocha_Luocha_Passive01_InsertAbility",
@@ -619,7 +625,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Luocha_Luocha_Ability02_InsertAbility": {
       "fileName": "Luocha_Luocha_Ability02_InsertAbility",
@@ -891,7 +900,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Luocha_Luocha_PassiveAbility01": {
       "fileName": "Luocha_Luocha_PassiveAbility01",
@@ -1378,7 +1390,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Luocha_Luocha_Ability03_Part02": {
       "fileName": "Luocha_Luocha_Ability03_Part02",
@@ -1524,7 +1539,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Luocha_Luocha_Ability03_Part01": {
       "fileName": "Luocha_Luocha_Ability03_Part01",
@@ -1554,7 +1572,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Luocha_Luocha_Ability03_EnterReady": {
       "fileName": "Luocha_Luocha_Ability03_EnterReady",
@@ -1562,7 +1583,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Luocha_Luocha_Ability02_Part02": {
       "fileName": "Luocha_Luocha_Ability02_Part02",
@@ -1767,7 +1791,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Luocha_Luocha_Ability02_Part01": {
       "fileName": "Luocha_Luocha_Ability02_Part01",
@@ -1800,7 +1827,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luocha_Luocha_Ability01_Part02": {
       "fileName": "Luocha_Luocha_Ability01_Part02",
@@ -1901,7 +1931,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luocha_Luocha_Ability01_Part01": {
       "fileName": "Luocha_Luocha_Ability01_Part01",
@@ -1931,7 +1964,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luocha_Modifiers": {
       "fileName": "Luocha_Modifiers",

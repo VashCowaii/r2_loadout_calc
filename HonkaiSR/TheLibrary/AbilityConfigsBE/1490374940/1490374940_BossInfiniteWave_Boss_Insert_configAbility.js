@@ -49,5 +49,8 @@ const configAbility = {
       "effectName": "Vulnerability",
       "statusName": "Vulnerability"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

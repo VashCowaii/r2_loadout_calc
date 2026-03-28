@@ -29,5 +29,8 @@ const configAbility = {
       "ability": "DanHengPT_BE_AddShield"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

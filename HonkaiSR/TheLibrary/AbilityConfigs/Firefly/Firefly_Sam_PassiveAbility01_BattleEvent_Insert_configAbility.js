@@ -95,5 +95,8 @@ const configAbility = {
       "stackData": [],
       "latentQueue": []
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

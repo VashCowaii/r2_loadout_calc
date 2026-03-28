@@ -25,5 +25,8 @@ const configAbility = {
       "ability": "PlayerBoy_20_Ability03_Part02"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  }
 }

@@ -302,7 +302,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Evernight_Evernight_PassiveAbility01": {
       "fileName": "Evernight_Evernight_PassiveAbility01",
@@ -1577,7 +1580,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Evernight_Evernight_Ability03_Part02": {
       "fileName": "Evernight_Evernight_Ability03_Part02",
@@ -1761,7 +1767,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Evernight_Evernight_Ability03_Part02_Charge": {
       "fileName": "Evernight_Evernight_Ability03_Part02_Charge",
@@ -1780,7 +1789,10 @@ const compositeAbilityObject = {
           "isFixed": "* ERR"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Evernight_Evernight_Ability03_Servant_Damage": {
       "fileName": "Evernight_Evernight_Ability03_Servant_Damage",
@@ -1831,7 +1843,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Evernight_Evernight_Ability03_Part01": {
       "fileName": "Evernight_Evernight_Ability03_Part01",
@@ -1870,7 +1885,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Evernight_Evernight_Ability03_Servant": {
       "fileName": "Evernight_Evernight_Ability03_Servant",
@@ -2013,7 +2031,10 @@ const compositeAbilityObject = {
           "parse": []
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability03_EnterReady": {
       "fileName": "Evernight_Evernight_Ability03_EnterReady",
@@ -2031,7 +2052,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Evernight_Evernight_Ability21_Part02": {
       "fileName": "Evernight_Evernight_Ability21_Part02",
@@ -2441,7 +2465,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability02_Part02": {
       "fileName": "Evernight_Evernight_Ability02_Part02",
@@ -2872,7 +2899,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability21_Part01": {
       "fileName": "Evernight_Evernight_Ability21_Part01",
@@ -2960,7 +2990,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability02_2_Servant": {
       "fileName": "Evernight_Evernight_Ability02_2_Servant",
@@ -3048,7 +3081,10 @@ const compositeAbilityObject = {
           "parse": []
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability02_Servant": {
       "fileName": "Evernight_Evernight_Ability02_Servant",
@@ -3128,7 +3164,10 @@ const compositeAbilityObject = {
           "parse": []
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability02_Part01": {
       "fileName": "Evernight_Evernight_Ability02_Part01",
@@ -3200,7 +3239,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability01_Part02": {
       "fileName": "Evernight_Evernight_Ability01_Part02",
@@ -3260,7 +3302,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Evernight_Ability01_Part01": {
       "fileName": "Evernight_Evernight_Ability01_Part01",
@@ -3329,7 +3374,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evernight_Modifiers": {
       "fileName": "Evernight_Modifiers",
@@ -5457,7 +5505,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Evey_Servant_EvernightServant_BattleCry": {
       "fileName": "Evey_Servant_EvernightServant_BattleCry",
@@ -5483,7 +5534,10 @@ const compositeAbilityObject = {
           "set": 0
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Evey_Servant_EvernightServant_PassiveAbility01": {
       "fileName": "Evey_Servant_EvernightServant_PassiveAbility01",
@@ -6409,7 +6463,10 @@ const compositeAbilityObject = {
             "_Partner_Size"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Evey_Servant_EvernightServant_Ability12_Part02": {
       "fileName": "Evey_Servant_EvernightServant_Ability12_Part02",
@@ -6748,7 +6805,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evey_Servant_EvernightServant_Ability11_Part02": {
       "fileName": "Evey_Servant_EvernightServant_Ability11_Part02",
@@ -7059,7 +7119,10 @@ const compositeAbilityObject = {
         "Wait for Pending Ability Completions",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evey_Servant_EvernightServant_Ability11_Part01": {
       "fileName": "Evey_Servant_EvernightServant_Ability11_Part01",
@@ -7298,7 +7361,10 @@ const compositeAbilityObject = {
           "parse": []
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evey_Servant_EvernightServant_Ability11_EnterReady": {
       "fileName": "Evey_Servant_EvernightServant_Ability11_EnterReady",
@@ -7351,7 +7417,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evey_Servant_EvernightServant_Ability01_Part02": {
       "fileName": "Evey_Servant_EvernightServant_Ability01_Part02",
@@ -7746,7 +7815,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evey_Servant_EvernightServant_Ability01_Part01": {
       "fileName": "Evey_Servant_EvernightServant_Ability01_Part01",
@@ -8007,7 +8079,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evey_Servant_EvernightServant_PassiveAbility01_Resummon": {
       "fileName": "Evey_Servant_EvernightServant_PassiveAbility01_Resummon",
@@ -8069,7 +8144,10 @@ const compositeAbilityObject = {
           "parse": []
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Evey_Modifiers": {
       "fileName": "Evey_Modifiers",

@@ -922,5 +922,8 @@ const configAbility = {
         "_Partner_Size"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

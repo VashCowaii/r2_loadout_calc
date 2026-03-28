@@ -892,5 +892,8 @@ const configAbility = {
         "Kafka_Listen_Rank6"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

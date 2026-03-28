@@ -31,7 +31,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"112407337\">MBattleEvent_Elation_Passive</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-731110892_BattleEventAbility_Elation_Ability43_RestartElationTime": {
       "fileName": "-731110892_BattleEventAbility_Elation_Ability43_RestartElationTime",
@@ -42,7 +45,10 @@ const compositeAbilityObject = {
         "Unknown EventType (Not always an error)",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-731110892_BattleEventAbility_Elation_Ability42_EndElationTime": {
       "fileName": "-731110892_BattleEventAbility_Elation_Ability42_EndElationTime",
@@ -62,7 +68,10 @@ const compositeAbilityObject = {
           "isLock": false
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-731110892_BattleEventAbility_Elation_Ability41_Part2": {
       "fileName": "-731110892_BattleEventAbility_Elation_Ability41_Part2",
@@ -249,7 +258,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-731110892_BattleEventAbility_Elation_Ability41_Part1": {
       "fileName": "-731110892_BattleEventAbility_Elation_Ability41_Part1",
@@ -268,7 +280,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-731110892_BattleEventAbility_Elation_Ability04_02": {
       "fileName": "-731110892_BattleEventAbility_Elation_Ability04_02",
@@ -308,7 +323,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-731110892_BattleEventAbility_Elation_Ability04_01": {
       "fileName": "-731110892_BattleEventAbility_Elation_Ability04_01",
@@ -460,6 +478,9 @@ const compositeAbilityObject = {
         }
       ],
       "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "dynamicStringsArray": [
         {
           "name": "ElationTime_CustomTag",
@@ -687,6 +708,9 @@ const compositeAbilityObject = {
         "Trigger: Ability End"
       ],
       "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "dynamicStringsArray": [
         {
           "name": "ElationTime_CustomTagTemp",
@@ -717,7 +741,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"994071549\">MLevel_Elation_Standard</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-731110892_Modifiers": {
       "fileName": "-731110892_Modifiers",

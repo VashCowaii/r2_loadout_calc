@@ -315,7 +315,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-2041992577_BattleEvent_SilverWolf_BonusLevel3": {
       "fileName": "-2041992577_BattleEvent_SilverWolf_BonusLevel3",

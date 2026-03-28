@@ -189,5 +189,8 @@ const configAbility = {
     },
     "Trigger: Skip Death Handling"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

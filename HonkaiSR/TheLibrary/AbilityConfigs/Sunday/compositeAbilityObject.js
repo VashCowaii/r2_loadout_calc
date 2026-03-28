@@ -79,7 +79,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sunday_Sunday_10_PassiveAbility01": {
       "fileName": "Sunday_Sunday_10_PassiveAbility01",
@@ -498,7 +501,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sunday_Sunday_10_Ability03_Part02": {
       "fileName": "Sunday_Sunday_10_Ability03_Part02",
@@ -1181,7 +1187,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sunday_Sunday_10_Ability03_Part01": {
       "fileName": "Sunday_Sunday_10_Ability03_Part01",
@@ -1211,7 +1220,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sunday_Sunday_10_Ability03_EnterReady": {
       "fileName": "Sunday_Sunday_10_Ability03_EnterReady",
@@ -1222,7 +1234,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sunday_Sunday_10_Ability02_Part02": {
       "fileName": "Sunday_Sunday_10_Ability02_Part02",
@@ -1870,7 +1885,10 @@ const compositeAbilityObject = {
           "effectName": "DMG Boost",
           "statusName": "Benison of Paper and Rites"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sunday_Sunday_10_Ability02_Part01": {
       "fileName": "Sunday_Sunday_10_Ability02_Part01",
@@ -1972,7 +1990,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sunday_Sunday_10_Ability01_Part02": {
       "fileName": "Sunday_Sunday_10_Ability01_Part02",
@@ -2018,7 +2039,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sunday_Sunday_10_Ability01_Part01": {
       "fileName": "Sunday_Sunday_10_Ability01_Part01",
@@ -2047,7 +2071,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sunday_Modifiers": {
       "fileName": "Sunday_Modifiers",

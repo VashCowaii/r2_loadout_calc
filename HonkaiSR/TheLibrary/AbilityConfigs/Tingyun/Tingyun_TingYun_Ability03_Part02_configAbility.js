@@ -134,5 +134,8 @@ const configAbility = {
       "effectName": "DMG Boost",
       "statusName": "Amidst the Rejoicing Clouds"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

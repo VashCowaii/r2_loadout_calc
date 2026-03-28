@@ -126,7 +126,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Fugue_Fugue_PassiveAbility01": {
       "fileName": "Fugue_Fugue_PassiveAbility01",
@@ -1189,7 +1192,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Fugue_Fugue_Ability03_Part02": {
       "fileName": "Fugue_Fugue_Ability03_Part02",
@@ -1372,7 +1378,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Fugue_Fugue_Ability03_Part01": {
       "fileName": "Fugue_Fugue_Ability03_Part01",
@@ -1402,7 +1411,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Fugue_Fugue_Ability03_EnterReady": {
       "fileName": "Fugue_Fugue_Ability03_EnterReady",
@@ -1410,7 +1422,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Fugue_Fugue_Ability02_Part02": {
       "fileName": "Fugue_Fugue_Ability02_Part02",
@@ -2170,7 +2185,10 @@ const compositeAbilityObject = {
           "type": "Other",
           "statusName": "Torrid Scorch"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Fugue_Fugue_Ability02_Part01": {
       "fileName": "Fugue_Fugue_Ability02_Part01",
@@ -2201,7 +2219,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Fugue_Fugue_Ability11_Part02": {
       "fileName": "Fugue_Fugue_Ability11_Part02",
@@ -2276,7 +2297,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Fugue_Fugue_Ability11_Part01": {
       "fileName": "Fugue_Fugue_Ability11_Part01",
@@ -2306,7 +2330,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Fugue_Fugue_Ability01_Part02": {
       "fileName": "Fugue_Fugue_Ability01_Part02",
@@ -2352,7 +2379,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Fugue_Fugue_Ability01_Part01": {
       "fileName": "Fugue_Fugue_Ability01_Part01",
@@ -2382,7 +2412,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Fugue_Modifiers": {
       "fileName": "Fugue_Modifiers",

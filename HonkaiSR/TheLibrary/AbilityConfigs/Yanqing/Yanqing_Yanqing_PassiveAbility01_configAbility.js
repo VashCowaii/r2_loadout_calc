@@ -65,5 +65,8 @@ const configAbility = {
       "cooldown": 0
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

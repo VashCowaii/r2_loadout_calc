@@ -141,7 +141,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DrRatio_Dr_Ratio_Bonus": {
       "fileName": "DrRatio_Dr_Ratio_Bonus",
@@ -151,7 +154,10 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02": {
       "fileName": "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02",
@@ -471,7 +477,10 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01": {
       "fileName": "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01",
@@ -612,7 +621,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DrRatio_Dr_Ratio_PassiveAbility01": {
       "fileName": "DrRatio_Dr_Ratio_PassiveAbility01",
@@ -1533,7 +1545,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DrRatio_Dr_Ratio_Ability03_Part02": {
       "fileName": "DrRatio_Dr_Ratio_Ability03_Part02",
@@ -1655,7 +1670,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DrRatio_Dr_Ratio_Ability03_Part01": {
       "fileName": "DrRatio_Dr_Ratio_Ability03_Part01",
@@ -1687,7 +1705,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DrRatio_Dr_Ratio_Ability03_EnterReady": {
       "fileName": "DrRatio_Dr_Ratio_Ability03_EnterReady",
@@ -1695,7 +1716,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DrRatio_Dr_Ratio_Ability02_Part02": {
       "fileName": "DrRatio_Dr_Ratio_Ability02_Part02",
@@ -2195,7 +2219,10 @@ const compositeAbilityObject = {
           "effectName": "Effect RES Reduction",
           "statusName": "Effect RES Reduction"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DrRatio_Dr_Ratio_Ability02_Part01": {
       "fileName": "DrRatio_Dr_Ratio_Ability02_Part01",
@@ -2224,7 +2251,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DrRatio_Dr_Ratio_Ability01_Part02": {
       "fileName": "DrRatio_Dr_Ratio_Ability01_Part02",
@@ -2290,7 +2320,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DrRatio_Dr_Ratio_Ability01_Part01": {
       "fileName": "DrRatio_Dr_Ratio_Ability01_Part01",
@@ -2320,7 +2353,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DrRatio_Modifiers": {
       "fileName": "DrRatio_Modifiers",

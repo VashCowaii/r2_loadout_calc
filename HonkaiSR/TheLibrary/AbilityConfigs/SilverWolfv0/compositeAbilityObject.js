@@ -109,7 +109,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolfv0_Silwolf_Eidolon2": {
       "fileName": "SilverWolfv0_Silwolf_Eidolon2",
@@ -209,7 +212,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolfv0_Silwolf_Trace01": {
       "fileName": "SilverWolfv0_Silwolf_Trace01",
@@ -264,7 +270,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolfv0_Silwolf_TechniqueInLevel": {
       "fileName": "SilverWolfv0_Silwolf_TechniqueInLevel",
@@ -347,7 +356,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolfv0_Silwolf_PassiveAbility_RandomBug": {
       "fileName": "SilverWolfv0_Silwolf_PassiveAbility_RandomBug",
@@ -1018,7 +1030,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "SilverWolfv0_Silwolf_PassiveAbility01": {
       "fileName": "SilverWolfv0_Silwolf_PassiveAbility01",
@@ -1224,7 +1239,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolfv0_Silwolf_Ability03_Part02": {
       "fileName": "SilverWolfv0_Silwolf_Ability03_Part02",
@@ -1451,7 +1469,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolfv0_Silwolf_Ability03_Part01": {
       "fileName": "SilverWolfv0_Silwolf_Ability03_Part01",
@@ -1481,7 +1502,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolfv0_Silwolf_Ability03_EnterReady": {
       "fileName": "SilverWolfv0_Silwolf_Ability03_EnterReady",
@@ -1489,7 +1513,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "SilverWolfv0_Silwolf_Ability02_Part02": {
       "fileName": "SilverWolfv0_Silwolf_Ability02_Part02",
@@ -2176,7 +2203,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolfv0_Silwolf_Ability02_Part01": {
       "fileName": "SilverWolfv0_Silwolf_Ability02_Part01",
@@ -2207,7 +2237,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolfv0_Silwolf_Ability01_Part02": {
       "fileName": "SilverWolfv0_Silwolf_Ability01_Part02",
@@ -2310,7 +2343,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolfv0_Silwolf_Ability01_Part01": {
       "fileName": "SilverWolfv0_Silwolf_Ability01_Part01",
@@ -2341,7 +2377,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolfv0_Modifiers": {
       "fileName": "SilverWolfv0_Modifiers",

@@ -248,5 +248,8 @@ const configAbility = {
       "effectName": "Enhanced Basic Attack Boost",
       "statusName": "March 7th, the Apex Heroine"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

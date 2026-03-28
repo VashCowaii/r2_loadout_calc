@@ -72,7 +72,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Robin_Robin_PassiveAbility01": {
       "fileName": "Robin_Robin_PassiveAbility01",
@@ -113,7 +116,10 @@ const compositeAbilityObject = {
           "cooldown": 0
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Robin_BattleEventAbility_Robin_Ability03": {
       "fileName": "Robin_BattleEventAbility_Robin_Ability03",
@@ -181,7 +187,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Robin_Robin_Ability03_Part02": {
       "fileName": "Robin_Robin_Ability03_Part02",
@@ -209,7 +218,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Robin_Robin_Ability03_Part01": {
       "fileName": "Robin_Robin_Ability03_Part01",
@@ -245,7 +257,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Robin_Robin_Ability03_EnterReady": {
       "fileName": "Robin_Robin_Ability03_EnterReady",
@@ -253,7 +268,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Robin_Robin_Ability02_FriendAttack": {
       "fileName": "Robin_Robin_Ability02_FriendAttack",
@@ -309,7 +327,10 @@ const compositeAbilityObject = {
           "cooldown": 0
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Robin_Robin_Ability02_Part02": {
       "fileName": "Robin_Robin_Ability02_Part02",
@@ -366,7 +387,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Robin_Robin_Ability02_Part01": {
       "fileName": "Robin_Robin_Ability02_Part01",
@@ -396,7 +420,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Robin_Robin_Ability01_Part02": {
       "fileName": "Robin_Robin_Ability01_Part02",
@@ -504,7 +531,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Robin_Robin_Ability01_Part01": {
       "fileName": "Robin_Robin_Ability01_Part01",
@@ -533,7 +563,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Robin_Modifiers": {
       "fileName": "Robin_Modifiers",

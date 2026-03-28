@@ -25,5 +25,8 @@ const configAbility = {
       "ability": "Advanced_Sparkle_Ability03_Part02"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  }
 }

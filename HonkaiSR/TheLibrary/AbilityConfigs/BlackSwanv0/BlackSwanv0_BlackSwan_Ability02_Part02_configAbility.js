@@ -589,5 +589,8 @@ const configAbility = {
       "effectName": "DEF Reduction",
       "statusName": "Decadence, False Twilight"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

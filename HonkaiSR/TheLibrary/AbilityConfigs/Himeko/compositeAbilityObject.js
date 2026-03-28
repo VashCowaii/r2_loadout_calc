@@ -102,7 +102,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Himeko_Himeko_Trace03": {
       "fileName": "Himeko_Himeko_Trace03",
@@ -260,7 +263,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Himeko_Himeko_Trace01": {
       "fileName": "Himeko_Himeko_Trace01",
@@ -326,7 +332,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Himeko_Himeko_TechniqueInLevel": {
       "fileName": "Himeko_Himeko_TechniqueInLevel",
@@ -413,7 +422,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Himeko_Himeko_Passive1Atk02_Ability": {
       "fileName": "Himeko_Himeko_Passive1Atk02_Ability",
@@ -573,7 +585,10 @@ const compositeAbilityObject = {
           "effectName": "SPD Boost",
           "statusName": "SPD Boost"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Himeko_Himeko_Passive1Atk_Ability": {
       "fileName": "Himeko_Himeko_Passive1Atk_Ability",
@@ -616,7 +631,10 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Himeko_Himeko_PassiveAbility01": {
       "fileName": "Himeko_Himeko_PassiveAbility01",
@@ -1563,7 +1581,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Himeko_Himeko_Ability03_Part02": {
       "fileName": "Himeko_Himeko_Ability03_Part02",
@@ -1720,7 +1741,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Himeko_Himeko_Ability03_Part01": {
       "fileName": "Himeko_Himeko_Ability03_Part01",
@@ -1750,7 +1774,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Himeko_Himeko_Ability03_EnterReady": {
       "fileName": "Himeko_Himeko_Ability03_EnterReady",
@@ -1758,7 +1785,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Himeko_Himeko_Ability02_Part02": {
       "fileName": "Himeko_Himeko_Ability02_Part02",
@@ -2061,7 +2091,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Himeko_Himeko_Ability02_Part01": {
       "fileName": "Himeko_Himeko_Ability02_Part01",
@@ -2091,7 +2124,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Himeko_Himeko_Ability01_Part02": {
       "fileName": "Himeko_Himeko_Ability01_Part02",
@@ -2161,7 +2197,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Himeko_Himeko_Ability01_Part01": {
       "fileName": "Himeko_Himeko_Ability01_Part01",
@@ -2191,7 +2230,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Himeko_Modifiers": {
       "fileName": "Himeko_Modifiers",

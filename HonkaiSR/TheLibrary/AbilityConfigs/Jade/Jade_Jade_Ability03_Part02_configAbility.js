@@ -127,5 +127,8 @@ const configAbility = {
       "effectName": "Follow-Up ATK Boost",
       "statusName": "Follow-Up ATK Boost"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

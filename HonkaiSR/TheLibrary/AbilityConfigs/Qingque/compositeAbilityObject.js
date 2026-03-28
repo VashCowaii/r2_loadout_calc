@@ -100,7 +100,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Qingque_Qingque_Eidolon4_ATK": {
       "fileName": "Qingque_Qingque_Eidolon4_ATK",
@@ -144,7 +147,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Qingque_Qingque_TechniqueInLevel": {
       "fileName": "Qingque_Qingque_TechniqueInLevel",
@@ -193,7 +199,10 @@ const compositeAbilityObject = {
         },
         "Refresh QingQue Bar-State"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Qingque_QingQue_PassiveAbility01": {
       "fileName": "Qingque_QingQue_PassiveAbility01",
@@ -287,7 +296,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Qingque_QingQue_Ability03_Part02": {
       "fileName": "Qingque_QingQue_Ability03_Part02",
@@ -493,7 +505,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_QingQue_Ability03_Part01": {
       "fileName": "Qingque_QingQue_Ability03_Part01",
@@ -524,7 +539,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_Qingque_Ability03_EnterReady": {
       "fileName": "Qingque_Qingque_Ability03_EnterReady",
@@ -532,7 +550,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Qingque_Qingque_Bonus": {
       "fileName": "Qingque_Qingque_Bonus",
@@ -613,7 +634,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Qingque_Qingque_BpInsertAction_Tiao": {
       "fileName": "Qingque_Qingque_BpInsertAction_Tiao",
@@ -644,7 +668,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Qingque_Qingque_BpInsertAction_Tong": {
       "fileName": "Qingque_Qingque_BpInsertAction_Tong",
@@ -675,7 +702,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Qingque_Qingque_BpInsertAction_Wan": {
       "fileName": "Qingque_Qingque_BpInsertAction_Wan",
@@ -706,7 +736,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Qingque_Qingque_BpInsertAction": {
       "fileName": "Qingque_Qingque_BpInsertAction",
@@ -726,7 +759,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Qingque_QingQue_Ability02_Part02": {
       "fileName": "Qingque_QingQue_Ability02_Part02",
@@ -1308,7 +1344,10 @@ const compositeAbilityObject = {
         "Refresh QingQue Bar-State",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_QingQue_Ability02_Part01": {
       "fileName": "Qingque_QingQue_Ability02_Part01",
@@ -1342,7 +1381,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_QingQue_Ability11_Part02": {
       "fileName": "Qingque_QingQue_Ability11_Part02",
@@ -1531,7 +1573,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_QingQue_Ability11_Part01": {
       "fileName": "Qingque_QingQue_Ability11_Part01",
@@ -1561,7 +1606,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_QingQue_Ability01_Part02": {
       "fileName": "Qingque_QingQue_Ability01_Part02",
@@ -3039,7 +3087,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_QingQue_Ability01_Part01": {
       "fileName": "Qingque_QingQue_Ability01_Part01",
@@ -3069,7 +3120,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Qingque_Modifiers": {
       "fileName": "Qingque_Modifiers",

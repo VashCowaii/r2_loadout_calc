@@ -272,7 +272,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0050_Insert_Camera": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0050_Insert_Camera",
@@ -280,7 +283,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0050": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0050",
@@ -1635,7 +1641,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0040_Insert_Camera": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0040_Insert_Camera",
@@ -1643,7 +1652,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0040": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0040",
@@ -3245,7 +3257,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0030_Insert": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0030_Insert",
@@ -3422,7 +3437,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0030_Insert_Camera": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0030_Insert_Camera",
@@ -3430,7 +3448,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0030": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0030",
@@ -8094,7 +8115,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_Modifier_FantasticStory_BaseAbility_0010_Insert": {
       "fileName": "-1954781239_Modifier_FantasticStory_BaseAbility_0010_Insert",
@@ -8317,7 +8341,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1954781239_FantasticStory_BaseAbility_0010": {
       "fileName": "-1954781239_FantasticStory_BaseAbility_0010",

@@ -37,7 +37,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "-1285159557_Standard_LockHP": {
       "fileName": "-1285159557_Standard_LockHP",
@@ -54,7 +57,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1845786667\">Standard_LockHP</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1285159557_Standard_Servant_Forcekill": {
       "fileName": "-1285159557_Standard_Servant_Forcekill",
@@ -71,7 +77,10 @@ const compositeAbilityObject = {
           "abortInsertedAbilities": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   }
 }

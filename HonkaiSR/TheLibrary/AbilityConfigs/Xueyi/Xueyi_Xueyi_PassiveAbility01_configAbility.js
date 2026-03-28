@@ -876,5 +876,8 @@ const configAbility = {
         "showAsForcedReduction": true
       }
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

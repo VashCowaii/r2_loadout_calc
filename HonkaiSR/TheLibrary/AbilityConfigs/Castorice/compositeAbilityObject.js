@@ -419,7 +419,10 @@ const compositeAbilityObject = {
             "EnterBattlePlayTimes"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Castorice_Castorice_PassiveAbility_1": {
       "fileName": "Castorice_Castorice_PassiveAbility_1",
@@ -1603,7 +1606,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Castorice_Castorice_Ability03_Part02": {
       "fileName": "Castorice_Castorice_Ability03_Part02",
@@ -1866,7 +1872,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Castorice_Castorice_Ability03_Part01": {
       "fileName": "Castorice_Castorice_Ability03_Part01",
@@ -1903,7 +1912,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Castorice_Castorice_Ability03_EnterReady": {
       "fileName": "Castorice_Castorice_Ability03_EnterReady",
@@ -1911,7 +1923,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Castorice_Castorice_Ability21_Part02": {
       "fileName": "Castorice_Castorice_Ability21_Part02",
@@ -2099,7 +2114,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Castorice_Castorice_Ability21_Part01": {
       "fileName": "Castorice_Castorice_Ability21_Part01",
@@ -2173,7 +2191,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Castorice_Castorice_Ability02_Part02": {
       "fileName": "Castorice_Castorice_Ability02_Part02",
@@ -2268,7 +2289,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Castorice_Castorice_Ability02_Part01": {
       "fileName": "Castorice_Castorice_Ability02_Part01",
@@ -2297,7 +2321,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Castorice_Castorice_Ability01_Part02": {
       "fileName": "Castorice_Castorice_Ability01_Part02",
@@ -2378,7 +2405,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Castorice_Castorice_Ability01_Part01": {
       "fileName": "Castorice_Castorice_Ability01_Part01",
@@ -2408,7 +2438,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Castorice_Modifiers": {
       "fileName": "Castorice_Modifiers",
@@ -3796,7 +3829,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_PassiveAbility01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_PassiveAbility01",
@@ -4847,7 +4883,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_DeathRattle": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_DeathRattle",
@@ -4867,7 +4906,10 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_PassiveInsertAbility_Part02": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_PassiveInsertAbility_Part02",
@@ -5160,7 +5202,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_PassiveInsertAbility_Part01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_PassiveInsertAbility_Part01",
@@ -5211,7 +5256,10 @@ const compositeAbilityObject = {
           "priorityTag": "Character"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Together_Part01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Together_Part01",
@@ -5359,7 +5407,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability23_Part02": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability23_Part02",
@@ -5648,7 +5699,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability23_Part01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability23_Part01",
@@ -5717,7 +5771,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability22_Part02": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability22_Part02",
@@ -6185,7 +6242,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability22_Part01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability22_Part01",
@@ -6293,7 +6353,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability21_Part02": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability21_Part02",
@@ -6729,7 +6792,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability21_Part01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability21_Part01",
@@ -6818,7 +6884,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability02_Part02": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability02_Part02",
@@ -7254,7 +7323,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability02_Part01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability02_Part01",
@@ -7287,7 +7359,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability01_Ready": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability01_Ready",
@@ -7295,7 +7370,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability01_Part02": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability01_Part02",
@@ -7515,7 +7593,10 @@ const compositeAbilityObject = {
           ],
           "duration": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability01_Part01": {
       "fileName": "NetherwingPollux_Servant_CastoriceServant_Ability01_Part01",
@@ -7545,7 +7626,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "NetherwingPollux_Modifiers": {
       "fileName": "NetherwingPollux_Modifiers",

@@ -29,5 +29,8 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

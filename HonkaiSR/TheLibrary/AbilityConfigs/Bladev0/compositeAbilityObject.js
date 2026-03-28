@@ -27,7 +27,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bladev0_Ren_TechniqueInLevel": {
       "fileName": "Bladev0_Ren_TechniqueInLevel",
@@ -158,7 +161,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bladev0_Ren_Passive1Atk02_Ability": {
       "fileName": "Bladev0_Ren_Passive1Atk02_Ability",
@@ -367,7 +373,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Bladev0_Ren_Passive1Atk_Ability": {
       "fileName": "Bladev0_Ren_Passive1Atk_Ability",
@@ -412,7 +421,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Bladev0_Ren_PassiveAbility01": {
       "fileName": "Bladev0_Ren_PassiveAbility01",
@@ -1535,7 +1547,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bladev0_Ren_Ability03_Part02": {
       "fileName": "Bladev0_Ren_Ability03_Part02",
@@ -1829,7 +1844,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Ren_Ability03_Part01": {
       "fileName": "Bladev0_Ren_Ability03_Part01",
@@ -1859,7 +1877,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Ren_Ability03_EnterReady": {
       "fileName": "Bladev0_Ren_Ability03_EnterReady",
@@ -1867,7 +1888,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Bladev0_Ren_Bonus": {
       "fileName": "Bladev0_Ren_Bonus",
@@ -1877,7 +1901,10 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bladev0_Ren_Ability02_Part02": {
       "fileName": "Bladev0_Ren_Ability02_Part02",
@@ -1955,7 +1982,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Ren_Ability02_Part01": {
       "fileName": "Bladev0_Ren_Ability02_Part01",
@@ -1986,7 +2016,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Ren_Ability11_Part02": {
       "fileName": "Bladev0_Ren_Ability11_Part02",
@@ -2153,7 +2186,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Ren_Ability11_Part01": {
       "fileName": "Bladev0_Ren_Ability11_Part01",
@@ -2183,7 +2219,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Ren_Ability01_Part02": {
       "fileName": "Bladev0_Ren_Ability01_Part02",
@@ -2254,7 +2293,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Ren_Ability01_Part01": {
       "fileName": "Bladev0_Ren_Ability01_Part01",
@@ -2284,7 +2326,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bladev0_Modifiers": {
       "fileName": "Bladev0_Modifiers",

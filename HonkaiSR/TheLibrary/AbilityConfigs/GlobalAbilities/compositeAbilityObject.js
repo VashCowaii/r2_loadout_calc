@@ -33,7 +33,10 @@ const compositeAbilityObject = {
           "ignoreDeathTriggers": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "GlobalAbilities_GlobalAbility_Castorice_Insert": {
       "fileName": "GlobalAbilities_GlobalAbility_Castorice_Insert",
@@ -137,7 +140,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilities_Castotice_BE_PassiveAbility": {
       "fileName": "GlobalAbilities_Castotice_BE_PassiveAbility",
@@ -352,7 +358,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilities_Standard_TechniqueInLevel": {
       "fileName": "GlobalAbilities_Standard_TechniqueInLevel",
@@ -360,7 +369,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilities_Servant_Standard_PassiveAbility": {
       "fileName": "GlobalAbilities_Servant_Standard_PassiveAbility",
@@ -420,7 +432,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilities_Summoner_Standard_PassiveAbility": {
       "fileName": "GlobalAbilities_Summoner_Standard_PassiveAbility",
@@ -513,7 +528,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilities_Standard_PassiveAbility": {
       "fileName": "GlobalAbilities_Standard_PassiveAbility",
@@ -549,7 +567,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1176583887\">Standard_TriggerDeparted</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilities_Modifiers": {
       "fileName": "GlobalAbilities_Modifiers",

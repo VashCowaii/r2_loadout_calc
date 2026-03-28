@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jingliuv0_Jingliu_TechniqueInLevel": {
       "fileName": "Jingliuv0_Jingliu_TechniqueInLevel",
@@ -203,7 +206,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jingliuv0_Jingliu_PassiveAtkReady_Ability": {
       "fileName": "Jingliuv0_Jingliu_PassiveAtkReady_Ability",
@@ -1125,7 +1131,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jingliuv0_Jingliu_PassiveAtkReady_Part01": {
       "fileName": "Jingliuv0_Jingliu_PassiveAtkReady_Part01",
@@ -1248,7 +1257,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jingliuv0_Jingliu_PassiveAbility01": {
       "fileName": "Jingliuv0_Jingliu_PassiveAbility01",
@@ -1391,7 +1403,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jingliuv0_Jingliu_Ability03_Part02": {
       "fileName": "Jingliuv0_Jingliu_Ability03_Part02",
@@ -1694,7 +1709,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Skill Point User}}"
+      }
     },
     "Jingliuv0_Jingliu_Ability03_Part01": {
       "fileName": "Jingliuv0_Jingliu_Ability03_Part01",
@@ -1724,7 +1742,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Skill Point User}}"
+      }
     },
     "Jingliuv0_Jingliu_Ability03_EnterReady": {
       "fileName": "Jingliuv0_Jingliu_Ability03_EnterReady",
@@ -1732,7 +1753,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Jingliuv0_Jingliu_Ability02_Part02": {
       "fileName": "Jingliuv0_Jingliu_Ability02_Part02",
@@ -1879,7 +1903,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jingliuv0_Jingliu_Ability02_Part01": {
       "fileName": "Jingliuv0_Jingliu_Ability02_Part01",
@@ -1909,7 +1936,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jingliuv0_Jingliu_Ability01_Part02": {
       "fileName": "Jingliuv0_Jingliu_Ability01_Part02",
@@ -1980,7 +2010,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jingliuv0_Jingliu_Ability01_Part01": {
       "fileName": "Jingliuv0_Jingliu_Ability01_Part01",
@@ -2010,7 +2043,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jingliuv0_Modifiers": {
       "fileName": "Jingliuv0_Modifiers",

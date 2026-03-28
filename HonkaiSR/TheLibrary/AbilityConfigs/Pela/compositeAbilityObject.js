@@ -122,7 +122,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Pela_Pela_Trace01": {
       "fileName": "Pela_Pela_Trace01",
@@ -182,7 +185,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Pela_Pela_TechniqueInLevel": {
       "fileName": "Pela_Pela_TechniqueInLevel",
@@ -310,7 +316,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Pela_Pela_PassiveAbility01": {
       "fileName": "Pela_Pela_PassiveAbility01",
@@ -650,7 +659,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Pela_Pela_Ability03_Part02": {
       "fileName": "Pela_Pela_Ability03_Part02",
@@ -767,7 +779,10 @@ const compositeAbilityObject = {
           "effectName": "DEF Reduction",
           "statusName": "Exposed"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Pela_Pela_Ability03_Part01": {
       "fileName": "Pela_Pela_Ability03_Part01",
@@ -797,7 +812,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Pela_Pela_Ability03_Cutin": {
       "fileName": "Pela_Pela_Ability03_Cutin",
@@ -805,7 +823,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Pela_Pela_Ability02_Part02": {
       "fileName": "Pela_Pela_Ability02_Part02",
@@ -995,7 +1016,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Pela_Pela_Ability02_Part01": {
       "fileName": "Pela_Pela_Ability02_Part01",
@@ -1024,7 +1048,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Pela_Pela_Ability01_Part02": {
       "fileName": "Pela_Pela_Ability01_Part02",
@@ -1104,7 +1131,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Pela_Pela_Ability01_Part01": {
       "fileName": "Pela_Pela_Ability01_Part01",
@@ -1133,7 +1163,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Pela_Modifiers": {
       "fileName": "Pela_Modifiers",

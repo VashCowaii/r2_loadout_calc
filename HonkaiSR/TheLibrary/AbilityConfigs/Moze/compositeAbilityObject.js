@@ -133,7 +133,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Moze_Moze_Insert_Part01_Eidolon6Extra": {
       "fileName": "Moze_Moze_Insert_Part01_Eidolon6Extra",
@@ -448,7 +451,10 @@ const compositeAbilityObject = {
           "parse": []
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Moze_Moze_Insert_Part01": {
       "fileName": "Moze_Moze_Insert_Part01",
@@ -834,7 +840,10 @@ const compositeAbilityObject = {
           "parse": []
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Moze_Moze_PassiveAbility01": {
       "fileName": "Moze_Moze_PassiveAbility01",
@@ -2319,7 +2328,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Moze_Moze_Ability03_Part02": {
       "fileName": "Moze_Moze_Ability03_Part02",
@@ -2582,7 +2594,10 @@ const compositeAbilityObject = {
           ],
           "duration": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Moze_Moze_Ability03_Part01": {
       "fileName": "Moze_Moze_Ability03_Part01",
@@ -2617,7 +2632,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Moze_Moze_Ability03_EnterReady": {
       "fileName": "Moze_Moze_Ability03_EnterReady",
@@ -2637,7 +2655,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Moze_Moze_Ability02_Part02": {
       "fileName": "Moze_Moze_Ability02_Part02",
@@ -2796,7 +2817,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Moze_Moze_Ability02_Part01": {
       "fileName": "Moze_Moze_Ability02_Part01",
@@ -2825,7 +2849,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Moze_Moze_Ability01_Part02": {
       "fileName": "Moze_Moze_Ability01_Part02",
@@ -2870,7 +2897,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Moze_Moze_Ability01_Part01": {
       "fileName": "Moze_Moze_Ability01_Part01",
@@ -2899,7 +2929,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Moze_Modifiers": {
       "fileName": "Moze_Modifiers",

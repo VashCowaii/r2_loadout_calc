@@ -617,5 +617,8 @@ const configAbility = {
       "stackData": [],
       "latentQueue": []
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "All Enemy Team Members"
+  }
 }

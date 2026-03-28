@@ -121,7 +121,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCAbundance_Upgrade2": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCAbundance_Upgrade2",
@@ -409,7 +412,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCAbundance": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCAbundance",
@@ -520,7 +526,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCSandworm_Upgrade2": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCSandworm_Upgrade2",
@@ -1414,7 +1423,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCSandworm": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCSandworm",
@@ -1549,7 +1561,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCRuin_Upgrade2": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCRuin_Upgrade2",
@@ -1856,7 +1871,10 @@ const compositeAbilityObject = {
           "latentQueue": [],
           "addStacksPerTrigger": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "All Player Team Members"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCRuin": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCRuin",
@@ -1967,7 +1985,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCHunting_Upgrade2": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCHunting_Upgrade2",
@@ -2369,7 +2390,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "All Player Team Members"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCHunting": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCHunting",
@@ -2472,7 +2496,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Camera": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_Camera",
@@ -2480,7 +2507,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert2": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert2",
@@ -2614,7 +2644,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert",
@@ -2743,7 +2776,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Fuyan_Insert": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_Fuyan_Insert",
@@ -2873,7 +2909,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Fuyan": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_Fuyan",
@@ -2992,7 +3031,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite2": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite2",
@@ -3089,7 +3131,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite",
@@ -3186,7 +3231,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent02_Insert": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent02_Insert",
@@ -3337,7 +3385,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent02": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent02",
@@ -3448,7 +3499,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent01_Insert": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent01_Insert",
@@ -3577,7 +3631,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent01": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent01",
@@ -3688,7 +3745,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_RogueDLCReinforce": {
       "fileName": "-1097634517_BattleEventAbility_RogueDLCReinforce",
@@ -4442,7 +4502,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1097634517_BattleEventAbility_Camear_AllDarkTeam": {
       "fileName": "-1097634517_BattleEventAbility_Camear_AllDarkTeam",
@@ -4454,7 +4517,10 @@ const compositeAbilityObject = {
           "name": "UI Display Event"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1097634517_BattleEventAbility_Camear_AllLightTeam": {
       "fileName": "-1097634517_BattleEventAbility_Camear_AllLightTeam",
@@ -4466,7 +4532,10 @@ const compositeAbilityObject = {
           "name": "UI Display Event"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1097634517_BattleEventAbility_Camear_SelectDarkTeamEntity": {
       "fileName": "-1097634517_BattleEventAbility_Camear_SelectDarkTeamEntity",
@@ -4478,7 +4547,10 @@ const compositeAbilityObject = {
           "name": "UI Display Event"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1097634517_BattleEventAbility_Camear_SelectLightTeamEntity": {
       "fileName": "-1097634517_BattleEventAbility_Camear_SelectLightTeamEntity",
@@ -4490,7 +4562,10 @@ const compositeAbilityObject = {
           "name": "UI Display Event"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-1097634517_BattleEventAbility_Challenge_04_temp": {
       "fileName": "-1097634517_BattleEventAbility_Challenge_04_temp",
@@ -4791,7 +4866,10 @@ const compositeAbilityObject = {
           "stackLimit": 2,
           "addStacksPerTrigger": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_Challenge_Month_15": {
       "fileName": "-1097634517_BattleEventAbility_Challenge_Month_15",
@@ -5112,7 +5190,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_Modifier_BattleEventAbility_Challenge_Month_14_Insert": {
       "fileName": "-1097634517_Modifier_BattleEventAbility_Challenge_Month_14_Insert",
@@ -5153,7 +5234,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_Challenge_Month_14": {
       "fileName": "-1097634517_BattleEventAbility_Challenge_Month_14",
@@ -5499,7 +5583,10 @@ const compositeAbilityObject = {
           "adjustmentType": "+"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_Challenge_Month_13": {
       "fileName": "-1097634517_BattleEventAbility_Challenge_Month_13",
@@ -11232,7 +11319,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_Challenge_Xianzhou_05": {
       "fileName": "-1097634517_BattleEventAbility_Challenge_Xianzhou_05",
@@ -12302,7 +12392,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_Challenge_Xianzhou_01_Insert": {
       "fileName": "-1097634517_BattleEventAbility_Challenge_Xianzhou_01_Insert",
@@ -12336,7 +12429,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-1097634517_BattleEventAbility_Challenge_Xianzhou_01": {
       "fileName": "-1097634517_BattleEventAbility_Challenge_Xianzhou_01",

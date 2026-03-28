@@ -36,7 +36,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_Hit": {
       "fileName": "TopazNumby_Topaz_BE_Hit",
@@ -87,7 +90,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_Ability03Ready": {
       "fileName": "TopazNumby_Topaz_BE_Ability03Ready",
@@ -95,7 +101,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_Ability01Ready": {
       "fileName": "TopazNumby_Topaz_BE_Ability01Ready",
@@ -103,7 +112,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_Ability02Ready": {
       "fileName": "TopazNumby_Topaz_BE_Ability02Ready",
@@ -111,7 +123,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_UltraAttackDamage": {
       "fileName": "TopazNumby_Topaz_BE_UltraAttackDamage",
@@ -434,7 +449,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TopazNumby_Topaz_BE_NormalAttackDamage": {
       "fileName": "TopazNumby_Topaz_BE_NormalAttackDamage",
@@ -550,7 +568,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TopazNumby_Topaz_BE_LaterAttack": {
       "fileName": "TopazNumby_Topaz_BE_LaterAttack",
@@ -643,7 +664,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TopazNumby_Topaz_BE_FirstAttack": {
       "fileName": "TopazNumby_Topaz_BE_FirstAttack",
@@ -689,7 +713,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TopazNumby_Topaz_BE_RefreshEnhance": {
       "fileName": "TopazNumby_Topaz_BE_RefreshEnhance",
@@ -697,7 +724,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_DelayLimbo": {
       "fileName": "TopazNumby_Topaz_BE_DelayLimbo",
@@ -705,7 +735,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_DelayDeath": {
       "fileName": "TopazNumby_Topaz_BE_DelayDeath",
@@ -723,7 +756,10 @@ const compositeAbilityObject = {
           "ignoreDeathTriggers": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_BE_PassiveAbility": {
       "fileName": "TopazNumby_Topaz_BE_PassiveAbility",
@@ -962,7 +998,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_TechniqueInLevel": {
       "fileName": "TopazNumby_Topaz_TechniqueInLevel",
@@ -1026,7 +1065,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_PassiveAbility01": {
       "fileName": "TopazNumby_Topaz_PassiveAbility01",
@@ -2070,7 +2112,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Topaz_Ability03_Part02": {
       "fileName": "TopazNumby_Topaz_Ability03_Part02",
@@ -2230,7 +2275,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TopazNumby_Topaz_Ability03_Part01": {
       "fileName": "TopazNumby_Topaz_Ability03_Part01",
@@ -2262,7 +2310,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TopazNumby_Topaz_Ability03_EnterReady": {
       "fileName": "TopazNumby_Topaz_Ability03_EnterReady",
@@ -2270,7 +2321,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TopazNumby_Topaz_Ability02_Part02": {
       "fileName": "TopazNumby_Topaz_Ability02_Part02",
@@ -2932,7 +2986,10 @@ const compositeAbilityObject = {
           ],
           "duration": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TopazNumby_Topaz_Ability02_Part01": {
       "fileName": "TopazNumby_Topaz_Ability02_Part01",
@@ -2972,7 +3029,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TopazNumby_Topaz_Ability01_Part02": {
       "fileName": "TopazNumby_Topaz_Ability01_Part02",
@@ -3085,7 +3145,10 @@ const compositeAbilityObject = {
           "latentQueue": [],
           "duration": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TopazNumby_Topaz_Ability01_Part01": {
       "fileName": "TopazNumby_Topaz_Ability01_Part01",
@@ -3114,7 +3177,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TopazNumby_Topaz_Eidolon4_ReduceDelay": {
       "fileName": "TopazNumby_Topaz_Eidolon4_ReduceDelay",
@@ -3132,7 +3198,10 @@ const compositeAbilityObject = {
           "multiAdd": "(0 - 0.2)"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TopazNumby_Modifiers": {
       "fileName": "TopazNumby_Modifiers",

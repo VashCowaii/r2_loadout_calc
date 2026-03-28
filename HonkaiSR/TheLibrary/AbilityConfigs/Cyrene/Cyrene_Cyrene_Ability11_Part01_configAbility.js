@@ -43,5 +43,8 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

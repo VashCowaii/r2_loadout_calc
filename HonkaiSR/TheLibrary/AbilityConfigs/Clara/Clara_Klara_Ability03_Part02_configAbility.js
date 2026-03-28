@@ -491,5 +491,8 @@ const configAbility = {
       "effectName": "DMG Mitigation",
       "statusName": "Promise, Not Command"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

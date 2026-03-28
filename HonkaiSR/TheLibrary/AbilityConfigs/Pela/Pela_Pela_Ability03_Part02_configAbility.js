@@ -113,5 +113,8 @@ const configAbility = {
       "effectName": "DEF Reduction",
       "statusName": "Exposed"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
 }

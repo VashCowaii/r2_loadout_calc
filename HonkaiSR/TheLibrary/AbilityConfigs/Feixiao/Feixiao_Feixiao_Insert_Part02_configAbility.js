@@ -225,5 +225,8 @@ const configAbility = {
       "effectName": "DMG Boost",
       "statusName": "Thunderhunt"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

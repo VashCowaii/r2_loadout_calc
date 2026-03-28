@@ -26,5 +26,8 @@ const configAbility = {
       "isTrigger": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
 }

@@ -756,5 +756,8 @@ const configAbility = {
       "type": "Other",
       "statusName": "Torrid Scorch"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

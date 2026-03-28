@@ -487,5 +487,8 @@ const configAbility = {
       "effectName": "Effect Hit Rate Boost",
       "statusName": "Interlock"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

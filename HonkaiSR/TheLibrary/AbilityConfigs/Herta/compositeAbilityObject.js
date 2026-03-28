@@ -74,7 +74,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Herta_Herta_TechniqueInLevel": {
       "fileName": "Herta_Herta_TechniqueInLevel",
@@ -183,7 +186,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Herta_Herta_PassiveAtkReady_Ability": {
       "fileName": "Herta_Herta_PassiveAtkReady_Ability",
@@ -574,7 +580,10 @@ const compositeAbilityObject = {
           "statusName": "CRIT Rate Boost",
           "addStacksPerTrigger": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Herta_Herta_PassiveAbility01": {
       "fileName": "Herta_Herta_PassiveAbility01",
@@ -883,7 +892,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Herta_Herta_Ability03_Part02": {
       "fileName": "Herta_Herta_Ability03_Part02",
@@ -1081,7 +1093,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Herta_Herta_Ability03_Part01": {
       "fileName": "Herta_Herta_Ability03_Part01",
@@ -1111,7 +1126,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Herta_Herta_Ability03_EnterReady": {
       "fileName": "Herta_Herta_Ability03_EnterReady",
@@ -1119,7 +1137,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Herta_Herta_Ability02_Part02": {
       "fileName": "Herta_Herta_Ability02_Part02",
@@ -1283,7 +1304,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Herta_Herta_Ability02_Part01": {
       "fileName": "Herta_Herta_Ability02_Part01",
@@ -1313,7 +1337,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Herta_Herta_Ability01_Part02": {
       "fileName": "Herta_Herta_Ability01_Part02",
@@ -1508,7 +1535,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Herta_Herta_Ability01_Part01": {
       "fileName": "Herta_Herta_Ability01_Part01",
@@ -1538,7 +1568,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Herta_Modifiers": {
       "fileName": "Herta_Modifiers",

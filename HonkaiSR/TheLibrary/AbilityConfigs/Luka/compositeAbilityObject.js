@@ -162,7 +162,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Luka_Luka_PassiveAbility01": {
       "fileName": "Luka_Luka_PassiveAbility01",
@@ -287,7 +290,10 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Luka_Luka_Ability03_Part02": {
       "fileName": "Luka_Luka_Ability03_Part02",
@@ -452,7 +458,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Luka_Ability03_Part01": {
       "fileName": "Luka_Luka_Ability03_Part01",
@@ -482,7 +491,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Luka_Ability03_EnterReady": {
       "fileName": "Luka_Luka_Ability03_EnterReady",
@@ -490,7 +502,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Luka_Luka_Ability02_Part02": {
       "fileName": "Luka_Luka_Ability02_Part02",
@@ -671,7 +686,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Luka_Ability02_Part01": {
       "fileName": "Luka_Luka_Ability02_Part01",
@@ -700,7 +718,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Luka_Ability11_Part02": {
       "fileName": "Luka_Luka_Ability11_Part02",
@@ -1341,7 +1362,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Luka_Ability11_Part01": {
       "fileName": "Luka_Luka_Ability11_Part01",
@@ -1374,7 +1398,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Luka_Ability01_Part02": {
       "fileName": "Luka_Luka_Ability01_Part02",
@@ -1504,7 +1531,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Luka_Ability01_Part01": {
       "fileName": "Luka_Luka_Ability01_Part01",
@@ -1534,7 +1564,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Luka_Modifiers": {
       "fileName": "Luka_Modifiers",

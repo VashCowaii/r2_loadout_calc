@@ -134,7 +134,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Mydei_Mydeimos_Ability22_Ability": {
       "fileName": "Mydei_Mydeimos_Ability22_Ability",
@@ -432,7 +435,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mydei_Mydeimos_Ability21_Ability": {
       "fileName": "Mydei_Mydeimos_Ability21_Ability",
@@ -530,7 +536,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mydei_Mydeimos_PassiveAbility01_InsertExit": {
       "fileName": "Mydei_Mydeimos_PassiveAbility01_InsertExit",
@@ -678,7 +687,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Mydei_Mydeimos_PassiveAbility01_Insert": {
       "fileName": "Mydei_Mydeimos_PassiveAbility01_Insert",
@@ -765,7 +777,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Mydei_Mydeimos_PassiveAbility01": {
       "fileName": "Mydei_Mydeimos_PassiveAbility01",
@@ -1718,7 +1733,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Mydei_Mydeimos_Ability03_Part02": {
       "fileName": "Mydei_Mydeimos_Ability03_Part02",
@@ -1853,7 +1871,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mydei_Mydeimos_Ability03_Part01": {
       "fileName": "Mydei_Mydeimos_Ability03_Part01",
@@ -1883,7 +1904,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Mydei_Mydeimos_Ability03_EnterReady": {
       "fileName": "Mydei_Mydeimos_Ability03_EnterReady",
@@ -1891,7 +1915,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Mydei_Mydeimos_Ability02_Part02": {
       "fileName": "Mydei_Mydeimos_Ability02_Part02",
@@ -1978,7 +2005,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mydei_Mydeimos_Ability02_Part01": {
       "fileName": "Mydei_Mydeimos_Ability02_Part01",
@@ -2008,7 +2038,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mydei_Mydeimos_Ability01_Part02": {
       "fileName": "Mydei_Mydeimos_Ability01_Part02",
@@ -2049,7 +2082,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mydei_Mydeimos_Ability01_Part01": {
       "fileName": "Mydei_Mydeimos_Ability01_Part01",
@@ -2079,7 +2115,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mydei_Modifiers": {
       "fileName": "Mydei_Modifiers",

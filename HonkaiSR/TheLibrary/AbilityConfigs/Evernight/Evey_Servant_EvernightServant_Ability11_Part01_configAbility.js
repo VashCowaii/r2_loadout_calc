@@ -235,5 +235,8 @@ const configAbility = {
       "parse": []
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

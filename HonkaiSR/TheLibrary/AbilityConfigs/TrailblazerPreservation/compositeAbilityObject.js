@@ -163,7 +163,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_PassiveAbility01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_PassiveAbility01",
@@ -814,7 +817,10 @@ const compositeAbilityObject = {
             "Rank06_Max_Layer"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability03_Part02": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability03_Part02",
@@ -994,7 +1000,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability03_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability03_Part01",
@@ -1024,7 +1033,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability03_EnterReady": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability03_EnterReady",
@@ -1032,7 +1044,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability02_Part02": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability02_Part02",
@@ -1465,7 +1480,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability02_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability02_Part01",
@@ -1494,7 +1512,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability11_Part02": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability11_Part02",
@@ -1953,7 +1974,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01",
@@ -1983,7 +2007,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability01_Part02": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability01_Part02",
@@ -2256,7 +2283,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability01_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability01_Part01",
@@ -2286,7 +2316,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerPreservation_Modifiers": {
       "fileName": "TrailblazerPreservation_Modifiers",

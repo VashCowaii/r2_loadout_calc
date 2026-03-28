@@ -8,5 +8,8 @@ const configAbility = {
       "name": "UI Display Event"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

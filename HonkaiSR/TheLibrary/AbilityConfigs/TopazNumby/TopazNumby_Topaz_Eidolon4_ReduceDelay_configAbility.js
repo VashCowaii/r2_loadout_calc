@@ -14,5 +14,8 @@ const configAbility = {
       "multiAdd": "(0 - 0.2)"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

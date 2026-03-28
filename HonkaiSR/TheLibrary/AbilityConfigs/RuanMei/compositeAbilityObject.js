@@ -342,7 +342,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "RuanMei_RuanMei_TechniqueInLevel_Insert": {
       "fileName": "RuanMei_RuanMei_TechniqueInLevel_Insert",
@@ -360,7 +363,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "RuanMei_RuanMei_TechniqueInLevel": {
       "fileName": "RuanMei_RuanMei_TechniqueInLevel",
@@ -419,7 +425,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "RuanMei_RuanMei_TriggerImprintEffect": {
       "fileName": "RuanMei_RuanMei_TriggerImprintEffect",
@@ -522,7 +531,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1922337227\">RuanMei_DelayHint</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "RuanMei_RuanMei_PassiveAbility01": {
       "fileName": "RuanMei_RuanMei_PassiveAbility01",
@@ -1190,7 +1202,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "RuanMei_RuanMei_Ability03_Part02": {
       "fileName": "RuanMei_RuanMei_Ability03_Part02",
@@ -1395,7 +1410,10 @@ const compositeAbilityObject = {
           "effectName": "All-Type RES PEN Boost",
           "statusName": "Petals to Stream, Repose in Dream"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "RuanMei_RuanMei_Ability03_Part01": {
       "fileName": "RuanMei_RuanMei_Ability03_Part01",
@@ -1426,7 +1444,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "RuanMei_RuanMei_Ability03_EnterReady": {
       "fileName": "RuanMei_RuanMei_Ability03_EnterReady",
@@ -1434,7 +1455,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "RuanMei_RuanMei_Ability02_Part02": {
       "fileName": "RuanMei_RuanMei_Ability02_Part02",
@@ -1817,7 +1841,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "RuanMei_RuanMei_Ability02_Part01": {
       "fileName": "RuanMei_RuanMei_Ability02_Part01",
@@ -1846,7 +1873,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "RuanMei_RuanMei_Ability01_Part02": {
       "fileName": "RuanMei_RuanMei_Ability01_Part02",
@@ -1886,7 +1916,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "RuanMei_RuanMei_Ability01_Part01": {
       "fileName": "RuanMei_RuanMei_Ability01_Part01",
@@ -1915,7 +1948,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "RuanMei_Modifiers": {
       "fileName": "RuanMei_Modifiers",

@@ -73,7 +73,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hook_Hook_Trace02": {
       "fileName": "Hook_Hook_Trace02",
@@ -98,7 +101,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hook_Hook_Trace01": {
       "fileName": "Hook_Hook_Trace01",
@@ -122,7 +128,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hook_Hook_TechniqueInLevel": {
       "fileName": "Hook_Hook_TechniqueInLevel",
@@ -279,7 +288,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hook_Hook_PassiveAbility01_2": {
       "fileName": "Hook_Hook_PassiveAbility01_2",
@@ -397,7 +409,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Hook_Hook_PassiveAbility01": {
       "fileName": "Hook_Hook_PassiveAbility01",
@@ -468,7 +483,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hook_Hook_Ability03_Part02": {
       "fileName": "Hook_Hook_Ability03_Part02",
@@ -678,7 +696,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Hook_Ability03_Part01": {
       "fileName": "Hook_Hook_Ability03_Part01",
@@ -708,7 +729,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Hook_Ability03_EnterReady": {
       "fileName": "Hook_Hook_Ability03_EnterReady",
@@ -716,7 +740,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Hook_Hook_Ability21_Part02": {
       "fileName": "Hook_Hook_Ability21_Part02",
@@ -1019,7 +1046,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Hook_Ability21_Part01": {
       "fileName": "Hook_Hook_Ability21_Part01",
@@ -1049,7 +1079,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Hook_Ability02_Part02": {
       "fileName": "Hook_Hook_Ability02_Part02",
@@ -1181,7 +1214,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Hook_Ability02_Part01": {
       "fileName": "Hook_Hook_Ability02_Part01",
@@ -1211,7 +1247,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Hook_Ability01_Part02": {
       "fileName": "Hook_Hook_Ability01_Part02",
@@ -1279,7 +1318,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Hook_Ability01_Part01": {
       "fileName": "Hook_Hook_Ability01_Part01",
@@ -1309,7 +1351,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hook_Modifiers": {
       "fileName": "Hook_Modifiers",

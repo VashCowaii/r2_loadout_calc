@@ -21,5 +21,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"994071549\">MLevel_Elation_Standard</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

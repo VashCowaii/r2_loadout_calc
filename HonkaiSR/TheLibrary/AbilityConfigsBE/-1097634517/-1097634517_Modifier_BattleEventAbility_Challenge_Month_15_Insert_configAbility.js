@@ -97,5 +97,8 @@ const configAbility = {
       "stackLimit": 2,
       "addStacksPerTrigger": 1
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

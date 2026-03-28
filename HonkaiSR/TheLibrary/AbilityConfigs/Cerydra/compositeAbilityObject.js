@@ -94,7 +94,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cerydra_Cerydra_Eidolon6": {
       "fileName": "Cerydra_Cerydra_Eidolon6",
@@ -131,7 +134,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cerydra_Cerydra_Ability02_InsertEidolon1": {
       "fileName": "Cerydra_Cerydra_Ability02_InsertEidolon1",
@@ -164,7 +170,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Cerydra_Cerydra_PassiveAbility": {
       "fileName": "Cerydra_Cerydra_PassiveAbility",
@@ -1315,7 +1324,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cerydra_Cerydra_Ability03_Part02": {
       "fileName": "Cerydra_Cerydra_Ability03_Part02",
@@ -1472,7 +1484,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cerydra_Cerydra_Ability03_Part01": {
       "fileName": "Cerydra_Cerydra_Ability03_Part01",
@@ -1515,7 +1530,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cerydra_Cerydra_Ability03_EnterReady": {
       "fileName": "Cerydra_Cerydra_Ability03_EnterReady",
@@ -1523,7 +1541,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Cerydra_Cerydra_Ability02_Others_Part02": {
       "fileName": "Cerydra_Cerydra_Ability02_Others_Part02",
@@ -1760,7 +1781,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cerydra_Cerydra_Ability02_Part01": {
       "fileName": "Cerydra_Cerydra_Ability02_Part01",
@@ -1967,7 +1991,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cerydra_Cerydra_Ability01_Part02": {
       "fileName": "Cerydra_Cerydra_Ability01_Part02",
@@ -2014,7 +2041,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cerydra_Cerydra_Ability01_Part01": {
       "fileName": "Cerydra_Cerydra_Ability01_Part01",
@@ -2043,7 +2073,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Cerydra_Modifiers": {
       "fileName": "Cerydra_Modifiers",

@@ -647,5 +647,8 @@ const configAbility = {
         "Rank06_Max_Layer"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

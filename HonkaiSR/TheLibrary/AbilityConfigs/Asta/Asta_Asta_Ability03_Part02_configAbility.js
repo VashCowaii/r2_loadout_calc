@@ -99,5 +99,8 @@ const configAbility = {
       "effectName": "SPD Boost",
       "statusName": "SPD Boost"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  }
 }

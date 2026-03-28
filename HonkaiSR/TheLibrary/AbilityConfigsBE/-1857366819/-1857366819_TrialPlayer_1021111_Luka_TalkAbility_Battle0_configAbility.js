@@ -13,5 +13,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"575702222\">TrialPlayer_101111_Luka_Talk_Modifier_ForMonster_Sub2</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

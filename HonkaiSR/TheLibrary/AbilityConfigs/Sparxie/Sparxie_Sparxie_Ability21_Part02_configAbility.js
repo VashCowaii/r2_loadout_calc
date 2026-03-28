@@ -185,5 +185,8 @@ const configAbility = {
       "skipAttackSettle": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }
