@@ -131,6 +131,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1002050_Monster_W1_CWSoldier_02_Ability02_Part02": {
@@ -233,6 +236,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     }

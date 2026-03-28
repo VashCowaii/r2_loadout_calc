@@ -191,6 +191,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032042_Monster_W2_FeixiaoPart_IF_PassiveAbilityInitiate": {
@@ -1386,6 +1389,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032042_Monster_W2_FeixiaoPart_Ability02_Part02": {
@@ -1751,6 +1757,9 @@ const compositeAbilityObject = {
         "Deleted bullshit"
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []

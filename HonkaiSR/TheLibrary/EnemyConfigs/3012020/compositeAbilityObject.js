@@ -70,6 +70,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "3012020_Monster_W3_Clock_01_AbilityP01": {
@@ -92,6 +95,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []

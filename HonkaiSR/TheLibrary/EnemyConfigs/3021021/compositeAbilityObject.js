@@ -453,6 +453,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "All Enemy Team Members"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021021_Monster_W2_ArgentiTotem_01_PassiveAbilityInitiate": {
@@ -488,6 +491,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": [

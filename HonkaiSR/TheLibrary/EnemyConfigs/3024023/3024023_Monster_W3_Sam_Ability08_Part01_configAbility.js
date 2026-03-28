@@ -8,5 +8,8 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Caster}}"
   },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target"
+  },
   "references": []
 }

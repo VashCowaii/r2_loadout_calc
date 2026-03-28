@@ -72,6 +72,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1002013_Monster_W1_CocoliaP2_01_PassiveAbilityInitiate": {
@@ -115,6 +118,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []

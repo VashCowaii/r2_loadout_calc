@@ -238,6 +238,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2010,6 +2013,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002043_Monster_W3_Clock_02_Ability03_Part02": {
@@ -2101,6 +2107,9 @@ const compositeAbilityObject = {
         "Deleted bullshit"
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
@@ -2200,6 +2209,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -3150,6 +3162,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "3002043_Monster_W3_Clock_02_IF_Ability03_Insert_Part02": {
@@ -3357,6 +3372,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002043_Monster_W3_Clock_02_IF_AbilityEX01": {
@@ -3368,6 +3386,9 @@ const compositeAbilityObject = {
       "parse": [],
       "whenAdded": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []

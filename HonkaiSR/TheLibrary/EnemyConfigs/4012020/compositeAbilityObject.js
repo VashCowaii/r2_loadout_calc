@@ -75,6 +75,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4012020_Monster_W4_Scholar_Ability01_Part02": {
@@ -182,6 +185,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Skill Point User}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      },
       "references": []
     },
     "4012020_Monster_W4_Scholar_PassiveAbility02": {
@@ -227,6 +233,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -314,6 +323,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": [

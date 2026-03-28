@@ -139,6 +139,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{All Team Members}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8001030_Monster_XP_Minion03_Ability01_Part02": {
@@ -204,6 +207,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8001030_Monster_XP_Minion03_Passive01": {
@@ -237,6 +243,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": [
         {

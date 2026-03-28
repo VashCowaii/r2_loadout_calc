@@ -28,5 +28,8 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "Inherent Target"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
   }
 }

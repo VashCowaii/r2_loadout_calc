@@ -77,6 +77,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032027_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate": {
@@ -143,6 +146,9 @@ const compositeAbilityObject = {
       ],
       "whenAdded": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []

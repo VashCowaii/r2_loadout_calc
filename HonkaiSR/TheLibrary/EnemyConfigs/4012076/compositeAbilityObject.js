@@ -201,6 +201,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_AbilityP01_Insert02_Part02": {
@@ -595,6 +598,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability02_L_Part02": {
@@ -979,6 +985,10 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability01_L_Part02": {
@@ -1119,6 +1129,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityEX05": {
@@ -1238,6 +1251,9 @@ const compositeAbilityObject = {
       "parse": [],
       "whenAdded": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []

@@ -45,5 +45,9 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Ability Target List}}"
   },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "targetIsVariable": true
+  },
   "references": []
 }

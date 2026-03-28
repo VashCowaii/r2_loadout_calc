@@ -24,5 +24,8 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Ability Target List}}"
   },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": []
 }

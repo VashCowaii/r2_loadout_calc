@@ -24,5 +24,9 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Caster}}"
   },
+  "realTargetData": {
+    "primaryTarget": "Select Ally Target",
+    "targetIsVariable": true
+  },
   "references": []
 }

@@ -59,6 +59,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013010_Monster_W4_Claymore_02_Ability052_Part02": {
@@ -402,6 +405,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "5013010_Monster_W4_Claymore_02_Ability042_Part02": {
@@ -597,6 +603,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013010_Monster_W4_Claymore_02_Ability03_Part02": {
@@ -661,6 +670,10 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}",
+        "targetIsVariable": true
       },
       "references": []
     },
@@ -1047,6 +1060,11 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5013010_Monster_W4_Claymore_02_Ability01_Part02": {
@@ -1177,6 +1195,11 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets",
+        "targetIsVariable": true
       },
       "references": []
     },

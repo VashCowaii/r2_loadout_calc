@@ -161,6 +161,9 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Caster}}"
   },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "dynamicStringsArray": [
     {
       "name": "ElationTime_CustomTag",

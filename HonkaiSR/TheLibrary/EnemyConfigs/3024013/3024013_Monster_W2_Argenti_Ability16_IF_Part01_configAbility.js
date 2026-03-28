@@ -25,5 +25,8 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Ability Target List}}"
   },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

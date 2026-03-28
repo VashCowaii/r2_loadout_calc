@@ -81,6 +81,10 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5012020_Monster_W2_Beast01_05_Ability01_Part02": {
@@ -146,6 +150,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate": {
@@ -166,6 +173,9 @@ const compositeAbilityObject = {
       ],
       "whenAdded": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []

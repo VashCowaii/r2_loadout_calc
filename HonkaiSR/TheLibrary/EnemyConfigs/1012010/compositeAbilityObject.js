@@ -277,6 +277,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{All Team Members}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability04_Part02": {
@@ -662,6 +665,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },

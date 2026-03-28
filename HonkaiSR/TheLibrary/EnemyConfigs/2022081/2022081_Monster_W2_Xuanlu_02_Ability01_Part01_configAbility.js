@@ -24,5 +24,28 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Ability Target List}}"
   },
+  "realTargetData": {
+    "primaryTarget": "Select Ally Target",
+    "filter": {
+      "name": "Target Sequence",
+      "Sequence": [
+        {
+          "name": "Target Name",
+          "target": "{{Enemy Team All}}"
+        },
+        {
+          "name": "Target Filter",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "MonsterType_Xuanlu"
+          }
+        }
+      ]
+    }
+  },
   "references": []
 }

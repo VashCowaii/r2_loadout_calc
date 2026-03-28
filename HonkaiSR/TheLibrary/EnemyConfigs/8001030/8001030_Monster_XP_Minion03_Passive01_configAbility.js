@@ -30,6 +30,9 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Caster}}"
   },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

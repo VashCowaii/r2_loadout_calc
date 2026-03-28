@@ -43,6 +43,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "70001_BattleEventAbility_Elation_Ability43_RestartElationTime": {
@@ -60,6 +63,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "All Player Team"
       }
     },
     "70001_BattleEventAbility_Elation_Ability42_EndElationTime": {
@@ -85,6 +91,9 @@ const compositeAbilityObject = {
       ],
       "references": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       }
     },
@@ -308,6 +317,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "70001_BattleEventAbility_Elation_Ability04_02": {
@@ -514,6 +526,9 @@ const compositeAbilityObject = {
       ],
       "references": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "dynamicStringsArray": [
@@ -747,6 +762,9 @@ const compositeAbilityObject = {
       ],
       "references": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "dynamicStringsArray": [

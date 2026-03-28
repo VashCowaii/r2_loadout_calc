@@ -103,6 +103,9 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "Inherent Target"
   },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target"
+  },
   "tag": "DOT_Burn",
   "references": []
 }

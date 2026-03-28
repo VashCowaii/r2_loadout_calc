@@ -78,6 +78,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1012030_Monster_W1_Mecha01_01_PassiveAbility_KlaraSpecialVictory": {

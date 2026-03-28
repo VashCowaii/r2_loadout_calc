@@ -607,6 +607,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{All Team Members}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "4052011_Monster_W2_Mecha02_02_LocalLegend_Ability01_Part02": {
@@ -680,6 +683,9 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4052011_Monster_W2_Mecha02_02_LocalLegend_PassiveAbilityInitiate": {
@@ -745,6 +751,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": [

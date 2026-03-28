@@ -25,5 +25,9 @@ const configAbility = {
   "targetObjectData": {
     "primaryTarget": "{{Hostile Entities(AOE)}}"
   },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "targetIsVariable": true
+  },
   "references": []
 }

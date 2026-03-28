@@ -8,5 +8,8 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [],
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }
