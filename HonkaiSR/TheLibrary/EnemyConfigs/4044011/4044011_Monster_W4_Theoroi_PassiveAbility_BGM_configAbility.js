@@ -46,6 +46,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1034094278\">Enemy_W4_Theoroi_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

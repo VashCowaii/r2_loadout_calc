@@ -335,6 +335,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1871287490\">Monster_W3_FigureBoss_RLBoss_New_ImmuneDebuff</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

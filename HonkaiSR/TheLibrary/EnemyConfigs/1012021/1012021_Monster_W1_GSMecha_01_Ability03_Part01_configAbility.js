@@ -25,5 +25,8 @@ const configAbility = {
       "name": "Mark Entity For Immediate Death"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
   "references": []
 }

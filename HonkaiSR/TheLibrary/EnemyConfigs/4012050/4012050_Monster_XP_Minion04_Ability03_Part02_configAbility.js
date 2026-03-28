@@ -30,5 +30,8 @@ const configAbility = {
       "triggerEnemyEscape": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

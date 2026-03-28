@@ -27,6 +27,9 @@ const configAbility = {
       "variableName": "W2_Mecha02_00_BoomTimes"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

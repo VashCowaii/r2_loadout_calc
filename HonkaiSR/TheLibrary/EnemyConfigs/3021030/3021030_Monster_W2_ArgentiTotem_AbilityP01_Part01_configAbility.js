@@ -168,5 +168,8 @@ const configAbility = {
     },
     "Trigger: Attack End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -69,6 +69,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend02_Ability03_Part01": {
@@ -89,6 +92,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend02_Ability02_Part02": {
@@ -122,6 +128,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend02_Ability02_Part01": {
@@ -142,6 +151,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend_Ability03_Part02": {
@@ -230,6 +242,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend_Ability03_Part01": {
@@ -256,6 +271,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend_Ability01_Part02": {
@@ -338,6 +356,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1507903432\">Enemy_W4_Scholar_01_LocalLegend_Stealth</a>[<span class=\"descriptionNumberColor\">Lurking</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend_Ability01_Part01": {
@@ -363,6 +384,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_LocalLegend_AbilityP01": {
@@ -392,6 +416,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1987258167\">Enemy_W4_Scholar_01_LocalLegend_AbilityP01</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -614,6 +641,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_Ability03_Part01": {
@@ -634,6 +664,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_Ability02_Part02": {
@@ -667,6 +700,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_Ability02_Part01": {
@@ -693,6 +729,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_Ability01_Part02": {
@@ -730,6 +769,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_Ability01_Part01": {
@@ -749,6 +791,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032041_Monster_W4_Scholar_01_AbilityP01": {
@@ -766,6 +811,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1296271884\">Enemy_W4_Scholar_01_ConfineHit_Controller</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032041_Modifiers": {

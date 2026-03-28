@@ -126,6 +126,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-864984736\">Enemy_AML_Boss_Part2_IF_RemoveOneMore</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -255,6 +258,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability14_Part02": {
@@ -437,6 +443,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability14_Part01": {
@@ -462,6 +471,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability13_Part02": {
@@ -1035,6 +1047,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability13_Part01": {
@@ -1060,6 +1075,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability12_Part02": {
@@ -1700,6 +1718,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability12_Part01": {
@@ -1725,6 +1746,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability11_Part02": {
@@ -1794,6 +1818,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability11_Part01": {
@@ -1819,6 +1846,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability10_Part02": {
@@ -1909,6 +1939,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability10_Part01": {
@@ -1934,6 +1967,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability09_Part02": {
@@ -2053,6 +2089,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability09_Part01": {
@@ -2078,6 +2117,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability08_Part02": {
@@ -2143,6 +2185,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability08_Part01": {
@@ -2168,6 +2213,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability07_Part02": {
@@ -2233,6 +2281,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Monster_AML_Boss_Part2_IF_Ability07_Part01": {
@@ -2258,6 +2309,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013145_Modifiers": {

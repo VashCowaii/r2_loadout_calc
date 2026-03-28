@@ -29,5 +29,8 @@ const configAbility = {
       "phase": "Phase0"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
   "references": []
 }

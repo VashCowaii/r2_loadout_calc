@@ -125,6 +125,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "tag": "DOT",
       "references": []
     },
@@ -139,6 +142,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_Ability03_Part02": {
@@ -196,6 +202,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_Ability03_Part01": {
@@ -226,6 +235,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_Ability02_Part02": {
@@ -262,6 +274,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_Ability02_Part01": {
@@ -319,6 +334,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_Ability01_Part02": {
@@ -388,6 +406,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_Ability01_Part01": {
@@ -407,6 +428,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_MainStoryPassive": {
@@ -424,6 +448,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1543928394\">Enemy_W3_Clock_02_DieListener</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -535,6 +562,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1262827161\">MModifier_Monster_W3_TV_02_SideCheck</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -854,6 +884,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_TV_02_IF_Ability03_Part01": {
@@ -873,6 +906,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_TV_02_IF_Ability01_Insert_Part02": {
@@ -934,6 +970,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3002042_Monster_W3_TV_02_IF_Ability01_Insert_Part01": {
@@ -983,6 +1022,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3002042_Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget": {
@@ -1047,6 +1089,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_TV_02_IF_AbilityEX01": {
@@ -1056,6 +1101,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_TV_02_IF_PassiveAbilityInitiate": {
@@ -1171,6 +1219,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_Ability04_Part02": {
@@ -1203,6 +1254,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_Ability04_Part01": {
@@ -1228,6 +1282,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_Ability03_Insert_Part02": {
@@ -1289,6 +1346,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_Ability03_Insert_Part01": {
@@ -1351,6 +1411,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_Ability01_Part02": {
@@ -1398,6 +1461,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_Ability01_Part01": {
@@ -1423,6 +1489,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_AbilityEX01": {
@@ -1433,6 +1502,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Clock_02_IF_PassiveAbilityInitiate": {
@@ -1549,6 +1621,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1594,6 +1669,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3002042_Monster_W1_Mecha01_03_IF_Ability04_Part01": {
@@ -1613,6 +1691,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3002042_Monster_W1_Mecha01_03_IF_Ability03_Part02": {
@@ -1652,6 +1733,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W1_Mecha01_03_IF_Ability03_Part01": {
@@ -1671,6 +1755,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W1_Mecha01_03_IF_Ability01_Insert_Part02": {
@@ -1740,6 +1827,9 @@ const compositeAbilityObject = {
           "adjustmentType": "+"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W1_Mecha01_03_IF_Ability01_Insert_Part01": {
@@ -1785,6 +1875,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W1_Mecha01_03_IF_AbilityEX01": {
@@ -1794,6 +1887,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W1_Mecha01_03_IF_PassiveAbilityInitiate": {
@@ -1901,6 +1997,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_Ability10_Part02": {
@@ -1996,6 +2095,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_Ability10_Part01": {
@@ -2015,6 +2117,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_Ability09_Insert_Part02": {
@@ -2074,6 +2179,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_Ability09_Insert_Part01": {
@@ -2119,6 +2227,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_Ability09_Part02": {
@@ -2225,6 +2336,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_Ability09_Part01": {
@@ -2244,6 +2358,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_Ability07_Part02": {
@@ -2293,6 +2410,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2317,6 +2437,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_AbilityEX04": {
@@ -2326,6 +2449,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_AbilityEX02": {
@@ -2335,6 +2461,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_AbilityEX01": {
@@ -2344,6 +2473,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_AbilityP01": {
@@ -2353,6 +2485,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Dinosaur_02_IF_PassiveAbilityInitiate": {
@@ -2458,6 +2593,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_AbilityEX05": {
@@ -2467,6 +2605,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_AbilityEX04": {
@@ -2540,6 +2681,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_AbilityEX03": {
@@ -2613,6 +2757,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_AbilityEX02": {
@@ -2678,6 +2825,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_AbilityEX01": {
@@ -2743,6 +2893,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_BattleEvent": {
@@ -2761,6 +2914,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"890205763\">Enemy_W3_Theater_IF_BattleEvent</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_Insert_RestartPhase2": {
@@ -3049,6 +3205,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3693,6 +3852,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_AbilityP01": {
@@ -3702,6 +3864,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002042_Monster_W3_Theater_IF_PassiveAbilityInitiate": {
@@ -3960,6 +4125,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

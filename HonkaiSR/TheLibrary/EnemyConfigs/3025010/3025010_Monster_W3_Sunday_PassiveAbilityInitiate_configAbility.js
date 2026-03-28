@@ -172,6 +172,9 @@ const configAbility = {
       "multiBase": 2
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

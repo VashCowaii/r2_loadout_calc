@@ -402,6 +402,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"610660362\">Enemy_W5_Vtuber_Screen02</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

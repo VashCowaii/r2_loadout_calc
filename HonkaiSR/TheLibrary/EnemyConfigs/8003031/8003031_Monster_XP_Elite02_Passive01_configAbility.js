@@ -59,6 +59,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1713212376\">Monster_XP_Elite02_EffectControl</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

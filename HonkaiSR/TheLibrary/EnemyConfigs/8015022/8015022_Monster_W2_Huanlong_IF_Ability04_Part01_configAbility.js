@@ -77,5 +77,8 @@ const configAbility = {
       "ignoreParallelWarning": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
   "references": []
 }

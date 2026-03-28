@@ -117,6 +117,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1733765355\">Enemy_W3_Sunday_MainStory380_LockHP</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

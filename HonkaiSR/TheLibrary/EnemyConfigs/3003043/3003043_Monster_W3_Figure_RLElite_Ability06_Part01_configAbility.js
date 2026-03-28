@@ -10,5 +10,8 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [],
+  "targetObjectData": {
+    "primaryTarget": "All Enemy Team Members"
+  },
   "references": []
 }

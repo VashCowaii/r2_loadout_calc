@@ -181,6 +181,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1002030_Monster_W1_Soldier04_AbilityP01_InsertAbility_ListenAttack": {
@@ -265,6 +268,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1002030_Monster_W1_Soldier04_AbilityP01_Initiate": {
@@ -357,6 +363,9 @@ const compositeAbilityObject = {
           "variableName": "CurrentSupportNumber"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -803,6 +812,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1002030_Monster_W1_Soldier04_Ability02_Part01": {
@@ -828,6 +840,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1002030_Monster_W1_Soldier04_Ability01_Part02": {
@@ -885,6 +900,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1002030_Monster_W1_Soldier04_Ability01_Part01": {
@@ -910,6 +928,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1002030_Modifiers": {

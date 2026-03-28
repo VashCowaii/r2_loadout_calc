@@ -36,6 +36,9 @@ const configAbility = {
       "variableName": "_BoomRound"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

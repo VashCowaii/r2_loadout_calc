@@ -28,6 +28,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability06_Part02": {
@@ -157,6 +160,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability06_Part01": {
@@ -211,6 +217,9 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability05_Part02": {
@@ -277,6 +286,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability05_Part01": {
@@ -302,6 +314,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability04_Part02": {
@@ -382,6 +397,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability04_Part01": {
@@ -406,6 +424,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability03_Part02": {
@@ -557,6 +578,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -785,6 +809,9 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability02_Part02": {
@@ -795,6 +822,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_Ability02_Part01": {
@@ -828,6 +858,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012040_Monster_W1_SvarogPart_PassiveAbilityInitiate": {
@@ -880,6 +913,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"968585055\">Monster_W1_SvarogPart_BattleScore1</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

@@ -22,6 +22,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1206431544\">Enemy_W3_Clock_WatchHandController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

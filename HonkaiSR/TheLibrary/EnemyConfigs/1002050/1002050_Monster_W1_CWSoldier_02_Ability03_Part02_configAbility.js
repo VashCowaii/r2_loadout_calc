@@ -66,5 +66,8 @@ const configAbility = {
       "stackFlag": "CharacterSkill"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

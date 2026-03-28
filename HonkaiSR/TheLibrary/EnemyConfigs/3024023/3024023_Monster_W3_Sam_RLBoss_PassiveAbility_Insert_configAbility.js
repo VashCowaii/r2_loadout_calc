@@ -328,5 +328,8 @@ const configAbility = {
       "revertDefault": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

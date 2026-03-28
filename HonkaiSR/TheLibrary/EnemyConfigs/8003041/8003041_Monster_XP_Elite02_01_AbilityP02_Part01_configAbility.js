@@ -54,5 +54,8 @@ const configAbility = {
       "variableName": "Monster_XP_Elite02_01_InsertFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

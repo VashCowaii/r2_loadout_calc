@@ -14,6 +14,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1671905329\">Enemy_W3_DollElite_Standard_BattleEvent</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

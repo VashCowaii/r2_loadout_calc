@@ -125,6 +125,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Alter01_Ability07_Part01": {
@@ -144,6 +147,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Alter01_Ability06_Part02": {
@@ -188,6 +194,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Alter01_Ability06_Part01": {
@@ -207,6 +216,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability05_Part02": {
@@ -234,6 +246,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability05_Part01": {
@@ -259,6 +274,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability04_Part02": {
@@ -361,6 +379,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability04_Part01": {
@@ -380,6 +401,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability03_Part02": {
@@ -419,6 +443,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability03_Part01": {
@@ -438,6 +465,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability02_Part02": {
@@ -544,6 +574,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability02_Part01": {
@@ -563,6 +596,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability01_Part02": {
@@ -596,6 +632,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_Ability01_Part01": {
@@ -621,6 +660,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012010_Monster_W1_CWMecha_03_AbilityP02": {
@@ -638,6 +680,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"456888817\">Enemy_W1_CWMecha_03_Aura_Resistance_Controller</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -764,6 +809,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1749893185\">Enemy_W1_CWMecha_03_Aura_Speed_Controller</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

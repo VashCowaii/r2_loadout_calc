@@ -34,5 +34,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -7,5 +7,8 @@ const configAbility = {
     "Deleted bullshit",
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

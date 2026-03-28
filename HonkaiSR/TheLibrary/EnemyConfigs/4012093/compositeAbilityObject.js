@@ -55,6 +55,9 @@ const compositeAbilityObject = {
           "setPercent": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012093_Monster_W4_DawnsEyePart_03_Ability01_Part01": {
@@ -80,6 +83,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012093_Monster_W4_DawnsEyePart_03_PassiveAbilityInitiate": {
@@ -114,6 +120,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"754083449\">Enemy_W4_DawnsEyePart_03_DieController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

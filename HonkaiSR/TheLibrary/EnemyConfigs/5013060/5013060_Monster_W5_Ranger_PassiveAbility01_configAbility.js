@@ -112,6 +112,9 @@ const configAbility = {
       "defaultEvents": []
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

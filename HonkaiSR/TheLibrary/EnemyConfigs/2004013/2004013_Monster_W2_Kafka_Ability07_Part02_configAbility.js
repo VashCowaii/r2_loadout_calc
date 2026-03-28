@@ -87,5 +87,8 @@ const configAbility = {
       "variableName": "PursuitCheck"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

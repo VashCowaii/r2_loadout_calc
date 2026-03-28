@@ -72,6 +72,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1998379583\">Enemy_W4_FireProwler_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

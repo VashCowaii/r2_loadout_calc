@@ -25,6 +25,9 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Hit_Part02": {
@@ -47,6 +50,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Hit_Part01": {
@@ -200,6 +206,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Ability02_Part02": {
@@ -230,6 +239,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Ability02_Part01": {
@@ -255,6 +267,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Ability01_Part02": {
@@ -286,6 +301,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Ability01_Part01": {
@@ -311,6 +329,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Born_Part02": {
@@ -328,6 +349,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_Born_Part01": {
@@ -347,6 +371,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_Fuyan_PassiveAbilityInitiate": {
@@ -406,6 +433,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-51927245\">Enemy_Fuyan_Unselectable</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2024020_Monster_W2_Fuyan_PassiveAbility_BGM": {
@@ -456,6 +486,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"649895739\">Enemy_W2_Fuyan_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

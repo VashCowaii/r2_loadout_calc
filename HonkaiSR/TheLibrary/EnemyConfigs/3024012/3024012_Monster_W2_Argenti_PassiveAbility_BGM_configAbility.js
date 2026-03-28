@@ -46,6 +46,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1416499682\">Enemy_W2_Argenti_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -14,5 +14,8 @@ const configAbility = {
       "variableName": "FollowTrigger"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

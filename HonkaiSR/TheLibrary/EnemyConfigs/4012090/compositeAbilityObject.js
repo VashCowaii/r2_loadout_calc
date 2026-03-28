@@ -219,6 +219,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012090_Monster_W4_DawnsEyePart_01_Ability02_Part01": {
@@ -255,6 +258,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012090_Monster_W4_DawnsEyePart_01_Ability01_Part02": {
@@ -466,6 +472,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012090_Monster_W4_DawnsEyePart_01_Ability01_Part01": {
@@ -508,6 +517,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012090_Monster_W4_DawnsEyePart_01_PassiveAbilityInitiate": {
@@ -550,6 +562,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-967400061\">Enemy_W4_DawnsEyePart_01_DieController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

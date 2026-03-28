@@ -311,6 +311,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5012110_Monster_W5_Limao_Ability02_Part01": {
@@ -334,6 +337,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5012110_Monster_W5_Limao_Ability01_Part02": {
@@ -369,6 +375,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5012110_Monster_W5_Limao_Ability01_Part01": {
@@ -395,6 +404,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5012110_Monster_W5_Limao_FrameCapture": {
@@ -429,6 +441,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5012110_Monster_W5_Limao_PassiveAbilityInitiate": {
@@ -496,6 +511,9 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

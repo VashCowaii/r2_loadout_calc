@@ -60,6 +60,9 @@ const configAbility = {
       }
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "tag": "DOT",
   "references": []
 }

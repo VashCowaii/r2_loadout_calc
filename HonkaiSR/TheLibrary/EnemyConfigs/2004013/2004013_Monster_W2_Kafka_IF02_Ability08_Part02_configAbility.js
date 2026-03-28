@@ -257,6 +257,9 @@ const configAbility = {
       "value": 0
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

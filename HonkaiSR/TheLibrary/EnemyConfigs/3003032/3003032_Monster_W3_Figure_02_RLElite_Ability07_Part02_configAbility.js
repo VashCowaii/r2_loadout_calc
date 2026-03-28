@@ -52,6 +52,9 @@ const configAbility = {
     },
     "Trigger: Attack End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "tag": "DOT",
   "references": []
 }

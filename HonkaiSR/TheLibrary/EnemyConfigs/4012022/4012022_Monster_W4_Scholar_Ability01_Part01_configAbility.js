@@ -53,5 +53,8 @@ const configAbility = {
       ]
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Skill Point User}}"
+  },
   "references": []
 }

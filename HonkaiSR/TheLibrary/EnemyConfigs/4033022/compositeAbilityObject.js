@@ -298,6 +298,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01": {
@@ -323,6 +326,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02": {
@@ -443,6 +449,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability04_Part01": {
@@ -463,6 +472,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability03_Part02": {
@@ -539,6 +551,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability03_Part01": {
@@ -565,6 +580,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability021_Part02": {
@@ -807,6 +825,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01": {
@@ -826,6 +847,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02": {
@@ -1020,6 +1044,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1101,6 +1128,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02": {
@@ -1177,6 +1207,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01": {
@@ -1205,6 +1238,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02": {
@@ -1661,6 +1697,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01": {
@@ -1681,6 +1720,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033022_BattleEvent_W4_Claymore_01_LocalLegend_Part01": {
@@ -1768,6 +1810,9 @@ const compositeAbilityObject = {
         "Wait for Pending Ability Completions",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4033022_BattleEvent_W4_Claymore_01_LocalLegend_EnterReady": {
@@ -1776,6 +1821,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover": {
@@ -1912,6 +1960,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Insert": {
@@ -2075,6 +2126,9 @@ const compositeAbilityObject = {
           "set": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033022_Monster_W4_Claymore_01_LocalLegend_PassiveAbilityInitiate": {
@@ -2812,6 +2866,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033022_Modifiers": {

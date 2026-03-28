@@ -434,6 +434,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability07_Part01": {
@@ -536,6 +539,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability06_3_Part02": {
@@ -546,6 +552,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability06_3_Part01": {
@@ -571,6 +580,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_BattleEvent_W4_Serpent_01_Part01": {
@@ -793,6 +805,9 @@ const compositeAbilityObject = {
         "Wait for Pending Ability Completions",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_BattleEvent_W4_Serpent_01_EnterReady": {
@@ -801,6 +816,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability06_Part02": {
@@ -857,6 +875,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -948,6 +969,9 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability05_Part02": {
@@ -1059,6 +1083,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability05_Part01": {
@@ -1084,6 +1111,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability04_Part03": {
@@ -1198,6 +1228,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability04_Part02": {
@@ -1428,6 +1461,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability04_Part01": {
@@ -1481,6 +1517,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability03_Part02": {
@@ -1667,6 +1706,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability03_Part01": {
@@ -1693,6 +1735,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_SummonNoDeathrattle": {
@@ -1718,6 +1763,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_SummonDeathrattle": {
@@ -1792,6 +1840,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability02_Part02": {
@@ -2007,6 +2058,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability02_Part01": {
@@ -2032,6 +2086,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability01_Part03": {
@@ -2091,6 +2148,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability01_Part02": {
@@ -2132,6 +2192,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_Ability01_Part01": {
@@ -2186,6 +2249,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_ChangePhase1": {
@@ -2326,6 +2392,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4064014_Monster_W4_Serpent_01_PassiveAbility": {
@@ -2554,6 +2623,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2912,6 +2984,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"623581294\">Enemy_W4_Serpent_01_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

@@ -29,6 +29,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-724030977\">Enemy_AML_Boss_Part1_IF_AbilityP01_WeaknessControll</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

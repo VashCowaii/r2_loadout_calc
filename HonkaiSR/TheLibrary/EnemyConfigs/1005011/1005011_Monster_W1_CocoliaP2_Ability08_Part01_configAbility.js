@@ -37,5 +37,8 @@ const configAbility = {
       "phase": "PhaseCharge"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

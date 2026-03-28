@@ -161,6 +161,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_01_IF_Ability02_Part01": {
@@ -180,6 +183,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_02_IF_Ability01_Part02": {
@@ -323,6 +329,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_02_IF_Ability01_Part01": {
@@ -343,6 +352,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_02_IF_AbilityP02": {
@@ -351,6 +363,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_02_IF_AbilityP01": {
@@ -384,6 +399,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-646358836\">Enemy_SW_Minion01_02_IF_WingsControl</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_01_IF_AbilityP02": {
@@ -392,6 +410,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_01_IF_AbilityP01": {
@@ -434,6 +455,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-850002708\">Enemy_SW_Minion01_01_IF_Listener</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_IF_AbilityP01": {
@@ -468,6 +492,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1150081091\">Enemy_SW_Minion01_IF_Deathrattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_02_IF_PassiveAbility_Insert_Part01": {
@@ -702,6 +729,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_01_IF_PassiveAbility_Insert_Part01": {
@@ -933,6 +963,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_IF_PassiveAbility_Insert_Part01": {
@@ -1137,6 +1170,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability07_Part02": {
@@ -1285,6 +1321,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability07_Part01": {
@@ -1304,6 +1343,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability06_Part02": {
@@ -1444,6 +1486,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability06_Part01": {
@@ -1463,6 +1508,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability05_Part02": {
@@ -1558,6 +1606,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability05_Part01": {
@@ -1577,6 +1628,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability04_Part02": {
@@ -1614,6 +1668,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability04_Part01": {
@@ -1633,6 +1690,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability03_Part02": {
@@ -1766,6 +1826,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_Ability03_Part01": {
@@ -1785,6 +1848,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityP01_Insert": {
@@ -2143,6 +2209,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityEX05": {
@@ -2152,6 +2221,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityEX04": {
@@ -2181,6 +2253,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityEX03": {
@@ -2210,6 +2285,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityEX02": {
@@ -2239,6 +2317,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityEX01": {
@@ -2268,6 +2349,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityP05_02": {
@@ -2551,6 +2635,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_PassiveAbility_Insert": {
@@ -2708,6 +2795,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2832,6 +2922,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1982402150\">Enemy_SW_Boss_01_ScoringDetect0101</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2896,6 +2989,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Boss_01_IF_AbilityP01": {
@@ -3185,6 +3281,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_PassiveAbility_Insert_Part01": {
@@ -3354,6 +3453,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_Ability03_Part02": {
@@ -3476,6 +3578,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_Ability03_Part01": {
@@ -3518,6 +3623,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_Ability02_Part02": {
@@ -3758,6 +3866,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_Ability02_Part01": {
@@ -3783,6 +3894,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_Ability01_Part02": {
@@ -3861,6 +3975,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_Ability01_Part01": {
@@ -3887,6 +4004,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8022011_Monster_SW_Minion01_Passive01": {
@@ -3935,6 +4055,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

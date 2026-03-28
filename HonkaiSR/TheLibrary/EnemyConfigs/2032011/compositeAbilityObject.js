@@ -66,6 +66,9 @@ const compositeAbilityObject = {
           "casterAssign": "TargetSelf"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -327,6 +330,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -357,6 +363,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2032011_Monster_W2_Lycan_Ability01_Part02": {
@@ -494,6 +503,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2032011_Monster_W2_Lycan_Ability01_Part01": {
@@ -520,6 +532,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2032011_BattleEventAbility_Monster_W2_Lycan_MainStorySpecialWin": {
@@ -561,6 +576,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-361184588\">Monster_Monster_W2_Lycan_BattlePerform_DisAbleAction</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1100,6 +1118,9 @@ const compositeAbilityObject = {
           "identifier": "RageEnd"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2032011_BattleEventAbility_Monster_Lycan_RageStart": {
@@ -1469,6 +1490,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1493,6 +1517,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"601337912\">Enemy_W2_Lycan_MainStory2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1545,6 +1572,9 @@ const compositeAbilityObject = {
           "parameters": {}
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1766,6 +1796,9 @@ const compositeAbilityObject = {
           "casterAssign": "TargetSelf"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

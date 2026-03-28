@@ -36,6 +36,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1242637680\">Enemy_AML_Boss_Part1_OnBreakRecoverSoundEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -241,6 +244,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8012140_Monster_AML_Boss_Part1_Ability03_Part01": {
@@ -266,6 +272,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8012140_Monster_AML_Boss_Part1_Ability02_Part02": {
@@ -343,6 +352,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8012140_Monster_AML_Boss_Part1_Ability02_Part01": {
@@ -368,6 +380,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8012140_Monster_AML_Boss_Part1_Ability01_Part02": {
@@ -402,6 +417,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8012140_Monster_AML_Boss_Part1_Ability01_Part01": {
@@ -427,6 +445,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     }
   }

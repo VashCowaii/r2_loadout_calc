@@ -28,6 +28,9 @@ const compositeAbilityObject = {
           "abortInsertedAbilities": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012040_Monster_W3_Ghost_Ability02_Part02": {
@@ -38,6 +41,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012040_Monster_W3_Ghost_Ability02_Part01": {
@@ -61,6 +67,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012040_Monster_W3_Ghost_Ability01_InsertAbility": {
@@ -86,6 +95,9 @@ const compositeAbilityObject = {
           "popUpText": "Deception's Crown dispelled"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012040_Monster_W3_Ghost_Ability01_Part02": {
@@ -215,6 +227,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3012040_Monster_W3_Ghost_Ability01_Part01": {
@@ -241,6 +256,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3012040_Monster_W3_Ghost_AbilityP01": {
@@ -281,6 +299,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"780210766\">Enemy_W3_Ghost_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012040_Modifiers": {

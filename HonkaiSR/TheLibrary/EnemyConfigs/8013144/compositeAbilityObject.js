@@ -29,6 +29,9 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_HitEffect": {
@@ -47,6 +50,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-743479497\">Enemy_AML_Boss_Part2_HitEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -177,6 +183,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -358,6 +367,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability12_Part01": {
@@ -383,6 +395,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability11_Part02": {
@@ -462,6 +477,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability11_Part01": {
@@ -487,6 +505,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability10_Part02": {
@@ -521,6 +542,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability10_Part01": {
@@ -546,6 +570,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability09_Part02": {
@@ -657,6 +684,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability09_Part01": {
@@ -682,6 +712,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability08_Part02": {
@@ -743,6 +776,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability08_Part01": {
@@ -768,6 +804,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability07_Part02": {
@@ -829,6 +868,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_Ability07_Part01": {
@@ -854,6 +896,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013144_Modifiers": {

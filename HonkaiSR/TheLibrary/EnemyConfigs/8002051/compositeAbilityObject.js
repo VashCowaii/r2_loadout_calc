@@ -26,6 +26,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_05_Ability02_Part01": {
@@ -34,6 +37,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_05_Ability01_Part02": {
@@ -44,6 +50,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_05_Ability01_Part01": {
@@ -52,6 +61,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_05_Passive01": {
@@ -79,6 +91,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_01_Ability03_Part02": {
@@ -112,6 +127,9 @@ const compositeAbilityObject = {
           "name": "Entity Escape Battle"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_01_Ability03_Part01": {
@@ -137,6 +155,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_01_Ability02_Part02": {
@@ -164,6 +185,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_01_Ability02_Part01": {
@@ -189,6 +213,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_01_Ability01_Part02": {
@@ -208,6 +235,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_01_Ability01_Part01": {
@@ -233,6 +263,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Monster_XP_Minion04_01_Passive01": {
@@ -242,6 +275,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002051_Modifiers": {

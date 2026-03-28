@@ -38,6 +38,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1064173182\">Enemy_W3_Sunday_Preshow_3</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

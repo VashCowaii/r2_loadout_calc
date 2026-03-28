@@ -83,6 +83,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002010_Monster_XP_Minion02_Ability03_Part01": {
@@ -108,6 +111,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002010_Monster_XP_Minion02_Ability02_Part02": {
@@ -194,6 +200,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002010_Monster_XP_Minion02_Ability02_Part01": {
@@ -219,6 +228,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002010_Monster_XP_Minion02_Ability01_Part02": {
@@ -260,6 +272,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002010_Monster_XP_Minion02_Ability01_Part01": {
@@ -285,6 +300,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8002010_Monster_XP_Minion02_PassiveAbility_Initiate": {
@@ -313,6 +331,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

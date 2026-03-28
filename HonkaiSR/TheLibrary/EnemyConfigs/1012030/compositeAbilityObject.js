@@ -47,6 +47,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012030_Monster_W1_Mecha01_01_Ability01_Part01": {
@@ -72,6 +75,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012030_Monster_W1_Mecha01_01_PassiveAbility_KlaraSpecialVictory": {
@@ -89,6 +95,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-411560977\">Monster_W1_Mecha01_01_KlaraSpecialVictory_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

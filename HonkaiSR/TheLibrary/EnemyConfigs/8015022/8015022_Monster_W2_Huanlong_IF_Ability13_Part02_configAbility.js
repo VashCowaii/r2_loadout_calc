@@ -654,5 +654,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

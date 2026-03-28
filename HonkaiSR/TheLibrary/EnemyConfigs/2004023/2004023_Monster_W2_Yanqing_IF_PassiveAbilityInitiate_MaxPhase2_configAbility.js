@@ -138,6 +138,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"210061459\">Enemy_W2_Yanqing_IF_Part2_OneMoreController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

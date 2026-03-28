@@ -100,6 +100,9 @@ const configAbility = {
       ]
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "tag": "DOT_Burn",
   "references": []
 }

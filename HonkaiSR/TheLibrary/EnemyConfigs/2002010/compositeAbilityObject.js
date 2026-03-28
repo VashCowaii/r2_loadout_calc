@@ -30,6 +30,9 @@ const compositeAbilityObject = {
           "variableName": "FollowTrigger"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2002010_Monster_W2_Knight01_Ability03_Part02": {
@@ -86,6 +89,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2002010_Monster_W2_Knight01_Ability03_Part01": {
@@ -128,6 +134,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2002010_Monster_W2_Knight01_Ability02_Part02": {
@@ -191,6 +200,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "2002010_Monster_W2_Knight01_Ability02_Part01": {
@@ -216,6 +228,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "2002010_Monster_W2_Knight01_Ability01_Part02": {
@@ -283,6 +298,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2002010_Monster_W2_Knight01_Ability01_Part01": {
@@ -308,6 +326,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2002010_Monster_W2_Knight01_Passive01": {

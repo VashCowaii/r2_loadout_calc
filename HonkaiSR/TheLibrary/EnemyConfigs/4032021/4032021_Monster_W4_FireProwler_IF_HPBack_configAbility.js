@@ -474,5 +474,8 @@ const configAbility = {
       "variableName": "ToastFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

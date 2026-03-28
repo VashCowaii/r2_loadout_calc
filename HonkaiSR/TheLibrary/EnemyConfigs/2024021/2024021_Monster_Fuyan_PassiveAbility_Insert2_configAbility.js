@@ -105,5 +105,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"417134444\">Monster_Fuyan_RL_HPShared_Part3</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

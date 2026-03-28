@@ -46,6 +46,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"623581294\">Enemy_W4_Serpent_01_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

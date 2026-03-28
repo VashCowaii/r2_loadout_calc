@@ -97,6 +97,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4052010_Monster_W2_Mecha02_02_Ability01_Part01": {
@@ -122,6 +125,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4052010_Monster_W2_Mecha02_02_DeathRattle_Insert": {
@@ -214,6 +220,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "4052010_Monster_W2_Mecha02_02_PassiveAbilityInitiate": {
@@ -268,6 +277,9 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -332,6 +344,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1972950152\">Enemy_W2_Mecha02_02_TimeSlow_Remove</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

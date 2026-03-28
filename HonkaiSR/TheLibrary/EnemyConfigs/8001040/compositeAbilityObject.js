@@ -24,6 +24,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1027753920\">Enemy_XP_Minion01_02_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -110,6 +113,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8001040_Monster_XP_Minion01_02_Ability01_Part01": {
@@ -134,6 +140,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     }
   }

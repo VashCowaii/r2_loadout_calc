@@ -133,6 +133,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1278888154\">W3_Sam_01_BattleScore2</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

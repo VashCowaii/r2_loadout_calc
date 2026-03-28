@@ -422,5 +422,8 @@ const configAbility = {
       "casterAssign": "TargetSelf"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

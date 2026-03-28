@@ -154,6 +154,9 @@ const configAbility = {
       "multiBase": 0
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

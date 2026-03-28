@@ -240,6 +240,9 @@ const configAbility = {
       "popUpText": "High-Temp Sterilization Mode"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

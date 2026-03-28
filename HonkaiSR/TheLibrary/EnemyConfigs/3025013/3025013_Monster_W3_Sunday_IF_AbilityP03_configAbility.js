@@ -206,5 +206,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1704895932\">Enemy_W3_Sunday_IF_EX03_Insert</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

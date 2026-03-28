@@ -49,6 +49,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1599810700\">Monster_W2_Abomi02_EffectControl</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

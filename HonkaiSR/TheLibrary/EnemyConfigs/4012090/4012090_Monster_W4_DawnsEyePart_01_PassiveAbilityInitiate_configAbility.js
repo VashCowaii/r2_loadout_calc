@@ -38,6 +38,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-967400061\">Enemy_W4_DawnsEyePart_01_DieController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

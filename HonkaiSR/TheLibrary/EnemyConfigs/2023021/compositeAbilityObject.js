@@ -96,6 +96,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01": {
@@ -121,6 +124,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability04_Part02": {
@@ -129,6 +135,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability04_Part01": {
@@ -137,6 +146,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02": {
@@ -156,6 +168,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01": {
@@ -189,6 +204,9 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02": {
@@ -273,6 +291,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01": {
@@ -298,6 +319,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02": {
@@ -396,6 +420,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01": {
@@ -421,6 +448,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023021_Monster_W2_Beast02_RLElite_AbilityP01_Initiate": {
@@ -503,6 +533,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

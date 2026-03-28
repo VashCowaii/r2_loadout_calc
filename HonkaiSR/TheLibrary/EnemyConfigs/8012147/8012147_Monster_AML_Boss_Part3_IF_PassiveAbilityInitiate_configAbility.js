@@ -30,6 +30,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"37141670\">Enemy_AML_Boss_Part3_OnBreakRecoverSoundEffect</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

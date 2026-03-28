@@ -14,5 +14,8 @@ const configAbility = {
       "isTrigger": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "All Enemy Team Members"
+  },
   "references": []
 }

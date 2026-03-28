@@ -305,6 +305,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-970015149\">Enemy_W2_LycanKing_IF_HintToastController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

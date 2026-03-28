@@ -51,5 +51,8 @@ const configAbility = {
       "name": "Mark Entity For Immediate Death"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "All Player Team Members"
+  },
   "references": []
 }

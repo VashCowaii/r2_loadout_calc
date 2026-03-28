@@ -46,6 +46,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -27,6 +27,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_Ability04_Part01": {
@@ -52,6 +55,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_PassiveAbility_Insert": {
@@ -139,6 +145,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_Ability03_Part02": {
@@ -208,6 +217,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_Ability03_Part01": {
@@ -237,6 +249,9 @@ const compositeAbilityObject = {
           "name": "Mark Entity For Immediate Death"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_Ability02_Part02": {
@@ -293,6 +308,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -330,6 +348,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_Ability01_Part02": {
@@ -363,6 +384,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_Ability01_Part01": {
@@ -388,6 +412,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraSpecialVictory": {
@@ -405,6 +432,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"469780750\">Monster_W1_GSMecha_01_KlaraSpecialVictory_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -451,6 +481,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraCamera": {
@@ -468,6 +501,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -521,6 +557,9 @@ const compositeAbilityObject = {
           "variableName": "_BoomRound"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

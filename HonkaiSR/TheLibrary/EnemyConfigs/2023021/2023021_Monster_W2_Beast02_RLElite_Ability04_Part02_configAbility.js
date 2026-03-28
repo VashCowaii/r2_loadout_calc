@@ -4,5 +4,8 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
   "references": []
 }

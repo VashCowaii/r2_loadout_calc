@@ -10,5 +10,8 @@ const configAbility = {
       "conditions": "Yapping is over"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -30,5 +30,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"527111621\">MModifier_Monster_W4_Claymore_02_Status</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

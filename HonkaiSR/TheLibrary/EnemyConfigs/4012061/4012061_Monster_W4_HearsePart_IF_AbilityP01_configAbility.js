@@ -47,5 +47,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1839151946\">Enemy_W4_HearsePart_IF_MuteSpeed</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

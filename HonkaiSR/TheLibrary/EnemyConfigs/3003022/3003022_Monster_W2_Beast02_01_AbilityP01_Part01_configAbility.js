@@ -17,6 +17,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"431932285\">W2_Beast02_01_ListenBreak</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

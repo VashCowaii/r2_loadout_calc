@@ -49,5 +49,8 @@ const configAbility = {
       "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

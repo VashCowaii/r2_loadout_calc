@@ -19,5 +19,8 @@ const configAbility = {
       "value": 2
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

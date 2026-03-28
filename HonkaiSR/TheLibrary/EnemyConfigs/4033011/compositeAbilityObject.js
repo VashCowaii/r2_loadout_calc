@@ -782,6 +782,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01": {
@@ -807,6 +810,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability05_Part02": {
@@ -864,6 +870,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability05_Part01": {
@@ -889,6 +898,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability03_Insert_Part02": {
@@ -1186,6 +1198,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability03_Insert_Part01": {
@@ -1205,6 +1220,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02": {
@@ -1310,6 +1328,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01": {
@@ -1335,6 +1356,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02": {
@@ -1538,6 +1562,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01": {
@@ -1563,6 +1590,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02": {
@@ -1625,6 +1655,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01": {
@@ -1650,6 +1683,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_PassiveAbility_Insert": {
@@ -1797,6 +1833,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033011_Monster_XP_Elite01_02_LocalLegend_PassiveAbility01": {
@@ -2343,6 +2382,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

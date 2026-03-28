@@ -115,6 +115,9 @@ const configAbility = {
     }
   ],
   "whenAdded": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

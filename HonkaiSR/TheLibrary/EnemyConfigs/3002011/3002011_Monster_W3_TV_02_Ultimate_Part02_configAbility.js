@@ -51,6 +51,9 @@ const configAbility = {
       "living": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "tag": "DOT",
   "references": []
 }

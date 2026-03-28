@@ -10,5 +10,8 @@ const configAbility = {
       "applyOverride": false
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

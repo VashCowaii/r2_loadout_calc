@@ -30,5 +30,8 @@ const configAbility = {
       "phase": "Phase02"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

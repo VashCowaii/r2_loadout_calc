@@ -32,5 +32,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1169600683\">Monster_W4_HearsePart_Stop</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

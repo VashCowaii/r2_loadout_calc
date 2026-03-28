@@ -55,6 +55,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01": {
@@ -80,6 +83,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032031_Monster_W2_Valkyrie01_02_LocalLegend_AbilityP01": {
@@ -98,6 +104,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"511962638\">Enemy_W2_Valkyrie01_02_LocalLegend_AbilityP01</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -349,6 +358,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032031_Monster_W2_Valkyrie01_02_Ability02_Part01": {
@@ -368,6 +380,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02": {
@@ -401,6 +416,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01": {
@@ -426,6 +444,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032031_Monster_W2_Valkyrie01_02_AbilityP01": {
@@ -452,6 +473,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032031_Modifiers": {

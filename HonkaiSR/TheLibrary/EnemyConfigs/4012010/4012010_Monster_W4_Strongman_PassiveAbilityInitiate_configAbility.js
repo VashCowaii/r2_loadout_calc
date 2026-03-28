@@ -80,6 +80,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"811690214\">Enemy_W4_Strongman_ConfineHit_Controller</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

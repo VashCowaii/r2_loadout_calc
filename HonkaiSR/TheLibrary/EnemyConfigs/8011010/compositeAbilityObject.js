@@ -39,6 +39,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8011010_Monster_AML_Minion01_Ability01_Part01": {
@@ -64,6 +67,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8011010_Monster_AML_Minion01_PassiveAbilityInitiate": {
@@ -83,6 +89,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-793551818\">Enemy_AML_Minion01_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

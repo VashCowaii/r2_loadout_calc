@@ -22,5 +22,8 @@ const configAbility = {
       "variableName": "W2_Abomi04_00_InsertFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

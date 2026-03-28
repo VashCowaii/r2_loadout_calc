@@ -6,6 +6,9 @@ const configAbility = {
   "parse": [
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

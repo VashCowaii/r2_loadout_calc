@@ -30,5 +30,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-646358836\">Enemy_SW_Minion01_02_IF_WingsControl</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

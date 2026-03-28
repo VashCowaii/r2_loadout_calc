@@ -20,6 +20,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-69325530\">Monster_AML_Minion03_01_LocalLegend_ListenPhase2</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

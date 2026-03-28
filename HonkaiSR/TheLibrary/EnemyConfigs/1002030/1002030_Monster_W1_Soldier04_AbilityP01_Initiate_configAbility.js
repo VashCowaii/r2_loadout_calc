@@ -88,6 +88,9 @@ const configAbility = {
       "variableName": "CurrentSupportNumber"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

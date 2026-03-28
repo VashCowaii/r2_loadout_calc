@@ -172,6 +172,9 @@ const configAbility = {
       "barType": "BossDot"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

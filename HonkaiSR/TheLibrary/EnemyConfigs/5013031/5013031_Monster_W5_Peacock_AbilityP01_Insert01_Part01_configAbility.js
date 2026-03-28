@@ -26,5 +26,8 @@ const configAbility = {
       "variableName": "ColorInInsertFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

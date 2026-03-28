@@ -55,5 +55,8 @@ const configAbility = {
       "addStacksPerTrigger": 0
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -44,6 +44,9 @@ const compositeAbilityObject = {
           "name": "Entity Escape Battle"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002102_Monster_XP_Minion04_01_Ability03_Part01": {
@@ -69,6 +72,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002102_Monster_XP_Minion04_01_Ability02_Part02": {
@@ -96,6 +102,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002102_Monster_XP_Minion04_01_Ability02_Part01": {
@@ -121,6 +130,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002102_Monster_XP_Minion04_01_Ability01_Part02": {
@@ -140,6 +152,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002102_Monster_XP_Minion04_01_Ability01_Part01": {
@@ -165,6 +180,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002102_Monster_XP_Minion04_01_Passive01": {
@@ -175,6 +193,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002102_Modifiers": {

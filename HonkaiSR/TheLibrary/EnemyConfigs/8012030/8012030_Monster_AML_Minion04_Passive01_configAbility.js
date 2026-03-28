@@ -15,6 +15,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-429048412\">Monster_AML_Minion04_EffectController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

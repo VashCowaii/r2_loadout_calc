@@ -29,5 +29,8 @@ const configAbility = {
       "phase": "Phase2"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

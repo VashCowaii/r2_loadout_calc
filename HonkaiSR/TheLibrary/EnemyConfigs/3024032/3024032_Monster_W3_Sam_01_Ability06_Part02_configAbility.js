@@ -112,5 +112,8 @@ const configAbility = {
     },
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": []
 }

@@ -46,6 +46,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1447120194\">Enemy_W4_Hearse_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

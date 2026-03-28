@@ -18,6 +18,9 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5012070_Monster_W5_VtuberPart01_Ability01_Part02": {
@@ -88,6 +91,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5012070_Monster_W5_VtuberPart01_Ability01_Part01": {
@@ -113,6 +119,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5012070_Monster_W5_VtuberPart01_PassiveAbilityInitiate": {
@@ -147,6 +156,9 @@ const compositeAbilityObject = {
           "phase": "Phase02"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5012070_Modifiers": {

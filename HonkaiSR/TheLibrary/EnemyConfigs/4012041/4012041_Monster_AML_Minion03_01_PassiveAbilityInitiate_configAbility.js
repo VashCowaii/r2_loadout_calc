@@ -72,6 +72,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1048406986\">Enemy_Heaven_ModelController_AML_Minion</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

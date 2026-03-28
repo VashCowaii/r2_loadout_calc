@@ -66,6 +66,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"224426614\">W3_Dinosaur_01_BattleScore2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_AbilityP01": {
@@ -113,6 +116,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_Ability07_Part02": {
@@ -981,6 +987,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1036,6 +1045,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_Ability06_Part02": {
@@ -1158,6 +1170,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_Ability06_Part01": {
@@ -1184,6 +1199,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_Ability04_Part02": {
@@ -1314,6 +1332,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_Ability04_Part01": {
@@ -1339,6 +1360,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_Ability01_Part02": {
@@ -1461,6 +1485,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3013013_Monster_W3_Dinosaur_01_Ability01_Part01": {
@@ -1487,6 +1514,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3013013_Modifiers": {

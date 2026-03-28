@@ -34,6 +34,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1444322537\">Monster_AML_Elite01_Level_SpecialWin</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -109,6 +112,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -303,6 +309,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability05_Part01": {
@@ -328,6 +337,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability04_Part02": {
@@ -388,6 +400,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability04_Part01": {
@@ -413,6 +428,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability03_Part02": {
@@ -486,6 +504,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability03_Part01": {
@@ -512,6 +533,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability02_Part02": {
@@ -563,6 +587,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability02_Part01": {
@@ -589,6 +616,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability01_Part02": {
@@ -643,6 +673,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_Ability01_Part01": {
@@ -668,6 +701,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8013011_Monster_AML_Elite01_PassiveAbility_N2SpecialVictory": {
@@ -685,6 +721,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2126695781\">Monster_AML_Elite01_N2SpecialAim</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

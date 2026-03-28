@@ -30,5 +30,8 @@ const configAbility = {
       "state": "CoolDown"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

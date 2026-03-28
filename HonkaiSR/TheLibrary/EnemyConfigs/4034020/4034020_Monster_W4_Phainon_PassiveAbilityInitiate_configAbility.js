@@ -41,6 +41,9 @@ const configAbility = {
   "whenAdded": [
     "Block Battle-Conditions On Start"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

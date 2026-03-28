@@ -54,5 +54,8 @@ const configAbility = {
       "living": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

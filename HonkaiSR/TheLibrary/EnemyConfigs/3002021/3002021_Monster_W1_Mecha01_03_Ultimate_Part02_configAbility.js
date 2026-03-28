@@ -32,6 +32,9 @@ const configAbility = {
       "adjustmentType": "+"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "tag": "DOT",
   "references": []
 }

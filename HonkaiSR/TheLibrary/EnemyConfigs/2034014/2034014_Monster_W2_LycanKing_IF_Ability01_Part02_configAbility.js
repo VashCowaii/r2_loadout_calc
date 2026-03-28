@@ -145,5 +145,8 @@ const configAbility = {
       "adjustmentType": "="
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

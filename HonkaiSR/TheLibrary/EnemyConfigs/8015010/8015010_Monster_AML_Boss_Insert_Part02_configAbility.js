@@ -107,5 +107,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": []
 }

@@ -150,6 +150,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability06_Part01": {
@@ -176,6 +179,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability05_Part02": {
@@ -285,6 +291,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability05_Part01": {
@@ -310,6 +319,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability04_Insert_Part02": {
@@ -343,6 +355,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability04_Insert_Part01": {
@@ -366,6 +381,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability04_Part02": {
@@ -526,6 +544,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability04_Part01": {
@@ -555,6 +576,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability03_Part02": {
@@ -777,6 +801,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability03_Part01": {
@@ -802,6 +829,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability02_Part02": {
@@ -891,6 +921,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability02_Part01": {
@@ -917,6 +950,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability01_Part02": {
@@ -987,6 +1023,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_Ability01_Part01": {
@@ -1013,6 +1052,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_AbilityP01": {
@@ -1025,6 +1067,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2013021_Monster_W2_Valkyrie02_RLElite_PassiveAbilityInitiate": {
@@ -1078,6 +1123,9 @@ const compositeAbilityObject = {
           "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2013021_Modifiers": {

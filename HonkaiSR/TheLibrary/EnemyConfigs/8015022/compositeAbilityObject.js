@@ -89,6 +89,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_EX04_PassiveAbility": {
@@ -118,6 +121,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -214,6 +220,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_EX02_PassiveAbility": {
@@ -223,6 +232,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_EX01_PassiveAbility": {
@@ -320,6 +332,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_PassiveAbilityInitiate": {
@@ -415,6 +430,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"461293746\">Monster_W2_Huanlong_Part1</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1203,6 +1221,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"427738508\">Monster_W2_Huanlong_Part3</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability14_Part02": {
@@ -2005,6 +2026,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2174,6 +2198,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability13_Part02": {
@@ -2832,6 +2859,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability13_Part01": {
@@ -2857,6 +2887,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability12_Part02": {
@@ -4224,6 +4257,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability12_Part01": {
@@ -4249,6 +4285,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability11_Part02": {
@@ -4802,6 +4841,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability11_Part01": {
@@ -4827,6 +4869,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability08_Part02": {
@@ -5411,6 +5456,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -5445,6 +5493,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability07_Part02": {
@@ -5649,6 +5700,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability07_Part01": {
@@ -5673,6 +5727,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability06_Part02": {
@@ -5877,6 +5934,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability06_Part01": {
@@ -5902,6 +5962,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability04_Part02": {
@@ -6059,6 +6122,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability04_Part01": {
@@ -6140,6 +6206,9 @@ const compositeAbilityObject = {
           "ignoreParallelWarning": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability03_Part02": {
@@ -6279,6 +6348,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability03_Part01": {
@@ -6359,6 +6431,9 @@ const compositeAbilityObject = {
           "ignoreParallelWarning": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability02_Part02": {
@@ -6559,6 +6634,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_IF_Ability02_Part01": {
@@ -6584,6 +6662,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part2_Camera5_Insert": {
@@ -6592,6 +6673,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part3_Camera3_Insert": {
@@ -6600,6 +6684,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part3_Camera2_Insert": {
@@ -6655,6 +6742,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part3_Camera1_Insert": {
@@ -6663,6 +6753,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part2_Camera4_Insert": {
@@ -6671,6 +6764,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part2_Camera3_Insert": {
@@ -6719,6 +6815,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part2_Camera2_Insert": {
@@ -6727,6 +6826,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part2_Camera1_Insert": {
@@ -6749,6 +6851,9 @@ const compositeAbilityObject = {
           "allowAbilityTriggers": false
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part1_Camera0_Insert": {
@@ -6757,6 +6862,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part1_Camera1_Insert": {
@@ -6805,6 +6913,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part3End_Camera1_Insert": {
@@ -6870,6 +6981,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part3Start_Camera2_Insert": {
@@ -6946,6 +7060,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_AbilityP12_Part02": {
@@ -7208,6 +7325,9 @@ const compositeAbilityObject = {
           "allowAbilityTriggers": false
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_AbilityP12_Part01": {
@@ -7227,6 +7347,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Part3Start_Camera1_Insert": {
@@ -7254,6 +7377,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1084194912\">Monster_W2_Huanlong_Part3Start</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_SpecialWin_Insert": {
@@ -7262,6 +7388,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_PassiveAbility_Insert2": {
@@ -7639,6 +7768,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"427738508\">Monster_W2_Huanlong_Part3</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_PassiveAbility_Insert": {
@@ -7789,6 +7921,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"444516127\">Monster_W2_Huanlong_Part2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability14_Part02": {
@@ -7885,6 +8020,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability14_Part01": {
@@ -7893,6 +8031,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability13_Part02": {
@@ -8291,6 +8432,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability13_Part01": {
@@ -8310,6 +8454,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability12_Part02": {
@@ -8544,6 +8691,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability12_Part01": {
@@ -8563,6 +8713,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability11_Part02": {
@@ -8622,6 +8775,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability11_Part01": {
@@ -8641,6 +8797,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability10_Part02": {
@@ -8674,6 +8833,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability10_Part01": {
@@ -8699,6 +8861,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability09_Part02": {
@@ -8755,6 +8920,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability09_Part01": {
@@ -8780,6 +8948,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability08_Part02": {
@@ -8920,6 +9091,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability08_Part01": {
@@ -8974,6 +9148,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability07_Part02": {
@@ -9226,6 +9403,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability07_Part01": {
@@ -9245,6 +9425,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_AbilityP06_Part02": {
@@ -9501,6 +9684,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_AbilityP06_Part01": {
@@ -9520,6 +9706,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability06_Part02": {
@@ -9675,6 +9864,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability06_Part01": {
@@ -9694,6 +9886,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability05_Part02": {
@@ -9736,6 +9931,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability05_Part01": {
@@ -9761,6 +9959,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability04_Part02": {
@@ -10061,6 +10262,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability04_Part01": {
@@ -10080,6 +10284,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability03_Part02": {
@@ -10130,6 +10337,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability03_Part01": {
@@ -10149,6 +10359,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability02_Part02": {
@@ -10349,6 +10562,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability02_Part01": {
@@ -10368,6 +10584,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability01_Part02": {
@@ -10402,6 +10621,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_Ability01_Part01": {
@@ -10427,6 +10649,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015022_Monster_W2_Huanlong_PassiveAbilityInitiate": {
@@ -10599,6 +10824,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

@@ -278,6 +278,9 @@ const configAbility = {
       "value": 1
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

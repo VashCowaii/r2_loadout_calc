@@ -821,6 +821,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability05_Insert_Part02": {
@@ -1404,6 +1407,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1500090502\">Enemy_W4_Unicorn_01_HitSummonMark1</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability05_Insert_Part01": {
@@ -1422,6 +1428,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability05_Part02": {
@@ -2014,6 +2023,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability05_Part01": {
@@ -2039,6 +2051,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability04_Part02": {
@@ -2166,6 +2181,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability04_Part01": {
@@ -2191,6 +2209,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability03_Part02": {
@@ -2298,6 +2319,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability03_Part01": {
@@ -2323,6 +2347,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability02_Part02": {
@@ -2438,6 +2465,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability02_Part01": {
@@ -2463,6 +2493,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability01_Part02": {
@@ -2502,6 +2535,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_Ability01_Part01": {
@@ -2527,6 +2563,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053020_Monster_W4_Unicorn_01_PassiveAbilityInitiate": {
@@ -2586,6 +2625,9 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053020_Modifiers": {

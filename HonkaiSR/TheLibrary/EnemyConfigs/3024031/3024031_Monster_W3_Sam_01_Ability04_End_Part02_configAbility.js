@@ -46,5 +46,8 @@ const configAbility = {
       "revertDefault": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

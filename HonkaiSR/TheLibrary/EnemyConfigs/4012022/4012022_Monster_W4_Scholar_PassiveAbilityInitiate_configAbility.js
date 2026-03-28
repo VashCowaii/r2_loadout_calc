@@ -79,6 +79,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1681000669\">Enemy_W4_Scholar_ConfineHit_Controller</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

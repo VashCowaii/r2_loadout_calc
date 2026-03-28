@@ -333,5 +333,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"130339168\">Monster_W2_Feixiao_PartController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

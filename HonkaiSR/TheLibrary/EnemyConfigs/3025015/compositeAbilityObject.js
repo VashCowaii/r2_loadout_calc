@@ -85,6 +85,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"98028781\">Enemy_W3_Sunday_MainStory380_UltraReady</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_AbilityP03": {
@@ -206,6 +209,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1733765355\">Enemy_W3_Sunday_MainStory380_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -558,6 +564,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_AbilityP02": {
@@ -604,6 +613,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1064173182\">Enemy_W3_Sunday_Preshow_3</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -824,6 +836,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_PassiveAbilityInitiate_Insert_Part03": {
@@ -943,6 +958,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_03_PassiveAbilityInitiate_Insert_Part01to02": {
@@ -1960,6 +1978,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1283356455\">Enemy_W3_Sunday_FinalPhase</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_PassiveAbilityInitiate_Insert_Part02to03": {
@@ -2275,6 +2296,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1283356455\">Enemy_W3_Sunday_FinalPhase</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3321,6 +3345,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_03_PassiveAbilityInitiate": {
@@ -3483,6 +3510,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1919757203\">Enemy_W3_Sunday_01_PassiveAbilityInitiate_EnterBattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3740,6 +3770,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_01_PassiveAbilityInitiate": {
@@ -3898,6 +3931,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1919757203\">Enemy_W3_Sunday_01_PassiveAbilityInitiate_EnterBattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -4190,6 +4226,9 @@ const compositeAbilityObject = {
           "multiBase": 2
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -4745,6 +4784,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1182496789\">Enemy_W3_Sunday_01_Perform01_FormationFlag</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_SundayPart_AssistAbility01_Part02": {
@@ -4776,6 +4818,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3025015_Monster_W3_SundayPart_AssistAbility01_Part01": {
@@ -4798,6 +4843,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability10_Part02": {
@@ -5193,6 +5241,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -5340,6 +5391,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability09_Part02": {
@@ -6179,6 +6233,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -6329,6 +6386,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability08_InsertAbility": {
@@ -6337,6 +6397,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability08_Part02": {
@@ -6364,6 +6427,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability08_Part01": {
@@ -6390,6 +6456,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability07_Part02": {
@@ -6419,6 +6488,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability07_Part01": {
@@ -6444,6 +6516,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability06_Part02": {
@@ -7259,6 +7334,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability06_Part01": {
@@ -7329,6 +7407,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability052_Part02": {
@@ -7362,6 +7443,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability052_Part01": {
@@ -7387,6 +7471,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability05_Part02": {
@@ -8031,6 +8118,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability05_Part01": {
@@ -8056,6 +8146,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability042_Part02": {
@@ -8598,6 +8691,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability042_Part01": {
@@ -8623,6 +8719,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability04_Part02": {
@@ -9017,6 +9116,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability04_Part01": {
@@ -9042,6 +9144,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability03_Part02": {
@@ -9080,6 +9185,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability03_Part01": {
@@ -9105,6 +9213,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability02_Part02": {
@@ -9213,6 +9324,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -9245,6 +9359,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability01_Part02": {
@@ -9300,6 +9417,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3025015_Monster_W3_Sunday_Ability01_Part01": {
@@ -9325,6 +9445,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3025015_Modifiers": {

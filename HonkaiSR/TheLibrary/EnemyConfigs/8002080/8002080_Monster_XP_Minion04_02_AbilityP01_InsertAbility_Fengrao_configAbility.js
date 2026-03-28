@@ -94,6 +94,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

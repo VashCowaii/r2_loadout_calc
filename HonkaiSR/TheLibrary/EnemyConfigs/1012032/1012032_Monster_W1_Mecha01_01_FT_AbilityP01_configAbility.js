@@ -14,5 +14,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1931189851\">Modifier_StageSpecialAbility_10441211_Block</a>[<span class=\"descriptionNumberColor\">Golden Ring</span>]"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

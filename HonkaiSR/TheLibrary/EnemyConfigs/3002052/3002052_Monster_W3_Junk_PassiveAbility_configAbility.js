@@ -38,6 +38,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-981101613\">W3_Junk_BattleScore1</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

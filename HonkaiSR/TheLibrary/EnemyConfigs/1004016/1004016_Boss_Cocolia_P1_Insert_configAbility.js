@@ -14,5 +14,8 @@ const configAbility = {
       "variableName": "InsertController"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

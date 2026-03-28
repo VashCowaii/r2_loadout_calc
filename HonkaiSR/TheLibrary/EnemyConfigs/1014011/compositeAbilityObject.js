@@ -67,6 +67,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -137,6 +140,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_PassiveAbility03": {
@@ -176,6 +182,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_PassiveAbility_Insert2": {
@@ -261,6 +270,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"916805475\">Monster_W1_Svarog_RL_PartController_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_PassiveAbility_Insert": {
@@ -369,6 +381,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability11_Part02": {
@@ -496,6 +511,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -528,6 +546,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability10_Part02": {
@@ -829,6 +850,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability10_Part01": {
@@ -854,6 +878,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability09_Part02": {
@@ -883,6 +910,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability09_Part01": {
@@ -908,6 +938,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability08_Part02": {
@@ -918,6 +951,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability08_Part01": {
@@ -951,6 +987,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_AIControl": {
@@ -968,6 +1007,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-954371893\">Straight_AIControl</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1202,6 +1244,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability07_Part01": {
@@ -1227,6 +1272,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability06_Part02": {
@@ -1256,6 +1304,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability06_Part01": {
@@ -1310,6 +1361,9 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability05_Part02": {
@@ -1358,6 +1412,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability05_Part01": {
@@ -1383,6 +1440,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability04_Part02": {
@@ -1452,6 +1512,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability04_Part01": {
@@ -1496,6 +1559,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability03_Part02": {
@@ -1596,6 +1662,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1752,6 +1821,9 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability02_Part02": {
@@ -1803,6 +1875,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability02_Part01": {
@@ -1828,6 +1903,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability01_Part02": {
@@ -1884,6 +1962,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_Ability01_Part01": {
@@ -1909,6 +1990,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_RL_PassiveAbilityInitiate": {
@@ -1969,6 +2053,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1614912264\">Monster_W1_Svarog_RL_ReviveEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2122,6 +2209,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2188,6 +2278,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_PassiveAbility03": {
@@ -2227,6 +2320,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability08_Part02": {
@@ -2237,6 +2333,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability08_Part01": {
@@ -2256,6 +2355,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_AIControl": {
@@ -2273,6 +2375,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-954371893\">Straight_AIControl</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2420,6 +2525,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability07_Part01": {
@@ -2439,6 +2547,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability06_Part02": {
@@ -2459,6 +2570,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability06_Part01": {
@@ -2507,6 +2621,9 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability05_Part02": {
@@ -2550,6 +2667,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability05_Part01": {
@@ -2569,6 +2689,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability04_Part02": {
@@ -2668,6 +2791,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability04_Part01": {
@@ -2705,6 +2831,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability03_Part02": {
@@ -2819,6 +2948,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2969,6 +3101,9 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability02_Part02": {
@@ -3020,6 +3155,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability02_Part01": {
@@ -3039,6 +3177,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability01_Part02": {
@@ -3095,6 +3236,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_Ability01_Part01": {
@@ -3114,6 +3258,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1014011_Monster_W1_GS_Svarog_PassiveAbilityInitiate": {
@@ -3169,6 +3316,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3313,6 +3463,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"908163509\">Enemy_W1_Svarog_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

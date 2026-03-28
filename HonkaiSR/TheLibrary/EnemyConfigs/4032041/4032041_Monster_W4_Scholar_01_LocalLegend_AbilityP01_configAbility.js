@@ -25,6 +25,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1987258167\">Enemy_W4_Scholar_01_LocalLegend_AbilityP01</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

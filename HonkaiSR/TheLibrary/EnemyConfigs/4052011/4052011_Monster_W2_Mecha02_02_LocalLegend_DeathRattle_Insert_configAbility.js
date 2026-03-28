@@ -158,5 +158,8 @@ const configAbility = {
       ]
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": []
 }

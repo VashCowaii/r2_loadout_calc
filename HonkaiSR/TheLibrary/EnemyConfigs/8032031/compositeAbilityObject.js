@@ -27,6 +27,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_DeathRattle_RL": {
@@ -158,6 +161,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability02_Part02_RL": {
@@ -485,6 +491,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability02_Part01_RL": {
@@ -556,6 +565,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_01_Passive01_RL": {
@@ -582,6 +594,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"889329301\">Monster_W3_AventurinePart_01_SpeedZero</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Passive01_RL": {
@@ -626,6 +641,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability04_Part02": {
@@ -873,6 +891,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability04_Part01": {
@@ -902,6 +923,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability03_Part02": {
@@ -933,6 +957,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability03_Part01": {
@@ -960,6 +987,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability02_Part02": {
@@ -1355,6 +1385,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability02_Part01": {
@@ -1442,6 +1475,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability01_Part02": {
@@ -1452,6 +1488,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Ability01_Part01": {
@@ -1477,6 +1516,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032031_Monster_W3_AventurinePart_Passive01": {
@@ -1503,6 +1545,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032031_Modifiers": {

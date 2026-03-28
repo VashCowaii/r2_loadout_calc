@@ -52,6 +52,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_Ability02_Part01": {
@@ -77,6 +80,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_Ability01_Part02": {
@@ -126,6 +132,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_Ability01_Part01": {
@@ -151,6 +160,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail_Part02": {
@@ -206,6 +218,9 @@ const compositeAbilityObject = {
           "name": "Mark Entity For Immediate Death"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Player Team Members"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail": {
@@ -229,6 +244,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Player Team Members"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Part02": {
@@ -364,6 +382,9 @@ const compositeAbilityObject = {
           "name": "Mark Entity For Immediate Death"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Player Team Members"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_PassiveAbility_Insert": {
@@ -387,6 +408,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Player Team Members"
+      },
       "references": []
     },
     "2022020_Monster_W2_Abomi02_Passive01": {
@@ -440,6 +464,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1599810700\">Monster_W2_Abomi02_EffectControl</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
