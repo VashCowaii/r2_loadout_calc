@@ -47,5 +47,13 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Ally Target",
+    "allowMemoAllyTarget": "Forbidden",
+    "filter": {
+      "name": "Target Name",
+      "target": "{{Player Team All}}.[[removeMemosprite]]-{{Caster's Summoner}}"
+    }
   }
 }

@@ -29,5 +29,8 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "{{Skill Point User}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
   }
 }

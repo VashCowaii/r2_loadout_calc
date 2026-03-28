@@ -93,6 +93,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01": {
@@ -249,6 +252,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02": {
@@ -363,6 +369,9 @@ const compositeAbilityObject = {
       ],
       "references": [],
       "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{All Team Members}}"
       }
     },
@@ -587,6 +596,10 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "All Other Team Members"
       }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02": {
@@ -663,6 +676,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "TrailblazerHarmony_Modifiers": {

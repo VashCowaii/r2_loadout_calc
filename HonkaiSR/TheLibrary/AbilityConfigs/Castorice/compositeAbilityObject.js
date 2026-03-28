@@ -422,6 +422,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "Castorice_Castorice_PassiveAbility_1": {
@@ -1609,6 +1612,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "Castorice_Castorice_Ability03_Part02": {
@@ -1915,6 +1921,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "Castorice_Castorice_Ability03_EnterReady": {
@@ -2194,6 +2203,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "Castorice_Castorice_Ability02_Part02": {
@@ -2324,6 +2336,10 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
       }
     },
     "Castorice_Castorice_Ability01_Part02": {
@@ -2441,6 +2457,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Castorice_Modifiers": {
@@ -3832,6 +3851,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "NetherwingPollux_Servant_CastoriceServant_PassiveAbility01": {
@@ -4886,6 +4908,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "NetherwingPollux_Servant_CastoriceServant_DeathRattle": {
@@ -4908,6 +4933,9 @@ const compositeAbilityObject = {
       "parse": [],
       "references": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       }
     },
@@ -5774,6 +5802,10 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "stateFilter": "AliveOrLimbo"
       }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability22_Part02": {
@@ -6356,6 +6388,10 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "stateFilter": "AliveOrLimbo"
       }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability21_Part02": {
@@ -6887,6 +6923,10 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "stateFilter": "AliveOrLimbo"
       }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability02_Part02": {
@@ -7362,6 +7402,10 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "stateFilter": "AliveOrLimbo"
       }
     },
     "NetherwingPollux_Servant_CastoriceServant_Ability01_Ready": {
@@ -7629,6 +7673,10 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "stateFilter": "AliveOrLimbo"
       }
     },
     "NetherwingPollux_Modifiers": {

@@ -29,5 +29,8 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
   }
 }

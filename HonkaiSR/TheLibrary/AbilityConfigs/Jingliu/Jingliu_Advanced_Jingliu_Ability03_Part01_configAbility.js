@@ -29,5 +29,9 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "{{Skill Point User}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "Blast Targets"
   }
 }

@@ -29,5 +29,9 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "Blast Targets"
   }
 }

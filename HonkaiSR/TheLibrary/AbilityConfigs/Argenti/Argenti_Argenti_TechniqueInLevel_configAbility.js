@@ -115,5 +115,8 @@ const configAbility = {
   ],
   "targetObjectData": {
     "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
   }
 }

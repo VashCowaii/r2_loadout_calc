@@ -28,5 +28,9 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Ally Target",
+    "subTarget": "Blast Targets"
   }
 }

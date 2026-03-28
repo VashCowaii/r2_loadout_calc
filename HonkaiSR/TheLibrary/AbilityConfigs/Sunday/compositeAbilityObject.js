@@ -82,6 +82,9 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "Sunday_Sunday_10_PassiveAbility01": {
@@ -503,6 +506,9 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       }
     },
@@ -1223,6 +1229,12 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "subTarget": "Memo OR Memo-Master",
+        "allowMemoAllyTarget": "AllowWhenSummonerUnselectable",
+        "moveTargetToSummoner": true
       }
     },
     "Sunday_Sunday_10_Ability03_EnterReady": {
@@ -1993,6 +2005,12 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "subTarget": "Memo OR Memo-Master",
+        "allowMemoAllyTarget": "AllowWhenSummonerUnselectable",
+        "moveTargetToSummoner": true
       }
     },
     "Sunday_Sunday_10_Ability01_Part02": {
@@ -2074,6 +2092,9 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Sunday_Modifiers": {

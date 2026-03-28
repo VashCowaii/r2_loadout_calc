@@ -369,5 +369,29 @@ const configAbility = {
   "references": [],
   "targetObjectData": {
     "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "stateFilter": "AliveOrLimbo",
+    "filter": {
+      "name": "Target Sequence",
+      "Sequence": [
+        {
+          "name": "Target Name",
+          "target": "{{Hostile Entities(AOE)}}"
+        },
+        {
+          "name": "Target Filter",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
+          }
+        }
+      ]
+    }
   }
 }
