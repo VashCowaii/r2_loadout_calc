@@ -81,5 +81,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"916805475\">Monster_W1_Svarog_RL_PartController_LockHP</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

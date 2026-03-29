@@ -70,7 +70,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jade_Jade_TechniqueInLevel": {
       "fileName": "Jade_Jade_TechniqueInLevel",
@@ -231,7 +234,13 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jade_Jade_Passive_Part02_02": {
       "fileName": "Jade_Jade_Passive_Part02_02",
@@ -511,7 +520,10 @@ const compositeAbilityObject = {
           "function": "Add"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Jade_Jade_Passive_Part02_01": {
       "fileName": "Jade_Jade_Passive_Part02_01",
@@ -786,7 +798,10 @@ const compositeAbilityObject = {
           "function": "Add"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Jade_Jade_Passive_Part01": {
       "fileName": "Jade_Jade_Passive_Part01",
@@ -899,7 +914,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Jade_Jade_PassiveAbility01": {
       "fileName": "Jade_Jade_PassiveAbility01",
@@ -1910,7 +1928,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jade_Jade_Ability03_Part02": {
       "fileName": "Jade_Jade_Ability03_Part02",
@@ -2041,7 +2065,10 @@ const compositeAbilityObject = {
           "effectName": "Follow-Up ATK Boost",
           "statusName": "Follow-Up ATK Boost"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jade_Jade_Ability03_Part01": {
       "fileName": "Jade_Jade_Ability03_Part01",
@@ -2071,7 +2098,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Jade_Jade_Ability03_EnterReady": {
       "fileName": "Jade_Jade_Ability03_EnterReady",
@@ -2079,7 +2112,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Jade_Jade_Ability02_Part02": {
       "fileName": "Jade_Jade_Ability02_Part02",
@@ -3151,7 +3187,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jade_Jade_Ability02_Part01": {
       "fileName": "Jade_Jade_Ability02_Part01",
@@ -3182,7 +3221,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
     },
     "Jade_Jade_Ability01_Part02": {
       "fileName": "Jade_Jade_Ability01_Part02",
@@ -3250,7 +3295,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jade_Jade_Ability01_Part01": {
       "fileName": "Jade_Jade_Ability01_Part01",
@@ -3280,7 +3328,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Jade_Modifiers": {
       "fileName": "Jade_Modifiers",

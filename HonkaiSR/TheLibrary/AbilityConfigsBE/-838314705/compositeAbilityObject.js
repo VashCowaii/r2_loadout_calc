@@ -58,7 +58,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera_Multi": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera_Multi",
@@ -66,7 +69,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera_Multi_New": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera_Multi_New",
@@ -74,7 +80,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak_Multi_New": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak_Multi_New",
@@ -889,7 +898,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak_Multi": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak_Multi",
@@ -1633,7 +1645,10 @@ const compositeAbilityObject = {
           ],
           "addStacksPerTrigger": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak_OD": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak_OD",
@@ -2268,7 +2283,10 @@ const compositeAbilityObject = {
           ],
           "addStacksPerTrigger": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera",
@@ -2276,7 +2294,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak",
@@ -2840,7 +2861,10 @@ const compositeAbilityObject = {
           ],
           "addStacksPerTrigger": 1
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-838314705_StrongChallengeEX_Test_StageAbility_001": {
       "fileName": "-838314705_StrongChallengeEX_Test_StageAbility_001",

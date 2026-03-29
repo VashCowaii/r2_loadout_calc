@@ -13,5 +13,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-934258987\">TrialPlayer_DanHengIL_20231052_Modifier</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

@@ -215,6 +215,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_BattleEventAbility_W2_Kafka_RL": {
@@ -250,6 +253,9 @@ const compositeAbilityObject = {
           "multiAdd": "MDF_W2_Kafka_00_RL_BattleEvent_ActionDelay"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -419,6 +425,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1041839558\">Monster_W2_Kafka_RL_PartController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_RL_PassiveAbility_Insert": {
@@ -477,6 +486,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_RL_Ability07_Part02": {
@@ -778,6 +790,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_RL_Ability07_Part01": {
@@ -803,6 +818,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_RL_Ability04_Part02": {
@@ -1227,6 +1249,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_RL_Ability04_Part01": {
@@ -1246,6 +1271,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_RL_Passive01": {
@@ -1349,6 +1377,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1564,6 +1595,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1746,6 +1780,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_BattleEventAbility_W2_Kafka_IF": {
@@ -1781,6 +1818,9 @@ const compositeAbilityObject = {
           "multiAdd": "MDF_W2_Kafka_00_RL_BattleEvent_ActionDelay"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1944,6 +1984,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-568638257\">Monster_W2_Kafka_IF_PartController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_PassiveAbility_Insert": {
@@ -2002,6 +2045,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability10_Part02": {
@@ -2154,6 +2200,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2224,6 +2273,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability08_Part02": {
@@ -2647,6 +2699,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability08_Part01": {
@@ -2666,6 +2721,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability07_Insert_Part02": {
@@ -2731,6 +2789,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability07_Insert_Part01": {
@@ -2750,6 +2811,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability07_Part02": {
@@ -2996,6 +3060,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability07_Part01": {
@@ -3015,6 +3082,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability04_Part02": {
@@ -3439,6 +3509,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability04_Part01": {
@@ -3464,6 +3537,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability03_Insert_Part02": {
@@ -3523,6 +3603,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Ability03_Insert_Part01": {
@@ -3542,6 +3625,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF_Passive02": {
@@ -3560,6 +3646,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3734,6 +3823,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -4074,6 +4166,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -4103,6 +4198,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF02_Ability02_Part02": {
@@ -4780,6 +4881,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF02_Ability02_Part01": {
@@ -4823,6 +4927,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_IF02_Passive01": {
@@ -4975,6 +5086,12 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -5316,6 +5433,9 @@ const compositeAbilityObject = {
           "variableName": "PursuitCheck"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability07_Part01": {
@@ -5339,6 +5459,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability06_Part02": {
@@ -5551,6 +5674,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability06_Part01": {
@@ -5580,6 +5706,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability05_Part02": {
@@ -5657,6 +5789,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability05_Part01": {
@@ -5682,6 +5817,12 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability04_Part02": {
@@ -5693,6 +5834,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability04_Part01": {
@@ -5713,6 +5857,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability03_Part02": {
@@ -5775,6 +5922,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability03_Part01": {
@@ -5803,6 +5953,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability02_Part02": {
@@ -6170,6 +6326,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability02_Part01": {
@@ -6190,6 +6349,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability01_Part02": {
@@ -6415,6 +6577,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Ability01_Part01": {
@@ -6441,6 +6606,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2004013_Monster_W2_Kafka_Passive01": {
@@ -6583,6 +6754,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -6721,6 +6895,12 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

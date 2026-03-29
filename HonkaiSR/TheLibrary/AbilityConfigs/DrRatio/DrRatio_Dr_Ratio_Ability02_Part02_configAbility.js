@@ -496,5 +496,8 @@ const configAbility = {
       "effectName": "Effect RES Reduction",
       "statusName": "Effect RES Reduction"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

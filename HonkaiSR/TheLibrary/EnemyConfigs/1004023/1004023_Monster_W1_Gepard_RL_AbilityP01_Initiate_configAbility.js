@@ -45,6 +45,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1151984120\">Enemy_W1_Gepard_Command</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

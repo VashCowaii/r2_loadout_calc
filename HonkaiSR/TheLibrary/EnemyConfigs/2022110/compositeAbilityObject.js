@@ -62,6 +62,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022110_Monster_W2_Valkyrie01_01_Ability02_Part01": {
@@ -87,6 +90,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2022110_Monster_W2_Valkyrie01_01_Ability01_Part02": {
@@ -120,6 +129,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022110_Monster_W2_Valkyrie01_01_Ability01_Part01": {
@@ -145,6 +157,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2022110_Monster_W2_Valkyrie01_01_AbilityP01": {
@@ -167,6 +185,12 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

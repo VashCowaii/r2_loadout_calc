@@ -439,5 +439,8 @@ const configAbility = {
       "effectName": "DoT Vulnerability",
       "statusName": "DoT Vulnerability"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

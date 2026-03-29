@@ -73,6 +73,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Insert": {
@@ -164,6 +167,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Part01": {
@@ -240,6 +246,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Insert": {
@@ -337,6 +346,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part02_Assist": {
@@ -381,6 +393,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part01_Assist": {
@@ -399,6 +414,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part02": {
@@ -468,6 +486,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part01": {
@@ -524,6 +545,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_PassiveAbilityInitiate": {
@@ -558,6 +585,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1914692042\">Enemy_W2_Argenti_IF_Power_Mute</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -936,6 +969,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_02_IF_AbilityP01_Insert": {
@@ -1018,6 +1054,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part02": {
@@ -1099,6 +1138,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part01": {
@@ -1190,6 +1232,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02": {
@@ -1430,6 +1475,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01": {
@@ -1446,6 +1494,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_02_IF_PassiveAbilityInitiate": {
@@ -1471,6 +1522,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1842,6 +1896,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_AbilityP01_Insert": {
@@ -1914,6 +1971,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_Ability01_Part02": {
@@ -2138,6 +2198,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2171,6 +2234,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part02": {
@@ -2194,6 +2260,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part01": {
@@ -2219,6 +2288,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part02": {
@@ -2227,6 +2299,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part01": {
@@ -2265,6 +2340,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3021022_Monster_W2_ArgentiTotem_IF_PassiveAbilityInitiate": {
@@ -2290,6 +2368,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

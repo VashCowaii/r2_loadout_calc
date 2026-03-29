@@ -13,6 +13,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

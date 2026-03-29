@@ -201,5 +201,8 @@ const configAbility = {
       "effectName": "All-Type RES PEN Boost",
       "statusName": "Petals to Stream, Repose in Dream"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

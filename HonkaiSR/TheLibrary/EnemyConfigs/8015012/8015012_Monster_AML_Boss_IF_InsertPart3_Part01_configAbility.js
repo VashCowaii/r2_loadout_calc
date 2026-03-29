@@ -310,5 +310,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1367141952\">Enemy_AML_Boss_IF_Part_Resistance</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

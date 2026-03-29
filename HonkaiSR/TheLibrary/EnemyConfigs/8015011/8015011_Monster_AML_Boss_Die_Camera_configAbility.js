@@ -14,6 +14,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

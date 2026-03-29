@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jingliu_Advanced_Jingliu_TechniqueInLevel": {
       "fileName": "Jingliu_Advanced_Jingliu_TechniqueInLevel",
@@ -349,7 +352,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability": {
       "fileName": "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability",
@@ -1231,7 +1240,14 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01": {
       "fileName": "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01",
@@ -1322,7 +1338,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jingliu_Advanced_Jingliu_PassiveAbility01": {
       "fileName": "Jingliu_Advanced_Jingliu_PassiveAbility01",
@@ -1457,7 +1476,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-908005903\">Advanced_Jingliu_Passive</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Jingliu_Advanced_Jingliu_Ability03_Part02": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability03_Part02",
@@ -1783,7 +1808,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Skill Point User}}"
+      }
     },
     "Jingliu_Advanced_Jingliu_Ability03_Part01": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability03_Part01",
@@ -1813,7 +1841,14 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Skill Point User}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Jingliu_Advanced_Jingliu_Ability03_EnterReady": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability03_EnterReady",
@@ -1821,7 +1856,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Jingliu_Advanced_Jingliu_Ability02_Part02": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability02_Part02",
@@ -1932,7 +1970,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jingliu_Advanced_Jingliu_Ability02_Part01": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability02_Part01",
@@ -1962,7 +2003,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Jingliu_Advanced_Jingliu_Ability01_Part02": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability01_Part02",
@@ -2035,7 +2082,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Jingliu_Advanced_Jingliu_Ability01_Part01": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability01_Part01",
@@ -2065,7 +2115,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Jingliu_Modifiers": {
       "fileName": "Jingliu_Modifiers",

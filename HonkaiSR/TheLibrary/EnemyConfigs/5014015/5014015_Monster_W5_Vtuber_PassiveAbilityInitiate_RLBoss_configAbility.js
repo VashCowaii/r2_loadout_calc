@@ -17,6 +17,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1281829506\">Monster_W5_Vtuber_RLBoss_Passive</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

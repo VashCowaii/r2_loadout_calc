@@ -122,5 +122,11 @@ const configAbility = {
       "value": 0
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

@@ -43,7 +43,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TheDahlia_Constance_Eidolon2": {
       "fileName": "TheDahlia_Constance_Eidolon2",
@@ -169,7 +172,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TheDahlia_Constance_Trace03": {
       "fileName": "TheDahlia_Constance_Trace03",
@@ -943,7 +949,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TheDahlia_Constance_TechniqueInLevel": {
       "fileName": "TheDahlia_Constance_TechniqueInLevel",
@@ -1267,7 +1276,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TheDahlia_Constance_PassiveAbility01": {
       "fileName": "TheDahlia_Constance_PassiveAbility01",
@@ -2975,7 +2990,13 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TheDahlia_Constance_Insert_Part02": {
       "fileName": "TheDahlia_Constance_Insert_Part02",
@@ -3434,7 +3455,10 @@ const compositeAbilityObject = {
           "effectName": "Vulnerability",
           "statusName": "Pity Its Heart Gnawed by Worms"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TheDahlia_Constance_Insert_Part01": {
       "fileName": "TheDahlia_Constance_Insert_Part01",
@@ -3461,7 +3485,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TheDahlia_Constance_Insert_SelectTarget": {
       "fileName": "TheDahlia_Constance_Insert_SelectTarget",
@@ -3515,7 +3542,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TheDahlia_Constance_Ability03_Part02": {
       "fileName": "TheDahlia_Constance_Ability03_Part02",
@@ -3627,7 +3657,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TheDahlia_Constance_Ability03_Part01": {
       "fileName": "TheDahlia_Constance_Ability03_Part01",
@@ -3657,7 +3690,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TheDahlia_Constance_Ability03_EnterReady": {
       "fileName": "TheDahlia_Constance_Ability03_EnterReady",
@@ -3665,7 +3704,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TheDahlia_Constance_Ability02_Part02": {
       "fileName": "TheDahlia_Constance_Ability02_Part02",
@@ -3759,7 +3801,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheDahlia_Constance_Ability02_Part01": {
       "fileName": "TheDahlia_Constance_Ability02_Part01",
@@ -3788,7 +3833,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "TheDahlia_Constance_Ability01_Part02": {
       "fileName": "TheDahlia_Constance_Ability01_Part02",
@@ -3827,7 +3879,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TheDahlia_Constance_Ability01_Part01": {
       "fileName": "TheDahlia_Constance_Ability01_Part01",
@@ -3856,7 +3911,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "TheDahlia_Modifiers": {
       "fileName": "TheDahlia_Modifiers",

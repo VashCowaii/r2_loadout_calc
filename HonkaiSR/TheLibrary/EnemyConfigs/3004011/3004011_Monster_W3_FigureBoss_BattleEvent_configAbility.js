@@ -22,6 +22,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1664207003\">Monster_W3_FigureBoss_DispelStatus_BE</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

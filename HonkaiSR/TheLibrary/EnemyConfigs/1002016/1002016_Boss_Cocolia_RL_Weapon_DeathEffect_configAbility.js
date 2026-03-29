@@ -14,6 +14,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1262423423\">Boss_Cocolia_RL_Weapon_DeathEffect</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -57,6 +57,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8012021_Monster_AML_Minion03_Ability02_Part01": {
@@ -82,6 +85,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8012021_Monster_AML_Minion03_Ability01_Part02": {
@@ -111,6 +120,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8012021_Monster_AML_Minion03_Ability01_Part01": {
@@ -136,6 +148,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8012021_Monster_AML_Minion03_Passive01": {
@@ -155,6 +173,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"537523857\">Monster_AML_Minion03_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

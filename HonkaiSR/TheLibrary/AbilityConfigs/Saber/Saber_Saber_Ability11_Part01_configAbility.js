@@ -29,5 +29,11 @@ const configAbility = {
       "conditions": "Under Control Effect"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
 }

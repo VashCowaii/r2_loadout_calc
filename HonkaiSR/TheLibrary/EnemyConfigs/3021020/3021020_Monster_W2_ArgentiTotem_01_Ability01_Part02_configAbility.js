@@ -186,5 +186,8 @@ const configAbility = {
     },
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "All Enemy Team Members"
+  },
   "references": []
 }

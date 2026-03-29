@@ -46,6 +46,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_PassiveAbilityMainBattle": {
@@ -146,6 +149,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1596688101\">Enemy_W2_Yanqing_MainBattle_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -825,6 +831,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"684006930\">Enemy_W2_Yanqing_StandByEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1145,6 +1154,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability06_Part01": {
@@ -1170,6 +1182,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability05_Part02": {
@@ -1197,6 +1215,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability05_Part01": {
@@ -1216,6 +1237,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability04_Part02": {
@@ -1411,6 +1435,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability04_Part01": {
@@ -1436,6 +1463,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability03_Part02": {
@@ -1614,6 +1648,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability03_Part01": {
@@ -1639,6 +1676,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_TeamFormation": {
@@ -1647,6 +1690,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_RevealedDie": {
@@ -1777,6 +1823,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_Insert_Over": {
@@ -1899,6 +1948,9 @@ const compositeAbilityObject = {
           "variableName": "W2_Yanqing_00_Skill02_InsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_Part02": {
@@ -2486,6 +2538,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_Part01": {
@@ -2505,6 +2560,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability01_Part02": {
@@ -2565,6 +2623,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability01_Part01": {
@@ -2584,6 +2645,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_PassiveAbility_BGM": {
@@ -2630,6 +2694,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1298343121\">Enemy_W2_Yanqing_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2865,6 +2932,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"684006930\">Enemy_W2_Yanqing_StandByEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3689,6 +3762,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2018294690\">Enemy_W2_Yanqing_AbilityP01_ChangePhaseController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_AbilityP01_Insert_Part01to02": {
@@ -3916,6 +3992,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_AbilityP01_RL": {
@@ -3957,6 +4036,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2018294690\">Enemy_W2_Yanqing_AbilityP01_ChangePhaseController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability08_Part02_RL": {
@@ -4459,6 +4544,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability08_Part01_RL": {
@@ -4484,6 +4572,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability07_Part02_RL": {
@@ -4511,6 +4605,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability07_Part01_RL": {
@@ -4536,6 +4633,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability05_Part02_RL": {
@@ -4555,6 +4658,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability05_Part01_RL": {
@@ -4580,6 +4686,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_Insert_Over_RL": {
@@ -4694,6 +4806,9 @@ const compositeAbilityObject = {
           "variableName": "W2_Yanqing_00_Skill02_InsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_Part02_RL": {
@@ -5679,6 +5794,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability02_Part01_RL": {
@@ -5709,6 +5827,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability01_Part02_RL": {
@@ -5788,6 +5912,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2004026_Monster_W2_Yanqing_Ability01_Part01_RL": {
@@ -5813,6 +5940,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2004026_Modifiers": {

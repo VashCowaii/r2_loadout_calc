@@ -152,7 +152,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Hyacine_Hyacine_PassiveAbility01": {
       "fileName": "Hyacine_Hyacine_PassiveAbility01",
@@ -616,7 +622,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hyacine_Hyacine_Ability03_Part02": {
       "fileName": "Hyacine_Hyacine_Ability03_Part02",
@@ -885,7 +897,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hyacine_Hyacine_Ability03_Part01": {
       "fileName": "Hyacine_Hyacine_Ability03_Part01",
@@ -915,7 +930,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Hyacine_Hyacine_Ability03_EnterReady": {
       "fileName": "Hyacine_Hyacine_Ability03_EnterReady",
@@ -923,7 +944,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Hyacine_Hyacine_Ability02_Part02": {
       "fileName": "Hyacine_Hyacine_Ability02_Part02",
@@ -1102,7 +1126,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hyacine_Hyacine_Ability02_Part01": {
       "fileName": "Hyacine_Hyacine_Ability02_Part01",
@@ -1131,7 +1158,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Hyacine_Hyacine_Ability01_Part02": {
       "fileName": "Hyacine_Hyacine_Ability01_Part02",
@@ -1172,7 +1205,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hyacine_Hyacine_Ability01_Part01": {
       "fileName": "Hyacine_Hyacine_Ability01_Part01",
@@ -1201,7 +1237,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Hyacine_Modifiers": {
       "fileName": "Hyacine_Modifiers",
@@ -2417,7 +2459,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "LittleIca_Servant_HyacineServant_Ability01_Part01": {
       "fileName": "LittleIca_Servant_HyacineServant_Ability01_Part01",
@@ -2463,7 +2508,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "LittleIca_Servant_HyacineServant_DeathRattle": {
       "fileName": "LittleIca_Servant_HyacineServant_DeathRattle",
@@ -2514,7 +2565,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "LittleIca_Servant_HyacineServant_BattleCry": {
       "fileName": "LittleIca_Servant_HyacineServant_BattleCry",
@@ -2612,7 +2669,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "LittleIca_Servant_HyacineServant_PassiveAbility": {
       "fileName": "LittleIca_Servant_HyacineServant_PassiveAbility",
@@ -2702,7 +2765,13 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "LittleIca_Modifiers": {
       "fileName": "LittleIca_Modifiers",

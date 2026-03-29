@@ -41,5 +41,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"255719361\">Enemy_AML_Boss_IF_ListenAllPartLimbo</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -14,5 +14,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-36298295\">Enemy_W1_Gepard_PassiveAbility_Formation2</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

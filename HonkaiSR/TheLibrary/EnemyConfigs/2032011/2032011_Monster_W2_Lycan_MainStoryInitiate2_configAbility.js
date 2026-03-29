@@ -13,6 +13,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"601337912\">Enemy_W2_Lycan_MainStory2</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

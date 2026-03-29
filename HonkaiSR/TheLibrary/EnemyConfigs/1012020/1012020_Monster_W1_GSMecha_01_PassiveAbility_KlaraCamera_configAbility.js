@@ -13,6 +13,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

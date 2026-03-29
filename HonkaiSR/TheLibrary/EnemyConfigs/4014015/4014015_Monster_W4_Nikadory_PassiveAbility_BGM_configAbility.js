@@ -86,6 +86,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1564473981\">Enemy_W4_Nikadory_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -74,7 +74,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_Eidolon2": {
       "fileName": "March7thTH_Mar_7th_10_Eidolon2",
@@ -333,7 +336,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_Trace03": {
       "fileName": "March7thTH_Mar_7th_10_Trace03",
@@ -561,7 +567,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_Trace02": {
       "fileName": "March7thTH_Mar_7th_10_Trace02",
@@ -714,7 +723,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_Trace01": {
       "fileName": "March7thTH_Mar_7th_10_Trace01",
@@ -766,7 +778,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_TechniqueEnergy": {
       "fileName": "March7thTH_Mar_7th_10_TechniqueEnergy",
@@ -824,7 +839,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_TechniqueInLevel": {
       "fileName": "March7thTH_Mar_7th_10_TechniqueInLevel",
@@ -891,7 +909,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "March7thTH_Mar_7th_10_Ready_Special": {
       "fileName": "March7thTH_Mar_7th_10_Ready_Special",
@@ -910,7 +934,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_PassiveAbility01": {
       "fileName": "March7thTH_Mar_7th_10_PassiveAbility01",
@@ -1448,7 +1475,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_Ability03_Part02": {
       "fileName": "March7thTH_Mar_7th_10_Ability03_Part02",
@@ -1700,7 +1733,10 @@ const compositeAbilityObject = {
           "effectName": "Enhanced Basic Attack Boost",
           "statusName": "March 7th, the Apex Heroine"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "March7thTH_Mar_7th_10_Ability03_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability03_Part01",
@@ -1730,7 +1766,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "March7thTH_Mar_7th_10_Ability03_EnterReady": {
       "fileName": "March7thTH_Mar_7th_10_Ability03_EnterReady",
@@ -1738,7 +1780,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "March7thTH_Mar_7th_10_BPExtraTurn": {
       "fileName": "March7thTH_Mar_7th_10_BPExtraTurn",
@@ -1748,7 +1793,10 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thTH_Mar_7th_10_Ability02_Part02": {
       "fileName": "March7thTH_Mar_7th_10_Ability02_Part02",
@@ -2274,7 +2322,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "March7thTH_Mar_7th_10_Ability02_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability02_Part01",
@@ -2305,7 +2356,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "excludeSelf": true
+      }
     },
     "March7thTH_Mar_7th_10_Ability11_Part02": {
       "fileName": "March7thTH_Mar_7th_10_Ability11_Part02",
@@ -2943,7 +3001,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "March7thTH_Mar_7th_10_Ability11_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability11_Part01",
@@ -3054,7 +3115,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "March7thTH_Mar_7th_10_Eidolon2_Insert_Part02": {
       "fileName": "March7thTH_Mar_7th_10_Eidolon2_Insert_Part02",
@@ -3216,7 +3283,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "March7thTH_Mar_7th_10_Eidolon2_Insert_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Eidolon2_Insert_Part01",
@@ -3244,7 +3314,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "March7thTH_Mar_7th_10_Eidolon2_Insert_SelectTarget": {
       "fileName": "March7thTH_Mar_7th_10_Eidolon2_Insert_SelectTarget",
@@ -3352,7 +3425,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"126431759\">M_Mar_7th_10_InsertCheck</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "March7thTH_Mar_7th_10_Ability01_Part02": {
       "fileName": "March7thTH_Mar_7th_10_Ability01_Part02",
@@ -3496,7 +3572,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "March7thTH_Mar_7th_10_Ability01_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability01_Part01",
@@ -3529,7 +3608,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "March7thTH_Modifiers": {
       "fileName": "March7thTH_Modifiers",

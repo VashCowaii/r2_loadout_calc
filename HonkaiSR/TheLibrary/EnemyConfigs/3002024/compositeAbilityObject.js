@@ -49,6 +49,9 @@ const compositeAbilityObject = {
           "adjustmentType": "+"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "tag": "DOT",
       "references": []
     },
@@ -63,6 +66,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002024_Monster_W1_Mecha01_03_Ability03_Part02": {
@@ -113,6 +122,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002024_Monster_W1_Mecha01_03_Ability03_Part01": {
@@ -138,6 +150,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3002024_Monster_W1_Mecha01_03_Ability02_Part02": {
@@ -163,6 +181,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002024_Monster_W1_Mecha01_03_Ability02_Part01": {
@@ -188,6 +209,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002024_Monster_W1_Mecha01_03_Ability01_Part02": {
@@ -232,6 +259,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002024_Monster_W1_Mecha01_03_Ability01_Part01": {
@@ -257,6 +287,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3002024_Monster_W1_Mecha01_03_MainStoryPassive": {
@@ -274,6 +310,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-756696396\">Enemy_W1_Mecha01_03_DieListener</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -378,6 +417,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1262827161\">MModifier_Monster_W3_TV_02_SideCheck</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

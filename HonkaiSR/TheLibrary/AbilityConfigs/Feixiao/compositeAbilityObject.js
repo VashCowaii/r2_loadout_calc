@@ -96,7 +96,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Feixiao_Feixiao_Trace03": {
       "fileName": "Feixiao_Feixiao_Trace03",
@@ -194,7 +197,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Feixiao_Feixiao_Trace02": {
       "fileName": "Feixiao_Feixiao_Trace02",
@@ -315,7 +321,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Feixiao_Feixiao_Trace01": {
       "fileName": "Feixiao_Feixiao_Trace01",
@@ -376,7 +385,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Feixiao_Feixiao_TechniqueInLevel": {
       "fileName": "Feixiao_Feixiao_TechniqueInLevel",
@@ -568,7 +580,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Feixiao_Feixiao_TechniqueSP": {
       "fileName": "Feixiao_Feixiao_TechniqueSP",
@@ -586,7 +604,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Feixiao_Feixiao_Insert_Part02": {
       "fileName": "Feixiao_Feixiao_Insert_Part02",
@@ -815,7 +836,10 @@ const compositeAbilityObject = {
           "effectName": "DMG Boost",
           "statusName": "Thunderhunt"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Feixiao_Feixiao_Insert_Part01": {
       "fileName": "Feixiao_Feixiao_Insert_Part01",
@@ -863,7 +887,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Feixiao_Feixiao_Insert_SelectTargetSelf": {
       "fileName": "Feixiao_Feixiao_Insert_SelectTargetSelf",
@@ -995,7 +1022,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Feixiao_Feixiao_Insert_SelectTarget": {
       "fileName": "Feixiao_Feixiao_Insert_SelectTarget",
@@ -1117,7 +1147,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Feixiao_Feixiao_PassiveAbility01": {
       "fileName": "Feixiao_Feixiao_PassiveAbility01",
@@ -1961,7 +1994,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Feixiao_Feixiao_Ability03_Finish_W2Main_Part01": {
       "fileName": "Feixiao_Feixiao_Ability03_Finish_W2Main_Part01",
@@ -1973,7 +2012,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability03_Finish_Part02": {
       "fileName": "Feixiao_Feixiao_Ability03_Finish_Part02",
@@ -2042,7 +2084,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability03_Finish_Part01": {
       "fileName": "Feixiao_Feixiao_Ability03_Finish_Part01",
@@ -2071,7 +2116,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability03_ComboFinish2_Part02": {
       "fileName": "Feixiao_Feixiao_Ability03_ComboFinish2_Part02",
@@ -2118,7 +2166,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1207472342\">Feixiao_EnterFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability03_ComboFinish2_Part01": {
       "fileName": "Feixiao_Feixiao_Ability03_ComboFinish2_Part01",
@@ -2128,7 +2179,10 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability21_Anim2_Part02": {
       "fileName": "Feixiao_Feixiao_Ability21_Anim2_Part02",
@@ -2209,7 +2263,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability21_Anim2_Part01": {
       "fileName": "Feixiao_Feixiao_Ability21_Anim2_Part01",
@@ -2248,7 +2305,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability21_Anim1_Part02": {
       "fileName": "Feixiao_Feixiao_Ability21_Anim1_Part02",
@@ -2329,7 +2389,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability21_Anim1_Part01": {
       "fileName": "Feixiao_Feixiao_Ability21_Anim1_Part01",
@@ -2368,7 +2431,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability21_Entry": {
       "fileName": "Feixiao_Feixiao_Ability21_Entry",
@@ -2714,7 +2780,34 @@ const compositeAbilityObject = {
           "value": 2
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "stateFilter": "AliveOrLimbo",
+        "filter": {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
+              }
+            }
+          ]
+        }
+      }
     },
     "Feixiao_Feixiao_Ability03_ComboFinish1_Part02": {
       "fileName": "Feixiao_Feixiao_Ability03_ComboFinish1_Part02",
@@ -2766,7 +2859,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"-1207472342\">Feixiao_EnterFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability03_ComboFinish1_Part01": {
       "fileName": "Feixiao_Feixiao_Ability03_ComboFinish1_Part01",
@@ -2792,7 +2888,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim4_Part02": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim4_Part02",
@@ -2827,7 +2926,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim4_Part01": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim4_Part01",
@@ -2846,7 +2948,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim3_Part02": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim3_Part02",
@@ -2881,7 +2986,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim3_Part01": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim3_Part01",
@@ -2900,7 +3008,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim2_Part02": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim2_Part02",
@@ -2935,7 +3046,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim2_Part01": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim2_Part01",
@@ -2943,7 +3057,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim1_Part02": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim1_Part02",
@@ -2978,7 +3095,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Anim1_Part01": {
       "fileName": "Feixiao_Feixiao_Ability11_Anim1_Part01",
@@ -2997,7 +3117,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability11_Entry": {
       "fileName": "Feixiao_Feixiao_Ability11_Entry",
@@ -3367,7 +3490,34 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "stateFilter": "AliveOrLimbo",
+        "filter": {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
+              }
+            }
+          ]
+        }
+      }
     },
     "Feixiao_Feixiao_Ability03_Part02": {
       "fileName": "Feixiao_Feixiao_Ability03_Part02",
@@ -4046,7 +4196,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability03_Part01": {
       "fileName": "Feixiao_Feixiao_Ability03_Part01",
@@ -4134,7 +4287,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Feixiao_Feixiao_Ability03_EnterReady": {
       "fileName": "Feixiao_Feixiao_Ability03_EnterReady",
@@ -4142,7 +4301,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Feixiao_Feixiao_Ability02_Part02": {
       "fileName": "Feixiao_Feixiao_Ability02_Part02",
@@ -4316,7 +4478,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability02_Part01": {
       "fileName": "Feixiao_Feixiao_Ability02_Part01",
@@ -4356,7 +4521,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Feixiao_Feixiao_Ability01_Part02": {
       "fileName": "Feixiao_Feixiao_Ability01_Part02",
@@ -4457,7 +4628,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Feixiao_Feixiao_Ability01_Part01": {
       "fileName": "Feixiao_Feixiao_Ability01_Part01",
@@ -4487,7 +4661,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Feixiao_Modifiers": {
       "fileName": "Feixiao_Modifiers",

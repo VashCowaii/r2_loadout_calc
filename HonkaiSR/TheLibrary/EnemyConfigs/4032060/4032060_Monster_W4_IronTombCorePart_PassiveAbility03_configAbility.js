@@ -77,5 +77,11 @@ const configAbility = {
     },
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

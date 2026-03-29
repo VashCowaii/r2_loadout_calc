@@ -29,5 +29,12 @@ const configAbility = {
       "isTrigger": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}",
+    "stateFilter": "AliveOrLimbo"
+  }
 }

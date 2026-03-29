@@ -31,6 +31,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"455167654\">Enemy_W3_Figure_01_AudioControllerForChosenOne</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

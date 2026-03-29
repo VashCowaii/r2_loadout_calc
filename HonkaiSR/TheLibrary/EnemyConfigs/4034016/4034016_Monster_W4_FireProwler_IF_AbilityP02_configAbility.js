@@ -6,5 +6,11 @@ const configAbility = {
   "toughnessList": null,
   "parse": [],
   "whenAdded": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

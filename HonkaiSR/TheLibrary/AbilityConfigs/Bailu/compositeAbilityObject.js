@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bailu_Bailu_Trace01": {
       "fileName": "Bailu_Bailu_Trace01",
@@ -41,7 +44,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"283019978\">Bailu_PointB1</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bailu_Bailu_TechniqueInLevel": {
       "fileName": "Bailu_Bailu_TechniqueInLevel",
@@ -263,7 +269,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Bailu_Bailu_InsertAbility_Revive": {
       "fileName": "Bailu_Bailu_InsertAbility_Revive",
@@ -425,7 +437,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Bailu_Bailu_PassiveAbility01": {
       "fileName": "Bailu_Bailu_PassiveAbility01",
@@ -660,7 +675,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bailu_Bailu_Ability03_Part02": {
       "fileName": "Bailu_Bailu_Ability03_Part02",
@@ -968,7 +989,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Bailu_Bailu_Ability03_Part01": {
       "fileName": "Bailu_Bailu_Ability03_Part01",
@@ -998,7 +1022,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Bailu_Bailu_Ability03_EnterReady": {
       "fileName": "Bailu_Bailu_Ability03_EnterReady",
@@ -1006,7 +1036,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Bailu_Bailu_Ability02_Part02": {
       "fileName": "Bailu_Bailu_Ability02_Part02",
@@ -1316,7 +1349,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bailu_Bailu_Ability02_Part01": {
       "fileName": "Bailu_Bailu_Ability02_Part01",
@@ -1346,7 +1382,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "targetIsVariable": true
+      }
     },
     "Bailu_Bailu_Ability01_Part02": {
       "fileName": "Bailu_Bailu_Ability01_Part02",
@@ -1387,7 +1430,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Bailu_Bailu_Ability01_Part01": {
       "fileName": "Bailu_Bailu_Ability01_Part01",
@@ -1416,7 +1462,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Bailu_Modifiers": {
       "fileName": "Bailu_Modifiers",

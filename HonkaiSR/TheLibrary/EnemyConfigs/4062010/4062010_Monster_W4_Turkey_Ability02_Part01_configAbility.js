@@ -21,5 +21,11 @@ const configAbility = {
       "isTrigger": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": []
 }

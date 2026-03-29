@@ -26,7 +26,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Trace03": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Trace03",
@@ -34,7 +37,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Trace01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Trace01",
@@ -102,7 +108,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_AutoUseUltraAbility": {
       "fileName": "TrailblazerDestruction_PlayerBoy_AutoUseUltraAbility",
@@ -126,7 +135,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_PassiveAbility01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_PassiveAbility01",
@@ -589,7 +601,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability03_EnterReady": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability03_EnterReady",
@@ -599,7 +617,10 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability21_Part02": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability21_Part02",
@@ -746,7 +767,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability21_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability21_Part01",
@@ -775,7 +799,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability02_Part02": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability02_Part02",
@@ -877,7 +908,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability02_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability02_Part01",
@@ -906,7 +940,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability11_Part02": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability11_Part02",
@@ -995,7 +1036,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability11_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability11_Part01",
@@ -1025,7 +1069,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability01_Part02": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability01_Part02",
@@ -1069,7 +1119,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerDestruction_PlayerBoy_Ability01_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability01_Part01",
@@ -1099,7 +1152,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "TrailblazerDestruction_Modifiers": {
       "fileName": "TrailblazerDestruction_Modifiers",

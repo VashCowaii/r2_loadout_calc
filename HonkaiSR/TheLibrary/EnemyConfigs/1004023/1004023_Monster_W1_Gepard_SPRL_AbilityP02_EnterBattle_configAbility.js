@@ -35,5 +35,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-243818097\">SPRL_Flag</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

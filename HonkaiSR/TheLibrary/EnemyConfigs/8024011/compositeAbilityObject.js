@@ -157,6 +157,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"721379857\">Monster_SW_Boss_PartController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_PassiveAbility_Insert": {
@@ -238,6 +241,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_PassiveAbility_Insert_Part01": {
@@ -407,6 +413,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability10_Part02": {
@@ -835,6 +844,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability10_Part01": {
@@ -860,6 +872,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability08_Part02": {
@@ -982,6 +1000,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability08_Part01": {
@@ -1024,6 +1045,12 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability07_Part02": {
@@ -1109,6 +1136,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability07_Part01": {
@@ -1134,6 +1164,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability06_Part02": {
@@ -2463,6 +2499,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability06_Part01": {
@@ -2488,6 +2527,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability05_Part02": {
@@ -2507,6 +2552,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability05_Part01": {
@@ -2532,6 +2580,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability04_Part02": {
@@ -3268,6 +3322,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability04_Part01": {
@@ -3293,6 +3350,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability03_Part02": {
@@ -3371,6 +3434,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability03_Part01": {
@@ -3397,6 +3463,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability02_Part02": {
@@ -3545,6 +3617,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability02_Part01": {
@@ -3570,6 +3645,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability01_Part02": {
@@ -3648,6 +3729,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Ability01_Part01": {
@@ -3674,6 +3758,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8024011_Monster_SW_Boss_Passive01": {
@@ -3800,6 +3890,12 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

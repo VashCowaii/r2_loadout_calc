@@ -21,6 +21,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"458071803\">Enemy_W1_CocoliaP2_WeakPointProtectController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

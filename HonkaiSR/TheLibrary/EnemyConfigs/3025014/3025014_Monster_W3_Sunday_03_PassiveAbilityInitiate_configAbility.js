@@ -159,6 +159,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1919757203\">Enemy_W3_Sunday_01_PassiveAbilityInitiate_EnterBattle</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

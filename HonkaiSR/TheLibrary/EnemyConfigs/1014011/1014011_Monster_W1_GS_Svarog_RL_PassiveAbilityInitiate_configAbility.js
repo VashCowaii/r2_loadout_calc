@@ -56,6 +56,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1614912264\">Monster_W1_Svarog_RL_ReviveEffect</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

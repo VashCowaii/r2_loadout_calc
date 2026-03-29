@@ -251,5 +251,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2010268595\">Monster_W4_Hearse_LockHP</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

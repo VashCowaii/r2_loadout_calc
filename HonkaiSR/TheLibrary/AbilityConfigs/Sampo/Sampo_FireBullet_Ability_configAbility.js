@@ -180,5 +180,8 @@ const configAbility = {
     "Deleted bullshit",
     "Trigger: Ability End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

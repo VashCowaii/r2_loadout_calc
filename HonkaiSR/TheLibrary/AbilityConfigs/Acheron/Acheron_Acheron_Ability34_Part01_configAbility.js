@@ -36,5 +36,12 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}",
+    "stateFilter": "AliveOrLimbo"
+  }
 }

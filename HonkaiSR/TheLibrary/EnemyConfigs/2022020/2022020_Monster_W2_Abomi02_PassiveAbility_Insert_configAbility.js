@@ -19,5 +19,8 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
+  "targetObjectData": {
+    "primaryTarget": "All Player Team Members"
+  },
   "references": []
 }

@@ -24,5 +24,8 @@ const configAbility = {
       "identifier": "Monster_W4_Manta_00_BE"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

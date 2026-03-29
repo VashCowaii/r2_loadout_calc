@@ -49,5 +49,12 @@ const configAbility = {
       ]
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "Blast Targets"
+  }
 }

@@ -143,6 +143,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1095,6 +1101,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability05_Part01": {
@@ -1121,6 +1130,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability04_Part02": {
@@ -1201,6 +1217,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability04_Part01": {
@@ -1226,6 +1245,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability06_Part02": {
@@ -1838,6 +1863,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability06_Part01": {
@@ -1863,6 +1891,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability03_Part02": {
@@ -1930,6 +1964,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability03_Part01": {
@@ -2207,6 +2244,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2358,6 +2401,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability02_Part01": {
@@ -2383,6 +2429,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability01_Part02": {
@@ -2478,6 +2531,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_Ability01_Part01": {
@@ -2504,6 +2560,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2033011_Monster_W2_LycanMecha_MainStoryInitiate": {
@@ -2521,6 +2583,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2016689086\">Enemy_W2_LycanMecha_MainStory</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

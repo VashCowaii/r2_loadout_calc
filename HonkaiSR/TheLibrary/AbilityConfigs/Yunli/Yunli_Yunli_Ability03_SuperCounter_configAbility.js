@@ -455,5 +455,8 @@ const configAbility = {
     }
   ],
   "onAbort": [],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

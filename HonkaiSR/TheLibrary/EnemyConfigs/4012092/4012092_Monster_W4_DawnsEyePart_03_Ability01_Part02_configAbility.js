@@ -45,5 +45,8 @@ const configAbility = {
       "setPercent": 1
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

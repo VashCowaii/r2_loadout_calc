@@ -141,7 +141,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gepard_Gepard_Trace02": {
       "fileName": "Gepard_Gepard_Trace02",
@@ -149,7 +152,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gepard_Gepard_Trace01": {
       "fileName": "Gepard_Gepard_Trace01",
@@ -176,7 +182,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gepard_Gepard_TechniqueInLevel": {
       "fileName": "Gepard_Gepard_TechniqueInLevel",
@@ -265,7 +274,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gepard_Gepard_PassiveAbility_1_Insert": {
       "fileName": "Gepard_Gepard_PassiveAbility_1_Insert",
@@ -420,7 +435,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gepard_Gepard_PassiveAbility01": {
       "fileName": "Gepard_Gepard_PassiveAbility01",
@@ -702,7 +720,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gepard_Gepard_Ability03_Part02": {
       "fileName": "Gepard_Gepard_Ability03_Part02",
@@ -760,7 +784,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Gepard_Gepard_Ability03_Part01": {
       "fileName": "Gepard_Gepard_Ability03_Part01",
@@ -790,7 +817,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Gepard_Gepard_Ability03_EnterReady": {
       "fileName": "Gepard_Gepard_Ability03_EnterReady",
@@ -798,7 +831,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Gepard_Gepard_Ability02_Part02": {
       "fileName": "Gepard_Gepard_Ability02_Part02",
@@ -978,7 +1014,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Gepard_Gepard_Ability02_Part01": {
       "fileName": "Gepard_Gepard_Ability02_Part01",
@@ -1008,7 +1047,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Gepard_Gepard_Ability01_Part02": {
       "fileName": "Gepard_Gepard_Ability01_Part02",
@@ -1084,7 +1129,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Gepard_Gepard_Ability01_Part01": {
       "fileName": "Gepard_Gepard_Ability01_Part01",
@@ -1114,7 +1162,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Gepard_Modifiers": {
       "fileName": "Gepard_Modifiers",

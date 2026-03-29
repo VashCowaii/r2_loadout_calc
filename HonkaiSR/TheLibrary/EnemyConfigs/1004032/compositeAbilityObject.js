@@ -40,6 +40,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_AbilityP03": {
@@ -58,6 +64,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_AbilityP02": {
@@ -85,6 +97,12 @@ const compositeAbilityObject = {
           "variableName": "Bronya_LimboFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_AbilityP01": {
@@ -94,6 +112,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_PassiveAbilityInitiate": {
@@ -205,6 +229,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -374,6 +404,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01": {
@@ -399,6 +432,12 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert_Part02": {
@@ -557,6 +596,9 @@ const compositeAbilityObject = {
           "multiBase": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -613,6 +655,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02": {
@@ -733,6 +778,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01": {
@@ -758,6 +806,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_EnhanceSwitch": {
@@ -1052,6 +1106,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Switch": {
@@ -1377,6 +1434,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Insert": {
@@ -1717,6 +1777,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_PassiveAbility_Formation2": {
@@ -1735,6 +1798,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_PassiveAbility_NoLockStance": {
@@ -1753,6 +1819,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_PassiveAbility_M1LockHP": {
@@ -1779,6 +1848,9 @@ const compositeAbilityObject = {
           "variableName": "Bronya_M1LockHP_Trigger"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1886,6 +1958,9 @@ const compositeAbilityObject = {
           "variableName": "W1_Bronya_00_InsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_PassiveAbilityInitiate": {
@@ -1975,6 +2050,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2305,6 +2383,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_Ability04_Part01": {
@@ -2334,6 +2415,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_Ability03_Part02": {
@@ -2487,6 +2574,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_Ability03_Part01": {
@@ -2506,6 +2596,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_Ability02_Part02": {
@@ -2533,6 +2626,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2589,6 +2685,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_Ability01_Part02": {
@@ -2627,6 +2729,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004032_Monster_W1_Bronya_Ability01_Part01": {
@@ -2652,6 +2757,12 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1004032_Modifiers": {

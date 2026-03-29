@@ -112,6 +112,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"968585055\">Monster_W1_SvarogPart_BattleScore1</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

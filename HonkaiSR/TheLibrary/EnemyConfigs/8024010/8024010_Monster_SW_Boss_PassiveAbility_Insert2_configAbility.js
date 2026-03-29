@@ -127,5 +127,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"721379857\">Monster_SW_Boss_PartController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

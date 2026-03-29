@@ -46,6 +46,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1607762742\">Enemy_W2_LycanKing_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

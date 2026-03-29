@@ -67,6 +67,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022051_Monster_W2_Beast01_02_Ability01_Part01": {
@@ -92,6 +95,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2022051_Monster_W2_Beast01_02_AbilityP01_Initiate": {
@@ -114,6 +123,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"558871716\">Enemy_W2_Beast01_02_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

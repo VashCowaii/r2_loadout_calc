@@ -47,6 +47,9 @@ const compositeAbilityObject = {
           "triggerEnemyEscape": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_Ability03_Part01": {
@@ -72,6 +75,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_Ability02_Part02": {
@@ -99,6 +108,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_Ability02_Part01": {
@@ -124,6 +136,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_Ability01_Part02": {
@@ -143,6 +161,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_Ability01_Part01": {
@@ -168,6 +189,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_08_PassiveAbility_Tutorial": {
@@ -176,6 +203,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial": {
@@ -185,6 +215,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8002040_Monster_XP_Minion04_PassiveAbilityInitiate": {
@@ -203,6 +239,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

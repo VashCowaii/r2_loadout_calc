@@ -13,6 +13,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1444322537\">Monster_AML_Elite01_Level_SpecialWin</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

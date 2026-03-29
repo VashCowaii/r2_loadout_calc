@@ -39,6 +39,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1606294659\">W3_Figure_02_BattleScore1</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

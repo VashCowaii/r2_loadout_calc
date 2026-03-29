@@ -27,6 +27,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2574934\">Monster_XP_Minion03_Deathrattle</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

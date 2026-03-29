@@ -78,5 +78,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1507903432\">Enemy_W4_Scholar_01_LocalLegend_Stealth</a>[<span class=\"descriptionNumberColor\">Lurking</span>]"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

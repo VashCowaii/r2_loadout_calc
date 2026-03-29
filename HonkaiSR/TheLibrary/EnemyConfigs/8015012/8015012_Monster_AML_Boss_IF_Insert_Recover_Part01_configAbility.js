@@ -779,5 +779,8 @@ const configAbility = {
       "phase": "Phase0"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

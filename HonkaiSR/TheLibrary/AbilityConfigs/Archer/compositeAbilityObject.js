@@ -81,7 +81,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Archer_Archer_Trace02": {
       "fileName": "Archer_Archer_Trace02",
@@ -89,7 +92,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Archer_Archer_Trace03": {
       "fileName": "Archer_Archer_Trace03",
@@ -217,7 +223,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Archer_Archer_TechniqueInLevel": {
       "fileName": "Archer_Archer_TechniqueInLevel",
@@ -353,7 +362,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Archer_Archer_Insert_Part02": {
       "fileName": "Archer_Archer_Insert_Part02",
@@ -417,7 +432,10 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Archer_Archer_Insert_Part01": {
       "fileName": "Archer_Archer_Insert_Part01",
@@ -675,7 +693,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Archer_Archer_PassiveAbility01": {
       "fileName": "Archer_Archer_PassiveAbility01",
@@ -1819,7 +1840,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Archer_Archer_Bonus": {
       "fileName": "Archer_Archer_Bonus",
@@ -1837,7 +1864,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Archer_Archer_Ability03_Part02": {
       "fileName": "Archer_Archer_Ability03_Part02",
@@ -2358,7 +2388,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Archer_Archer_Ability03_Part01": {
       "fileName": "Archer_Archer_Ability03_Part01",
@@ -2400,7 +2433,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Archer_Archer_Ability03_EnterReady": {
       "fileName": "Archer_Archer_Ability03_EnterReady",
@@ -2408,7 +2447,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Archer_Archer_Ability02Cancel_Part02": {
       "fileName": "Archer_Archer_Ability02Cancel_Part02",
@@ -2431,7 +2473,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Archer_Archer_Ability02Cancel_Part01": {
       "fileName": "Archer_Archer_Ability02Cancel_Part01",
@@ -2458,7 +2503,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Archer_Archer_Ability02_Part02": {
       "fileName": "Archer_Archer_Ability02_Part02",
@@ -2760,7 +2811,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Archer_Archer_Ability02_Part01": {
       "fileName": "Archer_Archer_Ability02_Part01",
@@ -2835,7 +2889,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Archer_Archer_Ability01_Part02": {
       "fileName": "Archer_Archer_Ability01_Part02",
@@ -2935,7 +2995,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Archer_Archer_Ability01_Part01": {
       "fileName": "Archer_Archer_Ability01_Part01",
@@ -2965,7 +3028,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Archer_Modifiers": {
       "fileName": "Archer_Modifiers",

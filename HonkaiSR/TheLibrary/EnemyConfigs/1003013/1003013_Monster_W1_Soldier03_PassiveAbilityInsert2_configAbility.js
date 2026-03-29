@@ -40,5 +40,8 @@ const configAbility = {
       "variableName": "W1_Soldier03_00_InsertFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

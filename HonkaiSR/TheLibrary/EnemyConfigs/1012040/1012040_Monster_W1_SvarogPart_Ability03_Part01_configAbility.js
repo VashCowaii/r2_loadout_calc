@@ -29,5 +29,15 @@ const configAbility = {
       "phase": "Phase1"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "filter": {
+      "name": "Target Name",
+      "target": "{{Player Team All}}.[[removeMemosprite]]"
+    }
+  },
   "references": []
 }

@@ -123,5 +123,11 @@ const configAbility = {
       "multiBase": 0
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

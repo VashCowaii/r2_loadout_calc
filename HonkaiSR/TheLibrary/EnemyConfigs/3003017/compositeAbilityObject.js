@@ -205,6 +205,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "tag": "DOT",
       "references": []
     },
@@ -214,6 +217,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ultimate_Part00": {
@@ -371,6 +377,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ability09_Part02": {
@@ -450,6 +462,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ability09_Part01": {
@@ -475,6 +490,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ability07_Part02": {
@@ -1018,6 +1039,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1052,6 +1076,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ability04_Part02": {
@@ -1237,6 +1267,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ability04_Part01": {
@@ -1262,6 +1295,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ability02_Part02": {
@@ -1470,6 +1509,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_Ability02_Part01": {
@@ -1496,6 +1538,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "3003017_Monster_W3_Dinosaur_02_MainStoryPassive": {
@@ -1513,6 +1562,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"961298145\">Enemy_W3_Dinosaur_02_DieListener</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1634,6 +1686,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

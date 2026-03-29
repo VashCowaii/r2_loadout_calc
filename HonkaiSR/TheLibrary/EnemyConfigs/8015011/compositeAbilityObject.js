@@ -78,6 +78,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -198,6 +201,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Insert_Part02": {
@@ -309,6 +315,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Insert_Part01": {
@@ -516,6 +525,9 @@ const compositeAbilityObject = {
           "display": false
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Passive03": {
@@ -524,6 +536,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Passive02": {
@@ -591,6 +606,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Passive01": {
@@ -694,6 +715,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1424068909\">Enemy_AML_Boss_LockActionDelay</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -825,6 +852,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability12_Part01": {
@@ -844,6 +874,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability11_Part02": {
@@ -883,6 +916,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability11_Part01": {
@@ -902,6 +938,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability10_Part02": {
@@ -966,6 +1005,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability10_Part01": {
@@ -985,6 +1027,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability09_Part02": {
@@ -1020,6 +1065,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability09_Part01": {
@@ -1039,6 +1087,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability08_Part02": {
@@ -1050,6 +1101,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability08_Part01": {
@@ -1069,6 +1123,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability07_Part02": {
@@ -1080,6 +1137,9 @@ const compositeAbilityObject = {
         "Ability Start",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability07_Part01": {
@@ -1099,6 +1159,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability06_Part02": {
@@ -1157,6 +1220,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability06_Part01": {
@@ -1176,6 +1242,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability05_Part02": {
@@ -1205,6 +1274,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability05_Part01": {
@@ -1224,6 +1296,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability04_Part02": {
@@ -1253,6 +1328,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability04_Part01": {
@@ -1272,6 +1350,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability03_Part02": {
@@ -1345,6 +1426,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability03_Part01": {
@@ -1364,6 +1448,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability02_Part02": {
@@ -1376,6 +1463,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability02_Part01": {
@@ -1395,6 +1485,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability01_Part02": {
@@ -1407,6 +1500,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Ability01_Part01": {
@@ -1434,6 +1530,9 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8015011_Monster_AML_Boss_Die_Camera": {
@@ -1452,6 +1551,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

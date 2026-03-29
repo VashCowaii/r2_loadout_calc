@@ -23,5 +23,11 @@ const configAbility = {
       "variableName": "Bronya_LimboFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

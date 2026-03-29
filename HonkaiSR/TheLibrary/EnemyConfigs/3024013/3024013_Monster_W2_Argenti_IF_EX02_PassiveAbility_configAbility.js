@@ -49,6 +49,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-28298755\">MModifier_W2_Argenti_IF_BattleAlert</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

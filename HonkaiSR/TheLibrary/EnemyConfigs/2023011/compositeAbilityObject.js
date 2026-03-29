@@ -452,6 +452,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability05_Part01": {
@@ -477,6 +480,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability04_Part02": {
@@ -698,6 +707,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability04_Part01": {
@@ -723,6 +735,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability03_Part02": {
@@ -933,6 +951,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability03_Part01": {
@@ -958,6 +979,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability02_Part02": {
@@ -1014,6 +1041,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability02_Part01": {
@@ -1039,6 +1069,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability01_Part02": {
@@ -1073,6 +1110,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_Ability01_Part01": {
@@ -1098,6 +1138,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_PassiveAbility_Formation2": {
@@ -1116,6 +1162,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_AbilityP01_Insert": {
@@ -1142,6 +1191,9 @@ const compositeAbilityObject = {
           "variableName": "W2_Abomi04_00_InsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_AbilityP01": {
@@ -1164,6 +1216,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_PassiveAbilityInitiate": {
@@ -1208,6 +1266,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023011_Monster_W2_Abomi04_PassiveAbility_DanHeng": {
@@ -1225,6 +1289,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

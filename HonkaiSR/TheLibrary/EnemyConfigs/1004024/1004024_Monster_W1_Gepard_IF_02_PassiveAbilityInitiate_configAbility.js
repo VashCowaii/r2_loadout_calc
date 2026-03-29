@@ -94,6 +94,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1450457480\">Enemy_W1_Gepard_IF_02_ListenSelfBreak</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

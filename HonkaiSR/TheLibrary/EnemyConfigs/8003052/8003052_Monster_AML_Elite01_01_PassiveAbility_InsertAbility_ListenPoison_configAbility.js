@@ -61,5 +61,8 @@ const configAbility = {
       "variableName": "Monster_AML_Elite01_01_DOTHitCounter"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

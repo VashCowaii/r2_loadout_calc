@@ -51,6 +51,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1368237020\">Enemy_W2_Yanqing_IF_Ability02_SwitchInit</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

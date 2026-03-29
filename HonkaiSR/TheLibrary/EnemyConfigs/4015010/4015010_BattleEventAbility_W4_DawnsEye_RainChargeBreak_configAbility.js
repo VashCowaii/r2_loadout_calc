@@ -159,5 +159,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-2093876840\">Modifier_Monster_W4_DawnsEye_WheaterRainUIController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

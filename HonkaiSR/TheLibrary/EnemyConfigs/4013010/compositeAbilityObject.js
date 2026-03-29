@@ -132,6 +132,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"446213578\">Enemy_Heaven_ModelController_Claymore_FantasticStory</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -412,6 +415,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2062098307\">Enemy_Heaven_ModelController_Claymore</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -770,6 +779,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability05_Part01": {
@@ -813,6 +825,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability04_Part02": {
@@ -1098,6 +1116,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1130,6 +1151,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability03_Part02": {
@@ -1185,6 +1212,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability03_Part01": {
@@ -1210,6 +1240,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability02_Part02": {
@@ -1288,6 +1324,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability02_Part01": {
@@ -1335,6 +1374,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability01_Part02": {
@@ -1413,6 +1459,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_Ability01_Part01": {
@@ -1459,6 +1508,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "4013010_Monster_W4_Claymore_314070": {
@@ -1476,6 +1532,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"870917356\">Enemy_W4_Claymore_314070</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4013010_Modifiers": {

@@ -80,5 +80,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1963334892\">AvatarChange_W2_Lycan_SheepStatus</a>[<span class=\"descriptionNumberColor\">Malediction</span>]"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

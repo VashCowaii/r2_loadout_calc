@@ -68,5 +68,11 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

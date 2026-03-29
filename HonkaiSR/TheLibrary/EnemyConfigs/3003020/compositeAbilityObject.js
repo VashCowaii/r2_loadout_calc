@@ -83,6 +83,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_RLElite_Ability04_Part01": {
@@ -118,6 +121,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_RLElite_Ability02_Part02": {
@@ -1500,6 +1506,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_RLElite_Ability02_Part01": {
@@ -1519,6 +1528,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_RLElite_Ability01_Part02": {
@@ -1806,6 +1818,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_RLElite_Ability01_Part01": {
@@ -1825,6 +1840,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_ActivityTelevision_Passive": {
@@ -1843,6 +1861,9 @@ const compositeAbilityObject = {
           "set": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_ActivityTelevision_Ability04_Part02": {
@@ -1925,6 +1946,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_ActivityTelevision_Ability04_Part01": {
@@ -1952,6 +1976,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_ActivityTelevision_Ability02_Part02": {
@@ -3993,6 +4020,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_ActivityTelevision_Ability02_Part01": {
@@ -4012,6 +4042,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_ActivityTelevision_Ability01_Part02": {
@@ -4314,6 +4347,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_ActivityTelevision_Ability01_Part01": {
@@ -4333,6 +4369,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability04_Part02": {
@@ -4389,6 +4428,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability04_Part01": {
@@ -4422,6 +4464,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability03_Part02": {
@@ -4564,6 +4612,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability03_Part01": {
@@ -4589,6 +4640,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability02_Part02": {
@@ -5816,6 +5873,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability02_Part01": {
@@ -5841,6 +5901,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability01_Part02": {
@@ -6103,6 +6170,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_Ability01_Part01": {
@@ -6128,6 +6198,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "3003020_Monster_W2_Beast02_01_AbilityP01_Part01": {
@@ -6149,6 +6225,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"431932285\">W2_Beast02_01_ListenBreak</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -6285,6 +6367,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3003020_Modifiers": {

@@ -41,6 +41,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1002060_Monster_W1_CocoliaP2_01_Ability01_Part01": {
@@ -66,6 +69,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1002060_Monster_W1_CocoliaP2_01_PassiveAbilityInitiate": {
@@ -108,6 +117,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1663784958\">Enemy_W1_CocoliaP2_01_BeHitEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1002060_Modifiers": {

@@ -14,5 +14,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

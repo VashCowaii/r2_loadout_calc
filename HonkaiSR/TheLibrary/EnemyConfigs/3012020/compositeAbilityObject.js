@@ -39,6 +39,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3012020_Monster_W3_Clock_01_Ability03_Part01": {
@@ -64,6 +67,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "3012020_Monster_W3_Clock_01_AbilityP01": {
@@ -85,6 +94,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-95775214\">Enemy_W3_Clock_01_AbilityP01_SuperArmorController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012020_Modifiers": {

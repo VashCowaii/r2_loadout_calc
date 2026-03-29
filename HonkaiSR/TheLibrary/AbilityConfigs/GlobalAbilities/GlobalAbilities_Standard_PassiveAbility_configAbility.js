@@ -32,5 +32,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1176583887\">Standard_TriggerDeparted</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

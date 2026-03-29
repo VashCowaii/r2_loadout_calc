@@ -219,6 +219,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability08_Part01": {
@@ -245,6 +248,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability07_Part02": {
@@ -4657,6 +4666,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability07_Part01": {
@@ -4701,6 +4713,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability06_Part02": {
@@ -4769,6 +4788,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability06_Part01": {
@@ -4794,6 +4816,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability05_Part02": {
@@ -4818,6 +4846,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability05_Part01": {
@@ -4843,6 +4874,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability04_Part02": {
@@ -7358,6 +7395,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability04_Part01": {
@@ -7403,6 +7443,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability03_Part02": {
@@ -7550,6 +7597,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability03_Part01": {
@@ -7576,6 +7626,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability02_Part02": {
@@ -7655,6 +7711,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability02_Part01": {
@@ -7681,6 +7740,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_AbilityP02_Part01": {
@@ -7739,6 +7804,9 @@ const compositeAbilityObject = {
           "variableName": "Monster_XP_Elite02_01_InsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_AbilityP01_Part02": {
@@ -7761,6 +7829,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-412122860\">Monster_XP_Elite02_01_Battle_02</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_AbilityP01_Part01": {
@@ -7784,6 +7855,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability01_Part02": {
@@ -7828,6 +7902,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Ability01_Part01": {
@@ -7858,6 +7935,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8003041_Monster_XP_Elite02_01_Passive01": {
@@ -7931,6 +8014,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-279040373\">Monster_XP_Elite02_01_EffectControl</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

@@ -22,6 +22,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-138223319\">Monster_W1_Mecha01_02_PassiveAbility02_Deathrattle</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

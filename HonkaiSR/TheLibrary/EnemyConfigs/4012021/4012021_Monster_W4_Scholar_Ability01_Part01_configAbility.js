@@ -59,5 +59,11 @@ const configAbility = {
       ]
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Skill Point User}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Ally Target"
+  },
   "references": []
 }

@@ -116,5 +116,8 @@ const configAbility = {
       ]
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

@@ -15,6 +15,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-793551818\">Enemy_AML_Minion01_EffectController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

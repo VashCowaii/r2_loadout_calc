@@ -49,6 +49,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1281829506\">Monster_W5_Vtuber_RLBoss_Passive</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -252,6 +258,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1693390580\">Enemy_W5_Vtuber_Ability03</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate": {
@@ -457,6 +466,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1215,6 +1230,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability07_Part01": {
@@ -1310,6 +1328,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability06_Lose_Part02": {
@@ -1456,6 +1480,9 @@ const compositeAbilityObject = {
           "value": -1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability06_Win_ExtraElationTime": {
@@ -1480,6 +1507,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability06_Win_Part02": {
@@ -1724,6 +1754,9 @@ const compositeAbilityObject = {
           "value": -1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability06_Part01": {
@@ -1867,6 +1900,14 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}",
+        "allowMemoHostileTarget": "Forbidden",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability04_Part02": {
@@ -1930,6 +1971,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1991,6 +2035,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability03_Part03": {
@@ -2503,6 +2554,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"610660362\">Enemy_W5_Vtuber_Screen02</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3020,6 +3074,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"610660362\">Enemy_W5_Vtuber_Screen02</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3198,6 +3255,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5014015_BattleEvent_Monster_W5_Vtuber_Part01": {
@@ -3246,6 +3306,9 @@ const compositeAbilityObject = {
         "Wait for Pending Ability Completions",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5014015_BattleEvent_Monster_W5_Vtuber_EnterReady": {
@@ -3254,6 +3317,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability03_Part00": {
@@ -3337,6 +3403,14 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "allowMemoHostileTarget": "Forbidden",
+        "targetIsVariable": true
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3481,6 +3555,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability02_Part01": {
@@ -3564,6 +3641,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability01_Part02": {
@@ -3597,6 +3680,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_Ability01_Part01": {
@@ -3622,6 +3708,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "5014015_Monster_W5_Vtuber_PassiveAbility_BGM": {
@@ -3668,6 +3760,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2105349163\">Enemy_W5_Vtuber_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

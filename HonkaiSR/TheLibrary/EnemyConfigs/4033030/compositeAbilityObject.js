@@ -56,6 +56,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Shooter_01_Ability01_Camera_Insert": {
@@ -64,6 +67,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Shooter_01_Ability01_Part02_Insert": {
@@ -156,6 +162,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Shooter_01_Ability01_Part01_Insert": {
@@ -175,6 +184,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability04_Part02": {
@@ -390,6 +402,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability04_Part01": {
@@ -415,6 +430,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability03_Part02": {
@@ -441,6 +462,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability03_Part01": {
@@ -466,6 +490,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability02_Part02": {
@@ -548,6 +578,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability02_Part01": {
@@ -573,6 +606,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability01_Part02": {
@@ -1314,6 +1353,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_Ability01_Part01": {
@@ -1343,6 +1385,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4033030_Monster_W4_Griffin_01_PassiveAbilityInitiate": {
@@ -1385,6 +1433,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4033030_Modifiers": {

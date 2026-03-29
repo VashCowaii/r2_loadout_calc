@@ -9,6 +9,9 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"1718469723\">Collect_Power</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -221,6 +221,12 @@ const configAbility = {
     "Trigger: Ability End"
   ],
   "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "dynamicStringsArray": [
     {
       "name": "ElationTime_CustomTagTemp",

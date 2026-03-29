@@ -188,5 +188,8 @@ const configAbility = {
     },
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

@@ -828,6 +828,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -893,6 +896,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "4012030_Monster_W4_Shooter_Passive01": {
@@ -977,6 +987,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-877294883\">Enemy_W4_Shooter_ConfineHit_Controller</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

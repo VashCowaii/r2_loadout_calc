@@ -147,6 +147,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022010_Monster_W2_Abomi01_Ability02_Part01": {
@@ -173,6 +176,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2022010_Monster_W2_Abomi01_Ability01_Part02": {
@@ -308,6 +317,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2022010_Monster_W2_Abomi01_Ability01_Part01": {
@@ -334,6 +346,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2022010_Monster_W2_Abomi01_PassiveAbility_Insert02_Part01": {
@@ -704,6 +722,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2022010_Monster_W2_Abomi01_PassiveAbility_Insert02_Part00": {
@@ -722,6 +743,9 @@ const compositeAbilityObject = {
           "allowAbilityTriggers": false
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2022010_Monster_W2_Abomi01_PassiveAbility_Insert_Part01": {
@@ -739,6 +763,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2022010_Monster_W2_Abomi01_Passive01": {
@@ -811,6 +838,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-508592004\">Monster_W2_Abomi01_IsHit</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

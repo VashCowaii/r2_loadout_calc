@@ -212,5 +212,8 @@ const configAbility = {
       "silent": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

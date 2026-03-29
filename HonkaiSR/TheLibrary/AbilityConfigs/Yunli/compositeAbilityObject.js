@@ -147,7 +147,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_TechniqueInLevel_Insert": {
       "fileName": "Yunli_Yunli_TechniqueInLevel_Insert",
@@ -191,7 +194,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_TechniqueInLevel": {
       "fileName": "Yunli_Yunli_TechniqueInLevel",
@@ -414,7 +420,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Yunli_Yunli_PassiveAbility01": {
       "fileName": "Yunli_Yunli_PassiveAbility01",
@@ -857,7 +869,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yunli_Yunli_Counter_Preshow": {
       "fileName": "Yunli_Yunli_Counter_Preshow",
@@ -867,7 +885,10 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_Counter_Part02": {
       "fileName": "Yunli_Yunli_Counter_Part02",
@@ -981,7 +1002,10 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_Counter_Part01": {
       "fileName": "Yunli_Yunli_Counter_Part01",
@@ -1069,7 +1093,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_Ability03_SuperCounter": {
       "fileName": "Yunli_Yunli_Ability03_SuperCounter",
@@ -1528,7 +1555,10 @@ const compositeAbilityObject = {
         }
       ],
       "onAbort": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_Ability03_NormalCounter": {
       "fileName": "Yunli_Yunli_Ability03_NormalCounter",
@@ -1725,7 +1755,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_Ability03_Counter_Part01": {
       "fileName": "Yunli_Yunli_Ability03_Counter_Part01",
@@ -2134,7 +2167,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_Ability03_Part02": {
       "fileName": "Yunli_Yunli_Ability03_Part02",
@@ -2199,7 +2235,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yunli_Yunli_Ability03_Part01": {
       "fileName": "Yunli_Yunli_Ability03_Part01",
@@ -2232,7 +2271,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yunli_Yunli_Ability03_EnterReady": {
       "fileName": "Yunli_Yunli_Ability03_EnterReady",
@@ -2240,7 +2285,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yunli_Yunli_Ability02_Part02": {
       "fileName": "Yunli_Yunli_Ability02_Part02",
@@ -2342,7 +2390,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yunli_Yunli_Ability02_Part01": {
       "fileName": "Yunli_Yunli_Ability02_Part01",
@@ -2371,7 +2422,14 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Yunli_Yunli_Ability01_Part02": {
       "fileName": "Yunli_Yunli_Ability01_Part02",
@@ -2414,7 +2472,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yunli_Yunli_Ability01_Part01": {
       "fileName": "Yunli_Yunli_Ability01_Part01",
@@ -2444,7 +2505,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Yunli_Modifiers": {
       "fileName": "Yunli_Modifiers",

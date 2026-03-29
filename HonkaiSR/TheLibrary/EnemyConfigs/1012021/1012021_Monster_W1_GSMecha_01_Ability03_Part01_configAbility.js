@@ -25,5 +25,12 @@ const configAbility = {
       "name": "Mark Entity For Immediate Death"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "Blast Targets"
+  },
   "references": []
 }

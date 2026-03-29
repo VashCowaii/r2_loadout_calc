@@ -86,7 +86,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Seele_Seele_Eidolon4": {
       "fileName": "Seele_Seele_Eidolon4",
@@ -145,7 +148,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Seele_Seele_Eidolon1": {
       "fileName": "Seele_Seele_Eidolon1",
@@ -208,7 +214,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Seele_Seele_Trace01": {
       "fileName": "Seele_Seele_Trace01",
@@ -392,7 +401,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Seele_Seele_TechniqueInLevel": {
       "fileName": "Seele_Seele_TechniqueInLevel",
@@ -477,7 +489,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Seele_Seele_Bonus": {
       "fileName": "Seele_Seele_Bonus",
@@ -495,7 +513,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Seele_Seele_PassiveAbility_1": {
       "fileName": "Seele_Seele_PassiveAbility_1",
@@ -1013,7 +1034,13 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Seele_Seele_Ability03_Part02": {
       "fileName": "Seele_Seele_Ability03_Part02",
@@ -1168,7 +1195,10 @@ const compositeAbilityObject = {
           "effectName": "Butterfly Flurry",
           "statusName": "Butterfly Flurry"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Seele_Seele_Ability03_Part01": {
       "fileName": "Seele_Seele_Ability03_Part01",
@@ -1198,7 +1228,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Seele_Seele_Ability03_EnterReady": {
       "fileName": "Seele_Seele_Ability03_EnterReady",
@@ -1206,7 +1242,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Seele_Seele_Ability02_Part02": {
       "fileName": "Seele_Seele_Ability02_Part02",
@@ -1417,7 +1456,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Seele_Seele_Ability02_Part01": {
       "fileName": "Seele_Seele_Ability02_Part01",
@@ -1447,7 +1489,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Seele_Seele_Ability01_Part02": {
       "fileName": "Seele_Seele_Ability01_Part02",
@@ -1695,7 +1743,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Seele_Seele_Ability01_Part01": {
       "fileName": "Seele_Seele_Ability01_Part01",
@@ -1725,7 +1776,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Seele_Modifiers": {
       "fileName": "Seele_Modifiers",

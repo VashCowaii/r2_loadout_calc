@@ -42,6 +42,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert": {
@@ -239,6 +242,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_PassiveAbilityWithHearse_Insert": {
@@ -494,6 +500,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2010268595\">Monster_W4_Hearse_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_PassiveAbility_Insert": {
@@ -645,6 +654,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability14_Part02": {
@@ -1362,6 +1374,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability14_Part01": {
@@ -1387,6 +1402,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability13_Part02": {
@@ -1701,6 +1723,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability13_Part01": {
@@ -1726,6 +1751,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability12_Part02": {
@@ -2044,6 +2075,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability12_Part01": {
@@ -2069,6 +2103,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability11_Part02": {
@@ -2343,6 +2383,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability11_Part01": {
@@ -2368,6 +2411,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability10_Part02": {
@@ -2378,6 +2428,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability10_Part01": {
@@ -2403,6 +2456,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability07_Part02": {
@@ -2431,6 +2490,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability07_Part01": {
@@ -2456,6 +2518,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability06_Part02": {
@@ -2750,6 +2818,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability06_Part01": {
@@ -2778,6 +2849,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability05_Part02": {
@@ -3309,6 +3386,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability05_Part01": {
@@ -3334,6 +3414,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability04_Part02": {
@@ -3728,6 +3814,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability04_Part01": {
@@ -3756,6 +3845,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability03_Part02": {
@@ -3871,6 +3967,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability03_Part01": {
@@ -3899,6 +3998,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability02_Part02": {
@@ -4138,6 +4243,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability02_Part01": {
@@ -4166,6 +4274,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability01_Part02": {
@@ -4288,6 +4402,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Ability01_Part01": {
@@ -4316,6 +4433,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_Passive01": {
@@ -4764,6 +4887,12 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4014018_Monster_W4_Nikadory_PassiveAbility_BGM": {
@@ -4854,6 +4983,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1564473981\">Enemy_W4_Nikadory_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

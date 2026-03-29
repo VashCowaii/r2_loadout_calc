@@ -39,5 +39,11 @@ const configAbility = {
       ]
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

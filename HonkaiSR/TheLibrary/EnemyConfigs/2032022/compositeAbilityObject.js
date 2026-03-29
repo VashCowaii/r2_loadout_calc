@@ -64,6 +64,12 @@ const compositeAbilityObject = {
           "casterAssign": "TargetSelf"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -306,6 +312,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2032022_Monster_W2_Lycan_01_Ability02_Insert_Part01": {
@@ -335,6 +344,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032022_Monster_W2_Lycan_01_Ability01_Part02": {
@@ -368,6 +383,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2032022_Monster_W2_Lycan_01_Ability01_Part01": {
@@ -394,6 +412,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2032022_BattleEventAbility_Monster_W2_Lycan_01_MainStoryModu": {
@@ -423,6 +447,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-847453897\">Monster_Monster_W2_Lycan_01_BattlePerform_DisAbleAction</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -603,6 +630,9 @@ const compositeAbilityObject = {
           "allowAbilityTriggers": false
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -780,6 +810,9 @@ const compositeAbilityObject = {
           "parameters": {}
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -854,6 +887,9 @@ const compositeAbilityObject = {
           "parameters": {}
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1044,6 +1080,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"857287277\">Enemy_W2_Lycan_01_MainStory240</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1104,6 +1143,9 @@ const compositeAbilityObject = {
           "casterAssign": "TargetSelf"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

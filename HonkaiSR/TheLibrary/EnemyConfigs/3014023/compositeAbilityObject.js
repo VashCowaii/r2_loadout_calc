@@ -143,6 +143,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_RLBoss_Part1T2": {
@@ -214,6 +217,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_RLBoss_Ability06_Part02": {
@@ -302,6 +308,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_RLBoss_Ability06_Part01": {
@@ -321,6 +330,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_RLBoss_Ability03_Part02": {
@@ -416,6 +428,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_RLBoss_Ability03_Part01": {
@@ -441,6 +456,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability12_Part02": {
@@ -628,6 +649,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability12_Part01": {
@@ -763,6 +787,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability10_Part02": {
@@ -844,6 +875,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability10_Insert": {
@@ -885,6 +919,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Part1T2": {
@@ -962,6 +1002,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability08_Part02": {
@@ -1146,6 +1189,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1562873953\">Monster_W3_Death_BattleAlert</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability08_Insert": {
@@ -1170,6 +1216,12 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability07_Part02": {
@@ -1661,6 +1713,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1725,6 +1780,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability06_Part02": {
@@ -1805,6 +1863,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability06_Part01": {
@@ -1824,6 +1885,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability05_Part02": {
@@ -2066,6 +2130,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2140,6 +2207,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability04_Part02": {
@@ -2159,6 +2232,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability04_Part01": {
@@ -2184,6 +2260,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability03_Part02": {
@@ -2221,6 +2303,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability03_Part01": {
@@ -2240,6 +2325,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability02_Part02": {
@@ -2293,6 +2381,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability02_Part01": {
@@ -2318,6 +2409,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability01_Part02": {
@@ -2404,6 +2501,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_Ability01_Part01": {
@@ -2429,6 +2529,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "3014023_Monster_W3_Death_PassiveAbilityInitiate": {
@@ -2701,6 +2807,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-9479983\">Monster_W3_Death_HasUseAbility</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3104,6 +3216,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2063481\">Enemy_W3_Death_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

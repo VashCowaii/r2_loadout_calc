@@ -25,7 +25,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Xueyi_Xueyi_TechniqueInLevel": {
       "fileName": "Xueyi_Xueyi_TechniqueInLevel",
@@ -131,7 +134,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Xueyi_Xueyi_PassiveAtk_Insert02": {
       "fileName": "Xueyi_Xueyi_PassiveAtk_Insert02",
@@ -468,7 +477,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Skip Death Handling"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Xueyi_Xueyi_PassiveAtk_Insert01": {
       "fileName": "Xueyi_Xueyi_PassiveAtk_Insert01",
@@ -533,7 +545,10 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Xueyi_Xueyi_PassiveAbility01": {
       "fileName": "Xueyi_Xueyi_PassiveAbility01",
@@ -1413,7 +1428,13 @@ const compositeAbilityObject = {
             "showAsForcedReduction": true
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Xueyi_Xueyi_Ability03_StancePreCalc": {
       "fileName": "Xueyi_Xueyi_Ability03_StancePreCalc",
@@ -1435,7 +1456,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Xueyi_Xueyi_Ability03_Part02": {
       "fileName": "Xueyi_Xueyi_Ability03_Part02",
@@ -1617,7 +1641,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Xueyi_Xueyi_Ability03_Part01": {
       "fileName": "Xueyi_Xueyi_Ability03_Part01",
@@ -1647,7 +1674,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Xueyi_Xueyi_Ability03_EnterReady": {
       "fileName": "Xueyi_Xueyi_Ability03_EnterReady",
@@ -1655,7 +1688,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Xueyi_Xueyi_Ability02_Part02": {
       "fileName": "Xueyi_Xueyi_Ability02_Part02",
@@ -1722,7 +1758,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Xueyi_Xueyi_Ability02_Part01": {
       "fileName": "Xueyi_Xueyi_Ability02_Part01",
@@ -1767,7 +1806,14 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Xueyi_Xueyi_Ability01_Part02": {
       "fileName": "Xueyi_Xueyi_Ability01_Part02",
@@ -1837,7 +1883,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Xueyi_Xueyi_Ability01_Part01": {
       "fileName": "Xueyi_Xueyi_Ability01_Part01",
@@ -1867,7 +1916,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Xueyi_Modifiers": {
       "fileName": "Xueyi_Modifiers",

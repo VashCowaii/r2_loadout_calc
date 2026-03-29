@@ -48,5 +48,11 @@ const configAbility = {
       ]
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": []
 }

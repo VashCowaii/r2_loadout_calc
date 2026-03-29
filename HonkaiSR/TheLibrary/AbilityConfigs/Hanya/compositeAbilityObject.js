@@ -191,7 +191,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Hanya_Hanya_PassiveAbility01": {
       "fileName": "Hanya_Hanya_PassiveAbility01",
@@ -343,7 +349,13 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hanya_Hanya_Ability03_Part02": {
       "fileName": "Hanya_Hanya_Ability03_Part02",
@@ -514,7 +526,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hanya_Hanya_Ability03_Part01": {
       "fileName": "Hanya_Hanya_Ability03_Part01",
@@ -544,7 +559,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
     },
     "Hanya_Hanya_Ability03_EnterReady": {
       "fileName": "Hanya_Hanya_Ability03_EnterReady",
@@ -560,7 +581,10 @@ const compositeAbilityObject = {
           "isGlobal": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Hanya_Hanya_Ability02_Part02": {
       "fileName": "Hanya_Hanya_Ability02_Part02",
@@ -716,7 +740,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hanya_Hanya_Ability02_Part01": {
       "fileName": "Hanya_Hanya_Ability02_Part01",
@@ -745,7 +772,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Hanya_Hanya_Ability01_Part02": {
       "fileName": "Hanya_Hanya_Ability01_Part02",
@@ -785,7 +818,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Hanya_Hanya_Ability01_Part01": {
       "fileName": "Hanya_Hanya_Ability01_Part01",
@@ -814,7 +850,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Hanya_Modifiers": {
       "fileName": "Hanya_Modifiers",

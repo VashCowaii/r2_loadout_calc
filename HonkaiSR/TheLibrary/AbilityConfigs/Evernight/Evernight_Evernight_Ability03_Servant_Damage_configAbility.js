@@ -47,5 +47,8 @@ const configAbility = {
     },
     "Trigger: Attack End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
 }

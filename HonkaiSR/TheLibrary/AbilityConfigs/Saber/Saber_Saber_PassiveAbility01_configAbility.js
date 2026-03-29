@@ -1686,5 +1686,11 @@ const configAbility = {
       "type": "Other",
       "statusName": "The Long Fated Night"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

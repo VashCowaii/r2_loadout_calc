@@ -77,6 +77,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_02_IF_PassiveAbilityInitiate": {
@@ -130,6 +133,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_01_IF_PassiveAbilityInitiate": {
@@ -182,6 +191,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_IF_PassiveAbilityInitiate": {
@@ -357,6 +369,9 @@ const compositeAbilityObject = {
           "barType": "BossDot"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -767,6 +782,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability06_Part02": {
@@ -870,6 +888,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability06_Part01": {
@@ -889,6 +910,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability05_Part02": {
@@ -1067,6 +1091,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability05_Part01": {
@@ -1090,6 +1117,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability04_Part02": {
@@ -1193,6 +1223,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability04_Part01": {
@@ -1212,6 +1245,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability03_Part02": {
@@ -1324,6 +1360,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability03_Part01": {
@@ -1343,6 +1382,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability02_Part02": {
@@ -1542,6 +1584,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability02_Part01": {
@@ -1567,6 +1612,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability01_Part02": {
@@ -1679,6 +1731,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_Ability01_Part01": {
@@ -1702,6 +1757,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_03_PassiveAbilityInitiate": {
@@ -1788,6 +1849,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_02_PassiveAbilityInitiate": {
@@ -1874,6 +1938,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_01_PassiveAbilityInitiate": {
@@ -1960,6 +2027,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Monster_W2_FeixiaoPart_PassiveAbilityInitiate": {
@@ -2125,6 +2195,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1306733131\">Monster_W2_Feixiao_Stop</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2032052_Modifiers": {

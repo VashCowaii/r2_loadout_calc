@@ -10,5 +10,11 @@ const configAbility = {
     "Unknown EventType (Not always an error)",
     "Trigger: Ability End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "All Player Team"
+  }
 }

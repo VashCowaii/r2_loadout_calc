@@ -18,5 +18,8 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"124728741\">DanHengPT_BE_AddShield</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

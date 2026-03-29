@@ -181,5 +181,8 @@ const configAbility = {
       "consumeFloor": 1
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

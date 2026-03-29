@@ -76,7 +76,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "1912336050_BattleEventAbility_ChallengePeakBattle_Elation_01_Ability01_Part02": {
       "fileName": "1912336050_BattleEventAbility_ChallengePeakBattle_Elation_01_Ability01_Part02",
@@ -161,7 +164,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "1912336050_BattleEventAbility_ChallengePeakBattle_Elation_01_Ability01_Part01": {
       "fileName": "1912336050_BattleEventAbility_ChallengePeakBattle_Elation_01_Ability01_Part01",
@@ -181,7 +187,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "1912336050_BattleEventAbility_ChallengePeakBattle_Elation_01_PassiveAbilityPC01": {
       "fileName": "1912336050_BattleEventAbility_ChallengePeakBattle_Elation_01_PassiveAbilityPC01",
@@ -222,7 +231,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "1912336050_BattleTarget_TurnLimit_PeakBattle_7": {
       "fileName": "1912336050_BattleTarget_TurnLimit_PeakBattle_7",
@@ -645,7 +657,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1912336050_BattleEventAbility_ChallengePeakBattle_CountDown": {
       "fileName": "1912336050_BattleEventAbility_ChallengePeakBattle_CountDown",

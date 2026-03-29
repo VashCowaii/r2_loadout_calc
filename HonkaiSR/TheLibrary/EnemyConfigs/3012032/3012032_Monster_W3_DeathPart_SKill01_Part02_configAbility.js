@@ -28,5 +28,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

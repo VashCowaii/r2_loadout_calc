@@ -65,6 +65,9 @@ const compositeAbilityObject = {
           "variableName": "W1_Soldier03_00_InsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_PassiveAbilityInsert": {
@@ -257,6 +260,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability09_Part02": {
@@ -333,6 +339,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability09_Part01": {
@@ -352,6 +361,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability08_Part02": {
@@ -793,6 +805,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability08_Part01": {
@@ -818,6 +833,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability07_Part02": {
@@ -867,6 +888,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability07_Part01": {
@@ -892,6 +916,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_AbilityP06_Part02": {
@@ -1049,6 +1079,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_AbilityP06_Part01": {
@@ -1104,6 +1137,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability06_Insert_Part02": {
@@ -1264,6 +1300,9 @@ const compositeAbilityObject = {
           "multiBase": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability06_Insert_Part01": {
@@ -1304,6 +1343,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability06_Part02": {
@@ -1447,6 +1489,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability06_Part01": {
@@ -1495,6 +1540,12 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability01_Part02": {
@@ -1528,6 +1579,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_Ability01_Part01": {
@@ -1570,6 +1624,12 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1003010_Monster_W1_Soldier03_PassiveAbilityInitiate": {
@@ -1653,6 +1713,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1003010_Modifiers": {

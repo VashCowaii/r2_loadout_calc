@@ -40,5 +40,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"224426614\">W3_Dinosaur_01_BattleScore2</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

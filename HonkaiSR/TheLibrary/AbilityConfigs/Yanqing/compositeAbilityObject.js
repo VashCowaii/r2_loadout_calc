@@ -186,7 +186,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yanqing_Yanqing_Eidolon1": {
       "fileName": "Yanqing_Yanqing_Eidolon1",
@@ -268,7 +271,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yanqing_YanQing_Trace03": {
       "fileName": "Yanqing_YanQing_Trace03",
@@ -386,7 +392,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yanqing_YanQing_Trace01": {
       "fileName": "Yanqing_YanQing_Trace01",
@@ -464,7 +473,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yanqing_Yanqing_TechniqueInLevel": {
       "fileName": "Yanqing_Yanqing_TechniqueInLevel",
@@ -596,7 +608,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yanqing_Yanqing_PassiveAbility01_InsertAbilityPhase02": {
       "fileName": "Yanqing_Yanqing_PassiveAbility01_InsertAbilityPhase02",
@@ -694,7 +712,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yanqing_Yanqing_PassiveAbility01_InsertAbility": {
       "fileName": "Yanqing_Yanqing_PassiveAbility01_InsertAbility",
@@ -729,7 +750,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yanqing_Yanqing_PassiveAbility01": {
       "fileName": "Yanqing_Yanqing_PassiveAbility01",
@@ -798,7 +822,13 @@ const compositeAbilityObject = {
           "cooldown": 0
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yanqing_Yanqing_Ability03_Part02": {
       "fileName": "Yanqing_Yanqing_Ability03_Part02",
@@ -916,7 +946,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yanqing_Yanqing_Ability03_Part01": {
       "fileName": "Yanqing_Yanqing_Ability03_Part01",
@@ -946,7 +979,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Yanqing_Yanqing_Ability03_EnterReady": {
       "fileName": "Yanqing_Yanqing_Ability03_EnterReady",
@@ -954,7 +993,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yanqing_Yanqing_Ability02_Part02": {
       "fileName": "Yanqing_Yanqing_Ability02_Part02",
@@ -1046,7 +1088,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yanqing_Yanqing_Ability02_Part01": {
       "fileName": "Yanqing_Yanqing_Ability02_Part01",
@@ -1086,7 +1131,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Yanqing_Yanqing_Ability01_Part02": {
       "fileName": "Yanqing_Yanqing_Ability01_Part02",
@@ -1194,7 +1245,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yanqing_Yanqing_Ability01_Part01": {
       "fileName": "Yanqing_Yanqing_Ability01_Part01",
@@ -1234,7 +1288,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Yanqing_Modifiers": {
       "fileName": "Yanqing_Modifiers",

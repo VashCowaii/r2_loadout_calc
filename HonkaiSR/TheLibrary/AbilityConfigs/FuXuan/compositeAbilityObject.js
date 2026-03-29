@@ -65,7 +65,10 @@ const compositeAbilityObject = {
           "formula": "Heal from Target MaxHP"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "FuXuan_FuXuan_TechniqueInLevel": {
       "fileName": "FuXuan_FuXuan_TechniqueInLevel",
@@ -201,7 +204,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "FuXuan_FuXuan_Passive_Ability": {
       "fileName": "FuXuan_FuXuan_Passive_Ability",
@@ -308,7 +317,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "FuXuan_FuXuan_PassiveAbility01": {
       "fileName": "FuXuan_FuXuan_PassiveAbility01",
@@ -486,7 +498,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "FuXuan_FuXuan_Ability03_Part02": {
       "fileName": "FuXuan_FuXuan_Ability03_Part02",
@@ -788,7 +806,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "FuXuan_FuXuan_Ability03_Part01": {
       "fileName": "FuXuan_FuXuan_Ability03_Part01",
@@ -818,7 +839,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "FuXuan_FuXuan_Ability03_EnterReady": {
       "fileName": "FuXuan_FuXuan_Ability03_EnterReady",
@@ -826,7 +853,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "FuXuan_FuXuan_Ability02_Part02": {
       "fileName": "FuXuan_FuXuan_Ability02_Part02",
@@ -981,7 +1011,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "FuXuan_FuXuan_Ability02_Part01": {
       "fileName": "FuXuan_FuXuan_Ability02_Part01",
@@ -1010,7 +1043,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "FuXuan_FuXuan_Ability01_Part02": {
       "fileName": "FuXuan_FuXuan_Ability01_Part02",
@@ -1055,7 +1094,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "FuXuan_FuXuan_Ability01_Part01": {
       "fileName": "FuXuan_FuXuan_Ability01_Part01",
@@ -1084,7 +1126,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "FuXuan_Modifiers": {
       "fileName": "FuXuan_Modifiers",

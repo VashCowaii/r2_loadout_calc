@@ -131,7 +131,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon2": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Eidolon2",
@@ -410,7 +413,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Trace01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
@@ -533,7 +539,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel",
@@ -642,7 +651,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01",
@@ -928,7 +943,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge",
@@ -966,7 +987,10 @@ const compositeAbilityObject = {
           "isFixed": "* ERR"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02",
@@ -1006,7 +1030,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part01",
@@ -1037,7 +1064,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_EnterReady": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability03_EnterReady",
@@ -1045,7 +1078,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part02": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part02",
@@ -1098,7 +1134,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01",
@@ -1126,7 +1165,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster's Memosprite}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part02": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part02",
@@ -1171,7 +1216,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part01",
@@ -1200,7 +1248,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
@@ -1285,7 +1339,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
@@ -1346,7 +1403,13 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02",
@@ -1391,7 +1454,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part01",
@@ -1420,7 +1486,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "TrailblazerRemembrance_Modifiers": {
       "fileName": "TrailblazerRemembrance_Modifiers",
@@ -1965,7 +2037,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_BattleCry": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_BattleCry",
@@ -2022,7 +2100,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_PassiveAbility01": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
@@ -2528,7 +2612,13 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability03_Part02": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
@@ -2645,7 +2735,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part02": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
@@ -2845,7 +2938,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part01": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
@@ -2905,7 +3001,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability11_Entry": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
@@ -2949,7 +3051,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability11_Together": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
@@ -2992,7 +3097,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part02": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
@@ -3125,7 +3233,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part01": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
@@ -3171,7 +3282,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Mem_Modifiers": {
       "fileName": "Mem_Modifiers",

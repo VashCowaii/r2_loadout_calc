@@ -73,5 +73,8 @@ const configAbility = {
     },
     "Quick-Time-Event"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

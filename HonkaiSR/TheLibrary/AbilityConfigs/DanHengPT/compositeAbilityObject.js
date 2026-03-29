@@ -99,7 +99,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "DanHengPT_DanHengPT_PassiveAbility01": {
       "fileName": "DanHengPT_DanHengPT_PassiveAbility01",
@@ -919,7 +925,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHengPT_DanHengPT_BE_PassiveAbility": {
       "fileName": "DanHengPT_DanHengPT_BE_PassiveAbility",
@@ -1095,7 +1107,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHengPT_DanHengPT_BE_InsertAttack_Part02": {
       "fileName": "DanHengPT_DanHengPT_BE_InsertAttack_Part02",
@@ -1510,7 +1525,10 @@ const compositeAbilityObject = {
           "fakeCharacterAttack": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DanHengPT_DanHengPT_BE_InsertAttack_Part01": {
       "fileName": "DanHengPT_DanHengPT_BE_InsertAttack_Part01",
@@ -1537,7 +1555,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DanHengPT_DanHengPT_BE_InsertShield_Part02": {
       "fileName": "DanHengPT_DanHengPT_BE_InsertShield_Part02",
@@ -1570,7 +1591,10 @@ const compositeAbilityObject = {
           "ability": "DanHengPT_BE_AddShield"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DanHengPT_DanHengPT_BE_InsertShield_Part01": {
       "fileName": "DanHengPT_DanHengPT_BE_InsertShield_Part01",
@@ -1593,7 +1617,10 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DanHengPT_DanHengPT_Ability03_Part02": {
       "fileName": "DanHengPT_DanHengPT_Ability03_Part02",
@@ -1786,7 +1813,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "DanHengPT_DanHengPT_Ability03_Part01": {
       "fileName": "DanHengPT_DanHengPT_Ability03_Part01",
@@ -1816,7 +1846,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "DanHengPT_DanHengPT_Ability03_EnterReady": {
       "fileName": "DanHengPT_DanHengPT_Ability03_EnterReady",
@@ -1824,7 +1860,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DanHengPT_DanHengPT_BE_AddShield": {
       "fileName": "DanHengPT_DanHengPT_BE_AddShield",
@@ -1846,7 +1885,10 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"124728741\">DanHengPT_BE_AddShield</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHengPT_DanHengPT_Ability02_Part02": {
       "fileName": "DanHengPT_DanHengPT_Ability02_Part02",
@@ -2810,7 +2852,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengPT_DanHengPT_Ability02_Part01": {
       "fileName": "DanHengPT_DanHengPT_Ability02_Part01",
@@ -2842,7 +2887,14 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "allowMemoAllyTarget": "Forbidden"
+      }
     },
     "DanHengPT_DanHengPT_Ability01_Part02": {
       "fileName": "DanHengPT_DanHengPT_Ability01_Part02",
@@ -2913,7 +2965,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHengPT_DanHengPT_Ability01_Part01": {
       "fileName": "DanHengPT_DanHengPT_Ability01_Part01",
@@ -2943,7 +2998,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "DanHengPT_Modifiers": {
       "fileName": "DanHengPT_Modifiers",

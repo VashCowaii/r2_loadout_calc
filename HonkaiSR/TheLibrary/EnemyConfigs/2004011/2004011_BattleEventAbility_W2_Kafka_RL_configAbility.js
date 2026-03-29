@@ -31,6 +31,9 @@ const configAbility = {
       "multiAdd": "MDF_W2_Kafka_00_RL_BattleEvent_ActionDelay"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

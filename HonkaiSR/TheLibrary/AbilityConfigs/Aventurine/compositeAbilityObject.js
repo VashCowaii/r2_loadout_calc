@@ -28,7 +28,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aventurine_Aventurine_TechniqueInLevel_02": {
       "fileName": "Aventurine_Aventurine_TechniqueInLevel_02",
@@ -88,7 +91,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aventurine_Aventurine_TechniqueInLevel_01": {
       "fileName": "Aventurine_Aventurine_TechniqueInLevel_01",
@@ -148,7 +154,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aventurine_Aventurine_TechniqueInLevel_00": {
       "fileName": "Aventurine_Aventurine_TechniqueInLevel_00",
@@ -208,7 +217,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aventurine_Aventurine_TechniqueInLevel": {
       "fileName": "Aventurine_Aventurine_TechniqueInLevel",
@@ -224,7 +236,13 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Aventurine_Aventurine_PassiveAbility01_InsertAbilityPhase02": {
       "fileName": "Aventurine_Aventurine_PassiveAbility01_InsertAbilityPhase02",
@@ -396,7 +414,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Aventurine_Aventurine_PassiveAbility01_InsertAbility": {
       "fileName": "Aventurine_Aventurine_PassiveAbility01_InsertAbility",
@@ -433,7 +454,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1927939151\">Aventurine_Trace03_Trigger</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Aventurine_Aventurine_PassiveAbility01": {
       "fileName": "Aventurine_Aventurine_PassiveAbility01",
@@ -487,7 +511,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aventurine_Aventurine_Ability03_Part02": {
       "fileName": "Aventurine_Aventurine_Ability03_Part02",
@@ -743,7 +773,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-626881481\">Aventurine_Heal_Mark</a>"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aventurine_Aventurine_Ability03_Part01": {
       "fileName": "Aventurine_Aventurine_Ability03_Part01",
@@ -868,7 +901,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Aventurine_Aventurine_Ability03_EnterReady": {
       "fileName": "Aventurine_Aventurine_Ability03_EnterReady",
@@ -876,7 +915,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Aventurine_Aventurine_Ability02_Part02": {
       "fileName": "Aventurine_Aventurine_Ability02_Part02",
@@ -1065,7 +1107,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aventurine_Aventurine_Ability02_Part01": {
       "fileName": "Aventurine_Aventurine_Ability02_Part01",
@@ -1094,7 +1139,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Aventurine_Aventurine_Ability01_Part02": {
       "fileName": "Aventurine_Aventurine_Ability01_Part02",
@@ -1170,7 +1221,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Aventurine_Aventurine_Ability01_Part01": {
       "fileName": "Aventurine_Aventurine_Ability01_Part01",
@@ -1199,7 +1253,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Aventurine_Modifiers": {
       "fileName": "Aventurine_Modifiers",

@@ -25,6 +25,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-847453897\">Monster_Monster_W2_Lycan_01_BattlePerform_DisAbleAction</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

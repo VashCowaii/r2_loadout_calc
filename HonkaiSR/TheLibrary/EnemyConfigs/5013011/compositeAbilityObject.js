@@ -56,6 +56,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"527111621\">MModifier_Monster_W4_Claymore_02_Status</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability052_Part02": {
@@ -247,6 +253,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability05_Part02": {
@@ -338,6 +347,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability05_Part01": {
@@ -390,6 +402,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability042_Part02": {
@@ -469,6 +487,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability042_Part01": {
@@ -488,6 +509,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability04_Part02": {
@@ -544,6 +568,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability04_Part01": {
@@ -573,6 +600,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability03_Part02": {
@@ -599,6 +632,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability03_Part01": {
@@ -632,6 +668,13 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability02_Insert_Part02": {
@@ -712,6 +755,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability02_Insert_Part01": {
@@ -753,6 +799,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability01_Insert_Part02": {
@@ -833,6 +882,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability01_Insert_Part01": {
@@ -873,6 +925,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability02_Part02": {
@@ -950,6 +1005,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability02_Part01": {
@@ -999,6 +1057,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability01_Part02": {
@@ -1076,6 +1142,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5013011_Monster_W4_Claymore_02_Ability01_Part01": {
@@ -1124,6 +1193,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5013011_Modifiers": {

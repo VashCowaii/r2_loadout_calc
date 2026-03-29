@@ -149,5 +149,11 @@ const configAbility = {
       "phase": "Phase1"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

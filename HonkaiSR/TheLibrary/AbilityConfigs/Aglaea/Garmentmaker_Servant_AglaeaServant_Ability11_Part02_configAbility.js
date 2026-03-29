@@ -199,5 +199,8 @@ const configAbility = {
     "Trigger: Attack End",
     "Trigger: Ability End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

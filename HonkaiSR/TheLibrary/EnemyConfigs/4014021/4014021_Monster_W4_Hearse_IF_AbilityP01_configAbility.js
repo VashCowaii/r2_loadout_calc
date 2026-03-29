@@ -131,5 +131,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1324450026\">Enemy_W4_Hearse_IF_LockHP</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -39,5 +39,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-850002708\">Enemy_SW_Minion01_01_IF_Listener</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

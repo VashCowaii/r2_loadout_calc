@@ -50,5 +50,11 @@ const configAbility = {
       ]
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "All Enemy Team Members"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -193,6 +193,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1110556528\">Monster_W4_Herta_SummonMonsterEnd</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

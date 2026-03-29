@@ -32,5 +32,8 @@ const configAbility = {
       "priorityTag": "Character_HighPriorityAction"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

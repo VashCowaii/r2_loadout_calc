@@ -37,5 +37,12 @@ const configAbility = {
     "Deleted bullshit",
     "Deleted bullshit"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "Blast Targets"
+  }
 }

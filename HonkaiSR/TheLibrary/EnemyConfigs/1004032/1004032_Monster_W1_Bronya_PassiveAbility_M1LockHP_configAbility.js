@@ -22,6 +22,9 @@ const configAbility = {
       "variableName": "Bronya_M1LockHP_Trigger"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

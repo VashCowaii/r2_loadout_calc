@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparklev0_Sparkle_TechniqueInLevel": {
       "fileName": "Sparklev0_Sparkle_TechniqueInLevel",
@@ -87,7 +90,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparklev0_Sparkle_PassiveAbility_1": {
       "fileName": "Sparklev0_Sparkle_PassiveAbility_1",
@@ -748,7 +757,13 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparklev0_Sparkle_Eidolon6_BP": {
       "fileName": "Sparklev0_Sparkle_Eidolon6_BP",
@@ -868,7 +883,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Sparklev0_Sparkle_Ability03_Part02": {
       "fileName": "Sparklev0_Sparkle_Ability03_Part02",
@@ -1132,7 +1150,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Sparklev0_Sparkle_Ability03_Part01": {
       "fileName": "Sparklev0_Sparkle_Ability03_Part01",
@@ -1161,7 +1182,13 @@ const compositeAbilityObject = {
           "ability": "Sparkle_Ability03_Part02"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Sparklev0_Sparkle_Ability03_EnterReady": {
       "fileName": "Sparklev0_Sparkle_Ability03_EnterReady",
@@ -1169,7 +1196,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparklev0_Sparkle_Ability02_Self_Part02": {
       "fileName": "Sparklev0_Sparkle_Ability02_Self_Part02",
@@ -1372,7 +1402,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparklev0_Sparkle_Ability02_Others_Part02": {
       "fileName": "Sparklev0_Sparkle_Ability02_Others_Part02",
@@ -1561,7 +1594,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparklev0_Sparkle_Ability02_Part01": {
       "fileName": "Sparklev0_Sparkle_Ability02_Part01",
@@ -1616,7 +1652,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
     },
     "Sparklev0_Sparkle_Ability01_Part02": {
       "fileName": "Sparklev0_Sparkle_Ability01_Part02",
@@ -1682,7 +1724,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparklev0_Sparkle_Ability01_Part01": {
       "fileName": "Sparklev0_Sparkle_Ability01_Part01",
@@ -1712,7 +1757,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Sparklev0_Modifiers": {
       "fileName": "Sparklev0_Modifiers",

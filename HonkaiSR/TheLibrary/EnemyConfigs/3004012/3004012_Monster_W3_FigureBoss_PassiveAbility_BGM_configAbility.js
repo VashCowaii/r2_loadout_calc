@@ -46,6 +46,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"419579896\">Enemy_W3_FigureBoss_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

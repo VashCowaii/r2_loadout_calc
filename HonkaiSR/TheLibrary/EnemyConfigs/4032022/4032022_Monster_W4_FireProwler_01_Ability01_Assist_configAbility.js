@@ -229,5 +229,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1207820325\">Enemy_W4_FireProwler_01_DeathRattle</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "Blast Targets"
+  },
   "references": []
 }

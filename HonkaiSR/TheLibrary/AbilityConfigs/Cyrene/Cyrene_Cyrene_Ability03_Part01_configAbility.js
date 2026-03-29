@@ -72,5 +72,11 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

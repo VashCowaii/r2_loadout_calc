@@ -31,5 +31,8 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

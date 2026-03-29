@@ -333,6 +333,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4052011_Monster_W4_Griffin_01_LocalLegend_Ability01_Part01": {
@@ -356,6 +359,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4052011_Monster_W4_Griffin_01_LocalLegend_PassiveAbilityInitiate": {
@@ -373,6 +379,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4052011_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02": {
@@ -407,6 +416,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4052011_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01": {
@@ -427,6 +439,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4052011_Monster_W2_Mecha02_02_LocalLegend_DeathRattle_Insert": {
@@ -589,6 +604,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "4052011_Monster_W2_Mecha02_02_LocalLegend_Ability01_Part02": {
@@ -631,6 +652,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4052011_Monster_W2_Mecha02_02_LocalLegend_Ability01_Part01": {
@@ -656,6 +680,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4052011_Monster_W2_Mecha02_02_LocalLegend_PassiveAbilityInitiate": {
@@ -720,6 +750,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

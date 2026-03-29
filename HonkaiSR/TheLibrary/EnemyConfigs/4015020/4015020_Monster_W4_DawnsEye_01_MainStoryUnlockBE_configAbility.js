@@ -144,6 +144,9 @@ const configAbility = {
       "allowAbilityTriggers": false
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

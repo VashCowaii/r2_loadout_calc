@@ -164,6 +164,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_PassiveAbility_Insert": {
@@ -282,6 +285,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_PassiveAbility_Insert_Part02": {
@@ -350,6 +356,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_PassiveAbility_Insert_Part01": {
@@ -384,6 +393,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability06_Part02": {
@@ -506,6 +518,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability06_Part01": {
@@ -535,6 +550,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability05_Part02": {
@@ -790,6 +811,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability05_Part01": {
@@ -815,6 +839,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability04_Part02": {
@@ -991,6 +1021,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability04_Part01": {
@@ -1016,6 +1049,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability03_Part02": {
@@ -1166,6 +1205,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability03_Part01": {
@@ -1191,6 +1233,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability02_Part02": {
@@ -1550,6 +1598,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability02_Part01": {
@@ -1576,6 +1627,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability01_Part02": {
@@ -1767,6 +1825,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Ability01_Part01": {
@@ -1793,6 +1854,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "3024020_Monster_W3_Sam_Passive01": {
@@ -1917,6 +1984,12 @@ const compositeAbilityObject = {
           "display": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2128,6 +2201,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2001241954\">Enemy_W3_Sam_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

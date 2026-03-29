@@ -5,6 +5,12 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

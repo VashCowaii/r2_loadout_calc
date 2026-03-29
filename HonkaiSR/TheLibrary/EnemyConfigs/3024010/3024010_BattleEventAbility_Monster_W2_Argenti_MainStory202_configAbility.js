@@ -13,6 +13,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1276714002\">Monster_Monster_W2_Argenti_BattlePerform_LockHP</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -34,6 +34,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability02_Part01": {
@@ -59,6 +62,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      },
       "references": []
     },
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability01_Part02": {
@@ -88,6 +97,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability01_Part01": {
@@ -112,6 +124,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability01_PassiveSkillInitiate": {
@@ -136,6 +154,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-69325530\">Monster_AML_Minion03_01_LocalLegend_ListenPhase2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

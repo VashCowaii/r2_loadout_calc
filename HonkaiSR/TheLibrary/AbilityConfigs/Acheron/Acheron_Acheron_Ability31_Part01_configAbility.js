@@ -25,5 +25,12 @@ const configAbility = {
       "isTrigger": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "stateFilter": "AliveOrLimbo"
+  }
 }

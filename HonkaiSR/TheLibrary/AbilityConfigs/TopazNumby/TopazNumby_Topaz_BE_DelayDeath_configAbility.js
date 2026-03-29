@@ -14,5 +14,8 @@ const configAbility = {
       "ignoreDeathTriggers": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

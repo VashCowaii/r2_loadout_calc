@@ -24,6 +24,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

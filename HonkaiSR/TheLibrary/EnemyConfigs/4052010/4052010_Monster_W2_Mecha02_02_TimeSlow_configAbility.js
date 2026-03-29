@@ -21,6 +21,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1972950152\">Enemy_W2_Mecha02_02_TimeSlow_Remove</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

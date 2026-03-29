@@ -13,5 +13,8 @@ const configAbility = {
       "abortInsertedAbilities": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

@@ -37,6 +37,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1013023_Monster_W1_Mecha04_RL_PassiveAbility_Insert3": {
@@ -417,6 +420,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1013023_Monster_W1_Mecha04_RL_PassiveAbility_Insert2": {
@@ -541,6 +547,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1980712149\">Monster_W1_Mecha04_RL_Part03Effect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1013023_Monster_W1_Mecha04_RL_PassiveAbility_Insert": {
@@ -840,6 +849,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_RL_Ability13_Part02": {
@@ -1046,6 +1058,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_RL_Ability13_Part01": {
@@ -1065,6 +1080,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_RL_Ability10_Part02": {
@@ -1301,6 +1319,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_RL_Ability10_Part01": {
@@ -1368,6 +1389,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_RL_Ability08_Part02": {
@@ -1470,6 +1498,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_RL_Ability08_Part01": {
@@ -1496,6 +1527,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock": {
@@ -1575,6 +1612,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1971,6 +2014,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2541,6 +2587,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability12_Part01": {
@@ -2566,6 +2615,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability11_Part02": {
@@ -2636,6 +2692,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability11_Part01": {
@@ -2661,6 +2720,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_AbilityP09_Part02": {
@@ -2729,6 +2794,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_AbilityP09_Part01": {
@@ -2752,6 +2820,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability09_Part02": {
@@ -2822,6 +2893,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability09_Part01": {
@@ -2847,6 +2921,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability07_Part02": {
@@ -2875,6 +2955,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability07_Part01": {
@@ -2900,6 +2983,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability06_Part02": {
@@ -3504,6 +3593,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1013023_WMonster_W1_Mecha_05_Ability06_Part01": {
@@ -3609,6 +3701,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1013023_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory": {
@@ -3626,6 +3724,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

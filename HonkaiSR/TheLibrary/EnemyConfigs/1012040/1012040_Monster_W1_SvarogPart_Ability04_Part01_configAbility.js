@@ -20,5 +20,12 @@ const configAbility = {
       "isTrigger": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}",
+    "targetIsVariable": true
+  },
   "references": []
 }

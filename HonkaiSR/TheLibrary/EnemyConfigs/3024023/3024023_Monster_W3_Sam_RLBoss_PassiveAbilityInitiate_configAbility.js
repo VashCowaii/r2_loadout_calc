@@ -22,6 +22,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1100608523\">Enemy_W3_Sam_RLBoss_AttackWarn</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

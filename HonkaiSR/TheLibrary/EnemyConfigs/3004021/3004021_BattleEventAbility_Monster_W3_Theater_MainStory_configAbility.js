@@ -359,6 +359,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1381458312\">Enemy_W3_Theater_MainStoryUltraMark</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

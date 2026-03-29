@@ -289,6 +289,9 @@ const configAbility = {
       "multiAdd": -1
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

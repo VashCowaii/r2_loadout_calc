@@ -375,6 +375,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_BattleEventAbility_Monster_W2_LycanKing_IF_RageFinish": {
@@ -572,6 +575,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_BattleEventAbility_Monster_W2_LycanKing_IF_StanceDamage": {
@@ -808,6 +814,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_Ability04_Part02": {
@@ -918,6 +927,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_Ability04_Part01": {
@@ -943,6 +955,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_Ability05_Part02": {
@@ -1083,6 +1101,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1157,6 +1178,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_Ability05_Insert_Part02": {
@@ -1287,6 +1314,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1357,6 +1387,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_BattleEvent_W2_LycanKing_IF_Part01": {
@@ -1600,6 +1633,9 @@ const compositeAbilityObject = {
         "Wait for Pending Ability Completions",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2034014_BattleEvent_W2_LycanKing_IF_EnterReady": {
@@ -1626,6 +1662,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_Ability01_Part02": {
@@ -1775,6 +1814,9 @@ const compositeAbilityObject = {
           "adjustmentType": "="
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_Ability01_Part01": {
@@ -1798,6 +1840,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_Ability08_Part02": {
@@ -2222,6 +2267,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2295,6 +2343,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_AbilityP04": {
@@ -2304,6 +2358,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_AbilityEX04": {
@@ -2334,6 +2394,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_AbilityEX03": {
@@ -2364,6 +2430,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_AbilityEX02": {
@@ -2394,6 +2466,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_AbilityEX01": {
@@ -2424,6 +2502,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_IF_PassiveAbilityInitiate": {
@@ -2733,6 +2817,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-970015149\">Enemy_W2_LycanKing_IF_HintToastController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -4401,6 +4491,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_BattleEventAbility_W2_LycanKing_Summon": {
@@ -5227,6 +5320,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability07_MainStroy_Part02": {
@@ -5564,6 +5660,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -5607,6 +5706,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability07_Part02": {
@@ -5935,6 +6037,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -5971,6 +6076,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_ChangePhase_Part02": {
@@ -5981,6 +6092,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -6015,6 +6129,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_PassiveAbility_Insert": {
@@ -6240,6 +6360,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability05_Insert_Part02": {
@@ -6539,6 +6662,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -6611,6 +6737,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability04_Part02": {
@@ -6730,6 +6859,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability04_Part01": {
@@ -6749,6 +6881,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability03_Part02": {
@@ -7066,6 +7201,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability03_Part01": {
@@ -7091,6 +7229,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability02_Part02": {
@@ -7217,6 +7361,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability02_Part01": {
@@ -7242,6 +7389,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability01_Part02": {
@@ -7324,6 +7478,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_Ability01_Part01": {
@@ -7352,6 +7509,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_MainStoryPhase02Start": {
@@ -7379,6 +7542,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -7553,6 +7719,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-571680589\">Enemy_W2_LycanKing_HPListener</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -7683,6 +7852,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -8178,6 +8350,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_AbilityP02": {
@@ -8187,6 +8365,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2034014_Monster_W2_LycanKing_PassiveAbilityInitiate": {
@@ -8657,6 +8841,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -10137,6 +10324,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1607762742\">Enemy_W2_LycanKing_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

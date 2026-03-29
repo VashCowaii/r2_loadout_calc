@@ -36,6 +36,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1671905329\">Enemy_W3_DollElite_Standard_BattleEvent</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -716,6 +719,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -946,6 +952,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2": {
@@ -1278,6 +1287,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_Restart": {
@@ -1345,6 +1357,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3004012_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat": {
@@ -1517,6 +1532,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1537,6 +1555,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3004012_WMonster_W3_DollElite01_PassiveAbility01_Insert": {
@@ -1989,6 +2010,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-843842211\">W3_FigureBoss_BattleScore2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3004012_Monster_W3_FigureBoss_New_PassiveAbility_Initiate": {
@@ -2320,6 +2344,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1183897502\">Monster_W3_FigureBoss_New_ImmuneDebuff</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2647,6 +2677,9 @@ const compositeAbilityObject = {
           "state": false
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3004012_Monster_W3_Figure_Solo_PassiveAbility_Initiate": {
@@ -2665,6 +2698,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3004012_Monster_W3_FigureBoss_PassiveAbility_BGM": {
@@ -2715,6 +2751,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"419579896\">Enemy_W3_FigureBoss_ResetStageBGM</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

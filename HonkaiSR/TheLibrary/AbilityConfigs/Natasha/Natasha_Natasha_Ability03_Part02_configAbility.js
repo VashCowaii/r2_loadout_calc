@@ -195,5 +195,8 @@ const configAbility = {
       "effectName": "Healing Over Time",
       "statusName": "Healing Over Time"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  }
 }

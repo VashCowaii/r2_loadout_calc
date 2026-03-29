@@ -210,6 +210,9 @@ const compositeAbilityObject = {
           "set": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_PassiveAbilityInitiate": {
@@ -432,6 +435,12 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_Ability05_Part02": {
@@ -474,6 +483,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_Ability05_Part01": {
@@ -493,6 +505,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_Ability04_Part02": {
@@ -512,6 +527,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_Ability04_Part01": {
@@ -531,6 +549,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_BattleEvent_W4_Manta_LocalLegend_Part01": {
@@ -573,6 +594,9 @@ const compositeAbilityObject = {
         "Wait for Pending Ability Completions",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053013_BattleEvent_W4_Manta_LocalLegend_EnterReady": {
@@ -581,6 +605,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02": {
@@ -684,6 +711,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part01": {
@@ -709,6 +739,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part02": {
@@ -831,6 +867,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -889,6 +928,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Passive_Insert": {
@@ -1134,6 +1179,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_PassiveAbilityInitiate": {
@@ -1201,6 +1249,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1344,6 +1395,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Ability05_Part01": {
@@ -1379,6 +1433,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053013_BattleEventAbility_Monster_W4_Manta_BattleEventFinish": {
@@ -1407,6 +1464,9 @@ const compositeAbilityObject = {
           "identifier": "Monster_W4_Manta_00_BE"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4053013_BattleEventAbility_Monster_W4_Manta_BattleEvent": {
@@ -1700,6 +1760,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Ability04_Part01": {
@@ -1719,6 +1782,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Ability03_Part02": {
@@ -1800,6 +1866,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Ability03_Part01": {
@@ -1835,6 +1904,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Ability02_Part02": {
@@ -1921,6 +1993,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2003,6 +2078,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Ability01_Part02": {
@@ -2058,6 +2139,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_Ability01_Part01": {
@@ -2084,6 +2168,13 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "4053013_Monster_W4_Manta_TimeSlow": {
@@ -2109,6 +2200,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2138152353\">Enemy_W4_Manta_TimeSlow_Remove</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

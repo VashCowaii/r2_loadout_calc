@@ -121,6 +121,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4062020_Monster_W2_Beast01_04_AbilityP02_InsertAbility_Part01": {
@@ -140,6 +143,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4062020_Monster_W2_Beast01_04_Ability01_Part02": {
@@ -173,6 +179,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4062020_Monster_W2_Beast01_04_Ability01_Part01": {
@@ -198,6 +207,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4062020_Monster_W2_Beast01_04_AbilityP02": {
@@ -213,6 +228,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4062020_Monster_W2_Beast01_04_AbilityP01": {
@@ -262,6 +283,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-993887966\">Enemy_W2_Beast01_04_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

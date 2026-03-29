@@ -110,7 +110,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Eidolon2": {
       "fileName": "SilverWolf_Advanced_Silwolf_Eidolon2",
@@ -277,7 +280,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Trace01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Trace01",
@@ -332,7 +338,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_TechniqueInLevel": {
       "fileName": "SilverWolf_Advanced_Silwolf_TechniqueInLevel",
@@ -415,7 +424,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_PassiveAbility_RandomBug": {
       "fileName": "SilverWolf_Advanced_Silwolf_PassiveAbility_RandomBug",
@@ -1086,7 +1101,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "SilverWolf_Advanced_Silwolf_PassiveAbility01": {
       "fileName": "SilverWolf_Advanced_Silwolf_PassiveAbility01",
@@ -1658,7 +1676,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Ability03_Part02": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability03_Part02",
@@ -1744,7 +1768,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Ability03_Part01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability03_Part01",
@@ -1774,7 +1801,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Ability03_EnterReady": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability03_EnterReady",
@@ -1782,7 +1815,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Ability02_Part02": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability02_Part02",
@@ -2346,7 +2382,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Ability02_Part01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability02_Part01",
@@ -2377,7 +2416,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Ability01_Part02": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability01_Part02",
@@ -2480,7 +2525,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "SilverWolf_Advanced_Silwolf_Ability01_Part01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability01_Part01",
@@ -2511,7 +2559,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "SilverWolf_Modifiers": {
       "fileName": "SilverWolf_Modifiers",

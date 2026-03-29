@@ -19,6 +19,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-752148315\">Enemy_W3_Theater_MainStoryEnterBattle02</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

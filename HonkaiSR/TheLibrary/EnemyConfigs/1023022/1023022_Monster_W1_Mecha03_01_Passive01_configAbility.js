@@ -41,6 +41,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1952827515\">Monster_W1_Mecha03_01_EffectCommon</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

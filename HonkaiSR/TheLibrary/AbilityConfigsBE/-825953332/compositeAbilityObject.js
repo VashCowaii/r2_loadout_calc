@@ -278,7 +278,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-825953332_FantasticStory_BaseAbility_2110_Insert_Enemy": {
       "fileName": "-825953332_FantasticStory_BaseAbility_2110_Insert_Enemy",
@@ -419,7 +422,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-825953332_FantasticStory_BaseAbility_2110_Insert_Camera_Enemy": {
       "fileName": "-825953332_FantasticStory_BaseAbility_2110_Insert_Camera_Enemy",
@@ -427,7 +433,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-825953332_FantasticStory_BaseAbility_2110_Insert": {
       "fileName": "-825953332_FantasticStory_BaseAbility_2110_Insert",
@@ -534,7 +543,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "-825953332_FantasticStory_BaseAbility_2110_EnterFever": {
       "fileName": "-825953332_FantasticStory_BaseAbility_2110_EnterFever",

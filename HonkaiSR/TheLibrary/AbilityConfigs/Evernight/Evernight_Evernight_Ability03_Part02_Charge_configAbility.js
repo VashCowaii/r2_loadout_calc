@@ -15,5 +15,8 @@ const configAbility = {
       "isFixed": "* ERR"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

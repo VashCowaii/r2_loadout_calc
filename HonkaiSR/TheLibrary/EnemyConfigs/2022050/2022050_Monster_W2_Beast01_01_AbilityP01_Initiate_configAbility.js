@@ -18,6 +18,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1079817125\">Enemy_W2_Beast01_01_EffectController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

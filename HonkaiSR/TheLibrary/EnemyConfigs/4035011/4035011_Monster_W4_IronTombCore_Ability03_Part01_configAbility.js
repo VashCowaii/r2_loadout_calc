@@ -21,5 +21,16 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "targetIsVariable": true,
+    "filter": {
+      "name": "Target Name",
+      "target": "{{Player Team(Exclude Memosprites)}}"
+    }
+  },
   "references": []
 }

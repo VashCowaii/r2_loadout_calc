@@ -9,5 +9,11 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target"
+  },
   "references": []
 }

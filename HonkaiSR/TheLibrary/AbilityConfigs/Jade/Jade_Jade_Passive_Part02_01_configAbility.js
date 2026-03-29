@@ -271,5 +271,8 @@ const configAbility = {
       "function": "Add"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

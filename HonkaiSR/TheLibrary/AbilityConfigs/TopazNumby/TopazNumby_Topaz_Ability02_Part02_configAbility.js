@@ -658,5 +658,8 @@ const configAbility = {
       ],
       "duration": 1
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

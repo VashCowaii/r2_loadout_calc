@@ -25,6 +25,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-288523596\">Monster_W1_Soldier02_01_CoinPassive</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032010_Monster_W1_Soldier02_01_Ability01_Part02": {
@@ -62,6 +68,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8032010_Monster_W1_Soldier02_01_Ability01_Part01": {
@@ -87,6 +96,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8032010_Modifiers": {

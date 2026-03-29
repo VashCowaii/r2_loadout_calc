@@ -35,5 +35,8 @@ const configAbility = {
       "multiBase": 1
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

@@ -44,5 +44,8 @@ const configAbility = {
       "variableName": "_Arlan_00_PassiveSkill03_InsertController"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

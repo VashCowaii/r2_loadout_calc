@@ -99,5 +99,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1922337227\">RuanMei_DelayHint</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

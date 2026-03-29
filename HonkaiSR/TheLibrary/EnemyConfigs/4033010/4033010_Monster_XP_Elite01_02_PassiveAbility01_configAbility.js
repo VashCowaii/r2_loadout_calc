@@ -33,6 +33,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1205033025\">Enemy_XP_Elite01_02_Charge_Controller</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

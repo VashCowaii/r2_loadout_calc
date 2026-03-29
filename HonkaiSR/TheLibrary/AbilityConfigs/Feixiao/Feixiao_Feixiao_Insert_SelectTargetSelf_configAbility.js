@@ -128,5 +128,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

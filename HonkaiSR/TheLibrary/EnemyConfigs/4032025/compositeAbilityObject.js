@@ -116,6 +116,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_11_Main03_Ability04_Part01": {
@@ -137,6 +140,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_11_Main03_Ability03_Part02": {
@@ -170,6 +179,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_11_Main03_Ability03_Part01": {
@@ -196,6 +208,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_11_Main03_Ability02_Assist": {
@@ -340,6 +358,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1207820325\">Enemy_W4_FireProwler_01_DeathRattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_11_Main03_Ability01_Assist": {
@@ -484,6 +508,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1207820325\">Enemy_W4_FireProwler_01_DeathRattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_11_Main03_PassiveAbilityInitiate": {
@@ -605,6 +636,12 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_HPBack": {
@@ -1098,6 +1135,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability07_Part02": {
@@ -1354,6 +1394,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -1417,6 +1460,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability06_Part02": {
@@ -2591,6 +2637,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2619,6 +2668,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability05_Part02": {
@@ -3122,6 +3174,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability05_Part01": {
@@ -3251,6 +3306,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability04_Part02": {
@@ -3478,6 +3536,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3558,6 +3619,9 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability031_Part02": {
@@ -3769,6 +3833,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability031_Part01": {
@@ -3818,6 +3885,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability03_Part02": {
@@ -3964,6 +4034,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability03_Part01": {
@@ -4167,6 +4240,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability02_Assist": {
@@ -4416,6 +4492,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability01_Assist": {
@@ -4629,6 +4708,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability02_Part02": {
@@ -4915,6 +4997,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability02_Part01": {
@@ -5027,6 +5112,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability01_Part02": {
@@ -5257,6 +5345,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_Ability01_Part01": {
@@ -5277,6 +5368,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_PassiveAbilityInitiate_Insert_LMin_Part02": {
@@ -5475,6 +5569,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-952344169\">Enemy_W4_FireProwler_10_Main03_Endurance</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_PassiveAbilityInitiate_Insert_LMin_Part01": {
@@ -5494,6 +5591,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_PassiveAbilityInitiate_LMin_Part02": {
@@ -5656,6 +5756,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_PassiveAbilityInitiate_LMin_Part01": {
@@ -5675,6 +5778,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_ChangePhase1": {
@@ -5853,6 +5959,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_PassiveAbility01": {
@@ -5951,6 +6060,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_AbilityP03": {
@@ -5960,6 +6072,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_AbilityP02": {
@@ -5969,6 +6084,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Monster_W4_FireProwler_10_Main03_AbilityP01": {
@@ -6140,6 +6258,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4032025_Modifiers": {

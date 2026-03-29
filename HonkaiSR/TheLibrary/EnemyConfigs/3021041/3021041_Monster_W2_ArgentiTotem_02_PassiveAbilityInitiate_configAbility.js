@@ -30,6 +30,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"803386037\">Enemy_W2_ArgentiTotem_02_Initiate</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

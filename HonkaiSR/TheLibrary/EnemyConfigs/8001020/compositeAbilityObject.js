@@ -39,6 +39,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8001020_WMonster_Element_Slime_01_Ice_Ability01_Part01": {
@@ -62,6 +65,12 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8001020_Monster_XP_Minion01_01_PassiveAbilityInitiate": {
@@ -80,6 +89,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-808555065\">Enemy_XP_Minion01_01_EffectController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

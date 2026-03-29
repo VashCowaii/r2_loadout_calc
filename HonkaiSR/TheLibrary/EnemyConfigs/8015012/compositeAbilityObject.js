@@ -58,6 +58,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1346968931\">Enemy_AML_Boss_IF_Die_Camera</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_AbilityEX05": {
@@ -68,6 +74,12 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_AbilityEX04": {
@@ -98,6 +110,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_AbilityEX03": {
@@ -128,6 +146,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_AbilityEX02": {
@@ -158,6 +182,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_AbilityEX01": {
@@ -188,6 +218,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_InsertPart3_Part01": {
@@ -502,6 +538,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1367141952\">Enemy_AML_Boss_IF_Part_Resistance</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_InsertPart2_Part01": {
@@ -763,6 +802,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1367141952\">Enemy_AML_Boss_IF_Part_Resistance</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_InsertPart1_Part01": {
@@ -1076,6 +1118,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1367141952\">Enemy_AML_Boss_IF_Part_Resistance</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02": {
@@ -1239,6 +1284,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part01": {
@@ -1258,6 +1306,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_Insert02_Part02": {
@@ -1437,6 +1488,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_Insert02_Part01": {
@@ -1456,6 +1510,9 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_Insert_Recover_Part01": {
@@ -2239,6 +2296,9 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_Insert_ChangePhase_Part01": {
@@ -3027,6 +3087,9 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_AbilityP02": {
@@ -3072,6 +3135,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"255719361\">Enemy_AML_Boss_IF_ListenAllPartLimbo</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Monster_AML_Boss_IF_AbilityP01": {
@@ -3836,6 +3905,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-630308982\">Monster_AML_Boss_IF_BattleAlert</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8015012_Modifiers": {

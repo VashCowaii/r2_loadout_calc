@@ -35,6 +35,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-826764478\">Monster_XP_Elite02_02_RLElite_PartControl</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

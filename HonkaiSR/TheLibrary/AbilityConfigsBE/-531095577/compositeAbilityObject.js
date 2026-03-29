@@ -83,7 +83,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-531095577_BattleTarget_FantasticStoryBattleScore4": {
       "fileName": "-531095577_BattleTarget_FantasticStoryBattleScore4",
@@ -126,7 +129,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-531095577_BattleTarget_FantasticStoryBattleScore3": {
       "fileName": "-531095577_BattleTarget_FantasticStoryBattleScore3",
@@ -169,7 +175,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-531095577_BattleTarget_FantasticStoryBattleScore2": {
       "fileName": "-531095577_BattleTarget_FantasticStoryBattleScore2",
@@ -218,7 +227,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-531095577_BattleTarget_FantasticStoryBattleScore1": {
       "fileName": "-531095577_BattleTarget_FantasticStoryBattleScore1",
@@ -261,7 +273,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-531095577_FantasticStoryHard_Scoring_Ability_0003": {
       "fileName": "-531095577_FantasticStoryHard_Scoring_Ability_0003",
@@ -658,7 +673,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-531095577_FantasticStoryHard_Scoring_Ability_0002": {
       "fileName": "-531095577_FantasticStoryHard_Scoring_Ability_0002",
@@ -1326,7 +1344,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-531095577_FantasticStoryHard_Scoring_Ability_0001": {
       "fileName": "-531095577_FantasticStoryHard_Scoring_Ability_0001",
@@ -1994,7 +2015,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   }
 }

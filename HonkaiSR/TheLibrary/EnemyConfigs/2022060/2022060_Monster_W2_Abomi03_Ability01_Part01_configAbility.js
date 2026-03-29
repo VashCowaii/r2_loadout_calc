@@ -22,5 +22,12 @@ const configAbility = {
     "Deleted bullshit",
     "Deleted bullshit"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "targetIsVariable": true
+  },
   "references": []
 }

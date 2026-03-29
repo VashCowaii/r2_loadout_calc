@@ -34,5 +34,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"98028781\">Enemy_W3_Sunday_MainStory380_UltraReady</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

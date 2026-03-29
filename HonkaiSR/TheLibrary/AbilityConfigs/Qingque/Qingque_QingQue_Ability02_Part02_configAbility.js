@@ -578,5 +578,8 @@ const configAbility = {
     "Refresh QingQue Bar-State",
     "Trigger: Ability End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

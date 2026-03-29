@@ -464,5 +464,8 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

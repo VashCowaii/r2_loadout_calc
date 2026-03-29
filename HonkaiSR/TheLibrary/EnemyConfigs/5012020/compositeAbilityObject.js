@@ -46,6 +46,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "5012020_Monster_W2_Beast01_05_Ability02_Part01": {
@@ -75,6 +78,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "5012020_Monster_W2_Beast01_05_Ability01_Part02": {
@@ -109,6 +119,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5012020_Monster_W2_Beast01_05_Ability01_Part01": {
@@ -134,6 +147,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate": {
@@ -153,6 +172,12 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5012020_Modifiers": {

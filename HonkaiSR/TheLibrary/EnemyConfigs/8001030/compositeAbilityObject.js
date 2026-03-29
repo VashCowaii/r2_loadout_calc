@@ -68,6 +68,9 @@ const compositeAbilityObject = {
           "living": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "8001030_Monster_XP_Minion03_Ability02_Part02": {
@@ -105,6 +108,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8001030_Monster_XP_Minion03_Ability02_Part01": {
@@ -130,6 +136,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
       "references": []
     },
     "8001030_Monster_XP_Minion03_Ability01_Part02": {
@@ -164,6 +176,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "8001030_Monster_XP_Minion03_Ability01_Part01": {
@@ -189,6 +204,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "8001030_Monster_XP_Minion03_Passive01": {
@@ -220,6 +241,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2574934\">Monster_XP_Minion03_Deathrattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

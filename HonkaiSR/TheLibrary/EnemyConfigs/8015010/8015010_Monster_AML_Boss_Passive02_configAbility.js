@@ -63,5 +63,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

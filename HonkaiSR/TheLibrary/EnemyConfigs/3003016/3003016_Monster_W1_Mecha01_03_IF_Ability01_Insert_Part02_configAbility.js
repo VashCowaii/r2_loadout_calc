@@ -65,5 +65,8 @@ const configAbility = {
       "adjustmentType": "+"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

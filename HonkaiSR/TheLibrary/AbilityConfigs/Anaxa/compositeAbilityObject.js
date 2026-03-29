@@ -81,7 +81,10 @@ const compositeAbilityObject = {
           "type": "Buff",
           "statusName": "Everything Is in Everything"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Anaxa_Anaxa_Eidolon2": {
       "fileName": "Anaxa_Anaxa_Eidolon2",
@@ -209,7 +212,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Anaxa_Anaxa_Eidolon1": {
       "fileName": "Anaxa_Anaxa_Eidolon1",
@@ -319,7 +325,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Anaxa_Anaxa_Trace03": {
       "fileName": "Anaxa_Anaxa_Trace03",
@@ -389,7 +398,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Anaxa_Anaxa_Trace02": {
       "fileName": "Anaxa_Anaxa_Trace02",
@@ -821,7 +833,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Anaxa_Anaxa_TechniqueInLevel": {
       "fileName": "Anaxa_Anaxa_TechniqueInLevel",
@@ -1130,7 +1145,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Anaxa_Anaxa_PassiveAbility01": {
       "fileName": "Anaxa_Anaxa_PassiveAbility01",
@@ -1758,7 +1779,13 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Anaxa_Anaxa_Ability03_Part02": {
       "fileName": "Anaxa_Anaxa_Ability03_Part02",
@@ -1806,7 +1833,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Anaxa_Anaxa_Ability03_Part01": {
       "fileName": "Anaxa_Anaxa_Ability03_Part01",
@@ -1966,7 +1996,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Anaxa_Anaxa_Ability03_EnterReady": {
       "fileName": "Anaxa_Anaxa_Ability03_EnterReady",
@@ -1974,7 +2010,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Anaxa_Anaxa_Ability02_Part02": {
       "fileName": "Anaxa_Anaxa_Ability02_Part02",
@@ -2269,7 +2308,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Anaxa_Anaxa_Ability02_Part01": {
       "fileName": "Anaxa_Anaxa_Ability02_Part01",
@@ -2298,7 +2340,14 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "All Other Team Members"
+      }
     },
     "Anaxa_Anaxa_Ability01_Part02": {
       "fileName": "Anaxa_Anaxa_Ability01_Part02",
@@ -2363,7 +2412,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Anaxa_Anaxa_Ability01_Part01": {
       "fileName": "Anaxa_Anaxa_Ability01_Part01",
@@ -2392,7 +2444,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Anaxa_Modifiers": {
       "fileName": "Anaxa_Modifiers",

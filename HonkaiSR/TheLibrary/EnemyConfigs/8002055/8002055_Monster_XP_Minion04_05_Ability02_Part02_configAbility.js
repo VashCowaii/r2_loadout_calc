@@ -6,5 +6,8 @@ const configAbility = {
   "parse": [
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

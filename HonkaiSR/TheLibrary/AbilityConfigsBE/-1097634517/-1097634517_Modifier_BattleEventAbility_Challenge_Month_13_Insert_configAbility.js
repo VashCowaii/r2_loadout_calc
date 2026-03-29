@@ -25,5 +25,8 @@ const configAbility = {
       "adjustmentType": "+"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

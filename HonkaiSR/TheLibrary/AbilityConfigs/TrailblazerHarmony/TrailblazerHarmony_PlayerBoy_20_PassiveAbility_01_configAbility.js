@@ -149,5 +149,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1679523029\">PlayerBoy_20_Passive_BonusArea</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

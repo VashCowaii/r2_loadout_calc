@@ -212,5 +212,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1182496789\">Enemy_W3_Sunday_01_Perform01_FormationFlag</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

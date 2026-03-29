@@ -631,5 +631,8 @@ const configAbility = {
       ],
       "addStacksPerTrigger": 1
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

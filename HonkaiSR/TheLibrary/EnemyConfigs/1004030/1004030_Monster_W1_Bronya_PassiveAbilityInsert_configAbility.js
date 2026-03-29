@@ -22,5 +22,8 @@ const configAbility = {
       "variableName": "W1_Bronya_00_InsertFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

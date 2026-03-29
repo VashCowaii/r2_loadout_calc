@@ -110,5 +110,8 @@ const configAbility = {
       "variableName": "W2_Yanqing_00_Skill02_InsertFlag"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

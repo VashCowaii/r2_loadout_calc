@@ -14,5 +14,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"890205763\">Enemy_W3_Theater_IF_BattleEvent</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

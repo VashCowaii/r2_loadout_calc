@@ -145,5 +145,8 @@ const configAbility = {
       "identifier": "RageEnd"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

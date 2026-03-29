@@ -21,6 +21,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-2138152353\">Enemy_W4_Manta_TimeSlow_Remove</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

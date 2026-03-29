@@ -45,5 +45,11 @@ const configAbility = {
     },
     "Refresh QingQue Bar-State"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

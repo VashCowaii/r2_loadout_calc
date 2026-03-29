@@ -107,6 +107,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

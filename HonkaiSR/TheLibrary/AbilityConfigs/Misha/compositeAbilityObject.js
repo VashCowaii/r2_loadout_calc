@@ -169,7 +169,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Misha_Misha_Eidolon2": {
       "fileName": "Misha_Misha_Eidolon2",
@@ -193,7 +196,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Misha_Misha_Trace03": {
       "fileName": "Misha_Misha_Trace03",
@@ -260,7 +266,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Misha_Misha_TechniqueInLevel": {
       "fileName": "Misha_Misha_TechniqueInLevel",
@@ -326,7 +335,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Misha_Misha_PassiveAbility01": {
       "fileName": "Misha_Misha_PassiveAbility01",
@@ -719,7 +734,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Misha_Misha_Ability03_Part02": {
       "fileName": "Misha_Misha_Ability03_Part02",
@@ -1210,7 +1231,10 @@ const compositeAbilityObject = {
           "effectName": "Effect Hit Rate Boost",
           "statusName": "Interlock"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Misha_Misha_Ability03_Part01": {
       "fileName": "Misha_Misha_Ability03_Part01",
@@ -1240,7 +1264,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "All Other Team Members"
+      }
     },
     "Misha_Misha_Ability03_EnterReady": {
       "fileName": "Misha_Misha_Ability03_EnterReady",
@@ -1248,7 +1279,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Misha_Misha_Ability02_Part02": {
       "fileName": "Misha_Misha_Ability02_Part02",
@@ -1328,7 +1362,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Misha_Misha_Ability02_Part01": {
       "fileName": "Misha_Misha_Ability02_Part01",
@@ -1358,7 +1395,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Misha_Misha_Ability01_Part02": {
       "fileName": "Misha_Misha_Ability01_Part02",
@@ -1397,7 +1441,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Misha_Misha_Ability01_Part01": {
       "fileName": "Misha_Misha_Ability01_Part01",
@@ -1427,7 +1474,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Misha_Modifiers": {
       "fileName": "Misha_Modifiers",

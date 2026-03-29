@@ -217,5 +217,8 @@ const configAbility = {
         "_prev_energy"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

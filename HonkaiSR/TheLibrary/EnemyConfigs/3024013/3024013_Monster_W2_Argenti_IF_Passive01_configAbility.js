@@ -114,6 +114,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

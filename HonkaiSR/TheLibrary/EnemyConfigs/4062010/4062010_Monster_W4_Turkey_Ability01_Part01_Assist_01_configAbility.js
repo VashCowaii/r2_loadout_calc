@@ -16,5 +16,8 @@ const configAbility = {
       "max": 4
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

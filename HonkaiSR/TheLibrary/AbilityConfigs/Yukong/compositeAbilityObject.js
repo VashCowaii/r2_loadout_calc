@@ -242,7 +242,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Eidolon1": {
       "fileName": "Yukong_Yukong_Eidolon1",
@@ -350,7 +353,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Trace02": {
       "fileName": "Yukong_Yukong_Trace02",
@@ -476,7 +482,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Trace01": {
       "fileName": "Yukong_Yukong_Trace01",
@@ -655,7 +664,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_TechniqueInLevel": {
       "fileName": "Yukong_Yukong_TechniqueInLevel",
@@ -714,7 +726,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_PassiveAbility01": {
       "fileName": "Yukong_Yukong_PassiveAbility01",
@@ -946,7 +964,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Ability03_AddFlower": {
       "fileName": "Yukong_Yukong_Ability03_AddFlower",
@@ -1134,7 +1158,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Ability03_Part02": {
       "fileName": "Yukong_Yukong_Ability03_Part02",
@@ -1235,7 +1262,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yukong_Yukong_Ability03_Part01": {
       "fileName": "Yukong_Yukong_Ability03_Part01",
@@ -1266,7 +1296,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Yukong_Yukong_Ability03_EnterReady": {
       "fileName": "Yukong_Yukong_Ability03_EnterReady",
@@ -1274,7 +1310,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Yukong_Yukong_Ability02_CountDown": {
       "fileName": "Yukong_Yukong_Ability02_CountDown",
@@ -1369,7 +1408,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Ability02_AddFlower": {
       "fileName": "Yukong_Yukong_Ability02_AddFlower",
@@ -1461,7 +1503,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Ability02_Part02": {
       "fileName": "Yukong_Yukong_Ability02_Part02",
@@ -1512,7 +1557,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yukong_Yukong_Ability02_Part01": {
       "fileName": "Yukong_Yukong_Ability02_Part01",
@@ -1543,7 +1591,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Yukong_Yukong_Ability01_Part02": {
       "fileName": "Yukong_Yukong_Ability01_Part02",
@@ -1849,7 +1903,10 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Yukong_Yukong_Ability01_Part01": {
       "fileName": "Yukong_Yukong_Ability01_Part01",
@@ -1898,7 +1955,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Yukong_Modifiers": {
       "fileName": "Yukong_Modifiers",

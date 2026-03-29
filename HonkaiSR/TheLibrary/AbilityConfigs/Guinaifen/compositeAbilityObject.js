@@ -32,7 +32,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1541839766\">Guinaifen_Trace03</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Guinaifen_Guinaifen_Trace02": {
       "fileName": "Guinaifen_Guinaifen_Trace02",
@@ -49,7 +52,10 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1558617385\">Guinaifen_Trace02</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Guinaifen_Guinaifen_TechniqueInLevel": {
       "fileName": "Guinaifen_Guinaifen_TechniqueInLevel",
@@ -298,7 +304,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Guinaifen_Guinaifen_PassiveAbility01": {
       "fileName": "Guinaifen_Guinaifen_PassiveAbility01",
@@ -357,7 +369,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Guinaifen_Guinaifen_Ability03_Part02": {
       "fileName": "Guinaifen_Guinaifen_Ability03_Part02",
@@ -415,7 +433,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Guinaifen_Guinaifen_Ability03_Part01": {
       "fileName": "Guinaifen_Guinaifen_Ability03_Part01",
@@ -445,7 +466,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Guinaifen_Guinaifen_Ability03_EnterReady": {
       "fileName": "Guinaifen_Guinaifen_Ability03_EnterReady",
@@ -453,7 +480,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Guinaifen_Guinaifen_Ability02_Part02": {
       "fileName": "Guinaifen_Guinaifen_Ability02_Part02",
@@ -675,7 +705,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Guinaifen_Guinaifen_Ability02_Part01": {
       "fileName": "Guinaifen_Guinaifen_Ability02_Part01",
@@ -704,7 +737,14 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Guinaifen_Guinaifen_Ability01_Part02": {
       "fileName": "Guinaifen_Guinaifen_Ability01_Part02",
@@ -744,7 +784,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Guinaifen_Guinaifen_Ability01_Part01": {
       "fileName": "Guinaifen_Guinaifen_Ability01_Part01",
@@ -774,7 +817,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Guinaifen_Modifiers": {
       "fileName": "Guinaifen_Modifiers",

@@ -65,7 +65,10 @@ const compositeAbilityObject = {
           "variableName": "_Arlan_00_PassiveSkill03_InsertController"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Arlan_Arlan_Trace03": {
       "fileName": "Arlan_Arlan_Trace03",
@@ -104,7 +107,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Arlan_Arlan_Trace02": {
       "fileName": "Arlan_Arlan_Trace02",
@@ -129,7 +135,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Arlan_Arlan_Trace01": {
       "fileName": "Arlan_Arlan_Trace01",
@@ -198,7 +207,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Arlan_Arlan_TechniqueInLevel": {
       "fileName": "Arlan_Arlan_TechniqueInLevel",
@@ -281,7 +293,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Arlan_Arlan_PassiveAbility01": {
       "fileName": "Arlan_Arlan_PassiveAbility01",
@@ -763,7 +781,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Arlan_Arlan_Ability03_Part02": {
       "fileName": "Arlan_Arlan_Ability03_Part02",
@@ -1159,7 +1183,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Arlan_Arlan_Ability03_Part01": {
       "fileName": "Arlan_Arlan_Ability03_Part01",
@@ -1189,7 +1216,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "Arlan_Arlan_Ability03_EnterReady": {
       "fileName": "Arlan_Arlan_Ability03_EnterReady",
@@ -1197,7 +1231,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Arlan_Arlan_Ability02_Part02": {
       "fileName": "Arlan_Arlan_Ability02_Part02",
@@ -1276,7 +1313,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Arlan_Arlan_Ability02_Part01": {
       "fileName": "Arlan_Arlan_Ability02_Part01",
@@ -1305,7 +1345,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Arlan_Arlan_Ability01_Part02": {
       "fileName": "Arlan_Arlan_Ability01_Part02",
@@ -1381,7 +1427,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Arlan_Arlan_Ability01_Part01": {
       "fileName": "Arlan_Arlan_Ability01_Part01",
@@ -1411,7 +1460,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Arlan_Modifiers": {
       "fileName": "Arlan_Modifiers",

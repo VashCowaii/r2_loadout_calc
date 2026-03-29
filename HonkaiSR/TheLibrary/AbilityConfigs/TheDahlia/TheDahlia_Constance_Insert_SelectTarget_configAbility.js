@@ -50,5 +50,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

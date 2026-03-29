@@ -71,5 +71,8 @@ const configAbility = {
       "name": "Entity Escape Battle"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

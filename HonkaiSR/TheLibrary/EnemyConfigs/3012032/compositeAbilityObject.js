@@ -80,6 +80,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_Ability03_Part02": {
@@ -147,6 +150,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_Ability03_Insert": {
@@ -208,6 +214,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_Ability02_Part02": {
@@ -218,6 +227,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_Ability02_Part01": {
@@ -243,6 +255,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_SKill01_Part02": {
@@ -275,6 +293,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_SKill01_Insert": {
@@ -298,6 +319,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_PassiveAbilityInitiate_Main2": {
@@ -403,6 +427,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3012032_Monster_W3_DeathPart_PassiveAbilityInitiate": {
@@ -566,6 +593,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

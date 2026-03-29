@@ -411,5 +411,8 @@ const configAbility = {
       "fakeCharacterAttack": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

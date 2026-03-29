@@ -12,5 +12,8 @@ const configAbility = {
       "isGlobal": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

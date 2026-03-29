@@ -366,6 +366,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-261920057\">Enemy_W4_Pollux_IF_EnterBattle</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -79,6 +79,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1982402150\">Enemy_SW_Boss_01_ScoringDetect0101</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

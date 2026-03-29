@@ -14248,7 +14248,10 @@ const compositeAbilityObject = {
           "name": "Entity Escape Battle"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-243519640_StrongChallengeEX_Talent_StageAbility_007_Minion04_RunAway_Part01": {
       "fileName": "-243519640_StrongChallengeEX_Talent_StageAbility_007_Minion04_RunAway_Part01",
@@ -14267,7 +14270,10 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-243519640_StrongChallengeEX_Talent_StageAbility_007_Insert": {
       "fileName": "-243519640_StrongChallengeEX_Talent_StageAbility_007_Insert",
@@ -14361,7 +14367,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "-243519640_StrongChallengeEX_Talent_StageAbility_007": {
       "fileName": "-243519640_StrongChallengeEX_Talent_StageAbility_007",

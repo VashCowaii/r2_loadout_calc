@@ -37,6 +37,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1482083906\">Enemy_XP_MonsterGroup_PassiveAbilityInitiate</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target"
+  },
   "references": [
     {
       "name": "Modifier Construction",

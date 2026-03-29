@@ -4,5 +4,8 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

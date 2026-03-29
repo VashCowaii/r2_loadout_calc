@@ -120,5 +120,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1980712149\">Monster_W1_Mecha04_RL_Part03Effect</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

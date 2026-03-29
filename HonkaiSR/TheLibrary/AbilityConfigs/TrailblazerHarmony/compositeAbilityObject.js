@@ -90,7 +90,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01",
@@ -243,7 +249,13 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1679523029\">PlayerBoy_20_Passive_BonusArea</a>"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02",
@@ -323,7 +335,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01",
@@ -352,7 +367,13 @@ const compositeAbilityObject = {
           "ability": "PlayerBoy_20_Ability03_Part02"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady",
@@ -360,7 +381,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02",
@@ -537,7 +561,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01",
@@ -566,7 +593,14 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "All Other Team Members"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02",
@@ -606,7 +640,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01": {
       "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01",
@@ -636,7 +673,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "TrailblazerHarmony_Modifiers": {
       "fileName": "TrailblazerHarmony_Modifiers",

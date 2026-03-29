@@ -58,5 +58,8 @@ const configAbility = {
       "parse": []
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  }
 }

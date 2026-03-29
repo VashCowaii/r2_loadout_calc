@@ -25,5 +25,11 @@ const configAbility = {
       "ability": "Bronya_Ability03_Part02"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
+  }
 }

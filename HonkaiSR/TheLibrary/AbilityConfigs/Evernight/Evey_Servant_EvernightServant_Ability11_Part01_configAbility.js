@@ -235,5 +235,12 @@ const configAbility = {
       "parse": []
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "All Other Team Members"
+  }
 }

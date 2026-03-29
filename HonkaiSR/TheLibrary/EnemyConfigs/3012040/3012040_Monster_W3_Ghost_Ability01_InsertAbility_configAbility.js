@@ -21,5 +21,8 @@ const configAbility = {
       "popUpText": "Deception's Crown dispelled"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

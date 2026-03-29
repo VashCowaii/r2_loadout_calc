@@ -46,6 +46,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"818085954\">Enemy_W1_CocoliaP1_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

@@ -161,5 +161,8 @@ const configAbility = {
       "revertDefault": true
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

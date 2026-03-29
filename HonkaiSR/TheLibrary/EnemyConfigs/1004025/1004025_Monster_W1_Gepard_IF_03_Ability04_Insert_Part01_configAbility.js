@@ -20,5 +20,8 @@ const configAbility = {
     "Deleted bullshit",
     "Deleted bullshit"
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

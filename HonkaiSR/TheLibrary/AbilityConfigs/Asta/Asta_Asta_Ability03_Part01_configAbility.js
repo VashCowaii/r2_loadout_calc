@@ -25,5 +25,11 @@ const configAbility = {
       "ability": "Asta_Ability03_Part02"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
+  }
 }

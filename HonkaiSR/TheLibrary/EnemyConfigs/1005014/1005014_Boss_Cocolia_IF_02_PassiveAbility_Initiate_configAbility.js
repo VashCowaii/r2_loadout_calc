@@ -63,6 +63,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2038881084\">Monster_W1_CocoliaP1_IF_02_AccumulatePower</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

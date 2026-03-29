@@ -23,5 +23,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1084194912\">Monster_W2_Huanlong_Part3Start</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

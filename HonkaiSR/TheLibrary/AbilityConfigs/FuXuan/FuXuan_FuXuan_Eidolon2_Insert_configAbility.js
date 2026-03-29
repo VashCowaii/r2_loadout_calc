@@ -46,5 +46,8 @@ const configAbility = {
       "formula": "Heal from Target MaxHP"
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

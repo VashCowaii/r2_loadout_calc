@@ -91,5 +91,8 @@ const configAbility = {
       "latentQueue": [],
       "addStacksPerTrigger": 1
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "All Player Team Members"
+  }
 }

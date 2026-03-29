@@ -264,6 +264,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-9479983\">Monster_W3_Death_HasUseAbility</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

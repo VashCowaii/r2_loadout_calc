@@ -138,5 +138,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

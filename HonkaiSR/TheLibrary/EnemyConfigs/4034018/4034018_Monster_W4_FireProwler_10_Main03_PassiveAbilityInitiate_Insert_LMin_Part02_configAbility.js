@@ -194,5 +194,8 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-952344169\">Enemy_W4_FireProwler_10_Main03_Endurance</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

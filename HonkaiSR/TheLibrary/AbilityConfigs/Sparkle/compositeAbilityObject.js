@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_TechniqueInLevel": {
       "fileName": "Sparkle_Advanced_Sparkle_TechniqueInLevel",
@@ -103,7 +106,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_PassiveAbility_1": {
       "fileName": "Sparkle_Advanced_Sparkle_PassiveAbility_1",
@@ -666,7 +675,13 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_Eidolon6_BP": {
       "fileName": "Sparkle_Advanced_Sparkle_Eidolon6_BP",
@@ -794,7 +809,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability03_Part02": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability03_Part02",
@@ -1165,7 +1183,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability03_Part01": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability03_Part01",
@@ -1194,7 +1215,13 @@ const compositeAbilityObject = {
           "ability": "Advanced_Sparkle_Ability03_Part02"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability03_EnterReady": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability03_EnterReady",
@@ -1202,7 +1229,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability02_Self_Part02": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability02_Self_Part02",
@@ -1465,7 +1495,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability02_Others_Part02": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability02_Others_Part02",
@@ -1706,7 +1739,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability02_Part01": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability02_Part01",
@@ -1761,7 +1797,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability01_Part02": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability01_Part02",
@@ -1827,7 +1869,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Sparkle_Advanced_Sparkle_Ability01_Part01": {
       "fileName": "Sparkle_Advanced_Sparkle_Ability01_Part01",
@@ -1857,7 +1902,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Sparkle_Modifiers": {
       "fileName": "Sparkle_Modifiers",

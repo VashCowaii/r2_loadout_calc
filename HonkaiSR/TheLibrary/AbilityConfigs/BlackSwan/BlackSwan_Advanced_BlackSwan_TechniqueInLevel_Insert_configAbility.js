@@ -336,5 +336,8 @@ const configAbility = {
         "_can_continue"
       ]
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
 }

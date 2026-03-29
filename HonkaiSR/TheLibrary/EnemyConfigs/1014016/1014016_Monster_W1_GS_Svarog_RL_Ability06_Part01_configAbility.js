@@ -50,5 +50,11 @@ const configAbility = {
       "phase": "Phase1"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target"
+  },
   "references": []
 }

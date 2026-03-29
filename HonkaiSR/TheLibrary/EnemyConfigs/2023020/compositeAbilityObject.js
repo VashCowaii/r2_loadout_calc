@@ -34,6 +34,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability05_Part01": {
@@ -67,6 +70,12 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability04_Part02": {
@@ -130,6 +139,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability04_Part01": {
@@ -155,6 +167,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability03_Part02": {
@@ -208,6 +226,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability03_Part01": {
@@ -233,6 +254,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability02_Part02": {
@@ -304,6 +331,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability02_Part01": {
@@ -337,6 +367,12 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability01_Part02": {
@@ -408,6 +444,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_Ability01_Part01": {
@@ -433,6 +472,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "2023020_Monster_W2_Beast02_AbilityP01_Initiate": {
@@ -500,6 +545,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

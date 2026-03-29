@@ -9014,12 +9014,15 @@ const megaParsingFuckeryPain = {
         `;
     },
     
-    "Target Name"(parseRef,initialCounter) {
-        const knownKeySet = new Set ([
-            "name",
-            "target",
-        ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update UI Preview");
+    "Target Name"(parseRef,initialCounter,isStringReplacement) {
+        if (!isStringReplacement) {
+            const knownKeySet = new Set ([
+                "name",
+                "target",
+            ])
+            megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Target Name");
+        }
+        
         
         
 
@@ -9030,7 +9033,7 @@ const megaParsingFuckeryPain = {
         // <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/Anaxa/" target="_blank">
         //                 </a>
 
-        let resultingTarget = megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter);
+        let resultingTarget = !isStringReplacement ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef;
 
 
         let wasString = false;
@@ -11226,7 +11229,7 @@ const megaParsingFuckeryPain = {
         let wasArray = false;
         let wasObject = false;
 
-        if (typeOfParse === "string") {return parseRef;}
+        if (typeOfParse === "string") {return megaParsingFuckery["Target Name"](parseRef,initialCounter,true);}
         else if (Array.isArray(parseRef)) {
             wasArray = true;
             parseString = megaParsingFuckery.fillEventBodyBox(parseRef,initialCounter);
@@ -12411,6 +12414,81 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    realTargetData(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "primaryTarget",
+            "subTarget",
+            "allowMemoAllyTarget",
+            "allowMemoHostileTarget",
+            "targetIsVariable",
+            "excludeSelf",
+            "maxTargets",
+            "blastTargetCount",
+            "stateFilter",
+            "badTarget",
+            "filter",
+            "moveTargetToSummoner",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"TARGET DATA");
+
+        const mainAbilityString = `
+            <details class="rotationsPermaConditionsExpand" open="">
+                <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                    <div class="rotationConditionOperatorHeaderCondition">TARGET DATA</div>
+                </summary>
+
+                ${getStandardNameDisplay(initialCounter,parseRef.primaryTarget,"Primary Target",true)}
+                ${getStandardNameDisplay(initialCounter,parseRef.subTarget,"Sub Target",true)}
+                ${getStandardNameDisplay(initialCounter,parseRef.allowMemoAllyTarget,"Allow Memos as Targets (Allied)")}
+                ${getStandardNameDisplay(initialCounter,parseRef.allowMemoHostileTarget,"Allow Memos as Targets (Hostile)")}
+                ${getStandardNameDisplay(initialCounter,parseRef.targetIsVariable,"Target is a Variable")}
+                ${getStandardNameDisplay(initialCounter,parseRef.excludeSelf,"Exclude Self from Selection")}
+                ${getStandardNameDisplay(initialCounter,parseRef.maxTargets,"Maximum Targets")}
+                ${getStandardNameDisplay(initialCounter,parseRef.stateFilter,"State Filter")}
+                ${getStandardNameDisplay(initialCounter,parseRef.moveTargetToSummoner,"Move Memo Selections to Summoner")}
+                ${getStandardNameDisplay(initialCounter,parseRef.filter,"Target Filter",true)}
+
+                ${parseRef.badTarget ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">If Target Failed:</div>&nbsp;
+                    <div class="actionDetailBody2Description">
+                    ${parseRef.badTarget}
+                    </div>
+                </div>` : ""}
+
+            </details>
+        `;
+
+
+
+        return mainAbilityString;
+        // `<div class="actionDetailBody2">
+        //     <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
+        //     ${battleEventLinker} ${parseRef.eventType ? `(${parseRef.eventType})` : ""}
+        // </div>
+
+            
+        // <div class="modifierDetailsBox">
+        //     ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
+        //     ${getStandardNameDisplay(initialCounter,parseRef.barType,"Bar Type")}
+        //     ${getStandardNameDisplay(initialCounter,parseRef.eventSpeed,"SPD")}
+        //     ${getStandardNameDisplay(initialCounter,parseRef.hardLevelEvent,"Hard Level")}
+        //     ${getStandardNameDisplay(initialCounter,parseRef.eliteGroup,"Elite Group")}
+        //     ${abilityListRow  ? `<div class="actionDetailBody2BattleEventOverrides">
+        //         <div class="rotationConditionOperatorHeaderInline">Ability List:</div>&nbsp;
+        //         ${abilityListRow}
+        //     </div>` : ""}
+
+            
+        //     ${lightconeStatRow  ? `<div class="actionDetailBody2BattleEventOverrides">
+        //         <div class="rotationConditionOperatorHeaderInline">Stat Overrides:</div>&nbsp;
+        //         ${lightconeStatRow}
+        //     </div>` : ""}
+            
+        // </div>
+        // `;
+    },
+
+    
     "Achievement"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",

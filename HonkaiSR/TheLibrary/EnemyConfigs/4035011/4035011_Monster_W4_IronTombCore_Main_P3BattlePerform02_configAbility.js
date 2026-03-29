@@ -22,6 +22,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1313833624\">Enemy_W4_IronTombCore_Main_P3BattlePerformTest02</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

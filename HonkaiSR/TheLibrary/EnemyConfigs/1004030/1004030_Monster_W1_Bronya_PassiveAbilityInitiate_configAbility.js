@@ -86,6 +86,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

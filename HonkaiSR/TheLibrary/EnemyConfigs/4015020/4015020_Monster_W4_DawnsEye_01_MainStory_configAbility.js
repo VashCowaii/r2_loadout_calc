@@ -71,6 +71,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"506771112\">Enemy_W4_DawnsEye_01_Tutorial</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

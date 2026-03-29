@@ -28,5 +28,8 @@ const configAbility = {
       "flagNames": []
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

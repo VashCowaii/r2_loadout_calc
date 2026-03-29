@@ -260,7 +260,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Rappa_Rappa_PassiveAbility01": {
       "fileName": "Rappa_Rappa_PassiveAbility01",
@@ -703,7 +709,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Rappa_Rappa_Ability03_SP0_Part01": {
       "fileName": "Rappa_Rappa_Ability03_SP0_Part01",
@@ -722,7 +734,13 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Rappa_Rappa_Ability03_Part02": {
       "fileName": "Rappa_Rappa_Ability03_Part02",
@@ -847,7 +865,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Rappa_Rappa_Ability03_Part01": {
       "fileName": "Rappa_Rappa_Ability03_Part01",
@@ -901,7 +922,13 @@ const compositeAbilityObject = {
           "priorState": "Active"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Rappa_Rappa_Ability03_EnterReady": {
       "fileName": "Rappa_Rappa_Ability03_EnterReady",
@@ -909,7 +936,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "Rappa_Rappa_Ability02_Part02": {
       "fileName": "Rappa_Rappa_Ability02_Part02",
@@ -980,7 +1010,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Rappa_Rappa_Ability02_Part01": {
       "fileName": "Rappa_Rappa_Ability02_Part01",
@@ -1010,7 +1043,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Rappa_Rappa_Ability13_Part02": {
       "fileName": "Rappa_Rappa_Ability13_Part02",
@@ -1346,7 +1385,10 @@ const compositeAbilityObject = {
         "Trigger: Ability End",
         "Trigger: Skip Death Handling"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Rappa_Rappa_Ability13_Part01": {
       "fileName": "Rappa_Rappa_Ability13_Part01",
@@ -1416,7 +1458,14 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "stateFilter": "AliveOrLimbo"
+      }
     },
     "Rappa_Rappa_Ability12_Part02": {
       "fileName": "Rappa_Rappa_Ability12_Part02",
@@ -1778,7 +1827,10 @@ const compositeAbilityObject = {
           "skipAttackSettle": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Rappa_Rappa_Ability12_Part01": {
       "fileName": "Rappa_Rappa_Ability12_Part01",
@@ -1818,7 +1870,15 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets",
+        "stateFilter": "AliveOrLimbo"
+      }
     },
     "Rappa_Rappa_Ability11_Part02": {
       "fileName": "Rappa_Rappa_Ability11_Part02",
@@ -2177,7 +2237,10 @@ const compositeAbilityObject = {
           "skipAttackSettle": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Rappa_Rappa_Ability11_Part01": {
       "fileName": "Rappa_Rappa_Ability11_Part01",
@@ -2217,7 +2280,15 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets",
+        "stateFilter": "AliveOrLimbo"
+      }
     },
     "Rappa_Rappa_Ability01_Part02": {
       "fileName": "Rappa_Rappa_Ability01_Part02",
@@ -2286,7 +2357,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Rappa_Rappa_Ability01_Part01": {
       "fileName": "Rappa_Rappa_Ability01_Part01",
@@ -2316,7 +2390,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Rappa_Modifiers": {
       "fileName": "Rappa_Modifiers",

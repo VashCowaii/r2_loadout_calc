@@ -40,6 +40,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1695851719\">Monster_W4_PolluxPart_Status</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -228,6 +231,12 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -619,6 +628,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_Ability02_L_Part01": {
@@ -638,6 +650,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_Ability02_Part02": {
@@ -868,6 +883,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_Ability02_Part01": {
@@ -887,6 +905,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_Ability01_L_Part02": {
@@ -929,6 +950,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_Ability01_L_Part01": {
@@ -948,6 +972,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_Ability01_Part02": {
@@ -990,6 +1017,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_Ability01_Part01": {
@@ -1009,6 +1039,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability02_L_Part02": {
@@ -1239,6 +1272,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability02_L_Part01": {
@@ -1258,6 +1294,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability02_Part02": {
@@ -1488,6 +1527,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability02_Part01": {
@@ -1513,6 +1555,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability01_L_Part02": {
@@ -1555,6 +1604,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability01_L_Part01": {
@@ -1574,6 +1626,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability01_Part02": {
@@ -1616,6 +1671,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012072_Monster_W4_PolluxPart_RLBoss_Ability01_Part01": {
@@ -1641,6 +1699,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4012072_Functions": {

@@ -66,6 +66,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012041_Monster_AML_Minion03_01_Ability02_Part01": {
@@ -146,6 +149,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "4012041_Monster_AML_Minion03_01_Ability03_Part02": {
@@ -219,6 +229,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012041_Monster_AML_Minion03_01_Ability03_Part01": {
@@ -244,6 +257,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012041_Monster_AML_Minion03_01_Ability01_Part02": {
@@ -320,6 +339,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4012041_Monster_AML_Minion03_01_Ability01_Part01": {
@@ -343,6 +365,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4012041_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate": {
@@ -379,6 +404,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012041_Monster_AML_Minion03_01_PassiveAbilityInitiate": {
@@ -455,6 +486,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1048406986\">Enemy_Heaven_ModelController_AML_Minion</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

@@ -14,5 +14,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-690947002\">Monster_W4_Herta_Basic</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

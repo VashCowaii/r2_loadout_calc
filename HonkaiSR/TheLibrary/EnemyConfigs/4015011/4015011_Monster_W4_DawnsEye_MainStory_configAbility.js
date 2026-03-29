@@ -37,6 +37,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1431285836\">Enemy_W4_DawnsEye_LowHPPhase02</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

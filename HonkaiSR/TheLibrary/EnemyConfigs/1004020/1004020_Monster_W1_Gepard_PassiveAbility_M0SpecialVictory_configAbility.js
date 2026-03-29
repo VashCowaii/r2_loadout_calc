@@ -22,6 +22,9 @@ const configAbility = {
       "variableName": "Gepard_M0SpecialVictory_Trigger"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

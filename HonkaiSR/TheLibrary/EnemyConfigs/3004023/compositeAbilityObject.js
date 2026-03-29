@@ -35,6 +35,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-429378171\">Enemy_W3_Theater_BattleEvent</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -575,6 +578,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -751,6 +757,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3004023_BattleEventAbility_Monster_W3_Theater_AllBreakInsert": {
@@ -844,6 +853,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "3004023_Monster_W3_Theater_PassiveAbility01_Insert": {
@@ -1312,6 +1324,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1754146880\">Enemy_W3_Theater_PartController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3004023_Monster_W3_Theater_PassiveAbility_Initiate": {
@@ -1544,6 +1559,12 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2689,6 +2710,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1381458312\">Enemy_W3_Theater_MainStoryUltraMark</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2729,6 +2753,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-768925934\">Enemy_W3_Theater_MainStoryEnterBattle03</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2781,6 +2808,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-752148315\">Enemy_W3_Theater_MainStoryEnterBattle02</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2833,6 +2863,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-802481172\">Enemy_W3_Theater_MainStoryEnterBattle01</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2871,6 +2904,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3004023_Monster_W3_Theater_Ability04_Initiate": {
@@ -2880,6 +2919,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3004023_Modifiers": {

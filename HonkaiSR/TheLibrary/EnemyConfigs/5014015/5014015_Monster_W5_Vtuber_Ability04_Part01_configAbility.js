@@ -21,5 +21,12 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Ally Target",
+    "targetIsVariable": true
+  },
   "references": []
 }

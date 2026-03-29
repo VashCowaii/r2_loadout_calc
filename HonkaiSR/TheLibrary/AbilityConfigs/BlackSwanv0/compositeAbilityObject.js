@@ -282,7 +282,10 @@ const compositeAbilityObject = {
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Eidolon2": {
       "fileName": "BlackSwanv0_BlackSwan_Eidolon2",
@@ -523,7 +526,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Eidolon1": {
       "fileName": "BlackSwanv0_BlackSwan_Eidolon1",
@@ -1699,7 +1705,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Trace03": {
       "fileName": "BlackSwanv0_BlackSwan_Trace03",
@@ -1863,7 +1872,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Trace02": {
       "fileName": "BlackSwanv0_BlackSwan_Trace02",
@@ -2578,7 +2590,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwanv0_BlackSwan_TechniqueInLevel_Insert": {
       "fileName": "BlackSwanv0_BlackSwan_TechniqueInLevel_Insert",
@@ -2899,7 +2914,10 @@ const compositeAbilityObject = {
             "_can_continue"
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "BlackSwanv0_BlackSwan_TechniqueInLevel": {
       "fileName": "BlackSwanv0_BlackSwan_TechniqueInLevel",
@@ -2992,7 +3010,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "BlackSwanv0_BlackSwan_PassiveAbility01": {
       "fileName": "BlackSwanv0_BlackSwan_PassiveAbility01",
@@ -3580,7 +3604,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Ability03_Part02": {
       "fileName": "BlackSwanv0_BlackSwan_Ability03_Part02",
@@ -3692,7 +3722,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Ability03_Part01": {
       "fileName": "BlackSwanv0_BlackSwan_Ability03_Part01",
@@ -3722,7 +3755,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Ability03_Cutin": {
       "fileName": "BlackSwanv0_BlackSwan_Ability03_Cutin",
@@ -3730,7 +3769,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "BlackSwanv0_BlackSwan_Ability02_Part02": {
       "fileName": "BlackSwanv0_BlackSwan_Ability02_Part02",
@@ -4323,7 +4365,10 @@ const compositeAbilityObject = {
           "effectName": "DEF Reduction",
           "statusName": "Decadence, False Twilight"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Ability02_Part01": {
       "fileName": "BlackSwanv0_BlackSwan_Ability02_Part01",
@@ -4352,7 +4397,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      }
     },
     "BlackSwanv0_BlackSwan_Ability01_Part02": {
       "fileName": "BlackSwanv0_BlackSwan_Ability01_Part02",
@@ -4665,7 +4717,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "BlackSwanv0_BlackSwan_Ability01_Part01": {
       "fileName": "BlackSwanv0_BlackSwan_Ability01_Part01",
@@ -4694,7 +4749,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "BlackSwanv0_Modifiers": {
       "fileName": "BlackSwanv0_Modifiers",

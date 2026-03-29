@@ -62,7 +62,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "1490374940_BossInfiniteWave_Boss_Insert": {
       "fileName": "1490374940_BossInfiniteWave_Boss_Insert",
@@ -115,7 +118,10 @@ const compositeAbilityObject = {
           "effectName": "Vulnerability",
           "statusName": "Vulnerability"
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "1490374940_BossInfiniteWave_Ability_2": {
       "fileName": "1490374940_BossInfiniteWave_Ability_2",
@@ -6288,7 +6294,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_33": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_33",
@@ -8147,7 +8156,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_30": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_30",
@@ -9455,7 +9467,10 @@ const compositeAbilityObject = {
           "name": "UI Display Event"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Camera_AllDarkTeamWithoutDither": {
       "fileName": "1490374940_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
@@ -9474,7 +9489,10 @@ const compositeAbilityObject = {
           "name": "UI Display Event"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_28_Insert": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_28_Insert",
@@ -9526,7 +9544,10 @@ const compositeAbilityObject = {
           "casterAssign": "TargetSelf"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_28": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_28",
@@ -10867,7 +10888,10 @@ const compositeAbilityObject = {
           "casterAssign": "TargetSelf"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_27": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_27",
@@ -11628,7 +11652,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_26": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_26",
@@ -12514,7 +12541,10 @@ const compositeAbilityObject = {
           "casterAssign": "TargetSelf"
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_25": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_25",
@@ -13719,7 +13749,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_23": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_23",
@@ -14013,7 +14046,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_Modifier_BattleEventAbility_Challenge_Month_22_Insert": {
       "fileName": "1490374940_Modifier_BattleEventAbility_Challenge_Month_22_Insert",
@@ -14082,7 +14118,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1490374940_BattleEventAbility_Challenge_Month_22": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_22",

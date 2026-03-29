@@ -923,6 +923,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_Ability05_Part01": {
@@ -948,6 +951,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_Ability04_Part02": {
@@ -1213,6 +1222,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_Ability04_Part01": {
@@ -1238,6 +1250,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_Ability03_Part02": {
@@ -1501,6 +1519,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_Ability03_Part01": {
@@ -1527,6 +1548,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_Ability01_Part02": {
@@ -1561,6 +1588,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_Ability01_Part01": {
@@ -1587,6 +1617,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part02": {
@@ -1761,6 +1797,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part01": {
@@ -1780,6 +1819,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part02": {
@@ -1840,6 +1882,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part01": {
@@ -1870,6 +1915,9 @@ const compositeAbilityObject = {
           "variableName": "ColorOutInsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part02": {
@@ -1951,6 +1999,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part01": {
@@ -1981,6 +2032,9 @@ const compositeAbilityObject = {
           "variableName": "ColorInInsertFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013031_Monster_W5_Peacock_AbilityP01": {
@@ -2027,6 +2081,12 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "5013031_Modifiers": {

@@ -487,6 +487,12 @@ const megaParsingFuckery = {
         let initialCounter = 1;
         console.log(loadFile)
         let eventBodyString = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
+
+        let eventBodyStringTargetInfo = hasNoReader ? "" : (configAbility.realTargetData ? megaParsingFuckery.realTargetData(configAbility.realTargetData,initialCounter) : "");
+
+        // const functionExists = megaParsingFuckery[conditionName];
+        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
         let eventBodyStringOnAdd = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
         let eventBodyStringOnRemove = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter);
         let eventBodyStringOnAbort = hasNoReader ? "" : megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
@@ -822,6 +828,7 @@ const megaParsingFuckery = {
 
         const mainAbilityString = `
         <div class="eventBodyScrollerMain">
+            ${eventBodyStringTargetInfo}
             <details class="rotationsPermaConditionsExpand" open="">
                 <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                     <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>

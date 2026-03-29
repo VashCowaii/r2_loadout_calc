@@ -29,5 +29,12 @@ const configAbility = {
       "phase": "Phase2"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}",
+    "targetIsVariable": true
+  },
   "references": []
 }

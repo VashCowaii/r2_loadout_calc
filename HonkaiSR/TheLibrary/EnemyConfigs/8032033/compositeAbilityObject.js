@@ -149,6 +149,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert": {
@@ -168,6 +171,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02": {
@@ -411,6 +417,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert": {
@@ -454,6 +463,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02": {
@@ -697,6 +709,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert": {
@@ -740,6 +755,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_IF_AbilityEX04": {
@@ -750,6 +768,12 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_IF_AbilityEX03": {
@@ -760,6 +784,12 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_01_IF_Passive01": {
@@ -794,6 +824,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_IF_Passive01": {
@@ -824,6 +857,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1089097326\">Enemy_W3_AventurinePart_IF_DeathRattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability04_Part02": {
@@ -1071,6 +1110,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability04_Part01": {
@@ -1100,6 +1142,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability03_Part02": {
@@ -1131,6 +1179,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability03_Part01": {
@@ -1158,6 +1209,12 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability02_Part02": {
@@ -1553,6 +1610,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability02_Part01": {
@@ -1640,6 +1700,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability01_Part02": {
@@ -1650,6 +1716,9 @@ const compositeAbilityObject = {
       "parse": [
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Ability01_Part01": {
@@ -1675,6 +1744,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Monster_W3_AventurinePart_Passive01": {
@@ -1701,6 +1776,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "8032033_Modifiers": {

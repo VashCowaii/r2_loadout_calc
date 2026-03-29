@@ -26,5 +26,8 @@ const configAbility = {
       ]
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "All Enemy Team Members"
+  }
 }

@@ -24,6 +24,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1931189851\">Modifier_StageSpecialAbility_10441211_Block</a>[<span class=\"descriptionNumberColor\">Golden Ring</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1012032_Monster_W1_Mecha01_01_FT_Ability01_Part02": {
@@ -57,6 +60,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1012032_Monster_W1_Mecha01_01_FT_Ability01_Part01": {
@@ -82,6 +88,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

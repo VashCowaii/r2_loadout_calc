@@ -117,6 +117,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_PassiveAbility_Initiate": {
@@ -195,6 +198,12 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_AbilityP01_Insert02_Part02": {
@@ -380,6 +389,9 @@ const compositeAbilityObject = {
           "consumeFloor": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_AbilityP01_Insert02_Part01": {
@@ -415,6 +427,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_AbilityP01_Insert01_Part02": {
@@ -521,6 +536,9 @@ const compositeAbilityObject = {
           "consumeFloor": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_AbilityP01_Insert01_Part01": {
@@ -556,6 +574,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_AbilityP01": {
@@ -574,6 +595,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability02_L_Part02": {
@@ -738,6 +765,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability02_L_Part01": {
@@ -757,6 +787,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability02_Part02": {
@@ -921,6 +954,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability02_Part01": {
@@ -946,6 +982,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability01_L_Part02": {
@@ -988,6 +1031,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability01_L_Part01": {
@@ -1007,6 +1053,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability01_Part02": {
@@ -1049,6 +1098,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_Ability01_Part01": {
@@ -1074,6 +1126,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityEX05": {
@@ -1083,6 +1141,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityEX04": {
@@ -1112,6 +1173,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityEX03": {
@@ -1141,6 +1205,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityEX02": {
@@ -1170,6 +1237,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_PolluxPart_IF_AbilityEX01": {
@@ -1180,6 +1250,12 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityEX01": {
@@ -1209,6 +1285,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Stun_Insert": {
@@ -1243,6 +1322,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-2005725125\">Enemy_W4_Pollux_IF_Strengthen_Break</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_TeamFormation": {
@@ -1251,6 +1333,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part02": {
@@ -1312,6 +1397,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part01": {
@@ -1331,6 +1419,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_PassiveAbility_Insert": {
@@ -1530,6 +1621,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityP05": {
@@ -1539,6 +1633,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityP04": {
@@ -1548,6 +1645,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityP03": {
@@ -1557,6 +1657,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityP02": {
@@ -1566,6 +1669,9 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_AbilityP01": {
@@ -1935,6 +2041,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-261920057\">Enemy_W4_Pollux_IF_EnterBattle</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2337,6 +2446,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability06_Part01": {
@@ -2356,6 +2468,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability05_Part02": {
@@ -2941,6 +3056,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability05_Part01": {
@@ -2976,6 +3094,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability04_Part02": {
@@ -3027,6 +3148,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability04_Part01": {
@@ -3046,6 +3170,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability03_Part02": {
@@ -3549,6 +3676,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability03_Part01": {
@@ -3568,6 +3698,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability02_Part02": {
@@ -3719,6 +3852,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability02_Part01": {
@@ -3738,6 +3874,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability01_Part02": {
@@ -3883,6 +4022,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Monster_W4_Pollux_IF_Ability01_Part01": {
@@ -3902,6 +4044,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4012076_Modifiers": {

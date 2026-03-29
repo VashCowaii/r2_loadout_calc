@@ -81,7 +81,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHeng_DanHeng_Trace02": {
       "fileName": "DanHeng_DanHeng_Trace02",
@@ -189,7 +192,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHeng_DanHeng_Trace01": {
       "fileName": "DanHeng_DanHeng_Trace01",
@@ -373,7 +379,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHeng_DanHeng_TechniqueInLevel": {
       "fileName": "DanHeng_DanHeng_TechniqueInLevel",
@@ -482,7 +491,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHeng_DanHeng_PassiveAbility01_Enhance_Part02": {
       "fileName": "DanHeng_DanHeng_PassiveAbility01_Enhance_Part02",
@@ -509,7 +524,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHeng_DanHeng_PassiveAbility01_Enhance_Part01": {
       "fileName": "DanHeng_DanHeng_PassiveAbility01_Enhance_Part01",
@@ -541,7 +559,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHeng_DanHeng_PassiveAbility01": {
       "fileName": "DanHeng_DanHeng_PassiveAbility01",
@@ -1028,7 +1049,13 @@ const compositeAbilityObject = {
             }
           }
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "DanHeng_DanHeng_Ability03_Part02": {
       "fileName": "DanHeng_DanHeng_Ability03_Part02",
@@ -1185,7 +1212,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHeng_DanHeng_Ability03_Part01": {
       "fileName": "DanHeng_DanHeng_Ability03_Part01",
@@ -1215,7 +1245,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "DanHeng_DanHeng_Ability03_EnterReady": {
       "fileName": "DanHeng_DanHeng_Ability03_EnterReady",
@@ -1223,7 +1259,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "DanHeng_DanHeng_Ability02_Part02": {
       "fileName": "DanHeng_DanHeng_Ability02_Part02",
@@ -1506,7 +1545,10 @@ const compositeAbilityObject = {
           ],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHeng_DanHeng_Ability02_Part01": {
       "fileName": "DanHeng_DanHeng_Ability02_Part01",
@@ -1535,7 +1577,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "DanHeng_DanHeng_Ability01_Part02": {
       "fileName": "DanHeng_DanHeng_Ability01_Part02",
@@ -1676,7 +1724,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "DanHeng_DanHeng_Ability01_Part01": {
       "fileName": "DanHeng_DanHeng_Ability01_Part01",
@@ -1706,7 +1757,13 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "DanHeng_Modifiers": {
       "fileName": "DanHeng_Modifiers",

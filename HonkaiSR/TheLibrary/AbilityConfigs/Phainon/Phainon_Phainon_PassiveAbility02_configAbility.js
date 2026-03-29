@@ -421,5 +421,11 @@ const configAbility = {
         "multiplier": 0.25
       }
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

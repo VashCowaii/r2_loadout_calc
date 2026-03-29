@@ -10,5 +10,11 @@ const configAbility = {
   "parse": [
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
   "references": []
 }

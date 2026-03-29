@@ -58,5 +58,8 @@ const configAbility = {
       "type": "Buff",
       "statusName": "Everything Is in Everything"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

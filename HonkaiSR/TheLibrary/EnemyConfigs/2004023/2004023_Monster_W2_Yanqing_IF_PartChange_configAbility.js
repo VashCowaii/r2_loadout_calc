@@ -31,5 +31,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-2138840050\">Enemy_W2_Yanqing_IF_AbilityP01_ChangePhaseController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

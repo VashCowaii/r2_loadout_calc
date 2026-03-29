@@ -18,5 +18,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1110187412\">Enemy_W3_Figure_RLElite_SuccessSleep</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

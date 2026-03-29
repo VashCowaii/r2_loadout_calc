@@ -164,5 +164,8 @@ const configAbility = {
       "value": 8
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "Inherent Target"
+  },
   "references": []
 }

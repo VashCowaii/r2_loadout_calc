@@ -26,5 +26,11 @@ const configAbility = {
       "isTrigger": true
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
+  }
 }

@@ -500,7 +500,10 @@ const compositeAbilityObject = {
           }
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "1118876173_FantasticStory_BaseAbility_2160_EnterFever": {
       "fileName": "1118876173_FantasticStory_BaseAbility_2160_EnterFever",

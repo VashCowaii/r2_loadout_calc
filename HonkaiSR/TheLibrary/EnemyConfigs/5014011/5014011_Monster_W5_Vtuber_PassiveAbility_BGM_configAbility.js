@@ -38,6 +38,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2105349163\">Enemy_W5_Vtuber_ResetStageBGM</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

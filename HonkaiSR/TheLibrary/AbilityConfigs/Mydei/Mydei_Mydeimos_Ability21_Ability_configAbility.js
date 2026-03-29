@@ -94,5 +94,12 @@ const configAbility = {
     "Trigger: Attack End",
     "Trigger: Ability End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "subTarget": "Blast Targets"
+  }
 }

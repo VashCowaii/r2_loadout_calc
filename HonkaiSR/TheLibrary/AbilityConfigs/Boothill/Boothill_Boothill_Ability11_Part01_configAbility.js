@@ -82,5 +82,32 @@ const configAbility = {
       ]
     }
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "badTarget": "Cannot select this target with Fanning the Hammer",
+    "filter": {
+      "name": "Target Sequence",
+      "Sequence": [
+        {
+          "name": "Target Name",
+          "target": "{{Hostile Entities(AOE)}}"
+        },
+        {
+          "name": "Target Filter",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
+          }
+        }
+      ]
+    }
+  }
 }

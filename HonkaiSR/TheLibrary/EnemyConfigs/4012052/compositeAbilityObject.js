@@ -250,6 +250,9 @@ const compositeAbilityObject = {
           "silent": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Insert_Part01": {
@@ -269,6 +272,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03": {
@@ -310,6 +316,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02": {
@@ -374,6 +383,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01": {
@@ -400,6 +412,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_LocalLegend_PassiveAbilityInitiate": {
@@ -547,6 +565,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1781853909\">Enemy_W4_Mascot_LocalLegend_MuteBreak</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_Ability03_Part02": {
@@ -581,6 +605,9 @@ const compositeAbilityObject = {
           "triggerEnemyEscape": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_Ability03_Part01": {
@@ -600,6 +627,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_Ability02_Part02": {
@@ -627,6 +657,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_Ability02_Part01": {
@@ -646,6 +679,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_Ability01_Part02": {
@@ -665,6 +701,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_Ability01_Part01": {
@@ -684,6 +723,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_08_PassiveAbility_Tutorial": {
@@ -692,6 +734,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_PassiveAbility_Tutorial": {
@@ -700,6 +745,9 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_XP_Minion04_PassiveAbilityInitiate": {
@@ -718,6 +766,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -793,6 +847,9 @@ const compositeAbilityObject = {
           "silent": true
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability04_Insert_Part01": {
@@ -812,6 +869,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability03_Insert_Part02": {
@@ -880,6 +940,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability03_Insert_Part01": {
@@ -899,6 +962,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability03_Part02": {
@@ -942,6 +1008,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability03_Part01": {
@@ -969,6 +1038,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability02_Insert_Part02": {
@@ -1037,6 +1112,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability02_Insert_Part01": {
@@ -1056,6 +1134,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability02_Part02": {
@@ -1099,6 +1180,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability02_Part01": {
@@ -1126,6 +1210,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability01_Insert_Part02": {
@@ -1194,6 +1284,9 @@ const compositeAbilityObject = {
           "value": 0
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability01_Insert_Part01": {
@@ -1213,6 +1306,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability01_Part02": {
@@ -1256,6 +1352,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_Ability01_Part01": {
@@ -1275,6 +1374,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Monster_W4_Mascot_PassiveAbilityInitiate": {
@@ -1346,6 +1448,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4012052_Modifiers": {

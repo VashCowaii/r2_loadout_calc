@@ -176,7 +176,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thP_Mar_7th_TechniqueInLevel": {
       "fileName": "March7thP_Mar_7th_TechniqueInLevel",
@@ -340,7 +343,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "March7thP_Mar_7th_PassiveAbility01_InsertAbility": {
       "fileName": "March7thP_Mar_7th_PassiveAbility01_InsertAbility",
@@ -548,7 +557,10 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "March7thP_Mar_7th_PassiveAbility01": {
       "fileName": "March7thP_Mar_7th_PassiveAbility01",
@@ -1190,7 +1202,13 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "March7thP_Mar_7th_Ability03_Part02": {
       "fileName": "March7thP_Mar_7th_Ability03_Part02",
@@ -1725,7 +1743,10 @@ const compositeAbilityObject = {
           "stackData": [],
           "latentQueue": []
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "March7thP_Mar_7th_Ability03_Part01": {
       "fileName": "March7thP_Mar_7th_Ability03_Part01",
@@ -1755,7 +1776,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "March7thP_Mar_7th_Ability03_EnterReady": {
       "fileName": "March7thP_Mar_7th_Ability03_EnterReady",
@@ -1763,7 +1790,10 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "March7thP_Mar_7th_Ability02_Part02": {
       "fileName": "March7thP_Mar_7th_Ability02_Part02",
@@ -2028,7 +2058,10 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "March7thP_Mar_7th_Ability02_Part01": {
       "fileName": "March7thP_Mar_7th_Ability02_Part01",
@@ -2073,7 +2106,13 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
     },
     "March7thP_Mar_7th_Ability01_Part02": {
       "fileName": "March7thP_Mar_7th_Ability01_Part02",
@@ -2118,7 +2157,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "March7thP_Mar_7th_Ability01_Part01": {
       "fileName": "March7thP_Mar_7th_Ability01_Part01",
@@ -2147,7 +2189,13 @@ const compositeAbilityObject = {
           "isTrigger": true
         }
       ],
-      "references": []
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "March7thP_Modifiers": {
       "fileName": "March7thP_Modifiers",

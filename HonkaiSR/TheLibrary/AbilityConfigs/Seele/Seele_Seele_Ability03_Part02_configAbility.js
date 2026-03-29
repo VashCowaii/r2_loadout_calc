@@ -151,5 +151,8 @@ const configAbility = {
       "effectName": "Butterfly Flurry",
       "statusName": "Butterfly Flurry"
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

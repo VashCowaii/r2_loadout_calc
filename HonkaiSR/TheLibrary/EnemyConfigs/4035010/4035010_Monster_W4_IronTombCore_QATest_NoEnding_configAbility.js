@@ -14,6 +14,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1441620046\">Monster_W4_IronTombCore_QATest_NoEnding</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

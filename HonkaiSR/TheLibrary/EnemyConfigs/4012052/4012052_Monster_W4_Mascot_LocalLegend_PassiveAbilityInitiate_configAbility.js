@@ -143,5 +143,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1781853909\">Enemy_W4_Mascot_LocalLegend_MuteBreak</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

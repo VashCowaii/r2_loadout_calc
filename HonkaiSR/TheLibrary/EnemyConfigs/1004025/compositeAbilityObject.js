@@ -416,6 +416,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_Ability12_Part01": {
@@ -441,6 +444,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_Ability04_Insert_Part02": {
@@ -691,6 +700,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -751,6 +763,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_Ability04_Part02": {
@@ -830,6 +845,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_Ability04_Part01": {
@@ -857,6 +875,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_PassiveAbility_EnhanceSwitch": {
@@ -1131,6 +1155,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_PassiveAbility_Switch": {
@@ -1427,6 +1454,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_PassiveAbility_Insert": {
@@ -1767,6 +1797,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_AbilityP04": {
@@ -1776,6 +1809,12 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_AbilityP03": {
@@ -1794,6 +1833,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_AbilityP02": {
@@ -1821,6 +1866,12 @@ const compositeAbilityObject = {
           "variableName": "Gepard_LimboFlag"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_IF_03_AbilityP01": {
@@ -1839,6 +1890,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"681945141\">Enemy_W1_Gepard_IF_03_EnhancePerTurnInit</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2015,6 +2072,12 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"514811508\">Enemy_W1_Gepard_IF_03_Part2EnhanceInti</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2403,6 +2466,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability12_Part01": {
@@ -2422,6 +2488,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability04_Part02": {
@@ -2464,6 +2533,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability04_Part01": {
@@ -2484,6 +2556,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability03_Part02": {
@@ -2502,6 +2577,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability03_Part01": {
@@ -2527,6 +2605,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability02_Part02": {
@@ -2561,6 +2645,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability02_Part01": {
@@ -2581,6 +2668,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability01_Part02": {
@@ -2615,6 +2705,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_Ability01_Part01": {
@@ -2634,6 +2727,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_PassiveAbility_Formation2": {
@@ -2652,6 +2748,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-36298295\">Enemy_W1_Gepard_PassiveAbility_Formation2</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_PassiveAbility_M0SpecialVictory": {
@@ -2678,6 +2777,9 @@ const compositeAbilityObject = {
           "variableName": "Gepard_M0SpecialVictory_Trigger"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2788,6 +2890,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"633366102\">Enemy_W1_Gepard_ExtraDelay</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -2912,6 +3017,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1419162291\">Enemy_W1_Gepard_ListenSelfBreak</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
@@ -3043,6 +3151,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability14_Part01": {
@@ -3074,6 +3185,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_PassiveAbility_Insert2": {
@@ -3194,6 +3308,9 @@ const compositeAbilityObject = {
           "allowAbilityTriggers": false
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_PassiveAbility_Insert": {
@@ -3333,6 +3450,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability08_Part02": {
@@ -3361,6 +3481,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability08_Part01": {
@@ -3386,6 +3509,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability07_Part02": {
@@ -3436,6 +3565,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability07_Insert": {
@@ -3472,6 +3604,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability05_Part02": {
@@ -3517,6 +3652,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability05_Part01": {
@@ -3542,6 +3680,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability04_Part02": {
@@ -3602,6 +3746,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability04_Part01": {
@@ -3622,6 +3769,9 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability03_Insert": {
@@ -3661,6 +3811,9 @@ const compositeAbilityObject = {
           "multiBase": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability03_Part02": {
@@ -3780,6 +3933,9 @@ const compositeAbilityObject = {
         },
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability03_Part01": {
@@ -3799,6 +3955,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability02_Part02": {
@@ -3833,6 +3992,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability02_Part01": {
@@ -3859,6 +4021,12 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability01_Part02": {
@@ -3893,6 +4061,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_Ability01_Part01": {
@@ -3918,6 +4089,12 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_AbilityP01_Insert2": {
@@ -4053,6 +4230,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_AbilityP01_Insert": {
@@ -4153,6 +4333,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_AbilityP01_EnterBattle": {
@@ -4238,6 +4421,9 @@ const compositeAbilityObject = {
           "value": 1
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_PassiveAbilityInitiate": {
@@ -4305,6 +4491,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_SPRL_AbilityP02_EnterBattle": {
@@ -4340,6 +4529,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-243818097\">SPRL_Flag</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "1004025_Monster_W1_Gepard_RL_AbilityP01_Initiate": {
@@ -4382,6 +4574,9 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1151984120\">Enemy_W1_Gepard_Command</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

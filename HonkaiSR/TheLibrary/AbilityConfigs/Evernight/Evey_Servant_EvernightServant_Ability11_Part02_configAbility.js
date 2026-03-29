@@ -307,5 +307,8 @@ const configAbility = {
     "Wait for Pending Ability Completions",
     "Trigger: Ability End"
   ],
-  "references": []
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "{{Ability Target List}}"
+  }
 }

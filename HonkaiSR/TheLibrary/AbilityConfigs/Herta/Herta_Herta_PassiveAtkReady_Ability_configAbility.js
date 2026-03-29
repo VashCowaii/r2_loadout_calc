@@ -387,5 +387,8 @@ const configAbility = {
       "statusName": "CRIT Rate Boost",
       "addStacksPerTrigger": 1
     }
-  ]
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  }
 }

@@ -45,6 +45,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         "Trigger: Ability End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4034020_Monster_W4_FireProwler_01_Main_Ability01_Part01": {
@@ -65,6 +68,9 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
       "references": []
     },
     "4034020_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate": {
@@ -129,6 +135,9 @@ const compositeAbilityObject = {
         }
       ],
       "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4034020_Monster_W4_Phainon_PassiveInsert02": {
@@ -202,6 +211,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4034020_Monster_W4_Phainon_PassiveInsert01": {
@@ -360,6 +372,9 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
     "4034020_Monster_W4_Phainon_BattlePerform2": {
@@ -383,6 +398,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4034020_Monster_W4_Phainon_BattlePerform1": {
@@ -399,6 +417,9 @@ const compositeAbilityObject = {
           }
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4034020_Monster_W4_Phainon_PassiveAbilityInitiate": {
@@ -444,6 +465,12 @@ const compositeAbilityObject = {
       "whenAdded": [
         "Block Battle-Conditions On Start"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",

@@ -75,6 +75,12 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2087196046\">Enemy_W2_Xuanlu_IF_ListenSummon</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

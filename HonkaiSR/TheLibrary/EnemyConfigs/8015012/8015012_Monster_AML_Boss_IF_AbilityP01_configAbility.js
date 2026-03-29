@@ -760,5 +760,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-630308982\">Monster_AML_Boss_IF_BattleAlert</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }

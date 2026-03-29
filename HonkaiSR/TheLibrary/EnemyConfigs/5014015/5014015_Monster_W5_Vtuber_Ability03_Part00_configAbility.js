@@ -79,6 +79,14 @@ const configAbility = {
     },
     "Trigger: Ability End"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target",
+    "allowMemoHostileTarget": "Forbidden",
+    "targetIsVariable": true
+  },
   "references": [
     {
       "name": "Modifier Construction",

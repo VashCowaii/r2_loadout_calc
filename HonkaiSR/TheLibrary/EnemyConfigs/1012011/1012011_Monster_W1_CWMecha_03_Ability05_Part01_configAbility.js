@@ -21,5 +21,11 @@ const configAbility = {
     },
     "Deleted bullshit"
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{All Team Members}}"
+  },
   "references": []
 }

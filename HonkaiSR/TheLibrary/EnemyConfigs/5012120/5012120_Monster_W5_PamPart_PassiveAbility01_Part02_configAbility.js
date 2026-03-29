@@ -22,6 +22,9 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2051404856\">Modifier_Monster_W5_PamPart_DeathRattle</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": [
     {
       "name": "Modifier Construction",

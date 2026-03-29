@@ -17,5 +17,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-95775214\">Enemy_W3_Clock_01_AbilityP01_SuperArmorController</a>"
     }
   ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Caster}}"
+  },
   "references": []
 }
