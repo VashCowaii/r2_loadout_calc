@@ -592,6 +592,9 @@ const megaParsingFuckery = {
 
                 let initialCounter = 1;
                 let eventBodyString = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter) : "";
+
+                let eventBodyStringTargetInfo = abilitiesHaveLength ? (configAbility.realTargetData ? megaParsingFuckery.realTargetData(configAbility.realTargetData,initialCounter) : "") : "";
+
                 let eventBodyStringOnAdd = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter) : "";
                 let eventBodyStringOnRemove = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter) : "";
 
@@ -871,6 +874,7 @@ const megaParsingFuckery = {
 
                 const mainAbilityString = `
                 <div class="eventBodyScrollerMain">
+                    ${eventBodyStringTargetInfo}
                     <details class="rotationsPermaConditionsExpand" open="">
                         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                             <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>
