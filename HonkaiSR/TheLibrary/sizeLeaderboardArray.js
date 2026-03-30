@@ -1002,6 +1002,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 186172
   },
   {
+    "entryType": "char",
+    "entryName": "Ashveil",
+    "trimCharacterName": "Ashveil",
+    "entryIcon": "icon/character/1504.png",
+    "lineCount": 4973,
+    "sizeCount": 184390
+  },
+  {
     "entryType": "enemy",
     "enemyID": 4013013,
     "lineCount": 4446,
@@ -5738,14 +5746,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1930
-  },
-  {
-    "entryType": "char",
-    "entryName": "Ashveil",
-    "trimCharacterName": "Ashveil",
-    "entryIcon": "icon/character/1504.png",
-    "lineCount": 7,
-    "sizeCount": 134
   },
   {
     "entryType": "enemy",
