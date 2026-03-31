@@ -3763,11 +3763,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "ChallengePeakBattle_Plugins_0006_ADF_3": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_20) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED_20",
+                  "operator": "Variables[0] (BattleEventHeal_HPDeltaLayer) || RETURN",
+                  "displayLines": "BattleEventHeal_HPDeltaLayer",
                   "constants": [],
                   "variables": [
-                    "ENEMIES_OBJECT_UNUSED_20"
+                    "BattleEventHeal_HPDeltaLayer"
                   ]
                 }
               }
@@ -4101,11 +4101,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "ChallengePeakBattle_Plugins_0005_ADF_3": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_20) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED_20",
+                  "operator": "Variables[0] (BattleEventHeal_HPDeltaLayer) || RETURN",
+                  "displayLines": "BattleEventHeal_HPDeltaLayer",
                   "constants": [],
                   "variables": [
-                    "ENEMIES_OBJECT_UNUSED_20"
+                    "BattleEventHeal_HPDeltaLayer"
                   ]
                 }
               }
