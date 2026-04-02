@@ -60,7 +60,7 @@ const configAbility = {
               "priorityTag": "MonsterInsertAttackSelf",
               "canHitNonTargets": true,
               "valuePerStack": {
-                "value_0_DamagePercentage": {
+                "DamagePercentage": {
                   "operator": "Variables[0] (#ADF_1) || RETURN",
                   "displayLines": "#ADF_1",
                   "constants": [],

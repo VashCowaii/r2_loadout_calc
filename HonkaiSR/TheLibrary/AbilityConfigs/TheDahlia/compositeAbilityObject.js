@@ -1004,7 +1004,7 @@ const compositeAbilityObject = {
                     "target": "{{Hostile Entities(AOE)}}"
                   },
                   "variables": {
-                    "value_0_DamagePercentage": {
+                    "DamagePercentage": {
                       "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
                       "displayLines": "MDF_DamagePercentage",
                       "constants": [],
@@ -1087,7 +1087,7 @@ const compositeAbilityObject = {
                         "target": "{{Hostile Entities(AOE)}}"
                       },
                       "variables": {
-                        "value_0_DamagePercentage": {
+                        "DamagePercentage": {
                           "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
                           "displayLines": "MDF_DamagePercentage",
                           "constants": [],
@@ -1653,7 +1653,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "variables": {
-                        "value_0_DamagePercentage": {
+                        "DamagePercentage": {
                           "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
                           "displayLines": "MDF_SuperBreakDamagePercentage",
                           "constants": [],
@@ -3302,7 +3302,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "variables": {
-                        "value_0_DamagePercentage": {
+                        "DamagePercentage": {
                           "operator": "Variables[0] (2) || RETURN",
                           "displayLines": "2",
                           "constants": [],

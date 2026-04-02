@@ -3073,7 +3073,7 @@ const compositeAbilityObject = {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"932403897\">BeingDealSuperBreakDamage</a>",
                       "variables": {
-                        "value_0_DamagePercentage": {
+                        "DamagePercentage": {
                           "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
                           "displayLines": "MDF_PropertyValue2",
                           "constants": [],

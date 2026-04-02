@@ -302,7 +302,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "variables": {
-                    "value_0_DamagePercentage": {
+                    "DamagePercentage": {
                       "operator": "Variables[0] (2) || RETURN",
                       "displayLines": "2",
                       "constants": [],

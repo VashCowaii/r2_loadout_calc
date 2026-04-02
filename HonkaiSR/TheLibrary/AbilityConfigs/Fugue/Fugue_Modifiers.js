@@ -27,7 +27,7 @@ const configAbility = {
                 "target": "{{Attack Targets of Modifier Holder}}"
               },
               "variables": {
-                "value_0_DamagePercentage": {
+                "DamagePercentage": {
                   "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
                   "displayLines": "MDF_SuperBreakDamagePercentage",
                   "constants": [],

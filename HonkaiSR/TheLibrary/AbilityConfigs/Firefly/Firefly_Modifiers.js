@@ -373,7 +373,7 @@ const configAbility = {
                     "target": "{{Attack Targets of Modifier Holder}}"
                   },
                   "variables": {
-                    "value_0_DamagePercentage": {
+                    "DamagePercentage": {
                       "operator": "Variables[0] (0.5) || RETURN",
                       "displayLines": "0.5",
                       "constants": [],
@@ -413,7 +413,7 @@ const configAbility = {
                         "target": "{{Attack Targets of Modifier Holder}}"
                       },
                       "variables": {
-                        "value_0_DamagePercentage": {
+                        "DamagePercentage": {
                           "operator": "Variables[0] (0.35) || RETURN",
                           "displayLines": "0.35",
                           "constants": [],
