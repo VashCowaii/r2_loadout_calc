@@ -48,7 +48,7 @@ const configAbility = {
                 "target": "{{Hostile Entities(AOE)}}"
               },
               "variables": {
-                "value_0_DamagePercentage": {
+                "DamagePercentage": {
                   "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
                   "displayLines": "MDF_DamagePercentage",
                   "constants": [],
@@ -131,7 +131,7 @@ const configAbility = {
                     "target": "{{Hostile Entities(AOE)}}"
                   },
                   "variables": {
-                    "value_0_DamagePercentage": {
+                    "DamagePercentage": {
                       "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
                       "displayLines": "MDF_DamagePercentage",
                       "constants": [],

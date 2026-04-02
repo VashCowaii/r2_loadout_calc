@@ -138,20 +138,6 @@ const megaParsingFuckeryPain = {
             "conditions",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Joint-Attack Ability")
-        // let returnString = "";
-
-        // console.log(parseRef)
-
-
-        // returnString += ``;
-        // from
-        // ability
-        // isTrigger    //possibly skip showing this
-
-        // parse
-        // references
-
-        // returnString += megaParsingFuckery.fillEventBodyBox(parseRef.parse);
 
 
         let parseString = "";
@@ -197,28 +183,6 @@ const megaParsingFuckeryPain = {
             // "isTrigger"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Ability")
-        // let returnString = "";
-
-        // console.log(parseRef)
-
-
-        // returnString += ``;
-        // from
-        // ability
-        // isTrigger    //possibly skip showing this
-
-        // parse
-        // references
-
-        // returnString += megaParsingFuckery.fillEventBodyBox(parseRef.parse);
-
-
-        // let parseString = "";
-        // let refString = "";
-        // const hasParse = parseRef.parse?.length;
-        // const hasRef = parseRef.references?.length;
-        // if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.parse,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.references,initialCounter);}
 
         // rotationConditionOperatorBox
         return `
@@ -249,36 +213,6 @@ const megaParsingFuckeryPain = {
             // "isTrigger"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Stage Ability")
-        // let returnString = "";
-
-        // console.log(parseRef)
-
-
-        // returnString += ``;
-        // from
-        // ability
-        // isTrigger    //possibly skip showing this
-
-        // parse
-        // references
-
-        // returnString += megaParsingFuckery.fillEventBodyBox(parseRef.parse);
-
-
-        // let parseString = "";
-        // let refString = "";
-        // const hasParse = parseRef.parse?.length;
-        // const hasRef = parseRef.references?.length;
-        // if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.parse,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.references,initialCounter);}
-
-        // rotationConditionOperatorBox
-
-
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
-
-
-
 
 
         return `
@@ -312,21 +246,7 @@ const megaParsingFuckeryPain = {
             //potentially not gonna use
             "isTrigger"
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Ability")
-        // let returnString = "";
-
-        // console.log(parseRef)
-
-
-        // returnString += ``;
-        // from
-        // ability
-        // isTrigger    //possibly skip showing this
-
-        // parse
-        // references
-
-        // returnString += megaParsingFuckery.fillEventBodyBox(parseRef.parse);
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Ability");
 
 
         let parseString = "";
@@ -399,20 +319,6 @@ const megaParsingFuckeryPain = {
             // "isTrigger"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Force-Trigger Ability Next-Phase")
-        // let returnString = "";
-
-        // console.log(parseRef)
-
-
-        // returnString += ``;
-        // from
-        // ability
-        // isTrigger    //possibly skip showing this
-
-        // parse
-        // references
-
-        // returnString += megaParsingFuckery.fillEventBodyBox(parseRef.parse);
 
 
         // let parseString = "";
@@ -715,41 +621,12 @@ const megaParsingFuckeryPain = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Implant Weaknesses");
         // initialCounter++;
 
-
-
-
-
         let parseString = "";
         // let refString = "";
         const hasParse = parseRef.noNewWeaknesses?.length;
         // const hasRef = parseRef.failed?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.noNewWeaknesses,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (!returnString) {
-        //     console.log(conditionObject)
-        //     throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)
-        // }
-
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
-        // if (!hasParse && !hasRef) {return "";}
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -1300,12 +1177,16 @@ const megaParsingFuckeryPain = {
             "name",
             "variableName",
             "target",
+            "type"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Shield Value");
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with Shield:</div>&nbsp;
             ${parseRef.variableName} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.type,"Type")}
         </div>`;
     },
     "Define Custom Variable with Skill Points"(parseRef,initialCounter) {
@@ -1887,7 +1768,8 @@ const megaParsingFuckeryPain = {
             "target",
             "variableName",
             "eventType",
-            "value"
+            "value",
+            "filterCaster",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Modifier Event");
 
@@ -1906,6 +1788,7 @@ const megaParsingFuckeryPain = {
         
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.filterCaster,"Filter Source",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.variableName,"Variable Name")}
             ${parseRef.value != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Value:</div>&nbsp;
@@ -2412,14 +2295,25 @@ const megaParsingFuckeryPain = {
             "name",
             "variableName",
             "target",
-            "flagNames"
+            "flagNames",
+            "conditions",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Remove Modifier Behavior Flag(s)");
+
+        const conditionObject = parseRef.conditions;
+        const conditionName = conditionObject?.name;
+        let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        const functionExists = megaParsingFuckery[conditionName];
+        if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+
+
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Remove Modifier Behavior Flag(s):</div>&nbsp;
             ${parseRef.flagNames} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
-        </div>`;
+        </div>
+        ${returnString}`;
     },
     "Battle was Victory"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -2770,6 +2664,7 @@ const megaParsingFuckeryPain = {
             "target",
             "variables",
             "paramSequence",
+            "paramSequence2",
             "damageSequence",
             "isGlobal",
 
@@ -2782,10 +2677,13 @@ const megaParsingFuckeryPain = {
 
 
         let parseString = "";
+        let parseString2 = "";
         let refString = "";
         const hasParse = parseRef.paramSequence?.length;
+        const hasParse2 = parseRef.paramSequence2?.length;
         const hasRef = parseRef.damageSequence?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.paramSequence,initialCounter);}
+        if (hasParse2) {parseString2 += megaParsingFuckery.fillEventBodyBox(parseRef.paramSequence2,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.damageSequence,initialCounter);}
 
         const displayStrings = parseRef.dynamicStringsArray ? megaParsingFuckeryPain.getStringsArrayResult(parseRef.dynamicStringsArray) : "";
@@ -2842,6 +2740,10 @@ const megaParsingFuckeryPain = {
             <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                 ${parseString}
             </div>` : ""}
+            ${hasParse2 ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Parameter Sequence</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString2}
+                </div>` : ""}
             ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionTHEN">DMG Sequence</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${refString}
@@ -6587,6 +6489,24 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Has Animation Logic"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "logicName",
+            "invertCondition",
+            
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Unique Name");
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Has Unique Name:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT on " : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.logicName,"Logic Name")}
+        </div>
+        `;
+    },
     "Has Unique Effect Name"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6800,6 +6720,7 @@ const megaParsingFuckeryPain = {
             "variables",
             "assignOwner",
             "whenCreated",
+            "beforeCreationCallback",
             "statSource",
             "dmgCountsForTeam",
             "canDupe",
@@ -6854,11 +6775,11 @@ const megaParsingFuckeryPain = {
 
 
         let parseString = "";
-        // let refString = "";
+        let refString = "";
         const hasParse = parseRef.whenCreated?.length;
-        // const hasRef = parseRef.failed?.length;
+        const hasRef = parseRef.beforeCreationCallback?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.whenCreated,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+        if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.beforeCreationCallback,initialCounter);}
 
 
 
@@ -6900,6 +6821,10 @@ const megaParsingFuckeryPain = {
                 ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">EXECUTE</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${parseString}
+                </div>` : ""}
+                ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Before Creation Callback</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${refString}
                 </div>` : ""}
             </div>
         </details>
@@ -6979,15 +6904,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Stack Exo-Toughness");
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
-
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Stack Exo-Toughness:</div>&nbsp;
@@ -7004,15 +6920,6 @@ const megaParsingFuckeryPain = {
             "amount",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Stack Skill Point Lock-Out");
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
 
         
         return `<div class="actionDetailBody2">
@@ -7711,12 +7618,13 @@ const megaParsingFuckeryPain = {
             "exclude",
             "minOrMax",
             "compareValue",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Target Has Lowest/Highest Value");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>${parseRef.invertCondition ? "NOT " : ""}
         </div>
         <div class="modifierDetailsBox">
 
@@ -7841,6 +7749,7 @@ const megaParsingFuckeryPain = {
 
             ${returnString ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Conditions:</div>
+                ${returnString}
             </div>` : ""}
 
             
@@ -7971,14 +7880,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Force Team Target-Lock on Target");
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Force Team Target-Lock on Target:</div>&nbsp;
@@ -7996,14 +7897,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Entity Escape Battle");
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Entity Escape Battle:</div>&nbsp;
@@ -8022,14 +7915,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Entity Exit Stage");
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Entity Exit Stage:</div>&nbsp;
@@ -8048,14 +7933,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Force Target-Lock on Target");
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Force Target-Lock on Target:</div>&nbsp;
@@ -8071,14 +7948,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Force Auto-Battle on Target");
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Force Auto-Battle on Target:</div>&nbsp;
@@ -8096,14 +7965,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Assign Target Battle-Location");
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Assign Target Battle-Location:</div>&nbsp;
@@ -8211,30 +8072,6 @@ const megaParsingFuckeryPain = {
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
         if (hasRef2) {refString2 += megaParsingFuckery.fillEventBodyBox(parseRef.resisted,initialCounter);}
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (!returnString) {
-        //     console.log(conditionObject)
-        //     throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)
-        // }
-
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
-        // if (!hasParse && !hasRef) {return "";}
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -8978,30 +8815,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update UI Preview");
 
-        // let parseString = "";
-        // let refString = "";
-        // const hasParse = parseRef.execute?.length;
-        // const hasRef = parseRef.variableValueChange?.length;
-        // if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
 
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
@@ -9352,26 +9165,6 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.Sequence,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (!returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
-        // if (!hasParse && !hasRef) {return "";}
 
         return `
             <div class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
@@ -9428,26 +9221,6 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject?.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (!returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
-        // if (!hasParse && !hasRef) {return "";}
 
         return `
             <div class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
@@ -9547,22 +9320,6 @@ const megaParsingFuckeryPain = {
 
         const displayStrings = parseRef.dynamicStringsArray ? megaParsingFuckeryPain.getStringsArrayResult(parseRef.dynamicStringsArray) : "";
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         const conditionObject = parseRef.conditions;
         const conditionName = conditionObject?.name;
@@ -9660,22 +9417,6 @@ const megaParsingFuckeryPain = {
 
         if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -9876,20 +9617,6 @@ const megaParsingFuckeryPain = {
         if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
 
 
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
-        // const previewValue = parseRef.previewValue ? megaParsingFuckery["Modifier: UI Preview"](parseRef.previewValue,initialCounter) : null;
-
-
-        // const dependencyObject = parseRef.removalDependencies;
-        // const dependencyName = dependencyObject?.name;
-        // let returnStringDependencies = "";
-        // const functionExists = megaParsingFuckery[dependencyName];
-        // if (functionExists) {returnStringDependencies += `<div class="rotationsConditionsBodyBox">` + functionExists(dependencyObject,initialCounter) + `</div>`;}
-
-        // stackData
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -9908,7 +9635,7 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
                 ${getStandardNameDisplay(initialCounter,parseRef.casterFilter,"Use Entity Snapshot",true)}
 
-                ${parseRef.returnString ? `
+                ${returnString ? `
                     <div class="rotationConditionOperatorHeaderInline">Conditions:</div>
                 ${returnString}` : ""}
             </div>
@@ -9958,40 +9685,6 @@ const megaParsingFuckeryPain = {
         // if (hasFunctions) {functionString += megaParsingFuckery.fillEventBodyBox(parseRef.modifierFunctions,initialCounter);}
         // if (hasSubMods) {subModString += megaParsingFuckery.fillEventBodyBox(parseRef.subModList,initialCounter);}
 
-
-        
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
-        // const previewValue = parseRef.previewValue ? megaParsingFuckery["Modifier: UI Preview"](parseRef.previewValue,initialCounter) : null;
-
-
-        // const dependencyObject = parseRef.removalDependencies;
-        // const dependencyName = dependencyObject?.name;
-        // let returnStringDependencies = "";
-        // const functionExists = megaParsingFuckery[dependencyName];
-        // if (functionExists) {returnStringDependencies += `<div class="rotationsConditionsBodyBox">` + functionExists(dependencyObject,initialCounter) + `</div>`;}
-
-        // stackData
-
-
-        // <span class="targetNaming"></span>
-        // <span class="targetFunction"></span>
 
         const isOperator = parseRef.isTargetOperator;
         
@@ -10131,22 +9824,6 @@ const megaParsingFuckeryPain = {
 
         
         const displayStrings = parseRef.dynamicStringsArray ? megaParsingFuckeryPain.getStringsArrayResult(parseRef.dynamicStringsArray) : "";
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         const previewValue = parseRef.previewValue ? megaParsingFuckery["Modifier: UI Preview"](parseRef.previewValue,initialCounter) : null;
 
@@ -10672,22 +10349,6 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -10723,23 +10384,6 @@ const megaParsingFuckeryPain = {
         // const hasRef = parseRef.variableValueChange?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.valueRanges,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -10778,22 +10422,6 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.valueRanges,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
 
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -10850,23 +10478,6 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.whenEnteringRange,initialCounter);}
         if (hasParse2) {parseString2 += megaParsingFuckery.fillEventBodyBox(parseRef.whenLeavingRange,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.whenValueChanges,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -10998,23 +10609,6 @@ const megaParsingFuckeryPain = {
         // const hasRef = parseRef.failed?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -11255,19 +10849,6 @@ const megaParsingFuckeryPain = {
             </div>`;
         }
 
-        
-        // const hasRef = parseRef.failed?.length;
-        
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
         return parseString;
     },
     "Enemy Entry"(parseRef,initialCounter) {
@@ -12054,14 +11635,6 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.conditionList,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed);}
         initialCounter++;
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
         return `
             
             ${hasParse ? `<div class="isConditionContainerBox">
@@ -12091,14 +11664,6 @@ const megaParsingFuckeryPain = {
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed);}
 
         initialCounter++;
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
         return `
             
             ${hasParse ? `<div class="isConditionContainerBox">
@@ -12134,31 +11699,6 @@ const megaParsingFuckeryPain = {
         const hasRef = parseRef.defaultEvents?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.caseEvents,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.defaultEvents,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // if (!returnString) {
-        //     console.log(conditionObject)
-        //     throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)
-        // }
-
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // rotationsSectionRowHolder
-        // rotationConditionOperatorBox
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
-        // </details>
-
-        // if (!hasParse && !hasRef) {return "";}
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">
@@ -12345,22 +11885,6 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Battle Event Construction");
 
-        // let parseString = "";
-        // let refString = "";
-        // const hasParse = parseRef.execute?.length;
-        // const hasRef = parseRef.variableValueChange?.length;
-        // if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
         let lightconeStatRow = "";
         if (parseRef.overridesArray && parseRef.overridesArray.length) {
             const pseudoStatsObject = {};
@@ -12511,33 +12035,6 @@ const megaParsingFuckeryPain = {
             // "stackData",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Achievement");
-
-        // let parseString = "";
-        // let refString = "";
-        // const hasParse = parseRef.execute?.length;
-        // const hasRef = parseRef.variableValueChange?.length;
-        // if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
-
-        // const conditionObject = parseRef.conditions;
-        // const conditionName = conditionObject.name;
-
-        // let returnString = "";
-        // const functionExists = megaParsingFuckery[conditionName];
-        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
-
-        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
-
-        // let lightconeStatRow = "";
-        // if (parseRef.overridesArray && parseRef.overridesArray.length) {
-        //     const pseudoStatsObject = {};
-        //     for (let statEntry of parseRef.overridesArray) {
-        //         pseudoStatsObject[statEntry.statName] = statEntry.value ?? 0;
-        //     }
-
-        //     const menuBoxDisplayOrder = Object.keys(pseudoStatsObject);
-        //     lightconeStatRow = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,pseudoStatsObject);
-        // }
 
         let abilityListRow = "";
         for (let nameEntry of parseRef.relatedAchievements) {

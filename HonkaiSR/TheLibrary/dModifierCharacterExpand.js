@@ -6274,7 +6274,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Ashveil_Ability02_Debuff",
+    "name": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>",
     "realName": "Bait",
     "aim": "Other",
     "desc": "This target is the \"Bait.\"",
@@ -6282,7 +6282,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "Ashveil_Passive_ListenEnhanceInsertBonusStackForShow",
+    "name": "<a class=\"gModGreen\" id=\"1644737943\">Ashveil_Passive_ListenEnhanceInsertBonusStackForShow</a>",
     "realName": "Gluttony",
     "aim": "Other",
     "desc": "The current stack count of \"Gluttony\" is #2[i]. The next enhanced Talent's Follow-Up ATK will additionally deal up to a maximum of #1[i] instance(s) of DMG.",
@@ -6952,7 +6952,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Ashveil_PointB3_CriticalDamageAdd",
+    "name": "<a class=\"gModGreen\" id=\"-1022843803\">Ashveil_PointB3_CriticalDamageAdd</a>",
     "realName": "First Fang",
     "aim": "Buff",
     "desc": "CRIT DMG dealt increases by #1[i]%. CRIT DMG dealt by Follow-Up ATK additionally increases by #2[i]%.",
@@ -6980,7 +6980,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "Ashveil_Eidolon1_DamageTakenAdd",
+    "name": "<a class=\"gModGreen\" id=\"-2023732335\">Ashveil_Eidolon1_DamageTakenAdd</a>",
     "realName": "Beware: Venture Not at Full Moon",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -6991,7 +6991,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Ashveil_Eidolon6_AllDamageTypeResistenceDown",
+    "name": "<a class=\"gModGreen\" id=\"544701936\">Ashveil_Eidolon6_AllDamageTypeResistenceDown</a>",
     "realName": "Finale: And Then There Were None",
     "aim": "Debuff",
     "desc": "All-Type RES decreases by #1[i]%.",
@@ -7002,7 +7002,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Ashveil_Eidolon4_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"-599775826\">Ashveil_Eidolon4_AttackUp</a>",
     "realName": "Heed: Swallow Truth Whole",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -7013,7 +7013,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Ashveil_Ability02_Debuff_DefenceDown",
+    "name": "<a class=\"gModGreen\" id=\"942921741\">Ashveil_Ability02_Debuff_DefenceDown</a>",
     "realName": "Flog: Smite Evil",
     "aim": "Debuff",
     "desc": "While \"Bait\" is on the field, DEF decreases by #1[i]%.",
@@ -7035,7 +7035,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Ashveil_Eidolon6_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-1033168707\">Ashveil_Eidolon6_DamageUp</a>",
     "realName": "Finale: And Then There Were None",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[f1]%.",
