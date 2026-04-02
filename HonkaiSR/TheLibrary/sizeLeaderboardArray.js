@@ -15,7 +15,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4015011,
     "lineCount": 18962,
-    "sizeCount": 691265
+    "sizeCount": 691277
   },
   {
     "entryType": "enemy",
@@ -431,7 +431,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4015021,
     "lineCount": 7743,
-    "sizeCount": 289349
+    "sizeCount": 289361
   },
   {
     "entryType": "enemy",
@@ -721,7 +721,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4015020,
     "lineCount": 6211,
-    "sizeCount": 224718
+    "sizeCount": 224730
   },
   {
     "entryType": "enemy",
@@ -1051,7 +1051,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TheDahlia",
     "entryIcon": "icon/character/1321.png",
     "lineCount": 4712,
-    "sizeCount": 178045
+    "sizeCount": 178013
   },
   {
     "entryType": "enemy",
@@ -1161,7 +1161,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Firefly",
     "entryIcon": "icon/character/1310.png",
     "lineCount": 4746,
-    "sizeCount": 168498
+    "sizeCount": 168482
   },
   {
     "entryType": "enemy",
@@ -1445,7 +1445,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Rappa",
     "entryIcon": "icon/character/1317.png",
     "lineCount": 3923,
-    "sizeCount": 137836
+    "sizeCount": 137828
   },
   {
     "entryType": "char",
@@ -1847,7 +1847,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Fugue",
     "entryIcon": "icon/character/1225.png",
     "lineCount": 2905,
-    "sizeCount": 106228
+    "sizeCount": 106220
   },
   {
     "entryType": "enemy",
@@ -2207,7 +2207,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TrailblazerHarmony",
     "entryIcon": "icon/character/8005.png",
     "lineCount": 2174,
-    "sizeCount": 80697
+    "sizeCount": 80689
   },
   {
     "entryType": "enemy",
