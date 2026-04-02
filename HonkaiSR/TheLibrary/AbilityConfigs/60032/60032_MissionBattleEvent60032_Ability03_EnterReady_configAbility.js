@@ -67,7 +67,7 @@ const configAbility = {
       "name": "Define Custom Variable with Team Count",
       "target": {
         "name": "Target Name",
-        "target": "{{Player Team(Exclude Memosprites)}} - BattleEvent60032_Avatar_1415"
+        "target": "{{Player Team(Exclude Memosprites)}} - {{BattleEvent60032_CHAR1415}}"
       },
       "variableName": "#CL_CharacterCount",
       "livingTargets": true

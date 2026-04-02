@@ -34,7 +34,7 @@ const configAbility = {
     "primaryTarget": "Select Player-Team Target",
     "filter": {
       "name": "Target Name",
-      "target": "{{Player Team(Exclude Memosprites)}} - BattleEvent60032_Avatar_1415"
+      "target": "{{Player Team(Exclude Memosprites)}} - {{BattleEvent60032_CHAR1415}}"
     }
   }
 }

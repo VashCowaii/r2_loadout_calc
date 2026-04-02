@@ -42,7 +42,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "Mydeimos"
+                "target": "{{Mydeimos}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"-762642255\">MLevel_MissionBattleEvent60022_MydeimosListener</a>"
             }
