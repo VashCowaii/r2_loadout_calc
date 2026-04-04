@@ -4806,9 +4806,13 @@ const graphs = {
                 let hitData = entry.hitData;
                 let source = entry.source;
 
-                sourcePoints[source].total += hitData.DMGTotalAVG;
+                const currentSourceObject = sourcePoints[source] ??= {};
+                currentSourceObject.total ??= 0;
+                currentSourceObject.points ??= [];
 
-                let currentDMG = sourcePoints[source].total;//hitData.DMGTotalAVG + dmgSUM;
+                currentSourceObject.total += hitData.DMGTotalAVG;
+
+                let currentDMG = currentSourceObject.total;//hitData.DMGTotalAVG + dmgSUM;
 
 
                 let currentAV = hitData.AV;
@@ -4822,14 +4826,14 @@ const graphs = {
                 const point = {x: xNew,y: yNew};
                 dmgPoints.push(point);
 
-                // sourcePoints[source] ??= {};
-                // sourcePoints[source].points = []
+                // currentSourceObject ??= {};
+                // currentSourceObject.points = []
 
                 // sourcePoints[charEntry] = {
                 //     points: [],
                 //     color: lineColors[currentCharacter]
                 // }
-                sourcePoints[source].points.push(point)
+                currentSourceObject.points.push(point)
                 dmgSUM += hitData.DMGTotalAVG;
             }
         }
