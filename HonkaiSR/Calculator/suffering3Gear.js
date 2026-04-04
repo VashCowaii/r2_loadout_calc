@@ -6532,13 +6532,10 @@ const turnLogicLightcones = {
             "noctisAlliedMemo": "Noctis (Allied memo) [LC]",
         },
     },
-    "Long May Rainbows Adorn the Sky": {//TODO: see function note
+    "Long May Rainbows Adorn the Sky": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             lcAddedDMG(battleData,generalInfo,sourceTurn,targetsGotHit,ownerRank,element,memoTurn) {
-                    // battleData,generalInfo,ownerTurn,targetsGotHit,ownerRank
-                //extremely similar to bailu sig in terms of how things are handled, the main diff here is just:
-                //this dmg CAN benefit from dmg bonuses (probably, will test)
                 if (!sourceTurn.longMayRainbowsAddedDMGObject) {
                     let lcNameRef = "Time Waits for No One";
                     let lcPathing = lightcones[lcNameRef].params;
@@ -6572,55 +6569,13 @@ const turnLogicLightcones = {
                 let ATKObject = sourceTurn.longMayRainbowsAddedDMGObject;
 
                 const tallyValue = sourceTurn.longMayRainbowsHPTally;
-                // const tallyValue = calcs.customCeiling(sourceTurn.longMayRainbowsHPTally + 1,0.1);
-                // const tallyValue = calcs.customCeiling(sourceTurn.longMayRainbowsHPTally,0.1);
-                // const tallyValue = calcs.customRound(sourceTurn.longMayRainbowsHPTally + 1,0.1);
-
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,
+                        {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${tallyValue.toLocaleString()} --> 0`});
+                }
                 
                 const additionalMulti = values[5] * tallyValue;
                 ATKObject.multipliers.additional = additionalMulti;
-
-
-                //TODO: this lightcone is mega fucked
-                //we can line up consume values vs the values shown in game, and in spite of that, we are REALLY close but just barely off
-                //from the dmg this lightcone does in the additional dmg instance.
-                //Best guess is the consume taken into the equation, follows some kind of rounding rule or truncation shit like The First Descendant did with
-                //its truncate to 4 decimals but only after you add 0.00001, cause that fuck game.
-                //values line up a LOT closer if we add 1 to the tally maybe as a base? But simply put, using the tally as is, will not line up but it will be close
-                //to clarify, when I say there is prob some rule, it would apply to each consume value as it is added to the tally, not to the tally total
-                //though maybe there's a fuckin rule for that too idk, fuck this lightcone.
-
-
-
-
-
-
-
-
-
-
-
-                // console.log("lc values",tallyValue,additionalMulti)
-                // console.log(ATKObject.multipliers.additional)
-
-
-                //316.2974441075857     --      0.999044359152197409
-                //370.2027893903086     --      0.999737481475313529
-
-                //gallagher     needs ~791.5
-                //tribbie       needs ~925.7
-
-                //getting   315.2974441075857
-                //need      316.6
-
-                // missing 1.31 worth of consume
-
-
-
-                //getting   369.2027893903086
-                //need      370.3
-
-
 
                 const addedWrapper = battleActions.additionalDMGWrapper;
                 const enemyTurns = battleData.enemyBasedTurns;
@@ -6656,7 +6611,12 @@ const turnLogicLightcones = {
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
 
-                    sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
+                    const oldValue = sourceTurn.longMayRainbowsHPTally ??= 0;
+                    sourceTurn.longMayRainbowsHPTally += + consumeValue;
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,
+                            {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${oldValue.toLocaleString()} --> ${sourceTurn.longMayRainbowsHPTally.toLocaleString()}`});
+                    }
                 },
                 "target": "self",
                 "listenerName": "Long May Rainbows Adorn the Sky - owner basic atk listener",
@@ -6685,7 +6645,12 @@ const turnLogicLightcones = {
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
 
-                    sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
+                    const oldValue = sourceTurn.longMayRainbowsHPTally ??= 0;
+                    sourceTurn.longMayRainbowsHPTally += + consumeValue;
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,
+                            {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${oldValue.toLocaleString()} --> ${sourceTurn.longMayRainbowsHPTally.toLocaleString()}`});
+                    }
                 },
                 "target": "self",
                 "listenerName": "Long May Rainbows Adorn the Sky - owner skill listener",
@@ -6714,7 +6679,12 @@ const turnLogicLightcones = {
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
 
-                    sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
+                    const oldValue = sourceTurn.longMayRainbowsHPTally ??= 0;
+                    sourceTurn.longMayRainbowsHPTally += + consumeValue;
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,
+                            {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${oldValue.toLocaleString()} --> ${sourceTurn.longMayRainbowsHPTally.toLocaleString()}`});
+                    }
                 },
                 "target": "self",
                 "listenerName": "Long May Rainbows Adorn the Sky - owner ult listener",
@@ -6782,16 +6752,11 @@ const turnLogicLightcones = {
                     const HPTally = ownerTurn.longMayRainbowsHPTally;
                     if (!HPTally) {return;}
 
-                    // let characterName = ownerTurn.properName;
-                    const lcNameRef = "Long May Rainbows Adorn the Sky";
-                    const logicRef = turnLogicLightcones[lcNameRef];
-                    const addedDMG = logicRef.skillFunctions.lcAddedDMG;
+                    const addedDMG = this.lcAddedDMG ??= turnLogicLightcones["Long May Rainbows Adorn the Sky"].skillFunctions.lcAddedDMG;
                     const targetsGotHit = generalInfo.targetsGotHit;
                     
                     const element = sourceTurn.element;
                     addedDMG(battleData,generalInfo,ownerTurn,targetsGotHit,ownerRank,element,sourceTurn);
-                    // const targetsGotHit = generalInfo.targetsGotHit;
-                    // logicRef.skillFunctions.zoneAddedDMG(battleData,generalInfo,ownerTurn,targetsGotHit);
                 },
                 "target": "enemy",
                 "listenerName": "Long May Rainbows Adorn the Sky -  attack listener for additional dmg",
@@ -10539,8 +10504,9 @@ const turnLogicRelics = {
                         if (buffCheck) {return;}//if any ally on the field still has gentle rain, then the buff would persist across the team, we can abort early
                     }
 
+                    const buffSheet2 = ownerTurn.warriorGoddessCRITDMGSHEET;
                     const allyArray = battleData.allAlliesArray;
-                    removeBuffFromBatch(battleData,allyArray,buffSheet);
+                    removeBuffFromBatch(battleData,allyArray,buffSheet2);
                 }
             },
             "listeners": [
@@ -10551,13 +10517,19 @@ const turnLogicRelics = {
                         // poke("HealStart",battleData,turnMerge);
 
                         const sourceTurn = generalInfo.sourceTurn;
+                        const memoRef = sourceTurn.memospriteEventRef;
+                        const potentialMemo = sourceTurn[memoRef];
+
+                        const targetTurn = generalInfo.targetTurn;
+                        if (targetTurn.properName === sourceTurn.properName || targetTurn.properName === potentialMemo?.properName) {return;}
+                        //the healing needs to be done on a target that isn't the owner or their memosprite
+
                         let ownerTurn = null;
                         const isMemo = sourceTurn.isMemosprite;
                         if (isMemo) {
                             ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
                         }
                         else {ownerTurn = sourceTurn;}
-                        
 
                         let ownersSlots = this.ownersSlots;
                         
@@ -10623,8 +10595,8 @@ const turnLogicRelics = {
                 },
             ],
             "buffNames": {
-                "spd": "Gentle Rain [LC]",
-                "crit": "Gentle Rain [LC] (Crit DMG)",
+                "spd": "Gentle Rain [Relic]",
+                "crit": "Gentle Rain [Relic] (Crit DMG)",
             },
         }
     },

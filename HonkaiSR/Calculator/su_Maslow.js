@@ -2750,6 +2750,59 @@ const maslowCharactersRemembrance = {
             addTeamWant: [],
         },
     },
+    "Hyacine": {
+        defaultMainSubs: ["HP%","SPDFlat","CritDamageBase","DamageBreak"],
+        defaultTrashSub: ["HPFlat","EffectRES","DEF%","DEFFlat"],
+        0: {
+            gives: ["MemoSource","HealingSource"],
+            givesTeam: ["TeamCountChange","HealingSource","MemoSource","Consume","HP"],
+            wants: ["Memo","HP","Wind","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            wantsTeam: ["Memo","HP","Ice","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["MemoSource","HealingSource"],
+            givesTeam: ["TeamCountChange","HealingSource","MemoSource","Consume","HP"],
+            wants: ["Memo","HP","Wind","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            wantsTeam: ["Memo","HP","Ice","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["MemoSource","HealingSource"],
+            givesTeam: ["TeamCountChange","HealingSource","MemoSource","Consume","HP","SPD"],
+            wants: ["Memo","HP","Wind","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            wantsTeam: ["Memo","HP","Ice","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["MemoSource","HealingSource"],
+            givesTeam: ["TeamCountChange","HealingSource","MemoSource","Consume","HP","SPD"],
+            wants: ["Memo","HP","Wind","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            wantsTeam: ["Memo","HP","Ice","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["MemoSource","HealingSource"],
+            givesTeam: ["TeamCountChange","HealingSource","MemoSource","Consume","HP","SPD"],
+            wants: ["Memo","HP","Wind","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            wantsTeam: ["Memo","HP","Ice","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["MemoSource","HealingSource"],
+            givesTeam: ["TeamCountChange","HealingSource","MemoSource","Consume","HP","SPD"],
+            wants: ["Memo","HP","Wind","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            wantsTeam: ["Memo","HP","Ice","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["MemoSource","HealingSource"],
+            givesTeam: ["TeamCountChange","HealingSource","MemoSource","Consume","HP","SPD","PEN"],
+            wants: ["Memo","HP","Wind","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            wantsTeam: ["Memo","HP","Ice","Consume",...isHealer,...characterHasEnergy,"CritDMG",...characterDealsDamage,...generalCharacterWants,...isGeneralSupport],
+            addTeamWant: [],
+        },
+    },
 }
 
 

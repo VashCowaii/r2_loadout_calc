@@ -24012,7 +24012,7 @@ const turnLogic = {
                 if (!ATKObjects.memBasicAttackATKOBJECT1) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill;
                     const scalar = "ATK";
-                    const tags = ["All","MemoSkill","Ice"];
+                    const tags = ["All","Ice"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25248,6 +25248,7 @@ const turnLogic = {
             supremeStanceExpired(battleData,eventTurn) {
                 const aggyTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
                 const garmentTurn = aggyTurn.aggyGarmentTURNEVENT;
+                const countdownTurn = aggyTurn.aggySupremeStanceCountdownTURNEVENT;
                 // const logicRef = turnLogic[aggyTurn.properName];
                 const charValuesRef = aggyTurn.battleValues;
                 const wasNormalDeath = !charValuesRef.supremeStanceActive;
@@ -25258,19 +25259,26 @@ const turnLogic = {
 
                 let buffSheet = ATKObjects.aggyUltimateSTANCESHEET;
                 // const updateBuff = battleActions.updateBuff;
-                removeBuff(battleData,aggyTurn,buffSheet);
-                if (aggyTurn.rank >= 6) {
-                    let buffSheet = ATKObjects.aggyUltimateE6PENSHEET;
-                    removeBuff(battleData,aggyTurn,buffSheet);
-                    removeBuff(battleData,garmentTurn,buffSheet);
-                }
+                if (buffSheet) {
+                    const buffCheck = aggyTurn.buffsObject[buffSheet.buffName];
 
-                const eventName = eventTurn.properName;
-                eventTurn.isActive = false;
+                    if (buffCheck) {
+                        removeBuff(battleData,aggyTurn,buffSheet);
+                        if (aggyTurn.rank >= 6) {
+                            let buffSheet = ATKObjects.aggyUltimateE6PENSHEET;
+                            removeBuff(battleData,aggyTurn,buffSheet);
+                            removeBuff(battleData,garmentTurn,buffSheet);
+                        }
+                    }
+                }
+                
                 const nextAV = battleData.nextTurnAV;
                 const positions = battleData.allyPositions;
-                //removal from turn order
-                if (!wasNormalDeath) {
+                const countdownWasActive = countdownTurn?.isActive;
+
+                if (countdownWasActive) {
+                    countdownTurn.isActive = false;
+                    const eventName = countdownTurn.properName;
                     for (let i=0;i<nextAV.length;i++) {
                         let currentTurn = nextAV[i];
                         if (currentTurn.properName === eventName) {
@@ -27520,6 +27528,1305 @@ const turnLogic = {
             "e2CritDMG": "Listen Up, the Slumber Speaks Soft",
             "e4AllyBreakEff": "Wake Up, the Tomorrow is Yours",
             "e6AllyRESPEN": "Like This, Always",
+        },
+        "characterValuesBattle": {},
+    },
+    "Hyacine": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall;
+                return returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.hyacineSkill, 
+                target: "self", 
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.hyacineBasic, 
+                target: "enemy", 
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            hyacineBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hyacineBasicREF ??= ATKObjects["Basic ATK"]["When Breeze Kisses Cirrus"].variant1;
+        
+                if (!ATKObjects.hyacineBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+
+                    let values = ATKObjects.hyacineBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Wind"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.hyacineBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                    }
+                }
+                let ATKObject = ATKObjects.hyacineBasicATKOBJECT;
+        
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            hyacineSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.hyacineSkillREF ??= ATKObjects.Skill["Love Over the Rainbow"].variant1;
+                let values = ATKObjects.hyacineSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:"Self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+                // logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
+                // battleActions.consumeHP(battleData,false,0.10,sourceTurn,sourceTurn,"Skill",false,true);
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+                
+                // const eveyTurn = sourceTurn.everEveyTURNEVENT;
+                const icaTurn = sourceTurn.hyacineIcaTURNEVENT;
+                if (!icaTurn.isActive) {logicRef.skillFunctions.addIcaToField(battleData,sourceTurn);}
+                //ica gets healed whether he exists on the field or not
+
+                if (!ATKObjects.hyacineSkillHEALOBJECT) {
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.hyacineSkillHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+                    ATKObjects.hyacineSkillIcaONLYHEALOBJECT = {
+                        multipliers: {
+                            primary: values[2],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[3],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+                }
+                const healObject = ATKObjects.hyacineSkillHEALOBJECT;
+                const icaHealObject = ATKObjects.hyacineSkillIcaONLYHEALOBJECT;
+
+                const healAlly = battleActions.healAlly;
+                const allyPositions = battleData.allyPositions;
+                for (let ally of allyPositions) {
+                    if (ally.properName != icaTurn.properName) {healAlly(battleData,healObject,ally,sourceTurn,skillRef.slot,1);}
+                }
+                healAlly(battleData,icaHealObject,icaTurn,sourceTurn,skillRef.slot,1);
+                // battleActions.healAlly(battleData,healObject,icaTurn,sourceTurn,skillRef.slot,1);
+
+                // logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
+                // poke("EvernightGainMemoria",battleData,{pointsGained: 2 + (sourceTurn.riddleIsActive ? 12 : 0),sourceString:"Evernight Skill"});
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            icaTurnAttack(battleData,target,memoTurn) {
+                // // eventOwner: ownerTurn.name
+                const hyacineTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+
+                // console.log(hyacineTurn,memoTurn)
+                const logicRef = turnLogic[hyacineTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.icaTurnAttackREF ??= ATKObjects["Memosprite Skill"]["Rainclouds, Time to Go!"].variant1;
+                let values = ATKObjects.icaTurnAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,hyacineTurn);
+
+                if (!ATKObjects.icaTurnAttackATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[hyacineTurn.properName].memoSkill;
+                    const scalar = "HP";
+                    // const tags = ["All","Basic","Lightning"];
+                    const tags = ["All","Wind"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    // const actionTags = ["Basic","Attack"];
+                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const compositeCacheTag = tags + actionTags + hyacineTurn.properName;
+                    ATKObjects.icaTurnAttackATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                        scalarAmountOverride: 0,
+                    }
+                }
+                let ATKObject = ATKObjects.icaTurnAttackATKOBJECT;
+
+                // console.log(memoTurn)
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
+                
+                const exoTurnRef = {sourceTurn:memoTurn}
+                poke("MemoSkillStart",battleData,exoTurnRef);
+
+                const oldValue = hyacineTurn.hyacineBattleHealingTally;
+                ATKObject.scalarAmountOverride = oldValue;
+
+                const endMulti = 1 - (hyacineTurn.rank >= 6 ? 0.12 : 0.5);
+                hyacineTurn.hyacineBattleHealingTally *= endMulti;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hyacine heal tally", bodyText: `Heal tally (Hyacine): ${oldValue.toLocaleString()} --> ${hyacineTurn.hyacineBattleHealingTally.toLocaleString()}`});}
+                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,hyacineTurn);
+                poke("MemoSkillEnd",battleData,exoTurnRef);
+            },
+            addIcaToField(battleData,sourceTurn) {
+                // const eveyTurn = sourceTurn.everEveyTURNEVENT;
+                const icaTurn = sourceTurn.hyacineIcaTURNEVENT;
+
+                icaTurn.currentHP = icaTurn.maxHP;//reset HP to full
+                icaTurn.isDead = false;
+                icaTurn.isActive = true;
+                icaTurn.AV = icaTurn.AVBase;//reset accumulated AV
+
+                //inserting into physical positions
+                const alliedSpots = battleData.allyPositions;
+                for (let i=0;i<alliedSpots.length;i++) {
+                    const currentTurn = alliedSpots[i];
+                    //look for aggy's position and put garment in AFTER her, slotwise, so if she's char1, garment is inserted between char1 and char2
+                    if (currentTurn.properName === sourceTurn.properName) {
+                        alliedSpots.splice(i+1,0,icaTurn);
+                        break;
+                    }
+                }
+                const charValuesRef = sourceTurn.battleValues;
+                // charValuesRef.netherRemainingTurns = 3;
+
+                sourceTurn.activeSummons += 1;
+                sourceTurn.activeMemosprites += 1;
+                charValuesRef.icaIsActive = true;
+                // sourceTurn.memoriaIsReadyForAdvance = true;
+
+
+                const rank = sourceTurn.rank;
+                if (rank >= 6) {
+                    const logicRef = turnLogic[sourceTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!ATKObjects.hyacineE6IcaFieldSheet) {
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.hyacineE6IcaFieldSheet = {
+                            "stats": [ResistanceAllPEN],
+                            [ResistanceAllPEN]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffNames.e6IcaOnField,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+                    const buffSheet = ATKObjects.hyacineE6IcaFieldSheet;
+
+                    const updateBuff = battleActions.updateBuff;
+                    const allyTurns = battleData.nameBasedTurns;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                }
+                //inserting into the actual turn order
+                // battleData.nextTurnAV.push(eveyTurn);
+                //ICA DOES NOT TAKE TURNS, UNLESS HE WILLS IT
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: icaTurn.eventImage, AV: battleData.sumAV});}
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: icaTurn});
+                poke("AllyCreated",battleData,{targetTurn:icaTurn});
+                battleActions.assignAttackTargetsEnemy(battleData);
+
+                const amountToRegen = 15;
+                battleActions.updateEnergy(battleData,amountToRegen,sourceTurn,false,"Soar, Unto the Sunlight");
+                if (!sourceTurn.firstSummonDone) {
+                    sourceTurn.firstSummonDone = true;
+                    battleActions.updateEnergy(battleData,30,sourceTurn,false,"Soar, Unto the Sunlight (First summon)");
+                }
+            },
+            icaDeathFunction(battleData,eventTurn,deathParam) {
+                const allyTurns = battleData.nameBasedTurns;
+                const ownerTurn = allyTurns[deathParam];
+
+                const icaTurn = eventTurn;
+
+                //the advance value does NOT scale with trace level
+                battleActions.actionAdvance(0.30,ownerTurn,battleData,"Ica died - Hyacine advance");
+                
+                icaTurn.currentHP = 0;
+                icaTurn.isDead = true;
+                icaTurn.isActive = false;
+                const valuesRef = ownerTurn.battleValues;
+
+                //removal from actual lineup positions(for blast factors on enemy to ally attacks)
+                const positions = battleData.allyPositions;
+                for (let i=0;i<positions.length;i++) {
+                    let icaTurn2 = positions[i];
+                    if (icaTurn.properName === icaTurn2.properName) {
+                        positions.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+
+                ownerTurn.activeSummons -= 1;
+                ownerTurn.activeMemosprites -= 1;
+                valuesRef.icaIsActive = false;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Remove", assignedTo: ownerTurn.properName, summonedBy: ownerTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: icaTurn.eventImage, AV: battleData.sumAV});}
+
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: icaTurn});
+
+                ownerTurn.hyacineTargetReadyForTalentHealCounter = 0;
+
+                for (let allySlot in allyTurns) {
+                    const currentAlly = allyTurns[allySlot];
+                    currentAlly.hyacineTargetReadyForTalentHeal = false;
+                }
+
+                const rank = ownerTurn.rank;
+                if (rank >= 6) {
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffSheet = ATKObjects.hyacineE6IcaFieldSheet;
+
+                    // const updateBuff = battleActions.updateBuff;
+                    for (let allySlot in allyTurns) {
+                        const currentTurn = allyTurns[allySlot];
+                        removeBuff(battleData,currentTurn,buffSheet);
+                    }
+                }
+
+                battleActions.assignAttackTargetsEnemy(battleData);
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.hyacineSPD200HPSheet) {
+                    const characterName = currentTurn.properName;
+                    const buffNames = turnLogic[characterName].buffNames;
+                    ATKObjects.hyacineSPD200HPSheet = {
+                        "stats": [HPP],
+                        [HPP]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.spdOver200HP,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    ATKObjects.hyacineSPD200HealingSheet = {
+                        "stats": [HealingOutgoing,CritDamageBase],
+                        [HealingOutgoing]: 0.01,
+                        [CritDamageBase]: currentTurn.rank >= 4 ? 0.02 : 0,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.spdOver200,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 200,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+
+                const SPDBeyondThis = 200;
+                const currentStats = currentTurn.statTable;
+                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal;
+                const validSPD = Math.max(0,currentSPD-SPDBeyondThis);
+                const usableSPD = Math.min(200,Math.floor(validSPD));
+
+                const HPSheet = ATKObjects.hyacineSPD200HPSheet;
+                const healingSheet = ATKObjects.hyacineSPD200HealingSheet;
+                const updateBuff = battleActions.updateBuff;
+
+                const icaTurn = currentTurn.hyacineIcaTURNEVENT;
+                const buffsObject = currentTurn.buffsObject;
+
+                const buffCheck1 = buffsObject[HPSheet.buffName];
+                if (buffCheck1) {//if the HP buff exists
+                    if (!validSPD) {//but we have no valid spd, then remove
+                        removeBuff(battleData,currentTurn,buffCheck1);
+                        removeBuff(battleData,icaTurn,buffCheck1);
+                    }
+                }
+                else if (validSPD) {//but if the buff doesn't exist yet and we have valid spd, then apply
+                    updateBuff(battleData,currentTurn,HPSheet);
+                    updateBuff(battleData,icaTurn,HPSheet);
+                }
+
+                const buffCheck2 = buffsObject[healingSheet.buffName];
+                if (buffCheck2) {//if the outgoing healing buff exists
+                    const currentStacks = buffCheck2.currentStacks;
+                    if (!validSPD) {//but we're under 200spd, then remove it
+                        removeBuff(battleData,currentTurn,buffCheck2);
+                        removeBuff(battleData,icaTurn,buffCheck2);
+                    }
+                    else if (currentStacks < usableSPD) {//otherwise if we don't have enough healing bonus, then add the diff in stacks
+                        const stackDiff = usableSPD-currentStacks;
+                        healingSheet.currentStacks = stackDiff;
+                        
+                        updateBuff(battleData,currentTurn,healingSheet);
+                        updateBuff(battleData,icaTurn,healingSheet);
+                        return;
+                    }
+                    else if (currentStacks === usableSPD) {return;}//if the healing stacks is equal to what we already have, then abort
+                    else {//otheriwse if we have too many stacks, remove it with a silent log tag, so we can apply the correct buff after
+                        removeBuff(battleData,currentTurn,buffCheck2,true);
+                        removeBuff(battleData,icaTurn,buffCheck2,true);
+                    }
+                }
+                else if (!usableSPD) {return;}//if we have no whole number spd above 200, then abort at this point
+                
+                //the only reason we should reach this far, is if we should actually apply a buff
+                healingSheet.currentStacks = usableSPD;
+                updateBuff(battleData,currentTurn,healingSheet);
+                updateBuff(battleData,icaTurn,healingSheet);
+            },
+            icaPassiveHealFunction(battleData,sourceTurn) {
+                const icaTurn = sourceTurn.hyacineIcaTURNEVENT;
+
+                const allyPositions = battleData.allyPositions;
+                const alliesToHeal = [];
+
+                for (let ally of allyPositions) {
+                    if (ally.properName === icaTurn.properName) {continue;}
+                    // const HPCheck = ally.currentHP != ally.maxHP;
+                    // if (HPCheck) {alliesToHeal.push(ally);}
+
+                    // const HPCheck = ally.currentHP != ally.maxHP;
+                    if (ally.hyacineTargetReadyForTalentHeal) {
+                        alliesToHeal.push(ally);
+
+                        sourceTurn.hyacineTargetReadyForTalentHealCounter -= 1;
+                        ally.hyacineTargetReadyForTalentHeal = false;
+                    }
+
+                    
+                }
+
+                if (alliesToHeal.length) {
+                    const logicRef = turnLogic[sourceTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.hyacineIcaTalentREF ??= ATKObjects["Memosprite Talent"]["Take Sky in Hand"].variant1;
+                    let values = ATKObjects.hyacineIcaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    if (!ATKObjects.hyacineIcaPassiveHEALOBJECT) {
+                        // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                        ATKObjects.hyacineIcaPassiveHEALOBJECT = {
+                            multipliers: {
+                                primary: values[1],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: values[2],
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: "HP",
+                            scalarSourceOverride: sourceTurn.name,
+                            DMGTags: [],
+                            slot: skillRef.slot
+                        }
+
+                        ATKObjects.hyacineIcaPassiveHEALOBJECT = {
+                            multipliers: {
+                                primary: values[3],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: values[4],
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: "HP",
+                            scalarSourceOverride: sourceTurn.name,
+                            DMGTags: [],
+                            slot: skillRef.slot
+                        }
+                    }
+                    const healObject = ATKObjects.hyacineIcaPassiveHEALOBJECT;
+                    //consume is index 0
+                    battleActions.consumeHP(battleData,false,values[0],icaTurn,icaTurn,skillRef.slot,false,false);
+                    battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,alliesToHeal);
+
+                    // icaTurn.turnState
+                    if (sourceTurn.battleValues.hyacineAfterRainActive) {
+                        battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
+                    }
+                }
+            },
+            hyacineUltimate(battleData,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const valuesRef = sourceTurn.battleValues;
+                let skillRef = ATKObjects.hyacineUltimateREF ??= ATKObjects.Ultimate["We Who Fly Into Twilight"].variant1;
+                let values = ATKObjects.hyacineUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                const energy = battleActions.updateEnergy;
+                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+                // const logicRef = turnLogic[characterName];
+                const icaTurn = sourceTurn.hyacineIcaTURNEVENT;
+                if (!icaTurn.isActive) {logicRef.skillFunctions.addIcaToField(battleData,sourceTurn);}
+
+
+                if (!ATKObjects.hyacineUltHEALOBJECT) {
+                    const buffNames = logicRef.buffNames;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.hyacineUltHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+                    ATKObjects.hyacineUltIcaONLYHEALOBJECT = {
+                        multipliers: {
+                            primary: values[5],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[6],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+
+                    ATKObjects.hyacineUltHPSHEET = {
+                        "stats": [HPP,HPFlat],
+                        [HPP]: values[2] + (rank>=1 ? 0.50 : 0),
+                        [HPFlat]: values[3],
+                        "statsOnHit": null,
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.ultHP,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.hyacineUltCountdown = {
+                        "stats": null,
+                        "statsOnHit": null,
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.ultCountdown,
+                        "durationInTurn": 3,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        "removeOnDeath": true,
+                        expireFunction: logicRef.skillFunctions.afterRainExpired,
+                        expireParam: sourceTurn.name,
+                    }
+                }
+
+
+
+                const HPSheet = ATKObjects.hyacineUltHPSHEET;
+                const countdownSheet = ATKObjects.hyacineUltCountdown;
+                const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
+
+
+                const healObject = ATKObjects.hyacineUltHEALOBJECT;
+                const icaHealObject = ATKObjects.hyacineUltIcaONLYHEALOBJECT;
+                const healAlly = battleActions.healAlly;
+                const allyPositions = battleData.allyPositions;
+                for (let ally of allyPositions) {
+                    if (ally.properName != icaTurn.properName) {healAlly(battleData,healObject,ally,sourceTurn,skillRef.slot,1);}
+                }
+                healAlly(battleData,icaHealObject,icaTurn,sourceTurn,skillRef.slot,1);
+
+
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,countdownSheet);
+                valuesRef.hyacineAfterRainActive = true;
+                if (!buffCheck) {//if afterRain is already active before we renewed, then all allies already have the HP buff, and there's no need to call it again
+                    const allyPositions = battleData.allyPositions;
+                    for (let ally of allyPositions) {
+                        updateBuff(battleData,ally,HPSheet);
+                    }
+                }
+
+
+                energy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            afterRainExpired(battleData,expireParam) {
+                const ownerTurn = battleData.nameBasedTurns[expireParam];
+                ownerTurn.battleValues.hyacineAfterRainActive = false;
+
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const HPSheet = ATKObjects.hyacineUltHPSHEET;
+                const allyPositions = battleData.allyPositions;
+                // const updateBuff = battleActions.updateBuff;
+                removeBuffFromBatch(battleData,allyPositions,HPSheet);
+            },
+            hyacineTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.hyacineTechREF ??= ATKObjects.Technique["Day So Right, Life So Fine!"].variant1;
+                
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                const buffNames = logicRef.buffNames;
+
+                if (!ATKObjects.hyacineTechHPSHEET) {
+                    let values = ATKObjects.hyacineTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    ATKObjects.hyacineTechHPSHEET = {
+                        "stats": [HPP],
+                        [HPP]: values[2],
+                        "source": "Technique",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.techHP,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+
+                    ATKObjects.hyacineTechHealObject = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+                }
+
+                const buffSheet = ATKObjects.hyacineTechHPSHEET;
+                const healObject = ATKObjects.hyacineTechHealObject;
+
+                const updateBuff = battleActions.updateBuff;
+                const allyPositions = battleData.allyPositions;
+                for (let ally of allyPositions) {
+                    updateBuff(battleData,ally,buffSheet);
+                }
+                battleActions.healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    // battleData.nameIndex[properName] = characterEntry;
+                    const hyacineMenuStats = [...battleData.menuStats[ownerTurn.name]];
+                    let skillRef = ATKObjects.hyacineTalentREF ??= ATKObjects["Talent"]["First Light Heals the World"].variant1;
+                    let values = ATKObjects.hyacineTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    // const SPDScalar = values[3];
+                    const HPScalar = values[0];
+                    // const flatHP = values[5];
+                    Object.assign(hyacineMenuStats,{
+                        [SPDBase]: 0,
+                        [SPDFlat]: 1,//no speed is really necessary for him, but to avoid dividing by 0, he needs at least 1 spd when receiving spd buffs and updating AV
+                        [SPDP]: 0,
+
+                        [HPBase]: hyacineMenuStats[HPBase] * HPScalar,
+                        [HPFlat]: hyacineMenuStats[HPFlat] * HPScalar,
+                        [HPP]: hyacineMenuStats[HPP],
+                        [LVL]: 80,
+
+                        [CharacterAggroBase]: characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+                    });
+
+
+                    let AggroStats = calcs.getAggroFinal(hyacineMenuStats);
+                    let SPDStats = calcs.getSPDFinal(hyacineMenuStats);
+                    let HPStats = calcs.getHPFinal(hyacineMenuStats);
+                    const skillFunctionsRef = logicRef.skillFunctions;
+                    const icaTurnAttack = skillFunctionsRef.icaTurnAttack;
+                    const ActionEntry = {
+                        AV:0,
+                        AVBase:0,
+                        SPD:SPDStats.SPDFinal,
+
+                        currentHP: HPStats.HPFinal,
+                        maxHP: HPStats.HPFinal,
+
+                        currentAggro: AggroStats.AggroFinal,
+                        baseAggro: AggroStats.AggroBaseFinal,
+
+                        maxEnergy: ownerTurn.maxEnergy,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        debuffCounter: 0,
+                        DOTCounter: 0,
+                        activeFinalMultipliers: {},
+                        finalMultiCounter: 0,
+                        shieldCounter: 0,
+                        shieldValueCurrent: 0,
+                        shieldValueMax: 0,
+                        activeShields: {},
+
+                        properName: "Little Ica",
+                        name: "hyacineMemosprite",
+                        
+                        statTable: hyacineMenuStats,
+                        statTableONHIT: new Array(greatTableSize).fill(0),
+                        buffsObject: {},
+                        teamDebuffs: {},
+                        buffsStartTurn: [],
+                        buffsEndTurn: [],
+                        tagSpecific: {},
+                        cacheTagValues: superGlobal.createEntityCache(),
+                        isDead: false,
+                        rank: ownerTurn.rank,
+                        element: ownerTurn.element,
+                        path: null,
+                        cantBeTargeted: false,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isMemosprite: true,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: icaTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Little Ica"],
+                        deathFunction: skillFunctionsRef.icaDeathFunction,
+                        deathParam: ownerTurn.name,
+                    };
+                    battleData.nameIndex["Little Ica"] = "hyacineMemosprite";
+
+                    // summaryTurns[properName] = 0;
+                    battleData.nameBasedTurns["hyacineMemosprite"] = ActionEntry;
+                    ownerTurn.hyacineIcaTURNEVENT = ActionEntry;
+                    ownerTurn.hyacineBattleHealingTally = 0;
+                    battleData.declaredMemosprites.push(ActionEntry);
+                    battleData.allAlliesArray.push(ActionEntry);
+                    battleData.allAllyTargetsArray.push(ActionEntry);
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    ownerTurn.summonEventRef = "hyacineIcaTURNEVENT";
+                    ownerTurn.memospriteEventRef = "hyacineIcaTURNEVENT";
+                    
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Little Ica creation", bodyText: `Memosprite "${ActionEntry.properName}" entity constructed`});}
+                },
+                "target": "self",
+                "listenerName": "Little Ica turn object construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatSPD",//SPD stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.isMemosprite || sourceTurn.properName != ownerTurn.properName) {return;}
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Tempestuous Halt SPD check",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HealEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const sourceName = sourceTurn.properName;
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+
+                    if (sourceName != ownerTurn.properName && sourceName != icaTurn.properName) {return;}
+                    //we only care about healing done by ica or hyacine
+                    const oldValue = ownerTurn.hyacineBattleHealingTally
+                    ownerTurn.hyacineBattleHealingTally += generalInfo.totalHealed;
+
+
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hyacine heal tally", bodyText: `Heal tally (Hyacine): ${oldValue.toLocaleString()} --> ${ownerTurn.hyacineBattleHealingTally.toLocaleString()}`});}
+                },
+                "target": "self",
+                "listenerName": "Battle healing tally monitor",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ActionEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (!ownerTurn.battleValues.hyacineAfterRainActive || sourceTurn.properName != ownerTurn.properName) {return;}
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+
+
+
+                    const queueObject = this.queueObject ??= {
+                        attack: turnLogic[ownerTurn.properName].skillFunctions.icaTurnAttack,
+                        target: this.target,
+                        name: this.listenerName,
+                        properName: icaTurn.properName,
+                        sourceTurn: null,
+                        isExtraTurn: true,
+                        isInjectedAbility: false,
+                        extraTurnHasChoice: true,
+                    }
+                    queueObject.sourceTurn = icaTurn;
+                    battleActions.queueInstantUltimateUse(battleData,queueObject);
+
+
+                    // battleActions.queueExtraTurn(battleData,extraTurnObject,true);
+                    logToBattle(battleData,{logType: "GenericAction", source:"Hyacine took action", bodyText: `Little Ica gained extra turn`});
+                },
+                "target": "self",
+                "listenerName": "Hyacine action ended - after rain ica turn injection",
+                "ownerTurn": {},
+            },
+
+            {
+                "trigger": "AllyLostHP",
+                condition(battleData,generalInfo) {
+                    // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
+                    let ownerTurn = this.ownerTurn;
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+
+                    if (!icaTurn.isActive) {return;}
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    
+                    if (icaTurn.properName === sourceTurn.properName) {return;}
+
+                    if (!sourceTurn.hyacineTargetReadyForTalentHeal) {
+                        sourceTurn.hyacineTargetReadyForTalentHeal = true;
+                        ownerTurn.hyacineTargetReadyForTalentHealCounter = (ownerTurn.hyacineTargetReadyForTalentHealCounter ?? 0) + 1;
+                    }
+                    
+                },
+                "target": "self",
+                "listenerName": "Memo talent, mark ally ready for healing",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyDied",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const targetTurn = generalInfo.targetTurn;
+
+                    if (targetTurn.hyacineTargetReadyForTalentHeal) {
+                        targetTurn.hyacineTargetReadyForTalentHeal = false;
+                        ownerTurn.hyacineTargetReadyForTalentHealCounter -= 1;
+                    }
+                },
+                "target": "team",
+                "listenerName": "Memo talent - ally died with marked for healing",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ActionEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+
+                    if (!icaTurn.isActive) {return;}
+
+                    if (!ownerTurn.hyacineTargetReadyForTalentHealCounter) {return;}
+
+                    const icaPassiveHeal = this.icaPassiveHealFunction ??= turnLogic[ownerTurn.properName].skillFunctions.icaPassiveHealFunction;
+                    icaPassiveHeal(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Memo talent - ica passive healing (action taken)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+                    if (!icaTurn.isActive) {return;}
+
+                    if (!ownerTurn.hyacineTargetReadyForTalentHealCounter) {return;}
+
+                    const icaPassiveHeal = this.icaPassiveHealFunction ??= turnLogic[ownerTurn.properName].skillFunctions.icaPassiveHealFunction;
+                    icaPassiveHeal(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Memo talent - ica passive healing (turn started phase ending)",
+                "ownerTurn": {},
+            },
+
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Tempestuous Halt SPD check battlestart force proc",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HealStart",
+                condition(battleData,generalInfo) {
+                    // const turnMerge = {targetTurn,sourceTurn}
+                    // poke("HealStart",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+                    if (sourceTurn.properName != ownerTurn.properName && sourceTurn.properName != icaTurn.properName) {return;}
+                    //we only monitor healing from ica and hyacine, not anyone else
+
+                    
+
+                    if (!this.allyWasHealedIcaDMGSHEET) {
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+
+                        let skillRef = ATKObjects.hyacineTalentREF ??= ATKObjects["Talent"]["First Light Heals the World"].variant1;
+                        let values = ATKObjects.hyacineTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                        //skillref and values here should always get called when constructing Ica's turn even in the battleprep phase
+                        this.allyWasHealedIcaDMGSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: values[2],
+                            "source": "Talent",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.healingIcaDMG,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 3,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "removeOnDeath": true,
+                        }
+                    }
+                    
+                    if (icaTurn.isActive) {
+                        const buffSheet = this.allyWasHealedIcaDMGSHEET;
+                        battleActions.updateBuff(battleData,icaTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Talent healing done - ica dmg bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HealStart",
+                condition(battleData,generalInfo) {
+                    // const turnMerge = {targetTurn,sourceTurn}
+                    // poke("HealStart",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+                    if (sourceTurn.properName != ownerTurn.properName && sourceTurn.properName != icaTurn.properName) {return;}
+                    //we only monitor healing from ica and hyacine, not anyone else
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const hpRatio = (targetTurn.currentHP / targetTurn.maxHP) <= 0.5;
+
+                    if (!this.allyWasHealedOutgoingHealingSHEET) {
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        // const ATKObjects = logicRef.ATKObjects;
+
+                        //skillref and values here should always get called when constructing Ica's turn even in the battleprep phase
+                        this.allyWasHealedOutgoingHealingSHEET = {
+                            "stats": [HealingOutgoing],
+                            [HealingOutgoing]: 0.25,
+                            "source": "Trace",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.under50Healing,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 3,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "removeOnDeath": true,
+                        }
+                    }
+
+                    const buffSheet = this.allyWasHealedOutgoingHealingSHEET;
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.name];
+
+                    const updateBuff = battleActions.updateBuff;
+                    if (buffCheck) {
+                        if (hpRatio) {return;}
+                        else {
+                            removeBuff(battleData,sourceTurn,buffCheck);
+                        }
+                    }
+                    else {
+                        if (hpRatio) {
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                        else {return;}
+                    }
+                },
+                "target": "self",
+                "listenerName": "Gloomy Grin: outgoing healing when under 50%",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [EffectRES],
+                        [EffectRES]: 0.50,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceEffectRES,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    // updateBuff(battleData,eveyTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Stormy Caress: effect res bonus",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
+                    
+                    // const rank = sourceTurn.rank;
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 1,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritRate,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,icaTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Gloomy Grin: crit rate bonus",
+                "ownerTurn": {},
+            },
+
+
+
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.hyacineUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hyacine - Ultimate queued",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyCreated",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.battleValues.hyacineAfterRainActive) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const HPSheet = ATKObjects.hyacineUltHPSHEET;
+                    const targetTurn = generalInfo.targetTurn;
+                    battleActions.updateBuff(battleData,targetTurn,HPSheet);
+                },
+                "target": "team",
+                "listenerName": "Ultimate - After Rain - ally added to field while after rain active",
+                "ownerTurn": {},
+            },
+            
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const hyacineTechnique = this.hyacineTechnique ??= logicRef.skillFunctions.hyacineTechnique;
+                        hyacineTechnique(battleData,"self",ownerTurn);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hyacine Technique",
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [
+                {
+                    "trigger": "AttackDMGEnd",
+                    condition(battleData,generalInfo) {
+                        // AttackEnd
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        const sourceTurnIsNotMemo = sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite;
+                        if (sourceTurn.isEnemy || !ownerTurn.battleValues.hyacineAfterRainActive || sourceTurnIsNotMemo) {return;}
+                        
+                        if (!this.hyacineE1HEALOBJECT) {
+                            // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                            this.hyacineE1HEALOBJECT = {
+                                multipliers: {
+                                    primary: 0.08,
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                scalar: "HP",
+                                scalarSourceOverride: ownerTurn.name,
+                                DMGTags: [],
+                                slot: "E1"
+                            }
+                        }
+                        const healObject = this.hyacineE1HEALOBJECT;
+                        battleActions.healAlly(battleData,healObject,sourceTurn,ownerTurn,"E1",1);
+                    },
+                    "target": "self",
+                    "listenerName": "E1 ally attack listener",
+                    "ownerTurn": {},
+                },
+            ],
+            2: [
+                {
+                    "trigger": "AllyLostHP",
+                    condition(battleData,generalInfo) {
+                        // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        // if (sourceTurn.cantBeTargeted) {return;}
+    
+    
+                        if (!this.hyacineE2SPDheet) {
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            this.hyacineE2SPDheet = {
+                                "stats": [SPDP],
+                                [SPDP]: 0.30,
+                                "statsOnHit": null,
+                                "source": "Talent",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": logicRef.buffNames.e2SPD,
+                                "durationInTurn": 3,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                            }
+                        }
+                        const buffSheet = this.hyacineE2SPDheet;
+                        const buffName = buffSheet.buffName;
+
+                        const buffCheck = sourceTurn.buffsObject[buffName];
+                        if (buffCheck && buffCheck.duration === buffCheck.durationInTurn) {return;}
+                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "E2 ally lost hp listener",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "icaIsActive": false,
+            "hyacineAfterRainActive": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Restore",
+        "buffNames": {
+            "traceEffectRES": "Stormy Caress",
+            "traceCritRate": "Gloomy Grin (Crit)",
+            "under50Healing": "Gloomy Grin (Healing)",
+            "healingIcaDMG": "First Light Heals the World",
+            "spdOver200HP": "Tempestuous Halt (HP)",
+            "spdOver200": "Tempestuous Halt (Outgoing Healing)",
+            "ultCountdown": "After Rain (Countdown)",
+            "ultHP": "After Rain (HP)",
+            "e2SPD": "E2: Come Sit in My Courtyard",
+            "e6IcaOnField": "E6: O Sky, Heed My Plea",
+            "techHP": "Day So Right, Life So Fine!",
         },
         "characterValuesBattle": {},
     },

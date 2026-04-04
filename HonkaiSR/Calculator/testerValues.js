@@ -112,7 +112,7 @@ const customDisplayValuesLog = {
         {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true},
     ],
-    "Hyacine": [//not on live
+    "Hyacine": [
         {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Healing Tally", refName: "hyacineBattleHealingTally", isBattleValue: false},
         {valueName: "After Rain", refName: "hyacineAfterRainActive", isBattleValue: true, isCharacterState: true},
@@ -1560,6 +1560,20 @@ const defaultConditions = {
             type: "AND",
             array: []
         }
+    },
+    "Hyacine": {
+        hasEnhancedState: true,
+        "Skill": {
+            type: "AND",
+            array: []
+        },
+        "Ultimate": {
+            type: "AND",
+            array: []
+        },
+        "validTargetChecks": [
+            // "Skill"
+        ],
     },
 
     //NIHILITY

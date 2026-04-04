@@ -1431,6 +1431,34 @@ const hitSplitters = {
             },
         ],
     },
+    "Hyacine": {
+        "basic": [
+            {
+            "primary": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 10
+            },
+            "isSourceFirstHit": true,
+            "isAttackFirstHit": true,
+            "isSourceLastHit": true,
+            "isAttackLastHit": true
+            }
+        ],
+        "memoSkill": [
+            {
+              "all": {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 10
+              },
+              "isSourceFirstHit": true,
+              "isAttackFirstHit": true,
+              "isSourceLastHit": true,
+              "isAttackLastHit": true
+            }
+        ],
+    },
 
     //PRESERVATION
     "Aventurine": {
