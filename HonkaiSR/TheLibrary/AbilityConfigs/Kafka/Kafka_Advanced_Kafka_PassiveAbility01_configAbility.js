@@ -359,7 +359,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "showInActionOrder": true,
                       "abortFlags": [
                         "STAT_CTRL",

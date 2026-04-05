@@ -159,7 +159,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Gepard_PassiveAbility_1_Insert",
-                      "priorityTag": "AvatarReviveSelf",
+                      "priorityTag": "CharacterReviveSelf",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,

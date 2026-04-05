@@ -293,7 +293,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -566,7 +566,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -1096,7 +1096,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -1579,7 +1579,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -1950,7 +1950,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -2619,7 +2619,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
                         }
@@ -2750,7 +2750,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false

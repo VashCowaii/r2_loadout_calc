@@ -193,7 +193,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -963,7 +963,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "valuePerStack": {
                 "P1_BreakDelayRatio": {
@@ -3437,7 +3437,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -4169,7 +4169,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "valuePerStack": {
                 "P1_BreakDelayRatio": {
@@ -6794,7 +6794,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "P1_BreakDelayRatio": {
@@ -6944,7 +6944,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterChangeState",
+                          "priorityTag": "EnemyChangeState",
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "P1_BreakDelayRatio": {
@@ -7497,7 +7497,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W3_FigureBoss_PassiveAbility01_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -7615,7 +7615,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W3_FigureBoss_PassiveAbility02_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -8115,7 +8115,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "P1_BreakDelayRatio": {
@@ -8798,7 +8798,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "P1_BreakDelayRatio": {
@@ -8948,7 +8948,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterChangeState",
+                          "priorityTag": "EnemyChangeState",
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "P1_BreakDelayRatio": {
@@ -9547,7 +9547,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "WMonster_W3_DollElite01_PassiveAbility01_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -10058,7 +10058,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "P1_BreakDelayRatio": {

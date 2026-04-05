@@ -1152,7 +1152,7 @@ const configAbility = {
                             "value2": 0
                           },
                           "abilityName": "Monster_W4_Claymore_01_Ability02_InsertAbility_Part01",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -1301,7 +1301,7 @@ const configAbility = {
                             "value2": 0
                           },
                           "abilityName": "Monster_W4_Claymore_01_Ability02_InsertAbility_Part01",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -1546,7 +1546,7 @@ const configAbility = {
                     "value2": 0
                   },
                   "abilityName": "Monster_W4_Claymore_01_Ability02_InsertAbility_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false

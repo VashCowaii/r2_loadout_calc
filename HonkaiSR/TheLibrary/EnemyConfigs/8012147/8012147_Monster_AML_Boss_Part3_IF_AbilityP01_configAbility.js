@@ -130,7 +130,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
               "showInActionOrder": true,

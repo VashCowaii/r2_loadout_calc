@@ -2201,7 +2201,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterBattleCry",
+                      "priorityTag": "EnemyBattleCry",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -2246,7 +2246,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterBattleCry",
+                      "priorityTag": "EnemyBattleCry",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -2400,7 +2400,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_SW_Boss_01_PassiveAbility_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,

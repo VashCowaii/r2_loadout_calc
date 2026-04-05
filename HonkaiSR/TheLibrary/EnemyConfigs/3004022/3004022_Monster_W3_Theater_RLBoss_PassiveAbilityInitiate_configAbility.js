@@ -238,7 +238,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_Theater_RLBoss_PassiveAbility01_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -720,7 +720,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

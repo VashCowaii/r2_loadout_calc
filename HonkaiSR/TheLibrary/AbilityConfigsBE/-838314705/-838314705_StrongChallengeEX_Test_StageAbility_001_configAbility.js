@@ -46,7 +46,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "priorityTag": "MonsterBattleCry",
+              "priorityTag": "EnemyBattleCry",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

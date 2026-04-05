@@ -1704,7 +1704,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "abortFlags": [
                 "STAT_MonsterChangePhase"
@@ -1871,7 +1871,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "abortFlags": [
                 "STAT_MonsterChangePhase"
@@ -2038,7 +2038,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "abortFlags": [
                 "STAT_MonsterChangePhase"
@@ -2373,7 +2373,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W2_Yanqing_Ability02_Insert_Over",
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -2559,7 +2559,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W2_Yanqing_Ability02_Insert_Over",
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

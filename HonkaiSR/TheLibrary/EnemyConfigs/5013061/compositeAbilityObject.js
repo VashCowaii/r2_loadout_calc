@@ -619,7 +619,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "priorityTag": "AvatarReviveSelf",
+          "priorityTag": "CharacterReviveSelf",
           "allowAbilityTriggers": false
         }
       ],
@@ -2716,7 +2716,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -2780,7 +2780,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -2992,7 +2992,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,

@@ -315,7 +315,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W2_Mecha02_02_DeathRattle_Insert",
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

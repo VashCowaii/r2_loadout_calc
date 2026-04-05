@@ -67,7 +67,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "priorityTag": "MonsterReviveOthers",
+              "priorityTag": "EnemyReviveOthers",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -112,7 +112,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "priorityTag": "MonsterReviveOthers",
+              "priorityTag": "EnemyReviveOthers",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

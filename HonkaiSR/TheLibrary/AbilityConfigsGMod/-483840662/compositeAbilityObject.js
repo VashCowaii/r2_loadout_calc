@@ -1725,7 +1725,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "StageAbility_61255101_Camera",
-                      "priorityTag": "AvatarReviveSelf",
+                      "priorityTag": "CharacterReviveSelf",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -3798,7 +3798,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "ownerState": "Mask_AliveOrRevivable",
                       "targetState": "Mask_AliveOrRevivable",
                       "canHitNonTargets": true,

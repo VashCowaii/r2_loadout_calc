@@ -121,7 +121,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "LevelPerformAvatar",
+              "priorityTag": "STAGE_Character",
               "ownerState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false

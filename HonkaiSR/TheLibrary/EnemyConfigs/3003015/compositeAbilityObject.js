@@ -318,7 +318,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "MonsterBuffOthers_Elation",
+              "priorityTag": "EnemyBuffOthers_Elation",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -3506,7 +3506,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W3_Theater_IF_PassiveAbility01_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -6251,7 +6251,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -7902,7 +7902,7 @@ const compositeAbilityObject = {
                                 }
                               },
                               "abilityName": "Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget",
-                              "priorityTag": "MonsterBuffOthers_Elation",
+                              "priorityTag": "EnemyBuffOthers_Elation",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
@@ -8167,7 +8167,7 @@ const compositeAbilityObject = {
                                 }
                               },
                               "abilityName": "Monster_W3_Clock_02_IF_Ability03_Insert_Part01",
-                              "priorityTag": "MonsterBuffOthers_Elation",
+                              "priorityTag": "EnemyBuffOthers_Elation",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
@@ -8438,7 +8438,7 @@ const compositeAbilityObject = {
                                 }
                               },
                               "abilityName": "Monster_W1_Mecha01_03_IF_Ability01_Insert_Part01",
-                              "priorityTag": "MonsterBuffOthers_Elation",
+                              "priorityTag": "EnemyBuffOthers_Elation",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
@@ -8706,7 +8706,7 @@ const compositeAbilityObject = {
                                 }
                               },
                               "abilityName": "Monster_W3_Dinosaur_02_IF_Ability09_Insert_Part01",
-                              "priorityTag": "MonsterBuffOthers_Elation",
+                              "priorityTag": "EnemyBuffOthers_Elation",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,

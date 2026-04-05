@@ -119,7 +119,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -215,7 +215,7 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W1_Gepard_RL_PassiveAbility_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -240,7 +240,7 @@ const configAbility = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Monster_W1_Gepard_RL_PassiveAbility_Insert2",
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
@@ -283,7 +283,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [

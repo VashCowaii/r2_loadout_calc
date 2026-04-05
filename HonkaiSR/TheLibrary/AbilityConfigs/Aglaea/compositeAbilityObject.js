@@ -585,7 +585,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarBuffOthers",
+                      "priorityTag": "CharacterBuffOthers",
                       "ownerState": "Anyone",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

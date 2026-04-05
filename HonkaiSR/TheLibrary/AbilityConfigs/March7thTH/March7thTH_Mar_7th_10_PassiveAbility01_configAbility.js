@@ -203,7 +203,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "PROG_AvatarLowest",
+                  "priorityTag": "DefaultCharacter",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "STAT_CTRL",
@@ -285,7 +285,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "PROG_AvatarLowest",
+                      "priorityTag": "DefaultCharacter",
                       "canHitNonTargets": true,
                       "abortFlags": [
                         "STAT_CTRL",
@@ -405,7 +405,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "PROG_AvatarLowest",
+                      "priorityTag": "DefaultCharacter",
                       "canHitNonTargets": true,
                       "abortFlags": [
                         "STAT_CTRL",

@@ -71,7 +71,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "priorityTag": "AvatarBuffSelf",
+                  "priorityTag": "CharacterBuffSelf",
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 }

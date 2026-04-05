@@ -95,7 +95,7 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Monster_W4_DawnsEyePart_03_Ability01_Part01",
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

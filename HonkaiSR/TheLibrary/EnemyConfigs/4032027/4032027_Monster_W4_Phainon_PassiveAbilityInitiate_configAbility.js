@@ -278,7 +278,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -296,7 +296,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert02",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -321,7 +321,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -339,7 +339,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert02",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

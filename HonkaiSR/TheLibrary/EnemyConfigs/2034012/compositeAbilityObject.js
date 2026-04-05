@@ -601,7 +601,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "valuePerStack": {
                 "MaxWolfRank": 4
@@ -1454,7 +1454,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -4580,7 +4580,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemies by Aggro}}"
           },
-          "priorityTag": "MonsterChangeState",
+          "priorityTag": "EnemyChangeState",
           "canHitNonTargets": true,
           "showInActionOrder": true,
           "abortFlags": [
@@ -4878,7 +4878,7 @@ const compositeAbilityObject = {
                     "typeValue": 1
                   },
                   "abilityName": "Monster_W2_LycanKing_PassiveAbility_Insert",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -4914,7 +4914,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -5103,7 +5103,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "canHitNonTargets": true,
                               "allowAbilityTriggers": false
                             }
@@ -5181,7 +5181,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "canHitNonTargets": true,
                                   "allowAbilityTriggers": false
                                 }
@@ -5952,7 +5952,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemies by Aggro}}"
                           },
-                          "priorityTag": "MonsterInsertAttackOthers",
+                          "priorityTag": "EnemyAttackFromOthers",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -6129,7 +6129,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemies by Aggro}}"
                           },
-                          "priorityTag": "MonsterInsertAttackOthers",
+                          "priorityTag": "EnemyAttackFromOthers",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -6300,7 +6300,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "priorityTag": "MonsterChangeState",
+                                  "priorityTag": "EnemyChangeState",
                                   "canHitNonTargets": true,
                                   "valuePerStack": {
                                     "ResetBloodRageCount": {
@@ -7871,7 +7871,7 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Monster_W2_LycanKing_RLBoss_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -7888,7 +7888,7 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Monster_W2_LycanKing_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

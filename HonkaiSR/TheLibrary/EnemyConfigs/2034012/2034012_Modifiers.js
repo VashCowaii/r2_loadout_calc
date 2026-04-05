@@ -590,7 +590,7 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Monster_W2_LycanKing_RLBoss_PassiveAbility_Insert",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -607,7 +607,7 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Monster_W2_LycanKing_PassiveAbility_Insert",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

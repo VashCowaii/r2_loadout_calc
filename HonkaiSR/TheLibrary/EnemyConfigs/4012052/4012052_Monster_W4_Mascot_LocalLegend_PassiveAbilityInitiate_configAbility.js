@@ -49,7 +49,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "allowAbilityTriggers": false
                 },
                 {
@@ -65,7 +65,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability03_Insert_Part01",
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "allowAbilityTriggers": false
                 },
                 {
@@ -82,7 +82,7 @@ const configAbility = {
         {
           "name": "Inject Ability Use",
           "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
-          "priorityTag": "MonsterBattleCry",
+          "priorityTag": "EnemyBattleCry",
           "allowAbilityTriggers": false
         },
         {

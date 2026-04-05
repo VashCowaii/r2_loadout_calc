@@ -601,7 +601,7 @@ const compositeAbilityObject = {
                         }
                       },
                       "abilityName": "Monster_W4_IronTombCorePart_01_PassiveAbility02_Insert",
-                      "priorityTag": "MonsterBuffSelf_Elation",
+                      "priorityTag": "EnemyBuffSelf_Elation",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false

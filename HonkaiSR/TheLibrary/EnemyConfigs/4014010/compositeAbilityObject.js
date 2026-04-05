@@ -8432,7 +8432,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Nikador: Self}}"
                   },
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -8937,7 +8937,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -9074,7 +9074,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Monster_W4_Nikadory_PassiveAbilityWithHearse_Insert",
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
@@ -9239,7 +9239,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_Nikadory_PassiveAbilityWithHearse_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -9380,7 +9380,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_Nikadory_PassiveAbility_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,

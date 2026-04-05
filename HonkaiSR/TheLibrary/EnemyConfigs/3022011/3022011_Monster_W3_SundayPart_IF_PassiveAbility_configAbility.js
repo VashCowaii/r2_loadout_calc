@@ -259,7 +259,7 @@ const configAbility = {
                         }
                       },
                       "abilityName": "Monster_W3_SundayPart_IF_PassiveAbility_Insert",
-                      "priorityTag": "MonsterBattleCry",
+                      "priorityTag": "EnemyBattleCry",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [

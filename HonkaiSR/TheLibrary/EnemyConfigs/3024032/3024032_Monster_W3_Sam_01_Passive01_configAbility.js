@@ -276,7 +276,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false

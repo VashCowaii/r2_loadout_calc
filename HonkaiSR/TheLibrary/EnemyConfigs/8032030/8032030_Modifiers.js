@@ -3000,7 +3000,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}.[[getSummoner]]"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -3018,7 +3018,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false

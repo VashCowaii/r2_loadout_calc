@@ -518,7 +518,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_Ghost_AbilityP01_ForceKill",
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -929,7 +929,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

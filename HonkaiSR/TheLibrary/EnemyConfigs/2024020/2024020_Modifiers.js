@@ -162,7 +162,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -268,7 +268,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

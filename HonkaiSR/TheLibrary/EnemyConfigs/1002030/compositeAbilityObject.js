@@ -639,7 +639,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterInsertAttackOthers",
+                          "priorityTag": "EnemyAttackFromOthers",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -742,7 +742,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterBattleCry",
+                      "priorityTag": "EnemyBattleCry",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [

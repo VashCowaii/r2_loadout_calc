@@ -63,7 +63,7 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Monster_W2_Lycan_01_Revive_Insert",
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

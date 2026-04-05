@@ -140,7 +140,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "priorityTag": "MonsterChangeState",
+          "priorityTag": "EnemyChangeState",
           "canHitNonTargets": true,
           "valuePerStack": {
             "P1_BreakDelayRatio": {

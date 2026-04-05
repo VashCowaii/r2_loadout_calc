@@ -1529,7 +1529,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 },
@@ -3212,7 +3212,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_Manta_LocalLegend_Ability03_Part01",
-                          "priorityTag": "PROG_MonsterLowest",
+                          "priorityTag": "DefaultEnemy",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -3386,7 +3386,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_Manta_LocalLegend_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -5694,7 +5694,7 @@ const compositeAbilityObject = {
                     "modifier": "<a class=\"gModGreen\" id=\"1823230905\">Enemy_W4_Manta_Passive_Insert</a>"
                   },
                   "abilityName": "Monster_W4_Manta_Passive_Insert",
-                  "priorityTag": "MonsterBuffSelf",
+                  "priorityTag": "EnemyBuffSelf",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

@@ -503,7 +503,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -577,7 +577,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -706,7 +706,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -788,7 +788,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -988,7 +988,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -1062,7 +1062,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -1216,7 +1216,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -1280,7 +1280,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -1369,7 +1369,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {

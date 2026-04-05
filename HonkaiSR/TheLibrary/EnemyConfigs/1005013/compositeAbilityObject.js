@@ -1199,7 +1199,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1222,7 +1222,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1275,7 +1275,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1298,7 +1298,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1351,7 +1351,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1374,7 +1374,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1427,7 +1427,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1450,7 +1450,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2165,7 +2165,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2188,7 +2188,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2241,7 +2241,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2264,7 +2264,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2317,7 +2317,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2340,7 +2340,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2393,7 +2393,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemies by Aggro}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2416,7 +2416,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -4050,7 +4050,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W1_CocoliaP2_PassiveAbility_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -6558,7 +6558,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterBattleCry",
+                      "priorityTag": "EnemyBattleCry",
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "BOSS_BreakDelay": {
@@ -6863,7 +6863,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "LevelPerformAvatar",
+                      "priorityTag": "STAGE_Character",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }

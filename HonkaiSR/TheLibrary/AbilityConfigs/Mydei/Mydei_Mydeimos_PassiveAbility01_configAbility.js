@@ -739,7 +739,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "AvatarBuffSelf",
+                          "priorityTag": "CharacterBuffSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -897,7 +897,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "AvatarBuffSelf",
+                          "priorityTag": "CharacterBuffSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [

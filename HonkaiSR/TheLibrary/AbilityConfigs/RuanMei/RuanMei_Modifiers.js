@@ -263,7 +263,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "LevelPerformAvatar",
+              "priorityTag": "STAGE_Character",
               "canHitNonTargets": true,
               "allowAbilityTriggers": true
             },
@@ -305,7 +305,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "LevelPerformAvatar",
+              "priorityTag": "STAGE_Character",
               "canHitNonTargets": true,
               "allowAbilityTriggers": true
             }

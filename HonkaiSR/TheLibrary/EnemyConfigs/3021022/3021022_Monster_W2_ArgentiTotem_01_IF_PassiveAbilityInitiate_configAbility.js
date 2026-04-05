@@ -103,7 +103,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

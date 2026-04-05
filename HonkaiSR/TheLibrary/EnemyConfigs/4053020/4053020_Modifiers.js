@@ -186,7 +186,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_W4_Unicorn_01_Ability05_Insert_Part01",
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

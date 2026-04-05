@@ -173,7 +173,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "AvatarInsertAttackSelf",
+              "priorityTag": "CharacterAttackFromSelf",
               "showInActionOrder": true,
               "abortFlags": [
                 "STAT_CTRL",

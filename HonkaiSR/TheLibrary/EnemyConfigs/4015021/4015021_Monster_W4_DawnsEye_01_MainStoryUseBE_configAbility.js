@@ -32,7 +32,7 @@ const configAbility = {
         "name": "Add Target by Unique Identifier",
         "identifier": "HealBattleEvent"
       },
-      "priorityTag": "LevelPerformMonster",
+      "priorityTag": "STAGE_Enemy",
       "canHitNonTargets": true,
       "allowAbilityTriggers": false
     }

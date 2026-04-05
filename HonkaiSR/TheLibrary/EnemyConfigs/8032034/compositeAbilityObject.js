@@ -1001,7 +1001,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "priorityTag": "MonsterReviveOthers",
+                  "priorityTag": "EnemyReviveOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -1046,7 +1046,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "priorityTag": "MonsterReviveOthers",
+                  "priorityTag": "EnemyReviveOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -1279,7 +1279,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "priorityTag": "MonsterReviveOthers",
+                  "priorityTag": "EnemyReviveOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -1324,7 +1324,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "priorityTag": "MonsterReviveOthers",
+                  "priorityTag": "EnemyReviveOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -1571,7 +1571,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "priorityTag": "MonsterReviveOthers",
+                  "priorityTag": "EnemyReviveOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -1616,7 +1616,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "priorityTag": "MonsterReviveOthers",
+                  "priorityTag": "EnemyReviveOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -4775,7 +4775,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}.[[getSummoner]]"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "allowAbilityTriggers": false
@@ -4793,7 +4793,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "allowAbilityTriggers": false
@@ -4944,7 +4944,7 @@ const compositeAbilityObject = {
                     }
                   },
                   "abilityName": "Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -5009,7 +5009,7 @@ const compositeAbilityObject = {
                     }
                   },
                   "abilityName": "Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

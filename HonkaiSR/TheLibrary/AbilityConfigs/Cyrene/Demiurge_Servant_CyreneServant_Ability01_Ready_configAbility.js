@@ -29,7 +29,7 @@ const configAbility = {
       "actionTag": null,
       "abilityName": "Servant_CyreneServant_FormationReset",
       "afterInjection": [],
-      "priorityTag": "Character_HighPriorityAction"
+      "priorityTag": "CharacterPriority"
     }
   ],
   "references": [],

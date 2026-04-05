@@ -384,7 +384,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "priorityTag": "MonsterChangeState",
+          "priorityTag": "EnemyChangeState",
           "canHitNonTargets": true,
           "valuePerStack": {
             "MaxWolfRank": 2
@@ -467,7 +467,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -613,7 +613,7 @@ const compositeAbilityObject = {
                     "typeValue": 1
                   },
                   "abilityName": "Monster_W2_Lycan_01_Revive_Insert",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -699,7 +699,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }

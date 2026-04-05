@@ -96,7 +96,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "priorityTag": "AvatarInsertAttackSelf",
+          "priorityTag": "CharacterAttackFromSelf",
           "canHitNonTargets": true,
           "showInActionOrder": true,
           "abortFlags": [
@@ -140,7 +140,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "AvatarInsertAttackSelf",
+              "priorityTag": "CharacterAttackFromSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [

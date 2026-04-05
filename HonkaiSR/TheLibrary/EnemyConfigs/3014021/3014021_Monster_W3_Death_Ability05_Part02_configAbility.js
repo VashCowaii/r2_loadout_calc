@@ -227,7 +227,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterInsertAttackOthers",
+                  "priorityTag": "EnemyAttackFromOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

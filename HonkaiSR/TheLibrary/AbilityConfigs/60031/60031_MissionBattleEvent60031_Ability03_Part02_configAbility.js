@@ -488,7 +488,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Irontomb: Core}}"
           },
-          "priorityTag": "MonsterInsertAttackSelf",
+          "priorityTag": "EnemyAttackFromSelf",
           "ownerState": "Mask_AliveOrLimbo",
           "targetState": "Mask_AliveOrLimbo",
           "canHitNonTargets": true,

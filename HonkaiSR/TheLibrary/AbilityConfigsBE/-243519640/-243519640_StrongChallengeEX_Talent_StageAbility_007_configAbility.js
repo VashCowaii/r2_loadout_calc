@@ -38,7 +38,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterSummon",
+              "priorityTag": "EnemyCreated",
               "canHitNonTargets": true,
               "valuePerStack": {
                 "PropertyValue": {
@@ -104,7 +104,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterSummon",
+                  "priorityTag": "EnemyCreated",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "PropertyValue": {
@@ -190,7 +190,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "MonsterBuffSelf",
+                  "priorityTag": "EnemyBuffSelf",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

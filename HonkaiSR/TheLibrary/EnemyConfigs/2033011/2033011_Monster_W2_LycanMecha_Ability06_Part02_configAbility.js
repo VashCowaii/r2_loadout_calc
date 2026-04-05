@@ -262,7 +262,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "valuePerStack": {
                 "MaxWolfRank": 4
@@ -335,7 +335,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "MaxWolfRank": 3
@@ -414,7 +414,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "MaxWolfRank": 3
@@ -450,7 +450,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterChangeState",
+                          "priorityTag": "EnemyChangeState",
                           "canHitNonTargets": true,
                           "valuePerStack": {
                             "MaxWolfRank": 2
@@ -506,7 +506,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "MaxWolfRank": 2

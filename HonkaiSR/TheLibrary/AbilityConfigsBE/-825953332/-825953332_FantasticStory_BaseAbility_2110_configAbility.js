@@ -340,7 +340,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
@@ -409,7 +409,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
@@ -470,7 +470,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
@@ -531,7 +531,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false

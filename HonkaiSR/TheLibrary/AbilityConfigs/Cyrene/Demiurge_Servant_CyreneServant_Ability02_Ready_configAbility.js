@@ -19,7 +19,7 @@ const configAbility = {
       "skillType": "ControlSkill02",
       "abilityName": "Servant_CyreneServant_FormationReset",
       "afterInjection": [],
-      "priorityTag": "Character_HighPriorityAction"
+      "priorityTag": "CharacterPriority"
     },
     {
       "name": "IF",

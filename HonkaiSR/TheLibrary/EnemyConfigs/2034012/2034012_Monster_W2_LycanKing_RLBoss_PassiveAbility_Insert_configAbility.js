@@ -258,7 +258,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "priorityTag": "MonsterChangeState",
+          "priorityTag": "EnemyChangeState",
           "canHitNonTargets": true,
           "valuePerStack": {
             "MaxWolfRank": 4

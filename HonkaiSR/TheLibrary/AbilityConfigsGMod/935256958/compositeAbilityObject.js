@@ -795,7 +795,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target DEALING DMG}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

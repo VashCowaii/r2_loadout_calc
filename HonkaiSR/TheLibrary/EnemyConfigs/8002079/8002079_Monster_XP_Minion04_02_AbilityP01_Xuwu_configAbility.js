@@ -53,7 +53,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [

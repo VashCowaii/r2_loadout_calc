@@ -86,7 +86,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "STAT_CTRL",
@@ -145,7 +145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "STAT_CTRL",
@@ -203,7 +203,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "STAT_CTRL",

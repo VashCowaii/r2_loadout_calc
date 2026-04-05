@@ -117,7 +117,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "priorityTag": "MonsterBattleCry",
+              "priorityTag": "EnemyBattleCry",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "allowAbilityTriggers": false

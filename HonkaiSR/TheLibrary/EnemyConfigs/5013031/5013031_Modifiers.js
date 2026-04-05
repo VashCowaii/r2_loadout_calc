@@ -1983,7 +1983,7 @@ const configAbility = {
                     "invertCondition": true
                   },
                   "abilityName": "Monster_W5_Peacock_AbilityP01_Insert02_Part01",
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -2486,7 +2486,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W5_Peacock_AbilityP01_Insert03_Part01",
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

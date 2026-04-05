@@ -577,7 +577,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_Abomi02_PassiveAbility_Insert",
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -589,7 +589,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_Abomi02_PassiveAbility_Insert_Fail",
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

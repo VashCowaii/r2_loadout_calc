@@ -1378,7 +1378,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -3029,7 +3029,7 @@ const configAbility = {
                             }
                           },
                           "abilityName": "Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget",
-                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "priorityTag": "EnemyBuffOthers_Elation",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -3294,7 +3294,7 @@ const configAbility = {
                             }
                           },
                           "abilityName": "Monster_W3_Clock_02_IF_Ability03_Insert_Part01",
-                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "priorityTag": "EnemyBuffOthers_Elation",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -3565,7 +3565,7 @@ const configAbility = {
                             }
                           },
                           "abilityName": "Monster_W1_Mecha01_03_IF_Ability01_Insert_Part01",
-                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "priorityTag": "EnemyBuffOthers_Elation",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -3833,7 +3833,7 @@ const configAbility = {
                             }
                           },
                           "abilityName": "Monster_W3_Dinosaur_02_IF_Ability09_Insert_Part01",
-                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "priorityTag": "EnemyBuffOthers_Elation",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,

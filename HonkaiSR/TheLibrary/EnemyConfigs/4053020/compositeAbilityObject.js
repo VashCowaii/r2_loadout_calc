@@ -127,7 +127,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "priorityTag": "MonsterBuffOthers",
+                  "priorityTag": "EnemyBuffOthers",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -2837,7 +2837,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Unicorn_01_Ability05_Insert_Part01",
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

@@ -482,7 +482,7 @@ const configAbility = {
                               }
                             ]
                           },
-                          "priorityTag": "LevelPerformMonster",
+                          "priorityTag": "STAGE_Enemy",
                           "targetState": "Anyone",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
@@ -548,7 +548,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "LevelPerformMonster",
+                      "priorityTag": "STAGE_Enemy",
                       "targetState": "Anyone",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
@@ -618,7 +618,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_DawnsEye_01_MainStoryEnd",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

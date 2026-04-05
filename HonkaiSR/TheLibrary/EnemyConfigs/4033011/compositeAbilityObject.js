@@ -1163,7 +1163,7 @@ const compositeAbilityObject = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_XP_Elite01_02_LocalLegend_PassiveAbility_Insert",
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -2747,7 +2747,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_XP_Elite01_02_LocalLegend_Ability03_Part01",
-                  "priorityTag": "LevelPerformMonster",
+                  "priorityTag": "STAGE_Enemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -3837,7 +3837,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_XP_Elite01_02_LocalLegend_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -3902,7 +3902,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Anyone",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

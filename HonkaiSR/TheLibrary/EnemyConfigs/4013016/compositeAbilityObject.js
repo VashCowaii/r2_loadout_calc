@@ -3639,7 +3639,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_Claymore_LocalLegend03_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -3843,7 +3843,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Claymore_LocalLegend_Ability06_Part01",
-                  "priorityTag": "LevelPerformMonster",
+                  "priorityTag": "STAGE_Enemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -5757,7 +5757,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_Claymore_LocalLegend_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

@@ -2476,7 +2476,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W2_Feixiao_Ability06_Part01",
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -2931,7 +2931,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_Feixiao_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -3004,7 +3004,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_Feixiao_PassiveAbility_Insert2",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

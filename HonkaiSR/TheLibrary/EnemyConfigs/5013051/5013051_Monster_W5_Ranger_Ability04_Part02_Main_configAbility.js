@@ -276,7 +276,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "priorityTag": "AvatarReviveSelf",
+      "priorityTag": "CharacterReviveSelf",
       "allowAbilityTriggers": false
     }
   ],

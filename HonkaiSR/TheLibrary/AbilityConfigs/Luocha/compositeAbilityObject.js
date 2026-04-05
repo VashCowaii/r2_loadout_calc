@@ -971,7 +971,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "AvatarHealOthers",
+                  "priorityTag": "CharacterHealOthers",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2097,7 +2097,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "AvatarBuffSelf",
+                  "priorityTag": "CharacterBuffSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2154,7 +2154,7 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Luocha_Passive01_InsertAbility",
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [

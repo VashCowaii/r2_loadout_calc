@@ -166,7 +166,7 @@ const configAbility = {
             }
           ],
           "afterInjection": [],
-          "priorityTag": "StartElationTime",
+          "priorityTag": "AhaInstantStart",
           "priorityTagPending": "Highest"
         }
       ],

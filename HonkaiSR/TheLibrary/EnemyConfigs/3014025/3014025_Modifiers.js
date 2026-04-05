@@ -305,7 +305,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_Death_RLBoss_Part1T2",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -325,7 +325,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_Death_RLBoss_Part2T3",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -1303,7 +1303,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "priorityTag": "MonsterInsertAttackOthers",
+              "priorityTag": "EnemyAttackFromOthers",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -1909,7 +1909,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterInsertAttackOthers",
+                      "priorityTag": "EnemyAttackFromOthers",
                       "showInActionOrder": true,
                       "abortFlags": [
                         "DisableAction",
@@ -2009,7 +2009,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterInsertAttackOthers",
+                  "priorityTag": "EnemyAttackFromOthers",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2203,7 +2203,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W3_Death_Part1T2",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

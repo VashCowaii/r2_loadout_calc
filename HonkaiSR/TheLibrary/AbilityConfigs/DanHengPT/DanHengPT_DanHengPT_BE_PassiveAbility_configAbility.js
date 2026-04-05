@@ -59,7 +59,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "ownerState": "Mask_AliveOrRevivable",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
@@ -77,7 +77,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "priorityTag": "AvatarBuffSelf",
+                  "priorityTag": "CharacterBuffSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false

@@ -1532,7 +1532,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "priorityTag": "LevelPerformMonster",
+                  "priorityTag": "STAGE_Enemy",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -1908,7 +1908,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "priorityTag": "LevelPerformMonster",
+                  "priorityTag": "STAGE_Enemy",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -2200,7 +2200,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "LevelPerformMonster",
+                  "priorityTag": "STAGE_Enemy",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

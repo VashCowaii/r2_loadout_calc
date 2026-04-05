@@ -281,7 +281,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 },
@@ -3943,7 +3943,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -4025,7 +4025,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Current Action Target List}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -4160,7 +4160,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W2_Kafka_RL_PassiveAbility_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -4217,7 +4217,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W2_Kafka_RL_PassiveAbility_Insert2",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -4682,7 +4682,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -4816,7 +4816,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Current Action Target List}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [

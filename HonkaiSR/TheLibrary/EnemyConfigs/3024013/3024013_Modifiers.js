@@ -978,7 +978,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "priorityTag": "MonsterBuffOthers_Elation",
+                  "priorityTag": "EnemyBuffOthers_Elation",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -1797,7 +1797,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "BOSS_BreakDelay": 0

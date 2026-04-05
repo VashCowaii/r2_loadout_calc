@@ -796,7 +796,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Furbo Journalist: Killer}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

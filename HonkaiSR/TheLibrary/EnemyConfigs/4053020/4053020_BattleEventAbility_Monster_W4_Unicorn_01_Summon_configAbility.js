@@ -102,7 +102,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "priorityTag": "MonsterBuffOthers",
+              "priorityTag": "EnemyBuffOthers",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

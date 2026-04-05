@@ -487,7 +487,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "allowAbilityTriggers": false
                     }
                   ]
@@ -3407,7 +3407,7 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Monster_W5_Pam_DeathRattle_Insert",
-                      "priorityTag": "LevelPerformMonster",
+                      "priorityTag": "STAGE_Enemy",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -4307,7 +4307,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "allowAbilityTriggers": false

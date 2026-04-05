@@ -1751,7 +1751,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     },
@@ -2129,7 +2129,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -2232,7 +2232,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "<a class=\"gModGreen\" id=\"288143778\">Monster_W3_AventurinePart_DeathRattle_RL</a>[<span class=\"descriptionNumberColor\">Influx of Fortuity</span>]",
-                          "priorityTag": "MonsterDeathRattle",
+                          "priorityTag": "EnemyDeathEffect",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -2254,7 +2254,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W3_AventurinePart_NoDeathRattle_RL",
-                          "priorityTag": "MonsterDeathRattle",
+                          "priorityTag": "EnemyDeathEffect",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -2267,7 +2267,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_AventurinePart_NoDeathRattle_RL",
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -5317,7 +5317,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}.[[getSummoner]]"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "allowAbilityTriggers": false
@@ -5335,7 +5335,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "allowAbilityTriggers": false

@@ -739,7 +739,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarReviveOthers",
+                      "priorityTag": "CharacterReviveOthers",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,

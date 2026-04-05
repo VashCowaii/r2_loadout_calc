@@ -4247,7 +4247,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_Pollux_IF_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -4767,7 +4767,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -5049,7 +5049,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_Pollux_IF_Stun_Insert",
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -5811,7 +5811,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -6066,7 +6066,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -6850,7 +6850,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -7151,7 +7151,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -7359,7 +7359,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false

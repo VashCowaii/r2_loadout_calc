@@ -846,7 +846,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "priorityTag": "MonsterDeathRattle",
+                                  "priorityTag": "EnemyDeathEffect",
                                   "canHitNonTargets": true,
                                   "allowAbilityTriggers": false
                                 }
@@ -1549,7 +1549,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterChangeState",
+              "priorityTag": "EnemyChangeState",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -4391,7 +4391,7 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_DawnsEye_PassiveAbility_InsertMainStory",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -4403,7 +4403,7 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_DawnsEye_PassiveAbility_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,

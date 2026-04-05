@@ -641,7 +641,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -1959,7 +1959,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -2081,7 +2081,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "ownerState": "Anyone",
                       "canHitNonTargets": true,
                       "valuePerStack": {

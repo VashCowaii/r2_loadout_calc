@@ -1626,7 +1626,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Memosprite}}"
                   },
                   "afterInjection": [],
-                  "priorityTag": "Character_HighPriorityAction"
+                  "priorityTag": "CharacterPriority"
                 }
               ]
             },

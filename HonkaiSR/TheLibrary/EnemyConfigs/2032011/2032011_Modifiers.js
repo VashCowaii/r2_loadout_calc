@@ -921,7 +921,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "valuePerStack": {
@@ -947,7 +947,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "valuePerStack": {
@@ -1032,7 +1032,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "valuePerStack": {
@@ -1120,7 +1120,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "priorityTag": "MonsterChangeState",
+                                  "priorityTag": "EnemyChangeState",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "valuePerStack": {
@@ -1157,7 +1157,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "priorityTag": "MonsterChangeState",
+                                      "priorityTag": "EnemyChangeState",
                                       "canHitNonTargets": true,
                                       "valuePerStack": {
                                         "MaxWolfRank": 2
@@ -1204,7 +1204,7 @@ const configAbility = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "priorityTag": "MonsterChangeState",
+                                          "priorityTag": "EnemyChangeState",
                                           "canHitNonTargets": true,
                                           "valuePerStack": {
                                             "MaxWolfRank": 2

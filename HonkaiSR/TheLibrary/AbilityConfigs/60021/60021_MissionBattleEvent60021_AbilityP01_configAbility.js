@@ -622,7 +622,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -685,7 +685,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -734,7 +734,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -783,7 +783,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "AvatarInsertAttackSelf",
+                      "priorityTag": "CharacterAttackFromSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false

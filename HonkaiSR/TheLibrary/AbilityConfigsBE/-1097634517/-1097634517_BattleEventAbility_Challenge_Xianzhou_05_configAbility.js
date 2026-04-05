@@ -167,7 +167,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterSummon",
+                  "priorityTag": "EnemyCreated",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

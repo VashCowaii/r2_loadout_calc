@@ -2103,7 +2103,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -2571,7 +2571,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W2_Argenti_PartChange_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -2622,7 +2622,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Monster_W2_Argenti_PartChange2T3_Insert",
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,

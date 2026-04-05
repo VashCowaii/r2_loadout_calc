@@ -428,7 +428,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {

@@ -425,7 +425,7 @@ const configAbility = {
                 "name": "Add Target by Unique Identifier",
                 "identifier": "W5_Vtuber_00"
               },
-              "priorityTag": "MonsterForceKill",
+              "priorityTag": "EnemyForceKill",
               "showInActionOrder": true,
               "allowAbilityTriggers": false
             },
@@ -503,7 +503,7 @@ const configAbility = {
                     "name": "Add Target by Unique Identifier",
                     "identifier": "W5_Vtuber_00"
                   },
-                  "priorityTag": "MonsterForceKill",
+                  "priorityTag": "EnemyForceKill",
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 },

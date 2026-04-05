@@ -46,7 +46,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "priorityTag": "AvatarBuffOthers",
+              "priorityTag": "CharacterBuffOthers",
               "ownerState": "Anyone",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

@@ -163,7 +163,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "AvatarReviveSelf",
+                  "priorityTag": "CharacterReviveSelf",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -192,7 +192,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "AvatarReviveSelf",
+                  "priorityTag": "CharacterReviveSelf",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,

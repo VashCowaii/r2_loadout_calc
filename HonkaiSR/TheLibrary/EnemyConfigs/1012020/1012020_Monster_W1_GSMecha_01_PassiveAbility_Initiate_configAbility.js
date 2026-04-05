@@ -68,7 +68,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_W1_GSMecha_01_PassiveAbility_Insert",
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

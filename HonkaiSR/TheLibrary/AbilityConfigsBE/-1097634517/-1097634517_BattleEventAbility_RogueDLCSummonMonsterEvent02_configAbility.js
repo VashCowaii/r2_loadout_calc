@@ -93,7 +93,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterSummon",
+                      "priorityTag": "EnemyCreated",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }

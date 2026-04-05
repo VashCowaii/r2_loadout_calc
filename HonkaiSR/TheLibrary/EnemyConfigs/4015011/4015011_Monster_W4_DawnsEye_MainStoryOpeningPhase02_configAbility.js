@@ -41,7 +41,7 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Monster_W4_DawnsEye_MainStoryOpeningPhase03",
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

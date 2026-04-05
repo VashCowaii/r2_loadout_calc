@@ -563,7 +563,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "priorityTag": "MonsterBattleCry",
+              "priorityTag": "EnemyBattleCry",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -921,7 +921,7 @@ const compositeAbilityObject = {
                     }
                   },
                   "abilityName": "Monster_W3_DeathPart_SKill01_Insert",
-                  "priorityTag": "AvatarReviveSelf",
+                  "priorityTag": "CharacterReviveSelf",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

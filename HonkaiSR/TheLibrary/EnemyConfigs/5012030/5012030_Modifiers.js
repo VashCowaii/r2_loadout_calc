@@ -202,7 +202,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "priorityTag": "MonsterBuffSelf",
+                          "priorityTag": "EnemyBuffSelf",
                           "allowAbilityTriggers": false
                         }
                       ]
@@ -542,7 +542,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "priorityTag": "MonsterBuffSelf",
+                  "priorityTag": "EnemyBuffSelf",
                   "allowAbilityTriggers": false
                 }
               ]

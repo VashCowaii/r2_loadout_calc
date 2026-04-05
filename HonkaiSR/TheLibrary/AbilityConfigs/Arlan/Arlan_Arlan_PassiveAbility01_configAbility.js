@@ -231,7 +231,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Arlan_PassiveAbility03_Insert",
-                      "priorityTag": "AvatarReviveSelf",
+                      "priorityTag": "CharacterReviveSelf",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false

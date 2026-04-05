@@ -282,7 +282,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "priorityTag": "AvatarHealSelf",
+              "priorityTag": "CharacterHealSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [

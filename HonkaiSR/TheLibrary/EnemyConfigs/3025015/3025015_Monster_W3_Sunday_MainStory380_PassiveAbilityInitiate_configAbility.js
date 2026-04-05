@@ -117,7 +117,7 @@ const configAbility = {
     {
       "name": "Inject Ability Use",
       "abilityName": "Monster_W3_Sunday_PassiveAbilityInitiate_Insert_Part02to03",
-      "priorityTag": "MonsterChangePhase",
+      "priorityTag": "EnemyPhaseChange",
       "ownerState": "Mask_AliveOrLimbo",
       "targetState": "Mask_AliveOrLimbo",
       "canHitNonTargets": true,

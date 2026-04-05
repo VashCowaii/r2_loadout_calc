@@ -71,7 +71,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemies by Aggro}}"
       },
-      "priorityTag": "MonsterChangeState",
+      "priorityTag": "EnemyChangeState",
       "canHitNonTargets": true,
       "showInActionOrder": true,
       "abortFlags": [

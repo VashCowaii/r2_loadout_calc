@@ -55,7 +55,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterBuffSelf",
+              "priorityTag": "EnemyBuffSelf",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

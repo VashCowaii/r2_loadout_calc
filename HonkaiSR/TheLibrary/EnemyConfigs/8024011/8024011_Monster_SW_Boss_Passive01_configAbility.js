@@ -151,7 +151,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_SW_Boss_PassiveAbility_Insert_Part01",
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

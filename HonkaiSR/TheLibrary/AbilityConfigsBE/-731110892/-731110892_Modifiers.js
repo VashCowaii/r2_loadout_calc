@@ -1400,7 +1400,7 @@ const configAbility = {
                   "actionTag": null,
                   "skillIndex": 4,
                   "afterInjection": [],
-                  "priorityTag": "RestartElationTime",
+                  "priorityTag": "AhaInstantRestart",
                   "priorityTagPending": "Highest"
                 }
               ]
@@ -1504,7 +1504,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "LevelPerformAvatarInsert",
+              "priorityTag": "STAGE_CharacterInsert",
               "canHitNonTargets": true,
               "silentExecute": true,
               "customFlags": [

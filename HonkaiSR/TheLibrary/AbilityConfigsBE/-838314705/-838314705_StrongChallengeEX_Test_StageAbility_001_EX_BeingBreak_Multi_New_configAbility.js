@@ -790,7 +790,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "priorityTag": "MonsterInsertAttackSelf",
+          "priorityTag": "EnemyAttackFromSelf",
           "canHitNonTargets": true,
           "allowAbilityTriggers": false
         }

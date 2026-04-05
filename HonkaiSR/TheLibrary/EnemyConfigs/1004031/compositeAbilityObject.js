@@ -879,7 +879,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,

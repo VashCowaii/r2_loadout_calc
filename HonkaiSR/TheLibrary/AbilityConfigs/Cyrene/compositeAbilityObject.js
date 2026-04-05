@@ -5778,7 +5778,7 @@ const compositeAbilityObject = {
           "skillType": "ControlSkill02",
           "abilityName": "Servant_CyreneServant_FormationReset",
           "afterInjection": [],
-          "priorityTag": "Character_HighPriorityAction"
+          "priorityTag": "CharacterPriority"
         },
         {
           "name": "IF",
@@ -6361,7 +6361,7 @@ const compositeAbilityObject = {
           "actionTag": null,
           "abilityName": "Servant_CyreneServant_FormationReset",
           "afterInjection": [],
-          "priorityTag": "Character_HighPriorityAction"
+          "priorityTag": "CharacterPriority"
         }
       ],
       "references": [],

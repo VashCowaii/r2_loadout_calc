@@ -51,7 +51,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "priorityTag": "MonsterBuffOthers_Elation",
+          "priorityTag": "EnemyBuffOthers_Elation",
           "ownerState": "Mask_AliveOrLimbo",
           "targetState": "Mask_AliveOrLimbo",
           "canHitNonTargets": true,

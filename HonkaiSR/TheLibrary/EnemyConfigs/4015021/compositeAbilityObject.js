@@ -666,7 +666,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "BaseAttack": {
@@ -1178,7 +1178,7 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "priorityTag": "LevelPerformMonster",
+              "priorityTag": "STAGE_Enemy",
               "targetState": "Anyone",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
@@ -2906,7 +2906,7 @@ const compositeAbilityObject = {
             "name": "Add Target by Unique Identifier",
             "identifier": "HealBattleEvent"
           },
-          "priorityTag": "LevelPerformMonster",
+          "priorityTag": "STAGE_Enemy",
           "canHitNonTargets": true,
           "allowAbilityTriggers": false
         }
@@ -3057,7 +3057,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "priorityTag": "LevelPerformMonster",
+          "priorityTag": "STAGE_Enemy",
           "canHitNonTargets": true,
           "allowAbilityTriggers": false
         }
@@ -3595,7 +3595,7 @@ const compositeAbilityObject = {
                                   }
                                 ]
                               },
-                              "priorityTag": "LevelPerformMonster",
+                              "priorityTag": "STAGE_Enemy",
                               "targetState": "Anyone",
                               "canHitNonTargets": true,
                               "allowAbilityTriggers": false
@@ -3661,7 +3661,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "LevelPerformMonster",
+                          "priorityTag": "STAGE_Enemy",
                           "targetState": "Anyone",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
@@ -3731,7 +3731,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_DawnsEye_01_MainStoryEnd",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -4586,7 +4586,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_DawnsEye_01_PassiveAbility_Insert",
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -5012,7 +5012,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "priorityTag": "MonsterDeathRattle",
+                                      "priorityTag": "EnemyDeathEffect",
                                       "canHitNonTargets": true,
                                       "allowAbilityTriggers": false
                                     }

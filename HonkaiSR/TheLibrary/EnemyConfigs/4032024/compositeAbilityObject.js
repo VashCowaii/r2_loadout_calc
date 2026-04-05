@@ -1157,7 +1157,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -1202,7 +1202,7 @@ const compositeAbilityObject = {
                     }
                   },
                   "abilityName": "Monster_W4_FireProwler_01_NoDeathRattle",
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false

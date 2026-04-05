@@ -386,7 +386,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterBuffSelf",
+                      "priorityTag": "EnemyBuffSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
