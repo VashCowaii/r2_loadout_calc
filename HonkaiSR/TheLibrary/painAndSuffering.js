@@ -4694,7 +4694,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.allowAbilityTriggers,"Ability Triggers Used")}
 
         
-            ${getStandardNameDisplay(initialCounter,`Ability [${priorityList.ability[parseRef.priorityTag]}]`,"Priority Tag")}
+            ${getStandardNameDisplay(initialCounter,`Ability [${priorityList.ability[parseRef.priorityTag] ?? "Undefined or Default"}]`,"Priority Tag")}
 
             ${getStandardNameDisplay(initialCounter,parseRef.abortFlags,"Abort Flags")}
             ${getStandardNameDisplay(initialCounter,parseRef.customFlags,"Custom Flags")}
@@ -9361,8 +9361,8 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.canInjectUltimates,"Can Inject Ultimates")}
                 ${getStandardNameDisplay(initialCounter,parseRef.ignoreCost,"Ignore Skill Point Cost")}
                 ${getStandardNameDisplay(initialCounter,parseRef.followSameTagAsAction,"Follows Same Tags as Reg Action")}
-                ${getStandardNameDisplay(initialCounter,`Extra-Turn [${priorityList.turn[parseRef.priorityTag]}]`,"Priority Tag")}
-                ${getStandardNameDisplay(initialCounter,`Ability [${priorityList.ability[parseRef.priorityTagPending]}]`,"Pending Priority Tag")}
+                ${getStandardNameDisplay(initialCounter,`Extra-Turn [${priorityList.turn[parseRef.priorityTag] ?? "Undefined or Default"}]`,"Priority Tag")}
+                ${getStandardNameDisplay(initialCounter,`Ability [${priorityList.ability[parseRef.priorityTagPending] ?? "Undefined or Default"}]`,"Pending Priority Tag")}
                 
                 ${getStandardNameDisplay(initialCounter,parseRef.abortFlags,"Abort Flags")}
                 ${getStandardNameDisplay(initialCounter,parseRef.copyAbortFlags,"Copy Abort Flags")}
