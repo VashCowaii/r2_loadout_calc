@@ -49,7 +49,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

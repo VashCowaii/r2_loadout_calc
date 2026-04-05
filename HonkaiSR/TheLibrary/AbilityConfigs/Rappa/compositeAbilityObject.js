@@ -861,7 +861,7 @@ const compositeAbilityObject = {
           "name": "Inject Extra-Turn",
           "actionTag": null,
           "afterInjection": [],
-          "priorityTag": "Character_HighPriorityAction"
+          "priorityTag": "CharacterPriority"
         },
         "Trigger: Ability End"
       ],

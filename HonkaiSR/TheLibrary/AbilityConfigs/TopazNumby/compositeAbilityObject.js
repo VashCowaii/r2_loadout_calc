@@ -900,7 +900,7 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "priorityTag": "LevelPerformAvatar",
+                      "priorityTag": "STAGE_Character",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }

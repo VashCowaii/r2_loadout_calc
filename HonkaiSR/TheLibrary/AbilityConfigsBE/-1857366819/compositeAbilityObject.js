@@ -326,7 +326,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     },
@@ -709,7 +709,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarReviveSelf",
+                      "priorityTag": "CharacterReviveSelf",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -738,7 +738,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarReviveSelf",
+                      "priorityTag": "CharacterReviveSelf",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -1253,7 +1253,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "LevelPerformAvatar",
+                      "priorityTag": "STAGE_Character",
                       "ownerState": "Anyone",
                       "targetState": "Anyone",
                       "canHitNonTargets": true,

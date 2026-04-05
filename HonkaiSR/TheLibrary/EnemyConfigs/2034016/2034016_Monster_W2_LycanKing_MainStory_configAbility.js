@@ -251,7 +251,7 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Monster_W2_LycanKing_PassiveAbility_Insert",
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -287,7 +287,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -476,7 +476,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -554,7 +554,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "canHitNonTargets": true,
                               "allowAbilityTriggers": false
                             }

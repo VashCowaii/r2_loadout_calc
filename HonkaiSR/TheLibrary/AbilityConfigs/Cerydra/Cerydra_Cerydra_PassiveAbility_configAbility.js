@@ -1066,7 +1066,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Cerydra's Promotion Target}}"
                               },
-                              "priorityTag": "AvatarBuffOthers",
+                              "priorityTag": "CharacterBuffOthers",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "customFlags": [

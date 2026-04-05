@@ -415,7 +415,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

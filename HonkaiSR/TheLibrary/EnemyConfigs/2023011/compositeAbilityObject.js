@@ -1632,7 +1632,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_Abomi04_AbilityP01_Insert",
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }

@@ -169,7 +169,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -387,7 +387,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
                             "STAT_CTRL",
@@ -450,7 +450,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
                             "STAT_CTRL",
@@ -648,7 +648,7 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
-                          "priorityTag": "MonsterChangeState",
+                          "priorityTag": "EnemyChangeState",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -747,7 +747,7 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
-                          "priorityTag": "MonsterChangeState",
+                          "priorityTag": "EnemyChangeState",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false

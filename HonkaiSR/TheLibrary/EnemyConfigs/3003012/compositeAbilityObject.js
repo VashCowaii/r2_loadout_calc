@@ -4580,7 +4580,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "abortFlags": [
@@ -4774,7 +4774,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "priorityTag": "MonsterChangeState",
+                                      "priorityTag": "EnemyChangeState",
                                       "canHitNonTargets": true,
                                       "showInActionOrder": true,
                                       "allowAbilityTriggers": false
@@ -4793,7 +4793,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "priorityTag": "MonsterChangeState",
+                                      "priorityTag": "EnemyChangeState",
                                       "canHitNonTargets": true,
                                       "showInActionOrder": true,
                                       "allowAbilityTriggers": false
@@ -5165,7 +5165,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "priorityTag": "MonsterChangeState",
+                                  "priorityTag": "EnemyChangeState",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "abortFlags": [
@@ -5401,7 +5401,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "priorityTag": "MonsterChangeState",
+                                          "priorityTag": "EnemyChangeState",
                                           "canHitNonTargets": true,
                                           "showInActionOrder": true,
                                           "allowAbilityTriggers": false
@@ -5420,7 +5420,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "priorityTag": "MonsterChangeState",
+                                          "priorityTag": "EnemyChangeState",
                                           "canHitNonTargets": true,
                                           "showInActionOrder": true,
                                           "allowAbilityTriggers": false

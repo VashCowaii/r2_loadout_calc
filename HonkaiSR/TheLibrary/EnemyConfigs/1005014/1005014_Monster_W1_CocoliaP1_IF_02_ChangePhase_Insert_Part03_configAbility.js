@@ -78,7 +78,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Recently Summoned Enemies}}"
       },
-      "priorityTag": "MonsterChangeState",
+      "priorityTag": "EnemyChangeState",
       "canHitNonTargets": true,
       "allowAbilityTriggers": false
     },

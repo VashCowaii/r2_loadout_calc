@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "priorityTag": "MonsterChangePhase",
+      "priorityTag": "EnemyPhaseChange",
       "ownerState": "Mask_AliveOrLimbo",
       "targetState": "Mask_AliveOrLimbo",
       "canHitNonTargets": true,

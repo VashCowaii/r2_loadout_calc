@@ -156,7 +156,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "ownerState": "Mask_AliveOrRevivable",
                       "targetState": "Mask_AliveOrRevivable",
                       "canHitNonTargets": true,
@@ -189,7 +189,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

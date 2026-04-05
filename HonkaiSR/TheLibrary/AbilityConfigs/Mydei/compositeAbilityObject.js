@@ -1534,7 +1534,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "priorityTag": "AvatarBuffSelf",
+                              "priorityTag": "CharacterBuffSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "abortFlags": [
@@ -1692,7 +1692,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "priorityTag": "AvatarBuffSelf",
+                              "priorityTag": "CharacterBuffSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "abortFlags": [
@@ -3076,7 +3076,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "AvatarReviveSelf",
+                      "priorityTag": "CharacterReviveSelf",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -3553,7 +3553,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -3610,7 +3610,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "AvatarBuffSelf",
+                  "priorityTag": "CharacterBuffSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [

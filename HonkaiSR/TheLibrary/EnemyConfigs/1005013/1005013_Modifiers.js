@@ -713,7 +713,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "BOSS_BreakDelay": {
@@ -1018,7 +1018,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "LevelPerformAvatar",
+                  "priorityTag": "STAGE_Character",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

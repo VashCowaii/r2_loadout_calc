@@ -890,7 +890,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_XP_Elite01_02_LocalLegend_PassiveAbility_Insert",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -955,7 +955,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Anyone",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

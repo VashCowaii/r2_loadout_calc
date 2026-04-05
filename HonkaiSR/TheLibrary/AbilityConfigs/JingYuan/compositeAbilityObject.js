@@ -2634,7 +2634,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "STAT_CTRL",

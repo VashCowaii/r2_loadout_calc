@@ -199,7 +199,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBuffOthers",
+                  "priorityTag": "EnemyBuffOthers",
                   "allowAbilityTriggers": false
                 }
               ],
@@ -216,7 +216,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterForceKill",
+                  "priorityTag": "EnemyForceKill",
                   "allowAbilityTriggers": false
                 }
               ]

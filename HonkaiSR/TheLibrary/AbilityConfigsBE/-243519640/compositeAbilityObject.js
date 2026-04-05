@@ -14412,7 +14412,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterSummon",
+                  "priorityTag": "EnemyCreated",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "PropertyValue": {
@@ -14478,7 +14478,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterSummon",
+                      "priorityTag": "EnemyCreated",
                       "canHitNonTargets": true,
                       "valuePerStack": {
                         "PropertyValue": {
@@ -14564,7 +14564,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterBuffSelf",
+                      "priorityTag": "EnemyBuffSelf",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -15981,7 +15981,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false

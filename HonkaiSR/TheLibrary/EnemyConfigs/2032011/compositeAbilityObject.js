@@ -755,7 +755,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterChangeState",
+                  "priorityTag": "EnemyChangeState",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -965,7 +965,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterChangeState",
+                          "priorityTag": "EnemyChangeState",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -1632,7 +1632,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -3039,7 +3039,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "priorityTag": "MonsterChangeState",
+                                  "priorityTag": "EnemyChangeState",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "valuePerStack": {
@@ -3065,7 +3065,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "priorityTag": "MonsterChangeState",
+                                  "priorityTag": "EnemyChangeState",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "valuePerStack": {
@@ -3150,7 +3150,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "priorityTag": "MonsterChangeState",
+                                  "priorityTag": "EnemyChangeState",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "valuePerStack": {
@@ -3238,7 +3238,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "priorityTag": "MonsterChangeState",
+                                      "priorityTag": "EnemyChangeState",
                                       "canHitNonTargets": true,
                                       "showInActionOrder": true,
                                       "valuePerStack": {
@@ -3275,7 +3275,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "priorityTag": "MonsterChangeState",
+                                          "priorityTag": "EnemyChangeState",
                                           "canHitNonTargets": true,
                                           "valuePerStack": {
                                             "MaxWolfRank": 2
@@ -3322,7 +3322,7 @@ const compositeAbilityObject = {
                                                 "name": "Target Name",
                                                 "target": "{{Parameter Target}}"
                                               },
-                                              "priorityTag": "MonsterChangeState",
+                                              "priorityTag": "EnemyChangeState",
                                               "canHitNonTargets": true,
                                               "valuePerStack": {
                                                 "MaxWolfRank": 2

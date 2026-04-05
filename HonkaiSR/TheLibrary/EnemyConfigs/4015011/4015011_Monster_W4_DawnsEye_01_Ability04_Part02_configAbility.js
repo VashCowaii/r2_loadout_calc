@@ -439,7 +439,7 @@ const configAbility = {
               }
             ]
           },
-          "priorityTag": "LevelPerformMonster",
+          "priorityTag": "STAGE_Enemy",
           "targetState": "Anyone",
           "canHitNonTargets": true,
           "allowAbilityTriggers": false

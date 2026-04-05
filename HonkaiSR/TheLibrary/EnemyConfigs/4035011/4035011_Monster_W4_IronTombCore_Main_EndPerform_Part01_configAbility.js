@@ -16,7 +16,7 @@ const configAbility = {
     {
       "name": "Inject Ability Use",
       "abilityName": "Monster_W4_IronTombCore_Main_Ability08_Part01",
-      "priorityTag": "LevelPerformMonster",
+      "priorityTag": "STAGE_Enemy",
       "ownerState": "Mask_AliveOrLimbo",
       "targetState": "Mask_AliveOrLimbo",
       "canHitNonTargets": true,

@@ -363,9 +363,7 @@ const compositeAbilityObject = {
           "afterInjection": [],
           "abortFlags": [
             "STAT_CTRL"
-          ],
-          "priorityTag": "DuringElationTime_UseElationSkill",
-          "priorityTagPending": "ElationTime"
+          ]
         },
         {
           "name": "Define Custom Variable",
@@ -653,7 +651,7 @@ const compositeAbilityObject = {
                 }
               ],
               "afterInjection": [],
-              "priorityTag": "StartElationTime",
+              "priorityTag": "AhaInstantStart",
               "priorityTagPending": "Highest"
             }
           ],
@@ -2148,7 +2146,7 @@ const compositeAbilityObject = {
                       "actionTag": null,
                       "skillIndex": 4,
                       "afterInjection": [],
-                      "priorityTag": "RestartElationTime",
+                      "priorityTag": "AhaInstantRestart",
                       "priorityTagPending": "Highest"
                     }
                   ]
@@ -2252,7 +2250,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "LevelPerformAvatarInsert",
+                  "priorityTag": "STAGE_CharacterInsert",
                   "canHitNonTargets": true,
                   "silentExecute": true,
                   "customFlags": [

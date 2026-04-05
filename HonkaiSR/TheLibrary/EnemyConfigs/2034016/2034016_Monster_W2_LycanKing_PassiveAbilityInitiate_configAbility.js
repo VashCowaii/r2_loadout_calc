@@ -691,7 +691,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemies by Aggro}}"
                       },
-                      "priorityTag": "MonsterInsertAttackOthers",
+                      "priorityTag": "EnemyAttackFromOthers",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -868,7 +868,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemies by Aggro}}"
                       },
-                      "priorityTag": "MonsterInsertAttackOthers",
+                      "priorityTag": "EnemyAttackFromOthers",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -1039,7 +1039,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "priorityTag": "MonsterChangeState",
+                              "priorityTag": "EnemyChangeState",
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "ResetBloodRageCount": {

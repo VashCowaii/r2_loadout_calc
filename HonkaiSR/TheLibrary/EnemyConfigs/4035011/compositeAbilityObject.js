@@ -1072,7 +1072,7 @@ const compositeAbilityObject = {
         {
           "name": "Inject Ability Use",
           "abilityName": "Monster_W4_IronTombCore_Main_Ability08_Part01",
-          "priorityTag": "LevelPerformMonster",
+          "priorityTag": "STAGE_Enemy",
           "ownerState": "Mask_AliveOrLimbo",
           "targetState": "Mask_AliveOrLimbo",
           "canHitNonTargets": true,
@@ -5925,7 +5925,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_IronTombCore_Main_P3End",
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "DefaultEnemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -6264,7 +6264,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_IronTombCore_Main_P2End",
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "DefaultEnemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -6952,7 +6952,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_IronTombCore_Main_P2End",
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "DefaultEnemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -7374,7 +7374,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_IronTombCore_Main_P3End",
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "DefaultEnemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -7401,7 +7401,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_IronTombCore_Main_Ability08_Part01",
-                      "priorityTag": "LevelPerformMonster",
+                      "priorityTag": "STAGE_Enemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -7465,7 +7465,7 @@ const compositeAbilityObject = {
                             "name": "Add Target by Unique Identifier",
                             "identifier": "BattleEvent02"
                           },
-                          "priorityTag": "LevelPerformAvatar",
+                          "priorityTag": "STAGE_Character",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -9485,7 +9485,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_IronTombCore_TimeLock_Off",
-                          "priorityTag": "AvatarBuffSelf",
+                          "priorityTag": "CharacterBuffSelf",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -9623,7 +9623,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_IronTombCore_TimeLock_Off",
-                          "priorityTag": "AvatarBuffSelf",
+                          "priorityTag": "CharacterBuffSelf",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -10344,7 +10344,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "MonsterBuffSelf",
+                          "priorityTag": "EnemyBuffSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -10644,7 +10644,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Monster_W4_IronTombCore_WorldErosion_Insert",
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "allowAbilityTriggers": false
@@ -10741,7 +10741,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Monster_W4_IronTombCore_WorldErosion_Insert",
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "allowAbilityTriggers": false
@@ -10850,7 +10850,7 @@ const compositeAbilityObject = {
                                         {
                                           "name": "Inject Ability Use",
                                           "abilityName": "Monster_W4_IronTombCore_WorldErosion_Insert",
-                                          "priorityTag": "MonsterChangePhase",
+                                          "priorityTag": "EnemyPhaseChange",
                                           "canHitNonTargets": true,
                                           "showInActionOrder": true,
                                           "allowAbilityTriggers": false
@@ -10860,7 +10860,7 @@ const compositeAbilityObject = {
                                         {
                                           "name": "Inject Ability Use",
                                           "abilityName": "Monster_W4_IronTombCore_Main_WorldErosion_Insert",
-                                          "priorityTag": "PROG_MonsterLowest",
+                                          "priorityTag": "DefaultEnemy",
                                           "ownerState": "Mask_AliveOrLimbo",
                                           "targetState": "Mask_AliveOrLimbo",
                                           "canHitNonTargets": true,
@@ -10969,7 +10969,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W4_IronTombCore_Ability09_Part01",
-                          "priorityTag": "LevelPerformMonster",
+                          "priorityTag": "STAGE_Enemy",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
@@ -11031,7 +11031,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_IronTombCore_PassiveAbility_Insert02",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -11100,7 +11100,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_IronTombCore_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

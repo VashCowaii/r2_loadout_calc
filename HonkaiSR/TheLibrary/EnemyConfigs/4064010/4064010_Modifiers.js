@@ -990,7 +990,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -1039,7 +1039,7 @@ const configAbility = {
                     }
                   },
                   "abilityName": "Monster_W4_Serpent_01_SummonNoDeathrattle",
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false

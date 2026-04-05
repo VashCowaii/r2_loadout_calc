@@ -1226,7 +1226,7 @@ const configAbility = {
                     }
                   },
                   "abilityName": "Monster_W3_Sunday_IF_PassiveAbilityInitiate_Insert_Part03",
-                  "priorityTag": "MonsterBuffSelf",
+                  "priorityTag": "EnemyBuffSelf",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -1966,7 +1966,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W3_Sunday_IF_PassiveAbilityInitiate_Insert_Part01to02",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -2197,7 +2197,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "STAT_CTRL",
@@ -2288,7 +2288,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterBattleCry",
+              "priorityTag": "EnemyBattleCry",
               "canHitNonTargets": true,
               "abortFlags": [
                 "STAT_CTRL",
@@ -5402,7 +5402,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_Sunday_03_PassiveAbilityInitiate_Insert_Part01to02",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -5513,7 +5513,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_Sunday_PassiveAbilityInitiate_Insert_Part01to02",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -5592,7 +5592,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W3_Sunday_PassiveAbilityInitiate_Insert_Part02to03",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -6318,7 +6318,7 @@ const configAbility = {
                     }
                   },
                   "abilityName": "Monster_W3_Sunday_PassiveAbilityInitiate_Insert_Part03",
-                  "priorityTag": "MonsterBuffSelf",
+                  "priorityTag": "EnemyBuffSelf",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,

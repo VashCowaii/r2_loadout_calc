@@ -821,7 +821,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Battle Event's Caster}}"
                                   },
-                                  "priorityTag": "MonsterInsertAttackSelf",
+                                  "priorityTag": "EnemyAttackFromSelf",
                                   "canHitNonTargets": true,
                                   "allowAbilityTriggers": false
                                 }
@@ -847,7 +847,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Battle Event's Caster}}"
                                       },
-                                      "priorityTag": "MonsterInsertAttackSelf",
+                                      "priorityTag": "EnemyAttackFromSelf",
                                       "canHitNonTargets": true,
                                       "allowAbilityTriggers": false
                                     }
@@ -873,7 +873,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Battle Event's Caster}}"
                                           },
-                                          "priorityTag": "MonsterInsertAttackSelf",
+                                          "priorityTag": "EnemyAttackFromSelf",
                                           "canHitNonTargets": true,
                                           "allowAbilityTriggers": false
                                         }
@@ -898,7 +898,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -8753,7 +8753,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_Feixiao_IF_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

@@ -690,7 +690,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "priorityTag": "MonsterBuffSelf",
+                              "priorityTag": "EnemyBuffSelf",
                               "allowAbilityTriggers": false
                             }
                           ]
@@ -1030,7 +1030,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "priorityTag": "MonsterBuffSelf",
+                      "priorityTag": "EnemyBuffSelf",
                       "allowAbilityTriggers": false
                     }
                   ]

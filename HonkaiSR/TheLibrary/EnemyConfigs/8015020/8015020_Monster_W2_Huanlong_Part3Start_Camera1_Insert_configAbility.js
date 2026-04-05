@@ -7,7 +7,7 @@ const configAbility = {
     {
       "name": "Inject Ability Use",
       "abilityName": "Monster_W2_Huanlong_AbilityP12_Part01",
-      "priorityTag": "MonsterChangePhase",
+      "priorityTag": "EnemyPhaseChange",
       "ownerState": "Mask_AliveOrLimbo",
       "targetState": "Mask_AliveOrLimbo",
       "canHitNonTargets": true,

@@ -356,7 +356,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "MonsterInsertAttackOthers",
+                  "priorityTag": "EnemyAttackFromOthers",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -754,7 +754,7 @@ const configAbility = {
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Monster_W1_Mecha03_RL_PassiveAbility_Insert",
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "ownerState": "Mask_AliveOrLimbo",
                                   "targetState": "Mask_AliveOrLimbo",
                                   "canHitNonTargets": true,
@@ -1196,7 +1196,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -1421,7 +1421,7 @@ const configAbility = {
                                                 {
                                                   "name": "Inject Ability Use",
                                                   "abilityName": "Monster_W1_Mecha03_RL_PassiveAbility_Insert3",
-                                                  "priorityTag": "MonsterChangePhase",
+                                                  "priorityTag": "EnemyPhaseChange",
                                                   "ownerState": "Mask_AliveOrLimbo",
                                                   "targetState": "Mask_AliveOrLimbo",
                                                   "canHitNonTargets": true,

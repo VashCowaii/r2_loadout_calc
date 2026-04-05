@@ -81,7 +81,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "LevelPerformAvatar",
+                  "priorityTag": "STAGE_Character",
                   "ownerState": "Anyone",
                   "targetState": "Anyone",
                   "canHitNonTargets": true,

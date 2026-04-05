@@ -4678,7 +4678,7 @@ const megaParsingFuckeryPain = {
         if (conditionObject3 && !returnString3) {throw new Error(`Missing condition display-only definition in IF: ${conditionName3}`)}
 
         
-
+        // ${getStandardNameDisplay(initialCounter,parseRef.priorityTag,"Priority Tag")}
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Inject Ability Use:</div>&nbsp;
             ${parseRef.abilityName ?? (parseRef.abilityID?.displayLines ?? parseRef.abilityID)}
@@ -4692,7 +4692,10 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.targetState,"Target State")}
             ${getStandardNameDisplay(initialCounter,parseRef.showInActionOrder,"Show in Action Order")}
             ${getStandardNameDisplay(initialCounter,parseRef.allowAbilityTriggers,"Ability Triggers Used")}
-            ${getStandardNameDisplay(initialCounter,parseRef.priorityTag,"Priority Tag")}
+
+        
+            ${getStandardNameDisplay(initialCounter,`Ability [${priorityList.ability[parseRef.priorityTag]}]`,"Priority Tag")}
+
             ${getStandardNameDisplay(initialCounter,parseRef.abortFlags,"Abort Flags")}
             ${getStandardNameDisplay(initialCounter,parseRef.customFlags,"Custom Flags")}
             ${getStandardNameDisplay(initialCounter,parseRef.canHitNonTargets,"Can Hit Non-Targets")}
@@ -9320,7 +9323,7 @@ const megaParsingFuckeryPain = {
 
         const displayStrings = parseRef.dynamicStringsArray ? megaParsingFuckeryPain.getStringsArrayResult(parseRef.dynamicStringsArray) : "";
 
-
+        
         const conditionObject = parseRef.conditions;
         const conditionName = conditionObject?.name;
 
@@ -9358,8 +9361,8 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.canInjectUltimates,"Can Inject Ultimates")}
                 ${getStandardNameDisplay(initialCounter,parseRef.ignoreCost,"Ignore Skill Point Cost")}
                 ${getStandardNameDisplay(initialCounter,parseRef.followSameTagAsAction,"Follows Same Tags as Reg Action")}
-                ${getStandardNameDisplay(initialCounter,parseRef.priorityTag,"Priority Tag")}
-                ${getStandardNameDisplay(initialCounter,parseRef.priorityTagPending,"Pending Priority Tag")}
+                ${getStandardNameDisplay(initialCounter,`Extra-Turn [${priorityList.turn[parseRef.priorityTag]}]`,"Priority Tag")}
+                ${getStandardNameDisplay(initialCounter,`Ability [${priorityList.ability[parseRef.priorityTagPending]}]`,"Pending Priority Tag")}
                 
                 ${getStandardNameDisplay(initialCounter,parseRef.abortFlags,"Abort Flags")}
                 ${getStandardNameDisplay(initialCounter,parseRef.copyAbortFlags,"Copy Abort Flags")}

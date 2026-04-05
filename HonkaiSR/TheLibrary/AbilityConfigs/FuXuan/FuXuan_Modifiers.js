@@ -156,7 +156,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "FuXuan_Eidolon2_Insert",
-                  "priorityTag": "AvatarReviveOthers",
+                  "priorityTag": "CharacterReviveOthers",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "valuePerStack": {
@@ -1179,7 +1179,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarHealSelf",
+                      "priorityTag": "CharacterHealSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -1263,7 +1263,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "AvatarHealSelf",
+                      "priorityTag": "CharacterHealSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -1422,7 +1422,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "priorityTag": "AvatarHealSelf",
+                              "priorityTag": "CharacterHealSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "abortFlags": [

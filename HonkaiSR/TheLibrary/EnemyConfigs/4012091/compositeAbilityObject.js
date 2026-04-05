@@ -208,7 +208,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -470,7 +470,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -682,7 +682,7 @@ const compositeAbilityObject = {
                         ]
                       },
                       "abilityName": "Monster_W4_DawnsEyePart_01_Ability01_Part01",
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -737,7 +737,7 @@ const compositeAbilityObject = {
                         ]
                       },
                       "abilityName": "Monster_W4_DawnsEyePart_01_Ability02_Part01",
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false

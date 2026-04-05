@@ -465,7 +465,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Phantylia: Main Target}}"
           },
-          "priorityTag": "MonsterChangePhase",
+          "priorityTag": "EnemyPhaseChange",
           "ownerState": "Mask_AliveOrLimbo",
           "targetState": "Mask_AliveOrLimbo",
           "canHitNonTargets": true,

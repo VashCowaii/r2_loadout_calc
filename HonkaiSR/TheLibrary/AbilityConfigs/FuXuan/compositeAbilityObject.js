@@ -790,7 +790,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "AvatarHealSelf",
+                  "priorityTag": "CharacterHealSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -1292,7 +1292,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "FuXuan_Eidolon2_Insert",
-                      "priorityTag": "AvatarReviveOthers",
+                      "priorityTag": "CharacterReviveOthers",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "valuePerStack": {
@@ -2315,7 +2315,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "AvatarHealSelf",
+                          "priorityTag": "CharacterHealSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -2399,7 +2399,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "AvatarHealSelf",
+                          "priorityTag": "CharacterHealSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -2558,7 +2558,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "priorityTag": "AvatarHealSelf",
+                                  "priorityTag": "CharacterHealSelf",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "abortFlags": [

@@ -43,9 +43,7 @@ const configAbility = {
       "afterInjection": [],
       "abortFlags": [
         "STAT_CTRL"
-      ],
-      "priorityTag": "DuringElationTime_UseElationSkill",
-      "priorityTagPending": "ElationTime"
+      ]
     },
     {
       "name": "Define Custom Variable",

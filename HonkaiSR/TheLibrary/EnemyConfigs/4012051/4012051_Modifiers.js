@@ -157,7 +157,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_W4_Mascot_Ability04_Insert_Part01",
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
@@ -428,7 +428,7 @@ const configAbility = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "canHitNonTargets": true,
                                       "abortFlags": [
                                         "Break"
@@ -440,7 +440,7 @@ const configAbility = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W4_Mascot_Ability03_Insert_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "canHitNonTargets": true,
                                       "abortFlags": [
                                         "Break"
@@ -479,7 +479,7 @@ const configAbility = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W4_Mascot_Ability03_Insert_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "canHitNonTargets": true,
                                       "abortFlags": [
                                         "Break"
@@ -491,7 +491,7 @@ const configAbility = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W4_Mascot_Ability01_Insert_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "canHitNonTargets": true,
                                       "abortFlags": [
                                         "Break"
@@ -530,7 +530,7 @@ const configAbility = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W4_Mascot_Ability01_Insert_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "canHitNonTargets": true,
                                       "abortFlags": [
                                         "Break"
@@ -542,7 +542,7 @@ const configAbility = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "canHitNonTargets": true,
                                       "abortFlags": [
                                         "Break"
@@ -693,7 +693,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability01_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -718,7 +718,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -743,7 +743,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability03_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -784,7 +784,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability01_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -809,7 +809,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -834,7 +834,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability03_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -875,7 +875,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability01_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -900,7 +900,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"
@@ -925,7 +925,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Mascot_Ability03_Insert_Part01",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "Break"

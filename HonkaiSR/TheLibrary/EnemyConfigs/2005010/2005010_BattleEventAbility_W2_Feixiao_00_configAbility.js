@@ -693,7 +693,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Battle Event's Caster}}"
                               },
-                              "priorityTag": "MonsterInsertAttackSelf",
+                              "priorityTag": "EnemyAttackFromSelf",
                               "canHitNonTargets": true,
                               "allowAbilityTriggers": false
                             }
@@ -719,7 +719,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Battle Event's Caster}}"
                                   },
-                                  "priorityTag": "MonsterInsertAttackSelf",
+                                  "priorityTag": "EnemyAttackFromSelf",
                                   "canHitNonTargets": true,
                                   "allowAbilityTriggers": false
                                 }
@@ -745,7 +745,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Battle Event's Caster}}"
                                       },
-                                      "priorityTag": "MonsterInsertAttackSelf",
+                                      "priorityTag": "EnemyAttackFromSelf",
                                       "canHitNonTargets": true,
                                       "allowAbilityTriggers": false
                                     }
@@ -770,7 +770,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }

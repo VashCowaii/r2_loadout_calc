@@ -139,7 +139,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "priorityTag": "LevelPerformMonster",
+      "priorityTag": "STAGE_Enemy",
       "canHitNonTargets": true,
       "allowAbilityTriggers": false
     }

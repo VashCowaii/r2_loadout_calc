@@ -632,7 +632,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -788,7 +788,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "AvatarInsertAttackSelf",
+                  "priorityTag": "CharacterAttackFromSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [

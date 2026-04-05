@@ -208,7 +208,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "LevelPerformAvatar",
+                  "priorityTag": "STAGE_Character",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

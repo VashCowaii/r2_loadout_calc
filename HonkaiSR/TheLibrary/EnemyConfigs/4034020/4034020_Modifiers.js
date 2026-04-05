@@ -315,7 +315,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_BattlePerform2",
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -391,7 +391,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_BattlePerform1",
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

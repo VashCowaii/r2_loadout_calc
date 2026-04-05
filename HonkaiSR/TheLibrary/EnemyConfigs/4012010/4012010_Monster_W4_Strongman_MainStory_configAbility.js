@@ -122,7 +122,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "MonsterBattleCry",
+              "priorityTag": "EnemyBattleCry",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

@@ -4238,7 +4238,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "priorityTag": "MonsterInsertAttackOthers",
+                      "priorityTag": "EnemyAttackFromOthers",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -4647,7 +4647,7 @@ const compositeAbilityObject = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W1_Mecha04_RL_PassiveAbility_Insert",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "ownerState": "Mask_AliveOrLimbo",
                                       "targetState": "Mask_AliveOrLimbo",
                                       "canHitNonTargets": true,
@@ -5011,7 +5011,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
@@ -5191,7 +5191,7 @@ const compositeAbilityObject = {
                                                     {
                                                       "name": "Inject Ability Use",
                                                       "abilityName": "Monster_W1_Mecha04_RL_PassiveAbility_Insert3",
-                                                      "priorityTag": "MonsterChangePhase",
+                                                      "priorityTag": "EnemyPhaseChange",
                                                       "ownerState": "Mask_AliveOrLimbo",
                                                       "targetState": "Mask_AliveOrLimbo",
                                                       "canHitNonTargets": true,

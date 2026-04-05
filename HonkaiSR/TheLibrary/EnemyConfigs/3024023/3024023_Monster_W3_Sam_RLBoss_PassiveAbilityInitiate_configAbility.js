@@ -200,7 +200,7 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Monster_W3_Sam_RLBoss_PassiveAbility_Insert",
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

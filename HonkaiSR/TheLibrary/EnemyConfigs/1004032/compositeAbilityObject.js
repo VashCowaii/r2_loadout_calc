@@ -2320,7 +2320,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W1_Bronya_PassiveAbilityInsert",
-                      "priorityTag": "MonsterChangeState",
+                      "priorityTag": "EnemyChangeState",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -2960,7 +2960,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Monster_W1_Bronya_IF_02_PassiveAbility_Insert",
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "ownerState": "Mask_AliveOrLimbo",
                                   "targetState": "Mask_AliveOrLimbo",
                                   "canHitNonTargets": true,
@@ -3041,7 +3041,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Hostile Entities(AOE)}}"
                                   },
-                                  "priorityTag": "MonsterChangeState",
+                                  "priorityTag": "EnemyChangeState",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
                                   "allowAbilityTriggers": false
@@ -3098,7 +3098,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "priorityTag": "MonsterChangeState",
+                          "priorityTag": "EnemyChangeState",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false

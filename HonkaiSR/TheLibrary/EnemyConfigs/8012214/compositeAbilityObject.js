@@ -1357,7 +1357,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -1383,7 +1383,7 @@ const compositeAbilityObject = {
                         }
                       },
                       "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -1605,7 +1605,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -1631,7 +1631,7 @@ const compositeAbilityObject = {
                         }
                       },
                       "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

@@ -1260,7 +1260,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Claymore_01_LocalLegend_Ability021_Part01",
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -1270,7 +1270,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Claymore_01_LocalLegend_Ability02_Part01",
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -1302,7 +1302,7 @@ const configAbility = {
                         "identifier": "SelectTarget"
                       },
                       "afterInjection": [],
-                      "priorityTag": "Summon_Activity"
+                      "priorityTag": "SummonInstance"
                     }
                   ]
                 },
@@ -1315,7 +1315,7 @@ const configAbility = {
                     "identifier": "SelectTarget"
                   },
                   "afterInjection": [],
-                  "priorityTag": "Summon_Activity"
+                  "priorityTag": "SummonInstance"
                 }
               ]
             }
@@ -1744,7 +1744,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover",
-              "priorityTag": "MonsterBuffSelf",
+              "priorityTag": "EnemyBuffSelf",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -2085,7 +2085,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Insert",
-                  "priorityTag": "MonsterChangePhase",
+                  "priorityTag": "EnemyPhaseChange",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

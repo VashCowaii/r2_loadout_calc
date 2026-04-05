@@ -668,7 +668,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "AvatarInsertAttackSelf",
+                              "priorityTag": "CharacterAttackFromSelf",
                               "ownerState": "Anyone",
                               "canHitNonTargets": true,
                               "valuePerStack": {
@@ -765,7 +765,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -922,7 +922,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -1217,7 +1217,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -2112,7 +2112,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
                               },
-                              "priorityTag": "PROG_AvatarLowest",
+                              "priorityTag": "DefaultCharacter",
                               "ownerState": "Anyone",
                               "canHitNonTargets": true,
                               "valuePerStack": {
@@ -2209,7 +2209,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "priorityTag": "PROG_AvatarLowest",
+                          "priorityTag": "DefaultCharacter",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -2432,7 +2432,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -2955,7 +2955,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "priorityTag": "PROG_AvatarLowest",
+                          "priorityTag": "DefaultCharacter",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -3958,7 +3958,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -4032,7 +4032,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -4161,7 +4161,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -4243,7 +4243,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -4443,7 +4443,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -4517,7 +4517,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -4671,7 +4671,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -4735,7 +4735,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "AvatarInsertAttackSelf",
+                              "priorityTag": "CharacterAttackFromSelf",
                               "ownerState": "Anyone",
                               "canHitNonTargets": true,
                               "valuePerStack": {
@@ -4824,7 +4824,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -8962,7 +8962,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -9022,7 +9022,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,
@@ -9091,7 +9091,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterChangePhase",
+                          "priorityTag": "EnemyPhaseChange",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,

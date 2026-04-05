@@ -476,7 +476,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "Ratio": {
@@ -1487,7 +1487,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "Chance": {
@@ -1935,7 +1935,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "DamagePercentage": {
@@ -2454,7 +2454,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "DamagePercentage": {
@@ -3485,7 +3485,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterSummon",
+                          "priorityTag": "EnemyCreated",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -3731,7 +3731,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterSummon",
+                          "priorityTag": "EnemyCreated",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -4991,7 +4991,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "ownerState": "Mask_AliveOrRevivable",
                           "targetState": "Mask_AliveOrRevivable",
                           "canHitNonTargets": true,
@@ -5024,7 +5024,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -5359,7 +5359,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "ownerState": "Mask_AliveOrRevivable",
                           "targetState": "Mask_AliveOrRevivable",
                           "canHitNonTargets": true,
@@ -5392,7 +5392,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -5708,7 +5708,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "ownerState": "Mask_AliveOrRevivable",
                           "targetState": "Mask_AliveOrRevivable",
                           "canHitNonTargets": true,
@@ -5741,7 +5741,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -11493,7 +11493,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterSummon",
+                      "priorityTag": "EnemyCreated",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -12481,7 +12481,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

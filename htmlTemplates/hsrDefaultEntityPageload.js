@@ -36,6 +36,7 @@ const scriptsToLoad = [
 
     "/HonkaiSR/TheLibrary/painAndSuffering.js",
     "/HonkaiSR/Calculator/customHTMLTrees.js",
+    "/HonkaiSR/Calculator/suffering6Priority.js",
     "/HonkaiSR/TheLibrary/newTester.js",
 
     "/MainJS/buildTime.js",

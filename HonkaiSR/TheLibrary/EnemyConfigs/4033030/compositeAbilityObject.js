@@ -1779,7 +1779,7 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Monster_W4_Shooter_01_Ability01_Part01_Insert",
-                          "priorityTag": "MonsterInsertAttackOthers",
+                          "priorityTag": "EnemyAttackFromOthers",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -1799,7 +1799,7 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Monster_W4_Shooter_01_Ability01_Abort",
-                          "priorityTag": "PROG_MonsterLowest",
+                          "priorityTag": "DefaultEnemy",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false

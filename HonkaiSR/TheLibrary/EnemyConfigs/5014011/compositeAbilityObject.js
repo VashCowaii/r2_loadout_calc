@@ -575,7 +575,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W5_Vtuber_ChangePhase01",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "showInActionOrder": true,
@@ -1618,7 +1618,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterBuffOthers",
+                      "priorityTag": "EnemyBuffOthers",
                       "allowAbilityTriggers": false
                     }
                   ],
@@ -1635,7 +1635,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "allowAbilityTriggers": false
                     }
                   ]
@@ -2458,7 +2458,7 @@ const compositeAbilityObject = {
                     "name": "Add Target by Unique Identifier",
                     "identifier": "W5_Vtuber_00"
                   },
-                  "priorityTag": "MonsterForceKill",
+                  "priorityTag": "EnemyForceKill",
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 },
@@ -2536,7 +2536,7 @@ const compositeAbilityObject = {
                         "name": "Add Target by Unique Identifier",
                         "identifier": "W5_Vtuber_00"
                       },
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
                     },
@@ -2978,7 +2978,7 @@ const compositeAbilityObject = {
                     "name": "Add Target by Unique Identifier",
                     "identifier": "W5_Vtuber_00"
                   },
-                  "priorityTag": "MonsterForceKill",
+                  "priorityTag": "EnemyForceKill",
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 },
@@ -3056,7 +3056,7 @@ const compositeAbilityObject = {
                         "name": "Add Target by Unique Identifier",
                         "identifier": "W5_Vtuber_00"
                       },
-                      "priorityTag": "MonsterForceKill",
+                      "priorityTag": "EnemyForceKill",
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
                     },
@@ -5804,7 +5804,7 @@ const compositeAbilityObject = {
                             "name": "Add Target by Unique Identifier",
                             "identifier": "W5_Vtuber_00"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
                         }
@@ -5822,7 +5822,7 @@ const compositeAbilityObject = {
                             "name": "Add Target by Unique Identifier",
                             "identifier": "W5_Vtuber_00"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
                         }
@@ -5878,7 +5878,7 @@ const compositeAbilityObject = {
                             "name": "Add Target by Unique Identifier",
                             "identifier": "W5_Vtuber_00"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "showInActionOrder": true,
                           "allowAbilityTriggers": false
                         }

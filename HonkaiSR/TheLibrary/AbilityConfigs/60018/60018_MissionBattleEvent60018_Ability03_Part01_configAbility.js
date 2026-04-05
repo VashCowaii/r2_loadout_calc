@@ -63,7 +63,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "priorityTag": "LevelPerformAvatar",
+              "priorityTag": "STAGE_Character",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

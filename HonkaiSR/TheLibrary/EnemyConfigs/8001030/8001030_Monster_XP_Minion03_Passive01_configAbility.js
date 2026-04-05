@@ -56,7 +56,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_XP_Minion03_PassiveAbility_Insert_Part01",
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,

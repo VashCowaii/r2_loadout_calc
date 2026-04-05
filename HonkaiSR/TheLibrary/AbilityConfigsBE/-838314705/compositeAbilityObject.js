@@ -877,7 +877,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "priorityTag": "MonsterInsertAttackSelf",
+              "priorityTag": "EnemyAttackFromSelf",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -1456,7 +1456,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "priorityTag": "MonsterInsertAttackSelf",
+              "priorityTag": "EnemyAttackFromSelf",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -2108,7 +2108,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "priorityTag": "MonsterInsertAttackSelf",
+              "priorityTag": "EnemyAttackFromSelf",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -2672,7 +2672,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "priorityTag": "MonsterInsertAttackSelf",
+              "priorityTag": "EnemyAttackFromSelf",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
@@ -2914,7 +2914,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
@@ -6860,7 +6860,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "LevelPerformMonster",
+                      "priorityTag": "STAGE_Enemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -7236,7 +7236,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "priorityTag": "LevelPerformMonster",
+                      "priorityTag": "STAGE_Enemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -7528,7 +7528,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "LevelPerformMonster",
+                      "priorityTag": "STAGE_Enemy",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

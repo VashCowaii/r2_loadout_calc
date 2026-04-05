@@ -101,7 +101,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "MonsterInsertAttackSelf",
+              "priorityTag": "EnemyAttackFromSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [

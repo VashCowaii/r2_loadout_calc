@@ -119,7 +119,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterReviveOthers",
+                      "priorityTag": "EnemyReviveOthers",
                       "canHitNonTargets": true,
                       "abortFlags": [
                         "DisableAction",

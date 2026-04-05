@@ -243,7 +243,7 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_SW_Boss_01_IF_PassiveAbility_Insert",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -1641,7 +1641,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_SW_Minion01_02_IF_PassiveAbility_Insert_Part01",
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -1725,7 +1725,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_SW_Minion01_01_IF_PassiveAbility_Insert_Part01",
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -1809,7 +1809,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_SW_Minion01_IF_PassiveAbility_Insert_Part01",
-              "priorityTag": "MonsterDeathRattle",
+              "priorityTag": "EnemyDeathEffect",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -1967,7 +1967,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterBattleCry",
+                      "priorityTag": "EnemyBattleCry",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false
@@ -2014,7 +2014,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
@@ -2141,7 +2141,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterReviveOthers",
+                      "priorityTag": "EnemyReviveOthers",
                       "canHitNonTargets": true,
                       "abortFlags": [
                         "DisableAction",

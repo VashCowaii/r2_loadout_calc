@@ -735,7 +735,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "AvatarBuffOthers",
+                      "priorityTag": "CharacterBuffOthers",
                       "ownerState": "Anyone",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -810,7 +810,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Battle Event's Caster}}"
                   },
-                  "priorityTag": "AvatarBuffOthers",
+                  "priorityTag": "CharacterBuffOthers",
                   "ownerState": "Anyone",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

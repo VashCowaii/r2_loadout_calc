@@ -191,7 +191,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "priorityTag": "MonsterChangeState",
+          "priorityTag": "EnemyChangeState",
           "canHitNonTargets": true,
           "allowAbilityTriggers": false
         }

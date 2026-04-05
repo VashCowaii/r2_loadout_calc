@@ -2300,7 +2300,7 @@ const configAbility = {
                 "modifier": "<a class=\"gModGreen\" id=\"1823230905\">Enemy_W4_Manta_Passive_Insert</a>"
               },
               "abilityName": "Monster_W4_Manta_Passive_Insert",
-              "priorityTag": "MonsterBuffSelf",
+              "priorityTag": "EnemyBuffSelf",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

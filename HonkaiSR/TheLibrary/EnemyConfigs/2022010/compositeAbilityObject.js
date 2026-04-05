@@ -736,7 +736,7 @@ const compositeAbilityObject = {
         {
           "name": "Inject Ability Use",
           "abilityName": "Monster_W2_Abomi01_PassiveAbility_Insert02_Part01",
-          "priorityTag": "MonsterReviveSelf",
+          "priorityTag": "EnemyReviveSelf",
           "ownerState": "Mask_AliveOrLimbo",
           "targetState": "Mask_AliveOrLimbo",
           "canHitNonTargets": true,
@@ -938,7 +938,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "abortFlags": [
                     "STAT_CTRL",
@@ -1274,7 +1274,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Monster_W2_Abomi01_PassiveAbility_Insert02_Part01",
-                          "priorityTag": "MonsterReviveSelf",
+                          "priorityTag": "EnemyReviveSelf",
                           "ownerState": "Mask_AliveOrLimbo",
                           "targetState": "Mask_AliveOrLimbo",
                           "canHitNonTargets": true,

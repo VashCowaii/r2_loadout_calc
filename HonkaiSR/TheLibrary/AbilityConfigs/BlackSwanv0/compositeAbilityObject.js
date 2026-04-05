@@ -2996,7 +2996,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "priorityTag": "AvatarBuffSelf",
+                      "priorityTag": "CharacterBuffSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "allowAbilityTriggers": false

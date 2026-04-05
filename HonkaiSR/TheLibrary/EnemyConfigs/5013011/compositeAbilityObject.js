@@ -1313,7 +1313,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "priorityTag": "MonsterInsertAttackOthers",
+                          "priorityTag": "EnemyAttackFromOthers",
                           "targetState": "Mask_AliveOrLimbo",
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -1334,7 +1334,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "priorityTag": "MonsterInsertAttackOthers",
+                          "priorityTag": "EnemyAttackFromOthers",
                           "targetState": "Mask_AliveOrLimbo",
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -1732,7 +1732,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterBuffSelf",
+                      "priorityTag": "EnemyBuffSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -1791,7 +1791,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterBuffSelf",
+                  "priorityTag": "EnemyBuffSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "abortFlags": [

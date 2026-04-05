@@ -57,7 +57,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "priorityTag": "MonsterInsertAttackSelf",
+              "priorityTag": "EnemyAttackFromSelf",
               "canHitNonTargets": true,
               "valuePerStack": {
                 "DamagePercentage": {

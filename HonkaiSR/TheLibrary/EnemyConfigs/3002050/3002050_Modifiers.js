@@ -513,7 +513,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "MonsterBattleCry",
+                  "priorityTag": "EnemyBattleCry",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false

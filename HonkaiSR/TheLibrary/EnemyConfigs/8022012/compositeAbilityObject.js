@@ -822,7 +822,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_SW_Minion01_PassiveAbility_Insert_Part01",
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -969,7 +969,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "MonsterReviveOthers",
+                          "priorityTag": "EnemyReviveOthers",
                           "canHitNonTargets": true,
                           "abortFlags": [
                             "DisableAction",

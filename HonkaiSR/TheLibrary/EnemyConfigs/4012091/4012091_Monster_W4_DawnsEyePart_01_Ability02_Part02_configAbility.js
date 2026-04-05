@@ -196,7 +196,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }

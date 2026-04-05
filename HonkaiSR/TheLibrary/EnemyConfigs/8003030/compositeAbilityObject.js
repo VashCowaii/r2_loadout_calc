@@ -1729,7 +1729,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "showInActionOrder": true,
                   "abortFlags": [
                     "DisableAction",
@@ -1840,7 +1840,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "showInActionOrder": true,
                       "abortFlags": [
                         "DisableAction",
@@ -1870,7 +1870,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterInsertAttackSelf",
+                      "priorityTag": "EnemyAttackFromSelf",
                       "showInActionOrder": true,
                       "abortFlags": [
                         "DisableAction",
@@ -1962,7 +1962,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
                             "DisableAction",
@@ -1992,7 +1992,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
                             "DisableAction",
@@ -2096,7 +2096,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
                             "DisableAction",
@@ -2126,7 +2126,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
                             "DisableAction",
@@ -2329,7 +2329,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "priorityTag": "MonsterInsertAttackSelf",
+                              "priorityTag": "EnemyAttackFromSelf",
                               "showInActionOrder": true,
                               "abortFlags": [
                                 "DisableAction",
@@ -2359,7 +2359,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "MonsterInsertAttackSelf",
+                              "priorityTag": "EnemyAttackFromSelf",
                               "showInActionOrder": true,
                               "abortFlags": [
                                 "DisableAction",

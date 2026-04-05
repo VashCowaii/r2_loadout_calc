@@ -95,7 +95,7 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "WMonster_Mecha_02_Ability10_InsertAbility",
-                  "priorityTag": "MonsterInsertAttackSelf",
+                  "priorityTag": "EnemyAttackFromSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false

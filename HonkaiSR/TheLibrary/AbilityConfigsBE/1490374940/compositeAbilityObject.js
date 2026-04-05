@@ -6457,7 +6457,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "ownerState": "Mask_AliveOrRevivable",
                           "targetState": "Mask_AliveOrRevivable",
                           "canHitNonTargets": true,
@@ -6490,7 +6490,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -8591,7 +8591,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
                               },
-                              "priorityTag": "AvatarInsertAttackSelf",
+                              "priorityTag": "CharacterAttackFromSelf",
                               "ownerState": "Anyone",
                               "canHitNonTargets": true,
                               "valuePerStack": {
@@ -9828,7 +9828,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "ownerState": "Mask_AliveOrRevivable",
                           "targetState": "Mask_AliveOrRevivable",
                           "canHitNonTargets": true,
@@ -9861,7 +9861,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -11261,7 +11261,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "priorityTag": "AvatarBuffSelf",
+                              "priorityTag": "CharacterBuffSelf",
                               "ownerState": "Anyone",
                               "canHitNonTargets": true,
                               "allowAbilityTriggers": false
@@ -12015,7 +12015,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
                               },
-                              "priorityTag": "AvatarInsertAttackSelf",
+                              "priorityTag": "CharacterAttackFromSelf",
                               "ownerState": "Anyone",
                               "canHitNonTargets": true,
                               "valuePerStack": {
@@ -12760,7 +12760,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterForceKill",
+                          "priorityTag": "EnemyForceKill",
                           "ownerState": "Mask_AliveOrRevivable",
                           "targetState": "Mask_AliveOrRevivable",
                           "canHitNonTargets": true,
@@ -12793,7 +12793,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -14497,7 +14497,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -17748,7 +17748,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "MonsterInsertAttackSelf",
+                          "priorityTag": "EnemyAttackFromSelf",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -19066,7 +19066,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {
@@ -19188,7 +19188,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "priorityTag": "AvatarInsertAttackSelf",
+                          "priorityTag": "CharacterAttackFromSelf",
                           "ownerState": "Anyone",
                           "canHitNonTargets": true,
                           "valuePerStack": {

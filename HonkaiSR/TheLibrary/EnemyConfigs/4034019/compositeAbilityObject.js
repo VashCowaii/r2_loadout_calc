@@ -6234,7 +6234,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_FireProwler_ChangePhase1",
-                      "priorityTag": "MonsterChangePhase",
+                      "priorityTag": "EnemyPhaseChange",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -7050,7 +7050,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "priorityTag": "MonsterDeathRattle",
+                      "priorityTag": "EnemyDeathEffect",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -7074,7 +7074,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_FireProwler_01_NoDeathRattle",
-                  "priorityTag": "MonsterDeathRattle",
+                  "priorityTag": "EnemyDeathEffect",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
@@ -7883,7 +7883,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_FireProwler_ChargeBreak",
-                  "priorityTag": "MonsterForceKill",
+                  "priorityTag": "EnemyForceKill",
                   "ownerState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false

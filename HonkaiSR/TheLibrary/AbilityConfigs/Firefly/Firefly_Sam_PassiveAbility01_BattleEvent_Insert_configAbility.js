@@ -73,7 +73,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "AvatarBuffOthers",
+                  "priorityTag": "CharacterBuffOthers",
                   "ownerState": "Anyone",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

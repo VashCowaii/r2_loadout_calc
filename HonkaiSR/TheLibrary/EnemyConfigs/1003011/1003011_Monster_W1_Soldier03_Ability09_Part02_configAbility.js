@@ -63,7 +63,7 @@ const configAbility = {
         {
           "name": "Inject Ability Use",
           "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert2",
-          "priorityTag": "MonsterChangeState",
+          "priorityTag": "EnemyChangeState",
           "canHitNonTargets": true,
           "showInActionOrder": true,
           "allowAbilityTriggers": false

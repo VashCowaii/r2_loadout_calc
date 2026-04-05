@@ -127,7 +127,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemies by Aggro}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -150,7 +150,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -203,7 +203,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemies by Aggro}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -226,7 +226,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -279,7 +279,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemies by Aggro}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -302,7 +302,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -355,7 +355,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemies by Aggro}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -378,7 +378,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "DefaultEnemy",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [

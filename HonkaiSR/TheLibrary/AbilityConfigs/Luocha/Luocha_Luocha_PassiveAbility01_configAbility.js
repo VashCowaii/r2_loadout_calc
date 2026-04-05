@@ -61,7 +61,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "AvatarHealOthers",
+              "priorityTag": "CharacterHealOthers",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [

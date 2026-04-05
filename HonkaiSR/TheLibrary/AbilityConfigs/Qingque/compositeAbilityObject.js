@@ -463,7 +463,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "priorityTag": "AvatarBuffSelf",
+              "priorityTag": "CharacterBuffSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
               "abortFlags": [
@@ -3234,7 +3234,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Skill Point User}}"
                               },
-                              "priorityTag": "AvatarInsertAttackSelf",
+                              "priorityTag": "CharacterAttackFromSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "abortFlags": [
@@ -3264,7 +3264,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Skill Point User}}"
                               },
-                              "priorityTag": "AvatarInsertAttackSelf",
+                              "priorityTag": "CharacterAttackFromSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
                               "abortFlags": [
@@ -3880,7 +3880,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "priorityTag": "AvatarBuffSelf",
+                          "priorityTag": "CharacterBuffSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
                           "abortFlags": [

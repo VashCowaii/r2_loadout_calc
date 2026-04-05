@@ -1615,7 +1615,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Phantylia: Main Target}}"
               },
-              "priorityTag": "MonsterChangePhase",
+              "priorityTag": "EnemyPhaseChange",
               "ownerState": "Mask_AliveOrLimbo",
               "targetState": "Mask_AliveOrLimbo",
               "canHitNonTargets": true,
@@ -2628,7 +2628,7 @@ const compositeAbilityObject = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "ownerState": "Mask_AliveOrLimbo",
                                       "targetState": "Mask_AliveOrLimbo",
                                       "canHitNonTargets": true,
@@ -2666,7 +2666,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "ownerState": "Mask_AliveOrLimbo",
                                   "targetState": "Mask_AliveOrLimbo",
                                   "canHitNonTargets": true,
@@ -3240,7 +3240,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "ownerState": "Mask_AliveOrLimbo",
                                   "targetState": "Mask_AliveOrLimbo",
                                   "canHitNonTargets": true,
@@ -3278,7 +3278,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                              "priorityTag": "MonsterChangePhase",
+                              "priorityTag": "EnemyPhaseChange",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
@@ -3426,7 +3426,7 @@ const compositeAbilityObject = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "ownerState": "Mask_AliveOrLimbo",
                                       "targetState": "Mask_AliveOrLimbo",
                                       "canHitNonTargets": true,
@@ -3464,7 +3464,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "ownerState": "Mask_AliveOrLimbo",
                                   "targetState": "Mask_AliveOrLimbo",
                                   "canHitNonTargets": true,
@@ -3849,7 +3849,7 @@ const compositeAbilityObject = {
                                     {
                                       "name": "Inject Ability Use",
                                       "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                                      "priorityTag": "MonsterChangePhase",
+                                      "priorityTag": "EnemyPhaseChange",
                                       "ownerState": "Mask_AliveOrLimbo",
                                       "targetState": "Mask_AliveOrLimbo",
                                       "canHitNonTargets": true,
@@ -3905,7 +3905,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-                                  "priorityTag": "MonsterChangePhase",
+                                  "priorityTag": "EnemyPhaseChange",
                                   "ownerState": "Mask_AliveOrLimbo",
                                   "targetState": "Mask_AliveOrLimbo",
                                   "canHitNonTargets": true,
