@@ -28,6 +28,7 @@ const scriptsToLoad = [
     "/HonkaiSR/TheLibrary/EnemyConfigs/dMegaGlobalModifierMap.js",
     "/HonkaiSR/TheLibrary/EnemyConfigs/dMegaMappingPathing.js",
 
+    "/HonkaiSR/Calculator/suffering6Priority.js",
     "/HonkaiSR/TheLibrary/EnemyConfigs/newTester.js",
 
     "/HonkaiSR/TheLibrary/EnemyConfigs/readyEnemyCounts.js",
