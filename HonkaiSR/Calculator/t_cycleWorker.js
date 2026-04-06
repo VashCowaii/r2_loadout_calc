@@ -8,6 +8,7 @@ importScripts(
     '/HonkaiSR/Calculator/statListData.js',
     "/HonkaiSR/Calculator/formulas.js",
     "/HonkaiSR/Calculator/dDataList.js",
+    "/HonkaiSR/Calculator/suffering6Priority.js",
     "/HonkaiSR/Calculator/suffering5SuperGlobals.js",
     "/HonkaiSR/Calculator/suffering4Analytics.js",
     "/HonkaiSR/Calculator/suffering3Gear.js",
