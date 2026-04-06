@@ -501,7 +501,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: characterNaownerTurn.properNameme,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -1198,6 +1199,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);

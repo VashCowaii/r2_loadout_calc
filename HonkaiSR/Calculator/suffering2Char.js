@@ -7018,8 +7018,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -7544,7 +7545,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -8138,7 +8140,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -8744,7 +8747,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -9504,7 +9508,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -10249,6 +10255,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -10949,6 +10956,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -12197,6 +12205,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -12901,9 +12910,6 @@ const turnLogic = {
                 "listenerName": "Viscera's Disquiet - attack dmg end listener",
                 "ownerTurn": {},
             },
-
-
-
             {
                 "trigger": "DOTDMGStart",
                 condition(battleData,generalInfo) {
@@ -12999,6 +13005,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -13778,6 +13785,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -14343,7 +14351,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -15019,6 +15028,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -15647,6 +15657,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
@@ -16191,7 +16202,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -16907,8 +16919,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            priority: priorityList.turn.Default,
                         }
 
                         queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
@@ -17697,6 +17710,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -18358,7 +18372,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -19001,7 +19016,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -19619,7 +19635,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -20510,7 +20527,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -21293,8 +21311,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -22124,8 +22143,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -22840,8 +22860,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -23534,8 +23555,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -24634,6 +24656,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -26003,7 +26026,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -27338,6 +27362,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -28673,7 +28698,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -29773,8 +29799,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -30588,6 +30615,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -31202,8 +31230,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: ownerTurn,
+                            sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -32045,6 +32074,7 @@ const turnLogic = {
                             properName: ownerTurn.properName,
                             sourceTurn: null,
                             isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -33074,7 +33104,8 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
@@ -34157,7 +34188,9 @@ const turnLogic = {
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
-                            sourceTurn: null
+                            sourceTurn: null,
+                            isAttackUlt: true,
+                            priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         battleActions.queueUltimateUse(battleData,queueObject);
