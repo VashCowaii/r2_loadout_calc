@@ -23,7 +23,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members(Exclude Self)}}"
       },
-      "popUpText": "Action Advanced"
+      "popUpText": "Action Advance"
     },
     "Trigger: Ability End"
   ],

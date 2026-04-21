@@ -2224,7 +2224,7 @@ const configAbility = {
       ],
       "stackData": [],
       "latentQueue": [],
-      "description": "\"Anti-Creator\" enters Charging state, and will use \"Resist and Destroy\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
+      "description": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
       "type": "Other",
       "statusName": "Resist and Destroy"
     },

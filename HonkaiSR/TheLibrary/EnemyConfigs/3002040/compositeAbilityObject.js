@@ -101,7 +101,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "popUpText": "Action Advanced"
+          "popUpText": "Action Advance"
         },
         {
           "name": "Remove Events/Bonuses",

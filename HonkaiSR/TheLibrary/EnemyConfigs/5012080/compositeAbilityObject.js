@@ -531,7 +531,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "popUpText": "Action Advanced"
+                      "popUpText": "Action Advance"
                     }
                   ]
                 }
