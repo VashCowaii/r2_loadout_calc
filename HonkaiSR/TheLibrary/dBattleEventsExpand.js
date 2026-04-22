@@ -1008,6 +1008,30 @@ let battleEvents = {
     "type": "Summon",
     "isBattleEvent": true
   },
+  "11505": {
+    "internalID": 11505,
+    "name": 11505,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "1505_BE.png",
+    "team": "Player Team",
+    "type": "Summon",
+    "isBattleEvent": true
+  },
+  "11506": {
+    "internalID": 11506,
+    "name": 11506,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "1506.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "16007": {
     "internalID": 16007,
     "name": 16007,
@@ -3736,6 +3760,24 @@ let battleEvents = {
       0.024,
       0.012,
       0.0072
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "999.png",
+    "team": "Neutral Team",
+    "isBattleEvent": true
+  },
+  "30145": {
+    "internalID": 30145,
+    "name": 30145,
+    "energyMax": null,
+    "params": [
+      0.5,
+      2,
+      0.12,
+      0.02,
+      0.012,
+      20
     ],
     "skills": {},
     "baseTriggersObject": {},
@@ -12425,6 +12467,53 @@ let battleEvents = {
     "type": "Assist",
     "isBattleEvent": true
   },
+  "60041": {
+    "internalID": 60041,
+    "name": 60041,
+    "energyMax": null,
+    "params": [
+      0.3,
+      1.5
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEventMainStoryTVStation_Negative.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "60042": {
+    "internalID": 60042,
+    "name": 60042,
+    "energyMax": null,
+    "params": [
+      10,
+      1.5
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEventMainStoryTVStation_Neutrality.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "60043": {
+    "internalID": 60043,
+    "name": 60043,
+    "energyMax": null,
+    "params": [
+      10,
+      0.5,
+      1.5,
+      0.25
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEventMainStoryTVStation_Positive.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "61001": {
     "internalID": 61001,
     "name": 61001,
@@ -19524,6 +19613,18 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "1014.png",
     "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "113101": {
+    "internalID": 113101,
+    "name": 113101,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_1312_02_A.png",
+    "team": "Player Team",
     "type": "Assist",
     "isBattleEvent": true
   }
