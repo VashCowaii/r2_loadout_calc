@@ -45,13 +45,13 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2631,
-        2633,
-        2632,
-        2634,
-        2635,
-        2636,
-        2637
+        2653,
+        2655,
+        2654,
+        2656,
+        2657,
+        2658,
+        2659
       ],
       "enemyTag": [
         "Pam_MainBoss"
@@ -91,13 +91,13 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2631,
-        2633,
-        2632,
-        2634,
-        2635,
-        2636,
-        2637
+        2653,
+        2655,
+        2654,
+        2656,
+        2657,
+        2658,
+        2659
       ],
       "enemyTag": [
         "Pam_MainBoss",
@@ -110,6 +110,84 @@ let enemyData = {
           "base": 5012120
         }
       ]
+    },
+    "501402003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.33333302,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2653,
+        2655,
+        2654,
+        2656,
+        2657,
+        2658,
+        2659
+      ],
+      "enemyTag": [
+        "Pam_MainBoss",
+        "GridFightBoss"
+      ],
+      "summons": [
+        {
+          "name": "\"Alloy Pommy\"",
+          "over": 501212001,
+          "base": 5012120
+        }
+      ],
+      "overrideParams": {
+        "2655": [
+          [
+            0.2,
+            -1,
+            0.15,
+            -1,
+            -1,
+            0.25
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "2658": [
+          [
+            4
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

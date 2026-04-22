@@ -1,23 +1,24 @@
 let enemyData = {
-  "name": "SD Civilian Mechatron",
-  "image": 5012090,
+  "name": "Magical Girl Troupe",
+  "image": 5012100,
   "bar": 1,
+  "bodyType": "LittleMonster",
   "rank": "MinionLv2",
   "stArray": [
     18,
     210,
-    418.5,
-    80,
+    279,
+    100,
     null,
     0.2,
     0.1,
-    null,
+    1,
     90,
     null,
     1
   ],
   "options": {
-    "5012090": {
+    "5012100": {
       "name": -1,
       "scaleElite": 1,
       "stArray": [
@@ -32,27 +33,28 @@ let enemyData = {
       "weak": [
         "Physical",
         "Fire",
-        "Thunder"
+        "Ice"
       ],
       "res": {
-        "Ice": 0.2,
+        "Thunder": 0.2,
         "Wind": 0.2,
         "Quantum": 0.2,
         "Imaginary": 0.2
       },
       "abilities": [
-        2532,
-        2533,
-        2534
+        2535,
+        2536,
+        2537,
+        2538
       ]
     },
-    "501209002": {
+    "501210001": {
       "name": -1,
       "scaleElite": 1,
       "stArray": [
         1,
         1,
-        0.555556,
+        0.833333,
         1,
         null,
         1,
@@ -61,18 +63,19 @@ let enemyData = {
       "weak": [
         "Physical",
         "Fire",
-        "Thunder"
+        "Ice"
       ],
       "res": {
-        "Ice": 0.2,
+        "Thunder": 0.2,
         "Wind": 0.2,
         "Quantum": 0.2,
         "Imaginary": 0.2
       },
       "abilities": [
-        2532,
-        2533,
-        2534
+        2535,
+        2536,
+        2537,
+        2538
       ]
     }
   }
