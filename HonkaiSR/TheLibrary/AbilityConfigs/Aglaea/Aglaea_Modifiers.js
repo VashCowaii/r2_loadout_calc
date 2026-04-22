@@ -353,7 +353,8 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__66782842\">Memosprite_Aglaea_Ability03_Summon</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "Endurance"
+        "Endurance",
+        500
       ],
       "execute": [
         {
