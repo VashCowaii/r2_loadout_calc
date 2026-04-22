@@ -1,6 +1,3981 @@
 const stageTypers = "pf";
 let mocSchedule = [
   {
+    "id": 2023,
+    "image": "activityBG/ChallengeThemeBanner_2018.png",
+    "realName": "Illusory Concepts",
+    "start": "2026-05-11 04:00:00",
+    "end": "2026-06-22 04:00:00",
+    "buffData": {
+      "modifierName": "ADV_StageAbility_3031220",
+      "realModifierNamne": "FantasticStory_BaseAbility_2200",
+      "BEKey": 1314726962,
+      "name": "undefined",
+      "desc": "undefined",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Illusory Concepts (I)",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30321011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "The Ascended",
+                "enemyLevel": 55,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 55,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 26108.9127675,
+                        "speedBase": 83,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dreamjolt Troupe's Mr. Domescreen",
+                        "id": 3002010,
+                        "image": 3002010,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 14359.9020221,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Incineration Shadewalker",
+                        "id": 1022020,
+                        "image": 1022020,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 7832.6738302,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Ice",
+                          "Wind",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.4,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_DOT_Burn": 1
+                        }
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 31330.695321,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      0.5
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 55,
+                    "enemies": [
+                      {
+                        "name": "Furiae Archer",
+                        "id": 4012030,
+                        "image": 4012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 21722.6154226,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furiae Warrior",
+                        "id": 4012010,
+                        "image": 4012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 21722.6154226,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furiae Praetor",
+                        "id": 401301201,
+                        "image": 4013012,
+                        "rank": "Elite",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 689275.2469329,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      1.4
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 55,
+                    "enemies": [
+                      {
+                        "name": "Disciples of Sanctus Medicus: Ballistarius",
+                        "id": 2022060,
+                        "image": 2022060,
+                        "rank": "MinionLv2",
+                        "attackBase": 157.3920711,
+                        "defBase": 750.00009,
+                        "hpBase": 39824.7949414,
+                        "speedBase": 83,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Mara-Struck Warden",
+                        "id": 2022110,
+                        "image": 2022110,
+                        "rank": "MinionLv2",
+                        "attackBase": 157.3920711,
+                        "defBase": 750.00009,
+                        "hpBase": 36204.3590376,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "The Ascended",
+                        "id": 202303016,
+                        "image": 2023030,
+                        "rank": "Elite",
+                        "attackBase": 157.3920711,
+                        "defBase": 750.00009,
+                        "hpBase": 1493429.810301,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Wind": 0.4,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.1,
+                      4.2
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321011",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 2214035.7525549,
+                "aoeSUM": 4919441.293524805
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30321012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Spectral Envoy",
+                "enemyLevel": 55,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 55,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 26108.9127675,
+                        "speedBase": 83,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Servant of Tides",
+                        "id": 4052010,
+                        "image": 4052010,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 16970.7932989,
+                        "speedBase": 144,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Ice",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Everwinter Shadewalker",
+                        "id": 1022010,
+                        "image": 1022010,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 7832.6738302,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.4,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL_Frozen": 1
+                        }
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 31330.695321,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      0.5
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 55,
+                    "enemies": [
+                      {
+                        "name": "Entranced Ingenium: Illumination Dragonfish",
+                        "id": 2012010,
+                        "image": 2012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 12532.2781284,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Sableclaw Wolftrooper",
+                        "id": 2032010,
+                        "image": 2032010,
+                        "rank": "MinionLv2",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 16709.7041712,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dreamjolt Troupe's Sweet Gorilla",
+                        "id": 300302007,
+                        "image": 3003020,
+                        "rank": "Elite",
+                        "attackBase": 143.083701,
+                        "defBase": 750.00009,
+                        "hpBase": 689275.2469329,
+                        "speedBase": 144,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      1.4
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 55,
+                    "enemies": [
+                      {
+                        "name": "Black Tide's Corroded Axe",
+                        "id": 4032030,
+                        "image": 4032030,
+                        "rank": "MinionLv2",
+                        "attackBase": 157.3920711,
+                        "defBase": 750.00009,
+                        "hpBase": 61547.4103639,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Aggressive Reading Material",
+                        "id": 5012030,
+                        "image": 5012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 157.3920711,
+                        "defBase": 750.00009,
+                        "hpBase": 45255.448797,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.12,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Aurumaton Spectral Envoy",
+                        "id": 201302012,
+                        "image": 2013020,
+                        "rank": "Elite",
+                        "attackBase": 157.3920711,
+                        "defBase": 750.00009,
+                        "hpBase": 1493429.810301,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.22,
+                        "ehr": 0.04,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.1,
+                      4.2
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321012",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 2214035.7525549,
+                "aoeSUM": 5282181.121572393
+              }
+            ]
+          }
+        }
+      },
+      "2": {
+        "floorName": "Illusory Concepts (II)",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30321021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Senior Staff: Team Leader",
+                "enemyLevel": 65,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 56,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 51514.32285,
+                        "speedBase": 83,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furiae Philosopher",
+                        "id": 4012020,
+                        "image": 4012020,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 26787.447882,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Mara-Struck Soldier",
+                        "id": 2022010,
+                        "image": 2022010,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 12363.437484,
+                        "speedBase": 83,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.4,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 61817.18742,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      0.5
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 56,
+                    "enemies": [
+                      {
+                        "name": "Dreamjolt Troupe's Mr. Domescreen",
+                        "id": 3002010,
+                        "image": 3002010,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 45332.604108,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Voidranger: Eliminator",
+                        "id": 8012030,
+                        "image": 8012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 34617.6249552,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Abundance Sprite: Malefic Ape",
+                        "id": 202302014,
+                        "image": 2023020,
+                        "rank": "Elite",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 1359978.12324,
+                        "speedBase": 144,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      1.4
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 56,
+                    "enemies": [
+                      {
+                        "name": "Automaton Beetle",
+                        "id": 1012030,
+                        "image": 1012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 255.4555925,
+                        "defBase": 849.99999,
+                        "hpBase": 50003.2360464,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Thunder",
+                          "Wind",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Memory Zone Meme \"Heartbreaker\"",
+                        "id": 3012020,
+                        "image": 3012020,
+                        "rank": "MinionLv2",
+                        "attackBase": 255.4555925,
+                        "defBase": 849.99999,
+                        "hpBase": 50003.2360464,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Senior Staff: Team Leader",
+                        "id": 803301011,
+                        "image": 8033010,
+                        "rank": "Elite",
+                        "attackBase": 255.4555925,
+                        "defBase": 849.99999,
+                        "hpBase": 2946619.26702,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.1,
+                      4.2
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321021",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 4368414.57768,
+                "aoeSUM": 8538327.297978003
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30321022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Noontide Gryphon",
+                "enemyLevel": 65,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 56,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 51514.32285,
+                        "speedBase": 83,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Silvermane Soldier",
+                        "id": 1002040,
+                        "image": 1002040,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 13393.723941,
+                        "speedBase": 83,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Wind",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Wraith Warden",
+                        "id": 2002030,
+                        "image": 2002030,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 15454.296855,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 61817.18742,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      0.5
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 56,
+                    "enemies": [
+                      {
+                        "name": "Imaginary Weaver",
+                        "id": 8002010,
+                        "image": 8002010,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 31320.7082928,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Everwinter Shadewalker",
+                        "id": 1022010,
+                        "image": 1022010,
+                        "rank": "MinionLv2",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 24726.874968,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.16,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.4,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL_Frozen": 1
+                        }
+                      },
+                      {
+                        "name": "Blaze Out of Space",
+                        "id": 800302023,
+                        "image": 8003020,
+                        "rank": "Elite",
+                        "attackBase": 232.2323568,
+                        "defBase": 849.99999,
+                        "hpBase": 1359978.12324,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.4,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_DOT_Burn": 1
+                        }
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      1.4
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 56,
+                    "enemies": [
+                      {
+                        "name": "Furiae Troupe",
+                        "id": 4012040,
+                        "image": 4012040,
+                        "rank": "MinionLv2",
+                        "attackBase": 255.4555925,
+                        "defBase": 849.99999,
+                        "hpBase": 92863.1526576,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Meteoric Eagle",
+                        "id": 4022010,
+                        "image": 4022010,
+                        "rank": "MinionLv2",
+                        "attackBase": 255.4555925,
+                        "defBase": 849.99999,
+                        "hpBase": 107149.791528,
+                        "speedBase": 100,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Wind",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Wind",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Noontide Gryphon",
+                        "id": 402301002,
+                        "image": 4023010,
+                        "rank": "Elite",
+                        "attackBase": 255.4555925,
+                        "defBase": 849.99999,
+                        "hpBase": 2946619.3384532,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.26,
+                        "ehr": 0.12,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.1,
+                      4.2
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321022",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 4368414.649113201,
+                "aoeSUM": 9933678.661008198
+              }
+            ]
+          }
+        }
+      },
+      "3": {
+        "floorName": "Illusory Concepts (III)",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30321031
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "The Ascended",
+                "enemyLevel": 75,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 84745.615275,
+                        "speedBase": 91.3,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dreamjolt Troupe's Mr. Domescreen",
+                        "id": 3002010,
+                        "image": 3002010,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 46610.0884012,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Incineration Shadewalker",
+                        "id": 1022020,
+                        "image": 1022020,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 25423.6845825,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Ice",
+                          "Wind",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.4,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_DOT_Burn": 1
+                        }
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 101694.73833,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      0.5
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Furiae Archer",
+                        "id": 4012030,
+                        "image": 4012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 70508.3519088,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furiae Warrior",
+                        "id": 4012010,
+                        "image": 4012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 70508.3519088,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furiae Praetor",
+                        "id": 401301201,
+                        "image": 4013012,
+                        "rank": "Elite",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 2237284.0805484,
+                        "speedBase": 145.2,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      1.4
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Disciples of Sanctus Medicus: Ballistarius",
+                        "id": 2022060,
+                        "image": 2022060,
+                        "rank": "MinionLv2",
+                        "attackBase": 380.4284345,
+                        "defBase": 950.0001,
+                        "hpBase": 129265.3118328,
+                        "speedBase": 91.3,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Mara-Struck Warden",
+                        "id": 2022110,
+                        "image": 2022110,
+                        "rank": "MinionLv2",
+                        "attackBase": 380.4284345,
+                        "defBase": 950.0001,
+                        "hpBase": 117513.919848,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "The Ascended",
+                        "id": 202303016,
+                        "image": 2023030,
+                        "rank": "Elite",
+                        "attackBase": 380.4284345,
+                        "defBase": 950.0001,
+                        "hpBase": 4847449.19373,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Wind": 0.4,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.1,
+                      4.2
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321031",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 7186428.012608401,
+                "aoeSUM": 15967768.66740333
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30321032
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Spectral Envoy",
+                "enemyLevel": 75,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 84745.615275,
+                        "speedBase": 91.3,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Servant of Tides",
+                        "id": 4052010,
+                        "image": 4052010,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 55084.6499287,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Ice",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Everwinter Shadewalker",
+                        "id": 1022010,
+                        "image": 1022010,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 25423.6845825,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.4,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL_Frozen": 1
+                        }
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 101694.73833,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      0.5
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Entranced Ingenium: Illumination Dragonfish",
+                        "id": 2012010,
+                        "image": 2012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 40677.895332,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Sableclaw Wolftrooper",
+                        "id": 2032010,
+                        "image": 2032010,
+                        "rank": "MinionLv2",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 54237.193776,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dreamjolt Troupe's Sweet Gorilla",
+                        "id": 300302007,
+                        "image": 3003020,
+                        "rank": "Elite",
+                        "attackBase": 345.8440314,
+                        "defBase": 950.0001,
+                        "hpBase": 2237284.0805484,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      1.4
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Black Tide's Corroded Axe",
+                        "id": 4032030,
+                        "image": 4032030,
+                        "rank": "MinionLv2",
+                        "attackBase": 380.4284345,
+                        "defBase": 950.0001,
+                        "hpBase": 199773.6637416,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Aggressive Reading Material",
+                        "id": 5012030,
+                        "image": 5012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 380.4284345,
+                        "defBase": 950.0001,
+                        "hpBase": 146892.39981,
+                        "speedBase": 110,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Aurumaton Spectral Envoy",
+                        "id": 201302012,
+                        "image": 2013020,
+                        "rank": "Elite",
+                        "attackBase": 380.4284345,
+                        "defBase": 950.0001,
+                        "hpBase": 4847449.19373,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.2,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.1,
+                      4.2
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321032",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 7186428.012608401,
+                "aoeSUM": 17145167.748957295
+              }
+            ]
+          }
+        }
+      },
+      "4": {
+        "floorName": "Illusory Concepts (IV)",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30321041
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Savage God, Mad King, Incarnation of Strife",
+                "enemyLevel": 85,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 262627.722,
+                        "speedBase": 99.6,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Mara-Struck Soldier",
+                        "id": 2022010,
+                        "image": 2022010,
+                        "rank": "MinionLv2",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 63030.65328,
+                        "speedBase": 99.6,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.4,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Black Tide's Corroded Axe",
+                        "id": 4032030,
+                        "image": 4032030,
+                        "rank": "MinionLv2",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 178586.85096,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 315153.2664,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      2
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Assistant Graffiti: Rusher",
+                        "id": 5012050,
+                        "image": 5012050,
+                        "rank": "MinionLv2",
+                        "attackBase": 446.5513565,
+                        "defBase": 1050,
+                        "hpBase": 306399.009,
+                        "speedBase": 172.8,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Wind",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": -0.2,
+                          "Thunder": -0.2,
+                          "Wind": 0.8,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Silvermane Soldier",
+                        "id": 1002040,
+                        "image": 1002040,
+                        "rank": "MinionLv2",
+                        "attackBase": 446.5513565,
+                        "defBase": 1050,
+                        "hpBase": 159327.48468,
+                        "speedBase": 99.6,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 20,
+                        "weaknessList": [
+                          "Wind",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Silvermane Lieutenant",
+                        "id": 100301035,
+                        "image": 1003010,
+                        "rank": "Elite",
+                        "attackBase": 446.5513565,
+                        "defBase": 1050,
+                        "hpBase": 10111167.297,
+                        "speedBase": 144,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.05,
+                      6
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Assistant Graffiti: Demander",
+                        "id": 5012060,
+                        "image": 5012060,
+                        "rank": "MinionLv2",
+                        "attackBase": 476.3214469,
+                        "defBase": 1050,
+                        "hpBase": 1181824.749,
+                        "speedBase": 172.8,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": -0.2,
+                          "Thunder": 0.8,
+                          "Wind": -0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Black Tide's Decrepit Bow",
+                        "id": 4032050,
+                        "image": 4032050,
+                        "rank": "MinionLv2",
+                        "attackBase": 476.3214469,
+                        "defBase": 1050,
+                        "hpBase": 1418189.6988,
+                        "speedBase": 186,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Savage God, Mad King, Incarnation of Strife",
+                        "id": 401401401,
+                        "image": 4014014,
+                        "rank": "LittleBoss",
+                        "attackBase": 476.3214469,
+                        "defBase": 1050,
+                        "hpBase": 39000216.717,
+                        "speedBase": 170.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.12,
+                      26
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321041",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 49426537.2804,
+                "aoeSUM": 114039960.29831992
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30321042
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Ichor Memosprite: Judge of Oblivion",
+                "enemyLevel": 85,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.3
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "Local_SPAdd_Modify",
+                    "BEKey": -531095577,
+                    "actualParams": [
+                      0.3
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Fictional Ensemble",
+                        "id": 8003060,
+                        "image": 8003060,
+                        "rank": "Elite",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 262627.722,
+                        "speedBase": 99.6,
+                        "critDMG": 0.2,
+                        "effectRES": null,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Lesser Sting",
+                        "id": 8022020,
+                        "image": 8022020,
+                        "rank": "MinionLv2",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 165455.46486,
+                        "speedBase": 172.8,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Wind",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL_Frozen": 0.75
+                        }
+                      },
+                      {
+                        "name": "Grunt: Security Personnel",
+                        "id": 8032020,
+                        "image": 8032020,
+                        "rank": "MinionLv2",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 115556.19768,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Ice"
+                        ],
+                        "resistances": {
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furbo Journalist",
+                        "id": 501211002,
+                        "image": 5012110,
+                        "rank": "MinionLv2",
+                        "attackBase": 425.2870062,
+                        "defBase": 1050,
+                        "hpBase": 315153.2664,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 40,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      3,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2,
+                      1,
+                      2
+                    ],
+                    "totalMax": 25,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0,
+                      2
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Magical Girl Troupe",
+                        "id": 5012100,
+                        "image": 5012100,
+                        "rank": "MinionLv2",
+                        "attackBase": 446.5513565,
+                        "defBase": 1050,
+                        "hpBase": 367678.8108,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Ice"
+                        ],
+                        "resistances": {
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Autonomous Wand",
+                        "id": 5012010,
+                        "image": 5012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 446.5513565,
+                        "defBase": 1050,
+                        "hpBase": 306399.009,
+                        "speedBase": 172.8,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 501304001,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 446.5513565,
+                        "defBase": 1050,
+                        "hpBase": 10111167.297,
+                        "speedBase": 144,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.05,
+                      6
+                    ]
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 57,
+                    "enemies": [
+                      {
+                        "name": "Ichor Memosprite: Canine",
+                        "id": 4062020,
+                        "image": 4062020,
+                        "rank": "MinionLv2",
+                        "attackBase": 476.3214469,
+                        "defBase": 1050,
+                        "hpBase": 1418189.6988,
+                        "speedBase": 144,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Ichor Memosprite: Pheasant",
+                        "id": 4062010,
+                        "image": 4062010,
+                        "rank": "MinionLv2",
+                        "attackBase": 476.3214469,
+                        "defBase": 1050,
+                        "hpBase": 1181824.749,
+                        "speedBase": 120,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Ichor Memosprite: Judge of Oblivion",
+                        "id": 4064014,
+                        "image": 4064014,
+                        "rank": "LittleBoss",
+                        "attackBase": 476.3214469,
+                        "defBase": 1050,
+                        "hpBase": 39000216.717,
+                        "speedBase": 180,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.28,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      },
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      1
+                    ],
+                    "totalMax": 45,
+                    "fieldMax": 5,
+                    "abilityName": "FantasticStory_Wave_Ability_0001",
+                    "params": [
+                      0.12,
+                      26
+                    ]
+                  }
+                ],
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30321042",
+                  "_CreateBattleEvent": "31001",
+                  "_ChallengeStoryType": "2"
+                },
+                "highSTSUM": 49426537.2804,
+                "aoeSUM": 118742747.37359993
+              }
+            ]
+          }
+        }
+      }
+    },
+    "buffList1": [
+      {
+        "modifierName": "ADV_StageAbility_3031353",
+        "realModifierNamne": "FantasticStory_PlusAbility_2211",
+        "BEKey": 1314726962,
+        "name": "Euphoria",
+        "desc": "During \"Surging Grit,\" enemy targets take #1[i]% more Elation DMG, and additionally increases Aha Instant's SPD by #2[i].",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          20,
+          0
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3031354",
+        "realModifierNamne": "FantasticStory_PlusAbility_2212",
+        "BEKey": 1314726962,
+        "name": "Delirium",
+        "desc": "After an ally target uses their Basic ATK or Skill, gains #2[i] Punchline. During Surging Grit, the ally targets' DMG dealt increases by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5,
+          1,
+          3
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3031358",
+        "realModifierNamne": "FantasticStory_PlusAbility_2214",
+        "BEKey": 1314726962,
+        "name": "Improvisation",
+        "desc": "During Surging Grit, DoT taken by enemy targets increases by #1[i]%. When an enemy target is defeated, allies gain 1 Punchline for each DoT effect this target is afflicted with.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5,
+          1
+        ]
+      }
+    ],
+    "buffList2": [
+      {
+        "modifierName": "ADV_StageAbility_3031222",
+        "realModifierNamne": "FantasticStory_BaseAbility_2210_BaseAddOn",
+        "BEKey": 1314726962,
+        "name": "Punchline Acquisition",
+        "desc": "Each time Punchline is gained, allies will additionally accumulate #1[i] Grit Value.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          2
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3031223",
+        "realModifierNamne": "FantasticStory_BaseAbility_2210_BeforeFever",
+        "BEKey": 1314726962,
+        "name": "Concordant Truce",
+        "desc": "This stage has a special Elation Skill. When entering Aha Instant, deals #1[i] instance(s) of Imaginary Elation DMG to a random enemy target. When an enemy target is defeated by any target, obtains #3[i] Punchline point(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          15,
+          2.5,
+          1
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3031224",
+        "realModifierNamne": "FantasticStory_BaseAbility_2210_EnterFever",
+        "BEKey": 1314726962,
+        "name": "Surging Grit",
+        "desc": "Upon entering \"Surging Grit,\" Aha immediately gains an extra turn where a fixed amount of #1[i] Punchline is taken into account. During this turn, Punchline is not consumed, and Elation Skill DMG dealt is #2[i]% of the original DMG. During \"Surging Grit,\" DMG taken by enemy targets increases by #3[i]%, and Aha Instant's SPD increases by #4[i].",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          20,
+          0.5,
+          0.5,
+          40
+        ]
+      }
+    ]
+  },
+  {
     "id": 2022,
     "image": "activityBG/ChallengeThemeBanner_2005.png",
     "realName": "Virtual Made Manifest",
@@ -7858,7 +11833,7 @@ let mocSchedule = [
         "modifierName": "ADV_StageAbility_3031222",
         "realModifierNamne": "FantasticStory_BaseAbility_2210_BaseAddOn",
         "BEKey": 1314726962,
-        "name": "Punchline obtained",
+        "name": "Punchline Acquisition",
         "desc": "Each time Punchline is gained, allies will additionally accumulate #1[i] Grit Value.",
         "battleDesc": null,
         "buffType": "",
@@ -7876,7 +11851,7 @@ let mocSchedule = [
         "buffType": "",
         "params": [
           15,
-          4.5,
+          2.5,
           1
         ]
       },
