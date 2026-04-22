@@ -285,6 +285,260 @@ let mocSchedule = [
     ]
   },
   {
+    "id": 1032,
+    "realName": "Bud of Nihility",
+    "worldLevel": 5,
+    "testWorldLevel": 5,
+    "testMapID": 1032,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of Nihility",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1025115,
+              1025125,
+              1025135
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Ichor Memosprite: Pheasant",
+                      "id": 4062010,
+                      "image": 4062010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    0
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 30861.89469,
+                "aoeSUM": 92585.68407
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Ichor Memosprite: Pheasant",
+                      "id": 4062010,
+                      "image": 4062010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Ichor Memosprite: Canine",
+                      "id": 4062020,
+                      "image": 4062020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 37034.273628,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 37034.273628,
+                "aoeSUM": 104930.441946
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Ichor Memosprite: Canine",
+                      "id": 4062020,
+                      "image": 4062020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 37034.273628,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Ichor Memosprite: Pheasant",
+                      "id": 4062010,
+                      "image": 4062010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 37034.273628,
+                "aoeSUM": 135792.33663600002
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "110313.png",
+      "110312.png",
+      "110311.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1031,
     "realName": "Bud of Elation",
     "worldLevel": 5,
