@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3030,
-        3031,
-        3032,
-        3033
+        3102,
+        3103,
+        3104,
+        3105
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -82,10 +82,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3030,
-        3031,
-        3032,
-        3033
+        3102,
+        3103,
+        3104,
+        3105
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -116,10 +116,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3030,
-        3031,
-        3032,
-        3033
+        3102,
+        3103,
+        3104,
+        3105
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -153,10 +153,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3030,
-        3031,
-        3032,
-        3033
+        3102,
+        3103,
+        3104,
+        3105
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -190,10 +190,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3030,
-        3031,
-        3032,
-        3033
+        3102,
+        3103,
+        3104,
+        3105
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -227,10 +227,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3030,
-        3031,
-        3032,
-        3033
+        3102,
+        3103,
+        3104,
+        3105
       ],
       "enemyTag": [
         "SW_Minion01",

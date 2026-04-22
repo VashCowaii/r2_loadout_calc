@@ -42,10 +42,10 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3017,
-        3018,
-        3019,
-        3020
+        3089,
+        3090,
+        3091,
+        3092
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -83,10 +83,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3017,
-        3018,
-        3019,
-        3020
+        3089,
+        3090,
+        3091,
+        3092
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -124,10 +124,10 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3017,
-        3018,
-        3019,
-        3020
+        3089,
+        3090,
+        3091,
+        3092
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -165,10 +165,10 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3017,
-        3018,
-        3019,
-        3020
+        3089,
+        3090,
+        3091,
+        3092
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -183,7 +183,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "3020": [
+        "3092": [
           [
             0.15
           ],

@@ -44,12 +44,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2862,
-        2863,
-        2864,
-        2865,
-        2866,
-        2867
+        2934,
+        2935,
+        2936,
+        2937,
+        2938,
+        2939
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -82,12 +82,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2862,
-        2863,
-        2864,
-        2865,
-        2866,
-        2867
+        2934,
+        2935,
+        2936,
+        2937,
+        2938,
+        2939
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -120,12 +120,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2862,
-        2863,
-        2864,
-        2865,
-        2866,
-        2867
+        2934,
+        2935,
+        2936,
+        2937,
+        2938,
+        2939
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -158,12 +158,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2862,
-        2863,
-        2864,
-        2865,
-        2866,
-        2867
+        2934,
+        2935,
+        2936,
+        2937,
+        2938,
+        2939
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -196,12 +196,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2862,
-        2863,
-        2864,
-        2865,
-        2866,
-        2867
+        2934,
+        2935,
+        2936,
+        2937,
+        2938,
+        2939
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"

@@ -43,11 +43,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2919,
-        2920,
-        2921,
-        2922,
-        2923
+        2991,
+        2992,
+        2993,
+        2994,
+        2995
       ],
       "enemyTag": [
         "BattleScore_Horse",
@@ -78,11 +78,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2919,
-        2920,
-        2921,
-        2922,
-        2923
+        2991,
+        2992,
+        2993,
+        2994,
+        2995
       ],
       "enemyTag": [
         "BattleScore_Horse",

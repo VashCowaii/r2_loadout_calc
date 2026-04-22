@@ -45,9 +45,9 @@ let enemyData = {
         "STAT_CTRL": 0.75
       },
       "abilities": [
-        2880,
-        2881,
-        2882
+        2952,
+        2953,
+        2954
       ],
       "enemyTag": [
         "Huanlong_Flower"
