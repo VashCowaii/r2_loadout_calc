@@ -250,7 +250,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable with Team Count",
           "target": {
             "name": "Target Name",
-            "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full OffFieldList}} - {{Elation: OffField Sparxie}}"
+            "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
           },
           "variableName": "Elation_Character_Num",
           "livingTargets": true
@@ -554,7 +554,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Elation: Currency Wars Full OffFieldList}} + {{Elation: All Battle Events}} - {{Elation: OffField Sparxie}}"
+            "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
           },
           "maxTargets": 1,
           "ifTargetFound": [
@@ -671,6 +671,50 @@ const compositeAbilityObject = {
             "value2": 1
           },
           "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-2114512619\">MGridFight_Origin_2012_LE_ElationBE_Bonus</a>"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Turn Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "StageAbility_GridFight_Origin_2012_ElationBE_Insert",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "name": "Inject Extra-Turn",
               "actionTag": null,
@@ -1151,7 +1195,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1644535867\">MLevel_ElationBE_ElationEchoPointBonus_OnEnterBattle</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Multiple",
           "modifierFlags": [
-            "STAT_ElationEchoPoint"
+            "ElationEchoPoint"
           ],
           "execute": [
             {
@@ -1185,7 +1229,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Multiple",
           "modifierFlags": [
-            "STAT_ElationEchoPoint"
+            "ElationEchoPoint"
           ],
           "execute": [
             {
@@ -1299,6 +1343,65 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+          "stackType": "Replace",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Sorted",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_AvatarSpeed",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": "Unknown CONDITON2 ",
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_WeightedSpeed",
+                      "value": {
+                        "operator": "Variables[0] (MDF_AvatarSpeed) || Variables[1] (_BackEndSpeedRatio) || MUL || RETURN",
+                        "displayLines": "(MDF_AvatarSpeed * _BackEndSpeedRatio)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_AvatarSpeed",
+                          "_BackEndSpeedRatio"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_WeightedSpeed",
+                      "value": {
+                        "operator": "Variables[0] (MDF_AvatarSpeed) || RETURN",
+                        "displayLines": "MDF_AvatarSpeed",
+                        "constants": [],
+                        "variables": [
+                          "MDF_AvatarSpeed"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1613366517\">MBattleEvent_GridFight_Elation_BaseSpeed</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
@@ -1309,7 +1412,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars OffFieldList}} - {{Elation: OffField Sparxie}}"
+                    "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
                   },
                   "conditions": {
                     "name": "Target is Pathstrider",
@@ -1394,30 +1497,13 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Define Custom Variable",
-                      "variableName": "BattleEvent_Elation_00_BaseSpeed",
-                      "value": {
-                        "operator": "Variables[0] (AHA_OBJECT_UNUSED__194) || RETURN",
-                        "displayLines": "AHA_OBJECT_UNUSED__194",
-                        "constants": [],
-                        "variables": [
-                          "AHA_OBJECT_UNUSED__194"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_SpeedRank",
-                      "value": 1
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
+                      "name": "Add Events/Bonuses",
+                      "to": {
                         "name": "Target Sequence",
                         "Sequence": [
                           {
                             "name": "Target Name",
-                            "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars OffFieldList}} - {{Elation: OffField Sparxie}}"
+                            "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
                           },
                           {
                             "name": "Target Filter",
@@ -1431,12 +1517,243 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               }
                             }
+                          }
+                        ]
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                      "valuePerStack": {
+                        "_BackEndSpeedRatio": {
+                          "operator": "Variables[0] (_BackEndSpeedRatio) || RETURN",
+                          "displayLines": "_BackEndSpeedRatio",
+                          "constants": [],
+                          "variables": [
+                            "_BackEndSpeedRatio"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
                           },
                           {
-                            "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
-                            "living": true,
-                            "sortByHighest": true
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Target is Pathstrider",
+                              "path": [
+                                "Elation"
+                              ],
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Define Custom Variable with Copy",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                          "variable": "MDF_WeightedSpeed",
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variable2": "MDF_WeightedSpeed_Main"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_CalRank",
+                          "value": 1
+                        },
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Sequence",
+                            "Sequence": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}} - {{Parameter Target}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Target is Pathstrider",
+                                  "path": [
+                                    "Elation"
+                                  ],
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "ifTargetFound": [
+                            {
+                              "name": "Define Custom Variable with Copy",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                              "variable": "MDF_WeightedSpeed",
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "variable2": "MDF_WeightedSpeed_Sub"
+                            },
+                            {
+                              "name": "Define Custom Variable with Copy",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                              "variable": "MDF_Sorted",
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "variable2": "MDF_TargetSorted"
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "OR",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "MDF_WeightedSpeed_Main",
+                                    "compareType": "<",
+                                    "value2": {
+                                      "operator": "Variables[0] (MDF_WeightedSpeed_Sub) || RETURN",
+                                      "displayLines": "MDF_WeightedSpeed_Sub",
+                                      "constants": [],
+                                      "variables": [
+                                        "MDF_WeightedSpeed_Sub"
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "name": "AND",
+                                    "conditionList": [
+                                      {
+                                        "name": "Compare: Variable",
+                                        "value1": "MDF_WeightedSpeed_Main",
+                                        "compareType": "=",
+                                        "value2": {
+                                          "operator": "Variables[0] (MDF_WeightedSpeed_Sub) || RETURN",
+                                          "displayLines": "MDF_WeightedSpeed_Sub",
+                                          "constants": [],
+                                          "variables": [
+                                            "MDF_WeightedSpeed_Sub"
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "name": "Compare: Variable",
+                                        "value1": "MDF_TargetSorted",
+                                        "compareType": "=",
+                                        "value2": 1
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "MDF_CalRank",
+                                  "value": {
+                                    "operator": "Variables[0] (MDF_CalRank) || Constants[0] (1) || ADD || RETURN",
+                                    "displayLines": "(MDF_CalRank + 1)",
+                                    "constants": [
+                                      1
+                                    ],
+                                    "variables": [
+                                      "MDF_CalRank"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                          "variableName": "MDF_Rank",
+                          "value": {
+                            "operator": "Variables[0] (MDF_CalRank) || RETURN",
+                            "displayLines": "MDF_CalRank",
+                            "constants": [],
+                            "variables": [
+                              "MDF_CalRank"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                          "variableName": "MDF_Sorted",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "BattleEvent_Elation_00_BaseSpeed",
+                      "value": {
+                        "operator": "Variables[0] (AHA_OBJECT_UNUSED__194) || RETURN",
+                        "displayLines": "AHA_OBJECT_UNUSED__194",
+                        "constants": [],
+                        "variables": [
+                          "AHA_OBJECT_UNUSED__194"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Target is Pathstrider",
+                              "path": [
+                                "Elation"
+                              ],
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
+                            }
                           }
                         ]
                       },
@@ -1452,13 +1769,32 @@ const compositeAbilityObject = {
                       },
                       "ifTargetFound": [
                         {
-                          "name": "Define Custom Variable with Stat",
+                          "name": "Define Custom Variable with Copy",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "MDF_SpeedCalTemp1",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                          "variable": "MDF_Rank",
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variable2": "MDF_SpeedRank"
+                        },
+                        {
+                          "name": "Define Custom Variable with Copy",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1134867804\">MBattleEvent_Elation_GridFight_CalSpeed</a>",
+                          "variable": "MDF_WeightedSpeed",
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variable2": "MDF_SpeedCalTemp1"
                         },
                         {
                           "name": "SWITCH",
@@ -1564,20 +1900,6 @@ const compositeAbilityObject = {
                             }
                           ],
                           "defaultEvents": []
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_SpeedRank",
-                          "value": {
-                            "operator": "Variables[0] (MDF_SpeedRank) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_SpeedRank + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_SpeedRank"
-                            ]
-                          }
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1974,7 +2296,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Team Count",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full OffFieldList}} - {{Elation: OffField Sparxie}}"
+                    "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
                   },
                   "variableName": "MDF_Elation_Character_Num",
                   "livingTargets": true
@@ -2245,14 +2567,14 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
+                      "target": {
                         "name": "Target Name",
                         "target": "{{Aha Instant: Player Team with Unselectables and OffField}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-                      "valuePerStack": {
-                        "ElationEchoPoint": {
+                      "variables": {
+                        "AddValue": {
                           "operator": "Variables[0] (AHA_OBJECT_UNUSED__200) || RETURN",
                           "displayLines": "AHA_OBJECT_UNUSED__200",
                           "constants": [],
@@ -2269,14 +2591,14 @@ const compositeAbilityObject = {
                       "variableName": "Elation_CurrentPoint"
                     },
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
+                      "target": {
                         "name": "Target Name",
                         "target": "{{Aha Instant: Player Team with Unselectables and OffField}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-                      "valuePerStack": {
-                        "ElationEchoPoint": {
+                      "variables": {
+                        "AddValue": {
                           "operator": "Variables[0] (Elation_CurrentPoint) || RETURN",
                           "displayLines": "Elation_CurrentPoint",
                           "constants": [],
@@ -2470,20 +2792,20 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable with Team Count",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full OffFieldList}} - {{Elation: OffField Sparxie}}"
+                        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
                       },
                       "variableName": "MDF_Elation_Character_Num",
                       "livingTargets": true
                     },
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
+                      "target": {
                         "name": "Target Name",
-                        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full OffFieldList}} - {{Elation: OffField Sparxie}}"
+                        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1644535867\">MLevel_ElationBE_ElationEchoPointBonus_OnEnterBattle</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-                      "valuePerStack": {
-                        "ElationEchoPoint": 20
+                      "variables": {
+                        "AddValue": 20
                       }
                     }
                   ]

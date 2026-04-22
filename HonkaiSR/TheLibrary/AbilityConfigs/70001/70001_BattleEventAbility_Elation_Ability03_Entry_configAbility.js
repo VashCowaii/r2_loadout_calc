@@ -16,7 +16,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Name",
-        "target": "{{Elation: Currency Wars Full OffFieldList}} + {{Elation: All Battle Events}} - {{Elation: OffField Sparxie}}"
+        "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
       },
       "maxTargets": 1,
       "ifTargetFound": [
@@ -133,6 +133,50 @@ const configAbility = {
         "value2": 1
       },
       "passed": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2114512619\">MGridFight_Origin_2012_LE_ElationBE_Bonus</a>"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Current Turn Owner}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "StageAbility_GridFight_Origin_2012_ElationBE_Insert",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "priorityTag": "CharacterAttackFromSelf",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Inject Extra-Turn",
           "actionTag": null,
