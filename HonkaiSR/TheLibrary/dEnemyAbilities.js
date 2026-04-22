@@ -44638,7 +44638,7 @@ let enemyAbilityData = [
     ],
     "params": [
       4.5,
-      180,
+      120,
       0
     ],
     "delay": 1,
@@ -44692,7 +44692,7 @@ let enemyAbilityData = [
     ],
     "params": [
       6,
-      180
+      120
     ],
     "extraEffects": [
       209
@@ -44756,7 +44756,7 @@ let enemyAbilityData = [
       1
     ],
     "params": [
-      14,
+      12,
       4.5,
       0.5
     ],
@@ -44780,10 +44780,10 @@ let enemyAbilityData = [
       1
     ],
     "params": [
-      0.5,
-      2,
-      0.5,
-      0.2
+      0.2,
+      1,
+      0.2,
+      0.05
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45145,7 +45145,39 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501207101,
+    "name": "Follower Growth",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "If \"Ally Popularity\" increases, grants \"Ally Gratuity\" to ally targets on the sub-field.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      267
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501208001,
+    "name": "Bleeding Followers",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "If \"Enemy Popularity\" decreases, enemy targets on the sub-field lose their \"Enemy Gratuity.\"",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      268
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501208101,
     "name": "Bleeding Followers",
     "type": "Ability",
     "trigger": "Skill01",
@@ -45210,6 +45242,83 @@ let enemyAbilityData = [
     "params": [
       0.5,
       5,
+      0.25
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501210001,
+    "name": "Love ❤ Stormfall Day",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Lightning DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501210002,
+    "name": "Gentle Rains ❤ How I Miss You",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "When receiving a killing blow while in the \"Rainy Day\" state, deals successive minor Lightning DMG to random targets. After each hit, there is a high chance to inflict Shock on attacked targets.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      2,
+      1,
+      0.5
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501210003,
+    "name": "First Kiss ❤ Sunny Skies",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "When receiving a killing blow while in the \"Sunny Day\" state, increases all allies' CRIT DMG.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.25,
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501210004,
+    "name": "Heartfelt ❤ Rain to Sun",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When entering combat, starts in the \"Rainy Day\" state. After taking Elation DMG or after any unit uses an Elation Skill, enters the \"Sunny Day\" state, delays action, and grants targets Punchline.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      2,
       0.25
     ],
     "extraEffects": [
@@ -47003,6 +47112,310 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501401401,
+    "name": "Net Battle!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401402,
+    "name": "Bring the Beat In!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401403,
+    "name": "Get On the Mic!",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.6,
+      0,
+      3,
+      0.3,
+      0.6,
+      0.3
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401404,
+    "name": "Stream Promo",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Apply the \"Flooding Viewers\" state to sub-field friendly units, advancing their actions and increasing their CRIT Rate.",
+    "tag": "Others",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.25,
+      0.25,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401406,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "If all sub-field friendly units are defeated when Live Showdown is dispelled, increases the DMG taken by all friendly units, delays their actions, recovers Skill Points, and enables Aha to immediately gain 1 extra turn where a fixed amount of Punchline is taken into account. This extra turn does not consume Punchline. If not all sub-field friendly units are defeated when Live Showdown is dispelled, then deals massive Quantum DMG to target characters going into the sub-field, and inflicts them with \"Entanglement.\"",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      2,
+      6,
+      1,
+      20,
+      6,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401407,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill062",
+    "desc": "If all sub-field friendly units have been defeated when Live Showdown is dispelled, increases DMG taken by all friendly units, delays their actions, restores Skill Points, and grants Aha 1 extra turn where a fixed amount of Punchline is taken into account. This turn does not consume Punchline.",
+    "tag": "Single Target",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401408,
+    "name": "Bullet Comments Ready!",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "When Live Showdown is dispelled, if the sub-field friendly units are still not defeated, it will deal Quantum DMG to all targets and has a chance to inflict random Bullet Comments penalties. The higher the remaining HP percentage of the sub-field friendly units, the higher the DMG dealt and the higher the probability of penalties.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      12,
+      2,
+      0.1,
+      2,
+      1.2,
+      1,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      269
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401409,
+    "name": "Friendship Level Adjustment",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "After Live Showdown is activated, attacking \"Output Port 1\" will increase \"Ally Popularity,\" while attacking \"Output Port 2\" will decrease \"Enemy Popularity.\" When \"Ally Popularity\" increases, \"Output Port 1\" action advances, and when \"Enemy Popularity\" decreases, \"Output Port 2\" action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      0.3,
+      0.6,
+      4,
+      0,
+      5,
+      0.15,
+      600,
+      0.1
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401410,
+    "name": "Fan Frenzy",
+    "type": "Talent",
+    "trigger": "PassiveSkill02",
+    "desc": "After Live Showdown is activated, friendly targets on the prime-field receive reduced DMG and become immune to Crowd Control debuffs. When Live Showdown is dispelled, if all friendly targets on the sub-field are defeated, this effect will be removed. Otherwise, based on the remaining HP percentage of sub-field friendly targets, a portion of the DMG Reduction effect will be retained until the next Live Showdown is activated. If this unit's HP drops to a certain percentage without having activated Live Showdown, this unit's action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.75
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401411,
+    "type": "Talent",
+    "trigger": "SkillEX01",
+    "tag": "Talent",
+    "params": [
+      0.5,
+      1,
+      1.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401412,
+    "type": "Talent",
+    "trigger": "SkillEX02",
+    "tag": "Talent",
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401413,
+    "type": "Talent",
+    "trigger": "SkillEX03",
+    "tag": "Talent",
+    "params": [
+      4,
+      5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401414,
+    "type": "Talent",
+    "trigger": "SkillEX04",
+    "tag": "Talent",
+    "params": [
+      0.1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401415,
+    "type": "Talent",
+    "trigger": "SkillEX05",
+    "tag": "Talent",
+    "params": [
+      40,
+      20,
+      4,
+      0.1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401416,
+    "name": "Super Idol",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "At the start of this unit's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states.\\nWhen attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all friendly units on the sub-field and gain a certain amount of Punchline.\\nWhen all friendly units on the sub-field are eliminated, massively reduce \"Super Idol: Center of Attention's\" Toughness and HP.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401417,
+    "name": "Dedicated Streamer",
+    "type": "Talent",
+    "trigger": "SkillP02",
+    "desc": "At the start of Combat, this unit enters the \"Toughness Lock\" state. When Live Showdown is dispelled, this unit dispels the \"Toughness Lock\" state. When Live Showdown is initiated or during phase transitions, this unit re-enters the \"Toughness Lock\" state.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "extraEffects": [
+      266,
+      283
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501401501,
     "name": "Net Battle!",
     "type": "Ability",
@@ -47324,7 +47737,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      281,
+      282,
       259
     ],
     "delay": 1,
@@ -47384,13 +47797,1132 @@ let enemyAbilityData = [
       20,
       0.55,
       0,
-      10
+      10,
+      0.6,
+      0.8
     ],
     "extraEffects": [
       259
     ],
     "delay": 1,
     "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402101,
+    "name": "Soulmend Shears",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3,
+      0
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402102,
+    "name": "Zero-Blind-Spot Cleanse",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets and grants the target team Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3,
+      3
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402103,
+    "name": "High-Temp Sterilization Mode",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Steam Wash\" state, increasing DMG dealt by this unit, and gains a set number of \"Lasting Antibac\" stacks, reduces the DMG this unit receives. When all stacks of \"Lasting Antibac\" are removed, exits the \"Steam Wash\" state and receives massive DMG.",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.2,
+      2,
+      0.15,
+      0.1,
+      2,
+      0.25
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402104,
+    "name": "Potent Foam Soap",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Quantum DMG to all targets and applies the \"Work Is Bliss!\" effect, while causing the target team to gain Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      1.5,
+      1,
+      0.02,
+      5,
+      2,
+      1
+    ],
+    "extraEffects": [
+      282,
+      259
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402105,
+    "name": "Duty Prep in Progress...",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the \"Raring to Go\" state and gains the \"Weakness Protected\" effect. Uses \"Saturation Cleaning!\" in the next action.",
+    "tag": "Charging",
+    "phases": [
+      2,
+      3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402106,
+    "name": "Saturation Cleaning!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Quantum DMG to all targets and grants the target team Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      2,
+      3
+    ],
+    "params": [
+      4,
+      8
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501402108,
+    "name": "Scrubber's Mutiny",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Adds \"Venue Protocol Enforcer\" to the Action Order. Each time \"Venue Protocol Enforcer\" takes action, summons an \"Alloy Pommy\" for both ally and enemy teams. Each time allies gain 1 Punchline, the ally \"Alloy Pommy\" accumulates 1 Charge. Upon reaching #1[i] Charge, it can use an Enhanced Basic ATK to remove 1 stack of \"Lasting Antibac\" from \"Alloy Mechatron: King Pom-Pom.\" A maximum of 1 ally \"Alloy Pommy\" can exist, and it cannot be targeted by either side.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      20,
+      0.55,
+      0,
+      10,
+      0.6,
+      0.8
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502201001,
+    "name": "First Bloom",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Grants 1 stack of \"Wicked Grin\" to \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+    "tag": "Support",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      288
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502201003,
+    "name": "Fatal Mockery",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "After receiving a killing blow, targets gain Punchline.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      5
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502202001,
+    "name": "Rapturous Exhalation",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Wind DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502202002,
+    "name": "Jubilation",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Consecutively deals Wind DMG to random single targets. Each hit has a chance to inflict \"Paramount Bliss\" on the attacked target. When this ability is used, if there are other \"Joy Ascendants\" on the field, they will also use this ability simultaneously.",
+    "tag": "Bounce",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      0.5,
+      0.35,
+      0.7
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 502202003,
+    "name": "Blossoming Smile",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Budding\" state. Uses \"Euphoric Spiral\" on all targets during the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502202004,
+    "name": "Euphoric Spiral",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals DMG to all targets. If a target has the \"Paramount Bliss\" effect, removes \"Paramount Bliss,\" delays their action, and reduces Skill Point(s).",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      3,
+      0.3,
+      1
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502202005,
+    "name": "Illwish Fission",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Upon receiving fatal damage, splits into 2 \"Joy Ascendant: Prelude\" and grants targets a certain amount of Punchline. When \"Joy Ascendant: Prelude\" receives fatal damage, it splits into 2 \"Joy Ascendant: Finale\" and grants targets a certain amount of Punchline. \"Joy Ascendant: Finale\" will not split further.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      0.4,
+      1.2,
+      1,
+      0.4,
+      1.2,
+      5,
+      1,
+      1
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502301001,
+    "name": "Rapturous Exhalation",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Wind DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502301002,
+    "name": "Jubilation",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Consecutively deals Wind DMG to random single targets. Each hit has a chance to inflict \"Paramount Bliss\" on the attacked target. When this ability is used, if there are other \"Joy Ascendants\" on the field, they will also use this ability simultaneously.",
+    "tag": "Bounce",
+    "phases": [
+      1
+    ],
+    "params": [
+      3,
+      0.5,
+      0.35,
+      0.7
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 502301003,
+    "name": "Blossoming Smile",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Budding\" state. Uses \"Euphoric Spiral\" on all targets during the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502301004,
+    "name": "Euphoric Spiral",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals DMG to all targets. If a target has the \"Paramount Bliss\" effect, removes \"Paramount Bliss,\" delays their action, and reduces Skill Point(s).",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      5,
+      0.3,
+      1
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502301005,
+    "name": "Illwish Fission",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Upon receiving fatal damage, splits into 2 \"Joy Ascendant: Prelude\" and grants targets a certain amount of Punchline. When \"Joy Ascendant: Prelude\" receives fatal damage, it splits into 2 \"Joy Ascendant: Finale\" and grants targets a certain amount of Punchline. \"Joy Ascendant: Finale\" will not split further.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.85,
+      0.4,
+      1.2,
+      0.66,
+      0.4,
+      1.2,
+      5,
+      0.857,
+      0.571
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502301101,
+    "name": "Rapturous Exhalation",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Wind DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502301102,
+    "name": "Jubilation",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Consecutively deals Wind DMG to random single targets. Each hit has a chance to inflict \"Paramount Bliss\" on the attacked target. When this ability is used, if there are other \"Joy Ascendants\" on the field, they will also use this ability simultaneously.",
+    "tag": "Bounce",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      0.5,
+      0.35,
+      0.7
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 502301103,
+    "name": "Blossoming Smile",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Budding\" state. Uses \"Euphoric Spiral\" on all targets during the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502301104,
+    "name": "Euphoric Spiral",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals DMG to all targets. If a target has the \"Paramount Bliss\" effect, removes \"Paramount Bliss,\" delays their action, and reduces Skill Point(s).",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.8,
+      0.25,
+      1
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502301105,
+    "name": "Illwish Fission",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Upon receiving fatal damage, splits into 2 \"Joy Ascendant: Prelude\" and grants targets a certain amount of Punchline. When \"Joy Ascendant: Prelude\" receives fatal damage, it splits into 2 \"Joy Ascendant: Finale\" and grants targets a certain amount of Punchline. \"Joy Ascendant: Finale\" will not split further.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.85,
+      0.4,
+      1.2,
+      0.66,
+      0.4,
+      1.2,
+      5,
+      0.857,
+      0.571
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502301201,
+    "name": "Rapturous Exhalation",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Wind DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502301202,
+    "name": "Jubilation",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Consecutively deals Wind DMG to random single targets. Each hit has a chance to inflict \"Paramount Bliss\" on the attacked target. When this ability is used, if there are other \"Joy Ascendants\" on the field, they will also use this ability simultaneously.",
+    "tag": "Bounce",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.3,
+      0.5,
+      0.35,
+      0.7
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 502301203,
+    "name": "Blossoming Smile",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Budding\" state. Uses \"Euphoric Spiral\" on all targets during the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502301204,
+    "name": "Euphoric Spiral",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals DMG to all targets. If a target has the \"Paramount Bliss\" effect, removes \"Paramount Bliss,\" delays their action, and reduces Skill Point(s).",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5,
+      0.2,
+      1
+    ],
+    "extraEffects": [
+      289
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502301205,
+    "name": "Illwish Fission",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Upon receiving fatal damage, splits into 2 \"Joy Ascendant: Prelude\" and grants targets a certain amount of Punchline. When \"Joy Ascendant: Prelude\" receives fatal damage, it splits into 2 \"Joy Ascendant: Finale\" and grants targets a certain amount of Punchline. \"Joy Ascendant: Finale\" will not split further.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.85,
+      0.4,
+      1.2,
+      0.66,
+      0.4,
+      1.2,
+      5,
+      0.857,
+      0.571
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401001,
+    "name": "Rift Pistil",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Lightning DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 502401003,
+    "name": "Siphon Woe",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Drains the HP of all targets with the \"Happiness\" or \"Happiness Puppet\" effects and converts it into this unit's HP.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.2,
+      0.005
+    ],
+    "extraEffects": [
+      285,
+      286
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502401004,
+    "name": "Illwish Spray",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Lightning DMG to multiple random target characters and applies the \"Happiness\" effect. When \"Happiness\" reaches #2[i] stack(s) at the end of a turn, the target will be converted into a \"Happiness Puppet\". If \"Happiness\" is reduced to 0 stacks, it will be removed and replaced with the \"Inverted Severance\" effect.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2,
+      6,
+      3,
+      2,
+      2,
+      0.25,
+      0.75,
+      0.8,
+      2,
+      2
+    ],
+    "extraEffects": [
+      285,
+      286,
+      287
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502401005,
+    "name": "Incipient Bloom",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the Charging state. Uses \"Euphoric Embrace\" in the next turn.",
+    "tag": "Charging",
+    "phases": [
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401006,
+    "name": "Euphoric Embrace",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Lightning DMG to all target characters. If this unit is in the \"Wicked Grin\" state, inflicts the \"Happiness Puppet\" state on all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      6,
+      1,
+      2,
+      2,
+      0.1,
+      10
+    ],
+    "extraEffects": [
+      286,
+      288
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 502401007,
+    "name": "Laughter's End",
+    "type": "Ability",
+    "trigger": "PassiveSkill01",
+    "desc": "After a certain number of friendly units are defeated, triggers \"Laughter's End\" that increases the DMG taken by all friendly units and removes the \"Wicked Grin\" effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      6,
+      0.2,
+      5,
+      0.1,
+      10,
+      2
+    ],
+    "extraEffects": [
+      288
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401008,
+    "type": "Ability",
+    "trigger": "PassiveSkill02",
+    "tag": "Talent",
+    "params": [
+      0.5,
+      3,
+      2,
+      0.5,
+      1.5,
+      9
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401101,
+    "name": "Rift Pistil",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Lightning DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 502401103,
+    "name": "Siphon Woe",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Drains the HP of all targets with the \"Happiness\" or \"Happiness Puppet\" effects and converts it into this unit's HP.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.2,
+      0.03
+    ],
+    "extraEffects": [
+      285,
+      286
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502401104,
+    "name": "Illwish Spray",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Lightning DMG to multiple random target characters and applies the \"Happiness\" effect. When \"Happiness\" reaches #2[i] stack(s) at the end of a turn, the target will be converted into a \"Happiness Puppet\". If \"Happiness\" is reduced to 0 stacks, it will be removed and replaced with the \"Inverted Severance\" effect.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2,
+      6,
+      3,
+      2,
+      2,
+      0.25,
+      0.75,
+      2,
+      2,
+      2
+    ],
+    "extraEffects": [
+      285,
+      286,
+      287
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502401105,
+    "name": "Incipient Bloom",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the Charging state. Uses \"Euphoric Embrace\" in the next turn.",
+    "tag": "Charging",
+    "phases": [
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401106,
+    "name": "Euphoric Embrace",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Lightning DMG to all target characters. If this unit is in the \"Wicked Grin\" state, inflicts the \"Happiness Puppet\" state on all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      6,
+      1,
+      2,
+      2,
+      0.1,
+      10
+    ],
+    "extraEffects": [
+      286,
+      288
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 502401107,
+    "name": "Laughter's End",
+    "type": "Ability",
+    "trigger": "PassiveSkill01",
+    "desc": "After a certain number of friendly units are defeated, triggers \"Laughter's End\" that increases the DMG taken by all friendly units and removes the \"Wicked Grin\" effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      6,
+      0.2,
+      5,
+      0.1,
+      10,
+      2
+    ],
+    "extraEffects": [
+      288
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401108,
+    "type": "Ability",
+    "trigger": "PassiveSkill02",
+    "tag": "Talent",
+    "params": [
+      0.5,
+      3,
+      2,
+      0.5,
+      1.5,
+      9,
+      0.3,
+      0.2,
+      0.98,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401201,
+    "name": "Rift Pistil",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Lightning DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 502401203,
+    "name": "Siphon Woe",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Drains the HP of all targets with the \"Happiness\" or \"Happiness Puppet\" effects and converts it into this unit's HP.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.2,
+      0.005
+    ],
+    "extraEffects": [
+      285,
+      286
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502401204,
+    "name": "Illwish Spray",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Lightning DMG to multiple random target characters and applies the \"Happiness\" effect. When \"Happiness\" reaches #2[i] stack(s) at the end of a turn, the target will be converted into a \"Happiness Puppet\". If \"Happiness\" is reduced to 0 stacks, it will be removed and replaced with the \"Inverted Severance\" effect.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      2,
+      6,
+      3,
+      2,
+      2,
+      0.25,
+      0.75,
+      0.8,
+      2,
+      2
+    ],
+    "extraEffects": [
+      285,
+      286,
+      287
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502401205,
+    "name": "Incipient Bloom",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the Charging state. Uses \"Euphoric Embrace\" in the next turn.",
+    "tag": "Charging",
+    "phases": [
+      2,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401206,
+    "name": "Euphoric Embrace",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Lightning DMG to all target characters. If this unit is in the \"Wicked Grin\" state, inflicts the \"Happiness Puppet\" state on all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2,
+      3
+    ],
+    "params": [
+      6,
+      1,
+      2,
+      2,
+      0.1,
+      10
+    ],
+    "extraEffects": [
+      286,
+      288
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 502401207,
+    "name": "Laughter's End",
+    "type": "Ability",
+    "trigger": "PassiveSkill01",
+    "desc": "After a certain number of friendly units are defeated, triggers \"Laughter's End\" that increases the DMG taken by all friendly units and removes the \"Wicked Grin\" effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      6,
+      0.2,
+      5,
+      0.1,
+      20,
+      2
+    ],
+    "extraEffects": [
+      288
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502401208,
+    "type": "Ability",
+    "trigger": "PassiveSkill02",
+    "tag": "Talent",
+    "params": [
+      0.5,
+      3,
+      2,
+      0.5,
+      1.5,
+      9
+    ],
+    "delay": 1,
     "atkType": "Basic ATK"
   },
   {
