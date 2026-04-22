@@ -4935,7 +4935,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -4984,7 +4984,10 @@ const compositeAbilityObject = {
                           "characterName": null,
                           "isCompareUniqueID": true
                         }
-                      }
+                      },
+                      "failed": [
+                        "Modifier Deletes Itself"
+                      ]
                     }
                   ]
                 }

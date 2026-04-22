@@ -1616,6 +1616,10 @@ const compositeAbilityObject = {
               {
                 "name": "Stage Type",
                 "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
               }
             ]
           }

@@ -1157,6 +1157,14 @@ const compositeAbilityObject = {
               "eventTrigger": "Pre-Death [Owner]",
               "execute": [
                 {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)}}.[[removeMemosprite]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1382334396\">Monster_W4_HearsePart_BlackBlood</a>[<span class=\"descriptionNumberColor\">Conquered</span>]"
+                },
+                {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
