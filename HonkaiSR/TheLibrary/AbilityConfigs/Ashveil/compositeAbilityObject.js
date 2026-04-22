@@ -3458,11 +3458,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1362659531\">Ashveil_ParasiteDebuffForShow</a>",
-          "stackType": "ReplaceByCaster",
+          "stackType": "RetainGlobalLatest",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
           "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
@@ -3984,7 +3987,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__942921741\">Ashveil_Ability02_Debuff_DefenceDown</a>[<span class=\"descriptionNumberColor\">Flog: Smite Evil</span>]",
           "modifierFlags": [
-            "RemoveWhenCasterDead"
+            "RemoveWhenCasterDead",
+            "STAT_DefenceDown"
           ],
           "execute": [
             {
