@@ -64,6 +64,34 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "SilverWolf999",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Character ID",
+                "ID": 1506,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": "Silver Wolf LV.<unbreak>999</unbreak>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Sparxie: EBA Target",
       "isTargetOperator": false,
       "execute": [
@@ -5324,6 +5352,47 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Elation: Currency Wars Gear2012",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-36405970\">MGridFight_Equipment_Emblem_2012_ExtraElationAbility</a>"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-231268038\">MBattleEvent_GridFight_Standard_FrontInBackEnd</a>",
+                    "invertCondition": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Aha Instant: Currency Wars Full OffFieldList",
       "isTargetOperator": false,
       "execute": [
@@ -5361,7 +5430,7 @@ const configAbility = {
           "Sequence": [
             {
               "name": "Target Name",
-              "target": "{{Aha Instant: All Targets}} - {{Currency Wars Full OffFieldList}}"
+              "target": "{{Aha Instant: All Targets}} - {{Currency Wars Full Activated OffFieldList}}"
             },
             {
               "name": "Target Filter",
@@ -5430,7 +5499,7 @@ const configAbility = {
           "Sequence": [
             {
               "name": "Target Name",
-              "target": "{{Battle Event List}} - {{Currency Wars Full OffFieldList}}"
+              "target": "{{Battle Event List}} - {{Currency Wars Full Activated OffFieldList}}"
             },
             {
               "name": "Target Filter",
@@ -5449,7 +5518,7 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
-      "nameTarget": "Elation: OffField Sparxie",
+      "nameTarget": "Elation: Currency Wars Full Activated OffFieldList",
       "isTargetOperator": false,
       "execute": [
         {
@@ -5457,34 +5526,7 @@ const configAbility = {
           "Sequence": [
             {
               "name": "Target Name",
-              "target": "{{Currency Wars Full OffFieldList}}"
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "Battle Event ID",
-                "ID": 62378,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Elation: Currency Wars Full OffFieldList",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Target Sequence",
-          "Sequence": [
-            {
-              "name": "Target Name",
-              "target": "{{Currency Wars Full OffFieldList}}"
+              "target": "{{Currency Wars Full Activated OffFieldList}}"
             },
             {
               "name": "Target Filter",
@@ -5620,7 +5662,7 @@ const configAbility = {
                 },
                 {
                   "name": "Target Name",
-                  "target": "{{Elation: Currency Wars Full OffFieldList}} + {{Elation: All Battle Events}} - {{Elation: OffField Sparxie}}"
+                  "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
                 }
               ]
             },
@@ -5645,91 +5687,20 @@ const configAbility = {
                       "target": "{{Parameter Target}}"
                     },
                     "invertCondition": true
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-231268038\">MBattleEvent_GridFight_Standard_FrontInBackEnd</a>",
+                    "invertCondition": true
                   }
                 ]
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Chess: Enemy Base",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Target Chess Base",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "Adjust Target by Hostile Team Entity"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Chess: Base",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Target Chess Base"
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Chess: Enemies in Alert Range",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Add Target by Enemies in Alert Range"
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Chess: Enemies in Attack Range",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Add Target by Enemies in Attack Range"
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Chess Movement Target",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Add Target by Chess Movement Target"
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Chess Skill Target",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Add Target by Chess Skill Target"
-        }
-      ]
-    },
-    {
-      "name": "Target Configuration",
-      "nameTarget": "Chess Lock Target",
-      "isTargetOperator": false,
-      "execute": [
-        {
-          "name": "Add Target by Chess Lock Target"
         }
       ]
     },
@@ -5766,6 +5737,60 @@ const configAbility = {
           },
           "entityType": "BattleEvent",
           "livingState": "Mask_AliveOrLimbo"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Currency Wars Full Activated Role OffFieldList",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}.[[livingOrLimbo]]"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Currency Wars Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "LocationIndex",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-231268038\">MBattleEvent_GridFight_Standard_FrontInBackEnd</a>",
+                    "invertCondition": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Currency Wars Full Activated OffFieldList",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Name",
+          "target": "{{Currency Wars Full Activated Role OffFieldList}}.[[addBattleEventMemosprite]]"
         }
       ]
     },
