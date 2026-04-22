@@ -4,7 +4,7 @@ let modifiersExtraEffects = [
     "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
   },
   {
-    "name": "Action Advanced",
+    "name": "Action Advance",
     "desc": "Reduces the target's waiting interval before the next action."
   },
   {
@@ -1221,7 +1221,7 @@ let modifiersExtraEffects = [
   },
   {
     "name": "Crowd Control debuff",
-    "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+    "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
   },
   {
     "name": "HP Count",
@@ -1315,7 +1315,7 @@ let modifiersExtraEffects = [
       100,
       2,
       6,
-      2.5
+      2
     ]
   },
   {
@@ -1372,7 +1372,71 @@ let modifiersExtraEffects = [
     "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
   },
   {
+    "name": "Top Loot Box",
+    "desc": "Special Attack that ally targets can trigger while in Silver Wolf LV.999's Zone when Silver Wolf LV.999 has \"Certified Banger.\" Can also be actively triggered in \"Bonus Stage: αWolf Instant.\" Triggering via this method is not considered as launching 1 attack.\\nWhen used, deals massive Imaginary Elation DMG split evenly among all enemies and randomly triggers one of the following 3 effects:\\n\"Big Flipping Sword\": Deals True DMG to the target with the highest HP based on the total DMG dealt this time.\\n\"Kaboom Eggsplosion\": Restores Skill Points (Trigger rate increases when Skill Points are low. Trigger rate decreases when Skill Points are high).\\n\"Funky Munch Bean\": Gains Punchline (Trigger rate increases when \"Hidden MMR\" is low. Trigger rate decreases when \"Hidden MMR\" is high)."
+  },
+  {
     "name": "Work Is Bliss!",
     "desc": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG to the attack target and gains Punchline(s). After using Skill, triggers the \"Pristine\" effect, restoring Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active."
+  },
+  {
+    "name": "Toughness Lock",
+    "desc": "Toughness cannot be reduced below 1."
+  },
+  {
+    "name": "Base RES",
+    "desc": "The fixed DMG Type RES a target has when entering combat. Under normal circumstances, it cannot be modified."
+  },
+  {
+    "name": "Happiness",
+    "desc": "Gains stacks at the start of each turn. Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target. Loses 1 additional stack after eliminating an enemy target. At the end of a turn, if stacks are at or above a certain amount, will be converted into a \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied."
+  },
+  {
+    "name": "Happiness Puppet",
+    "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline."
+  },
+  {
+    "name": "Inverted Severance",
+    "desc": "Increases CRIT DMG and becomes immune to the \"Happiness Puppet\" effect for the duration."
+  },
+  {
+    "name": "Wicked Grin",
+    "desc": "DMG dealt increases. This effect is stackable."
+  },
+  {
+    "name": "Paramount Bliss",
+    "desc": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s)."
+  },
+  {
+    "name": "On-Field Strength Boost",
+    "desc": "The value of increase to Aha's On-Field Strength. When characters with the \"Elation\" Bond use Elation Skills and specific abilities, Aha shares this stat with them, increasing their On-Field Strength."
+  },
+  {
+    "name": "Off-Field Strength Boost",
+    "desc": "The value of increase to Aha's Off-Field Strength. When characters with the \"Elation\" Bond use Elation Skills and specific abilities, Aha shares this stat with them, increasing their Off-Field Strength."
+  },
+  {
+    "name": "Lucky Strike Rate Boost",
+    "desc": "The value of increase to Aha's Lucky Strike Rate. When characters with the \"Elation\" Bond use Elation Skills and specific abilities, Aha shares this stat with them, increasing their Lucky Strike Rate."
+  },
+  {
+    "name": "Lucky Strike DMG Boost",
+    "desc": "The value of increase to Aha's Lucky Strike DMG. When characters with the \"Elation\" Bond use Elation Skills and specific abilities, Aha shares this stat with them, increasing their Lucky Strike DMG."
+  },
+  {
+    "name": "DMG Amplification",
+    "desc": "The value of increase to Aha's DMG Amplification. When characters with the \"Elation\" Bond use Elation Skills and specific abilities, Aha shares this stat with them, increasing their DMG Amplification."
+  },
+  {
+    "name": "SPD",
+    "desc": "Aha's action SPD. When Aha takes action, it triggers \"Aha Instant.\""
+  },
+  {
+    "name": "HP",
+    "desc": "Aha's HP. Even though Aha cannot be attacked, when equipped with specific HP-related gear, Aha can trigger effects based on THEIR HP."
+  },
+  {
+    "name": "DEF",
+    "desc": "Aha's DEF. Even though Aha cannot be attacked, when wearing specific DEF-related equipment, Aha can trigger effects based on THEIR DEF."
   }
 ]
