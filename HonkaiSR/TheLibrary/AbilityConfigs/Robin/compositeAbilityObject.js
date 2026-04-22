@@ -915,7 +915,8 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__505362608\">Robin_Ability03Area_sub</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "Endurance"
+            "Endurance",
+            500
           ],
           "execute": [
             {
