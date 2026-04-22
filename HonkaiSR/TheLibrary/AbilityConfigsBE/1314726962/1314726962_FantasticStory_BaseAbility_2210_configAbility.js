@@ -160,6 +160,15 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "scope": "ContextCaster",
+      "variableName": "DV_FantasticStory_PlusAbility_2214"
+    },
+    {
+      "name": "Declare Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "scope": "ContextCaster",
       "variableName": "BattleEvent_BaseHP"
     },
     {
@@ -266,6 +275,25 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-51359151\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn</a>"
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "DV_FantasticStory_PlusAbility_2214",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1954932294\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn</a>"
                 }
               ]
             }
@@ -1069,6 +1097,7 @@ const configAbility = {
         "DV_FantasticStory_PlusAbility_2211",
         "DV_FantasticStory_PlusAbility_2212",
         "DV_FantasticStory_PlusAbility_2213",
+        "DV_FantasticStory_PlusAbility_2214",
         "DV_FantasticStory_BaseAbility_TriggerFlag"
       ]
     },
@@ -1136,6 +1165,7 @@ const configAbility = {
       "stackData": [],
       "latentQueue": [
         "DV_FantasticStory_BaseAbility_TriggerFlag",
+        "DV_FantasticStory_PlusAbility_2214",
         "DV_FantasticStory_PlusAbility_2213",
         "DV_FantasticStory_PlusAbility_2212",
         "DV_FantasticStory_PlusAbility_2211"

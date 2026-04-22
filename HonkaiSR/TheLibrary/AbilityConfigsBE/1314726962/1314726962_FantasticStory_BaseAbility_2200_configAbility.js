@@ -42,7 +42,7 @@ const configAbility = {
         },
         {
           "name": "ADF_9",
-          "value": 4.5
+          "value": 2.5
         },
         {
           "name": "ADF_10",

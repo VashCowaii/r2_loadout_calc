@@ -310,6 +310,169 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Improvisation</span>]",
+      "stackType": "ReplaceByCaster",
+      "description": "Every time a DoT is received, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2214_ADF_2</span> Grit Value for allies.",
+      "type": "Debuff",
+      "statusName": "Grit Mechanics_Improvisation"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1954932294\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn</a>",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "Take Damage Start [Anyone]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "DOT"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-812002117\">Modifier_FantasticStory_BaseAbility_2210_aura</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Attack Targets",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "DV_TargetCount"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+                  "value": {
+                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2214_ADF_2) || ADD || RETURN",
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2214_ADF_2)",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_BaseAbility_CountSum",
+                      "DV_FantasticStory_PlusAbility_2214_ADF_2"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DV_FantasticStory_BaseAbility_CountSum",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                      "displayLines": "DV_EnterFeverValue",
+                      "constants": [],
+                      "variables": [
+                        "DV_EnterFeverValue"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": 100,
+                      "max": 100,
+                      "delta": {
+                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2214_ADF_2) || RETURN",
+                        "displayLines": "DV_FantasticStory_PlusAbility_2214_ADF_2",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_PlusAbility_2214_ADF_2"
+                        ]
+                      },
+                      "type": "FeverSpecial",
+                      "phaseType": "P1"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": {
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_BaseAbility_CountSum"
+                        ]
+                      },
+                      "max": {
+                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                        "displayLines": "DV_EnterFeverValue",
+                        "constants": [],
+                        "variables": [
+                          "DV_EnterFeverValue"
+                        ]
+                      },
+                      "delta": {
+                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2214_ADF_2) || RETURN",
+                        "displayLines": "DV_FantasticStory_PlusAbility_2214_ADF_2",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_PlusAbility_2214_ADF_2"
+                        ]
+                      },
+                      "type": "FeverSpecial"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2212",
+        "DV_FantasticStory_PlusAbility_2213",
+        "DV_FantasticStory_PlusAbility_2214"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Improvisation</span>]",
+          "haloStatus": true
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Tirade</span>]",
       "stackType": "ReplaceByCaster",
       "description": "When a Weakness is Broken, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2213_ADF_3</span> Grit Value for allies.",
@@ -926,6 +1089,78 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__919958753\">Modifier_FantasticStory_BaseAbility_2210_plus4_sub</a>[<span class=\"descriptionNumberColor\">Improvisation</span>]",
+      "stackType": "ReplaceByCaster",
+      "modifierFlags": [
+        "KeepOnDeathrattle",
+        "Deathrattle"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Take Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Attack Type",
+                "attackTypes": [
+                  "DOT"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                      "value": "DV_FantasticStory_PlusAbility_2214_ADF_1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Was Killed (Queued) [Owner]",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Varying Value SUM",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "_DotNumber",
+              "value": "STAT_DOT",
+              "valueType": "Amount",
+              "includeTargetsInLimbo": true
+            },
+            {
+              "name": "Adjust Team Punchline Value",
+              "value": {
+                "operator": "Variables[0] (_DotNumber) || RETURN",
+                "displayLines": "_DotNumber",
+                "constants": [],
+                "variables": [
+                  "_DotNumber"
+                ]
+              },
+              "adjustment": "Add"
+            }
+          ]
+        }
+      ],
+      "description": "Increases DoT taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2214_ADF_1</span>. When defeated, allies gain 1 Punchline for each DoT effect this target is afflicted with.",
+      "type": "Debuff",
+      "statusName": "Improvisation"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1476176126\">Modifier_FantasticStory_BaseAbility_2210_plus3_sub2</a>[<span class=\"descriptionNumberColor\">Tirade</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -1329,6 +1564,21 @@ const configAbility = {
           "conditions": {
             "name": "Compare: Variable",
             "value1": "DV_FantasticStory_PlusAbility_2213",
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"919958753\">Modifier_FantasticStory_BaseAbility_2210_plus4_sub</a>[<span class=\"descriptionNumberColor\">Improvisation</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DV_FantasticStory_PlusAbility_2214",
             "compareType": "=",
             "value2": 1
           }
