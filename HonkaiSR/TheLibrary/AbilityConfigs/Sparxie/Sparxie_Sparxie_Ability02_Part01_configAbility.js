@@ -16,7 +16,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Update Character Panel Visibility",
-      "show": "CasterOnly",
+      "targetCustom": {
+        "name": "Target Name",
+        "target": "{{Player Team All}} - {{Caster}} - {{SilverWolf999}}"
+      },
+      "show": "HideCustom",
       "forceDisplayUltButton": true
     },
     {
@@ -75,7 +79,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "flagName": "STAT_ElationEchoPoint"
+        "flagName": "ElationEchoPoint"
       }
     }
   ],

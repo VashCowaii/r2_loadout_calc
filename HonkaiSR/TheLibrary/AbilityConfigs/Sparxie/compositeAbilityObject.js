@@ -69,7 +69,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "flagName": "STAT_ElationEchoPoint"
+            "flagName": "ElationEchoPoint"
           }
         },
         {
@@ -80,7 +80,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "flagName": "STAT_ElationEchoPoint"
+            "flagName": "ElationEchoPoint"
           },
           "passed": [
             "Deleted bullshit",
@@ -696,7 +696,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "flagName": "STAT_ElationEchoPoint"
+            "flagName": "ElationEchoPoint"
           },
           "passed": [
             {
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "flagName": "STAT_ElationEchoPoint"
+            "flagName": "ElationEchoPoint"
           },
           "passed": [
             {
@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "flagName": "STAT_ElationEchoPoint"
+            "flagName": "ElationEchoPoint"
           },
           "passed": [
             "Deleted bullshit",
@@ -1657,7 +1657,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Update Character Panel Visibility",
-          "show": "CasterOnly",
+          "targetCustom": {
+            "name": "Target Name",
+            "target": "{{Player Team All}} - {{Caster}} - {{SilverWolf999}}"
+          },
+          "show": "HideCustom",
           "forceDisplayUltButton": true
         },
         {
@@ -1716,7 +1720,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "flagName": "STAT_ElationEchoPoint"
+            "flagName": "ElationEchoPoint"
           }
         }
       ],
