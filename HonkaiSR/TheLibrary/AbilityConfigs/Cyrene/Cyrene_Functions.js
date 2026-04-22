@@ -211,7 +211,8 @@ const configAbility = {
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "typeFilter": "All"
               },
               {
                 "name": "Is Part Of Group",
