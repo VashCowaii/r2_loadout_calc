@@ -2889,6 +2889,15 @@ const compositeAbilityObject = {
                         },
                         "flagName": "EnduranceEnemyOnly",
                         "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "EnduranceEnemyLogicOnly",
+                        "invertCondition": true
                       }
                     ]
                   },
