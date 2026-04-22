@@ -33,7 +33,8 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "EnduranceLogicOnly"
+        "EnduranceLogicOnly",
+        500
       ],
       "execute": [
         {
