@@ -236,6 +236,17 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "CameraRootRecord",
+      "isTargetOperator": true,
+      "execute": [
+        {
+          "name": "Adjust Target by Dummy Entity",
+          "entityName": "__CameraRootRecord"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "deadButNotProcessed",
       "isTargetOperator": true,
       "execute": [
@@ -420,6 +431,14 @@ const configAbility = {
       "isTargetOperator": true,
       "execute": [
         "Adjust Target by Ability Target"
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Get Attack Targets",
+      "isTargetOperator": true,
+      "execute": [
+        "Adjust Target by Attack Target List"
       ]
     },
     {
