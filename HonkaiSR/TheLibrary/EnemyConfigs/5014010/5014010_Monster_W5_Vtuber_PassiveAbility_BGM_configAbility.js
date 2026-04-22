@@ -29,6 +29,10 @@ const configAbility = {
           {
             "name": "Stage Type",
             "stageType": "RogueRelic"
+          },
+          {
+            "name": "Stage Type",
+            "stageType": "GridFightActivity"
           }
         ]
       }
@@ -65,7 +69,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "New Enemy Wave: Start",
           "execute": [
             {
               "name": "Define Custom Variable with Varying Data",
@@ -91,7 +95,10 @@ const configAbility = {
                     "MDF_WaveIndex2"
                   ]
                 }
-              }
+              },
+              "passed": [
+                "Modifier Deletes Itself"
+              ]
             }
           ]
         }

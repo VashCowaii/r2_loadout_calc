@@ -10,6 +10,42 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2068466533\">Enemy_W5_Vtuber_AbortInsert</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Add Ability",
+              "abilityName": "Monster_W5_Vtuber_AbortInsert"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Inject Ability Use",
+              "condition": {
+                "name": "Insert Ability Condition",
+                "type": "AbilityOwnerInsertUnusedCount",
+                "typeValue": 1
+              },
+              "abilityName": "Monster_W5_Vtuber_AbortInsert",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "priorityTag": "EnemyForceKill",
+              "allowAbilityTriggers": false
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1797863602\">Monster_W5_Vtuber_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Tilted</span>]",
       "stackType": "Replace",
       "modifierFlags": [
@@ -668,6 +704,35 @@ const configAbility = {
               ]
             }
           ]
+        },
+        {
+          "eventTrigger": "Waiting for Healing in Limbo",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "MDF_SwitchField",
+                "compareType": "=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2068466533\">Enemy_W5_Vtuber_AbortInsert</a>"
+                }
+              ]
+            }
+          ],
+          "priorityLevel": -100
         },
         {
           "eventTrigger": "Action Start [Anyone]",
@@ -2052,12 +2117,27 @@ const configAbility = {
                   },
                   "passed": [
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 5012031,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Aggressive Reading Material",
+                        "isBaseCompare": true
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"1144324322\">Enemy_W5_Vtuber_InField_Mask</a>"
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1144324322\">Enemy_W5_Vtuber_InField_Mask</a>"
+                        }
+                      ]
                     }
                   ],
                   "failed": [

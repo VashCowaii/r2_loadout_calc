@@ -11,6 +11,7 @@ const compositeAbilityObject = {
     "5014011_Monster_W5_Vtuber_Ability06_Win_ExtraElationTime",
     "5014011_Monster_W5_Vtuber_Ability06_Win_Part02",
     "5014011_Monster_W5_Vtuber_Ability06_Part01",
+    "5014011_Monster_W5_Vtuber_AbortInsert",
     "5014011_Monster_W5_Vtuber_Ability04_Part02",
     "5014011_Monster_W5_Vtuber_Ability04_Part01",
     "5014011_Monster_W5_Vtuber_Ability03_Part03",
@@ -1792,6 +1793,69 @@ const compositeAbilityObject = {
                 },
                 "Deleted bullshit"
               ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5014011_Monster_W5_Vtuber_AbortInsert": {
+      "fileName": "5014011_Monster_W5_Vtuber_AbortInsert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Add Target by Unique Identifier",
+              "identifier": "W5_Vtuber_00"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>"
+          },
+          "passed": [
+            {
+              "name": "Define Modifier-Specific Variable",
+              "target": {
+                "name": "Add Target by Unique Identifier",
+                "identifier": "W5_Vtuber_00"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>",
+              "variableName": "MDF_SwitchField",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "includeDyingTargets": true,
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "flagName": [
+              "Stealth"
+            ],
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add to Team Target Grouping",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
             }
           ]
         }
@@ -3610,6 +3674,10 @@ const compositeAbilityObject = {
               {
                 "name": "Stage Type",
                 "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
               }
             ]
           }
@@ -3643,7 +3711,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -3669,7 +3737,10 @@ const compositeAbilityObject = {
                         "MDF_WaveIndex2"
                       ]
                     }
-                  }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
                 }
               ]
             }
@@ -3689,6 +3760,42 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2068466533\">Enemy_W5_Vtuber_AbortInsert</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Monster_W5_Vtuber_AbortInsert"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "condition": {
+                    "name": "Insert Ability Condition",
+                    "type": "AbilityOwnerInsertUnusedCount",
+                    "typeValue": 1
+                  },
+                  "abilityName": "Monster_W5_Vtuber_AbortInsert",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "priorityTag": "EnemyForceKill",
+                  "allowAbilityTriggers": false
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1797863602\">Monster_W5_Vtuber_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Tilted</span>]",
@@ -4349,6 +4456,35 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
+            },
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_SwitchField",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2068466533\">Enemy_W5_Vtuber_AbortInsert</a>"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -100
             },
             {
               "eventTrigger": "Action Start [Anyone]",
@@ -5733,12 +5869,27 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Enemy ID",
+                            "ID": 5012031,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Aggressive Reading Material",
+                            "isBaseCompare": true
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1144324322\">Enemy_W5_Vtuber_InField_Mask</a>"
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1144324322\">Enemy_W5_Vtuber_InField_Mask</a>"
+                            }
+                          ]
                         }
                       ],
                       "failed": [
