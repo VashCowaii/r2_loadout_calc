@@ -169,6 +169,14 @@ const configAbility = {
       "value": 0
     },
     {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1493708935\">Modifier_Monster_W5_Pam_Charge</a>[<span class=\"descriptionNumberColor\">Raring to Go</span>]"
+    },
+    {
       "name": "IF",
       "conditions": {
         "name": "Check Boolean Value",
@@ -227,13 +235,60 @@ const configAbility = {
       "value": 1
     },
     {
-      "name": "Trigger Ability",
-      "from": {
-        "name": "Target Name",
-        "target": "{{Caster}}"
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "HP_Bars_Remaining",
+        "compareType": "=",
+        "value2": 2
       },
-      "ability": "Monster_W5_Pam_Ability03_Part01",
-      "isTrigger": true
+      "failed": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": ">",
+            "value2": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "OR",
+        "conditionList": [
+          {
+            "name": "Enemy ID",
+            "ID": 5014021,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Alloy Mechatron: King Pom-Pom",
+            "isBaseCompare": true,
+            "invertCondition": true
+          },
+          {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 3
+          }
+        ]
+      },
+      "passed": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Pam_Ability03_Part01",
+          "isTrigger": true
+        }
+      ]
     },
     {
       "name": "UI Display Event",

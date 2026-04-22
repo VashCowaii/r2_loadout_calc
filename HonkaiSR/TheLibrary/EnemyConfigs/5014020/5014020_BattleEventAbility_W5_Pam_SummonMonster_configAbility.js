@@ -134,30 +134,82 @@ const configAbility = {
           ]
         },
         {
-          "name": "Add Battle Event",
-          "teamName": "Player Team",
-          "eventID": 20032,
-          "assignOwner": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variables": null,
-          "whenCreated": [
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "Pamu_Robot",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
             },
+            "value": "GridFightBoss"
+          },
+          "passed": [
             {
-              "name": "Remove from Team Target Grouping",
-              "target": {
+              "name": "Add Battle Event",
+              "teamName": "Player Team",
+              "eventID": 20032,
+              "assignOwner": {
                 "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "target": "{{Level Entity}}"
               },
-              "stayInTeam": false
+              "variables": {
+                "PassiveAbility01_P6_SpeedRatio": {
+                  "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[5]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[5]]}"
+                  ]
+                }
+              },
+              "whenCreated": [
+                {
+                  "name": "Assign Unique Name",
+                  "uniqueName": "Pamu_Robot",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Remove from Team Target Grouping",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "stayInTeam": false
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Battle Event",
+              "teamName": "Player Team",
+              "eventID": 20032,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variables": null,
+              "whenCreated": [
+                {
+                  "name": "Assign Unique Name",
+                  "uniqueName": "Pamu_Robot",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Remove from Team Target Grouping",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "stayInTeam": false
+                }
+              ]
             }
           ]
         },

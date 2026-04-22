@@ -70,27 +70,75 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"2065504892\">W5_Pam_BattleScore2</a>"
     },
     {
-      "name": "Add Battle Event",
-      "teamName": "Neutral Team",
-      "eventID": 20033,
-      "variables": {
-        "PassiveAbility01_P2_DelayPercentage": {
-          "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-          "displayLines": "{[PassiveSkill01[1]]}",
-          "constants": [],
-          "variables": [
-            "{[PassiveSkill01[1]]}"
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "GridFightBoss"
+      },
+      "passed": [
+        {
+          "name": "Add Battle Event",
+          "teamName": "Neutral Team",
+          "eventID": 20033,
+          "variables": {
+            "PassiveAbility01_P2_DelayPercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "PassiveAbility01_P5_SpeedRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[4]]}"
+              ]
+            }
+          },
+          "whenCreated": [
+            {
+              "name": "Assign Unique Name",
+              "uniqueName": "Pamu_Summon",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
           ]
         }
-      },
-      "whenCreated": [
+      ],
+      "failed": [
         {
-          "name": "Assign Unique Name",
-          "uniqueName": "Pamu_Summon",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Parameter Target}}"
-          }
+          "name": "Add Battle Event",
+          "teamName": "Neutral Team",
+          "eventID": 20033,
+          "variables": {
+            "PassiveAbility01_P2_DelayPercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            }
+          },
+          "whenCreated": [
+            {
+              "name": "Assign Unique Name",
+              "uniqueName": "Pamu_Summon",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
         }
       ]
     }
