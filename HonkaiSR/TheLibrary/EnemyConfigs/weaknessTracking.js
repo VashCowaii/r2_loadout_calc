@@ -1,29 +1,29 @@
 let weaknessTracking = {
   "MinionLv2": {
-    "Fire": 383,
-    "Thunder": 507,
-    "Quantum": 406,
-    "Wind": 359,
-    "Ice": 453,
-    "Imaginary": 437,
-    "Physical": 417
+    "Fire": 399,
+    "Thunder": 518,
+    "Quantum": 417,
+    "Wind": 369,
+    "Ice": 458,
+    "Imaginary": 451,
+    "Physical": 430
   },
   "Elite": {
-    "Physical": 285,
-    "Ice": 339,
-    "Quantum": 225,
-    "Fire": 315,
-    "Thunder": 327,
-    "Wind": 225,
-    "Imaginary": 286
+    "Physical": 289,
+    "Ice": 340,
+    "Quantum": 226,
+    "Fire": 325,
+    "Thunder": 333,
+    "Wind": 226,
+    "Imaginary": 297
   },
   "LittleBoss": {
-    "Fire": 196,
-    "Thunder": 200,
-    "Quantum": 164,
-    "Imaginary": 195,
+    "Fire": 207,
+    "Thunder": 207,
+    "Quantum": 173,
+    "Imaginary": 211,
     "Wind": 144,
-    "Physical": 151,
+    "Physical": 161,
     "Ice": 153
   },
   "BigBoss": {
