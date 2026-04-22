@@ -766,7 +766,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "flagName": "STAT_ElationEchoPoint"
+                "flagName": "ElationEchoPoint"
               },
               "passed": [
                 {

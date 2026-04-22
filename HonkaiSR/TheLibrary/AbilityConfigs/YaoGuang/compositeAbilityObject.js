@@ -185,7 +185,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Has Flag",
-                    "flagName": "STAT_ElationEchoPoint"
+                    "flagName": "ElationEchoPoint"
                   },
                   "passed": [
                     {
@@ -2315,7 +2315,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "flagName": "STAT_ElationEchoPoint"
+                    "flagName": "ElationEchoPoint"
                   },
                   "passed": [
                     {
