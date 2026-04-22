@@ -1,11 +1,11 @@
 const stageTypers = "apoc";
 let mocSchedule = [
   {
-    "id": 3017,
-    "image": "activityBG/ChallengeBossBanner_3015.png",
-    "realName": "Militant Lupine",
-    "start": "2026-04-27 04:00:00",
-    "end": "2026-05-27 04:00:00",
+    "id": 3018,
+    "image": "activityBG/ChallengeBossBanner_3016.png",
+    "realName": "Idol of the Locusts",
+    "start": "2026-06-08 04:00:00",
+    "end": "2026-08-27 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
@@ -21,62 +21,61 @@ let mocSchedule = [
     },
     "floorData": {
       "1": {
-        "floorName": "Militant Lupine: Difficulty 1",
+        "floorName": "Idol of the Locusts: Difficulty 1",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420381
+              420431
             ],
             "stageDataArray": [
               {
-                "stageName": "The Ravaged Unconquerable",
+                "stageName": "Super Idol: Center of Attention",
                 "enemyLevel": 60,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
                     0.25,
-                    0.15,
-                    10
+                    0.15
                   ]
                 },
                 "stageType": "Challenge",
                 "enemyList": [
                   [
                     {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401301,
-                      "image": 4014013,
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401401,
+                      "image": 5014014,
                       "rank": "LittleBoss",
                       "attackBase": 270.642312,
                       "defBase": 800.00004,
-                      "hpBase": 343234.20348,
+                      "hpBase": 215747.213616,
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
                       "ehr": 0.08,
-                      "delay": 1,
+                      "delay": 0.5,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 480,
+                      "toughnessBase": 440,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
-                        "Thunder",
-                        "Quantum"
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Physical": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
@@ -89,87 +88,86 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110015"
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
                 },
-                "highSTSUM": 686468.40696,
-                "aoeSUM": 686468.40696
+                "highSTSUM": 431494.427232,
+                "aoeSUM": 431494.427232
               }
             ]
           },
           "stage2": {
             "ids": [
-              420391
+              420441
             ],
             "stageDataArray": [
               {
-                "stageName": "Hellcharred Shadow General",
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
                 "enemyLevel": 60,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
                     0.25,
-                    0.15,
-                    10
+                    0.15
                   ]
                 },
                 "stageType": "Challenge",
                 "enemyList": [
                   [
                     {
-                      "name": "Hellcharred Shadow General",
-                      "id": 203501201,
-                      "image": 2035012,
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501101,
+                      "image": 8025011,
                       "rank": "BigBoss",
-                      "attackBase": 304.472601,
+                      "attackBase": 338.30289,
                       "defBase": 800.00004,
                       "hpBase": [
-                        471947.029785,
-                        471947.029785
+                        235360.596672,
+                        235360.596672
                       ],
-                      "speedBase": 144,
+                      "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
                       "ehr": 0.08,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Wind",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 280,
+                      "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
-                        "Fire",
-                        "Thunder",
-                        "Quantum"
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Ice": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                        "STAT_Entangle": 1
                       }
                     }
                   ]
                 ],
-                "scalarElite": 701,
+                "scalarElite": 73,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
-                  "_BindingMazeBuff": "3110015"
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
                 },
-                "highSTSUM": 943894.05957,
-                "aoeSUM": 943894.05957
+                "highSTSUM": 470721.193344,
+                "aoeSUM": 470721.193344
               }
             ]
           }
@@ -178,6 +176,172 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
               "params": [
                 0.5,
@@ -186,262 +350,70 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
-              ]
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
-            },
-            {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
-            },
-            {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
-              "skillList": [
-                {
-                  "name": "How to obtain \"Glory\"",
-                  "descData": [
-                    {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to reduce \"War Armor\"",
-                  "descData": [
-                    {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
-              "skillList": [
-                {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
-                  "descData": [
-                    {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
-            },
-            {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
-            }
-          ]
-        },
-        "boss2Guide": {
-          "tagList": [
-            {
-              "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Steelbone Summit",
-              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Sickleclawed Sawteeth",
-              "desc": "Boss Mirage's Toughness increases by #1[i].",
-              "params": [
-                40
-              ]
-            },
-            {
-              "name": "Beastly Rage",
-              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
-              "params": [
-                1
-              ]
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
-            },
-            {
-              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Unyielding Winds",
-              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
-              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
-              "skillList": [
-                {
-                  "name": "How to control \"Bloodstained Lupine\" in battle",
-                  "descData": [
-                    {
-                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
-                    }
-                  ]
-                },
-                {
-                  "name": "Dispelling the \"Malediction\" state",
-                  "descData": [
-                    {
-                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Sweep the Heavens",
-              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
-              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
-              "skillList": [
-                {
-                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
-                  "descData": [
-                    {
-                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
-            },
-            {
-              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
             }
           ]
         }
       },
       "2": {
-        "floorName": "Militant Lupine: Difficulty 2",
+        "floorName": "Idol of the Locusts: Difficulty 2",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420382
+              420432
             ],
             "stageDataArray": [
               {
-                "stageName": "The Ravaged Unconquerable",
+                "stageName": "Super Idol: Center of Attention",
                 "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
                     0.25,
-                    0.15,
-                    10
+                    0.15
                   ]
                 },
                 "stageType": "Challenge",
                 "enemyList": [
                   [
                     {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401302,
-                      "image": 4014013,
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401402,
+                      "image": 5014014,
                       "rank": "LittleBoss",
                       "attackBase": 392.2244856,
                       "defBase": 899.99994,
-                      "hpBase": 1236732.9534,
+                      "hpBase": 777374.99928,
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
                       "ehr": 0.16,
-                      "delay": 1,
+                      "delay": 0.5,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 480,
+                      "toughnessBase": 440,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
-                        "Thunder",
-                        "Quantum"
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Physical": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
@@ -454,87 +426,86 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110015"
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
                 },
-                "highSTSUM": 2473465.9068,
-                "aoeSUM": 2473465.9068
+                "highSTSUM": 1554749.99856,
+                "aoeSUM": 1554749.99856
               }
             ]
           },
           "stage2": {
             "ids": [
-              420392
+              420442
             ],
             "stageDataArray": [
               {
-                "stageName": "Hellcharred Shadow General",
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
                 "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
                     0.25,
-                    0.15,
-                    10
+                    0.15
                   ]
                 },
                 "stageType": "Challenge",
                 "enemyList": [
                   [
                     {
-                      "name": "Hellcharred Shadow General",
-                      "id": 203501202,
-                      "image": 2035012,
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501102,
+                      "image": 8025011,
                       "rank": "BigBoss",
                       "attackBase": 435.804984,
                       "defBase": 899.99994,
                       "hpBase": [
-                        1700507.810925,
-                        1700507.810925
+                        1130727.27168,
+                        1130727.27168
                       ],
-                      "speedBase": 158.4,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
                       "ehr": 0.16,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Wind",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 280,
+                      "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
-                        "Fire",
-                        "Thunder",
-                        "Quantum"
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Ice": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                        "STAT_Entangle": 1
                       }
                     }
                   ]
                 ],
-                "scalarElite": 702,
+                "scalarElite": 78,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
-                  "_BindingMazeBuff": "3110015"
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
                 },
-                "highSTSUM": 3401015.62185,
-                "aoeSUM": 3401015.62185
+                "highSTSUM": 2261454.54336,
+                "aoeSUM": 2261454.54336
               }
             ]
           }
@@ -543,6 +514,172 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
               "params": [
                 0.5,
@@ -551,355 +688,162 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
-              ]
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
-            },
-            {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
-            },
-            {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
-              "skillList": [
-                {
-                  "name": "How to obtain \"Glory\"",
-                  "descData": [
-                    {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to reduce \"War Armor\"",
-                  "descData": [
-                    {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
-              "skillList": [
-                {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
-                  "descData": [
-                    {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
-            },
-            {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
-            }
-          ]
-        },
-        "boss2Guide": {
-          "tagList": [
-            {
-              "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Steelbone Summit",
-              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Sickleclawed Sawteeth",
-              "desc": "Boss Mirage's Toughness increases by #1[i].",
-              "params": [
-                40
-              ]
-            },
-            {
-              "name": "Beastly Rage",
-              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
-              "params": [
-                1
-              ]
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
-            },
-            {
-              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Unyielding Winds",
-              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
-              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
-              "skillList": [
-                {
-                  "name": "How to control \"Bloodstained Lupine\" in battle",
-                  "descData": [
-                    {
-                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
-                    }
-                  ]
-                },
-                {
-                  "name": "Dispelling the \"Malediction\" state",
-                  "descData": [
-                    {
-                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Sweep the Heavens",
-              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
-              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
-              "skillList": [
-                {
-                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
-                  "descData": [
-                    {
-                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
-            },
-            {
-              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
             }
           ]
         }
       },
       "3": {
-        "floorName": "Militant Lupine: Difficulty 3",
+        "floorName": "Idol of the Locusts: Difficulty 3",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420383
+              420433
             ],
             "stageDataArray": [
               {
-                "stageName": "The Ravaged Unconquerable",
+                "stageName": "Super Idol: Center of Attention",
                 "enemyLevel": 80,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
                     0.25,
-                    0.15,
-                    10
+                    0.15
                   ]
                 },
                 "stageType": "Challenge",
                 "enemyList": [
                   [
                     {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401303,
-                      "image": 4014013,
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401403,
+                      "image": 5014014,
                       "rank": "LittleBoss",
                       "attackBase": 497.0887056,
                       "defBase": 1000.00005,
-                      "hpBase": 2649767.28555,
+                      "hpBase": 1968398.55498,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.24,
+                      "delay": 0.5,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 440,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 898,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 3936797.10996,
+                "aoeSUM": 3936797.10996
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420443
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501103,
+                      "image": 8025011,
+                      "rank": "BigBoss",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": [
+                        3523846.36416,
+                        3523846.36416
+                      ],
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.24,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 480,
-                      "weaknessList": [
-                        "Fire",
-                        "Ice",
-                        "Thunder",
-                        "Quantum"
-                      ],
-                      "resistances": {
-                        "Physical": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
-                      },
-                      "resistancesDebuff": {
-                        "STAT_CTRL": 0.5
-                      }
-                    }
-                  ]
-                ],
-                "scalarElite": 943,
-                "scalarHard": 1,
-                "configData": {
-                  "_Wave": "1",
-                  "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110015"
-                },
-                "highSTSUM": 5299534.5711,
-                "aoeSUM": 5299534.5711
-              }
-            ]
-          },
-          "stage2": {
-            "ids": [
-              420393
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Hellcharred Shadow General",
-                "enemyLevel": 80,
-                "modifiersToAdd": [],
-                "buffOverride": {
-                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
-                  "BEKey": -838314705,
-                  "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
-                  "battleDesc": null,
-                  "buffType": "",
-                  "params": [
-                    0.25,
-                    0.15,
-                    10
-                  ]
-                },
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "Hellcharred Shadow General",
-                      "id": 203501203,
-                      "image": 2035012,
-                      "rank": "BigBoss",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": [
-                        4769581.11399,
-                        4769581.11399
-                      ],
-                      "speedBase": 172.8,
-                      "critDMG": 0.2,
-                      "effectRES": 0.4,
-                      "ehr": 0.24,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Wind",
-                      "hpBars": 2,
-                      "toughnessBase": 280,
+                      "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
-                        "Fire",
-                        "Thunder",
-                        "Quantum"
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Ice": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                        "STAT_Entangle": 1
                       }
                     }
                   ]
                 ],
-                "scalarElite": 703,
+                "scalarElite": 86,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
-                  "_BindingMazeBuff": "3110015"
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
                 },
-                "highSTSUM": 9539162.22798,
-                "aoeSUM": 9539162.22798
+                "highSTSUM": 7047692.72832,
+                "aoeSUM": 7047692.72832
               }
             ]
           }
@@ -908,6 +852,172 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
               "params": [
                 0.5,
@@ -916,262 +1026,70 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
-              ]
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
-            },
-            {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
-            },
-            {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
-              "skillList": [
-                {
-                  "name": "How to obtain \"Glory\"",
-                  "descData": [
-                    {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to reduce \"War Armor\"",
-                  "descData": [
-                    {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
-              "skillList": [
-                {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
-                  "descData": [
-                    {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
-            },
-            {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
-            }
-          ]
-        },
-        "boss2Guide": {
-          "tagList": [
-            {
-              "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Steelbone Summit",
-              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Sickleclawed Sawteeth",
-              "desc": "Boss Mirage's Toughness increases by #1[i].",
-              "params": [
-                40
-              ]
-            },
-            {
-              "name": "Beastly Rage",
-              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
-              "params": [
-                1
-              ]
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
-            },
-            {
-              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Unyielding Winds",
-              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
-              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
-              "skillList": [
-                {
-                  "name": "How to control \"Bloodstained Lupine\" in battle",
-                  "descData": [
-                    {
-                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
-                    }
-                  ]
-                },
-                {
-                  "name": "Dispelling the \"Malediction\" state",
-                  "descData": [
-                    {
-                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Sweep the Heavens",
-              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
-              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
-              "skillList": [
-                {
-                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
-                  "descData": [
-                    {
-                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
-            },
-            {
-              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
             }
           ]
         }
       },
       "4": {
-        "floorName": "Militant Lupine: Difficulty 4",
+        "floorName": "Idol of the Locusts: Difficulty 4",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420384
+              420434
             ],
             "stageDataArray": [
               {
-                "stageName": "The Ravaged Unconquerable",
+                "stageName": "Super Idol: Center of Attention",
                 "enemyLevel": 90,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
                     0.25,
-                    0.15,
-                    10
+                    0.15
                   ]
                 },
                 "stageType": "Challenge",
                 "enemyList": [
                   [
                     {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401304,
-                      "image": 4014013,
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401404,
+                      "image": 5014014,
                       "rank": "LittleBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 8084165.051025,
+                      "hpBase": 14518500.4998,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.32,
-                      "delay": 1,
+                      "delay": 0.5,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 480,
+                      "toughnessBase": 440,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
-                        "Thunder",
-                        "Quantum"
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Physical": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
@@ -1179,92 +1097,91 @@ let mocSchedule = [
                     }
                   ]
                 ],
-                "scalarElite": 899,
+                "scalarElite": 100,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110015"
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
                 },
-                "highSTSUM": 16168330.10205,
-                "aoeSUM": 16168330.10205
+                "highSTSUM": 29037000.9996,
+                "aoeSUM": 29037000.9996
               }
             ]
           },
           "stage2": {
             "ids": [
-              420394
+              420444
             ],
             "stageDataArray": [
               {
-                "stageName": "Hellcharred Shadow General",
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
                 "enemyLevel": 90,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
                     0.25,
-                    0.15,
-                    10
+                    0.15
                   ]
                 },
                 "stageType": "Challenge",
                 "enemyList": [
                   [
                     {
-                      "name": "Hellcharred Shadow General",
-                      "id": 203501204,
-                      "image": 2035012,
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501104,
+                      "image": 8025011,
                       "rank": "BigBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
                       "hpBase": [
-                        11856775.40817,
-                        11856775.40817
+                        14078545.9392,
+                        14078545.9392
                       ],
-                      "speedBase": 190.08,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.32,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Wind",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 280,
+                      "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
-                        "Fire",
-                        "Thunder",
-                        "Quantum"
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Ice": 0.4,
-                        "Wind": 0.4,
-                        "Imaginary": 0.4
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                        "STAT_Entangle": 1
                       }
                     }
                   ]
                 ],
-                "scalarElite": 84,
+                "scalarElite": 154,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
-                  "_BindingMazeBuff": "3110015"
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
                 },
-                "highSTSUM": 23713550.81634,
-                "aoeSUM": 23713550.81634
+                "highSTSUM": 28157091.8784,
+                "aoeSUM": 28157091.8784
               }
             ]
           }
@@ -1273,6 +1190,172 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
               "params": [
                 0.5,
@@ -1281,201 +1364,10 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
-              ]
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
-            },
-            {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
-            },
-            {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
-              "skillList": [
-                {
-                  "name": "How to obtain \"Glory\"",
-                  "descData": [
-                    {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to reduce \"War Armor\"",
-                  "descData": [
-                    {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
-              "skillList": [
-                {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
-                  "descData": [
-                    {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
-            },
-            {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
-            }
-          ]
-        },
-        "boss2Guide": {
-          "tagList": [
-            {
-              "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Steelbone Summit",
-              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
-              "params": [
-                0.5,
-                1
-              ]
-            },
-            {
-              "name": "Sickleclawed Sawteeth",
-              "desc": "Boss Mirage's Toughness increases by #1[i].",
-              "params": [
-                40
-              ]
-            },
-            {
-              "name": "Beastly Rage",
-              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
-              "params": [
-                1
-              ]
-            }
-          ],
-          "textList": [
-            {
-              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
-            },
-            {
-              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
-            }
-          ],
-          "phaseList": [
-            {
-              "name": "Phase 1: Unyielding Winds",
-              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
-              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
-              "skillList": [
-                {
-                  "name": "How to control \"Bloodstained Lupine\" in battle",
-                  "descData": [
-                    {
-                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
-                    }
-                  ]
-                },
-                {
-                  "name": "Dispelling the \"Malediction\" state",
-                  "descData": [
-                    {
-                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Phase 2: Sweep the Heavens",
-              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
-              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
-              "skillList": [
-                {
-                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
-                  "descData": [
-                    {
-                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "difficultyList": [
-            {
-              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5
-              ]
-            },
-            {
-              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
-            },
-            {
-              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
             }
           ]
         }
@@ -1560,6 +1452,1462 @@ let mocSchedule = [
         "buffType": "",
         "params": [
           0.3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3017,
+    "image": "activityBG/ChallengeBossBanner_3016.png",
+    "realName": "Idol of the Locusts",
+    "start": "2026-04-27 04:00:00",
+    "end": "2026-06-08 04:00:00",
+    "buffData": {
+      "modifierName": "ADV_StageAbility_3031001",
+      "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
+      "name": "Word Shatter",
+      "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
+      "battleDesc": null,
+      "buffType": "",
+      "params": [
+        0.6,
+        6
+      ]
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Idol of the Locusts: Difficulty 1",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420431
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Super Idol: Center of Attention",
+                "enemyLevel": 60,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401401,
+                      "image": 5014014,
+                      "rank": "LittleBoss",
+                      "attackBase": 270.642312,
+                      "defBase": 800.00004,
+                      "hpBase": 215747.213616,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.34,
+                      "ehr": 0.08,
+                      "delay": 0.5,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 440,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 896,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 431494.427232,
+                "aoeSUM": 431494.427232
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420441
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
+                "enemyLevel": 60,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501101,
+                      "image": 8025011,
+                      "rank": "BigBoss",
+                      "attackBase": 338.30289,
+                      "defBase": 800.00004,
+                      "hpBase": [
+                        235360.596672,
+                        235360.596672
+                      ],
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.34,
+                      "ehr": 0.08,
+                      "delay": 1,
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 200,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_Entangle": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 73,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 470721.193344,
+                "aoeSUM": 470721.193344
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
+            },
+            {
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
+            }
+          ]
+        }
+      },
+      "2": {
+        "floorName": "Idol of the Locusts: Difficulty 2",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420432
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Super Idol: Center of Attention",
+                "enemyLevel": 70,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401402,
+                      "image": 5014014,
+                      "rank": "LittleBoss",
+                      "attackBase": 392.2244856,
+                      "defBase": 899.99994,
+                      "hpBase": 777374.99928,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.38,
+                      "ehr": 0.16,
+                      "delay": 0.5,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 440,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 897,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 1554749.99856,
+                "aoeSUM": 1554749.99856
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420442
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
+                "enemyLevel": 70,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501102,
+                      "image": 8025011,
+                      "rank": "BigBoss",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": [
+                        1130727.27168,
+                        1130727.27168
+                      ],
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.38,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 200,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_Entangle": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 78,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 2261454.54336,
+                "aoeSUM": 2261454.54336
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
+            },
+            {
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
+            }
+          ]
+        }
+      },
+      "3": {
+        "floorName": "Idol of the Locusts: Difficulty 3",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420433
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Super Idol: Center of Attention",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401403,
+                      "image": 5014014,
+                      "rank": "LittleBoss",
+                      "attackBase": 497.0887056,
+                      "defBase": 1000.00005,
+                      "hpBase": 1968398.55498,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.24,
+                      "delay": 0.5,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 440,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 898,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 3936797.10996,
+                "aoeSUM": 3936797.10996
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420443
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501103,
+                      "image": 8025011,
+                      "rank": "BigBoss",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": [
+                        3523846.36416,
+                        3523846.36416
+                      ],
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 200,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_Entangle": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 86,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 7047692.72832,
+                "aoeSUM": 7047692.72832
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
+            },
+            {
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
+            }
+          ]
+        }
+      },
+      "4": {
+        "floorName": "Idol of the Locusts: Difficulty 4",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420434
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Super Idol: Center of Attention",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401404,
+                      "image": 5014014,
+                      "rank": "LittleBoss",
+                      "attackBase": 662.784912,
+                      "defBase": 1099.99995,
+                      "hpBase": 14518500.4998,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 0.5,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 440,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 100,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 29037000.9996,
+                "aoeSUM": 29037000.9996
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420444
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Sky-Shrouding Stardevourer Swarm",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_016",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies and activates their Ultimates.\\nIncreases the Elation DMG taken by all enemy targets by #1[i]% and increases Weakness Break DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Sky-Shrouding Stardevourer Swarm",
+                      "id": 802501104,
+                      "image": 8025011,
+                      "rank": "BigBoss",
+                      "attackBase": 662.784912,
+                      "defBase": 1099.99995,
+                      "hpBase": [
+                        14078545.9392,
+                        14078545.9392
+                      ],
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 3,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
+                      "toughnessBase": 240,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_Entangle": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 154,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Herta_Space_Station_Combat_Swarm",
+                  "_BindingMazeBuff": "3110016"
+                },
+                "highSTSUM": 28157091.8784,
+                "aoeSUM": 28157091.8784
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
+              "extraEffects": [
+                266,
+                283
+              ]
+            },
+            {
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
+            },
+            {
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
+            },
+            {
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
+              "skillList": [
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
+                  "descData": [
+                    {
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Support Sub-Field Characters",
+                  "descData": [
+                    {
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
+            },
+            {
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5,
+                1
+              ]
+            },
+            {
+              "name": "Insect Egg Fission",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                176
+              ]
+            },
+            {
+              "name": "Hormone Secretion",
+              "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
+              "extraEffects": [
+                177
+              ]
+            },
+            {
+              "name": "Egg Burst",
+              "desc": "At the end of Boss Mirage's turn, the number of Insect Eggs gained through \"Nesting Incubation\" increases."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs and Toughness."
+            },
+            {
+              "desc": "Use abilities capable of AoE ATK to attack Boss Mirage while defeating the summons."
+            },
+            {
+              "desc": "When allies are in Quantum Entanglement or Outrage states, use abilities to dispel the debuffs."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase One: Insect Nest First Foray",
+              "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
+              "answer": "Strategy: When Boss Mirage has Insect Eggs, prioritize defeating the summons and use the \"Entomon Eulogy\" and \"Decay Eulogy\" attacks of the summons to reduce Boss Mirage's Insect Eggs.",
+              "skillList": [
+                {
+                  "name": "How to reduce Boss Mirage's Insect Eggs",
+                  "descData": [
+                    {
+                      "desc": "When defeating Swarm summons and triggering \"Entomon Eulogy\" and \"Decay Eulogy\" to deal DMG to Boss Mirage, 1 Insect Egg will be reduced."
+                    }
+                  ]
+                },
+                {
+                  "name": "What Happens After \"Gnaw Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Gnaw Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, their attacks have a chance to inflict the Entanglement effect on the targets."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase Two: Misfortune Swarm Disaster",
+              "desc": "When the Boss Mirage's \"Devoured by the Swarm\" is triggered, more summons will appear, and it will also summon \"Lesser Stings.\"",
+              "answer": "Strategy: Prioritize defeating \"Lesser Sting\" to prevent being attacked with \"Bursting Detonation\" and entering the Outrage state.",
+              "skillList": [
+                {
+                  "name": "What Happens After \"Lesser Stings\" are Enhanced",
+                  "descData": [
+                    {
+                      "desc": "After \"Lesser Stings\" are enhanced, their ATK increases. When the enhancement level reaches 3, they can immediately take action."
+                    }
+                  ]
+                },
+                {
+                  "name": "Deal with \"Lesser Sting\"'s \"Bursting Detonation\"",
+                  "descData": [
+                    {
+                      "desc": "Prioritize defeating \"Lesser Sting\" or inflicting Weakness Break on it to prevent \"Bursting Detonation\" from being used."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage gains a set amount of \"Insect Egg\" at the end of every turn. Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\""
+            },
+            {
+              "desc": "Boss Mirage can consume \"Insect Eggs\" to enhance Swarm summons and grant them 1 stack of \"Growth Hormone\". Each stack increases ATK and provides additional enhancement when reaching 3 stacks."
+            }
+          ]
+        }
+      }
+    },
+    "buffList1": [
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_089",
+        "BEKey": -243519640,
+        "name": "Beaming Bliss",
+        "desc": "Increases Elation DMG taken by all enemies by #1[i]%. When there is a character following the Path of Elation on the team, increases the Weakness Break Efficiency of all allies by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          0.5
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_086",
+        "BEKey": -243519640,
+        "name": "Collapse on Sight",
+        "desc": "Increases all enemies' Break DMG taken by #1[i]%. After Breaking an enemy's Weakness, increases all allies' SPD by #2[i]% for #3[i] turn(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.1,
+          0.15,
+          2
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_064",
+        "BEKey": -243519640,
+        "name": "Heroic Vanguard",
+        "desc": "After the character in position 1 in the team uses Ultimate, their Weakness Break Efficiency increases by #1[i]% and increases CRIT DMG by #2[i]%, lasting for #3[i] turn(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5,
+          0.5,
+          1
+        ]
+      }
+    ],
+    "buffList2": [
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_058",
+        "BEKey": -243519640,
+        "name": "Tarsus Infection",
+        "desc": "After an ally target deals DoT to an enemy, #1[i] Energy is regenerated. DoT dealt by all allies ignores #2[i]% of enemy targets' All-Type RES.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          1,
+          0.4
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_082",
+        "BEKey": -243519640,
+        "name": "Knowledge and Decorum",
+        "desc": "While any character following the Path of Erudition is in the team, increases all allies' All-Type RES PEN by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.25
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_080",
+        "BEKey": -243519640,
+        "name": "Past Life: Shadowed Reverie",
+        "desc": "When there are 3 ally memosprites or more currently on the field, increases all allies' DMG dealt by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.6
         ]
       }
     ]
@@ -6106,7 +7454,7 @@ let mocSchedule = [
         "battleDesc": null,
         "buffType": "",
         "params": [
-          0.15
+          0.25
         ]
       }
     ]
@@ -7292,7 +8640,7 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 200,
+                      "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
                         "Ice",
@@ -12153,8 +13501,8 @@ let mocSchedule = [
         "battleDesc": null,
         "buffType": "",
         "params": [
-          6,
-          0.3
+          1,
+          0.4
         ]
       }
     ],
@@ -15088,7 +16436,7 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 200,
+                      "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
                         "Ice",
@@ -18046,7 +19394,7 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
-                      "toughnessBase": 200,
+                      "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
                         "Ice",
