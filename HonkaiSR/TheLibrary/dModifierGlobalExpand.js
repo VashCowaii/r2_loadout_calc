@@ -17802,7 +17802,7 @@ let modifiersGlobal = [
     "aim": "Buff",
     "desc": "After the Stellaron Hunter attacks #1[i] times, Kafka additionally uses her Skill on the enemy.",
     "type": null,
-    "perma": false,
+    "perma": true,
     "params": [
       "HunterNeedAttackCount"
     ]
@@ -17813,7 +17813,7 @@ let modifiersGlobal = [
     "aim": "Buff",
     "desc": "After the Stellaron Hunter attacks #1[i] times, Silver Wolf additionally uses her Skill on the enemy.",
     "type": null,
-    "perma": false,
+    "perma": true,
     "params": [
       "HunterNeedAttackCount"
     ]
@@ -17824,7 +17824,7 @@ let modifiersGlobal = [
     "aim": "Buff",
     "desc": "After the Stellaron Hunter attacks #1[i] times, Blade additionally unleashes an Enhanced Basic ATK on the enemy with the highest HP.",
     "type": null,
-    "perma": false,
+    "perma": true,
     "params": [
       "HunterNeedAttackCount"
     ]
@@ -17835,7 +17835,7 @@ let modifiersGlobal = [
     "aim": "Buff",
     "desc": "After the Stellaron Hunter attacks #1[i] times, Firefly additionally uses her Ultimate to attack enemies.",
     "type": null,
-    "perma": false,
+    "perma": true,
     "params": [
       "HunterNeedAttackCount"
     ]
@@ -18628,13 +18628,14 @@ let modifiersGlobal = [
   },
   {
     "name": "GridFight_Evernight_PC_PassiveAbility01_Sub",
-    "realName": "CRIT DMG Boost",
+    "realName": "CRIT DMG and Lucky Strike DMG Boost",
     "aim": "Buff",
-    "desc": "Each stack increases CRIT DMG by #1[i]%.",
+    "desc": "Every stack increases CRIT DMG by #1[i]% and Lucky Strike DMG by #2[i]%.",
     "type": null,
     "perma": false,
     "params": [
-      "MDF_PropertyValue"
+      "MDF_PropertyValue",
+      "MDF_PropertyValue2"
     ]
   },
   {
@@ -19027,13 +19028,14 @@ let modifiersGlobal = [
   },
   {
     "name": "MBattleEvent_GridFight_Evernight_PC_PassiveAbility01_Sub",
-    "realName": "CRIT DMG Boost",
+    "realName": "CRIT DMG and Lucky Strike DMG Boost",
     "aim": "Buff",
-    "desc": "Each stack increases CRIT DMG by #1[i]%.",
+    "desc": "Every stack increases CRIT DMG by #1[i]% and Lucky Strike DMG by #2[i]%.",
     "type": null,
     "perma": false,
     "params": [
-      "MDF_PropertyValue"
+      "MDF_PropertyValue",
+      "MDF_PropertyValue2"
     ]
   },
   {
@@ -21281,7 +21283,7 @@ let modifiersGlobal = [
   },
   {
     "name": "Modifier_StageAbility_677170_Effect",
-    "realName": "History Agent",
+    "realName": "Memorial Chrysalis",
     "aim": "Buff",
     "desc": "For each stack of \"Obsession\" in possession, Basic ATK and Skill DMG dealt increases by #1[i]%.",
     "type": null,
@@ -23599,7 +23601,7 @@ let modifiersGlobal = [
     "aim": "Debuff",
     "desc": "Maximum Restorable HP decreases by #1[i]%.",
     "type": null,
-    "perma": false,
+    "perma": true,
     "params": [
       "_Ratio"
     ]
@@ -23627,6 +23629,61 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "GridFight_Ashveil_Ability02_Debuff",
+    "realName": "Bait",
+    "aim": "Other",
+    "desc": "This target is the \"Bait.\"",
+    "type": "Bait",
+    "perma": true
+  },
+  {
+    "name": "GridFight_Ashveil_Passive_ListenEnhanceInsertBonusStackForShow",
+    "realName": "Gluttony",
+    "aim": "Other",
+    "desc": "The current stack count of \"Gluttony\" is #2[i]. The next enhanced Talent's Follow-Up ATK will additionally deal up to a maximum of #1[i] instance(s) of DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ExtraInsertCountForShow",
+      "MDF_LayerForShow"
+    ]
+  },
+  {
+    "name": "GridFight_Ashveil_CritDamageUp",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "Increases CRIT DMG dealt by #1[i]%. Additionally increases Follow-Up ATK CRIT DMG by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue02"
+    ]
+  },
+  {
+    "name": "GridFight_Ashveil_InsertDamageUp",
+    "realName": "Follow-Up ATK DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt by Follow-Up ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_GridFight_Origin_2012_ElationBE_BonusLuck",
+    "realName": "Grand Prize",
+    "aim": "Buff",
+    "desc": "Increases Lucky Strike Rate by #1[i]% and increases Lucky Strike DMG by #2[i]%.",
+    "type": "Grand Prize",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue02"
+    ]
+  },
+  {
     "name": "MLevel_Rogue_Knowledge_S7",
     "realName": "Brain in a Vat",
     "aim": "Buff",
@@ -23635,6 +23692,28 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_EnergyBase"
+    ]
+  },
+  {
+    "name": "MStageAbility_GridFight_Origin_2012_ElationBE_ElationDamageBonus",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "LC_23057_Sub",
+    "realName": "Guaranteed Victory",
+    "aim": "Other",
+    "desc": "The effect to gain Punchlines from \"Guaranteed Victory\" cannot be triggered now. Triggers again after using Basic ATK #1[i] more time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count"
     ]
   },
   {
@@ -23661,6 +23740,14 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "GridFigth_Player_40_ElationWindFury",
+    "realName": "Popular Streamer",
+    "aim": "Buff",
+    "desc": "When using an Elation Skill during Aha Instant, duplicates the ability once and uses it immediately.",
+    "type": null,
+    "perma": true
+  },
+  {
     "name": "StageAbility_633600_Modifier_Sub2",
     "realName": "DMG Reduction",
     "aim": "Buff",
@@ -23680,6 +23767,17 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.2_1001_Bonus",
+    "realName": "Thick-Skinned",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
     ]
   },
   {
@@ -23724,6 +23822,50 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "Value1"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.2_1002_Debuff",
+    "realName": "Blunt the Edge",
+    "aim": "Debuff",
+    "desc": "DMG dealt is #1[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.2_1003_Bonus",
+    "realName": "Connections First",
+    "aim": "Buff",
+    "desc": "DMG dealt is #1[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.2_1004_Debuff",
+    "realName": "Differential Treatment",
+    "aim": "Debuff",
+    "desc": "DMG dealt is #1[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.2_1004_Bonus",
+    "realName": "Differential Treatment",
+    "aim": "Buff",
+    "desc": "DMG dealt is #1[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
     ]
   },
   {
@@ -23779,6 +23921,308 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "MGridFight_Origin_1002_SilverWolf999Bonus",
+    "realName": "Cosmic Hunting Grounds",
+    "aim": "Buff",
+    "desc": "After a Stellaron Hunter attacks #1[i] times, Silver Wolf LV.999 additionally uses an Elation Skill.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "HunterNeedAttackCount"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"919958753\">Modifier_FantasticStory_BaseAbility_2210_plus4_sub</a>",
+    "realName": "Improvisation",
+    "aim": "Debuff",
+    "desc": "Increases DoT taken by #1[i]%. When defeated, allies gain 1 Punchline for each DoT effect this target is afflicted with.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2214_ADF_1",
+      "DV_FantasticStory_PlusAbility_2214_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>",
+    "realName": "Grit Mechanics_Improvisation",
+    "aim": "Debuff",
+    "desc": "Every time a DoT is received, additionally accumulates #2[i] Grit Value for allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2214_ADF_1",
+      "DV_FantasticStory_PlusAbility_2214_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-2029709581\">Modifier_ChallengePeakBattle_BaseAbility_0016_03</a>",
+    "realName": "Equilibrium",
+    "aim": "Other",
+    "desc": "SPD decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0016_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1945821486\">Modifier_ChallengePeakBattle_BaseAbility_0016_04</a>",
+    "realName": "Equilibrium",
+    "aim": "Other",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0016_ADF_4"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-596874346\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_03</a>",
+    "realName": "Equilibrium+",
+    "aim": "Other",
+    "desc": "SPD decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0016_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-546541489\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_04</a>",
+    "realName": "Equilibrium+",
+    "aim": "Other",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0016_ADF_4"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"644971179\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0016_02</a>",
+    "realName": "Cathartic Applause",
+    "aim": "Other",
+    "desc": "Elation DMG dealt ignores #1[i]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0016_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"628193560\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0016_03</a>",
+    "realName": "Cathartic Applause",
+    "aim": "Other",
+    "desc": "Gains #1[i] Punchline(s) at the start of each turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0016_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1547663194\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0017_02</a>",
+    "realName": "Devastating Sweep",
+    "aim": "Other",
+    "desc": "Increases Break DMG taken by #1[i]%. Each time the wearer enters the Weakness Broken state, all allies' actions advance by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0017_ADF_1",
+      "ChallengePeakBattle_Plugins_0017_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1296376719\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_02</a>",
+    "realName": "Hallowed Abjuration",
+    "aim": "Other",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0018_ADF_1"
+    ]
+  },
+  {
+    "name": "G_GridFight_Evanescia_ExtraDamage",
+    "realName": "Petal Rain",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG Amplification by #1[i]%.",
+    "type": "DMG Amplification Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "LC_22007_Sub",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": false,
+    "params": [
+      "#SkillEquip_P2_ElationAddedRatio"
+    ]
+  },
+  {
+    "name": "MGridFight_SilverWolf999_Ultimate_ScoreManager_AddExtraDamage",
+    "realName": "DMG Amplification Boost",
+    "aim": "Buff",
+    "desc": "DMG Amplification increases by #1[i]%.",
+    "type": "DMG Amplification Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "LC_23058_Energy",
+    "realName": "Energy Regeneration Rate Boost",
+    "aim": "Buff",
+    "desc": "Increases Energy Regeneration Rate by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "LC_23058_AllDamageTypeTakenRatio",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MGridFight_Equipment_GlobalModifiers_Super_WeakReal",
+    "realName": "Super Fragility",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Super Fragility",
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MGridFight_Equipment_GlobalModifiers_Super_FatigueReal",
+    "realName": "Super Weaken",
+    "aim": "Debuff",
+    "desc": "Decreases DMG dealt by #1[i]%.",
+    "type": "Super Weaken",
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "GridFight_Player_ElationDamageUp",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1313154338\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_03</a>",
+    "realName": "Hallowed Abjuration",
+    "aim": "Other",
+    "desc": "All-Type RES decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0018_ADF_2"
+    ]
+  },
+  {
+    "name": "GridFight_Evanescia_BeDamageAddedRatio",
+    "realName": "Voyage: A Wish for Everbloom",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_2051101_Modifier_Sub",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-920276419\">Modifier_ChallengePeakBattle_BaseAbility_0017_02</a>",
+    "realName": "Stability",
+    "aim": "Other",
+    "desc": "DMG dealt decreases by #1[i]% and DMG received decreases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0017_ADF_1",
+      "ChallengePeakBattle_0017_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1614669524\">Modifier_ChallengePeakBattle_EnhancedAbility_0017_02</a>",
+    "realName": "Stability+",
+    "aim": "Other",
+    "desc": "DMG dealt decreases by #1[i]% and DMG received decreases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0017_ADF_1",
+      "ChallengePeakBattle_0017_ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_661506_Modifier_Sub",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DamageAdd"
+    ]
+  },
+  {
+    "name": "Dr_Ratio_GridFight_Ability02_DamageTakenDebuff",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Aventurine_GridFight_PC01_TeamDamage",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
     ]
   }
 ]

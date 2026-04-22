@@ -5426,6 +5426,44 @@ let modifiersEnemy = [
     "perma": true
   },
   {
+    "name": "Enemy_W5_Magical_Passive_Rain",
+    "realName": "Rainy Day",
+    "aim": "Other",
+    "desc": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
+    "type": "Rainy Day",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Magical_Passive_Sun",
+    "realName": "Sunny Day",
+    "aim": "Other",
+    "desc": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
+    "type": "Sunny Day",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Magical_DeathRattle_Rain",
+    "realName": "SPD Reduction",
+    "aim": "Debuff",
+    "desc": "Decreases SPD by #1[i].",
+    "type": "SPD Reduction",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Magical_DeathRattle_Sun",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-681994307\">Enemy_W4_IronTombCorePart_Ability02_ChargeOnPart</a>",
     "realName": "Deliverance of Relief",
     "aim": "Other",
@@ -5445,7 +5483,7 @@ let modifiersEnemy = [
     "name": "<a class=\"gModGreen\" id=\"187835282\">MModifier_W4_IronTombCore_Ability07_Charge</a>",
     "realName": "Resist and Destroy",
     "aim": "Other",
-    "desc": "\"Anti-Creator\" enters Charging state, and will use \"Resist and Destroy\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
+    "desc": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
     "type": null,
     "perma": true
   },
@@ -5581,6 +5619,72 @@ let modifiersEnemy = [
     "perma": false
   },
   {
+    "name": "Enemy_W4_Serpent_01_IF_Mode_Onslaught",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true,
+    "params": [
+      "MDF_SpeedAddedRatio",
+      "MDF_AllDamageTypeAddedRatio",
+      "_CurrentLayer"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_Mode_Resting",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeAddedRatio",
+      "_RestingCount"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_ShareDamage",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true,
+    "params": [
+      "MDF_SplitPercentage"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_RestingBreak",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_OverwatchingTarget",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true,
+    "params": [
+      "MDF_DamageRatio"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_Summon_Deathrattle",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"404660666\">Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce</a>",
     "realName": "Privacy Protection",
     "aim": "Buff",
@@ -5592,6 +5696,30 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "Enemy_W4_Serpent_01_IF_Charge02",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_Charge02_Target",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_Charge02_Target_Sub",
+    "realName": "undefined",
+    "aim": "Other",
+    "desc": "undefined",
+    "type": "undefined",
+    "perma": true
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
@@ -5601,6 +5729,14 @@ let modifiersEnemy = [
     "params": [
       "MDF_PropertyValue"
     ]
+  },
+  {
+    "name": "Modifier_Monster_XP_Elite02_03_ElationControl",
+    "realName": "Paramount Bliss",
+    "aim": "Other",
+    "desc": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s).",
+    "type": "Paramount Bliss",
+    "perma": true
   },
   {
     "name": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>",
@@ -5879,6 +6015,14 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "Monster_XP_Elite02_03_Charge",
+    "realName": "Budding",
+    "aim": "Other",
+    "desc": "Uses \"Euphoric Spiral\" in the next action.",
+    "type": "Budding",
+    "perma": true
+  },
+  {
     "name": "AvatarChange_W5_Ranger_Status",
     "realName": "Daybreak Will",
     "aim": "Other",
@@ -5983,6 +6127,28 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "Enemy_W5_VtuberPart_IF_MinionsSuperArmor",
+    "realName": "Sparxheads Forever",
+    "aim": "Buff",
+    "desc": "\"Super Idol: Center of Attention\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce"
+    ]
+  },
+  {
+    "name": "Enemy_W5_VtuberPart_IF_MinionsSuperArmorBreak",
+    "realName": "Quitting in Progress",
+    "aim": "Debuff",
+    "desc": "\"Super Idol: Center of Attention\" is currently in \"Safeguard Breach\" state, this unit's DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio"
+    ]
+  },
+  {
     "name": "W5_PamPart_EnergyBarLayer_ForShow",
     "realName": "Extremeflash Charge",
     "aim": "Other",
@@ -5993,5 +6159,97 @@ let modifiersEnemy = [
       "MDF_EnergyBarLayer",
       "MDF_EnergyBarLayer_Max"
     ]
+  },
+  {
+    "name": "Monster_W5_Ripper_Parasitism",
+    "realName": "Happiness",
+    "aim": "Other",
+    "desc": "At the start of each turn, gains #2[i] stack(s). Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to #1[i], the character will be converted into a \"Happiness Puppet.\" When stacks reach #3[i], this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
+    "type": "Happiness",
+    "perma": true,
+    "params": [
+      "MDF_MaxLayer",
+      "MDF_AddLayer",
+      "MDF_RemoveLayer"
+    ]
+  },
+  {
+    "name": "Monster_W5_RipperPart_Bonus",
+    "realName": "Wicked Grin",
+    "aim": "Buff",
+    "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_DamageUpRatio_PerLayer"
+    ]
+  },
+  {
+    "name": "Monster_W5_Ripper_Flesh",
+    "realName": "Happiness Puppet",
+    "aim": "Debuff",
+    "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+    "type": "Happiness Puppet",
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_Ripper_DamageTakenUp",
+    "realName": "Teasing",
+    "aim": "Debuff",
+    "desc": "DMG received increases by #1[i]%. This effect is stackable.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_DamageTakenUpRatio_PerLayer"
+    ]
+  },
+  {
+    "name": "Monster_W5_Ripper_Pollen",
+    "realName": "Laughter's End",
+    "aim": "Other",
+    "desc": "Triggers after #1[i] more enemy targets are eliminated, increasing the DMG taken by all enemies and removing the \"Wicked Grin\" effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count"
+    ]
+  },
+  {
+    "name": "Monster_W5_Ripper_Bonus",
+    "realName": "Inverted Severance",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]% and becomes immune to the \"Happiness Puppet\" effect for the duration.",
+    "type": "Inverted Severance",
+    "perma": false,
+    "params": [
+      "MDF_CriticalDamageUpRatio"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Vtuber_IF_AbilityEX04_TGT",
+    "realName": "Basking in Popularity",
+    "aim": "Buff",
+    "desc": "Each stack reduces DMG taken by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce_PerLayer"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Vtuber_IF_LockStance",
+    "realName": "Toughness Lock",
+    "aim": "Other",
+    "desc": "Toughness cannot be reduced below 1.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_Ripper_Protect_Weakness",
+    "realName": "Weakness Protected",
+    "aim": "Other",
+    "desc": "While \"Paramount Bliss Inverted: Illwish Lotus\" is in the Charging state, this unit's Toughness cannot be reduced.",
+    "type": "Weakness Protected",
+    "perma": true
   }
 ]
