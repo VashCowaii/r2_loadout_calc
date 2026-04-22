@@ -108,7 +108,7 @@ let enemyData = {
       "overrideParams": {
         "2477": [
           [
-            4
+            3.5
           ],
           null,
           null,
@@ -120,7 +120,7 @@ let enemyData = {
         ],
         "2480": [
           [
-            5.5
+            4
           ],
           null,
           null,
@@ -144,8 +144,8 @@ let enemyData = {
         ],
         "2483": [
           [
-            10.5,
-            4
+            8,
+            3
           ],
           null,
           null,
