@@ -1,4 +1,4 @@
 let readyLightconeCounts = {
-  "totalLightconeCount": 158,
-  "readyLightconeCount": 158
+  "totalLightconeCount": 161,
+  "readyLightconeCount": 161
 }
