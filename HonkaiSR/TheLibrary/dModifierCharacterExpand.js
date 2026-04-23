@@ -144,7 +144,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Welt_BPAbility_SpeedDown",
+    "name": "<a class=\"gModGreen\" id=\"2123171519\">Welt_BPAbility_SpeedDown</a>",
     "realName": "Slow",
     "aim": "Debuff",
     "desc": "SPD -#1[i]%.",
@@ -155,7 +155,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Welt_Eidolon1_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>",
     "realName": "Legacy of Honor",
     "aim": "Other",
     "desc": "Basic ATKs and Skills deal an extra hit.",
@@ -163,7 +163,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "Welt_Trace01_AllDamageTypeTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"1040154561\">Welt_Trace01_AllDamageTypeTakenRatio</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -561,7 +561,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Seele_BPAbility_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-456765622\">Seele_BPAbility_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD +#1[i]%.",
@@ -572,7 +572,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Seele_Passive_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"1401924350\">Seele_Passive_DamageUp</a>",
     "realName": "Amplification",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -584,7 +584,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Seele_BPAbility_SpeedUpEidolon2",
+    "name": "<a class=\"gModGreen\" id=\"-426535006\">Seele_BPAbility_SpeedUpEidolon2</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Each stack increases SPD by #1[i]%, up to 2 stacks.",
@@ -595,7 +595,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Seele_Eidolon6_Flag",
+    "name": "<a class=\"gModGreen\" id=\"995458646\">Seele_Eidolon6_Flag</a>",
     "realName": "Butterfly Flurry",
     "aim": "Debuff",
     "desc": "On a hit, receives an extra Quantum DMG from Seele.",
@@ -603,7 +603,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "Local_Seele_PassiveActionModifier",
+    "name": "<a class=\"gModGreen\" id=\"1311778178\">Local_Seele_PassiveActionModifier</a>",
     "realName": "Resurgence",
     "aim": "Other",
     "desc": "Currently in the extra turn provided by \"Resurgence\".",
@@ -611,7 +611,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "Seele_Trace_AggroDown",
+    "name": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>",
     "realName": "Nightshade",
     "aim": "Buff",
     "desc": "Lowers the chances of being attacked by enemies.",
@@ -1939,7 +1939,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Huohuo_Passive_HealMark",
+    "name": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>",
     "realName": "Divine Provision",
     "aim": "Buff",
     "desc": "When an ally's turn starts or when an ally uses their Ultimate, restores HP for that ally by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. At the same time, every ally currently at #3[i]% HP percentage or lower receives healing once. When Divine Provision is triggered to provide healing for allies, dispel 1 debuff from the said ally. This effect's remaining trigger count is #4[i].",
@@ -1953,7 +1953,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Huohuo_Ability03_AttackUP",
+    "name": "<a class=\"gModGreen\" id=\"-678196241\">Huohuo_Ability03_AttackUP</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Increases ATK by #1[f1]%.",
@@ -1964,7 +1964,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Huohuo_PointB1_SelfSPRatio",
+    "name": "<a class=\"gModGreen\" id=\"1045223345\">Huohuo_PointB1_SelfSPRatio</a>",
     "realName": "Energy Regeneration Rate Boost",
     "aim": "Buff",
     "desc": "Increases Energy Regeneration Rate by #1[i]%.",
@@ -1975,7 +1975,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Huohuo_Eidolon6_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-2048047648\">Huohuo_Eidolon6_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -1986,7 +1986,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Huohuo_Eidolon1_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-1345100241\">Huohuo_Eidolon1_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%.",
@@ -1997,7 +1997,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Huohuo_Maze_FatigueRatio",
+    "name": "<a class=\"gModGreen\" id=\"1017323248\">Huohuo_Maze_FatigueRatio</a>",
     "realName": "Horror-Struck",
     "aim": "Debuff",
     "desc": "Reduces ATK by #1[i]%.",
@@ -2008,7 +2008,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Huohuo_Eidolon2_ReviveCount",
+    "name": "<a class=\"gModGreen\" id=\"1683962968\">Huohuo_Eidolon2_ReviveCount</a>",
     "realName": "Sealed in Tail, Wraith Subdued",
     "aim": "Buff",
     "desc": "If Huohuo possesses Divine Provision when an ally is struck by a killing blow, the ally will not be knocked down, and their HP will immediately be restored by an amount equal to #1[i]% of their Max HP. This reduces the duration of Divine Provision by 1 turn. The remaining trigger count is #2[i].",
@@ -2980,7 +2980,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sam_PassiveAbility_RedMode",
+    "name": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>",
     "realName": "Fyrefly Type-IV: Complete Combustion",
     "aim": "Other",
     "desc": "When using Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by #1[i]% and increases the Break DMG dealt by SAM to the enemy targets by #4[f1]%. Increases SPD by #2[i], and Effect RES by #3[i]%.",
@@ -2994,7 +2994,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sam_PassiveAbility_AllDamageTypeResistance",
+    "name": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>",
     "realName": "Chrysalid Pyronexus",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -3207,7 +3207,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sam_Ability21_FireWeakType",
+    "name": "<a class=\"gModGreen\" id=\"639093534\">Sam_Ability21_FireWeakType</a>",
     "realName": "Extra Fire Weakness",
     "aim": "Debuff",
     "desc": "Implanted with extra Fire Weakness.",
@@ -3226,7 +3226,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sam_Eidolon2_BonusCD",
+    "name": "<a class=\"gModGreen\" id=\"881956526\">Sam_Eidolon2_BonusCD</a>",
     "realName": "From Shattered Sky, I Free Fall",
     "aim": "Other",
     "desc": "The \"From Shattered Sky, I Free Fall\" effect cannot be triggered yet.",
@@ -3563,7 +3563,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sam_Eidolon6_UltraDamageTypeAddRatio",
+    "name": "<a class=\"gModGreen\" id=\"154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>",
     "realName": "In Finalized Morrow, I Full Bloom",
     "aim": "Buff",
     "desc": "Fire RES PEN increases by #1[i]%.",
@@ -3654,7 +3654,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "Sam_Trace03_BreakDamageAddedRatio_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>",
     "realName": "Module γ: Core Overload",
     "aim": "Buff",
     "desc": "Increases Break Effect by #1[f1]%.",
