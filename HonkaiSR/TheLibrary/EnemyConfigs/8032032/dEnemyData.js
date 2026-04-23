@@ -31,8 +31,8 @@ let enemyData = {
         null
       ],
       "abilities": [
-        3125,
-        3126
+        3197,
+        3198
       ]
     }
   }

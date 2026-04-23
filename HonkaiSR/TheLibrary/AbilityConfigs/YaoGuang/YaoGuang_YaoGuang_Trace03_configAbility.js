@@ -25,7 +25,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Has Flag",
-                "flagName": "STAT_ElationEchoPoint"
+                "flagName": "ElationEchoPoint"
               },
               "passed": [
                 {

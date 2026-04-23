@@ -12,8 +12,8 @@ let allowedCharacterList = [
     "trimName": "Himeko"
   },
   {
-    "fullName": "Welt",
-    "trimName": "Welt"
+    "fullName": "Welt_v0",
+    "trimName": "Weltv0"
   },
   {
     "fullName": "Kafka",
@@ -40,8 +40,8 @@ let allowedCharacterList = [
     "trimName": "Bronya"
   },
   {
-    "fullName": "Seele",
-    "trimName": "Seele"
+    "fullName": "Seele_v0",
+    "trimName": "Seelev0"
   },
   {
     "fullName": "Serval",
@@ -144,8 +144,8 @@ let allowedCharacterList = [
     "trimName": "Hanya"
   },
   {
-    "fullName": "Huohuo",
-    "trimName": "Huohuo"
+    "fullName": "Huohuo_v0",
+    "trimName": "Huohuov0"
   },
   {
     "fullName": "Jiaoqiu",
@@ -212,8 +212,8 @@ let allowedCharacterList = [
     "trimName": "Robin"
   },
   {
-    "fullName": "Firefly",
-    "trimName": "Firefly"
+    "fullName": "Firefly_v0",
+    "trimName": "Fireflyv0"
   },
   {
     "fullName": "Misha",

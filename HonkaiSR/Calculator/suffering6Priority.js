@@ -55,7 +55,7 @@ const priorityList = {
     "AhaInstantRestart": 51,
     "AhaInstant": 52,
     "SummonInstance": 100,
-    "CharacterPriority": 101,
+    "CharacterChainedSkill": 101,
     "Windfury": 200
   }
 }

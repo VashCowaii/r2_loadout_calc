@@ -15,6 +15,21 @@ const configAbility = {
       "context": "ContextAbility"
     },
     {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All(with Unselectable)}}"
+      },
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
+      }
+    },
+    {
       "name": "SWITCH",
       "switchValue": {
         "operator": "Variables[0] (PowerOutTargetNumber) || RETURN",
@@ -56,21 +71,6 @@ const configAbility = {
       },
       "variableName": "InsertFlag_W5_JK_00",
       "value": 0
-    },
-    {
-      "name": "Find New Target",
-      "from": {
-        "name": "Target Name",
-        "target": "{{Enemy Team All(with Unselectable)}}"
-      },
-      "conditions": {
-        "name": "Has Modifier",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Parameter Target}}"
-        },
-        "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
-      }
     },
     {
       "name": "Find New Target",

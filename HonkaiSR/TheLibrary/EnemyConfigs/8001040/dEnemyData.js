@@ -44,7 +44,7 @@ let enemyData = {
         "STAT_DOT_Electric": 1
       },
       "abilities": [
-        2643
+        2715
       ]
     },
     "800104001": {
@@ -74,7 +74,7 @@ let enemyData = {
         "STAT_DOT_Electric": 1
       },
       "abilities": [
-        2643
+        2715
       ]
     },
     "800104002": {
@@ -104,7 +104,7 @@ let enemyData = {
         "STAT_DOT_Electric": 1
       },
       "abilities": [
-        2643
+        2715
       ]
     },
     "800104003": {
@@ -134,7 +134,7 @@ let enemyData = {
         "STAT_DOT_Electric": 1
       },
       "abilities": [
-        2643
+        2715
       ]
     },
     "800104004": {
@@ -164,7 +164,7 @@ let enemyData = {
         "STAT_DOT_Electric": 1
       },
       "abilities": [
-        2643
+        2715
       ]
     }
   }

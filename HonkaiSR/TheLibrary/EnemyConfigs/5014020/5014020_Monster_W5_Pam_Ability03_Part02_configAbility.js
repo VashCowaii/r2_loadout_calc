@@ -135,6 +135,33 @@ const configAbility = {
       "passed": [
         "Trigger: Ability End"
       ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "AND",
+        "conditionList": [
+          {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          {
+            "name": "Enemy ID",
+            "ID": 5014021,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Alloy Mechatron: King Pom-Pom",
+            "isBaseCompare": true
+          }
+        ]
+      },
+      "passed": [
+        "Trigger: Ability End"
+      ]
     }
   ],
   "targetObjectData": {

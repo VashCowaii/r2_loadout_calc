@@ -2715,7 +2715,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -2741,7 +2741,10 @@ const compositeAbilityObject = {
                         "MDF_WaveIndex2"
                       ]
                     }
-                  }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
                 }
               ]
             }

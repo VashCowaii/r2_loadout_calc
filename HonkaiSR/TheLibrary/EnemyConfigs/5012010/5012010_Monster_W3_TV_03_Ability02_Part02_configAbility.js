@@ -85,7 +85,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "popUpText": "Action Advanced"
+                  "popUpText": "Action Advance"
                 },
                 {
                   "name": "IF",

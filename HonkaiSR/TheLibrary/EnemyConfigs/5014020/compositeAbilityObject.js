@@ -169,30 +169,82 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "name": "Add Battle Event",
-              "teamName": "Player Team",
-              "eventID": 20032,
-              "assignOwner": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variables": null,
-              "whenCreated": [
-                {
-                  "name": "Assign Unique Name",
-                  "uniqueName": "Pamu_Robot",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
+                "value": "GridFightBoss"
+              },
+              "passed": [
                 {
-                  "name": "Remove from Team Target Grouping",
-                  "target": {
+                  "name": "Add Battle Event",
+                  "teamName": "Player Team",
+                  "eventID": 20032,
+                  "assignOwner": {
                     "name": "Target Name",
-                    "target": "{{Parameter Target}}"
+                    "target": "{{Level Entity}}"
                   },
-                  "stayInTeam": false
+                  "variables": {
+                    "PassiveAbility01_P6_SpeedRatio": {
+                      "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[5]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[5]]}"
+                      ]
+                    }
+                  },
+                  "whenCreated": [
+                    {
+                      "name": "Assign Unique Name",
+                      "uniqueName": "Pamu_Robot",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Remove from Team Target Grouping",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "stayInTeam": false
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Battle Event",
+                  "teamName": "Player Team",
+                  "eventID": 20032,
+                  "assignOwner": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variables": null,
+                  "whenCreated": [
+                    {
+                      "name": "Assign Unique Name",
+                      "uniqueName": "Pamu_Robot",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Remove from Team Target Grouping",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "stayInTeam": false
+                    }
+                  ]
                 }
               ]
             },
@@ -418,6 +470,45 @@ const compositeAbilityObject = {
           }
         },
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value": "GridFightBoss"
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "CurrentSpeed"
+            },
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "variableName": "CurrentSpeed",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1803941679\">Modifier_W5_Pam_BattleEvent_BaseSpeed</a>"
+            }
+          ]
+        },
+        {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
@@ -443,6 +534,36 @@ const compositeAbilityObject = {
         }
       ],
       "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1803941679\">Modifier_W5_Pam_BattleEvent_BaseSpeed</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (CurrentSpeed) || Variables[1] (PassiveSkill01_P6_SpeedRatio) || MUL || RETURN",
+                    "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)",
+                    "constants": [],
+                    "variables": [
+                      "CurrentSpeed",
+                      "PassiveSkill01_P6_SpeedRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__746359205\">Modifier_BattleEventAbility_SummonMonster</a>",
@@ -580,6 +701,10 @@ const compositeAbilityObject = {
               {
                 "name": "Stage Type",
                 "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
               }
             ]
           }
@@ -616,7 +741,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -642,7 +767,10 @@ const compositeAbilityObject = {
                         "MDF_WaveIndex2"
                       ]
                     }
-                  }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
                 }
               ]
             }
@@ -823,6 +951,14 @@ const compositeAbilityObject = {
           "value": 0
         },
         {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1493708935\">Modifier_Monster_W5_Pam_Charge</a>[<span class=\"descriptionNumberColor\">Raring to Go</span>]"
+        },
+        {
           "name": "IF",
           "conditions": {
             "name": "Check Boolean Value",
@@ -881,13 +1017,60 @@ const compositeAbilityObject = {
           "value": 1
         },
         {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
           },
-          "ability": "Monster_W5_Pam_Ability03_Part01",
-          "isTrigger": true
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": ">",
+                "value2": 2
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 5014021,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Alloy Mechatron: King Pom-Pom",
+                "isBaseCompare": true,
+                "invertCondition": true
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 3
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Monster_W5_Pam_Ability03_Part01",
+              "isTrigger": true
+            }
+          ]
         },
         {
           "name": "UI Display Event",
@@ -979,27 +1162,75 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2065504892\">W5_Pam_BattleScore2</a>"
         },
         {
-          "name": "Add Battle Event",
-          "teamName": "Neutral Team",
-          "eventID": 20033,
-          "variables": {
-            "PassiveAbility01_P2_DelayPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "GridFightBoss"
+          },
+          "passed": [
+            {
+              "name": "Add Battle Event",
+              "teamName": "Neutral Team",
+              "eventID": 20033,
+              "variables": {
+                "PassiveAbility01_P2_DelayPercentage": {
+                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[1]]}"
+                  ]
+                },
+                "PassiveAbility01_P5_SpeedRatio": {
+                  "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[4]]}"
+                  ]
+                }
+              },
+              "whenCreated": [
+                {
+                  "name": "Assign Unique Name",
+                  "uniqueName": "Pamu_Summon",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                }
               ]
             }
-          },
-          "whenCreated": [
+          ],
+          "failed": [
             {
-              "name": "Assign Unique Name",
-              "uniqueName": "Pamu_Summon",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
+              "name": "Add Battle Event",
+              "teamName": "Neutral Team",
+              "eventID": 20033,
+              "variables": {
+                "PassiveAbility01_P2_DelayPercentage": {
+                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[1]]}"
+                  ]
+                }
+              },
+              "whenCreated": [
+                {
+                  "name": "Assign Unique Name",
+                  "uniqueName": "Pamu_Summon",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -2645,6 +2876,33 @@ const compositeAbilityObject = {
           "passed": [
             "Trigger: Ability End"
           ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 2
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 5014021,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Alloy Mechatron: King Pom-Pom",
+                "isBaseCompare": true
+              }
+            ]
+          },
+          "passed": [
+            "Trigger: Ability End"
+          ]
         }
       ],
       "targetObjectData": {
@@ -3974,8 +4232,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "popUpText": "Using Basic ATK grants Punchlines, and using Skills will recover Skill Points."
+                  }
                 }
               ]
             },
@@ -4108,8 +4365,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "popUpText": "Using Basic ATK grants Punchlines, and using Skills will recover Skill Points."
+                  }
                 }
               ]
             }
@@ -4214,6 +4470,110 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Waiting for Healing in Limbo",
               "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      {
+                        "name": "Enemy ID",
+                        "ID": 5014021,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Alloy Mechatron: King Pom-Pom",
+                        "isBaseCompare": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "silent": true
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "InsertCheck"
+                    },
+                    {
+                      "name": "Set Enemy Phase",
+                      "mode": "Inc"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1808092737\">Monster_W5_Pam_SummonedMinions_die_count</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_IsAngry",
+                      "value": 0
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-3818542\">Monster_W5_Pam_Protect_Weakness</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W5_Pam_PassiveAbility_PartChange_Insert",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "priorityTag": "EnemyPhaseChange",
+                      "ownerState": "Mask_AliveOrLimbo",
+                      "targetState": "Mask_AliveOrLimbo",
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                },
                 {
                   "name": "IF",
                   "conditions": {

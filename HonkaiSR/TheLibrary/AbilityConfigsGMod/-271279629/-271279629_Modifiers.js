@@ -1924,6 +1924,34 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1534911356\">MReference_ElationDamageAddedRatio</a>",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__51723505\">MReference_BreakDamageAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [

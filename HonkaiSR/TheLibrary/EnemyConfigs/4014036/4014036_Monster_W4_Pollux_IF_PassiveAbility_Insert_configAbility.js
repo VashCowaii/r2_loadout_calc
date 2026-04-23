@@ -190,6 +190,10 @@ const configAbility = {
           {
             "name": "Stage Type",
             "stageType": "RogueRelic"
+          },
+          {
+            "name": "Stage Type",
+            "stageType": "GridFightActivity"
           }
         ]
       }

@@ -1878,6 +1878,7 @@ const megaParsingFuckeryPain = {
             "value",
             "valueType",
             "context",
+            "includeTargetsInLimbo",
             // "warningType",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Varying Value SUM");
@@ -1896,6 +1897,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.value,"Value",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.valueType,"Value Type",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.includeTargetsInLimbo,"Include Limbo Targets")}
             ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
         </div>`;
     },
@@ -4166,6 +4168,7 @@ const megaParsingFuckeryPain = {
             "show",
             "forceDisplayUltButton",
             "showKey",
+            "targetCustom",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Character Panel Visibility");
 
@@ -4175,6 +4178,7 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.show,"Show")}
+            ${getStandardNameDisplay(initialCounter,parseRef.targetCustom,"Custom Target")}
             ${getStandardNameDisplay(initialCounter,parseRef.showKey,"Display Key")}
             ${getStandardNameDisplay(initialCounter,parseRef.forceDisplayUltButton,"Force Display Ult-Button")}
             

@@ -42,9 +42,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2877,
-        2878,
-        2879
+        2949,
+        2950,
+        2951
       ],
       "enemyTag": [
         "Huanlong_Flower"

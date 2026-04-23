@@ -6128,6 +6128,39 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "Evanescia_BeDamageAddedRatio",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio"
+    ]
+  },
+  {
+    "name": "Evanescia_Eidolon1",
+    "realName": "Home: A Prayer in Dance",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#SkillRank_Rank01_P1_Ratio"
+    ]
+  },
+  {
+    "name": "Evanescia_Eidolon2",
+    "realName": "Voyage: A Wish for Everbloom",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#SkillRank_Rank02_P1_Ratio"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"376015846\">Evernight_Eidolon6_Bonus</a>",
     "realName": "Like This, Always",
     "aim": "Buff",
@@ -6900,6 +6933,30 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "SilverWolf999_Ultra",
+    "realName": "Godmode Player",
+    "aim": "Other",
+    "desc": "Immune to Crowd Control debuffs. After fully using Enhanced Basic ATK #1[i] more time(s), exits the \"Godmode Player\" state.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count"
+    ]
+  },
+  {
+    "name": "SilverWolf999_SP",
+    "realName": "Hidden MMR",
+    "aim": "Buff",
+    "desc": "After reaching #1[i] points, can activate Ultimate. When exiting the \"Godmode Player\" state, clears \"Hidden MMR\".\\nThe current \"Hidden MMR\" increases CRIT Rate by #2[f2]% and CRIT DMG by #3[f2]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#SkillP01_P1_NeedSP",
+      "MDF_CriticalChangeAdd",
+      "MDF_CriticalDamageAdd"
+    ]
+  },
+  {
     "name": "YaoGuang_Trace02_Sub02",
     "realName": "Poised and Sated",
     "aim": "Buff",
@@ -6919,6 +6976,28 @@ let modifiersCharacter = [
     "perma": true,
     "params": [
       "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "SilverWolf999_Ultimate_Aura",
+    "realName": "\"αWolf Instant\"",
+    "aim": "Other",
+    "desc": "The current chance of ally targets in the Zone triggering \"Top Loot Box\": #1[f2]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "TriggerItemChance"
+    ]
+  },
+  {
+    "name": "SilverWolf999_ElationPursued",
+    "realName": "Certified Banger",
+    "aim": "Buff",
+    "desc": "The tallied Punchline is #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ElationPoint"
     ]
   },
   {
@@ -6964,10 +7043,290 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "Evanescia_ElationPursued",
+    "realName": "Certified Banger",
+    "aim": "Buff",
+    "desc": "The tallied Punchline is #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ElationPoint"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"1755645655\">Advanced_Sparkle_PassiveAbility_Halo</a>",
     "realName": "Figment",
     "aim": "Buff",
     "desc": "The DMG taken by all enemies increases.",
+    "type": null,
+    "perma": false
+  },
+  {
+    "name": "PlayerGirl_40_ElationEchoPointBonus",
+    "realName": "undefined",
+    "aim": "Buff",
+    "desc": "Certified Banger increases by #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ElationEchoPoint"
+    ]
+  },
+  {
+    "name": "PlayerGirl_40_Maze_ElationRatio",
+    "realName": "undefined",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "PlayerBoy_40_Maze_ElationRatio",
+    "realName": "We Are So Back!",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "We Are So Back!",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Player_40_Ultimate_Bonus",
+    "realName": "May the Trailblaze Fly You Starward",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[f1]%.",
+    "type": "May the Trailblaze Fly You Starward",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Huohuo_Passive_HealMark",
+    "realName": "Divine Provision",
+    "aim": "Buff",
+    "desc": "When an ally target's turn starts or when an ally uses their Ultimate, restores HP for that ally and the ally unit with the lowest HP percentage by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. Then, every ally target currently at #3[i]% HP percentage or lower receives healing once. When \"Divine Provision\" is triggered to provide healing for ally targets, dispel 1 debuff from the said ally. This effect's remaining trigger count is #4[i].",
+    "type": "Healing Over Time",
+    "perma": false,
+    "params": [
+      "MDF_HPRatio",
+      "MDF_HPValue",
+      "MDF_LowHP",
+      "MDF_DispelCount"
+    ]
+  },
+  {
+    "name": "Advanced_Huohuo_Ability03_AttackUP",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[f1]%.",
+    "type": "ATK Boost",
+    "perma": false,
+    "params": [
+      "MDF_AttackUP"
+    ]
+  },
+  {
+    "name": "Advanced_Huohuo_Eidolon6_DamageUp",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_DamageAddedRatio"
+    ]
+  },
+  {
+    "name": "Advanced_Huohuo_Eidolon1_SpeedUp",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Huohuo_Eidolon1_HealUp",
+    "realName": "Outgoing Healing Boost",
+    "aim": "Buff",
+    "desc": "Outgoing Healing increases by #1[i]%.",
+    "type": "Outgoing Healing Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Huohuo_Maze_FatigueRatio",
+    "realName": "Horror-Struck",
+    "aim": "Debuff",
+    "desc": "ATK decreases by #1[i]%.",
+    "type": "Horror-Struck",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Huohuo_Eidolon2_ReviveCount",
+    "realName": "Sealed in Tail, Wraith Subdued",
+    "aim": "Buff",
+    "desc": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down, and their HP will immediately be restored by an amount equal to #1[i]% of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. The remaining trigger count is #2[i].",
+    "type": null,
+    "perma": false,
+    "params": [
+      "MDF_HealRatio",
+      "MDF_ReviveCount"
+    ]
+  },
+  {
+    "name": "Advanced_Sam_PassiveAbility_RedMode",
+    "realName": "Fyrefly Type-IV: Complete Combustion",
+    "aim": "Other",
+    "desc": "When using Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by #1[i]% and increases the Break DMG dealt by SAM to the enemy targets by #4[f1]%. Increases SPD by #2[i], and Effect RES by #3[i]%.",
+    "type": "Fyrefly Type-IV: Complete Combustion",
+    "perma": false,
+    "params": [
+      "MDF_FinalDamageUP",
+      "MDF_SpeedUP",
+      "MDF_StatusResistance",
+      "MDF_PropertyValue",
+      "MDF_PointB1_Times"
+    ]
+  },
+  {
+    "name": "Advanced_Sam_PassiveAbility_AllDamageTypeResistance",
+    "realName": "Chrysalid Pyronexus",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": "DMG Mitigation",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Sam_Ability21_FireWeakType",
+    "realName": "Additional Fire Weakness",
+    "aim": "Debuff",
+    "desc": "Additionally implanted Fire Weakness.",
+    "type": "Implant Weakness: Fire",
+    "perma": false
+  },
+  {
+    "name": "Advanced_Sam_Eidolon2_BonusCD",
+    "realName": "From Shattered Sky, I Free Fall",
+    "aim": "Other",
+    "desc": "The \"From Shattered Sky, I Free Fall\" effect cannot be triggered yet.",
+    "type": null,
+    "perma": false
+  },
+  {
+    "name": "Advanced_Sam_Eidolon6_FirePenetrate",
+    "realName": "In Finalized Morrow, I Full Bloom",
+    "aim": "Buff",
+    "desc": "Fire RES PEN +#1[i]%.",
+    "type": "Fire RES PEN Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Sam_Trace03_BreakDamageAddedRatio_Sub",
+    "realName": "Module γ: Core Overload",
+    "aim": "Buff",
+    "desc": "Increases Break Effect by #1[f1]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "Advanced_Sam_PointB1_BreakDamageAddedRatioBase",
+    "realName": "Module α: Antilag Outburst",
+    "aim": "Buff",
+    "desc": "Break Effect increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Seele_Trace01_KillDamageRatio",
+    "realName": "Nightshade",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_FinalDamageRatio"
+    ]
+  },
+  {
+    "name": "Advanced_Seele_BPAbility_SpeedUp",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Seele_Passive_DamageUp",
+    "realName": "Amplification",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "seele_dmg_percent",
+      "MDF_Penetrate"
+    ]
+  },
+  {
+    "name": "Advanced_Seele_BPAbility_SpeedUpEidolon2",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases SPD by #1[i]%, up to 2 stacks.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Seele_Eidolon6_Flag",
+    "realName": "Butterfly Flurry",
+    "aim": "Debuff",
+    "desc": "After being attacked, additionally receives 1 instance of True DMG from Seele. Triggers Seele's Talent effect when defeated by any unit.",
+    "type": "Butterfly Flurry",
+    "perma": true
+  },
+  {
+    "name": "Advanced_Seele_Ability02InsertCD_ShowBonus",
+    "realName": "Sheathed Blade",
+    "aim": "Other",
+    "desc": "The auto-use effect of Skill \"Sheathed Blade\" cannot be triggered yet.",
+    "type": null,
+    "perma": false
+  },
+  {
+    "name": "Advanced_Seele_Ability02InsertReady_ShowBonus",
+    "realName": "Sheathed Blade",
+    "aim": "Other",
+    "desc": "Can trigger the auto-use effect of the Skill \"Sheathed Blade.\"",
     "type": null,
     "perma": false
   },
@@ -7024,6 +7383,51 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "Player_40_PointB3_P1Mark",
+    "realName": "Aha, Sic 'Em!",
+    "aim": "Buff",
+    "desc": "The next time the Skill is used, additionally gains #1[i] point(s) of \"Certified Banger.\"",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Player_40_Eidolon1_Count",
+    "realName": "Believe In the Light",
+    "aim": "Buff",
+    "desc": "Each stack increases the \"Certified Banger\" gained by ally targets when the next Ultimate is used by #1[i]. This effect can stack up to #2[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_MaxLayer"
+    ]
+  },
+  {
+    "name": "Player_40_Eidolon2ElationRatio",
+    "realName": "History in the Making...",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Player_40_BeDamageAddedRatio",
+    "realName": "Save the World. Just Because.",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"1968939868\">G_YaoGuang_Ability02_ToSelf</a>",
     "realName": "Decalight Unveils All",
     "aim": "Buff",
@@ -7043,6 +7447,173 @@ let modifiersCharacter = [
     "perma": true,
     "params": [
       "MDF_TotalRatio"
+    ]
+  },
+  {
+    "name": "Player_40_Trace01_Bonus",
+    "realName": "On Cloud Nine",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[f1]%.",
+    "type": "Elation Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Welt_BPAbility_SpeedDown",
+    "realName": "Slow",
+    "aim": "Debuff",
+    "desc": "SPD decreases by #1[i]%.",
+    "type": "Slow",
+    "perma": false,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "Advanced_Welt_Trace01_AllDamageTypeAddedRatio",
+    "realName": "Retribution",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "Retribution",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatioFinal"
+    ]
+  },
+  {
+    "name": "Advanced_Welt_Passive_DefenceDown",
+    "realName": "DEF Reduction",
+    "aim": "Debuff",
+    "desc": "undefined",
+    "type": "DEF Reduction",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Welt_Weightless",
+    "realName": "Weightless",
+    "aim": "Debuff",
+    "desc": "DEF decreases by #3[i]%, SPD decreases by #4[i]%. When receiving an attack, action is delayed by #1[f1]%. This effect can be triggered #2[i] more time(s).",
+    "type": "Weightless",
+    "perma": true,
+    "params": [
+      "MDF_ActionDelayRatio",
+      "MDF_WeightlessTriggerCount",
+      "MDF_PropertyValue",
+      "MDF_SpeedDownRatio",
+      "MDF_AllResDownValue"
+    ]
+  },
+  {
+    "name": "Advanced_Welt_Eidolon4_AllResDown",
+    "realName": "Prospect of Glory",
+    "aim": "Debuff",
+    "desc": "All-Type RES decreases by #1[f1]%.",
+    "type": "All-Type RES Reduction",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "SilverWolf999_Trace01_Bonus",
+    "realName": "False Ending Speedrun",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "SilverWolf999_Eidolon1_Property",
+    "realName": "Aether Editing: Eidolon +1",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "SilverWolf999_Ultimate_Aura_Eidolon6_SubOnEmemy",
+    "realName": "Absolute Weakness",
+    "aim": "Debuff",
+    "desc": "Has All-Type Weakness. All-Type Base RES is reduced to 0 (If Base RES is already at 0, then the corresponding Type RES decreases by #1[i]% instead).",
+    "type": "Absolute Weakness",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "GlobalAbility_SilverWolf999_ImmuneCTRL",
+    "realName": "Firewall",
+    "aim": "Buff",
+    "desc": "Immune to Crowd Control debuffs inflicted by enemy targets.",
+    "type": "Firewall",
+    "perma": false
+  },
+  {
+    "name": "SilverWolf999_Eidolon2_SumScore",
+    "realName": "It's a Feature, Not a Bug",
+    "aim": "Other",
+    "desc": "#1[i] point(s) of \"Hidden MMR\" has been taken into account. After reaching #2[i] points, gains 1 extra turn, and regains 1 use of Enhanced Basic ATK.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count",
+      "#SkillRank_Rank02_P1_ScoreThreshold"
+    ]
+  },
+  {
+    "name": "Advanced_Welt_Trace03_AttackUp",
+    "realName": "Punishment",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "MDF_AttackAddRatio"
+    ]
+  },
+  {
+    "name": "Evanescia_Passive_CritToElation",
+    "realName": "Youth: Halcyon Evermore",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[f1]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Player_40_Eidolon6CriticalDamageUp",
+    "realName": "The Cosmic Legend Cometh!",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Evanescia_Eidolon6_ElationDamageExtra",
+    "realName": "Maiden: A Step into Dreams",
+    "aim": "Buff",
+    "desc": "Elation DMG merrymakes by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
     ]
   },
   {

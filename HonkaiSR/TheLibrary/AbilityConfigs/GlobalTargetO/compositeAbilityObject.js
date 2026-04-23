@@ -244,6 +244,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "CameraRootRecord",
+          "isTargetOperator": true,
+          "execute": [
+            {
+              "name": "Adjust Target by Dummy Entity",
+              "entityName": "__CameraRootRecord"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "deadButNotProcessed",
           "isTargetOperator": true,
           "execute": [
@@ -428,6 +439,14 @@ const compositeAbilityObject = {
           "isTargetOperator": true,
           "execute": [
             "Adjust Target by Ability Target"
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Get Attack Targets",
+          "isTargetOperator": true,
+          "execute": [
+            "Adjust Target by Attack Target List"
           ]
         },
         {

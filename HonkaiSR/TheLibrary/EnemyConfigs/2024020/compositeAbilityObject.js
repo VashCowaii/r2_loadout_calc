@@ -300,7 +300,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "popUpText": "Action Advanced"
+          "popUpText": "Action Advance"
         },
         "Trigger: Ability End"
       ],
@@ -518,7 +518,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -544,7 +544,10 @@ const compositeAbilityObject = {
                         "MDF_WaveIndex2"
                       ]
                     }
-                  }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
                 }
               ]
             }

@@ -379,7 +379,7 @@ const configAbility = {
                 "target": "{{Caster's Memosprite}}"
               },
               "afterInjection": [],
-              "priorityTag": "CharacterPriority"
+              "priorityTag": "CharacterChainedSkill"
             }
           ]
         },

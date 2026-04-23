@@ -37,6 +37,45 @@ const configAbility = {
       }
     },
     {
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster's Summoner}}"
+        },
+        "value": "GridFightBoss"
+      },
+      "passed": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "CurrentSpeed"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "variableName": "CurrentSpeed",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1803941679\">Modifier_W5_Pam_BattleEvent_BaseSpeed</a>"
+        }
+      ]
+    },
+    {
       "name": "Add Events/Bonuses",
       "to": {
         "name": "Target Name",
@@ -62,6 +101,36 @@ const configAbility = {
     }
   ],
   "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1803941679\">Modifier_W5_Pam_BattleEvent_BaseSpeed</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (CurrentSpeed) || Variables[1] (PassiveSkill01_P6_SpeedRatio) || MUL || RETURN",
+                "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)",
+                "constants": [],
+                "variables": [
+                  "CurrentSpeed",
+                  "PassiveSkill01_P6_SpeedRatio"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__746359205\">Modifier_BattleEventAbility_SummonMonster</a>",

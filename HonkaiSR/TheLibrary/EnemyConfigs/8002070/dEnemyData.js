@@ -42,10 +42,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2694,
-        2695,
-        2696,
-        2697
+        2766,
+        2767,
+        2768,
+        2769
       ],
       "enemyTag": [
         "Monster_Minion04"

@@ -245,6 +245,10 @@ const configAbility = {
             "stageType": "RogueRelic"
           },
           {
+            "name": "Stage Type",
+            "stageType": "GridFightActivity"
+          },
+          {
             "name": "Enemy ID",
             "ID": 4014032,
             "target": {

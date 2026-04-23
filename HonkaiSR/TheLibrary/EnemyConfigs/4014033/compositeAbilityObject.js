@@ -1510,6 +1510,10 @@ const compositeAbilityObject = {
                 "stageType": "RogueRelic"
               },
               {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              },
+              {
                 "name": "Enemy ID",
                 "ID": 4014032,
                 "target": {
@@ -4929,7 +4933,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -4955,7 +4959,10 @@ const compositeAbilityObject = {
                         "MDF_WaveIndex2"
                       ]
                     }
-                  }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
                 }
               ]
             }

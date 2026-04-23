@@ -41,9 +41,38 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2530,
-        2531,
-        2532
+        2532,
+        2533,
+        2534
+      ]
+    },
+    "501209002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.555556,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Thunder"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2532,
+        2533,
+        2534
       ]
     }
   }

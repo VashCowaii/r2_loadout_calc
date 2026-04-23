@@ -1,6 +1,1123 @@
 const stageTypers = "anom";
 let mocSchedule = [
   {
+    "id": 6,
+    "image": "activityBG/ChallengePeakPanelBanner_4006.png",
+    "realName": "Happiness Syntax",
+    "buffData": null,
+    "floorData": {
+      "1": {
+        "floorName": "Knight (I)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30506011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Rocking Rebel",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 367,
+                    "enemies": [
+                      {
+                        "name": "Aggressive Reading Material",
+                        "id": 5012030,
+                        "image": 5012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 628484.049,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Rocking Rebel",
+                        "id": 5013010,
+                        "image": 5013010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 4525085.1528,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 0.25,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "SD Civilian Mechatron",
+                        "id": 5012090,
+                        "image": 5012090,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 1131271.2882,
+                        "speedBase": 105.6,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.36,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      2,
+                      1,
+                      0,
+                      2
+                    ],
+                    "totalMax": 8,
+                    "fieldMax": 4,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 367,
+                    "enemies": [
+                      {
+                        "name": "Joy Ascendant",
+                        "id": 5023010,
+                        "image": 5023010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 1508361.7176,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Rocking Rebel",
+                        "id": 5013010,
+                        "image": 5013010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 4525085.1528,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 0.25,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30506011",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 9050170.3056,
+                "aoeSUM": 20362883.1876
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Confinement",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.1
+            ]
+          }
+        ]
+      },
+      "2": {
+        "floorName": "Knight (II)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30506012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "@SparxiConOfficial",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 360,
+                    "enemies": [
+                      {
+                        "name": "Canvas Peacock",
+                        "id": 5013030,
+                        "image": 5013030,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3631241.172,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [],
+                        "resistances": {},
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 5013040,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3404288.59875,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 360,
+                    "enemies": [
+                      {
+                        "name": "@SparxiConOfficial",
+                        "id": 5014010,
+                        "image": 5014010,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 9645484.363125,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "toughnessBase": 320,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30506012",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 22922209.89825,
+                "aoeSUM": 26326498.497
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Stability",
+            "desc": "Decreases the DMG dealt by all ally targets by #1[i]%, and decreases their DMG taken by #2[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0017",
+            "BEKey": 1912336050,
+            "params": [
+              0.1,
+              0.1
+            ]
+          }
+        ]
+      },
+      "3": {
+        "floorName": "Knight (III)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30506013
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Flame Reaver of the Deepest Dark",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 360,
+                    "enemies": [
+                      {
+                        "name": "Daybreak Squadron: Dawnlance",
+                        "id": 5013060,
+                        "image": 5013060,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3404288.59875,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Daybreak Squadron: Blazeweaver",
+                        "id": 5013050,
+                        "image": 5013050,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3404288.59875,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.8,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 360,
+                    "enemies": [
+                      {
+                        "name": "Flame Reaver of the Deepest Dark",
+                        "id": 4034010,
+                        "image": 4034010,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 7375958.630625,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL_Frozen": 0.75,
+                          "STAT_Confine": 0.75,
+                          "STAT_Entangle": 0.75
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30506013",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 18156205.86,
+                "aoeSUM": 21560494.458750002
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Taunting",
+            "desc": "Enemy target takes immediate action after being attacked #1[i] time(s). This tally resets at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0008",
+            "BEKey": 1912336050,
+            "params": [
+              6
+            ]
+          }
+        ]
+      },
+      "4": {
+        "floorName": "King in Check",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30506021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Paramount Bliss Inverted: Illwish Archlotus",
+                "enemyLevel": 100,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 365,
+                    "enemies": [
+                      {
+                        "name": "Magical Girl Troupe",
+                        "id": 5012100,
+                        "image": 5012100,
+                        "rank": "MinionLv2",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 770803.874658,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Ice"
+                        ],
+                        "resistances": {
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dreamjolt Troupe's Sweet Gorilla",
+                        "id": 3003020,
+                        "image": 3003020,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 4624823.247948,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 100,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0
+                    ],
+                    "totalMax": 3,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 365,
+                    "enemies": [
+                      {
+                        "name": "Joy Ascendant",
+                        "id": 5023010,
+                        "image": 5023010,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 1541607.749316,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 365,
+                    "enemies": [
+                      {
+                        "name": "Paramount Bliss Inverted: Illwish Archlotus",
+                        "id": 5024010,
+                        "image": 5024010,
+                        "rank": "LittleBoss",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 12332861.994528,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.4,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.4,
+                          "Ice": 0.4,
+                          "Wind": 0.4,
+                          "Quantum": 0.4
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30506021",
+                  "_CreateBattleEvent": "30503"
+                },
+                "highSTSUM": 30832154.986319996,
+                "aoeSUM": 32373762.735635996
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Stability",
+            "desc": "Decreases the DMG dealt by all ally targets by #1[i]%, and decreases their DMG taken by #2[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0017",
+            "BEKey": 1912336050,
+            "params": [
+              0.1,
+              0.1
+            ]
+          },
+          {
+            "name": "Confinement",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.1
+            ]
+          }
+        ]
+      },
+      "5": {
+        "floorName": "King in Check: Plight",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30506022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Paramount Bliss Inverted: Illwish Archlotus",
+                "enemyLevel": 120,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 366,
+                    "enemies": [
+                      {
+                        "name": "Magical Girl Troupe",
+                        "id": 5012100,
+                        "image": 5012100,
+                        "rank": "MinionLv2",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 2920940.93844,
+                        "speedBase": 150,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Ice"
+                        ],
+                        "resistances": {
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dreamjolt Troupe's Sweet Gorilla",
+                        "id": 3003020,
+                        "image": 3003020,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 17525645.63064,
+                        "speedBase": 216,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 100,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0
+                    ],
+                    "totalMax": 3,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 366,
+                    "enemies": [
+                      {
+                        "name": "Joy Ascendant",
+                        "id": 5023010,
+                        "image": 5023010,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 5841881.87688,
+                        "speedBase": 216,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 366,
+                    "enemies": [
+                      {
+                        "name": "Paramount Bliss Inverted: Illwish Archlotus",
+                        "id": 5024010,
+                        "image": 5024010,
+                        "rank": "LittleBoss",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 46735055.01504,
+                        "speedBase": 216,
+                        "critDMG": 0.2,
+                        "effectRES": 0.5,
+                        "ehr": 0.5,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.4,
+                          "Ice": 0.4,
+                          "Wind": 0.4,
+                          "Quantum": 0.4
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "3",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30506022",
+                  "_CreateBattleEvent": "30504"
+                },
+                "highSTSUM": 116837637.53760001,
+                "aoeSUM": 122679519.41448
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Stability+",
+            "desc": "Decreases the DMG dealt by all ally targets by #1[i]%, and decreases their DMG taken by #2[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0017",
+            "BEKey": 1912336050,
+            "params": [
+              0.2,
+              0.1
+            ]
+          },
+          {
+            "name": "Confinement+",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.2
+            ]
+          }
+        ]
+      }
+    },
+    "kingBuffList": [
+      {
+        "modifierName": "ADV_StageAbility_3033053",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0016",
+        "BEKey": 1912336050,
+        "name": "Cathartic Applause",
+        "desc": "Elation DMG dealt by ally targets ignores #1[i]% of the target's DEF. Ally characters gain #2[i] Punchline(s) at the start of their turn.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          6
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033054",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0017",
+        "BEKey": 1912336050,
+        "name": "Devastating Sweep",
+        "desc": "Increases Break DMG dealt to enemy targets by #1[i]%. When an enemy target enters the Weakness Broken state, advances all allies' actions by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          0.05
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033055",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0018",
+        "BEKey": 1912336050,
+        "name": "Hallowed Abjuration",
+        "desc": "Increases the DMG dealt by all ally targets by #1[i]%, decreases All-Type RES of \"Paramount Bliss Inverted: Illwish Archlotus\" and their summons by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.4,
+          0.2
+        ]
+      }
+    ],
+    "patchName": "4.2"
+  },
+  {
     "id": 5,
     "image": "activityBG/ChallengePeakPanelBanner_4005.png",
     "realName": "Don't Mess With Pom-Pom",

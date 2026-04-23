@@ -7046,6 +7046,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill",
             "EnduranceLogicOnly",
+            500,
             "CustomEvent_InfiniteRefresh",
             "FormationAssetCenterWhenSingle",
             "SpecialActionState",

@@ -1380,71 +1380,27 @@ const configAbility = {
             {
               "name": "IF",
               "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Enemy ID",
-                    "ID": 8032020,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": "Grunt: Security Personnel"
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 803202000,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": null
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 803202000,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": null
-                  }
-                ]
+                "name": "Enemy ID",
+                "ID": 8032020,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "characterName": "Grunt: Security Personnel",
+                "isBaseCompare": true
               },
               "failed": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Enemy ID",
-                        "ID": 8032010,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Grunt: Field Personnel"
-                      },
-                      {
-                        "name": "Enemy ID",
-                        "ID": 803201000,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": null
-                      },
-                      {
-                        "name": "Enemy ID",
-                        "ID": 803201000,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": null
-                      }
-                    ]
+                    "name": "Enemy ID",
+                    "ID": 8032010,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Grunt: Field Personnel",
+                    "isBaseCompare": true
                   }
                 }
               ]

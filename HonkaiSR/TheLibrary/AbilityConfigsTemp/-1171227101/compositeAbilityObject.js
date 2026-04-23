@@ -16,7 +16,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
-      "length": 51,
+      "length": 52,
       "parse": [
         {
           "name": "CharacterFunctions",
@@ -2833,6 +2833,55 @@ const compositeAbilityObject = {
                       "copyAbortFlags": true
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__818871295\">AddElationEchoPoint</a>",
+          "parse": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "_FinalAddValue",
+                  "value": {
+                    "operator": "Variables[0] (AddValue) || RETURN",
+                    "displayLines": "AddValue",
+                    "constants": [],
+                    "variables": [
+                      "AddValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+                  "valuePerStack": {
+                    "ElationEchoPoint": {
+                      "operator": "Variables[0] (_FinalAddValue) || RETURN",
+                      "displayLines": "_FinalAddValue",
+                      "constants": [],
+                      "variables": [
+                        "_FinalAddValue"
+                      ]
+                    }
+                  }
                 }
               ]
             }

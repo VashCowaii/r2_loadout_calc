@@ -650,7 +650,8 @@ const compositeAbilityObject = {
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
-                                }
+                                },
+                                "typeFilter": "All"
                               },
                               {
                                 "name": "Has Modifier",
@@ -3229,7 +3230,8 @@ const compositeAbilityObject = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "typeFilter": "All"
                   },
                   {
                     "name": "Is Part Of Group",
@@ -3815,7 +3817,8 @@ const compositeAbilityObject = {
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
-                                }
+                                },
+                                "typeFilter": "All"
                               }
                             }
                           ]
@@ -5778,7 +5781,7 @@ const compositeAbilityObject = {
           "skillType": "ControlSkill02",
           "abilityName": "Servant_CyreneServant_FormationReset",
           "afterInjection": [],
-          "priorityTag": "CharacterPriority"
+          "priorityTag": "CharacterChainedSkill"
         },
         {
           "name": "IF",
@@ -6361,7 +6364,7 @@ const compositeAbilityObject = {
           "actionTag": null,
           "abilityName": "Servant_CyreneServant_FormationReset",
           "afterInjection": [],
-          "priorityTag": "CharacterPriority"
+          "priorityTag": "CharacterChainedSkill"
         }
       ],
       "references": [],
@@ -7681,7 +7684,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "typeFilter": "All"
                     }
                   }
                 ]

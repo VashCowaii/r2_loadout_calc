@@ -664,7 +664,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
+                      "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                       "casterAssign": "TargetSelf"
                     }
                   ],
@@ -735,7 +735,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
+                            "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                             "invertCondition": true
                           },
                           {
@@ -755,7 +755,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target List}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                           "casterAssign": "TargetSelf"
                         }
                       ]
@@ -3039,7 +3039,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -3065,7 +3065,10 @@ const compositeAbilityObject = {
                         "MDF_WaveIndex2"
                       ]
                     }
-                  }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
                 }
               ]
             }

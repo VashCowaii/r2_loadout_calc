@@ -70,7 +70,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
+                  "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                   "casterAssign": "TargetSelf"
                 }
               ],
@@ -141,7 +141,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
+                        "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                         "invertCondition": true
                       },
                       {
@@ -161,7 +161,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target List}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                       "casterAssign": "TargetSelf"
                     }
                   ]

@@ -24,31 +24,13 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1843890475\">Relic_325_Sub2</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "statusName": "Punklorde Stage Zero"
@@ -60,6 +42,21 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Flag_1",
+                  "value": 0
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": 0,
+                  "isRefresh": true
+                },
                 {
                   "name": "IF",
                   "conditions": {
@@ -81,39 +78,52 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "_Flag_2",
-                        "compareType": "=",
-                        "value2": 1
+                      "name": "Define Custom Variable",
+                      "variableName": "_Flag_1",
+                      "value": 2
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
                       },
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_Flag_2",
-                          "value": 1
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.32) || RETURN",
-                              "displayLines": "0.32",
-                              "constants": [],
-                              "variables": [
-                                0.32
-                              ]
-                            }
-                          }
-                        },
-                        "Modifier Deletes Itself"
-                      ]
+                      "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.32) || RETURN",
+                          "displayLines": "0.32",
+                          "constants": [],
+                          "variables": [
+                            0.32
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (0.32) || RETURN",
+                        "displayLines": "0.32",
+                        "constants": [],
+                        "variables": [
+                          0.32
+                        ]
+                      },
+                      "isRefresh": true
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1843890475\">Relic_325_Sub2</a>"
                     }
                   ],
                   "failed": [
@@ -138,38 +148,52 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "_Flag_1",
-                            "compareType": "=",
-                            "value2": 1
+                          "name": "Define Custom Variable",
+                          "variableName": "_Flag_1",
+                          "value": 1
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
                           },
-                          "failed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_Flag_1",
-                              "value": 1
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
-                              "valuePerStack": {
-                                "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (0.2) || RETURN",
-                                  "displayLines": "0.2",
-                                  "constants": [],
-                                  "variables": [
-                                    0.2
-                                  ]
-                                }
-                              }
+                          "modifier": "<a class=\"gModGreen\" id=\"1999406789\">Relic_325_Sub</a>[<span class=\"descriptionNumberColor\">Punklorde Stage Zero</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.2) || RETURN",
+                              "displayLines": "0.2",
+                              "constants": [],
+                              "variables": [
+                                0.2
+                              ]
                             }
-                          ]
+                          }
+                        },
+                        {
+                          "name": "Stack Target Stat Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "value": {
+                            "operator": "Variables[0] (0.2) || RETURN",
+                            "displayLines": "0.2",
+                            "constants": [],
+                            "variables": [
+                              0.2
+                            ]
+                          },
+                          "isRefresh": true
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1843890475\">Relic_325_Sub2</a>"
                         }
                       ]
                     }
@@ -207,10 +231,10 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Compare: Variable",
                         "value1": "_Flag_1",
-                        "compareType": "=",
+                        "compareType": "<",
                         "value2": 1
                       },
-                      "failed": [
+                      "passed": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "_Flag_1",
@@ -233,6 +257,31 @@ const compositeAbilityObject = {
                               ]
                             }
                           }
+                        },
+                        {
+                          "name": "Stack Target Stat Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "value": {
+                            "operator": "Variables[0] (0.2) || RETURN",
+                            "displayLines": "0.2",
+                            "constants": [],
+                            "variables": [
+                              0.2
+                            ]
+                          },
+                          "isRefresh": true
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1843890475\">Relic_325_Sub2</a>"
                         }
                       ]
                     }
@@ -253,15 +302,15 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "value1": "_Flag_2",
-                        "compareType": "=",
-                        "value2": 1
+                        "value1": "_Flag_1",
+                        "compareType": "<",
+                        "value2": 2
                       },
-                      "failed": [
+                      "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Flag_2",
-                          "value": 1
+                          "variableName": "_Flag_1",
+                          "value": 2
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -281,7 +330,31 @@ const compositeAbilityObject = {
                             }
                           }
                         },
-                        "Modifier Deletes Itself"
+                        {
+                          "name": "Stack Target Stat Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "value": {
+                            "operator": "Variables[0] (0.32) || RETURN",
+                            "displayLines": "0.32",
+                            "constants": [],
+                            "variables": [
+                              0.32
+                            ]
+                          },
+                          "isRefresh": true
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1843890475\">Relic_325_Sub2</a>"
+                        }
                       ]
                     }
                   ]

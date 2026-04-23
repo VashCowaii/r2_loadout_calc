@@ -1013,8 +1013,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "popUpText": "Using Basic ATK grants Punchlines, and using Skills will recover Skill Points."
+              }
             }
           ]
         },
@@ -1147,8 +1146,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "popUpText": "Using Basic ATK grants Punchlines, and using Skills will recover Skill Points."
+              }
             }
           ]
         }
@@ -1253,6 +1251,110 @@ const configAbility = {
         {
           "eventTrigger": "Waiting for Healing in Limbo",
           "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 2
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 5014021,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Alloy Mechatron: King Pom-Pom",
+                    "isBaseCompare": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "InsertCheck"
+                },
+                {
+                  "name": "Set Enemy Phase",
+                  "mode": "Inc"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1808092737\">Monster_W5_Pam_SummonedMinions_die_count</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_IsAngry",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-3818542\">Monster_W5_Pam_Protect_Weakness</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W5_Pam_PassiveAbility_PartChange_Insert",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "priorityTag": "EnemyPhaseChange",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "allowAbilityTriggers": false
+                }
+              ]
+            },
             {
               "name": "IF",
               "conditions": {

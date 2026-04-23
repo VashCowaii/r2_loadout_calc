@@ -580,6 +580,7 @@ const compositeAbilityObject = {
         "5013012_Monster_W4_Claymore_02_Ability04_Part01",
         "5013012_Monster_W4_Claymore_02_Ability04_Part02",
         "5013012_Monster_W4_Claymore_02_Ability04_Camera",
+        "5013012_Monster_W4_Claymore_02_IF_Ability04_Camera",
         "5013012_Monster_W4_Claymore_02_Ability042_Part01",
         "5013012_Monster_W4_Claymore_02_Ability042_Part02",
         "5013012_Monster_W4_Claymore_02_Ability042_Camera"
@@ -590,6 +591,17 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+          }
+        },
+        {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Name",
@@ -598,7 +610,23 @@ const compositeAbilityObject = {
           "ability": "Monster_W4_Claymore_02_Ability04_Part02",
           "isTrigger": true
         },
-        "Deleted bullshit"
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
@@ -766,7 +794,23 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "Trigger Ability",
           "from": {
@@ -893,7 +937,23 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "Trigger Ability",
           "from": {
@@ -1014,6 +1074,7 @@ const compositeAbilityObject = {
       "fileName": "5013012_Monster_W4_Claymore_02_Ability02_Part01",
       "childAbilityList": [
         "5013012_Monster_W4_Claymore_02_Ability02_Camera",
+        "5013012_Monster_W4_Claymore_02_IF_Ability02_Camera",
         "5013012_Monster_W4_Claymore_02_Ability02_Part01",
         "5013012_Monster_W4_Claymore_02_Ability02_Part02",
         "5013012_Monster_W4_Claymore_02_Ability02_Insert_Part01",
@@ -1024,7 +1085,23 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "Trigger Ability",
           "from": {
@@ -1151,6 +1228,7 @@ const compositeAbilityObject = {
       "fileName": "5013012_Monster_W4_Claymore_02_Ability01_Part01",
       "childAbilityList": [
         "5013012_Monster_W4_Claymore_02_Ability01_Camera",
+        "5013012_Monster_W4_Claymore_02_IF_Ability01_Camera",
         "5013012_Monster_W4_Claymore_02_Ability01_Part01",
         "5013012_Monster_W4_Claymore_02_Ability01_Part02",
         "5013012_Monster_W4_Claymore_02_Ability01_Insert_Part01",
@@ -1161,7 +1239,23 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "Trigger Ability",
           "from": {

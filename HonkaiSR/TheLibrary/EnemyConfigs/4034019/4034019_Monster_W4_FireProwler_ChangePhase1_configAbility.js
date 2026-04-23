@@ -209,6 +209,10 @@ const configAbility = {
             "stageType": "RogueRelic"
           },
           {
+            "name": "Stage Type",
+            "stageType": "GridFightActivity"
+          },
+          {
             "name": "Has Modifier",
             "target": {
               "name": "Target Name",

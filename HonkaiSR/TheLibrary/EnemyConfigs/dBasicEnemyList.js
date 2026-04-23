@@ -11615,6 +11615,62 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
+      "501203107": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203108": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203109": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203110": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203111": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203112": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203113": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203114": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
       "501203115": {
         "weak": [
           "Physical",
@@ -11741,9 +11797,36 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
+      "501209002": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "SD Civilian Mechatron"
+  },
+  "5012100": {
+    "5012100": {
+      "5012100": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "501210001": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Magical Girl Troupe"
   },
   "5012110": {
     "5012110": {
@@ -11794,6 +11877,14 @@ let basicEnemyList = {
           "Physical",
           "Fire",
           "Wind"
+        ]
+      },
+      "501301003": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind",
+          "Imaginary"
         ]
       },
       "hasReader": true
@@ -11847,6 +11938,20 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501304001": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "501304002": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "5013041": {
@@ -11865,6 +11970,13 @@ let basicEnemyList = {
   "5013050": {
     "5013050": {
       "5013050": {
+        "weak": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501305001": {
         "weak": [
           "Physical",
           "Quantum",
@@ -11972,6 +12084,51 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "@SparxiConOfficial"
     },
+    "5014014": {
+      "5014014": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401401": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401402": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401403": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401404": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "phases": 2,
+      "hasReader": false,
+      "baseName": "Super Idol: Center of Attention"
+    },
     "5014015": {
       "5014015": {
         "weak": [
@@ -12002,10 +12159,100 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501402003": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "phases": 2,
       "hasReader": true
     },
+    "5014021": {
+      "5014021": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "phases": 3,
+      "hasReader": false,
+      "baseName": "Alloy Mechatron: King Pom-Pom"
+    },
     "groupName": "Alloy Mechatron: King Pom-Pom"
+  },
+  "5023010": {
+    "5023010": {
+      "5023010": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502301001": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Joy Ascendant"
+  },
+  "5024010": {
+    "5024010": {
+      "5024010": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502401001": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "phases": 2,
+      "hasReader": false
+    },
+    "5024011": {
+      "5024011": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502401101": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
+    },
+    "5024012": {
+      "5024012": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "phases": 3,
+      "hasReader": false,
+      "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
+    },
+    "groupName": "Paramount Bliss Inverted: Illwish Archlotus"
   },
   "8001010": {
     "8001010": {
@@ -13072,6 +13319,13 @@ let basicEnemyList = {
         ]
       },
       "800205074": {
+        "weak": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "800205075": {
         "weak": [
           "Physical",
           "Quantum",
@@ -15706,6 +15960,12 @@ let basicEnemyList = {
           "Ice"
         ]
       },
+      "803201013": {
+        "weak": [
+          "Fire",
+          "Ice"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Grunt: Field Personnel"
@@ -15803,6 +16063,13 @@ let basicEnemyList = {
           "Fire",
           "Ice",
           "Thunder"
+        ]
+      },
+      "803202014": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
         ]
       },
       "hasReader": true
@@ -15905,6 +16172,13 @@ let basicEnemyList = {
         ]
       },
       "803301014": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "803301015": {
         "weak": [
           "Fire",
           "Ice",
@@ -18336,6 +18610,45 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Output Port 1"
     },
+    "5012071": {
+      "5012071": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501207101": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501207102": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501207103": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501207104": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Output Port 1"
+    },
     "5012080": {
       "5012080": {
         "weak": [
@@ -18347,8 +18660,54 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Output Port 2"
     },
+    "5012081": {
+      "5012081": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501208101": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501208102": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501208103": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501208104": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Output Port 2"
+    },
     "5012120": {
       "5012120": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "501212001": {
         "weak": [
           "Fire",
           "Thunder",
@@ -18386,6 +18745,34 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501401103": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401104": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401105": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401106": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "501401107": {
         "weak": [
           "Fire",
@@ -18402,6 +18789,64 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Live Stream Assistant"
+    },
+    "5022010": {
+      "5022010": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Illwish Lotus"
+    },
+    "5022020": {
+      "5022020": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Joy Ascendant: Finale"
+    },
+    "5023011": {
+      "5023011": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502301101": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Joy Ascendant: Prelude"
+    },
+    "5023012": {
+      "5023012": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502301201": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Joy Ascendant: Finale"
     },
     "8002058": {
       "8002058": {

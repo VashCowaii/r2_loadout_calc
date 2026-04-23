@@ -42,11 +42,45 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2578,
-        2579,
-        2580,
-        2581,
-        2582
+        2584,
+        2585,
+        2586,
+        2587,
+        2588
+      ],
+      "enemyTag": [
+        "W5_Ranger"
+      ]
+    },
+    "501305001": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.666667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Fire": 0.6,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        2584,
+        2585,
+        2586,
+        2587,
+        2588
       ],
       "enemyTag": [
         "W5_Ranger"

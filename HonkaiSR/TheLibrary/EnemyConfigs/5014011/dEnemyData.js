@@ -45,8 +45,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2610,
-        2611
+        2616,
+        2617
       ]
     },
     "501401101": {
@@ -76,11 +76,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2610,
-        2611
+        2616,
+        2617
       ],
       "overrideParams": {
-        "2610": [
+        "2616": [
           [
             2.5
           ],
@@ -121,9 +121,189 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2610,
-        2611
+        2616,
+        2617
       ]
+    },
+    "501401103": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.444444,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2616,
+        2617
+      ],
+      "overrideParams": {
+        "2617": [
+          [
+            3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "501401104": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.444444,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2616,
+        2617
+      ],
+      "overrideParams": {
+        "2617": [
+          [
+            3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "501401105": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.444444,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2616,
+        2617
+      ],
+      "overrideParams": {
+        "2617": [
+          [
+            3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "501401106": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.444444,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2616,
+        2617
+      ],
+      "overrideParams": {
+        "2617": [
+          [
+            3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     },
     "501401107": {
       "name": -1,
@@ -152,8 +332,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2610,
-        2611
+        2616,
+        2617
       ]
     },
     "501401108": {
@@ -183,8 +363,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2610,
-        2611
+        2616,
+        2617
       ]
     }
   }

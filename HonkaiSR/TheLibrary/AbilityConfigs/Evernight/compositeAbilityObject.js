@@ -1007,7 +1007,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1513194905\">Evernight_Passive_Endurance</a>",
           "modifierFlags": [
-            "EnduranceLogicOnly"
+            "EnduranceLogicOnly",
+            500
           ],
           "stackData": [],
           "latentQueue": []
@@ -3432,7 +3433,8 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "EnduranceLogicOnly"
+            "EnduranceLogicOnly",
+            500
           ],
           "execute": [
             {

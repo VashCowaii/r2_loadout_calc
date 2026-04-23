@@ -1647,6 +1647,52 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__585519814\">Standard_SetActionDelayOnTurnEnd</a>",
+          "stackType": "Multiple",
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "set": {
+                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__233) || RETURN",
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__233",
+                    "constants": [],
+                    "variables": [
+                      "ENEMIES_OBJECT_UNUSED__233"
+                    ]
+                  }
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "skillType": [
+              "Basic ATK",
+              "Skill",
+              "Memosprite"
+            ],
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "[object Object](Set AV)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__564198756\">Standard_ModifyActionDelayOnTurnEnd</a>",
           "stackType": "Multiple",
           "execute": [

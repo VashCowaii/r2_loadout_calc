@@ -198,6 +198,10 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "characterName": "Pollux, Netherwing Husk, Ferry of Souls"
+          },
+          {
+            "name": "Stage Type",
+            "stageType": "GridFightActivity"
           }
         ]
       }
