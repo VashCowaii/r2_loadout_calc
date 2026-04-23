@@ -2038,9 +2038,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Welt": {
+  "Welt_v0": {
     "internalID": 1004,
-    "name": "Welt",
+    "name": "Welt_v0",
     "path": "Nihility",
     "element": "Imaginary",
     "rarity": 5,
@@ -2203,7 +2203,7 @@ let characters = {
             "name": "Edge of the Void",
             "type": "Bounce",
             "slot": "Skill",
-            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and further deals DMG 2 extra times, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to a random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and additionally deals 2 instances of DMG, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to a random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
             "energyCost": null,
             "energyRegen": 10,
             "energyRate": 0.5,
@@ -2646,7 +2646,7 @@ let characters = {
         "params": [
           10
         ],
-        "traceAbility": "Welt_Welt_Trace02"
+        "traceAbility": "Weltv0_Welt_Trace02"
       },
       "Point08": {
         "name": "Punishment",
@@ -2655,7 +2655,7 @@ let characters = {
         "params": [
           0.2
         ],
-        "traceAbility": "Welt_Welt_Trace03"
+        "traceAbility": "Weltv0_Welt_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -2743,7 +2743,7 @@ let characters = {
       -32,
       0.61
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
   "Kafka": {
     "internalID": 1005,
@@ -6113,7 +6113,7 @@ let characters = {
         "traceAbility": "Herta_Herta_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -6706,7 +6706,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -6898,9 +6898,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Seele": {
+  "Seele_v0": {
     "internalID": 1102,
-    "name": "Seele",
+    "name": "Seele_v0",
     "path": "The Hunt",
     "element": "Quantum",
     "rarity": 5,
@@ -6925,7 +6925,7 @@ let characters = {
           0.8,
           0.15
         ],
-        "eidoAbility": "Seele_Seele_Eidolon1"
+        "eidoAbility": "Seelev0_Seele_Eidolon1"
       },
       {
         "id": "110202",
@@ -6953,7 +6953,7 @@ let characters = {
         "paramsEido": [
           15
         ],
-        "eidoAbility": "Seele_Seele_Eidolon4"
+        "eidoAbility": "Seelev0_Seele_Eidolon4"
       },
       {
         "id": "110205",
@@ -6980,7 +6980,7 @@ let characters = {
             "desc": "An ally will be incapacitated once their HP is reduced to 0."
           }
         },
-        "eidoAbility": "Seele_Seele_Eidolon6"
+        "eidoAbility": "Seelev0_Seele_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -7258,7 +7258,7 @@ let characters = {
             "name": "Resurgence",
             "type": "Enhance",
             "slot": "Talent",
-            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, the DMG of Seele's attacks increases by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
+            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG of Seele's attacks by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -7428,7 +7428,7 @@ let characters = {
           0.5,
           0.5
         ],
-        "traceAbility": "Seele_Seele_Trace01"
+        "traceAbility": "Seelev0_Seele_Trace01"
       },
       "Point07": {
         "name": "Lacerate",
@@ -7451,7 +7451,7 @@ let characters = {
           0.2
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -7542,7 +7542,7 @@ let characters = {
       198.4,
       0.81
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
   "Serval": {
     "internalID": 1103,
@@ -10866,7 +10866,7 @@ let characters = {
         "traceAbility": "Clara_Klara_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -12380,7 +12380,7 @@ let characters = {
         "traceAbility": "Hook_Hook_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -12393,7 +12393,7 @@ let characters = {
           0.2
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -13137,7 +13137,7 @@ let characters = {
         ],
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -14105,7 +14105,7 @@ let characters = {
           0.2
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -16694,7 +16694,7 @@ let characters = {
         "traceAbility": "Luocha_Luocha_Trace03",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -17287,7 +17287,7 @@ let characters = {
                 "desc": "An ally will be incapacitated once their HP is reduced to 0."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -18957,7 +18957,7 @@ let characters = {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
           },
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -20296,7 +20296,7 @@ let characters = {
         "desc": "If a target enemy applies Crowd Control debuffs to allies while the \"Matrix of Prescience\" is active, all allies will resist all Crowd Control debuffs applied by the enemy target during the current action. This effect can only be triggered once. When \"Matrix of Prescience\" is activated again, the number of times this effect can be triggered will reset.",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -21764,7 +21764,7 @@ let characters = {
         ],
         "traceAbility": "Guinaifen_Guinaifen_Trace02",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -23482,7 +23482,7 @@ let characters = {
         "desc": "After using his Ultimate, Dan Heng • Imbibitor Lunae's action advances by 100% and gains 1 extra \"Squama Sacrosancta.\"",
         "icon": "icon/skill/1213_rank2.png",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -24252,7 +24252,7 @@ let characters = {
         "traceAbility": "DanHengIL_DanHengIL_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -25048,7 +25048,7 @@ let characters = {
           1
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -25655,9 +25655,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Huohuo": {
+  "Huohuo_v0": {
     "internalID": 1217,
-    "name": "Huohuo",
+    "name": "Huohuo_v0",
     "path": "Abundance",
     "element": "Wind",
     "rarity": 5,
@@ -25754,7 +25754,7 @@ let characters = {
             "name": "Banner: Stormcaller",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Deals Wind DMG equal to #1[i]% of Huohuo's Max HP to a target enemy.",
+            "desc": "Deals Wind DMG equal to #1[i]% of Huohuo's Max HP to one designated enemy.",
             "energyCost": null,
             "energyRegen": 20,
             "energyRate": 0.5,
@@ -25819,7 +25819,7 @@ let characters = {
             "name": "Talisman: Protection",
             "type": "Restore",
             "slot": "Skill",
-            "desc": "Dispels #5[i] debuff(s) from a single target ally and immediately restores this ally's HP by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. At the same time, restores HP for allies that are adjacent to this target ally by an amount equal to #3[f1]% of Huohuo's Max HP plus #4[i].",
+            "desc": "Dispels #5[i] debuff(s) from one designated ally and immediately restores this ally's HP by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. At the same time, restores HP for allies that are adjacent to this target ally by an amount equal to #3[f1]% of Huohuo's Max HP plus #4[i].",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -26332,10 +26332,10 @@ let characters = {
         "params": [
           0.35
         ],
-        "traceAbility": "Huohuo_Huohuo_Trace02",
+        "traceAbility": "Huohuov0_Huohuo_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -26433,7 +26433,7 @@ let characters = {
       11.9,
       0.66
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
   "Jiaoqiu": {
     "internalID": 1218,
@@ -29356,7 +29356,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -29520,7 +29520,7 @@ let characters = {
               "Break DMG": {
                 "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
               },
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -30477,7 +30477,7 @@ let characters = {
           "Departed": {
             "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order."
           },
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -31276,7 +31276,7 @@ let characters = {
         ],
         "traceAbility": "March7thTH_Mar_7th_10_Trace01",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -31424,7 +31424,7 @@ let characters = {
           0.24
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -31990,7 +31990,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               },
               "Base Chance": {
@@ -32759,7 +32759,7 @@ let characters = {
         "icon": "icon/skill/1301_skilltree2.png",
         "desc": "After using the Ultimate, immediately advances action for this unit by 100%.",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -34864,7 +34864,7 @@ let characters = {
                 "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -38501,7 +38501,7 @@ let characters = {
         ],
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -38857,7 +38857,7 @@ let characters = {
                 "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -39035,7 +39035,7 @@ let characters = {
           0.25
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -39149,9 +39149,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Firefly": {
+  "Firefly_v0": {
     "internalID": 1310,
-    "name": "Firefly",
+    "name": "Firefly_v0",
     "path": "Destruction",
     "element": "Fire",
     "rarity": 5,
@@ -39175,7 +39175,7 @@ let characters = {
         "paramsEido": [
           0.15
         ],
-        "eidoAbility": "Firefly_Sam_Eidolon1"
+        "eidoAbility": "Fireflyv0_Sam_Eidolon1"
       },
       {
         "id": "131002",
@@ -39195,7 +39195,7 @@ let characters = {
             "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
           }
         },
-        "eidoAbility": "Firefly_Sam_Eidolon2"
+        "eidoAbility": "Fireflyv0_Sam_Eidolon2"
       },
       {
         "id": "131003",
@@ -39213,7 +39213,7 @@ let characters = {
         "paramsEido": [
           0.5
         ],
-        "eidoAbility": "Firefly_Sam_Eidolon4"
+        "eidoAbility": "Fireflyv0_Sam_Eidolon4"
       },
       {
         "id": "131005",
@@ -39237,7 +39237,7 @@ let characters = {
             "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
         },
-        "eidoAbility": "Firefly_Sam_Eidolon6"
+        "eidoAbility": "Fireflyv0_Sam_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -39259,7 +39259,7 @@ let characters = {
             "name": "Order: Flare Propulsion",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
             "energyCost": null,
             "energyRegen": 20,
             "energyRate": 0.5,
@@ -39322,7 +39322,7 @@ let characters = {
             "name": "Fyrefly Type-IV: Pyrogenic Decimation",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -39397,7 +39397,7 @@ let characters = {
             "name": "Order: Aerial Bombardment",
             "type": "Single Target",
             "slot": "Skill",
-            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
+            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -39512,7 +39512,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -39525,7 +39525,7 @@ let characters = {
             "name": "Fyrefly Type-IV: Deathstar Overload",
             "type": "Blast",
             "slot": "Skill",
-            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy target, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
+            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -40022,7 +40022,7 @@ let characters = {
         "params": [
           0.55
         ],
-        "traceAbility": "Firefly_Sam_Trace01"
+        "traceAbility": "Fireflyv0_Sam_Trace01"
       },
       "Point07": {
         "name": "Module β: Autoreactive Armor",
@@ -40034,7 +40034,7 @@ let characters = {
           0.35,
           0.5
         ],
-        "traceAbility": "Firefly_Sam_Trace02",
+        "traceAbility": "Fireflyv0_Sam_Trace02",
         "extraEffects": {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
@@ -40053,7 +40053,7 @@ let characters = {
           10,
           0.007999999
         ],
-        "traceAbility": "Firefly_Sam_Trace03"
+        "traceAbility": "Fireflyv0_Sam_Trace03"
       },
       "Point09": {
         "name": "Break Boost",
@@ -40141,7 +40141,7 @@ let characters = {
       45,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
   "Misha": {
     "internalID": 1312,
@@ -42186,7 +42186,7 @@ let characters = {
         ],
         "traceAbility": "Jade_Jade_Trace02",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -44198,7 +44198,7 @@ let characters = {
           "Follow-Up ATK": {
             "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           },
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         },
@@ -44908,7 +44908,7 @@ let characters = {
           0.25
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -46385,7 +46385,7 @@ let characters = {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -46818,7 +46818,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -48593,7 +48593,7 @@ let characters = {
         "desc": "While in the \"Vendetta\" state, Mydei is immune to Crowd Control debuffs.",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -50181,7 +50181,7 @@ let characters = {
           0.3
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -50672,7 +50672,7 @@ let characters = {
               "Summon Memosprite": {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               },
               "Territory": {
@@ -50842,7 +50842,7 @@ let characters = {
               "Summon Memosprite": {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               },
               "Territory": {
@@ -52757,7 +52757,7 @@ let characters = {
                 "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               },
               "Downed State": {
                 "desc": "An ally will be incapacitated once their HP is reduced to 0."
@@ -53919,7 +53919,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -55212,7 +55212,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               },
               "Coup de Main": {
                 "desc": "Copy and immediately use the ability about to be used, then use the original ability.\\nCoup de Main won't trigger Coup de Main again."
@@ -56238,7 +56238,7 @@ let characters = {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -56412,7 +56412,7 @@ let characters = {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -56706,7 +56706,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -57056,7 +57056,7 @@ let characters = {
           2
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           },
           "Additional DMG": {
@@ -57753,7 +57753,7 @@ let characters = {
           0.15
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -57948,7 +57948,7 @@ let characters = {
           0.24
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -59129,11 +59129,11 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -60186,7 +60186,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -65700,7 +65700,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               },
               "Joint Attack": {
                 "desc": "Multiple targets respectively use attacks on enemy targets in one action."
@@ -66285,7 +66285,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               },
               "True DMG": {
@@ -66484,7 +66484,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -66538,7 +66538,7 @@ let characters = {
         ],
         "traceAbility": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -71445,7 +71445,7 @@ let characters = {
           0.1
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
