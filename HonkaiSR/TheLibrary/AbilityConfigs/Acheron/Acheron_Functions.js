@@ -148,6 +148,18 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"fun__-64481768\">Acheron_AddFlower_Ability</a>",
       "parse": [
         {
+          "name": "Define Custom Variable",
+          "variableName": "Acheron_FlowerCountBySp_Snapshot",
+          "value": {
+            "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
+            "displayLines": "Acheron_FlowerCountBySp",
+            "constants": [],
+            "variables": [
+              "Acheron_FlowerCountBySp"
+            ]
+          }
+        },
+        {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
@@ -261,7 +273,15 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "variableName": "Acheron_FlowerCountBySp",
-          "value": 0
+          "value": {
+            "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
+            "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
+            "constants": [],
+            "variables": [
+              "Acheron_FlowerCountBySp",
+              "Acheron_FlowerCountBySp_Snapshot"
+            ]
+          }
         }
       ]
     },
@@ -269,6 +289,18 @@ const configAbility = {
       "name": "CharacterFunctions",
       "functionName": "<a class=\"gTempYellow\" id=\"fun__-1879158642\">Acheron_AddFlower_Passiv01</a>",
       "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Acheron_FlowerCountBySp_Snapshot",
+          "value": {
+            "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
+            "displayLines": "Acheron_FlowerCountBySp",
+            "constants": [],
+            "variables": [
+              "Acheron_FlowerCountBySp"
+            ]
+          }
+        },
         {
           "name": "IF",
           "conditions": {
@@ -345,7 +377,15 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "variableName": "Acheron_FlowerCountBySp",
-              "value": 0
+              "value": {
+                "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
+                "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
+                "constants": [],
+                "variables": [
+                  "Acheron_FlowerCountBySp",
+                  "Acheron_FlowerCountBySp_Snapshot"
+                ]
+              }
             }
           ],
           "failed": [
@@ -386,7 +426,15 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "variableName": "Acheron_FlowerCountBySp",
-              "value": 0
+              "value": {
+                "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
+                "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
+                "constants": [],
+                "variables": [
+                  "Acheron_FlowerCountBySp",
+                  "Acheron_FlowerCountBySp_Snapshot"
+                ]
+              }
             }
           ]
         }
