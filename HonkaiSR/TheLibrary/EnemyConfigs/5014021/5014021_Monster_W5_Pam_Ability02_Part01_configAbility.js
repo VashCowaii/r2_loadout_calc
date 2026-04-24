@@ -1,0 +1,31 @@
+const configAbility = {
+  "fileName": "5014021_Monster_W5_Pam_Ability02_Part01",
+  "childAbilityList": [
+    "5014021_Monster_W5_Pam_Ability02_Camera",
+    "5014021_Monster_W5_Pam_Ability02_Part01",
+    "5014021_Monster_W5_Pam_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
+  "abilityType": "Skill",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Trigger Ability",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "ability": "Monster_W5_Pam_Ability02_Part02",
+      "isTrigger": true
+    },
+    "Deleted bullshit"
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "references": []
+}
