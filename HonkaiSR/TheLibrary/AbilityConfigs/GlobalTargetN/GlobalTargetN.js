@@ -1853,6 +1853,162 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Camera Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Ripper: Skill03 Target}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1415873063\">Monster_W5_Ripper_Ability03_Mark</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Camera Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Ripper: Skill03 Target}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"497761584\">Monster_W5_Ripper_Ability04_Mark</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "@Sparxiecon APOC: Prime-Field Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "@Sparxiecon: Aha Instant Battle Event",
       "isTargetOperator": false,
       "execute": [

@@ -23,7 +23,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Defender Finalizes DMG Data",
+          "eventTrigger": "Defender Finalizes ATK Data",
           "execute": [
             {
               "name": "IF",
