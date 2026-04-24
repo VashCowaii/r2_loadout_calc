@@ -5426,7 +5426,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Magical_Passive_Rain",
+    "name": "<a class=\"gModGreen\" id=\"726195692\">Enemy_W5_Magical_Passive_Rain</a>",
     "realName": "Rainy Day",
     "aim": "Other",
     "desc": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
@@ -5434,7 +5434,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Magical_Passive_Sun",
+    "name": "<a class=\"gModGreen\" id=\"222442080\">Enemy_W5_Magical_Passive_Sun</a>",
     "realName": "Sunny Day",
     "aim": "Other",
     "desc": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
@@ -5442,7 +5442,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Magical_DeathRattle_Rain",
+    "name": "<a class=\"gModGreen\" id=\"-813387797\">Enemy_W5_Magical_DeathRattle_Rain</a>",
     "realName": "SPD Reduction",
     "aim": "Debuff",
     "desc": "Decreases SPD by #1[i].",
@@ -5453,7 +5453,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Magical_DeathRattle_Sun",
+    "name": "<a class=\"gModGreen\" id=\"815099001\">Enemy_W5_Magical_DeathRattle_Sun</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -5731,7 +5731,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_XP_Elite02_03_ElationControl",
+    "name": "<a class=\"gModGreen\" id=\"1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>",
     "realName": "Paramount Bliss",
     "aim": "Other",
     "desc": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s).",
@@ -6015,7 +6015,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_03_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-2030183935\">Monster_XP_Elite02_03_Charge</a>",
     "realName": "Budding",
     "aim": "Other",
     "desc": "Uses \"Euphoric Spiral\" in the next action.",
@@ -6127,7 +6127,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_VtuberPart_IF_MinionsSuperArmor",
+    "name": "<a class=\"gModGreen\" id=\"1854745396\">Enemy_W5_VtuberPart_IF_MinionsSuperArmor</a>",
     "realName": "Sparxheads Forever",
     "aim": "Buff",
     "desc": "\"Super Idol: Center of Attention\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by #1[i]%.",
@@ -6138,7 +6138,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_VtuberPart_IF_MinionsSuperArmorBreak",
+    "name": "<a class=\"gModGreen\" id=\"-1715161997\">Enemy_W5_VtuberPart_IF_MinionsSuperArmorBreak</a>",
     "realName": "Quitting in Progress",
     "aim": "Debuff",
     "desc": "\"Super Idol: Center of Attention\" is currently in \"Safeguard Breach\" state, this unit's DMG taken increases by #1[i]%.",
@@ -6161,7 +6161,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W5_Ripper_Parasitism",
+    "name": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>",
     "realName": "Happiness",
     "aim": "Other",
     "desc": "At the start of each turn, gains #2[i] stack(s). Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to #1[i], the character will be converted into a \"Happiness Puppet.\" When stacks reach #3[i], this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
@@ -6174,7 +6174,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W5_RipperPart_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"1271467699\">Monster_W5_RipperPart_Bonus</a>",
     "realName": "Wicked Grin",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -6185,7 +6185,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W5_Ripper_Flesh",
+    "name": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>",
     "realName": "Happiness Puppet",
     "aim": "Debuff",
     "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
@@ -6193,7 +6193,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W5_Ripper_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-98226572\">Monster_W5_Ripper_DamageTakenUp</a>",
     "realName": "Teasing",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%. This effect is stackable.",
@@ -6204,7 +6204,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W5_Ripper_Pollen",
+    "name": "<a class=\"gModGreen\" id=\"-359828555\">Monster_W5_Ripper_Pollen</a>",
     "realName": "Laughter's End",
     "aim": "Other",
     "desc": "Triggers after #1[i] more enemy targets are eliminated, increasing the DMG taken by all enemies and removing the \"Wicked Grin\" effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
@@ -6215,7 +6215,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W5_Ripper_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>",
     "realName": "Inverted Severance",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]% and becomes immune to the \"Happiness Puppet\" effect for the duration.",
@@ -6226,7 +6226,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Vtuber_IF_AbilityEX04_TGT",
+    "name": "<a class=\"gModGreen\" id=\"768104180\">Enemy_W5_Vtuber_IF_AbilityEX04_TGT</a>",
     "realName": "Basking in Popularity",
     "aim": "Buff",
     "desc": "Each stack reduces DMG taken by #1[i]%.",
@@ -6237,7 +6237,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Vtuber_IF_LockStance",
+    "name": "<a class=\"gModGreen\" id=\"433426443\">Enemy_W5_Vtuber_IF_LockStance</a>",
     "realName": "Toughness Lock",
     "aim": "Other",
     "desc": "Toughness cannot be reduced below 1.",
@@ -6245,7 +6245,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W5_Ripper_Protect_Weakness",
+    "name": "<a class=\"gModGreen\" id=\"344113408\">Monster_W5_Ripper_Protect_Weakness</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "While \"Paramount Bliss Inverted: Illwish Lotus\" is in the Charging state, this unit's Toughness cannot be reduced.",
