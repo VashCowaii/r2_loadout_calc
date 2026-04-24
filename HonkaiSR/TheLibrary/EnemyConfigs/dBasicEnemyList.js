@@ -11824,7 +11824,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Magical Girl Troupe"
   },
@@ -12126,7 +12126,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Super Idol: Center of Attention"
     },
     "5014015": {
@@ -12178,7 +12178,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Alloy Mechatron: King Pom-Pom"
     },
     "groupName": "Alloy Mechatron: King Pom-Pom"
@@ -12199,7 +12199,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Joy Ascendant"
   },
@@ -12220,7 +12220,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "5024011": {
       "5024011": {
@@ -12237,7 +12237,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
     },
     "5024012": {
@@ -12249,7 +12249,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
     },
     "groupName": "Paramount Bliss Inverted: Illwish Archlotus"
@@ -18646,7 +18646,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Output Port 1"
     },
     "5012080": {
@@ -18696,7 +18696,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Output Port 2"
     },
     "5012120": {
@@ -18798,7 +18798,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Illwish Lotus"
     },
     "5022020": {
@@ -18809,7 +18809,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Joy Ascendant: Finale"
     },
     "5023011": {
@@ -18827,7 +18827,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Joy Ascendant: Prelude"
     },
     "5023012": {
@@ -18845,7 +18845,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Joy Ascendant: Finale"
     },
     "8002058": {
