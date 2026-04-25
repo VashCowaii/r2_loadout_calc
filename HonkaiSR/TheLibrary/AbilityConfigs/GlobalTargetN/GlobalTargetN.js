@@ -10,6 +10,49 @@ const configAbility = {
   "parse": [
     {
       "name": "Target Configuration",
+      "nameTarget": "Elation Trailblazer: Ult Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Selector",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Eidolon Activated",
+                "eidolon": 6,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "invertCondition": true
+              }
+            ]
+          },
+          "targetPass": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "targetFail": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "BattleEvent60021",
       "isTargetOperator": false,
       "execute": [
@@ -29,6 +72,116 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evanescia: Battle Event",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 11505,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evanescia: Memosprite",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Add Target by Pseudo-Character Partner",
+          "identifier": "Evanescia_Servant_B"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evanescia: Slain Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Attack Targets of Modifier Holder}}.[[living]]"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Monster Rank",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "compareType": ">=",
+                        "value2": 3
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": "<=",
+                        "value2": 0.1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Monster Rank",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "compareType": "<",
+                        "value2": 3
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": "<=",
+                        "value2": 0.25
+                      }
+                    ]
+                  }
+                ]
               }
             }
           ]
@@ -1845,6 +1998,162 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"1152795297\">Monster_W2_Huanlong_Ability07Mark</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Camera Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Ripper: Skill03 Target}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1415873063\">Monster_W5_Ripper_Ability03_Mark</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Camera Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Ripper: Skill03 Target}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"497761584\">Monster_W5_Ripper_Ability04_Mark</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Ripper: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "@Sparxiecon APOC: Prime-Field Targets",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
               }
             }
           ]

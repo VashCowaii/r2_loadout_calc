@@ -7106,7 +7106,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Huohuo_Passive_HealMark",
+    "name": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>",
     "realName": "Divine Provision",
     "aim": "Buff",
     "desc": "When an ally target's turn starts or when an ally uses their Ultimate, restores HP for that ally and the ally unit with the lowest HP percentage by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. Then, every ally target currently at #3[i]% HP percentage or lower receives healing once. When \"Divine Provision\" is triggered to provide healing for ally targets, dispel 1 debuff from the said ally. This effect's remaining trigger count is #4[i].",
@@ -7120,7 +7120,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Huohuo_Ability03_AttackUP",
+    "name": "<a class=\"gModGreen\" id=\"805273454\">Advanced_Huohuo_Ability03_AttackUP</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK increases by #1[f1]%.",
@@ -7131,7 +7131,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Huohuo_Eidolon6_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"167222959\">Advanced_Huohuo_Eidolon6_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7142,7 +7142,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Huohuo_Eidolon1_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"528503958\">Advanced_Huohuo_Eidolon1_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -7153,7 +7153,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Huohuo_Eidolon1_HealUp",
+    "name": "<a class=\"gModGreen\" id=\"-1493871681\">Advanced_Huohuo_Eidolon1_HealUp</a>",
     "realName": "Outgoing Healing Boost",
     "aim": "Buff",
     "desc": "Outgoing Healing increases by #1[i]%.",
@@ -7164,7 +7164,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Huohuo_Maze_FatigueRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1861316707\">Advanced_Huohuo_Maze_FatigueRatio</a>",
     "realName": "Horror-Struck",
     "aim": "Debuff",
     "desc": "ATK decreases by #1[i]%.",
@@ -7175,7 +7175,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Huohuo_Eidolon2_ReviveCount",
+    "name": "<a class=\"gModGreen\" id=\"-1527901195\">Advanced_Huohuo_Eidolon2_ReviveCount</a>",
     "realName": "Sealed in Tail, Wraith Subdued",
     "aim": "Buff",
     "desc": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down, and their HP will immediately be restored by an amount equal to #1[i]% of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. The remaining trigger count is #2[i].",

@@ -144,8 +144,8 @@ let allowedCharacterList = [
     "trimName": "Hanya"
   },
   {
-    "fullName": "Huohuo_v0",
-    "trimName": "Huohuov0"
+    "fullName": "Huohuo",
+    "trimName": "Huohuo"
   },
   {
     "fullName": "Jiaoqiu",
@@ -328,6 +328,14 @@ let allowedCharacterList = [
     "trimName": "Ashveil"
   },
   {
+    "fullName": "Evanescia",
+    "trimName": "Evanescia"
+  },
+  {
+    "fullName": "Silver Wolf LV.999",
+    "trimName": "SilverWolfL"
+  },
+  {
     "fullName": "Trailblazer - Destruction",
     "trimName": "TrailblazerDestruction"
   },
@@ -346,6 +354,10 @@ let allowedCharacterList = [
   {
     "fullName": "Mem",
     "trimName": "Mem"
+  },
+  {
+    "fullName": "Trailblazer - Elation",
+    "trimName": "TrailblazerElation"
   },
   {
     "fullName": "Saber",
@@ -370,6 +382,10 @@ let allowedCharacterList = [
   {
     "fullName": "Jingliu_v0",
     "trimName": "Jingliuv0"
+  },
+  {
+    "fullName": "Huohuo_v0",
+    "trimName": "Huohuov0"
   },
   {
     "fullName": "Sparkle_v0",

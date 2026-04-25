@@ -123,6 +123,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5014014,
+    "lineCount": 11817,
+    "sizeCount": 457723
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 3025010,
     "lineCount": 13487,
     "sizeCount": 456438
@@ -414,6 +420,24 @@ let sizeLeaderboardArray = [
     "enemyID": 3002022,
     "lineCount": 8512,
     "sizeCount": 310611
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5024010,
+    "lineCount": 8106,
+    "sizeCount": 305117
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5024011,
+    "lineCount": 8106,
+    "sizeCount": 305069
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5024012,
+    "lineCount": 8099,
+    "sizeCount": 304908
   },
   {
     "entryType": "enemy",
@@ -793,6 +817,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5014021,
+    "lineCount": 5957,
+    "sizeCount": 213550
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4013016,
     "lineCount": 5823,
     "sizeCount": 212484
@@ -1078,6 +1108,30 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1304.png",
     "lineCount": 4486,
     "sizeCount": 177072
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5022020,
+    "lineCount": 4572,
+    "sizeCount": 176037
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5023011,
+    "lineCount": 4572,
+    "sizeCount": 176037
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5023012,
+    "lineCount": 4572,
+    "sizeCount": 176037
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5023010,
+    "lineCount": 4569,
+    "sizeCount": 175932
   },
   {
     "entryType": "enemy",
@@ -1840,6 +1894,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1005.png",
     "lineCount": 3153,
     "sizeCount": 107141
+  },
+  {
+    "entryType": "char",
+    "entryName": "Huohuo",
+    "trimCharacterName": "Huohuo",
+    "entryIcon": "icon/character/1217.png",
+    "lineCount": 2835,
+    "sizeCount": 107072
   },
   {
     "entryType": "char",
@@ -3039,6 +3101,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5012100,
+    "lineCount": 1079,
+    "sizeCount": 37746
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 1023011,
     "lineCount": 1128,
     "sizeCount": 37634
@@ -3271,7 +3339,19 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5012081,
+    "lineCount": 718,
+    "sizeCount": 27065
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 5012070,
+    "lineCount": 708,
+    "sizeCount": 26710
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5012071,
     "lineCount": 708,
     "sizeCount": 26710
   },
@@ -3406,6 +3486,12 @@ let sizeLeaderboardArray = [
     "enemyID": 4032011,
     "lineCount": 626,
     "sizeCount": 21376
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5022010,
+    "lineCount": 629,
+    "sizeCount": 21226
   },
   {
     "entryType": "lc",
@@ -4329,6 +4415,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Welcome to the Cosmic City",
+    "trimCharacterName": "WelcometotheCosmicCity",
+    "entryIcon": "icon/light_cone/23057.png",
+    "lineCount": 255,
+    "sizeCount": 8620
+  },
+  {
+    "entryType": "lc",
     "entryName": "Though Worlds Apart",
     "trimCharacterName": "ThoughWorldsApart",
     "entryIcon": "icon/light_cone/23051.png",
@@ -5199,6 +5293,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Tomorrow, Together",
+    "trimCharacterName": "TomorrowTogether",
+    "entryIcon": "icon/light_cone/22007.png",
+    "lineCount": 144,
+    "sizeCount": 4094
+  },
+  {
+    "entryType": "lc",
     "entryName": "Indelible Promise",
     "trimCharacterName": "IndeliblePromise",
     "entryIcon": "icon/light_cone/21042.png",
@@ -5746,6 +5848,30 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1930
+  },
+  {
+    "entryType": "char",
+    "entryName": "Trailblazer - Elation",
+    "trimCharacterName": "TrailblazerElation",
+    "entryIcon": "icon/character/8009.png",
+    "lineCount": 7,
+    "sizeCount": 159
+  },
+  {
+    "entryType": "char",
+    "entryName": "Silver Wolf LV.999",
+    "trimCharacterName": "SilverWolfL",
+    "entryIcon": "icon/character/1506.png",
+    "lineCount": 7,
+    "sizeCount": 149
+  },
+  {
+    "entryType": "char",
+    "entryName": "Evanescia",
+    "trimCharacterName": "Evanescia",
+    "entryIcon": "icon/character/1505.png",
+    "lineCount": 7,
+    "sizeCount": 138
   },
   {
     "entryType": "enemy",

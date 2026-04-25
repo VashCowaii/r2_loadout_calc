@@ -5332,6 +5332,7 @@ const megaParsingFuckeryPain = {
             "invertCondition",
             "casterFilter",
             "justAddedOrLiving",
+            "checkType",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Flag");
 
@@ -5343,6 +5344,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.casterFilter,"Caster Filter",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.justAddedOrLiving,"Just Added/Living")}
+            ${getStandardNameDisplay(initialCounter,parseRef.checkType,"Check Type")}
         </div>`;
     },
     "Remove Flags from Modifier"(parseRef,initialCounter) {
@@ -9668,7 +9670,8 @@ const megaParsingFuckeryPain = {
             "name",
             "nameTarget",
             "isTargetOperator",
-
+            "targetFound",
+            "targetFailed",
 
             //old modifier stuff
             "execute",
