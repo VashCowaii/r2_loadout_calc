@@ -2038,9 +2038,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Welt": {
+  "Welt_v0": {
     "internalID": 1004,
-    "name": "Welt",
+    "name": "Welt_v0",
     "path": "Nihility",
     "element": "Imaginary",
     "rarity": 5,
@@ -2056,13 +2056,15 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "1100401",
+        "id": "100401",
         "name": "Legacy of Honor",
         "rank": 1,
-        "desc": "After using a Skill or Ultimate to hit a target in the \"Weightless\" state, additionally deals 1 instance of Imaginary Additional DMG equal to 40% of the Ultimate's DMG multiplier. This effect can only be triggered once per target per attack.",
-        "icon": "icon/skill/1100_rank1.png",
+        "desc": "After using Ultimate, Welt gets enhanced. Then, the next 2 time(s) he uses Basic ATK or Skill, deals 1 extra instance of Additional DMG to the enemy target. The Additional DMG dealt when using Basic ATK is equal to 50% of Basic ATK DMG multiplier. The Additional DMG dealt when using Skill is equal to 80% of Skill DMG multiplier.",
+        "icon": "icon/skill/1004_rank1.png",
         "paramsEido": [
-          0.4
+          0.5,
+          0.8,
+          2
         ],
         "extraEffects": {
           "Additional DMG": {
@@ -2071,49 +2073,50 @@ let characters = {
         }
       },
       {
-        "id": "1100402",
+        "id": "100402",
         "name": "Conflux of Stars",
         "rank": 2,
         "desc": "When his Talent is triggered, Welt regenerates 3 Energy.",
-        "icon": "icon/skill/1100_rank2.png",
+        "icon": "icon/skill/1004_rank2.png",
         "paramsEido": [
           3
         ]
       },
       {
-        "id": "1100403",
+        "id": "100403",
         "name": "Prayer of Peace",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1100_skill.png"
+        "icon": "icon/skill/1004_skill.png"
       },
       {
-        "id": "1100404",
+        "id": "100404",
         "name": "Appellation of Justice",
         "rank": 4,
-        "desc": "Enemy targets in the \"Weightless\" state have their All-Type RES reduced by 30%.",
-        "icon": "icon/skill/1100_rank4.png",
+        "desc": "When using Skill, increases the base chance of reducing the attacked enemy target's SPD by 35%.",
+        "icon": "icon/skill/1004_rank4.png",
         "paramsEido": [
-          0.3
-        ]
+          0.35
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
       },
       {
-        "id": "1100405",
+        "id": "100405",
         "name": "Power of Kindness",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1100_ultimate.png"
+        "icon": "icon/skill/1004_ultimate.png"
       },
       {
-        "id": "1100406",
+        "id": "100406",
         "name": "Prospect of Glory",
         "rank": 6,
-        "desc": "When using Skill or Ultimate to hit an enemy target in the Slow state, increases CRIT Rate by 30% and CRIT DMG by 60% for the DMG dealt.",
-        "icon": "icon/skill/1100_rank6.png",
-        "paramsEido": [
-          0.3,
-          0.6
-        ]
+        "desc": "When using Skill, deals DMG for 1 extra time to one random enemy.",
+        "icon": "icon/skill/1004_rank6.png"
       }
     ],
     "eidlonLevelBonuses": {
@@ -2130,7 +2133,7 @@ let characters = {
       "Basic ATK": {
         "Gravity Suppression": {
           "variant1": {
-            "skillID": 1100401,
+            "skillID": 100401,
             "trigger": "Skill01",
             "name": "Gravity Suppression",
             "type": "Single Target",
@@ -2179,9 +2182,9 @@ let characters = {
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
             "configAbilityList": [
-              "Avatar_Advanced_Welt_00_Skill01_Camera",
-              "Avatar_Advanced_Welt_00_Skill01_Phase01",
-              "Avatar_Advanced_Welt_00_Skill01_Phase02"
+              "Avatar_Welt_00_Skill01_Camera",
+              "Avatar_Welt_00_Skill01_Phase01",
+              "Avatar_Welt_00_Skill01_Phase02"
             ],
             "toughnessList": [
               30,
@@ -2195,14 +2198,14 @@ let characters = {
       "Skill": {
         "Edge of the Void": {
           "variant1": {
-            "skillID": 1100402,
+            "skillID": 100402,
             "trigger": "Skill02",
             "name": "Edge of the Void",
             "type": "Bounce",
             "slot": "Skill",
-            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and additionally deals DMG 4 times, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to one random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and additionally deals 2 instances of DMG, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to a random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
             "energyCost": null,
-            "energyRegen": 6,
+            "energyRegen": 10,
             "energyRate": 0.5,
             "toughnessReductionDisplayed": 10,
             "skillPointCost": 1,
@@ -2304,9 +2307,9 @@ let characters = {
             "skillEffect": "Bounce",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Advanced_Welt_00_Skill02_Camera",
-              "Avatar_Advanced_Welt_00_Skill02_Phase01",
-              "Avatar_Advanced_Welt_00_Skill02_Phase02"
+              "Avatar_Welt_00_Skill02_Camera",
+              "Avatar_Welt_00_Skill02_Phase01",
+              "Avatar_Welt_00_Skill02_Phase02"
             ],
             "toughnessList": [
               30,
@@ -2325,12 +2328,12 @@ let characters = {
       "Ultimate": {
         "Synthetic Black Hole": {
           "variant1": {
-            "skillID": 1100403,
+            "skillID": 100403,
             "trigger": "Skill03",
             "name": "Synthetic Black Hole",
             "type": "AoE",
             "slot": "Ultimate",
-            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to all enemies. Has a #3[i]% base chance to Imprison hit enemy targets for 1 turn.\\nWhile Imprisoned, enemy targets have their actions delayed by #2[f1]% and their SPD reduced by #4[i]%. After using his Ultimate, inflicts the \"Weightless\" state on all enemies. When targets in \"Weightless\" state get attacked, their actions are delayed by #5[f1]%. This effect can trigger up to #6[i] time(s) per target per turn. \"Weightless\" lasts for #7[i] turn(s).",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to all enemies, with a #3[i]% base chance for enemies hit by this ability to be Imprisoned for 1 turn.\\nImprisoned enemies have their actions delayed by #2[f1]% and SPD reduced by #4[i]%.",
             "energyCost": 120,
             "energyRegen": 5,
             "energyRate": 0.5,
@@ -2340,138 +2343,93 @@ let characters = {
             "params": {
               "1": [
                 0.9,
-                0.06,
+                0.32,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "2": [
                 0.96,
-                0.066,
+                0.328,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "3": [
                 1.02,
-                0.072,
+                0.336,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "4": [
                 1.08,
-                0.078,
+                0.344,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "5": [
                 1.14,
-                0.084,
+                0.352,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "6": [
                 1.2,
-                0.09,
+                0.36,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "7": [
                 1.275,
-                0.0975,
+                0.37,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "8": [
                 1.35,
-                0.105,
+                0.38,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "9": [
                 1.425,
-                0.1125,
+                0.39,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "10": [
                 1.5,
-                0.12,
+                0.4,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "11": [
                 1.56,
-                0.126,
+                0.408,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "12": [
                 1.62,
-                0.132,
+                0.416,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "13": [
                 1.68,
-                0.138,
+                0.424,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "14": [
                 1.74,
-                0.144,
+                0.432,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ],
               "15": [
                 1.8,
-                0.15,
+                0.44,
                 1,
-                0.1,
-                0.04,
-                8,
-                2
+                0.1
               ]
             },
             "element": "Imaginary",
@@ -2479,10 +2437,10 @@ let characters = {
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Advanced_Welt_00_Skill03_Camera",
-              "Avatar_Advanced_Welt_00_Skill03_EnterReady",
-              "Avatar_Advanced_Welt_00_Skill03_Phase01",
-              "Avatar_Advanced_Welt_00_Skill03_Phase02"
+              "Avatar_Welt_00_Skill03_Camera",
+              "Avatar_Welt_00_Skill03_EnterReady",
+              "Avatar_Welt_00_Skill03_Phase01",
+              "Avatar_Welt_00_Skill03_Phase02"
             ],
             "toughnessList": [
               0,
@@ -2504,12 +2462,12 @@ let characters = {
       "Talent": {
         "Time Distortion": {
           "variant1": {
-            "skillID": 1100404,
+            "skillID": 100404,
             "trigger": "SkillP01",
             "name": "Time Distortion",
             "type": "Enhance",
             "slot": "Talent",
-            "desc": "Enemy targets in the \"Weightless\" state have their DEF reduced by #2[i]% and their SPD reduced by #3[i]%. When Welt attacks an enemy that is already Slowed, he additionally deals Imaginary Additional DMG equal to #1[i]% of his ATK to the enemy.",
+            "desc": "When hitting an enemy that is already Slowed, Welt deals Imaginary Additional DMG equal to #1[i]% of his ATK to the enemy.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -2518,85 +2476,55 @@ let characters = {
             "skillPointGain": 0,
             "params": {
               "1": [
-                0.5,
-                0.4,
-                0.05
+                0.3
               ],
               "2": [
-                0.55,
-                0.4,
-                0.05
+                0.33
               ],
               "3": [
-                0.6,
-                0.4,
-                0.05
+                0.36
               ],
               "4": [
-                0.65,
-                0.4,
-                0.05
+                0.39
               ],
               "5": [
-                0.7,
-                0.4,
-                0.05
+                0.42
               ],
               "6": [
-                0.75,
-                0.4,
-                0.05
+                0.45
               ],
               "7": [
-                0.8125,
-                0.4,
-                0.05
+                0.4875
               ],
               "8": [
-                0.875,
-                0.4,
-                0.05
+                0.525
               ],
               "9": [
-                0.9375,
-                0.4,
-                0.05
+                0.5625
               ],
               "10": [
-                1,
-                0.4,
-                0.05
+                0.6
               ],
               "11": [
-                1.05,
-                0.4,
-                0.05
+                0.63
               ],
               "12": [
-                1.1,
-                0.4,
-                0.05
+                0.66
               ],
               "13": [
-                1.15,
-                0.4,
-                0.05
+                0.69
               ],
               "14": [
-                1.2,
-                0.4,
-                0.05
+                0.72
               ],
               "15": [
-                1.25,
-                0.4,
-                0.05
+                0.75
               ]
             },
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Advanced_Welt_00_PassiveSkill01"
+              "Avatar_Welt_00_PassiveSkill01"
             ],
             "toughnessList": [
               0,
@@ -2615,12 +2543,12 @@ let characters = {
       "Technique": {
         "Gravitational Imprisonment": {
           "variant1": {
-            "skillID": 1100407,
+            "skillID": 100407,
             "trigger": "SkillMaze",
             "name": "Gravitational Imprisonment",
             "type": "Impair",
             "slot": "Technique",
-            "desc": "After using Welt's Technique, create a Special Dimension that lasts for #4[i] second(s). Enemies in this Special Dimension have their movement speed reduced by #5[i]%. After entering combat with enemies in the Special Dimension, there is a #1[i]% base chance to Imprison the enemies for 1 turn.\\nImprisoned enemies have their actions delayed by #2[i]% and SPD reduced by #3[i]%. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "desc": "After using Welt's Technique, create a Special Dimension that lasts for #4[i] second(s). Enemies in this Special Dimension have their movement speed reduced by #5[i]%. After entering battle with enemies in the Special Dimension, there is a #1[i]% base chance to Imprison the enemies for 1 turn.\\nImprisoned enemies have their actions delayed by #2[i]% and SPD reduced by #3[i]%. Only 1 Dimension Effect created by allies can exist at the same time.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -2640,7 +2568,7 @@ let characters = {
             "skillEffect": "Impair",
             "maxLevel": 1,
             "configAbilityList": [
-              "Avatar_Advanced_Welt_00_SkillMazeInLevel"
+              "Avatar_Welt_00_SkillMazeInLevel"
             ],
             "toughnessList": [
               0,
@@ -2696,11 +2624,44 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Retribution",
+        "icon": "icon/skill/1004_skilltree1.png",
+        "desc": "When using Ultimate, there is a #1[i]% base chance to increase the DMG taken by the targets by #2[i]% for #3[i] turn(s).",
+        "params": [
+          1,
+          0.12,
+          2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Judgment",
+        "icon": "icon/skill/1004_skilltree2.png",
+        "desc": "Using Ultimate additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ],
+        "traceAbility": "Weltv0_Welt_Trace02"
+      },
+      "Point08": {
+        "name": "Punishment",
+        "icon": "icon/skill/1004_skilltree3.png",
+        "desc": "Deals #1[i]% more DMG to enemies inflicted with Weakness Break.",
+        "params": [
+          0.2
+        ],
+        "traceAbility": "Weltv0_Welt_Trace03"
+      },
       "Point09": {
-        "name": "Effect Hit Rate Boost",
-        "icon": "icon/property/IconStatusProbability.png",
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
         "stats": {
-          "EffectHitRate": 0.04
+          "ATK%": 0.04
         }
       },
       "Point10": {
@@ -2711,10 +2672,10 @@ let characters = {
         }
       },
       "Point11": {
-        "name": "Effect Hit Rate Boost",
-        "icon": "icon/property/IconStatusProbability.png",
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
         "stats": {
-          "EffectHitRate": 0.04
+          "ATK%": 0.04
         }
       },
       "Point12": {
@@ -2725,10 +2686,10 @@ let characters = {
         }
       },
       "Point13": {
-        "name": "Effect Hit Rate Boost",
-        "icon": "icon/property/IconStatusProbability.png",
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
         "stats": {
-          "EffectHitRate": 0.06
+          "ATK%": 0.06
         }
       },
       "Point14": {
@@ -2739,10 +2700,10 @@ let characters = {
         }
       },
       "Point15": {
-        "name": "Effect Hit Rate Boost",
-        "icon": "icon/property/IconStatusProbability.png",
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
         "stats": {
-          "EffectHitRate": 0.06
+          "ATK%": 0.06
         }
       },
       "Point16": {
@@ -2760,55 +2721,10 @@ let characters = {
         }
       },
       "Point18": {
-        "name": "Effect Hit Rate Boost",
-        "icon": "icon/property/IconStatusProbability.png",
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
         "stats": {
-          "EffectHitRate": 0.08
-        }
-      },
-      "Point06": {
-        "name": "Retribution",
-        "icon": "icon/skill/1004_skilltree1.png",
-        "desc": "When ally targets attack targets under the \"Weightless\" state, their DMG dealt increases by #1[i]%. This effect stacks up to #2[i] times and lasts for #3[i] turn(s). At the start of the battle, Welt regenerates #4[i] Energy.",
-        "params": [
-          0.1,
-          10,
-          2,
-          30
-        ],
-        "traceAbility": "Welt_Advanced_Welt_Trace01"
-      },
-      "Point07": {
-        "name": "Judgment",
-        "icon": "icon/skill/1004_skilltree2.png",
-        "desc": "When Welt uses Basic ATK or Skill, additionally deals 1 extra instance of Additional DMG to the enemy target. The Additional DMG dealt when using Basic ATK is equal to #1[i]% of Basic ATK DMG multiplier. The Additional DMG dealt when using Skill is equal to #2[i]% of Skill DMG multiplier.",
-        "params": [
-          0.8,
-          1.2
-        ],
-        "traceAbility": "Welt_Advanced_Welt_Trace02",
-        "extraEffects": {
-          "Additional DMG": {
-            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
-          }
-        }
-      },
-      "Point08": {
-        "name": "Punishment",
-        "icon": "icon/skill/1004_skilltree3.png",
-        "desc": "When Welt's Effect Hit Rate is greater than #1[i]%, for every #2[i]% that exceeds this value, increases ATK by #3[i]%, up to a maximum increase of #4[i]%. When using Ultimate, additionally restores #5[i] Energy.",
-        "params": [
-          0.4,
-          0.1,
-          0.2,
-          0.8,
-          5
-        ],
-        "traceAbility": "Welt_Advanced_Welt_Trace03",
-        "extraEffects": {
-          "Effect Hit Rate": {
-            "desc": "Effect Hit Rate increases the chance of applying debuffs to enemy targets. \\nA higher Effect Hit Rate will result in higher chances of successfully applying a debuff."
-          }
+          "ATK%": 0.08
         }
       }
     },
@@ -6982,9 +6898,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Seele": {
+  "Seele_v0": {
     "internalID": 1102,
-    "name": "Seele",
+    "name": "Seele_v0",
     "path": "The Hunt",
     "element": "Quantum",
     "rarity": 5,
@@ -7000,72 +6916,71 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "1110201",
+        "id": "110201",
         "name": "Extirpating Slash",
         "rank": 1,
-        "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%, and ignores 20% of target's DEF.",
-        "icon": "icon/skill/1110_rank1.png",
+        "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%.",
+        "icon": "icon/skill/1102_rank1.png",
         "paramsEido": [
           0.8,
-          0.15,
-          0.2
+          0.15
         ],
-        "eidoAbility": "Seele_Advanced_Seele_Eidolon1"
+        "eidoAbility": "Seelev0_Seele_Eidolon1"
       },
       {
-        "id": "1110202",
+        "id": "110202",
         "name": "Dancing Butterfly",
         "rank": 2,
         "desc": "The SPD Boost effect of Seele's Skill can stack up to 2 time(s).",
-        "icon": "icon/skill/1110_rank2.png",
+        "icon": "icon/skill/1102_rank2.png",
         "paramsEido": [
           2
         ]
       },
       {
-        "id": "1110203",
+        "id": "110203",
         "name": "Dazzling Tumult",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1110_skill.png"
+        "icon": "icon/skill/1102_skill.png"
       },
       {
-        "id": "1110204",
+        "id": "110204",
         "name": "Flitting Phantasm",
         "rank": 4,
         "desc": "Seele regenerates 15 Energy when she defeats an enemy.",
-        "icon": "icon/skill/1110_rank4.png",
+        "icon": "icon/skill/1102_rank4.png",
         "paramsEido": [
           15
         ],
-        "eidoAbility": "Seele_Advanced_Seele_Eidolon4"
+        "eidoAbility": "Seelev0_Seele_Eidolon4"
       },
       {
-        "id": "1110205",
+        "id": "110205",
         "name": "Piercing Shards",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1110_ultimate.png"
+        "icon": "icon/skill/1102_ultimate.png"
       },
       {
-        "id": "1110206",
+        "id": "110206",
         "name": "Shattering Shambles",
         "rank": 6,
-        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the target for 3 turn(s). Enemy targets in \"Butterfly Flurry\" will additionally take 1 instance of True DMG equal to 30% of Seele's Ultimate DMG after receiving an attack. When the target under the \"Butterfly Flurry\" state is defeated by any unit, Seele's Talent will also be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
-        "icon": "icon/skill/1110_rank6.png",
+        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the attacked enemy target for 1 turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum Additional DMG equal to 15% of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's Additional DMG triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
+        "icon": "icon/skill/1102_rank6.png",
         "paramsEido": [
-          0.3,
-          3
+          0.15,
+          1
         ],
         "extraEffects": {
-          "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
           },
           "Downed State": {
             "desc": "An ally will be incapacitated once their HP is reduced to 0."
           }
         },
-        "eidoAbility": "Seele_Advanced_Seele_Eidolon6"
+        "eidoAbility": "Seelev0_Seele_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -7082,7 +6997,7 @@ let characters = {
       "Basic ATK": {
         "Thwack": {
           "variant1": {
-            "skillID": 1110201,
+            "skillID": 110201,
             "trigger": "Skill01",
             "name": "Thwack",
             "type": "Single Target",
@@ -7131,9 +7046,9 @@ let characters = {
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
             "configAbilityList": [
-              "Avatar_Advanced_Seele_00_Skill01_Camera",
-              "Avatar_Advanced_Seele_00_Skill01_Phase01",
-              "Avatar_Advanced_Seele_00_Skill01_Phase02"
+              "Avatar_Seele_00_Skill01_Camera",
+              "Avatar_Seele_00_Skill01_Phase01",
+              "Avatar_Seele_00_Skill01_Phase02"
             ],
             "toughnessList": [
               30,
@@ -7147,12 +7062,12 @@ let characters = {
       "Skill": {
         "Sheathed Blade": {
           "variant1": {
-            "skillID": 1110202,
+            "skillID": 110202,
             "trigger": "Skill02",
             "name": "Sheathed Blade",
             "type": "Single Target",
             "slot": "Skill",
-            "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.\\nAfter an ally target attacks, if the attack target's current HP percentage is #4[i]% or below, Seele will automatically use her Skill at that target 1 time. This Skill does not consume Skill Points or regenerate Energy. This effect can only be triggered 1 time per turn and resets at the start of Seele's turn. If there are no valid targets to attack, she attacks the enemy target with the lowest HP percentage instead.",
+            "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -7161,94 +7076,79 @@ let characters = {
             "skillPointGain": 0,
             "params": {
               "1": [
-                1.8,
+                1.1,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "2": [
-                1.98,
+                1.21,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "3": [
-                2.16,
+                1.32,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "4": [
-                2.34,
+                1.43,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "5": [
-                2.52,
+                1.54,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "6": [
-                2.7,
+                1.65,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "7": [
-                2.925,
+                1.7875,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "8": [
-                3.15,
+                1.925,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "9": [
-                3.375,
+                2.0625,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "10": [
-                3.6,
+                2.2,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "11": [
-                3.78,
+                2.31,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "12": [
-                3.96,
+                2.42,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "13": [
-                4.14,
+                2.53,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "14": [
-                4.32,
+                2.64,
                 0.25,
-                3,
-                0.5
+                2
               ],
               "15": [
-                4.5,
+                2.75,
                 0.25,
-                3,
-                0.5
+                2
               ]
             },
             "element": "Quantum",
@@ -7256,9 +7156,9 @@ let characters = {
             "skillEffect": "SingleAttack",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Advanced_Seele_00_Skill02_Camera",
-              "Avatar_Advanced_Seele_00_Skill02_Phase01",
-              "Avatar_Advanced_Seele_00_Skill02_Phase02"
+              "Avatar_Seele_00_Skill02_Camera",
+              "Avatar_Seele_00_Skill02_Phase01",
+              "Avatar_Seele_00_Skill02_Phase02"
             ],
             "toughnessList": [
               60,
@@ -7272,7 +7172,7 @@ let characters = {
       "Ultimate": {
         "Butterfly Flurry": {
           "variant1": {
-            "skillID": 1110203,
+            "skillID": 110203,
             "trigger": "Skill03",
             "name": "Butterfly Flurry",
             "type": "Single Target",
@@ -7286,49 +7186,49 @@ let characters = {
             "skillPointGain": 0,
             "params": {
               "1": [
-                3.6
+                2.55
               ],
               "2": [
-                3.96
+                2.72
               ],
               "3": [
-                4.32
+                2.89
               ],
               "4": [
-                4.68
+                3.06
               ],
               "5": [
-                5.04
+                3.23
               ],
               "6": [
-                5.4
+                3.4
               ],
               "7": [
-                5.85
+                3.6125
               ],
               "8": [
-                6.3
+                3.825
               ],
               "9": [
-                6.75
+                4.0375
               ],
               "10": [
-                7.2
+                4.25
               ],
               "11": [
-                7.56
+                4.42
               ],
               "12": [
-                7.92
+                4.59
               ],
               "13": [
-                8.28
+                4.76
               ],
               "14": [
-                8.64
+                4.93
               ],
               "15": [
-                9
+                5.1
               ]
             },
             "element": "Quantum",
@@ -7336,10 +7236,10 @@ let characters = {
             "skillEffect": "SingleAttack",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Advanced_Seele_00_Skill03_Camera",
-              "Avatar_Advanced_Seele_00_Skill03_EnterReady",
-              "Avatar_Advanced_Seele_00_Skill03_Phase01",
-              "Avatar_Advanced_Seele_00_Skill03_Phase02"
+              "Avatar_Seele_00_Skill03_Camera",
+              "Avatar_Seele_00_Skill03_EnterReady",
+              "Avatar_Seele_00_Skill03_Phase01",
+              "Avatar_Seele_00_Skill03_Phase02"
             ],
             "toughnessList": [
               90,
@@ -7353,12 +7253,12 @@ let characters = {
       "Talent": {
         "Resurgence": {
           "variant1": {
-            "skillID": 1110204,
+            "skillID": 110204,
             "trigger": "SkillP01",
             "name": "Resurgence",
             "type": "Enhance",
             "slot": "Talent",
-            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG dealt by Seele increases by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
+            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG of Seele's attacks by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -7368,71 +7268,71 @@ let characters = {
             "params": {
               "1": [
                 0.4,
-                3
+                1
               ],
               "2": [
                 0.44,
-                3
+                1
               ],
               "3": [
                 0.48,
-                3
+                1
               ],
               "4": [
                 0.52,
-                3
+                1
               ],
               "5": [
                 0.56,
-                3
+                1
               ],
               "6": [
                 0.6,
-                3
+                1
               ],
               "7": [
                 0.65,
-                3
+                1
               ],
               "8": [
                 0.7,
-                3
+                1
               ],
               "9": [
                 0.75,
-                3
+                1
               ],
               "10": [
                 0.8,
-                3
+                1
               ],
               "11": [
                 0.84,
-                3
+                1
               ],
               "12": [
                 0.88,
-                3
+                1
               ],
               "13": [
                 0.92,
-                3
+                1
               ],
               "14": [
                 0.96,
-                3
+                1
               ],
               "15": [
                 1,
-                3
+                1
               ]
             },
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Advanced_Seele_00_Bonus_Camera",
-              "Avatar_Advanced_Seele_00_PassiveSkill_1",
-              "Avatar_Advanced_Seele_00_Bonus"
+              "Avatar_Seele_00_Bonus_Camera",
+              "Avatar_Seele_00_PassiveSkill_1",
+              "Avatar_Seele_00_Bonus"
             ],
             "toughnessList": [
               0,
@@ -7451,12 +7351,12 @@ let characters = {
       "Technique": {
         "Phantom Illusion": {
           "variant1": {
-            "skillID": 1110207,
+            "skillID": 110207,
             "trigger": "SkillMaze",
             "name": "Phantom Illusion",
             "type": "Enhance",
             "slot": "Technique",
-            "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering combat by attacking enemies, Seele will immediately enter the Amplification state and deals Quantum DMG equal to Seele's Skill DMG multiplier to random enemy target 1 time. This DMG is a guaranteed CRIT Hit.",
+            "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering battle by attacking enemies, Seele will immediately enter the Amplification state.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -7472,7 +7372,7 @@ let characters = {
             "skillEffect": "Enhance",
             "maxLevel": 1,
             "configAbilityList": [
-              "Avatar_Advanced_Seele_00_SkillMazeInLevel"
+              "Avatar_Seele_00_SkillMazeInLevel"
             ],
             "toughnessList": [
               0,
@@ -7520,12 +7420,22 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Nightshade",
+        "icon": "icon/skill/1102_skilltree1.png",
+        "desc": "When current HP percentage is #1[i]% or lower, reduces the chance of being attacked by enemies.",
+        "params": [
+          0.5,
+          0.5
+        ],
+        "traceAbility": "Seelev0_Seele_Trace01"
+      },
       "Point07": {
         "name": "Lacerate",
         "icon": "icon/skill/1102_skilltree2.png",
         "desc": "While Seele is in the Amplification state, her Quantum RES PEN increases by #1[i]%.",
         "params": [
-          0.25
+          0.2
         ],
         "extraEffects": {
           "RES PEN": {
@@ -7615,17 +7525,6 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
-      },
-      "Point06": {
-        "name": "Nightshade",
-        "icon": "icon/skill/1102_skilltree1.png",
-        "desc": "When defeating an enemy target, increases the wearer's DMG dealt by #1[i]%. This effect can stack up to #2[i] time(s) and lasts for #3[i] turn(s).",
-        "params": [
-          0.5,
-          3,
-          3
-        ],
-        "traceAbility": "Seele_Advanced_Seele_Trace01"
       }
     },
     "hasSummon": false,
@@ -39254,9 +39153,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Firefly": {
+  "Firefly_v0": {
     "internalID": 1310,
-    "name": "Firefly",
+    "name": "Firefly_v0",
     "path": "Destruction",
     "element": "Fire",
     "rarity": 5,
@@ -39272,22 +39171,26 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "1131001",
+        "id": "131001",
         "name": "In Reddened Chrysalis, I Once Rest",
         "rank": 1,
         "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
-        "icon": "icon/skill/1131_rank1.png",
+        "icon": "icon/skill/1310_rank1.png",
         "paramsEido": [
           0.15
         ],
-        "eidoAbility": "Firefly_Advanced_Sam_Eidolon1"
+        "eidoAbility": "Fireflyv0_Sam_Eidolon1"
       },
       {
-        "id": "1131002",
+        "id": "131002",
         "name": "From Shattered Sky, I Free Fall",
         "rank": 2,
-        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can only trigger 1 time per turn, and the trigger count resets at the start of SAM's turn.",
-        "icon": "icon/skill/1131_rank2.png",
+        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can trigger again after 1 turn(s).",
+        "icon": "icon/skill/1310_rank2.png",
+        "paramsEido": [
+          1,
+          1
+        ],
         "extraEffects": {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
@@ -39296,38 +39199,39 @@ let characters = {
             "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
           }
         },
-        "eidoAbility": "Firefly_Advanced_Sam_Eidolon2"
+        "eidoAbility": "Fireflyv0_Sam_Eidolon2"
       },
       {
-        "id": "1131003",
+        "id": "131003",
         "name": "Amidst Silenced Stars, I Deep Sleep",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1131_skill.png"
+        "icon": "icon/skill/1310_skill.png"
       },
       {
-        "id": "1131004",
+        "id": "131004",
         "name": "Upon Lighted Fyrefly, I Soon Gaze",
         "rank": 4,
         "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
-        "icon": "icon/skill/1131_rank4.png",
+        "icon": "icon/skill/1310_rank4.png",
         "paramsEido": [
           0.5
-        ]
+        ],
+        "eidoAbility": "Fireflyv0_Sam_Eidolon4"
       },
       {
-        "id": "1131005",
+        "id": "131005",
         "name": "From Undreamt Night, I Thence Shine",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1131_ultimate.png"
+        "icon": "icon/skill/1310_ultimate.png"
       },
       {
-        "id": "1131006",
+        "id": "131006",
         "name": "In Finalized Morrow, I Full Bloom",
         "rank": 6,
         "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
-        "icon": "icon/skill/1131_rank6.png",
+        "icon": "icon/skill/1310_rank6.png",
         "paramsEido": [
           0.2,
           0.5
@@ -39337,7 +39241,7 @@ let characters = {
             "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
         },
-        "eidoAbility": "Firefly_Advanced_Sam_Eidolon6"
+        "eidoAbility": "Fireflyv0_Sam_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -39354,7 +39258,7 @@ let characters = {
       "Basic ATK": {
         "Order: Flare Propulsion": {
           "variant1": {
-            "skillID": 1131001,
+            "skillID": 131001,
             "trigger": "Skill01",
             "name": "Order: Flare Propulsion",
             "type": "Single Target",
@@ -39404,8 +39308,8 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": [
               "Avatar_Sam_00_Skill01_Camera",
-              "Avatar_Advanced_Sam_00_Skill01_Phase01",
-              "Avatar_Advanced_Sam_00_Skill01_Phase02"
+              "Avatar_Sam_00_Skill01_Phase01",
+              "Avatar_Sam_00_Skill01_Phase02"
             ],
             "toughnessList": [
               30,
@@ -39417,7 +39321,7 @@ let characters = {
         },
         "Fyrefly Type-IV: Pyrogenic Decimation": {
           "variant1": {
-            "skillID": 1131008,
+            "skillID": 131008,
             "trigger": "Skill11",
             "name": "Fyrefly Type-IV: Pyrogenic Decimation",
             "type": "Single Target",
@@ -39477,8 +39381,8 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": [
               "Avatar_Sam_00_Skill11_Camera",
-              "Avatar_Advanced_Sam_00_Skill11_Phase01",
-              "Avatar_Advanced_Sam_00_Skill11_Phase02"
+              "Avatar_Sam_00_Skill11_Phase01",
+              "Avatar_Sam_00_Skill11_Phase02"
             ],
             "toughnessList": [
               45,
@@ -39492,7 +39396,7 @@ let characters = {
       "Skill": {
         "Order: Aerial Bombardment": {
           "variant1": {
-            "skillID": 1131002,
+            "skillID": 131002,
             "trigger": "Skill02",
             "name": "Order: Aerial Bombardment",
             "type": "Single Target",
@@ -39602,8 +39506,8 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill02_Camera",
-              "Avatar_Advanced_Sam_00_Skill02_Phase01",
-              "Avatar_Advanced_Sam_00_Skill02_Phase02"
+              "Avatar_Sam_00_Skill02_Phase01",
+              "Avatar_Sam_00_Skill02_Phase02"
             ],
             "toughnessList": [
               60,
@@ -39620,12 +39524,12 @@ let characters = {
         },
         "Fyrefly Type-IV: Deathstar Overload": {
           "variant1": {
-            "skillID": 1131009,
+            "skillID": 131009,
             "trigger": "Skill21",
             "name": "Fyrefly Type-IV: Deathstar Overload",
             "type": "Blast",
             "slot": "Skill",
-            "desc": "Restores HP by an amount equal to 25% of this unit's Max HP. Adds Fire Weakness to one designated enemy and its adjacent targets, lasting for 2 turns. Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
+            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -39636,152 +39540,137 @@ let characters = {
               "1": [
                 1,
                 0.5,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "2": [
                 1.1,
                 0.55,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "3": [
                 1.2,
                 0.6,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "4": [
                 1.3,
                 0.65,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "5": [
                 1.4,
                 0.7,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "6": [
                 1.5,
                 0.75,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "7": [
                 1.625,
                 0.8125,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "8": [
                 1.75,
                 0.875,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "9": [
                 1.875,
                 0.9375,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "10": [
                 2,
                 1,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "11": [
                 2.1,
                 1.05,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "12": [
                 2.2,
                 1.1,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "13": [
                 2.3,
                 1.15,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "14": [
                 2.4,
                 1.2,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ],
               "15": [
                 2.5,
                 1.25,
-                0,
-                0,
+                0.25,
+                2,
                 0.2,
                 0.1,
-                3.6,
-                0
+                3.6
               ]
             },
             "element": "Fire",
@@ -39790,8 +39679,8 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill21_Camera",
-              "Avatar_Advanced_Sam_00_Skill21_Phase01",
-              "Avatar_Advanced_Sam_00_Skill21_Phase02"
+              "Avatar_Sam_00_Skill21_Phase01",
+              "Avatar_Sam_00_Skill21_Phase02"
             ],
             "toughnessList": [
               90,
@@ -39805,7 +39694,7 @@ let characters = {
       "Ultimate": {
         "Fyrefly Type-IV: Complete Combustion": {
           "variant1": {
-            "skillID": 1131003,
+            "skillID": 131003,
             "trigger": "Skill03",
             "name": "Fyrefly Type-IV: Complete Combustion",
             "type": "Enhance",
@@ -39914,9 +39803,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill03_Camera",
-              "Avatar_Advanced_Sam_00_Skill03_EnterReady",
-              "Avatar_Advanced_Sam_00_Skill03_Phase01",
-              "Avatar_Advanced_Sam_00_Skill03_Phase02"
+              "Avatar_Sam_00_Skill03_EnterReady",
+              "Avatar_Sam_00_Skill03_Phase01",
+              "Avatar_Sam_00_Skill03_Phase02"
             ],
             "toughnessList": [
               0,
@@ -39930,7 +39819,7 @@ let characters = {
       "Talent": {
         "Chrysalid Pyronexus": {
           "variant1": {
-            "skillID": 1131004,
+            "skillID": 131004,
             "trigger": "SkillP01",
             "name": "Chrysalid Pyronexus",
             "type": "Defense",
@@ -40038,8 +39927,9 @@ let characters = {
             "skillEffect": "Defence",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Advanced_Sam_00_PassiveSkill01",
-              "Avatar_Advanced_Sam_00_PassiveSkill01_BattleEvent_Insert"
+              "Avatar_Sam_00_PassiveSkill01",
+              "Avatar_Sam_00_Rank02_Bonus",
+              "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
             ],
             "toughnessList": [
               0,
@@ -40058,7 +39948,7 @@ let characters = {
       "Technique": {
         "Δ Order: Meteoric Incineration": {
           "variant1": {
-            "skillID": 1131007,
+            "skillID": 131007,
             "trigger": "SkillMaze",
             "name": "Δ Order: Meteoric Incineration",
             "slot": "Technique",
@@ -40081,7 +39971,7 @@ let characters = {
             "skillEffect": "MazeAttack",
             "maxLevel": 1,
             "configAbilityList": [
-              "Avatar_Advanced_Sam_00_SkillMazeInLevel"
+              "Avatar_Sam_00_SkillMazeInLevel"
             ],
             "toughnessList": [
               60,
@@ -40129,6 +40019,35 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Module α: Antilag Outburst",
+        "icon": "icon/skill/1310_skilltree1.png",
+        "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
+        "params": [
+          0.55
+        ],
+        "traceAbility": "Fireflyv0_Sam_Trace01"
+      },
+      "Point07": {
+        "name": "Module β: Autoreactive Armor",
+        "icon": "icon/skill/1310_skilltree2.png",
+        "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
+        "params": [
+          2,
+          3.6,
+          0.35,
+          0.5
+        ],
+        "traceAbility": "Fireflyv0_Sam_Trace02",
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+          }
+        }
+      },
       "Point08": {
         "name": "Module γ: Core Overload",
         "icon": "icon/skill/1310_skilltree3.png",
@@ -40138,7 +40057,7 @@ let characters = {
           10,
           0.007999999
         ],
-        "traceAbility": "Firefly_Advanced_Sam_Trace03"
+        "traceAbility": "Fireflyv0_Sam_Trace03"
       },
       "Point09": {
         "name": "Break Boost",
@@ -40208,43 +40127,6 @@ let characters = {
         "icon": "icon/property/IconBreakUp.png",
         "stats": {
           "DamageBreak": 0.107
-        }
-      },
-      "Point06": {
-        "name": "Module α: Antilag Outburst",
-        "icon": "icon/skill/1310_skilltree1.png",
-        "desc": "While in the Complete Combustion state, SAM's Break Effect increases by #1[i]%. When using Enhanced Basic ATK or Enhanced Skill to inflict Weakness Break on a target, the Complete Combustion countdown is delayed by #2[i]%. This effect can trigger a maximum of #3[i] time(s) during each Complete Combustion state.",
-        "params": [
-          0.25,
-          0.1,
-          3
-        ],
-        "extraEffects": {
-          "Weakness Break State": {
-            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
-          },
-          "Action Delayed": {
-            "desc": "Increases the target's waiting interval before the next action."
-          }
-        }
-      },
-      "Point07": {
-        "name": "Module β: Autoreactive Armor",
-        "icon": "icon/skill/1310_skilltree2.png",
-        "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
-        "params": [
-          1.5,
-          3,
-          1,
-          1.5
-        ],
-        "extraEffects": {
-          "Weakness Break State": {
-            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
-          },
-          "Super Break DMG": {
-            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
-          }
         }
       }
     },
@@ -71520,713 +71402,6 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Welt_v0": {
-    "internalID": 1004,
-    "name": "Welt_v0",
-    "path": "Nihility",
-    "element": "Imaginary",
-    "rarity": 5,
-    "energyMax": 120,
-    "baseStats": {
-      "ATKBase": 620.9280000000001,
-      "DEFBase": 509.355,
-      "HPBase": 1125.4319999999998,
-      "SPDBase": 102,
-      "CritRateBase": 0.05,
-      "CritDamageBase": 0.5,
-      "CharacterAggroBase": 100
-    },
-    "eidolons": [
-      {
-        "id": "100401",
-        "name": "Legacy of Honor",
-        "rank": 1,
-        "desc": "After using Ultimate, Welt gets enhanced. Then, the next 2 time(s) he uses Basic ATK or Skill, deals 1 extra instance of Additional DMG to the enemy target. The Additional DMG dealt when using Basic ATK is equal to 50% of Basic ATK DMG multiplier. The Additional DMG dealt when using Skill is equal to 80% of Skill DMG multiplier.",
-        "icon": "icon/skill/1004_rank1.png",
-        "paramsEido": [
-          0.5,
-          0.8,
-          2
-        ],
-        "extraEffects": {
-          "Additional DMG": {
-            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
-          }
-        }
-      },
-      {
-        "id": "100402",
-        "name": "Conflux of Stars",
-        "rank": 2,
-        "desc": "When his Talent is triggered, Welt regenerates 3 Energy.",
-        "icon": "icon/skill/1004_rank2.png",
-        "paramsEido": [
-          3
-        ]
-      },
-      {
-        "id": "100403",
-        "name": "Prayer of Peace",
-        "rank": 3,
-        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1004_skill.png"
-      },
-      {
-        "id": "100404",
-        "name": "Appellation of Justice",
-        "rank": 4,
-        "desc": "When using Skill, increases the base chance of reducing the attacked enemy target's SPD by 35%.",
-        "icon": "icon/skill/1004_rank4.png",
-        "paramsEido": [
-          0.35
-        ],
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          }
-        }
-      },
-      {
-        "id": "100405",
-        "name": "Power of Kindness",
-        "rank": 5,
-        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1004_ultimate.png"
-      },
-      {
-        "id": "100406",
-        "name": "Prospect of Glory",
-        "rank": 6,
-        "desc": "When using Skill, deals DMG for 1 extra time to one random enemy.",
-        "icon": "icon/skill/1004_rank6.png"
-      }
-    ],
-    "eidlonLevelBonuses": {
-      "3": {
-        "Basic ATK": 1,
-        "Skill": 2
-      },
-      "5": {
-        "Ultimate": 2,
-        "Talent": 2
-      }
-    },
-    "skills": {
-      "Basic ATK": {
-        "Gravity Suppression": {
-          "variant1": {
-            "skillID": 100401,
-            "trigger": "Skill01",
-            "name": "Gravity Suppression",
-            "type": "Single Target",
-            "slot": "Basic ATK",
-            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy.",
-            "energyCost": null,
-            "energyRegen": 20,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 10,
-            "skillPointCost": 0,
-            "skillPointGain": 1,
-            "params": {
-              "1": [
-                0.5
-              ],
-              "2": [
-                0.6
-              ],
-              "3": [
-                0.7
-              ],
-              "4": [
-                0.8
-              ],
-              "5": [
-                0.9
-              ],
-              "6": [
-                1
-              ],
-              "7": [
-                1.1
-              ],
-              "8": [
-                1.2
-              ],
-              "9": [
-                1.3
-              ],
-              "10": [
-                1.4
-              ]
-            },
-            "element": "Imaginary",
-            "attackType": "Normal",
-            "skillEffect": "SingleAttack",
-            "maxLevel": 10,
-            "configAbilityList": [
-              "Avatar_Welt_00_Skill01_Camera",
-              "Avatar_Welt_00_Skill01_Phase01",
-              "Avatar_Welt_00_Skill01_Phase02"
-            ],
-            "toughnessList": [
-              30,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Skill": {
-        "Edge of the Void": {
-          "variant1": {
-            "skillID": 100402,
-            "trigger": "Skill02",
-            "name": "Edge of the Void",
-            "type": "Bounce",
-            "slot": "Skill",
-            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and additionally deals 2 instances of DMG, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to a random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
-            "energyCost": null,
-            "energyRegen": 10,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 10,
-            "skillPointCost": 1,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                0.36,
-                0.65,
-                0.1,
-                2
-              ],
-              "2": [
-                0.396,
-                0.66,
-                0.1,
-                2
-              ],
-              "3": [
-                0.432,
-                0.67,
-                0.1,
-                2
-              ],
-              "4": [
-                0.468,
-                0.68,
-                0.1,
-                2
-              ],
-              "5": [
-                0.504,
-                0.69,
-                0.1,
-                2
-              ],
-              "6": [
-                0.54,
-                0.7,
-                0.1,
-                2
-              ],
-              "7": [
-                0.585,
-                0.7125,
-                0.1,
-                2
-              ],
-              "8": [
-                0.63,
-                0.725,
-                0.1,
-                2
-              ],
-              "9": [
-                0.675,
-                0.7375,
-                0.1,
-                2
-              ],
-              "10": [
-                0.72,
-                0.75,
-                0.1,
-                2
-              ],
-              "11": [
-                0.756,
-                0.76,
-                0.1,
-                2
-              ],
-              "12": [
-                0.792,
-                0.77,
-                0.1,
-                2
-              ],
-              "13": [
-                0.828,
-                0.78,
-                0.1,
-                2
-              ],
-              "14": [
-                0.864,
-                0.79,
-                0.1,
-                2
-              ],
-              "15": [
-                0.9,
-                0.8,
-                0.1,
-                2
-              ]
-            },
-            "element": "Imaginary",
-            "attackType": "BPSkill",
-            "skillEffect": "Bounce",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Welt_00_Skill02_Camera",
-              "Avatar_Welt_00_Skill02_Phase01",
-              "Avatar_Welt_00_Skill02_Phase02"
-            ],
-            "toughnessList": [
-              30,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Base Chance": {
-                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-              }
-            }
-          }
-        }
-      },
-      "Ultimate": {
-        "Synthetic Black Hole": {
-          "variant1": {
-            "skillID": 100403,
-            "trigger": "Skill03",
-            "name": "Synthetic Black Hole",
-            "type": "AoE",
-            "slot": "Ultimate",
-            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to all enemies, with a #3[i]% base chance for enemies hit by this ability to be Imprisoned for 1 turn.\\nImprisoned enemies have their actions delayed by #2[f1]% and SPD reduced by #4[i]%.",
-            "energyCost": 120,
-            "energyRegen": 5,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 20,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                0.9,
-                0.32,
-                1,
-                0.1
-              ],
-              "2": [
-                0.96,
-                0.328,
-                1,
-                0.1
-              ],
-              "3": [
-                1.02,
-                0.336,
-                1,
-                0.1
-              ],
-              "4": [
-                1.08,
-                0.344,
-                1,
-                0.1
-              ],
-              "5": [
-                1.14,
-                0.352,
-                1,
-                0.1
-              ],
-              "6": [
-                1.2,
-                0.36,
-                1,
-                0.1
-              ],
-              "7": [
-                1.275,
-                0.37,
-                1,
-                0.1
-              ],
-              "8": [
-                1.35,
-                0.38,
-                1,
-                0.1
-              ],
-              "9": [
-                1.425,
-                0.39,
-                1,
-                0.1
-              ],
-              "10": [
-                1.5,
-                0.4,
-                1,
-                0.1
-              ],
-              "11": [
-                1.56,
-                0.408,
-                1,
-                0.1
-              ],
-              "12": [
-                1.62,
-                0.416,
-                1,
-                0.1
-              ],
-              "13": [
-                1.68,
-                0.424,
-                1,
-                0.1
-              ],
-              "14": [
-                1.74,
-                0.432,
-                1,
-                0.1
-              ],
-              "15": [
-                1.8,
-                0.44,
-                1,
-                0.1
-              ]
-            },
-            "element": "Imaginary",
-            "attackType": "Ultra",
-            "skillEffect": "AoEAttack",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Welt_00_Skill03_Camera",
-              "Avatar_Welt_00_Skill03_EnterReady",
-              "Avatar_Welt_00_Skill03_Phase01",
-              "Avatar_Welt_00_Skill03_Phase02"
-            ],
-            "toughnessList": [
-              0,
-              60,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Base Chance": {
-                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-              },
-              "Action Delayed": {
-                "desc": "Increases the target's waiting interval before the next action."
-              }
-            }
-          }
-        }
-      },
-      "Talent": {
-        "Time Distortion": {
-          "variant1": {
-            "skillID": 100404,
-            "trigger": "SkillP01",
-            "name": "Time Distortion",
-            "type": "Enhance",
-            "slot": "Talent",
-            "desc": "When hitting an enemy that is already Slowed, Welt deals Imaginary Additional DMG equal to #1[i]% of his ATK to the enemy.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                0.3
-              ],
-              "2": [
-                0.33
-              ],
-              "3": [
-                0.36
-              ],
-              "4": [
-                0.39
-              ],
-              "5": [
-                0.42
-              ],
-              "6": [
-                0.45
-              ],
-              "7": [
-                0.4875
-              ],
-              "8": [
-                0.525
-              ],
-              "9": [
-                0.5625
-              ],
-              "10": [
-                0.6
-              ],
-              "11": [
-                0.63
-              ],
-              "12": [
-                0.66
-              ],
-              "13": [
-                0.69
-              ],
-              "14": [
-                0.72
-              ],
-              "15": [
-                0.75
-              ]
-            },
-            "skillEffect": "Enhance",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Welt_00_PassiveSkill01"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Additional DMG": {
-                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
-              }
-            }
-          }
-        }
-      },
-      "Technique": {
-        "Gravitational Imprisonment": {
-          "variant1": {
-            "skillID": 100407,
-            "trigger": "SkillMaze",
-            "name": "Gravitational Imprisonment",
-            "type": "Impair",
-            "slot": "Technique",
-            "desc": "After using Welt's Technique, create a Special Dimension that lasts for #4[i] second(s). Enemies in this Special Dimension have their movement speed reduced by #5[i]%. After entering battle with enemies in the Special Dimension, there is a #1[i]% base chance to Imprison the enemies for 1 turn.\\nImprisoned enemies have their actions delayed by #2[i]% and SPD reduced by #3[i]%. Only 1 Dimension Effect created by allies can exist at the same time.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                1,
-                0.2,
-                0.1,
-                15,
-                0.5
-              ]
-            },
-            "attackType": "Maze",
-            "skillEffect": "Impair",
-            "maxLevel": 1,
-            "configAbilityList": [
-              "Avatar_Welt_00_SkillMazeInLevel"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Base Chance": {
-                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-              },
-              "Action Delayed": {
-                "desc": "Increases the target's waiting interval before the next action."
-              }
-            }
-          }
-        }
-      }
-    },
-    "traces": {
-      "Point01": {
-        "icon": "icon/skill/1004_basic_atk.png",
-        "skillRef": {
-          "skillName": "Gravity Suppression",
-          "skillSlot": "Basic ATK"
-        }
-      },
-      "Point02": {
-        "icon": "icon/skill/1004_skill.png",
-        "skillRef": {
-          "skillName": "Edge of the Void",
-          "skillSlot": "Skill"
-        }
-      },
-      "Point03": {
-        "icon": "icon/skill/1004_ultimate.png",
-        "skillRef": {
-          "skillName": "Synthetic Black Hole",
-          "skillSlot": "Ultimate"
-        }
-      },
-      "Point04": {
-        "icon": "icon/skill/1004_talent.png",
-        "skillRef": {
-          "skillName": "Time Distortion",
-          "skillSlot": "Talent"
-        }
-      },
-      "Point05": {
-        "icon": "icon/skill/1004_technique.png",
-        "skillRef": {
-          "skillName": "Gravitational Imprisonment",
-          "skillSlot": "Technique"
-        }
-      },
-      "Point06": {
-        "name": "Retribution",
-        "icon": "icon/skill/1004_skilltree1.png",
-        "desc": "When using Ultimate, there is a #1[i]% base chance to increase the DMG taken by the targets by #2[i]% for #3[i] turn(s).",
-        "params": [
-          1,
-          0.12,
-          2
-        ],
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          }
-        }
-      },
-      "Point07": {
-        "name": "Judgment",
-        "icon": "icon/skill/1004_skilltree2.png",
-        "desc": "Using Ultimate additionally regenerates #1[i] Energy.",
-        "params": [
-          10
-        ],
-        "traceAbility": "Weltv0_Welt_Trace02"
-      },
-      "Point08": {
-        "name": "Punishment",
-        "icon": "icon/skill/1004_skilltree3.png",
-        "desc": "Deals #1[i]% more DMG to enemies inflicted with Weakness Break.",
-        "params": [
-          0.2
-        ],
-        "traceAbility": "Weltv0_Welt_Trace03"
-      },
-      "Point09": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.04
-        }
-      },
-      "Point10": {
-        "name": "DMG Boost: Imaginary",
-        "icon": "icon/property/IconImaginaryAddedRatio.png",
-        "stats": {
-          "DamageImaginary": 0.032
-        }
-      },
-      "Point11": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.04
-        }
-      },
-      "Point12": {
-        "name": "Effect RES Boost",
-        "icon": "icon/property/IconStatusResistance.png",
-        "stats": {
-          "EffectRES": 0.04
-        }
-      },
-      "Point13": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.06
-        }
-      },
-      "Point14": {
-        "name": "DMG Boost: Imaginary",
-        "icon": "icon/property/IconImaginaryAddedRatio.png",
-        "stats": {
-          "DamageImaginary": 0.048
-        }
-      },
-      "Point15": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.06
-        }
-      },
-      "Point16": {
-        "name": "Effect RES Boost",
-        "icon": "icon/property/IconStatusResistance.png",
-        "stats": {
-          "EffectRES": 0.06
-        }
-      },
-      "Point17": {
-        "name": "DMG Boost: Imaginary",
-        "icon": "icon/property/IconImaginaryAddedRatio.png",
-        "stats": {
-          "DamageImaginary": 0.064
-        }
-      },
-      "Point18": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.08
-        }
-      }
-    },
-    "hasSummon": false,
-    "icon": "icon/character/1004.png",
-    "preview": "image/character_preview/1004.png",
-    "portrait": "image/character_portrait/1004.png",
-    "bannerOffsets": [
-      12,
-      -32,
-      0.61,
-      12,
-      -32,
-      0.61,
-      12,
-      -32,
-      0.61
-    ],
-    "isBuffed": true
-  },
   "Kafka_v0": {
     "internalID": 1005,
     "name": "Kafka_v0",
@@ -73778,652 +72953,6 @@ let characters = {
       -33,
       33,
       0.5
-    ],
-    "isBuffed": true
-  },
-  "Seele_v0": {
-    "internalID": 1102,
-    "name": "Seele_v0",
-    "path": "The Hunt",
-    "element": "Quantum",
-    "rarity": 5,
-    "energyMax": 120,
-    "baseStats": {
-      "ATKBase": 640.332,
-      "DEFBase": 363.82500000000005,
-      "HPBase": 931.392,
-      "SPDBase": 115,
-      "CritRateBase": 0.05,
-      "CritDamageBase": 0.5,
-      "CharacterAggroBase": 75
-    },
-    "eidolons": [
-      {
-        "id": "110201",
-        "name": "Extirpating Slash",
-        "rank": 1,
-        "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%.",
-        "icon": "icon/skill/1102_rank1.png",
-        "paramsEido": [
-          0.8,
-          0.15
-        ],
-        "eidoAbility": "Seelev0_Seele_Eidolon1"
-      },
-      {
-        "id": "110202",
-        "name": "Dancing Butterfly",
-        "rank": 2,
-        "desc": "The SPD Boost effect of Seele's Skill can stack up to 2 time(s).",
-        "icon": "icon/skill/1102_rank2.png",
-        "paramsEido": [
-          2
-        ]
-      },
-      {
-        "id": "110203",
-        "name": "Dazzling Tumult",
-        "rank": 3,
-        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1102_skill.png"
-      },
-      {
-        "id": "110204",
-        "name": "Flitting Phantasm",
-        "rank": 4,
-        "desc": "Seele regenerates 15 Energy when she defeats an enemy.",
-        "icon": "icon/skill/1102_rank4.png",
-        "paramsEido": [
-          15
-        ],
-        "eidoAbility": "Seelev0_Seele_Eidolon4"
-      },
-      {
-        "id": "110205",
-        "name": "Piercing Shards",
-        "rank": 5,
-        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1102_ultimate.png"
-      },
-      {
-        "id": "110206",
-        "name": "Shattering Shambles",
-        "rank": 6,
-        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the attacked enemy target for 1 turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum Additional DMG equal to 15% of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's Additional DMG triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
-        "icon": "icon/skill/1102_rank6.png",
-        "paramsEido": [
-          0.15,
-          1
-        ],
-        "extraEffects": {
-          "Additional DMG": {
-            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
-          },
-          "Downed State": {
-            "desc": "An ally will be incapacitated once their HP is reduced to 0."
-          }
-        },
-        "eidoAbility": "Seelev0_Seele_Eidolon6"
-      }
-    ],
-    "eidlonLevelBonuses": {
-      "3": {
-        "Skill": 2,
-        "Talent": 2
-      },
-      "5": {
-        "Basic ATK": 1,
-        "Ultimate": 2
-      }
-    },
-    "skills": {
-      "Basic ATK": {
-        "Thwack": {
-          "variant1": {
-            "skillID": 110201,
-            "trigger": "Skill01",
-            "name": "Thwack",
-            "type": "Single Target",
-            "slot": "Basic ATK",
-            "desc": "Deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
-            "energyCost": null,
-            "energyRegen": 20,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 10,
-            "skillPointCost": 0,
-            "skillPointGain": 1,
-            "params": {
-              "1": [
-                0.5
-              ],
-              "2": [
-                0.6
-              ],
-              "3": [
-                0.7
-              ],
-              "4": [
-                0.8
-              ],
-              "5": [
-                0.9
-              ],
-              "6": [
-                1
-              ],
-              "7": [
-                1.1
-              ],
-              "8": [
-                1.2
-              ],
-              "9": [
-                1.3
-              ],
-              "10": [
-                1.4
-              ]
-            },
-            "element": "Quantum",
-            "attackType": "Normal",
-            "skillEffect": "SingleAttack",
-            "maxLevel": 10,
-            "configAbilityList": [
-              "Avatar_Seele_00_Skill01_Camera",
-              "Avatar_Seele_00_Skill01_Phase01",
-              "Avatar_Seele_00_Skill01_Phase02"
-            ],
-            "toughnessList": [
-              30,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Skill": {
-        "Sheathed Blade": {
-          "variant1": {
-            "skillID": 110202,
-            "trigger": "Skill02",
-            "name": "Sheathed Blade",
-            "type": "Single Target",
-            "slot": "Skill",
-            "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
-            "energyCost": null,
-            "energyRegen": 30,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 20,
-            "skillPointCost": 1,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                1.1,
-                0.25,
-                2
-              ],
-              "2": [
-                1.21,
-                0.25,
-                2
-              ],
-              "3": [
-                1.32,
-                0.25,
-                2
-              ],
-              "4": [
-                1.43,
-                0.25,
-                2
-              ],
-              "5": [
-                1.54,
-                0.25,
-                2
-              ],
-              "6": [
-                1.65,
-                0.25,
-                2
-              ],
-              "7": [
-                1.7875,
-                0.25,
-                2
-              ],
-              "8": [
-                1.925,
-                0.25,
-                2
-              ],
-              "9": [
-                2.0625,
-                0.25,
-                2
-              ],
-              "10": [
-                2.2,
-                0.25,
-                2
-              ],
-              "11": [
-                2.31,
-                0.25,
-                2
-              ],
-              "12": [
-                2.42,
-                0.25,
-                2
-              ],
-              "13": [
-                2.53,
-                0.25,
-                2
-              ],
-              "14": [
-                2.64,
-                0.25,
-                2
-              ],
-              "15": [
-                2.75,
-                0.25,
-                2
-              ]
-            },
-            "element": "Quantum",
-            "attackType": "BPSkill",
-            "skillEffect": "SingleAttack",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Seele_00_Skill02_Camera",
-              "Avatar_Seele_00_Skill02_Phase01",
-              "Avatar_Seele_00_Skill02_Phase02"
-            ],
-            "toughnessList": [
-              60,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Ultimate": {
-        "Butterfly Flurry": {
-          "variant1": {
-            "skillID": 110203,
-            "trigger": "Skill03",
-            "name": "Butterfly Flurry",
-            "type": "Single Target",
-            "slot": "Ultimate",
-            "desc": "Seele enters the Amplification state and deals Quantum DMG equal to #1[i]% of her ATK to one designated enemy.",
-            "energyCost": 120,
-            "energyRegen": 5,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 30,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                2.55
-              ],
-              "2": [
-                2.72
-              ],
-              "3": [
-                2.89
-              ],
-              "4": [
-                3.06
-              ],
-              "5": [
-                3.23
-              ],
-              "6": [
-                3.4
-              ],
-              "7": [
-                3.6125
-              ],
-              "8": [
-                3.825
-              ],
-              "9": [
-                4.0375
-              ],
-              "10": [
-                4.25
-              ],
-              "11": [
-                4.42
-              ],
-              "12": [
-                4.59
-              ],
-              "13": [
-                4.76
-              ],
-              "14": [
-                4.93
-              ],
-              "15": [
-                5.1
-              ]
-            },
-            "element": "Quantum",
-            "attackType": "Ultra",
-            "skillEffect": "SingleAttack",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Seele_00_Skill03_Camera",
-              "Avatar_Seele_00_Skill03_EnterReady",
-              "Avatar_Seele_00_Skill03_Phase01",
-              "Avatar_Seele_00_Skill03_Phase02"
-            ],
-            "toughnessList": [
-              90,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Talent": {
-        "Resurgence": {
-          "variant1": {
-            "skillID": 110204,
-            "trigger": "SkillP01",
-            "name": "Resurgence",
-            "type": "Enhance",
-            "slot": "Talent",
-            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG of Seele's attacks by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                0.4,
-                1
-              ],
-              "2": [
-                0.44,
-                1
-              ],
-              "3": [
-                0.48,
-                1
-              ],
-              "4": [
-                0.52,
-                1
-              ],
-              "5": [
-                0.56,
-                1
-              ],
-              "6": [
-                0.6,
-                1
-              ],
-              "7": [
-                0.65,
-                1
-              ],
-              "8": [
-                0.7,
-                1
-              ],
-              "9": [
-                0.75,
-                1
-              ],
-              "10": [
-                0.8,
-                1
-              ],
-              "11": [
-                0.84,
-                1
-              ],
-              "12": [
-                0.88,
-                1
-              ],
-              "13": [
-                0.92,
-                1
-              ],
-              "14": [
-                0.96,
-                1
-              ],
-              "15": [
-                1,
-                1
-              ]
-            },
-            "skillEffect": "Enhance",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Seele_00_Bonus_Camera",
-              "Avatar_Seele_00_PassiveSkill_1",
-              "Avatar_Seele_00_Bonus"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Extra Turn": {
-                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
-              }
-            }
-          }
-        }
-      },
-      "Technique": {
-        "Phantom Illusion": {
-          "variant1": {
-            "skillID": 110207,
-            "trigger": "SkillMaze",
-            "name": "Phantom Illusion",
-            "type": "Enhance",
-            "slot": "Technique",
-            "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering battle by attacking enemies, Seele will immediately enter the Amplification state.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                20
-              ]
-            },
-            "attackType": "Maze",
-            "skillEffect": "Enhance",
-            "maxLevel": 1,
-            "configAbilityList": [
-              "Avatar_Seele_00_SkillMazeInLevel"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      }
-    },
-    "traces": {
-      "Point01": {
-        "icon": "icon/skill/1102_basic_atk.png",
-        "skillRef": {
-          "skillName": "Thwack",
-          "skillSlot": "Basic ATK"
-        }
-      },
-      "Point02": {
-        "icon": "icon/skill/1102_skill.png",
-        "skillRef": {
-          "skillName": "Sheathed Blade",
-          "skillSlot": "Skill"
-        }
-      },
-      "Point03": {
-        "icon": "icon/skill/1102_ultimate.png",
-        "skillRef": {
-          "skillName": "Butterfly Flurry",
-          "skillSlot": "Ultimate"
-        }
-      },
-      "Point04": {
-        "icon": "icon/skill/1102_talent.png",
-        "skillRef": {
-          "skillName": "Resurgence",
-          "skillSlot": "Talent"
-        }
-      },
-      "Point05": {
-        "icon": "icon/skill/1102_technique.png",
-        "skillRef": {
-          "skillName": "Phantom Illusion",
-          "skillSlot": "Technique"
-        }
-      },
-      "Point06": {
-        "name": "Nightshade",
-        "icon": "icon/skill/1102_skilltree1.png",
-        "desc": "When current HP percentage is #1[i]% or lower, reduces the chance of being attacked by enemies.",
-        "params": [
-          0.5,
-          0.5
-        ],
-        "traceAbility": "Seelev0_Seele_Trace01"
-      },
-      "Point07": {
-        "name": "Lacerate",
-        "icon": "icon/skill/1102_skilltree2.png",
-        "desc": "While Seele is in the Amplification state, her Quantum RES PEN increases by #1[i]%.",
-        "params": [
-          0.2
-        ],
-        "extraEffects": {
-          "RES PEN": {
-            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
-          }
-        }
-      },
-      "Point08": {
-        "name": "Rippling Waves",
-        "icon": "icon/skill/1102_skilltree3.png",
-        "desc": "After using a Basic ATK, advances Seele's next action  by #1[i]%.",
-        "params": [
-          0.2
-        ],
-        "extraEffects": {
-          "Action Advance": {
-            "desc": "Reduces the target's waiting interval before the next action."
-          }
-        }
-      },
-      "Point09": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.04
-        }
-      },
-      "Point10": {
-        "name": "CRIT DMG Boost",
-        "icon": "icon/property/IconCriticalDamage.png",
-        "stats": {
-          "CritDamageBase": 0.053
-        }
-      },
-      "Point11": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.04
-        }
-      },
-      "Point12": {
-        "name": "DEF Boost",
-        "icon": "icon/property/IconDefence.png",
-        "stats": {
-          "DEF%": 0.05
-        }
-      },
-      "Point13": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.06
-        }
-      },
-      "Point14": {
-        "name": "CRIT DMG Boost",
-        "icon": "icon/property/IconCriticalDamage.png",
-        "stats": {
-          "CritDamageBase": 0.08
-        }
-      },
-      "Point15": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.06
-        }
-      },
-      "Point16": {
-        "name": "DEF Boost",
-        "icon": "icon/property/IconDefence.png",
-        "stats": {
-          "DEF%": 0.075
-        }
-      },
-      "Point17": {
-        "name": "CRIT DMG Boost",
-        "icon": "icon/property/IconCriticalDamage.png",
-        "stats": {
-          "CritDamageBase": 0.107
-        }
-      },
-      "Point18": {
-        "name": "ATK Boost",
-        "icon": "icon/property/IconAttack.png",
-        "stats": {
-          "ATK%": 0.08
-        }
-      }
-    },
-    "hasSummon": false,
-    "icon": "icon/character/1102.png",
-    "preview": "image/character_preview/1102.png",
-    "portrait": "image/character_portrait/1102.png",
-    "bannerOffsets": [
-      145.5,
-      198.4,
-      0.81,
-      145.5,
-      198.4,
-      0.81,
-      145.5,
-      198.4,
-      0.81
     ],
     "isBuffed": true
   },
@@ -78525,1000 +77054,6 @@ let characters = {
       -4,
       -55,
       0.69
-    ],
-    "isBuffed": true
-  },
-  "Firefly_v0": {
-    "internalID": 1310,
-    "name": "Firefly_v0",
-    "path": "Destruction",
-    "element": "Fire",
-    "rarity": 5,
-    "energyMax": 240,
-    "baseStats": {
-      "ATKBase": 523.908,
-      "DEFBase": 776.1600000000001,
-      "HPBase": 814.968,
-      "SPDBase": 104,
-      "CritRateBase": 0.05,
-      "CritDamageBase": 0.5,
-      "CharacterAggroBase": 125
-    },
-    "eidolons": [
-      {
-        "id": "131001",
-        "name": "In Reddened Chrysalis, I Once Rest",
-        "rank": 1,
-        "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
-        "icon": "icon/skill/1310_rank1.png",
-        "paramsEido": [
-          0.15
-        ],
-        "eidoAbility": "Fireflyv0_Sam_Eidolon1"
-      },
-      {
-        "id": "131002",
-        "name": "From Shattered Sky, I Free Fall",
-        "rank": 2,
-        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can trigger again after 1 turn(s).",
-        "icon": "icon/skill/1310_rank2.png",
-        "paramsEido": [
-          1,
-          1
-        ],
-        "extraEffects": {
-          "Weakness Break State": {
-            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
-          },
-          "Extra Turn": {
-            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
-          }
-        },
-        "eidoAbility": "Fireflyv0_Sam_Eidolon2"
-      },
-      {
-        "id": "131003",
-        "name": "Amidst Silenced Stars, I Deep Sleep",
-        "rank": 3,
-        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1310_skill.png"
-      },
-      {
-        "id": "131004",
-        "name": "Upon Lighted Fyrefly, I Soon Gaze",
-        "rank": 4,
-        "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
-        "icon": "icon/skill/1310_rank4.png",
-        "paramsEido": [
-          0.5
-        ],
-        "eidoAbility": "Fireflyv0_Sam_Eidolon4"
-      },
-      {
-        "id": "131005",
-        "name": "From Undreamt Night, I Thence Shine",
-        "rank": 5,
-        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1310_ultimate.png"
-      },
-      {
-        "id": "131006",
-        "name": "In Finalized Morrow, I Full Bloom",
-        "rank": 6,
-        "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
-        "icon": "icon/skill/1310_rank6.png",
-        "paramsEido": [
-          0.2,
-          0.5
-        ],
-        "extraEffects": {
-          "RES PEN": {
-            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
-          }
-        },
-        "eidoAbility": "Fireflyv0_Sam_Eidolon6"
-      }
-    ],
-    "eidlonLevelBonuses": {
-      "3": {
-        "Basic ATK": 1,
-        "Skill": 2
-      },
-      "5": {
-        "Ultimate": 2,
-        "Talent": 2
-      }
-    },
-    "skills": {
-      "Basic ATK": {
-        "Order: Flare Propulsion": {
-          "variant1": {
-            "skillID": 131001,
-            "trigger": "Skill01",
-            "name": "Order: Flare Propulsion",
-            "type": "Single Target",
-            "slot": "Basic ATK",
-            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
-            "energyCost": null,
-            "energyRegen": 20,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 10,
-            "skillPointCost": 0,
-            "skillPointGain": 1,
-            "params": {
-              "1": [
-                0.5
-              ],
-              "2": [
-                0.6
-              ],
-              "3": [
-                0.7
-              ],
-              "4": [
-                0.8
-              ],
-              "5": [
-                0.9
-              ],
-              "6": [
-                1
-              ],
-              "7": [
-                1.1
-              ],
-              "8": [
-                1.2
-              ],
-              "9": [
-                1.3
-              ],
-              "10": [
-                1.4
-              ]
-            },
-            "element": "Fire",
-            "attackType": "Normal",
-            "skillEffect": "SingleAttack",
-            "maxLevel": 10,
-            "configAbilityList": [
-              "Avatar_Sam_00_Skill01_Camera",
-              "Avatar_Sam_00_Skill01_Phase01",
-              "Avatar_Sam_00_Skill01_Phase02"
-            ],
-            "toughnessList": [
-              30,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        },
-        "Fyrefly Type-IV: Pyrogenic Decimation": {
-          "variant1": {
-            "skillID": 131008,
-            "trigger": "Skill11",
-            "name": "Fyrefly Type-IV: Pyrogenic Decimation",
-            "type": "Single Target",
-            "slot": "Basic ATK",
-            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 15,
-            "skillPointCost": 0,
-            "skillPointGain": 1,
-            "params": {
-              "1": [
-                1,
-                0.2
-              ],
-              "2": [
-                1.2,
-                0.2
-              ],
-              "3": [
-                1.4,
-                0.2
-              ],
-              "4": [
-                1.6,
-                0.2
-              ],
-              "5": [
-                1.8,
-                0.2
-              ],
-              "6": [
-                2,
-                0.2
-              ],
-              "7": [
-                2.2,
-                0.2
-              ],
-              "8": [
-                2.4,
-                0.2
-              ],
-              "9": [
-                2.6,
-                0.2
-              ],
-              "10": [
-                2.8,
-                0.2
-              ]
-            },
-            "element": "Fire",
-            "attackType": "Normal",
-            "skillEffect": "SingleAttack",
-            "maxLevel": 10,
-            "configAbilityList": [
-              "Avatar_Sam_00_Skill11_Camera",
-              "Avatar_Sam_00_Skill11_Phase01",
-              "Avatar_Sam_00_Skill11_Phase02"
-            ],
-            "toughnessList": [
-              45,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Skill": {
-        "Order: Aerial Bombardment": {
-          "variant1": {
-            "skillID": 131002,
-            "trigger": "Skill02",
-            "name": "Order: Aerial Bombardment",
-            "type": "Single Target",
-            "slot": "Skill",
-            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 20,
-            "skillPointCost": 1,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                1,
-                0.4,
-                0.5,
-                0.25
-              ],
-              "2": [
-                1.1,
-                0.4,
-                0.51,
-                0.25
-              ],
-              "3": [
-                1.2,
-                0.4,
-                0.52,
-                0.25
-              ],
-              "4": [
-                1.3,
-                0.4,
-                0.53,
-                0.25
-              ],
-              "5": [
-                1.4,
-                0.4,
-                0.54,
-                0.25
-              ],
-              "6": [
-                1.5,
-                0.4,
-                0.55,
-                0.25
-              ],
-              "7": [
-                1.625,
-                0.4,
-                0.5625,
-                0.25
-              ],
-              "8": [
-                1.75,
-                0.4,
-                0.575,
-                0.25
-              ],
-              "9": [
-                1.875,
-                0.4,
-                0.5875,
-                0.25
-              ],
-              "10": [
-                2,
-                0.4,
-                0.6,
-                0.25
-              ],
-              "11": [
-                2.1,
-                0.4,
-                0.61,
-                0.25
-              ],
-              "12": [
-                2.2,
-                0.4,
-                0.62,
-                0.25
-              ],
-              "13": [
-                2.3,
-                0.4,
-                0.63,
-                0.25
-              ],
-              "14": [
-                2.4,
-                0.4,
-                0.64,
-                0.25
-              ],
-              "15": [
-                2.5,
-                0.4,
-                0.65,
-                0.25
-              ]
-            },
-            "element": "Fire",
-            "attackType": "BPSkill",
-            "skillEffect": "SingleAttack",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Sam_00_Skill02_Camera",
-              "Avatar_Sam_00_Skill02_Phase01",
-              "Avatar_Sam_00_Skill02_Phase02"
-            ],
-            "toughnessList": [
-              60,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Action Advance": {
-                "desc": "Reduces the target's waiting interval before the next action."
-              }
-            }
-          }
-        },
-        "Fyrefly Type-IV: Deathstar Overload": {
-          "variant1": {
-            "skillID": 131009,
-            "trigger": "Skill21",
-            "name": "Fyrefly Type-IV: Deathstar Overload",
-            "type": "Blast",
-            "slot": "Skill",
-            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 30,
-            "skillPointCost": 1,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                1,
-                0.5,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "2": [
-                1.1,
-                0.55,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "3": [
-                1.2,
-                0.6,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "4": [
-                1.3,
-                0.65,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "5": [
-                1.4,
-                0.7,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "6": [
-                1.5,
-                0.75,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "7": [
-                1.625,
-                0.8125,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "8": [
-                1.75,
-                0.875,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "9": [
-                1.875,
-                0.9375,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "10": [
-                2,
-                1,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "11": [
-                2.1,
-                1.05,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "12": [
-                2.2,
-                1.1,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "13": [
-                2.3,
-                1.15,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "14": [
-                2.4,
-                1.2,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ],
-              "15": [
-                2.5,
-                1.25,
-                0.25,
-                2,
-                0.2,
-                0.1,
-                3.6
-              ]
-            },
-            "element": "Fire",
-            "attackType": "BPSkill",
-            "skillEffect": "Blast",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Sam_00_Skill21_Camera",
-              "Avatar_Sam_00_Skill21_Phase01",
-              "Avatar_Sam_00_Skill21_Phase02"
-            ],
-            "toughnessList": [
-              90,
-              0,
-              45
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Ultimate": {
-        "Fyrefly Type-IV: Complete Combustion": {
-          "variant1": {
-            "skillID": 131003,
-            "trigger": "Skill03",
-            "name": "Fyrefly Type-IV: Complete Combustion",
-            "type": "Enhance",
-            "slot": "Ultimate",
-            "desc": "Enters the Complete Combustion state, advances this unit's Action by 100%, and gains Enhanced Basic ATK and Enhanced Skill. While in Complete Combustion, increases SPD by #3[i], and when using the Enhanced Basic ATK or Enhanced Skill, increases this unit's Weakness Break Efficiency by #2[i]% and increases the Break DMG dealt by SAM to the enemy targets by #1[f1]%, lasting until this current attack ends.\\nA countdown timer for the Complete Combustion state appears in the Action Order. When the countdown timer's turn starts, SAM exits the Complete Combustion state. The countdown timer has a fixed SPD of #4[i].\\nSAM cannot use Ultimate while in Complete Combustion.",
-            "energyCost": 240,
-            "energyRegen": 5,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                0.1,
-                0.5,
-                30,
-                70
-              ],
-              "2": [
-                0.11,
-                0.5,
-                33,
-                70
-              ],
-              "3": [
-                0.12,
-                0.5,
-                36,
-                70
-              ],
-              "4": [
-                0.13,
-                0.5,
-                39,
-                70
-              ],
-              "5": [
-                0.14,
-                0.5,
-                42,
-                70
-              ],
-              "6": [
-                0.15,
-                0.5,
-                45,
-                70
-              ],
-              "7": [
-                0.1625,
-                0.5,
-                48.75,
-                70
-              ],
-              "8": [
-                0.175,
-                0.5,
-                52.5,
-                70
-              ],
-              "9": [
-                0.1875,
-                0.5,
-                56.25,
-                70
-              ],
-              "10": [
-                0.2,
-                0.5,
-                60,
-                70
-              ],
-              "11": [
-                0.21,
-                0.5,
-                63,
-                70
-              ],
-              "12": [
-                0.22,
-                0.5,
-                66,
-                70
-              ],
-              "13": [
-                0.23,
-                0.5,
-                69,
-                70
-              ],
-              "14": [
-                0.24,
-                0.5,
-                72,
-                70
-              ],
-              "15": [
-                0.25,
-                0.5,
-                75,
-                70
-              ]
-            },
-            "attackType": "Ultra",
-            "skillEffect": "Enhance",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Sam_00_Skill03_Camera",
-              "Avatar_Sam_00_Skill03_EnterReady",
-              "Avatar_Sam_00_Skill03_Phase01",
-              "Avatar_Sam_00_Skill03_Phase02"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Talent": {
-        "Chrysalid Pyronexus": {
-          "variant1": {
-            "skillID": 131004,
-            "trigger": "SkillP01",
-            "name": "Chrysalid Pyronexus",
-            "type": "Defense",
-            "slot": "Talent",
-            "desc": "The lower the HP, the less DMG received. When HP is #3[i]% or lower, the DMG Reduction reaches its maximum effect, reducing up to #1[i]%. During the Complete Combustion, the DMG Reduction remains at its maximum effect, and the Effect RES increases by #4[i]%.\\nIf Energy is lower than #2[i]% when the battle starts, regenerates Energy to #2[i]%. Once Energy is regenerated to its maximum, dispels all debuffs on this unit.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                0.2,
-                0.5,
-                0.2,
-                0.1
-              ],
-              "2": [
-                0.22,
-                0.5,
-                0.2,
-                0.12
-              ],
-              "3": [
-                0.24,
-                0.5,
-                0.2,
-                0.14
-              ],
-              "4": [
-                0.26,
-                0.5,
-                0.2,
-                0.16
-              ],
-              "5": [
-                0.28,
-                0.5,
-                0.2,
-                0.18
-              ],
-              "6": [
-                0.3,
-                0.5,
-                0.2,
-                0.2
-              ],
-              "7": [
-                0.325,
-                0.5,
-                0.2,
-                0.225
-              ],
-              "8": [
-                0.35,
-                0.5,
-                0.2,
-                0.25
-              ],
-              "9": [
-                0.375,
-                0.5,
-                0.2,
-                0.275
-              ],
-              "10": [
-                0.4,
-                0.5,
-                0.2,
-                0.3
-              ],
-              "11": [
-                0.42,
-                0.5,
-                0.2,
-                0.32
-              ],
-              "12": [
-                0.44,
-                0.5,
-                0.2,
-                0.34
-              ],
-              "13": [
-                0.46,
-                0.5,
-                0.2,
-                0.36
-              ],
-              "14": [
-                0.48,
-                0.5,
-                0.2,
-                0.38
-              ],
-              "15": [
-                0.5,
-                0.5,
-                0.2,
-                0.4
-              ]
-            },
-            "element": "Fire",
-            "skillEffect": "Defence",
-            "maxLevel": 15,
-            "configAbilityList": [
-              "Avatar_Sam_00_PassiveSkill01",
-              "Avatar_Sam_00_Rank02_Bonus",
-              "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
-              }
-            }
-          }
-        }
-      },
-      "Technique": {
-        "Δ Order: Meteoric Incineration": {
-          "variant1": {
-            "skillID": 131007,
-            "trigger": "SkillMaze",
-            "name": "Δ Order: Meteoric Incineration",
-            "slot": "Technique",
-            "desc": "Leaps into the air and moves about freely for #1[i] seconds, which can be ended early by launching a plunging attack. When the duration ends, plunges and immediately attacks all enemies within a set area. At the start of each wave, applies a Fire Weakness to all enemies, lasting for #3[i] turn(s). Then, deals Fire DMG equal to #2[i]% of SAM's ATK to all enemies.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 20,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                5,
-                2,
-                2
-              ]
-            },
-            "element": "Fire",
-            "attackType": "Maze",
-            "skillEffect": "MazeAttack",
-            "maxLevel": 1,
-            "configAbilityList": [
-              "Avatar_Sam_00_SkillMazeInLevel"
-            ],
-            "toughnessList": [
-              60,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      }
-    },
-    "traces": {
-      "Point01": {
-        "icon": "icon/skill/1310_basic_atk.png",
-        "skillRef": {
-          "skillName": "Order: Flare Propulsion",
-          "skillSlot": "Basic ATK"
-        }
-      },
-      "Point02": {
-        "icon": "icon/skill/1310_skill.png",
-        "skillRef": {
-          "skillName": "Order: Aerial Bombardment",
-          "skillSlot": "Skill"
-        }
-      },
-      "Point03": {
-        "icon": "icon/skill/1310_ultimate.png",
-        "skillRef": {
-          "skillName": "Fyrefly Type-IV: Complete Combustion",
-          "skillSlot": "Ultimate"
-        }
-      },
-      "Point04": {
-        "icon": "icon/skill/1310_talent.png",
-        "skillRef": {
-          "skillName": "Chrysalid Pyronexus",
-          "skillSlot": "Talent"
-        }
-      },
-      "Point05": {
-        "icon": "icon/skill/1310_technique.png",
-        "skillRef": {
-          "skillName": "Δ Order: Meteoric Incineration",
-          "skillSlot": "Technique"
-        }
-      },
-      "Point06": {
-        "name": "Module α: Antilag Outburst",
-        "icon": "icon/skill/1310_skilltree1.png",
-        "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
-        "params": [
-          0.55
-        ],
-        "traceAbility": "Fireflyv0_Sam_Trace01"
-      },
-      "Point07": {
-        "name": "Module β: Autoreactive Armor",
-        "icon": "icon/skill/1310_skilltree2.png",
-        "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
-        "params": [
-          2,
-          3.6,
-          0.35,
-          0.5
-        ],
-        "traceAbility": "Fireflyv0_Sam_Trace02",
-        "extraEffects": {
-          "Weakness Break State": {
-            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
-          },
-          "Super Break DMG": {
-            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
-          }
-        }
-      },
-      "Point08": {
-        "name": "Module γ: Core Overload",
-        "icon": "icon/skill/1310_skilltree3.png",
-        "desc": "For every #2[i] point(s) of SAM's ATK that exceeds #1[i], increases this unit's Break Effect by #3[f1]%.",
-        "params": [
-          1800,
-          10,
-          0.007999999
-        ],
-        "traceAbility": "Fireflyv0_Sam_Trace03"
-      },
-      "Point09": {
-        "name": "Break Boost",
-        "icon": "icon/property/IconBreakUp.png",
-        "stats": {
-          "DamageBreak": 0.053
-        }
-      },
-      "Point10": {
-        "name": "Effect RES Boost",
-        "icon": "icon/property/IconStatusResistance.png",
-        "stats": {
-          "EffectRES": 0.04
-        }
-      },
-      "Point11": {
-        "name": "Break Boost",
-        "icon": "icon/property/IconBreakUp.png",
-        "stats": {
-          "DamageBreak": 0.053
-        }
-      },
-      "Point12": {
-        "name": "SPD Boost",
-        "icon": "icon/property/IconSpeed.png",
-        "stats": {
-          "SPDFlat": 2
-        }
-      },
-      "Point13": {
-        "name": "Break Boost",
-        "icon": "icon/property/IconBreakUp.png",
-        "stats": {
-          "DamageBreak": 0.08
-        }
-      },
-      "Point14": {
-        "name": "Effect RES Boost",
-        "icon": "icon/property/IconStatusResistance.png",
-        "stats": {
-          "EffectRES": 0.06
-        }
-      },
-      "Point15": {
-        "name": "Break Boost",
-        "icon": "icon/property/IconBreakUp.png",
-        "stats": {
-          "DamageBreak": 0.08
-        }
-      },
-      "Point16": {
-        "name": "SPD Boost",
-        "icon": "icon/property/IconSpeed.png",
-        "stats": {
-          "SPDFlat": 3
-        }
-      },
-      "Point17": {
-        "name": "Effect RES Boost",
-        "icon": "icon/property/IconStatusResistance.png",
-        "stats": {
-          "EffectRES": 0.08
-        }
-      },
-      "Point18": {
-        "name": "Break Boost",
-        "icon": "icon/property/IconBreakUp.png",
-        "stats": {
-          "DamageBreak": 0.107
-        }
-      }
-    },
-    "hasSummon": false,
-    "icon": "icon/character/1310.png",
-    "preview": "image/character_preview/1310.png",
-    "portrait": "image/character_portrait/1310.png",
-    "bannerOffsets": [
-      54,
-      45,
-      0.63,
-      54,
-      45,
-      0.63,
-      54,
-      45,
-      0.63
     ],
     "isBuffed": true
   }

@@ -23706,7 +23706,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23057_Sub",
+    "name": "<a class=\"gModGreen\" id=\"919563615\">LC_23057_Sub</a>",
     "realName": "Guaranteed Victory",
     "aim": "Other",
     "desc": "The effect to gain Punchlines from \"Guaranteed Victory\" cannot be triggered now. Triggers again after using Basic ATK #1[i] more time(s).",
@@ -24059,7 +24059,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_22007_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-639435365\">LC_22007_Sub</a>",
     "realName": "Elation Boost",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
