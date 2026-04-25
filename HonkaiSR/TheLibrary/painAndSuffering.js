@@ -9670,7 +9670,8 @@ const megaParsingFuckeryPain = {
             "name",
             "nameTarget",
             "isTargetOperator",
-
+            "targetFound",
+            "targetFailed",
 
             //old modifier stuff
             "execute",
