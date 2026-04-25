@@ -3,22 +3,22 @@ const compositeAbilityObject = {
   "fullCharacterName": "Huohuo",
   "trimCharacterName": "Huohuo",
   "abilityList": [
-    "Huohuo_Huohuo_Eidolon2_Insert",
-    "Huohuo_Huohuo_Trace02",
-    "Huohuo_Huohuo_TechniqueInLevel",
-    "Huohuo_Huohuo_PassiveAbility01",
-    "Huohuo_Huohuo_Ability03_Part02",
-    "Huohuo_Huohuo_Ability03_Part01",
-    "Huohuo_Huohuo_Ability03_EnterReady",
-    "Huohuo_Huohuo_Ability02_Part02",
-    "Huohuo_Huohuo_Ability02_Part01",
-    "Huohuo_Huohuo_Ability01_Part02",
-    "Huohuo_Huohuo_Ability01_Part01",
+    "Huohuo_Advanced_Huohuo_Eidolon2_Insert",
+    "Huohuo_Advanced_Huohuo_Trace02",
+    "Huohuo_Advanced_Huohuo_TechniqueInLevel",
+    "Huohuo_Advanced_Huohuo_PassiveAbility01",
+    "Huohuo_Advanced_Huohuo_Ability03_Part02",
+    "Huohuo_Advanced_Huohuo_Ability03_Part01",
+    "Huohuo_Advanced_Huohuo_Ability03_EnterReady",
+    "Huohuo_Advanced_Huohuo_Ability02_Part02",
+    "Huohuo_Advanced_Huohuo_Ability02_Part01",
+    "Huohuo_Advanced_Huohuo_Ability01_Part02",
+    "Huohuo_Advanced_Huohuo_Ability01_Part01",
     "Huohuo_Modifiers"
   ],
   "abilityObject": {
-    "Huohuo_Huohuo_Eidolon2_Insert": {
-      "fileName": "Huohuo_Huohuo_Eidolon2_Insert",
+    "Huohuo_Advanced_Huohuo_Eidolon2_Insert": {
+      "fileName": "Huohuo_Advanced_Huohuo_Eidolon2_Insert",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -38,7 +38,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"-1608829904\">Huohuo_Passive</a>"
+            "modifier": "<a class=\"gModGreen\" id=\"-571478825\">Advanced_Huohuo_Passive</a>"
           },
           "ifTargetFound": [
             {
@@ -52,7 +52,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
                   },
                   "variableName": "Huohuo_Passive_HotCount",
                   "value": -1,
-                  "max": 2
+                  "max": 4
                 },
                 {
                   "name": "Define Modifier Variable",
@@ -83,7 +83,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                   "function": "Add",
                   "valueType": "Duration"
                 },
@@ -136,7 +136,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                       },
                       {
                         "name": "Compare: Variable",
@@ -166,7 +166,7 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711212518\">Advanced_Huohuo_Eidolon2</a>"
                     }
                   ]
                 }
@@ -187,7 +187,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711212518\">Advanced_Huohuo_Eidolon2</a>"
                 }
               ]
             }
@@ -199,8 +199,8 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "Huohuo_Huohuo_Trace02": {
-      "fileName": "Huohuo_Huohuo_Trace02",
+    "Huohuo_Advanced_Huohuo_Trace02": {
+      "fileName": "Huohuo_Advanced_Huohuo_Trace02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -261,10 +261,10 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Huohuo_Huohuo_TechniqueInLevel": {
-      "fileName": "Huohuo_Huohuo_TechniqueInLevel",
+    "Huohuo_Advanced_Huohuo_TechniqueInLevel": {
+      "fileName": "Huohuo_Advanced_Huohuo_TechniqueInLevel",
       "childAbilityList": [
-        "Huohuo_Huohuo_TechniqueInLevel"
+        "Huohuo_Advanced_Huohuo_TechniqueInLevel"
       ],
       "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
@@ -287,7 +287,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1017323248\">Huohuo_Maze_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Horror-Struck</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1861316707\">Advanced_Huohuo_Maze_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Horror-Struck</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttackDown"
@@ -317,7 +317,7 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "description": "Reduces ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "description": "ATK decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
           "effectName": "Horror-Struck",
           "statusName": "Horror-Struck"
@@ -346,7 +346,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"1017323248\">Huohuo_Maze_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Horror-Struck</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1861316707\">Advanced_Huohuo_Maze_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Horror-Struck</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -391,11 +391,11 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
-    "Huohuo_Huohuo_PassiveAbility01": {
-      "fileName": "Huohuo_Huohuo_PassiveAbility01",
+    "Huohuo_Advanced_Huohuo_PassiveAbility01": {
+      "fileName": "Huohuo_Advanced_Huohuo_PassiveAbility01",
       "childAbilityList": [
-        "Huohuo_Huohuo_PassiveAbility01",
-        "Huohuo_Huohuo_Eidolon2_Insert"
+        "Huohuo_Advanced_Huohuo_PassiveAbility01",
+        "Huohuo_Advanced_Huohuo_Eidolon2_Insert"
       ],
       "skillTrigger": "SkillP01",
       "abilityType": "Talent",
@@ -412,7 +412,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1608829904\">Huohuo_Passive</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-571478825\">Advanced_Huohuo_Passive</a>"
         },
         {
           "name": "IF",
@@ -425,11 +425,11 @@ const compositeAbilityObject = {
               "name": "Update Displayed Energy Bar",
               "value": 0,
               "maximum": {
-                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(2 + 1)",
+                "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
+                "displayLines": "(3 + 1)",
                 "constants": [],
                 "variables": [
-                  2,
+                  3,
                   1
                 ]
               },
@@ -443,7 +443,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"679515294\">Huohuo_Eidolon1PreShow</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"1425518105\">Advanced_Huohuo_Eidolon1PreShow</a>"
             }
           ],
           "failed": [
@@ -451,11 +451,11 @@ const compositeAbilityObject = {
               "name": "Update Displayed Energy Bar",
               "value": 0,
               "maximum": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
+                "operator": "Variables[0] (3) || RETURN",
+                "displayLines": "3",
                 "constants": [],
                 "variables": [
-                  2
+                  3
                 ]
               },
               "assignState": "True",
@@ -489,7 +489,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"1683962968\">Huohuo_Eidolon2_ReviveCount</a>[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1527901195\">Advanced_Huohuo_Eidolon2_ReviveCount</a>[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
               "valuePerStack": {
                 "MDF_HealRatio": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -515,7 +515,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__679515294\">Huohuo_Eidolon1PreShow</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__1425518105\">Advanced_Huohuo_Eidolon1PreShow</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -527,7 +527,8 @@ const compositeAbilityObject = {
               "target": "{{Player Team All}}"
             },
             "skillType": [
-              "Skill"
+              "Skill",
+              "Ultimate"
             ],
             "conditions": {
               "name": "Has Modifier",
@@ -535,7 +536,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1345100241\">Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"528503958\">Advanced_Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "invertCondition": true
             },
             "delayAdvancePreview": {
@@ -546,20 +547,16 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1045223345\">Huohuo_PointB1_SelfSPRatio</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__509282506\">Advanced_Huohuo_PointB1_SelfSPRatio</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_SPRatio</span>.",
-          "type": "Buff",
-          "effectName": "Energy Regeneration Rate Boost",
-          "statusName": "Energy Regeneration Rate Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1608829904\">Huohuo_Passive</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-571478825\">Advanced_Huohuo_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target Start [Owner]",
@@ -577,7 +574,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2048047648\">Huohuo_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"167222959\">Advanced_Huohuo_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -607,8 +604,17 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Skill"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -624,13 +630,13 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                            "displayLines": "(2 + 1)",
+                            "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
+                            "displayLines": "(3 + 1)",
                             "constants": [],
                             "variables": [
-                              2,
+                              3,
                               1
                             ]
                           },
@@ -677,13 +683,13 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                           "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
+                            "operator": "Variables[0] (3) || RETURN",
+                            "displayLines": "3",
                             "constants": [],
                             "variables": [
-                              2
+                              3
                             ]
                           },
                           "valuePerStack": {
@@ -749,18 +755,34 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (30) || RETURN",
+                        "displayLines": "30",
+                        "constants": [],
+                        "variables": [
+                          30
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    },
+                    {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                       "duration": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
                         "constants": [],
                         "variables": [
-                          1
+                          2
                         ]
                       },
                       "valuePerStack": {
@@ -815,8 +837,8 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Huohuo_Huohuo_Ability03_Part02": {
-      "fileName": "Huohuo_Huohuo_Ability03_Part02",
+    "Huohuo_Advanced_Huohuo_Ability03_Part02": {
+      "fileName": "Huohuo_Advanced_Huohuo_Ability03_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -839,30 +861,144 @@ const compositeAbilityObject = {
           "tag": "ActiveSkillAdd"
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "The Cursed One"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-678196241\">Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
-          "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
-          },
-          "valuePerStack": {
-            "MDF_AttackUP": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Compare: Ability Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+                      "compareType": ">=",
+                      "value2": {
+                        "operator": "Variables[0] (160) || RETURN",
+                        "displayLines": "160",
+                        "constants": [],
+                        "variables": [
+                          160
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "valuePerStack": {
+                "MDF_AttackUP": {
+                  "operator": "Variables[0] (0.4) || Variables[1] (0.24) || ADD || RETURN",
+                  "displayLines": "(0.4 + 0.24)",
+                  "constants": [],
+                  "variables": [
+                    0.4,
+                    0.24
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Compare: Ability Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+                      "compareType": "<",
+                      "value2": {
+                        "operator": "Variables[0] (160) || RETURN",
+                        "displayLines": "160",
+                        "constants": [],
+                        "variables": [
+                          160
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "valuePerStack": {
+                "MDF_AttackUP": {
+                  "operator": "Variables[0] (0.4) || RETURN",
+                  "displayLines": "0.4",
+                  "constants": [],
+                  "variables": [
+                    0.4
+                  ]
+                }
+              }
             }
-          }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "valuePerStack": {
+                "MDF_AttackUP": {
+                  "operator": "Variables[0] (0.4) || RETURN",
+                  "displayLines": "0.4",
+                  "constants": [],
+                  "variables": [
+                    0.4
+                  ]
+                }
+              }
+            }
+          ]
         },
         {
           "name": "Update Energy",
@@ -881,13 +1017,13 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       }
     },
-    "Huohuo_Huohuo_Ability03_Part01": {
-      "fileName": "Huohuo_Huohuo_Ability03_Part01",
+    "Huohuo_Advanced_Huohuo_Ability03_Part01": {
+      "fileName": "Huohuo_Advanced_Huohuo_Ability03_Part01",
       "childAbilityList": [
         "Huohuo_Huohuo_Ability03_Camera",
-        "Huohuo_Huohuo_Ability03_EnterReady",
-        "Huohuo_Huohuo_Ability03_Part01",
-        "Huohuo_Huohuo_Ability03_Part02"
+        "Huohuo_Advanced_Huohuo_Ability03_EnterReady",
+        "Huohuo_Advanced_Huohuo_Ability03_Part01",
+        "Huohuo_Advanced_Huohuo_Ability03_Part02"
       ],
       "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
@@ -904,7 +1040,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Huohuo_Ability03_Part02",
+          "ability": "Advanced_Huohuo_Ability03_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
@@ -917,8 +1053,8 @@ const compositeAbilityObject = {
         "primaryTarget": "{{All Team Members}}"
       }
     },
-    "Huohuo_Huohuo_Ability03_EnterReady": {
-      "fileName": "Huohuo_Huohuo_Ability03_EnterReady",
+    "Huohuo_Advanced_Huohuo_Ability03_EnterReady": {
+      "fileName": "Huohuo_Advanced_Huohuo_Ability03_EnterReady",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -928,8 +1064,8 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "Huohuo_Huohuo_Ability02_Part02": {
-      "fileName": "Huohuo_Huohuo_Ability02_Part02",
+    "Huohuo_Advanced_Huohuo_Ability02_Part02": {
+      "fileName": "Huohuo_Advanced_Huohuo_Ability02_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -956,7 +1092,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
         },
         {
           "name": "Heal",
@@ -965,19 +1101,19 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.21) || RETURN",
-            "displayLines": "0.21",
+            "operator": "Variables[0] (0.24) || RETURN",
+            "displayLines": "0.24",
             "constants": [],
             "variables": [
-              0.21
+              0.24
             ]
           },
           "healFlat": {
-            "operator": "Variables[0] (560) || RETURN",
-            "displayLines": "560",
+            "operator": "Variables[0] (640) || RETURN",
+            "displayLines": "640",
             "constants": [],
             "variables": [
-              560
+              640
             ]
           },
           "formula": "Heal from Healer's MaxHP"
@@ -989,19 +1125,19 @@ const compositeAbilityObject = {
             "target": "{{Ability Targets Adjacent(Blast)}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (0.168) || RETURN",
-            "displayLines": "0.168",
+            "operator": "Variables[0] (0.192) || RETURN",
+            "displayLines": "0.192",
             "constants": [],
             "variables": [
-              0.168
+              0.192
             ]
           },
           "healFlat": {
-            "operator": "Variables[0] (448) || RETURN",
-            "displayLines": "448",
+            "operator": "Variables[0] (512) || RETURN",
+            "displayLines": "512",
             "constants": [],
             "variables": [
-              448
+              512
             ]
           },
           "formula": "Heal from Healer's MaxHP"
@@ -1033,7 +1169,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
         },
         {
           "name": "Update Energy",
@@ -1052,12 +1188,12 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       }
     },
-    "Huohuo_Huohuo_Ability02_Part01": {
-      "fileName": "Huohuo_Huohuo_Ability02_Part01",
+    "Huohuo_Advanced_Huohuo_Ability02_Part01": {
+      "fileName": "Huohuo_Advanced_Huohuo_Ability02_Part01",
       "childAbilityList": [
         "Huohuo_Huohuo_Ability02_Camera",
-        "Huohuo_Huohuo_Ability02_Part01",
-        "Huohuo_Huohuo_Ability02_Part02"
+        "Huohuo_Advanced_Huohuo_Ability02_Part01",
+        "Huohuo_Advanced_Huohuo_Ability02_Part02"
       ],
       "skillTrigger": "Skill02",
       "abilityType": "Skill",
@@ -1074,7 +1210,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Huohuo_Ability02_Part02",
+          "ability": "Advanced_Huohuo_Ability02_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
@@ -1088,8 +1224,8 @@ const compositeAbilityObject = {
         "subTarget": "Blast Targets"
       }
     },
-    "Huohuo_Huohuo_Ability01_Part02": {
-      "fileName": "Huohuo_Huohuo_Ability01_Part02",
+    "Huohuo_Advanced_Huohuo_Ability01_Part02": {
+      "fileName": "Huohuo_Advanced_Huohuo_Ability01_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -1223,12 +1359,12 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       }
     },
-    "Huohuo_Huohuo_Ability01_Part01": {
-      "fileName": "Huohuo_Huohuo_Ability01_Part01",
+    "Huohuo_Advanced_Huohuo_Ability01_Part01": {
+      "fileName": "Huohuo_Advanced_Huohuo_Ability01_Part01",
       "childAbilityList": [
         "Huohuo_Huohuo_Ability01_Camera",
-        "Huohuo_Huohuo_Ability01_Part01",
-        "Huohuo_Huohuo_Ability01_Part02"
+        "Huohuo_Advanced_Huohuo_Ability01_Part01",
+        "Huohuo_Advanced_Huohuo_Ability01_Part02"
       ],
       "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
@@ -1245,7 +1381,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Huohuo_Ability01_Part02",
+          "ability": "Advanced_Huohuo_Ability01_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
@@ -1270,7 +1406,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2094716401\">Huohuo_Eidolon2</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-711212518\">Advanced_Huohuo_Eidolon2</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1314,7 +1450,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "LifeTime",
                       "variableName": "Passive_HealMark_LifeTime",
-                      "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1333,7 +1469,7 @@ const compositeAbilityObject = {
                           ]
                         }
                       },
-                      "abilityName": "Huohuo_Eidolon2_Insert",
+                      "abilityName": "Advanced_Huohuo_Eidolon2_Insert",
                       "abilitySource": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -1367,7 +1503,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1683962968\">Huohuo_Eidolon2_ReviveCount</a>[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1527901195\">Advanced_Huohuo_Eidolon2_ReviveCount</a>[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
           "stackType": "ReplaceByCaster",
           "variableValueChange": [
             {
@@ -1403,7 +1539,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                           },
                           {
                             "name": "Compare: Variable",
@@ -1420,7 +1556,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>",
+                          "modifier": "<a class=\"gModGreen\" id=\"-711212518\">Advanced_Huohuo_Eidolon2</a>",
                           "valuePerStack": {
                             "MDF_HealPercentage": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -1448,7 +1584,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
+                          "modifier": "<a class=\"gModGreen\" id=\"-711212518\">Advanced_Huohuo_Eidolon2</a>"
                         },
                         {
                           "name": "IF",
@@ -1474,13 +1610,13 @@ const compositeAbilityObject = {
             "MDF_ReviveCount"
           ],
           "latentQueue": [],
-          "description": "If Huohuo possesses Divine Provision when an ally is struck by a killing blow, the ally will not be knocked down, and their HP will immediately be restored by an amount equal to <span class=\"descriptionNumberColor\">MDF_HealRatio</span> of their Max HP. This reduces the duration of Divine Provision by 1 turn. The remaining trigger count is <span class=\"descriptionNumberColor\">MDF_ReviveCount</span>.",
+          "description": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down, and their HP will immediately be restored by an amount equal to <span class=\"descriptionNumberColor\">MDF_HealRatio</span> of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. The remaining trigger count is <span class=\"descriptionNumberColor\">MDF_ReviveCount</span>.",
           "type": "Buff",
           "statusName": "Sealed in Tail, Wraith Subdued"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2048047648\">Huohuo_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__167222959\">Advanced_Huohuo_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1516,7 +1652,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2047385879\">Huohuo_DealHeal</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-93547702\">Advanced_Huohuo_DealHeal</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1563,7 +1699,39 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1345100241\">Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1493871681\">Advanced_Huohuo_Eidolon1_HealUp</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Outgoing Healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Outgoing Healing Boost",
+          "statusName": "Outgoing Healing Boost"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__528503958\">Advanced_Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -1591,14 +1759,14 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "effectName": "SPD Boost",
           "statusName": "SPD Boost"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-678196241\">Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1627,22 +1795,22 @@ const compositeAbilityObject = {
             "MDF_AttackUP"
           ],
           "latentQueue": [],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
           "type": "Buff",
           "effectName": "ATK Boost",
           "statusName": "ATK Boost"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2038615352\">Huohuo_Passive_ModifySP</a>"
+          "for": "<a class=\"gModGreen\" id=\"mod__2089501453\">Advanced_Huohuo_Passive_ModifySP</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1648992961\">Huohuo_Passive_SPMark</a>"
+          "for": "<a class=\"gModGreen\" id=\"mod__-933969018\">Advanced_Huohuo_Passive_SPMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1278530083\">Huohuo_Passive_HealHP</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1273531270\">Advanced_Huohuo_Passive_HealHP</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1723,7 +1891,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
                 },
                 {
                   "name": "Heal",
@@ -1755,7 +1923,123 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}.[[living]].[[sortByHP%]]"
+                  },
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Stress Reaction to Horror"
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "value": {
+                            "operator": "Variables[0] (1) || RETURN",
+                            "displayLines": "1",
+                            "constants": [],
+                            "variables": [
+                              1
+                            ]
+                          },
+                          "isFixed": "* ERR"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "Huohuo_Passive_DispelCount",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Dispel Debuffs",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "dispelCount": {
+                            "operator": "Variables[0] (_DispelNum) || RETURN",
+                            "displayLines": "_DispelNum",
+                            "constants": [],
+                            "variables": [
+                              "_DispelNum"
+                            ]
+                          },
+                          "dispelOrder": "LastAdded",
+                          "counterKey": "_DispelNumSuccess"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Huohuo_Passive_DispelCount",
+                          "value": {
+                            "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
+                            "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
+                            "constants": [],
+                            "variables": [
+                              "Huohuo_Passive_DispelCount",
+                              "_DispelNumSuccess"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
+                    },
+                    {
+                      "name": "Heal",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "healPercent": {
+                        "operator": "Variables[0] (HPRatio) || RETURN",
+                        "displayLines": "HPRatio",
+                        "constants": [],
+                        "variables": [
+                          "HPRatio"
+                        ]
+                      },
+                      "healFlat": {
+                        "operator": "Variables[0] (HPValue) || RETURN",
+                        "displayLines": "HPValue",
+                        "constants": [],
+                        "variables": [
+                          "HPValue"
+                        ]
+                      },
+                      "formula": "Heal from Healer's MaxHP"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
+                    }
+                  ]
                 },
                 {
                   "name": "Find New Target",
@@ -1853,7 +2137,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
                     },
                     {
                       "name": "Heal",
@@ -1885,7 +2169,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
                     }
                   ]
                 }
@@ -1973,7 +2257,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
                     },
                     {
                       "name": "Heal",
@@ -2005,7 +2289,123 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}.[[living]].[[sortByHP%]]"
+                      },
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Trace Activated",
+                            "conditionList": "Stress Reaction to Horror"
+                          },
+                          "passed": [
+                            {
+                              "name": "Update Energy",
+                              "on": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "value": {
+                                "operator": "Variables[0] (1) || RETURN",
+                                "displayLines": "1",
+                                "constants": [],
+                                "variables": [
+                                  1
+                                ]
+                              },
+                              "isFixed": "* ERR"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "Huohuo_Passive_DispelCount",
+                            "compareType": ">",
+                            "value2": 0
+                          },
+                          "passed": [
+                            {
+                              "name": "Dispel Debuffs",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "dispelCount": {
+                                "operator": "Variables[0] (_DispelNum) || RETURN",
+                                "displayLines": "_DispelNum",
+                                "constants": [],
+                                "variables": [
+                                  "_DispelNum"
+                                ]
+                              },
+                              "dispelOrder": "LastAdded",
+                              "counterKey": "_DispelNumSuccess"
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "Huohuo_Passive_DispelCount",
+                              "value": {
+                                "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
+                                "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
+                                "constants": [],
+                                "variables": [
+                                  "Huohuo_Passive_DispelCount",
+                                  "_DispelNumSuccess"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
+                        },
+                        {
+                          "name": "Heal",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "healPercent": {
+                            "operator": "Variables[0] (HPRatio) || RETURN",
+                            "displayLines": "HPRatio",
+                            "constants": [],
+                            "variables": [
+                              "HPRatio"
+                            ]
+                          },
+                          "healFlat": {
+                            "operator": "Variables[0] (HPValue) || RETURN",
+                            "displayLines": "HPValue",
+                            "constants": [],
+                            "variables": [
+                              "HPValue"
+                            ]
+                          },
+                          "formula": "Heal from Healer's MaxHP"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
+                        }
+                      ]
                     },
                     {
                       "name": "Find New Target",
@@ -2103,7 +2503,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                          "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
                         },
                         {
                           "name": "Heal",
@@ -2135,7 +2535,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
+                          "modifier": "<a class=\"gModGreen\" id=\"-93547702\">Advanced_Huohuo_DealHeal</a>"
                         }
                       ]
                     }
@@ -2147,7 +2547,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2170,7 +2570,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711212518\">Advanced_Huohuo_Eidolon2</a>"
                 }
               ]
             },
@@ -2185,7 +2585,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "LifeTime",
                   "variableName": "Huohuo_Passive_HotCount",
-                  "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                   "multiplier": 1
                 }
               ]
@@ -2201,7 +2601,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "LifeTime",
                   "variableName": "Huohuo_Passive_HotCount",
-                  "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                   "multiplier": 1
                 },
                 {
@@ -2255,7 +2655,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>",
+                      "modifier": "<a class=\"gModGreen\" id=\"-711212518\">Advanced_Huohuo_Eidolon2</a>",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -2315,7 +2715,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "maxValue": 4,
+                  "maxValue": 5,
                   "whenValueChanges": [
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2341,7 +2741,7 @@ const compositeAbilityObject = {
             "MDF_DispelNum"
           ],
           "latentQueue": [],
-          "description": "When an ally's turn starts or when an ally uses their Ultimate, restores HP for that ally by an amount equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> of Huohuo's Max HP plus <span class=\"descriptionNumberColor\">MDF_HPValue</span>. At the same time, every ally currently at <span class=\"descriptionNumberColor\">MDF_LowHP</span> HP percentage or lower receives healing once. When Divine Provision is triggered to provide healing for allies, dispel 1 debuff from the said ally. This effect's remaining trigger count is <span class=\"descriptionNumberColor\">MDF_DispelCount</span>.",
+          "description": "When an ally target's turn starts or when an ally uses their Ultimate, restores HP for that ally and the ally unit with the lowest HP percentage by an amount equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> of Huohuo's Max HP plus <span class=\"descriptionNumberColor\">MDF_HPValue</span>. Then, every ally target currently at <span class=\"descriptionNumberColor\">MDF_LowHP</span> HP percentage or lower receives healing once. When \"Divine Provision\" is triggered to provide healing for ally targets, dispel 1 debuff from the said ally. This effect's remaining trigger count is <span class=\"descriptionNumberColor\">MDF_DispelCount</span>.",
           "type": "Buff",
           "effectName": "Healing Over Time",
           "statusName": "Divine Provision",
@@ -2352,7 +2752,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"1278530083\">Huohuo_Passive_HealHP</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273531270\">Advanced_Huohuo_Passive_HealHP</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "HPRatio": {
@@ -2387,7 +2787,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1345100241\">Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"528503958\">Advanced_Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -2400,6 +2800,29 @@ const compositeAbilityObject = {
                   "constants": [],
                   "variables": [
                     0.12
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1493871681\">Advanced_Huohuo_Eidolon1_HealUp</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
                   ]
                 }
               }
