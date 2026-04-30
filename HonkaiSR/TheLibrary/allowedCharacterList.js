@@ -12,8 +12,8 @@ let allowedCharacterList = [
     "trimName": "Himeko"
   },
   {
-    "fullName": "Welt_v0",
-    "trimName": "Weltv0"
+    "fullName": "Welt",
+    "trimName": "Welt"
   },
   {
     "fullName": "Kafka",
@@ -366,6 +366,10 @@ let allowedCharacterList = [
   {
     "fullName": "Archer",
     "trimName": "Archer"
+  },
+  {
+    "fullName": "Welt_v0",
+    "trimName": "Weltv0"
   },
   {
     "fullName": "Kafka_v0",

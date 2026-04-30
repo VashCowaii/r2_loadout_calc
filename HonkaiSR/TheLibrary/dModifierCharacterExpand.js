@@ -7084,7 +7084,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "PlayerBoy_40_Maze_ElationRatio",
+    "name": "<a class=\"gModGreen\" id=\"1521577078\">PlayerBoy_40_Maze_ElationRatio</a>",
     "realName": "We Are So Back!",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -7383,7 +7383,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Player_40_PointB3_P1Mark",
+    "name": "<a class=\"gModGreen\" id=\"1940881761\">Player_40_PointB3_P1Mark</a>",
     "realName": "Aha, Sic 'Em!",
     "aim": "Buff",
     "desc": "The next time the Skill is used, additionally gains #1[i] point(s) of \"Certified Banger.\"",
@@ -7394,7 +7394,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Player_40_Eidolon1_Count",
+    "name": "<a class=\"gModGreen\" id=\"-138559016\">Player_40_Eidolon1_Count</a>",
     "realName": "Believe In the Light",
     "aim": "Buff",
     "desc": "Each stack increases the \"Certified Banger\" gained by ally targets when the next Ultimate is used by #1[i]. This effect can stack up to #2[i] time(s).",
@@ -7406,7 +7406,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Player_40_Eidolon2ElationRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1890166672\">Player_40_Eidolon2ElationRatio</a>",
     "realName": "History in the Making...",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -7450,7 +7450,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Player_40_Trace01_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-1930250757\">Player_40_Trace01_Bonus</a>",
     "realName": "On Cloud Nine",
     "aim": "Buff",
     "desc": "Elation increases by #1[f1]%.",
@@ -7461,7 +7461,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Welt_BPAbility_SpeedDown",
+    "name": "<a class=\"gModGreen\" id=\"-432037034\">Advanced_Welt_BPAbility_SpeedDown</a>",
     "realName": "Slow",
     "aim": "Debuff",
     "desc": "SPD decreases by #1[i]%.",
@@ -7472,7 +7472,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Welt_Trace01_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1660387869\">Advanced_Welt_Trace01_AllDamageTypeAddedRatio</a>",
     "realName": "Retribution",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7494,7 +7494,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Welt_Weightless",
+    "name": "<a class=\"gModGreen\" id=\"-37395626\">Advanced_Welt_Weightless</a>",
     "realName": "Weightless",
     "aim": "Debuff",
     "desc": "DEF decreases by #3[i]%, SPD decreases by #4[i]%. When receiving an attack, action is delayed by #1[f1]%. This effect can be triggered #2[i] more time(s).",
@@ -7573,7 +7573,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Welt_Trace03_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"-1473917865\">Advanced_Welt_Trace03_AttackUp</a>",
     "realName": "Punishment",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",

@@ -2319,6 +2319,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Trailblazer - Elation",
+    "trimCharacterName": "TrailblazerElation",
+    "entryIcon": "icon/character/8009.png",
+    "lineCount": 2255,
+    "sizeCount": 78148
+  },
+  {
+    "entryType": "char",
     "entryName": "Sushang",
     "trimCharacterName": "Sushang",
     "entryIcon": "icon/character/1206.png",
@@ -2388,6 +2396,14 @@ let sizeLeaderboardArray = [
     "enemyID": 8003050,
     "lineCount": 2117,
     "sizeCount": 74079
+  },
+  {
+    "entryType": "char",
+    "entryName": "Welt",
+    "trimCharacterName": "Welt",
+    "entryIcon": "icon/character/1004.png",
+    "lineCount": 2066,
+    "sizeCount": 73762
   },
   {
     "entryType": "enemy",
@@ -5848,14 +5864,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1930
-  },
-  {
-    "entryType": "char",
-    "entryName": "Trailblazer - Elation",
-    "trimCharacterName": "TrailblazerElation",
-    "entryIcon": "icon/character/8009.png",
-    "lineCount": 7,
-    "sizeCount": 159
   },
   {
     "entryType": "char",

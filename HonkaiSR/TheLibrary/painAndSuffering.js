@@ -3237,6 +3237,25 @@ const megaParsingFuckeryPain = {
             
         </div>`;
     },
+    "Sort by Elation Participant ID"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "stat",
+            // "living",
+            // "matchFirst",
+            // "defenders",
+            // "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Elation Participant ID");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            
+        </div>`;
+    },
     "Divide HP Bar into Segments"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -10587,6 +10606,54 @@ const megaParsingFuckeryPain = {
 
             </div>
             ${returnString}
+
+            <div class="rotationConditionOperatorBoxMain">
+            ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString}
+                </div>` : ""}
+            </div>
+            </div>
+        </details>
+        `;
+    },
+    "Inject Elation Skill Extra-Turn (Default priority)"(parseRef,initialCounter) {
+        initialCounter++;
+        const knownKeySet = new Set ([
+            "name",
+            "execute",
+            "target",
+            "punchlineFixed",
+
+            // "counter",
+            // "execute",
+            // "AdditionConfig",
+            // "DynamicValues"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Inject Elation Skill Extra-Turn (Default priority)");
+
+        let parseString = "";
+        // let refString = "";
+        const hasParse = parseRef.execute?.length;
+        // const hasRef = parseRef.failed?.length;
+        if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
+        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+
+
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">Inject Elation Skill Extra-Turn (Default priority)</div>
+            </summary>
+
+            <div class="rotationConditionOperatorBoxMainAttack">
+            <div class="modifierDetailsBox">
+                ${getStandardNameDisplay(initialCounter,parseRef.punchlineFixed,"Fixed Punchline")}
+                ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+                ${getStandardNameDisplay(initialCounter,parseRef.caster,"Caster",true)}
+
+            </div>
 
             <div class="rotationConditionOperatorBoxMain">
             ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
