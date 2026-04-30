@@ -1371,12 +1371,12 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-831933466\">Player_40_InsertElationAbilityShow</a>"
                     },
                     {
-                      "name": "Unlabeled Event Execution",
+                      "name": "Inject Elation Skill Extra-Turn (Default priority)",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "counter": {
+                      "punchlineFixed": {
                         "operator": "Variables[0] (20) || RETURN",
                         "displayLines": "20",
                         "constants": [],
@@ -2074,12 +2074,12 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-831933466\">Player_40_InsertElationAbilityShow</a>"
                         },
                         {
-                          "name": "Unlabeled Event Execution",
+                          "name": "Inject Elation Skill Extra-Turn (Default priority)",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "counter": {
+                          "punchlineFixed": {
                             "operator": "Variables[0] (20) || RETURN",
                             "displayLines": "20",
                             "constants": [],
